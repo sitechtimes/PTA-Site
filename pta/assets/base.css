@@ -5,8 +5,14 @@
   --font-text: "Karla";
   --font-heading: "Kumbh Sans";
 
-  /* colors */
-  --text-color: #483221;
+  /* media queries max width
+    sm:	 ≥576px
+ 	md:  ≥768px
+    lg:	 ≥992px
+    xl:  ≥1200px
+    xxl: ≥1400px
+    */
+
   font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
