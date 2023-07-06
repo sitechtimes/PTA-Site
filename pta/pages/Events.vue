@@ -2,7 +2,9 @@
   <section id="gradient">
     <div id="futureHeader"><h6>header</h6></div>
     <h2>EVENTS</h2>
-    <div class="events"><h6>events css component: will do later</h6></div>
+    <div class="events">
+      <EventsComponent></EventsComponent>
+    </div>
   </section>
   <section id="calendar">
     <h4 id="temporary">Google Calendar Filler</h4>
@@ -32,9 +34,6 @@ h2 {
   width: 1146.093px;
   height: 365px;
   background-color: #d9d9d9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 #futureHeader {
   margin: 20px;
