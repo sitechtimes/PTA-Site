@@ -66,4 +66,8 @@ body{
     letter-spacing: 0.48px;
     margin-bottom: .4vw;
 }
+
+@media screen and (min-width: 480px) {
+
+}
 </style>
