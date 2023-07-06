@@ -20,7 +20,18 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 h1 {
+  font-size: 96px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 24px;
 }
 html,
 body {
