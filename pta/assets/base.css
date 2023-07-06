@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla&family=Kumbh+Sans:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bayon&family=Karla&family=Kumbh+Sans:wght@800&display=swap");
 *,
 :root {
-    /* fonts */
-    --font-text: 'Karla';
-    --font-heading: 'Kumbh Sans';
-    
-    /* colors */
-    --text-color: #483221;
+  /* fonts */
+  --font-text: "Karla";
+  --font-heading: "Kumbh Sans";
 
-    font-synthesis: none;
+  /* colors */
+  --text-color: #483221;
+  font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+h1 {
 }
 html,
 body {
