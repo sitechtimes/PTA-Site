@@ -3,7 +3,7 @@
 :root {
     /* fonts */
     --font-text: 'Karla';
-    --font-heading: 'Kumbh Sans';
+    --font-heading: 'Kumbh Sans', san serif;
     
     /* colors */
     --text-color: #483221;
