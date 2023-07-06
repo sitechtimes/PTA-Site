@@ -8,8 +8,7 @@
 
 <style scoped>
 .container__topArrow {
-  height: 60px;
-  width: 60px;
+  height: 3rem;
   opacity: 0.7;
   position: fixed;
   bottom: 5%;
