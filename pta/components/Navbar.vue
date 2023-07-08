@@ -1,22 +1,37 @@
 <template>
   <div id="navbar">
     <div class="link" id="home">
+      <img
+        src="../assets/NavBar-Icons/house.svg"
+        alt="dark brown icon of a house"
+      />
       <p>
         <NuxtLink to="/">Home</NuxtLink>
       </p>
     </div>
     <div class="link" id="events">
+      <img
+        src="../assets/NavBar-Icons/calendar.svg"
+        alt="dark brown icon of a calendar"
+      />
       <p>
         <NuxtLink to="/Events">Events</NuxtLink>
       </p>
     </div>
     <div class="link" id="contact">
-      <img src="../assets/NavBar-Icons/envelope.svg" alt="" />
+      <img
+        src="../assets/NavBar-Icons/envelope.svg"
+        alt="dark brown icon of an envelope"
+      />
       <p>
         <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
       </p>
     </div>
     <div class="link" id="donate">
+      <img
+        src="../assets/NavBar-Icons/credit_card.svg"
+        alt="dark brown icon of a credit card"
+      />
       <p>
         <NuxtLink to="/Donate">Donate</NuxtLink>
       </p>
@@ -46,26 +61,107 @@ a {
   flex-direction: column;
   flex-shrink: 0;
   text-decoration: none;
+  color: var(--text-color);
 }
 
 a:visited {
   color: var(--text-color);
 }
+
 img {
-  display: inline-flex;
+  display: flex;
   width: 27.041px;
   height: 25.793px;
   flex-shrink: 0;
+  padding-top: 45px;
+  padding-right: 3px;
 }
-#events {
-  width: 189.057px;
-  height: 40.966px;
-  flex-shrink: 0;
-}
+
 .link {
-  display: inline-flex;
-  justify-content: space-evenly;
-  padding: 0px 77px;
+  display: flex;
+  padding-right: 77px;
   flex-shrink: 0;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 425px) {
+  #navbar {
+    background-size: 20%;
+    font-size: 15px;
+    justify-content: center;
+  }
+  a {
+    width: 32.7668px;
+    height: 8.1932px;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  img {
+    width: 30%;
+    height: 30%;
+    padding-top: 22px;
+    padding-right: 0px;
+  }
+  .link {
+    padding-top: 30px;
+    padding-right: 35px;
+    justify-content: space-evenly;
+  }
+  #donate {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    background-size: 15%;
+    font-size: 20px;
+    justify-content: flex-end;
+  }
+  a {
+    width: 77px;
+    height: 25px;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  img {
+    width: 30%;
+    height: 40%;
+    padding-top: 22px;
+    padding-right: 3px;
+  }
+  .link {
+    padding-right: 35px;
+    justify-content: space-evenly;
+  }
+  #donate {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #navbar {
+    background-size: 15%;
+    font-size: 25px;
+    justify-content: flex-end;
+  }
+  a {
+    width: 100px;
+    height: 45px;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  img {
+    width: 30%;
+    height: 30%;
+    padding-top: 30px;
+    padding-right: 3px;
+  }
+  .link {
+    padding-right: 35px;
+  }
+  #donate {
+    padding-left: 30px;
+  }
 }
 </style>
