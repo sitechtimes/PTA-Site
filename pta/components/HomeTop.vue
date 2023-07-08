@@ -13,8 +13,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Cute+Font&family=Kumbh+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Cute+Font&family=Karla:wght@500&family=Kumbh+Sans&display=swap');
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100vw;
@@ -68,7 +69,7 @@
 }
 }
 
-@media only screen and (min-width: 601px) {
+@media screen and (min-width: 601px) {
     #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100vw;
@@ -121,8 +122,61 @@
     margin-bottom: 3vw;
 }
 }
+
+@media screen and (min-width: 601px) and (orientation: landscape) {
+#homeTopCon{
+    width: 100vw;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+#homeTopText{
+    position: absolute;
+    top: -37%;
+    left: 30%;
+    white-space: nowrap;
+}
+#address{
+    margin: 0%;
+    color: #483221;
+    text-align: left;
+    font-family: Kumbh Sans;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.047vw;
+    font-size: 1.97vw;
+}
+#siths{
+    color: var(--text-color);
+    color: #483221;
+    text-align: left;
+    font-family: Kumbh Sans;
+    margin: 0%;
+    font-size: 4.7vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 129.164%;
+    letter-spacing: 0.449vw;
+    margin-bottom: 1vw;
+}
+#pta{
+    margin: 0%;
+    color: #483221;
+    font-family: Kumbh Sans;
+    font-size: 2.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.047vw;
+    margin-bottom: 1vw;
+}
+}
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100vw;
@@ -176,9 +230,64 @@
 }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 768px) and (orientation: landscape){
     #homeTopCon{
+    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    width: 100vw;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+#homeTopText{
+    position: absolute;
+    transform: translate(0%, 0vw);
+    top: 15vw;
+    left: 7vw;
+}
+#address{
+    margin: 0%;
+    color: #483221;
+    text-align: left;
+    font-family: Kumbh Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    font-size: 1.57vw;
+}
+#siths{
+    color: var(--text-color);
+    color: #483221;
+    text-align: left;
+    font-family: Kumbh Sans;
+    margin: 0%;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 129.164%;
+    letter-spacing: 4.6px;
+    margin-bottom: .2vw;
+}
+#pta{
+    margin: 0%;
+    color: #483221;
+    font-family: Kumbh Sans;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    margin-bottom: .4vw;
+
+}
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+#homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100vw;
     height: 70vw;
@@ -231,7 +340,7 @@
 }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100vw;
