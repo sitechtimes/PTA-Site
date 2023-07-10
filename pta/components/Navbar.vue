@@ -40,19 +40,20 @@
   justify-content: flex-end;
   color: var(--text-color);
   font-family: var(--font-nav);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04rem;
   background: no-repeat url(../assets/NavBar-Icons/pta-logo.png);
 }
 
 a {
   display: flex;
-  width: 163.834px;
-  height: 40.966px;
-  padding-top: 30px;
-  padding-bottom: 35px;
-  flex-direction: column;
+  width: 10.24rem;
+  height: 2.56rem;
+  padding-top: 1.875rem;
+  padding-bottom: 2.188rem;
+  flex-direction: row;
+  white-space: nowrap;
   flex-shrink: 0;
   text-decoration: none;
   color: var(--text-color);
@@ -64,127 +65,127 @@ a:visited {
 
 img {
   display: inline-flex;
-  width: 27.041px;
-  height: 25.793px;
+  width: 1.69rem;
+  height: 1.612rem;
   flex-shrink: 0;
-  padding-top: 45px;
-  padding-right: 5px;
+  padding-top: 2.7rem;
+  padding-right: 0.313rem;
 }
 
 .link {
   display: flex;
-  padding-right: 77px;
+  padding-right: 4.813rem;
   flex-shrink: 0;
   justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   #navbar {
-    background-size: 15%;
-    font-size: 25px;
+    background-size: 20%;
+    font-size: 3rem;
     justify-content: flex-end;
   }
   a {
-    width: 100px;
-    height: 45px;
-    flex-direction: row;
-    white-space: nowrap;
+    width: 10rem;
+    height: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
   img {
     width: 30%;
     height: 30%;
-    padding-top: 30px;
-    padding-right: 3px;
+    padding-top: 4rem;
+    padding-right: 0.188rem;
   }
   .link {
-    padding-right: 35px;
+    padding-right: 3rem;
   }
   #donate {
-    padding-left: 30px;
+    padding-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #navbar {
+    font-size: 2.5rem;
+  }
+  a {
+    width: 7.5rem;
+    height: 2rem;
+    padding-top: 2.5rem;
+  }
+  img {
+    padding-top: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #navbar {
+    font-size: 2rem;
+  }
+  a {
+    width: 4rem;
+    height: 2rem;
+    padding-top: 2.2rem;
+  }
+  img {
+    padding-top: 2.6rem;
+  }
+  .link {
+    padding-right: 4.5rem;
+  }
+  #donate {
+    padding-left: 5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   #navbar {
-    background-size: 15%;
-    font-size: 20px;
-    justify-content: flex-end;
+    background-size: 18%;
+    font-size: 1.5rem;
   }
   a {
-    width: 77px;
-    height: 9px;
-    flex-direction: row;
-    white-space: nowrap;
+    width: 4.6rem;
+    height: 0.5rem;
+    padding-top: 1.5rem;
   }
   img {
     width: 30%;
-    height: 40%;
-    padding-top: 23px;
-    padding-right: 3px;
+    height: 30%;
+    padding-top: 1.7rem;
   }
   .link {
-    padding-top: 3px;
-    padding-bottom: 10px;
-    padding-right: 35px;
-    justify-content: space-evenly;
+    padding-right: 2.188rem;
   }
   #donate {
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 }
 
-@media screen and (max-width: 425px) {
-  #navbar {
-    background-size: 20%;
-    font-size: 15px;
-    justify-content: center;
-  }
+@media screen and (max-width: 576px) {
   a {
-    width: 25px;
-    height: 9px;
-    padding-top: 20px;
+    width: 2rem;
+    height: 0.563rem;
+    padding-top: 0.5rem;
     flex-direction: row;
     white-space: nowrap;
   }
   img {
     width: 30%;
     height: 30%;
-    padding-top: 23px;
-    padding-right: 3px;
+    padding-top: 1rem;
+    padding-right: 0.188rem;
   }
   .link {
-    padding-top: 30px;
-    padding-right: 30px;
+    padding-top: 0.2rem;
+    padding-right: 2rem;
     justify-content: space-evenly;
   }
   #donate {
-    padding-left: 25px;
+    padding-left: 3.25rem;
   }
-}
-
-@media screen and (max-width: 320px) {
-  #navbar {
-    background-size: 20%;
-    font-size: 13px;
-    justify-content: center;
-  }
-  a {
-    width: 20px;
-    height: 5px;
-    padding-top: 20px;
-    flex-direction: row;
-    white-space: nowrap;
-  }
-  img {
-    width: 25%;
-    height: 25%;
-    padding-top: 23px;
-    padding-right: 0px;
-  }
-  .link {
-    padding-top: 20px;
-    padding-right: 20px;
-    justify-content: space-evenly;
+  #contact {
+    padding-left: 1rem;
   }
 }
 </style>
