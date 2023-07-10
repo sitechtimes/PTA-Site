@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="container__SideNavigation">
+        <div class="container__SideNavigation" id="btncon">
             <a href="#section__GeneralContacts">
                 <h3>General Contacts</h3>
             </a>
@@ -197,15 +197,14 @@ a {
 }
 
 
-@media only screen and (max-width: 480px) {
-
+@media only screen and (max-width: 576px) {
     section {
         padding: 1rem;
     }
 
     .container__SideNavigation {
-        display: flex;
-        flex-direction: row;
+        /* display: flex;
+        flex-direction: row; */
         width: 100vw;
         height: fit-content;
         padding: 0.5rem;
@@ -247,7 +246,7 @@ a {
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: .8rem;
         margin: 0.5rem;
     }
 
@@ -278,5 +277,26 @@ a {
         flex-direction: row;
         flex-shrink: 1;
     }
+    #btncon{
+        display: flex;
+        justify-content: center;
+        padding: 0%;
+        position: fixed;
+        top: 10vh;
+        background-color: white;
+    }
 }
+
+
+
+@media screen and (min-width: 576px) {
+    
+}
+    /* media queries max width
+    sm:	 ≥576px
+ 	md:  ≥768px
+    lg:	 ≥992px
+    xl:  ≥1200px
+    xxl: ≥1400px
+    */
 </style>
