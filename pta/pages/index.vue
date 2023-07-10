@@ -4,6 +4,7 @@ import HomeTop from "../components/HomeTop.vue";
 <template>
   <div>
     <HomeTop />
+    <PhotoGallery />
     <ScrollTop />
   </div>
 </template>

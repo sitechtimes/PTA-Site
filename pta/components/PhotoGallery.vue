@@ -3,7 +3,7 @@
     <Carousel :items-to-show="2.5" :wrap-around="true" :transition="500">
       <Slide v-for="(image, index) in images" :key="index">
         <div class="carousel-item">
-          <img :src="image" class="carousel-image">
+          <img :src="image" class="carousel-image" />
         </div>
       </Slide>
 
@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 
-import 'vue3-carousel/dist/carousel.css'
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
-  name: 'PhotoGallery',
+  name: "PhotoGallery",
   components: {
     Carousel,
     Slide,
@@ -32,23 +32,23 @@ export default defineComponent({
   data() {
     return {
       images: [
-        'https://picsum.photos/seed/picsum/200/300',
-        'https://picsum.photos/200/300?grayscale',
-        'https://picsum.photos/200/300/?blur=2'
+        "https://picsum.photos/seed/picsum/200/300",
+        "https://picsum.photos/200/300?grayscale",
+        "https://picsum.photos/200/300/?blur=2",
         /* insert src's or link to images here
         format:
         'image link',
         'image link',
         'image link' */
       ],
-    }
-  }
-})
+    };
+  },
+});
 </script>
 
 <style scoped>
 .container__carousel {
-  width: 50vw
+  width: 50vw;
 }
 
 .carousel-image {
@@ -76,7 +76,7 @@ export default defineComponent({
   transform: rotateY(-20deg) scale(0.9);
 }
 
-.carousel__slide--active~.carousel__slide {
+.carousel__slide--active ~ .carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
 
@@ -96,13 +96,12 @@ export default defineComponent({
   z-index: 100;
 }
 
-.carousel__pagination{
+.carousel__pagination {
   margin: 1rem;
   padding: 0;
 }
 
 @media only screen and (max-width: 480px) {
-
   .container__carousel {
     width: 90vw;
   }
