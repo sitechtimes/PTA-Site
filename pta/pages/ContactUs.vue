@@ -104,8 +104,8 @@ section {
 }
 
 .container__BoardMembers-profile img {
-        width: 9rem;
-    }
+    width: 9rem;
+}
 
 h1 {
     color: #483221;
@@ -205,9 +205,12 @@ a {
     .container__SideNavigation {
         /* display: flex;
         flex-direction: row; */
-        width: 100vw;
+        width: 100%;
         height: fit-content;
         padding: 0.5rem;
+        top: 0;
+        left: 0;
+        position: fixed;
     }
 
     .container {
@@ -220,9 +223,9 @@ a {
 
     .container__body {
         height: 80vh;
-        width: 100vw;
-        margin: 0.5rem;
+        width: 100%;
         padding: 0;
+        margin: 0;
     }
 
     .container__SideNavigation a {
@@ -277,22 +280,23 @@ a {
         flex-direction: row;
         flex-shrink: 1;
     }
-    #btncon{
+
+    #btncon {
         display: flex;
         justify-content: center;
-        padding: 0%;
-        position: fixed;
-        top: 10vh;
+        padding: 0.5rem;
+        margin: 0 0.5rem 0 0;
+        top: 0;
+        left: 0;
         background-color: white;
     }
 }
 
 
 
-@media screen and (min-width: 576px) {
-    
-}
-    /* media queries max width
+@media screen and (min-width: 576px) {}
+
+/* media queries max width
     sm:	 ≥576px
  	md:  ≥768px
     lg:	 ≥992px
