@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bayon&family=Karla&family=Kumbh+Sans:wght@800&display=swap");
 *,
 :root {
-  /* fonts */
-  --font-text: "Karla";
-  --font-heading: "Kumbh Sans";
-  --font-nav: "Bayon";
-
-  /* colors */
-  --text-color: #483221;
+    /* fonts */
+    --font-text: 'Karla';
+    --font-heading: 'Kumbh Sans';
+    
+    /* colors */
+    --text-color: #483221;
 
   /* media queries max width
     sm:	 ≥576px
