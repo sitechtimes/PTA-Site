@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla&family=Kumbh+Sans:wght@800&display=swap');
+
 *,
 :root {
-    /* fonts */
-    --font-text: 'Karla';
-    --font-heading: 'Kumbh Sans';
-    
-    /* colors */
-    --text-color: #483221;
-    --bg-color: #fff
-    /* --bg-gradient: */
+  /* fonts */
+  --font-text: "Karla";
+  --font-heading: "Kumbh Sans";
+  --font-nav: "Bayon";
 
-    /* media queries max width
+  /* colors */
+  --text-color: #483221;
+
+  /* media queries max width
     sm:	 ≥576px
  	md:  ≥768px
     lg:	 ≥992px
@@ -18,21 +18,18 @@
     xxl: ≥1400px
     */
 
-    font-synthesis: none;
+  font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-}
-body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
 }
