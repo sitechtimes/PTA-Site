@@ -85,4 +85,12 @@ h6 {
   text-align: center;
   font-weight: 0.5;
 }
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0%;
+  padding: 0;
+}
 </style>
