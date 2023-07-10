@@ -38,8 +38,8 @@
   align-content: flex-end;
   position: absolute;
   bottom: 0;
-  left: 30%;
-  right: 30%;
+  left: 1%;
+  right: 1%;
 }
 
 #so_med {
