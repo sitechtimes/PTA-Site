@@ -7,6 +7,8 @@
     
     /* colors */
     --text-color: #483221;
+    --bg-color: #fff
+    /* --bg-gradient: */
 
     /* media queries max width
     sm:	 ≥576px
@@ -29,4 +31,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
