@@ -1,3 +1,8 @@
+<script>
+import HomeTop from '../components/HomeTop.vue';
+</script>
 <template>
-  <h1>Landing Page</h1>
+    <div>
+        <HomeTop/>
+    </div>
 </template>
