@@ -47,8 +47,8 @@
   flex-direction: row;
   width: 15rem;
   justify-content: space-evenly;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 h2 {
@@ -58,48 +58,30 @@ h2 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.05rem;
 }
 
 p {
   font-family: var(--font-text);
   color: var(--text-color);
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 5px;
+  margin: 0.313rem;
 }
 
-@media screen and (max-width: 768px) {
-  img {
-    height: 80%;
-    width: 80%;
-  }
-}
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 576px) {
   h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   img {
     height: 80%;
     width: 80%;
   }
   p {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 320px) {
-  h2 {
-    font-size: 15px;
-  }
-  img {
-    height: 70%;
-    width: 70%;
-  }
-  p {
-    font-size: 10px;
+    font-size: 0.938rem;
   }
 }
 </style>
