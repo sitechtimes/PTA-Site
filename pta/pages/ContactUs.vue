@@ -184,6 +184,16 @@ a {
     overflow-y: auto;
 }
 
+.container__SideNavigation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 0.1rem;
+    height: 100%;
+    background-color: var(--text-color);
+}
+
 .container__body {
     flex: 1;
     padding: 20px;
@@ -234,6 +244,11 @@ a {
         text-align: center;
         margin: 0.5rem;
     }
+
+    .container__SideNavigation::before {
+visibility: hidden;
+}
+
 
     p {
         font-size: 1rem;
