@@ -52,7 +52,12 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.0275rem;
     margin: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+    p{
+        font-size: 1rem;
+    }
 }
 </style>

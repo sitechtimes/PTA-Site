@@ -103,6 +103,10 @@ section {
     margin: 0.5rem 0 0 0;
 }
 
+.container__BoardMembers-profile img {
+        width: 9rem;
+    }
+
 h1 {
     color: #483221;
     text-align: center;
@@ -141,6 +145,7 @@ h4 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 
 p,
@@ -151,7 +156,6 @@ li {
     font-style: normal;
     font-weight: 500;
     line-height: 129.164%;
-    letter-spacing: 0.075rem;
 }
 
 .container__SideNavigation a {
@@ -168,7 +172,6 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: 129.164%;
-    letter-spacing: 0.075rem;
 }
 
 .container__SideNavigation {
@@ -219,21 +222,54 @@ a {
     .container__body {
         height: 80vh;
         width: 100vw;
+        margin: 0.5rem;
+        padding: 0;
     }
 
     .container__SideNavigation a {
         border: 1px black solid;
-        border-radius: 20%;
+        border-radius: 2rem;
         text-align: center;
         margin: 0.5rem;
     }
 
+    p {
+        font-size: 1rem;
+
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
     h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    h4 {
         font-size: 1.2rem;
     }
 
+    .container__BoardMembers-profile img {
+        width: 8rem;
+    }
+
     .container__ParentVolunteer {
-        width: 100vw;
+        width: 92vw;
     }
 
     .container__BoardMembers {
