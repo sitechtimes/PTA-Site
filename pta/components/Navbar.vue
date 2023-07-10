@@ -1,90 +1,75 @@
 <template>
   <div id="navbar">
-    <div class="link" id="home">
+    <div id="logoContainer">
       <img
-        src="../assets/NavBar-Icons/house.svg"
-        alt="dark brown icon of a house"
+        class="logo"
+        src="../components/icons/NavBar-Icons/pta-logo.png"
+        alt=""
       />
-      <NuxtLink to="/">Home</NuxtLink>
     </div>
-    <div class="link" id="events">
-      <img
-        src="../assets/NavBar-Icons/calendar.svg"
-        alt="dark brown icon of a calendar"
-      />
-      <NuxtLink to="/Events">Events</NuxtLink>
-    </div>
-    <div class="link" id="contact">
-      <img
-        src="../assets/NavBar-Icons/envelope.svg"
-        alt="dark brown icon of an envelope"
-      />
-      <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
-    </div>
-    <div class="link" id="donate">
-      <img
-        src="../assets/NavBar-Icons/credit_card.svg"
-        alt="dark brown icon of a credit card"
-      />
-      <NuxtLink to="/Donate">Donate</NuxtLink>
+    <div id="nav">
+      <div class="link" id="home">
+        <img
+          src="../components/icons/NavBar-Icons/house.svg"
+          alt="dark brown icon of a house"
+        />
+        <NuxtLink to="/">Home</NuxtLink>
+      </div>
+      <div class="link" id="events">
+        <img
+          src="../components/icons/NavBar-Icons/calendar.svg"
+          alt="dark brown icon of a calendar"
+        />
+        <NuxtLink to="/Events">Events</NuxtLink>
+      </div>
+      <div class="link" id="contact">
+        <img
+          src="../components/icons/NavBar-Icons/envelope.svg"
+          alt="dark brown icon of an envelope"
+        />
+        <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
+      </div>
+      <div class="link" id="donate">
+        <img
+          src="../components/icons/NavBar-Icons/credit_card.svg"
+          alt="dark brown icon of a credit card"
+        />
+        <NuxtLink to="/Donate">Donate</NuxtLink>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 @import url(../assets/base.css);
-
-#navbar {
+#nav {
   display: flex;
-  flex-shrink: 0;
-  justify-content: flex-end;
-  color: var(--text-color);
-  font-family: var(--font-nav);
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.04rem;
-  background: no-repeat url(../assets/NavBar-Icons/pta-logo.png);
 }
-
 a {
   display: flex;
-  width: 10.24rem;
-  height: 2.56rem;
-  padding-top: 1.875rem;
+  width: 10rem;
+  margin-left: 0.4rem;
+  padding-top: 2.75rem;
   padding-bottom: 2.188rem;
   flex-direction: row;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   flex-shrink: 0;
   text-decoration: none;
   color: var(--text-color);
 }
 
+#logo {
+  justify-content: flex-start;
+}
+.link {
+  display: flex;
+  justify-content: space-evenly;
+}
 a:visited {
   color: var(--text-color);
 }
 
-img {
-  display: inline-flex;
-  width: 1.69rem;
-  height: 1.612rem;
-  flex-shrink: 0;
-  padding-top: 2.7rem;
-  padding-right: 0.313rem;
-}
-
-.link {
-  display: flex;
-  padding-right: 4.813rem;
-  flex-shrink: 0;
-  justify-content: space-evenly;
-}
-
 @media screen and (max-width: 1400px) {
-  #navbar {
-    background-size: 20%;
-    font-size: 3rem;
-    justify-content: flex-end;
-  }
   a {
     width: 10rem;
     height: 3rem;
