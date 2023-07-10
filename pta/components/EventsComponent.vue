@@ -32,6 +32,7 @@
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
+  transition: 0.8s;
 }
 .flag:after {
   content: " ";
@@ -43,6 +44,9 @@
   border-bottom: 13px solid white;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
+}
+.flag:hover {
+  padding-top: 90px;
 }
 .date {
   margin-right: 10%;
@@ -71,6 +75,10 @@
   border-radius: 20px;
   background: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+.event:hover {
+  height: 40%;
 }
 @media screen and (max-width: 1400px) {
 }
