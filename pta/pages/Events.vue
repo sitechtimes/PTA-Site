@@ -20,19 +20,17 @@
 h2 {
   display: flex;
   justify-content: left;
-  color: #483221;
+  color: var(--text-color);
   font-family: Kumbh Sans;
   font-size: 400%;
   font-weight: 800;
   margin: 5%;
 }
-
 .events {
   display: flex;
   margin: 3% 5%;
-  width: 59.7%;
+  width: 59%;
   height: 500px;
-  background-color: #d9d9d9;
   flex-direction: column;
   justify-content: space-around;
   flex-shrink: 3;
@@ -40,7 +38,6 @@ h2 {
 #gradient {
   width: 100vw;
   height: 180vh;
-  margin: 0;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -53,6 +50,7 @@ h2 {
     #fbefd7 44%,
     #fff 55%
   );
+  overflow-x: hidden;
 }
 #calendar {
   display: flex;
@@ -60,7 +58,7 @@ h2 {
   height: 25%;
   flex-direction: column;
   justify-content: center;
-  margin: 10% auto;
+  margin: 10%;
   background-color: #d9d9d9;
 }
 #temporary {
@@ -101,5 +99,30 @@ h6 {
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 576px) {
+  h2 {
+    font-size: 30px;
+  }
+  #gradient {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%
+    );
+  }
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
 }
 </style>

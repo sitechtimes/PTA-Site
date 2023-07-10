@@ -31,7 +31,7 @@
   margin: -5px 50px 0 0;
   padding-top: 15px;
   position: relative;
-  background: #483221;
+  background: var(--text-color);
 }
 .flag:after {
   content: " ";
@@ -47,12 +47,14 @@
 .date {
   margin-right: 10%;
   font-family: Karla;
+  font-weight: 400;
 }
 .name {
   display: inline;
   margin-left: 10%;
-  color: #483221;
+  color: var(--text-color);
   font-family: Karla;
+  font-weight: 400;
 }
 .text {
   display: flex;
@@ -91,15 +93,15 @@
 }
 @media screen and (max-width: 992px) {
   .flag {
-    width: 25px;
+    width: 30px;
     border-radius: 5px;
     padding-top: 5px;
     height: 40px;
     left: 6%;
   }
   .flag:after {
-    border-left: 12.5px solid transparent;
-    border-right: 12.5px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
   }
   .name,
   .date {
@@ -109,7 +111,44 @@
 }
 
 @media screen and (max-width: 768px) {
+  .flag {
+    width: 25px;
+    border-radius: 5px;
+    padding-top: 5px;
+    height: 40px;
+    left: 6%;
+    margin-top: -3px;
+  }
+  .flag:after {
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+  }
+  .name,
+  .date {
+    margin: 3%;
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 576px) {
+  .flag {
+    width: 25px;
+    border-radius: 5px;
+    padding-top: 5px;
+    height: 30px;
+    left: 5%;
+    margin-top: -3px;
+  }
+  .event {
+    height: 25%;
+  }
+  .flag:after {
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+  }
+  .name,
+  .date {
+    margin: 3%;
+    font-size: 20px;
+  }
 }
 </style>
