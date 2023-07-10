@@ -1,3 +1,5 @@
 <template>
-  <h1>Landing Page</h1>
+  <div>
+    <Navbar />
+  </div>
 </template>
