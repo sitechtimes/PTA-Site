@@ -1,5 +1,8 @@
+<script>
+import HomeTop from "../components/HomeTop.vue";
+</script>
 <template>
   <div>
-    <Navbar />
+    <HomeTop />
   </div>
 </template>

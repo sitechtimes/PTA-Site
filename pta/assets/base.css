@@ -46,6 +46,72 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 576px) {
+  #homeTopCon{
+  background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  width: 100vw;
+  height: 220vw;
+  margin: 0;
+  padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+}
+
+@media screen and (min-width: 576px) {
+  #homeTopCon{
+  background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  width: 100vw;
+  height: 220vw;
+  margin: 0;
+  padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+}
+
+@media screen and (min-width: 576px) and (orientation: landscape) {
+  #homeTopCon{
+      background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+      width: 100vw;
+      height: 70vw;
+      margin: 0;
+      padding: 0%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #homeTopCon{
+      background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+      width: 100vw;
+      height: 140vw;
+      margin: 0;
+      padding: 0%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape){
+  #homeTopCon{
+    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    width: 100vw;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
 body {
     color: var(--text-color);
     background-color: var(--bg-color);
