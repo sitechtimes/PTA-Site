@@ -174,6 +174,9 @@ a {
     line-height: 129.164%;
 }
 
+.container__BoardMembers-profile img{
+    border: 1px yellow;
+}
 .container__SideNavigation {
     width: 20vw;
     padding: 2rem;
@@ -196,7 +199,6 @@ a {
 
 .container__body {
     flex: 1;
-    padding: 20px;
     margin-left: 20vw;
     height: 100vh;
     overflow-y: auto;
@@ -246,8 +248,8 @@ a {
     }
 
     .container__SideNavigation::before {
-visibility: hidden;
-}
+        visibility: hidden;
+    }
 
 
     p {
