@@ -1,6 +1,6 @@
 <template>
   <div class="container__topArrow">
-    <a href="#section__landingSection" class="anchor__topArrow">
+    <a href="#homeTopCon" class="anchor__topArrow">
       <img src="/back-to-top-arrow.svg" >
     </a>
   </div>
@@ -13,5 +13,6 @@
   position: fixed;
   bottom: 5%;
   right: 5%;
+  scroll-behavior: smooth;
 }
 </style>
