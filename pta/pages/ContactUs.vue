@@ -77,15 +77,20 @@
 <style scoped>
 @import url(../assets/base.css);
 
+section {
+    padding: 2rem;
+}
+
 .container {
     position: relative;
     display: flex;
 }
 
-.container__BoardMembers{
+.container__BoardMembers {
     display: flex;
     flex-direction: row;
 }
+
 .container__BoardMembers-profile {
     display: flex;
     flex-direction: column;
@@ -168,7 +173,7 @@ a {
 
 .container__SideNavigation {
     width: 20vw;
-    padding: 1rem 0 1rem 2rem;
+    padding: 2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -185,6 +190,57 @@ a {
 }
 
 .container__ParentVolunteer {
-    width: 70rem;
+    width: 60vw;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    section {
+        padding: 1rem;
+    }
+
+    .container__SideNavigation {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: fit-content;
+        padding: 0.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container__body {
+        height: 80vh;
+        width: 100vw;
+    }
+
+    .container__SideNavigation a {
+        border: 1px black solid;
+        border-radius: 20%;
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .container__ParentVolunteer {
+        width: 100vw;
+    }
+
+    .container__BoardMembers {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 1;
+    }
 }
 </style>
