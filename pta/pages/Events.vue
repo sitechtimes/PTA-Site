@@ -1,11 +1,11 @@
 <template>
-  <section id="gradient">
+  <div id="gradient">
     <div id="futureHeader"><h6>header</h6></div>
     <h2>EVENTS</h2>
     <div class="events">
-      <EventsComponent></EventsComponent>
+      <!-- <EventsComponent></EventsComponent> -->
     </div>
-  </section>
+  </div>
   <section id="calendar">
     <h4 id="temporary">Google Calendar Filler</h4>
   </section>
@@ -43,17 +43,23 @@ h2 {
   justify-content: center;
 }
 #gradient {
-  height: 1061px;
+  width: 100vw;
+  height: 1994px;
+  margin: 0;
+  padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
   background: linear-gradient(
     180deg,
     #ffc498 0%,
-    #ffd88c 28.65%,
-    #ffd88c 61.98%,
-    #fce5ac 81.25%,
-    #fff 98.95%,
-    #fff 98.96%
+    #ffd88c 20%,
+    #fce5ac 34%,
+    #fbefd7 44%,
+    #fff 55%
   );
 }
+
 #calendar {
   display: flex;
   width: 1289px;
@@ -84,13 +90,5 @@ h6 {
   color: #000;
   text-align: center;
   font-weight: 0.5;
-}
-body,
-h1,
-h2,
-h3,
-p {
-  margin: 0%;
-  padding: 0;
 }
 </style>
