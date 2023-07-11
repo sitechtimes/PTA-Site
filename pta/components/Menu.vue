@@ -8,6 +8,7 @@
         <ul class="link-container">
           <li class="link" @click="toggle">
             <img
+              id="home"
               src="../components/icons/NavBar-Icons/house.svg"
               alt="brown icon of house"
             />
@@ -15,6 +16,7 @@
           </li>
           <li class="link" @click="toggle">
             <img
+              id="events"
               src="../components//icons/NavBar-Icons/calendar.svg"
               alt="brown icon of calendar"
             />
@@ -22,6 +24,7 @@
           </li>
           <li class="link" @click="toggle">
             <img
+              id="contact"
               src="../components//icons/NavBar-Icons/envelope.svg"
               alt="brown icon of envelope"
             />
@@ -31,6 +34,7 @@
           </li>
           <li class="link" @click="toggle">
             <img
+              id="donate"
               src="../components//icons/NavBar-Icons/credit_card.svg"
               alt="brown icon of credit card"
             />
@@ -61,12 +65,11 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 .slide-enter-active {
-  animation: slide-right 0.6s;
+  animation: slide-right 0.8s;
 }
-/* .slide-leave-active {
-    animation: slide-right 0.5s reverse;
-  } */
-
+img {
+  width: 3rem;
+}
 @keyframes slide-right {
   0% {
     right: -100%;

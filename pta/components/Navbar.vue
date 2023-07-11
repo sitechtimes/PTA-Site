@@ -105,61 +105,14 @@ a:visited {
 }
 
 @media screen and (max-width: 992px) {
-  #nav {
-    width: 45rem;
-  }
-
-  a {
-    width: 7rem;
-  }
-
-  .group {
-    width: 10rem;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  #nav {
-    width: 25rem;
-    font-size: 1.3rem;
-  }
-
-  a {
-    width: 6.5rem;
-  }
-
-  .icon {
-    max-width: 1.5rem;
-  }
-
-  .logo {
-    max-width: 9rem;
-    height: auto;
-  }
 }
 
 @media screen and (max-width: 576px) {
-  #nav {
-    width: 27rem;
-    font-size: 0.9rem;
-  }
-
-  a {
-    width: 4rem;
-  }
-
-  .group {
-    width: 6.5rem;
-  }
-
-  .icon {
-    max-width: 1.2rem;
-    padding-right: 0.3rem;
-  }
-
-  .logo {
-    max-width: 8rem;
-    height: auto;
+  #logo {
+    width: 1rem;
   }
 }
 </style>
