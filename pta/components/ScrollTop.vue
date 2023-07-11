@@ -1,7 +1,7 @@
 <template>
   <div class="container__topArrow">
-    <a href="#homeTopCon" class="anchor__topArrow">
-      <img src="/back-to-top-arrow.svg">
+    <a href="#homeTopCon">
+      <img src="/back-to-top-arrow.svg" >
     </a>
   </div>
 </template>
