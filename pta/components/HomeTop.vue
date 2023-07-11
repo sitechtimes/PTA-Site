@@ -31,8 +31,7 @@
     margin: 0%;
     font-size: 8vw;
     font-weight: 800;
-    line-height: 128%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 3vw;
   }
   #pta {
@@ -64,8 +63,7 @@
     margin: 0%;
     font-size: 9.2vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 3.5vw;
   }
   #pta {
@@ -97,8 +95,7 @@
     margin: 0%;
     font-size: 4.4vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 1vw;
   }
   #pta {
@@ -129,8 +126,7 @@
     margin: 0%;
     font-size: 9vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.5vw;
   }
   #pta {
@@ -162,8 +158,7 @@
     margin: 0%;
     font-size: 5vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
@@ -196,7 +191,7 @@
     font-size: 5vw;
     font-weight: 800;
     line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
@@ -229,7 +224,7 @@
     font-size: 5vw;
     font-weight: 800;
     line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
