@@ -1,3 +1,5 @@
 <template>
-    <p>events</p>
-</template>
+<div>
+          <ScrollTop /> 
+  </div>
+  </template>
