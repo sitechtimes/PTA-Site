@@ -1,8 +1,6 @@
-<script>
-import HomeTop from '../components/HomeTop.vue';
-</script>
+<script></script>
 <template>
-    <div>
-        <HomeTop/>
-    </div>
+  <div>
+    <HomeTop />
+  </div>
 </template>
