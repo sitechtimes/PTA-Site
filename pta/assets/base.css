@@ -35,7 +35,36 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-}@media only screen and (min-width: 1032px) {
+}
+@media only screen and (max-width: 576px){
+  #home, #contact, #events, #donate{
+    width: 8vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 3vw;
+      padding-top: 20vw;
+    }
+    .link {
+      margin-top: 2.5rem;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 6vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+  
+@media only screen and (min-width: 1032px) {
         .menu {
           display: none;
         }
@@ -43,7 +72,7 @@ body {
           display: flex;
         }
 }
-@media only screen and (max-width: 1032px) {
+/* @media only screen and (max-width: 1032px) {
     #nav {
       display: none;
     }
@@ -65,7 +94,8 @@ body {
         list-style: none;
         margin-left: 0.2rem;
       }
-    }}
+    }
+} */
 @media screen and (max-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
