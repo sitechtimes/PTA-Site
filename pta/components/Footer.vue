@@ -72,9 +72,16 @@ p {
 }
 
 @media screen and (max-width: 576px) {
+  #footer{
+    width: 51vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
   h2 {
-    font-size: 5.25vw;
-    margin-bottom: 3vw;
+    font-size: 4.25vw;
+    margin-bottom: 2vw;
   }
   img {
     height: 6vw;
@@ -83,53 +90,18 @@ p {
     padding-left: 5vw;
   }
   p {
-    font-size: 3.5vw;
+    font-size: 3.25vw;
   }
 }
 
 @media screen and (min-width: 576px) {
   h2 {
-    font-size: 5.25vw;
+    font-size: 4vw;
     margin-bottom: 3vw;
   }
   img {
     height: 6vw;
     width: 7vw;
-    padding-right: 5vw;
-    padding-left: 5vw;
-  }
-  p {
-    font-size: 3.5vw;
-  }
-}
-
-@media screen and (min-width: 576px) and (orientation: landscape){
-  h2 {
-    font-size: 2.25vw;
-    margin-bottom: 1vw;
-  }
-  img {
-    height: 4vw;
-    width: 5vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
-  }
-  p {
-    font-size: 2vw;
-  }
-  #so_med{
-    margin-bottom: -.75vw;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 4.25vw;
-    margin-bottom: 3vw;
-  }
-  img {
-    height: 5vw;
-    width: 6vw;
     padding-right: 5vw;
     padding-left: 5vw;
   }
@@ -138,19 +110,64 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 576px) and (orientation: landscape){
   h2 {
-    font-size: 2.25vw;
-    margin-bottom: 1vw;
+    font-size: 1.8vw;
+    margin-bottom: .5vw;
   }
   img {
-    height: 4vw;
-    width: 5vw;
-    padding-right: 3vw;
-    padding-left: 3vw;
+    height: 3vw;
+    width: 4vw;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
   }
   p {
     font-size: 1.75vw;
+  }
+  #so_med{
+    margin-bottom: -1.4vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #footer{
+    width: 50vw;
+    position: absolute;
+    bottom: 0;
+    left: 49.5%;
+    transform: translate(-50%, 0);
+  }
+  h2 {
+    font-size: 3.2vw;
+    margin-bottom: 3vw;
+  }
+  img {
+    height: 5vw;
+    width: 6vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  #so_med{
+    margin-bottom: 1vw;
+  }
+  p {
+    font-size: 2.4vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  h2 {
+    font-size: 1.85vw;
+    margin-bottom: .3vw;
+  }
+  img {
+    height: 3vw;
+    width: 4vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+  }
+  p {
+    font-size: 1.5vw;
   }
   #so_med{
     margin-bottom: -.75vw;
@@ -158,9 +175,16 @@ p {
 }
 
 @media screen and (min-width: 866px) {
+  #footer{
+    width: 55vw;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    transform: translate(-50%, 0);
+  }
   h2 {
-    font-size: 4vw;
-    margin-bottom: 3vw;
+    font-size: 3.7vw;
+    margin-bottom: 3.5vw;
   }
   img {
     height: 4.5vw;
@@ -175,17 +199,17 @@ p {
 
 @media screen and (min-width: 866px) and (orientation: landscape) {
   h2 {
-    font-size: 2.25vw;
-    margin-bottom: 1.5vw;
+    font-size: 1.8vw;
+    margin-bottom: .3vw;
   }
   img {
-    height: 4vw;
+    height: 3vw;
     width: 5vw;
-    padding-right: 3vw;
-    padding-left: 3vw;
+    padding-right: 1.75vw;
+    padding-left: 1.75vw;
   }
   p {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
   }
   #so_med{
     margin-bottom: -.75vw;
@@ -194,17 +218,39 @@ p {
 
 @media screen and (min-width: 992px) {
   h2 {
-    font-size: 2.25vw;
-    margin-bottom: 1.5vw;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
   }
   img {
-    height: 4vw;
+    height: 3vw;
     width: 5vw;
-    padding-right: 3vw;
-    padding-left: 3vw;
+    padding-right: 1.75vw;
+    padding-left: 1.75vw;
   }
   p {
-    font-size: 1.75vw;
+    font-size: 1.2vw;
+  }
+  #so_med{
+    margin-bottom: -.1vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h2 {
+    font-size: 1.5vw;
+    margin-bottom: 1.15vw;
+  }
+  img {
+    height: 3vw;
+    width: 5vw;
+    padding-right: 1.75vw;
+    padding-left: 1.75vw;
+  }
+  p {
+    font-size: 1.2vw;
+  }
+  #so_med{
+    margin-bottom: .5vw;
   }
 }
 </style>
