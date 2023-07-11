@@ -10,7 +10,8 @@
     
     /* colors */
     --text-color: #483221;
-    --bg-color: #fff
+    --primary-bg: #fff;
+    --secondary-bg: #FCE5AC;
     --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
 
   /* media queries max width
@@ -34,7 +35,21 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}@media only screen and (min-width: 1032px) {
+        .menu {
+          display: none;
+        }
+        #nav {
+          display: flex;
+        }
 }
+@media only screen and (max-width: 1032px) {
+    #nav {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }}
 
 @media screen and (max-width: 576px) {
   #homeTopCon{

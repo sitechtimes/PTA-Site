@@ -8,40 +8,44 @@
       />
     </div>
     <div id="nav">
-      <div class="group" id="home">
+      <div class="group">
         <img
           class="icon"
+          id="home"
           src="../components/icons/NavBar-Icons/house.svg"
           alt="dark brown icon of a house"
         />
         <NuxtLink to="/">Home</NuxtLink>
       </div>
-      <div class="group" id="events">
+      <div class="group">
         <img
           class="icon"
+          id="events"
           src="../components/icons/NavBar-Icons/calendar.svg"
           alt="dark brown icon of a calendar"
         />
         <NuxtLink to="/Events">Events</NuxtLink>
       </div>
-      <div class="group" id="contact">
+      <div class="group">
         <img
           class="icon"
+          id="contact"
           src="../components/icons/NavBar-Icons/envelope.svg"
           alt="dark brown icon of an envelope"
         />
         <NuxtLink to="/ContactUs">Contact</NuxtLink>
       </div>
-      <div class="group" id="donate">
+      <div class="group">
         <img
           class="icon"
+          id="donate"
           src="../components/icons/NavBar-Icons/credit_card.svg"
           alt="dark brown icon of a credit card"
         />
         <NuxtLink to="/Donate">Donate</NuxtLink>
       </div>
     </div>
-    <!-- <Menu /> -->
+    <Menu />
   </div>
 </template>
 <!-- <script>
@@ -56,7 +60,6 @@ export default {
 @import url(../assets/base.css);
 
 #nav {
-  display: flex;
   justify-content: center;
   flex-shrink: 0;
 }
@@ -73,8 +76,14 @@ a {
 
 .icon {
   padding-right: 0.6rem;
+  padding-bottom: 0.5rem;
 }
-
+#contact {
+  padding-bottom: 0.1rem;
+}
+#donate {
+  padding-bottom: 0.1rem;
+}
 .group {
   display: flex;
   width: 12rem;
@@ -86,7 +95,9 @@ a:visited {
 }
 
 @media screen and (max-width: 1400px) {
-  /*no change needed */
+  .group {
+    width: 10rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
