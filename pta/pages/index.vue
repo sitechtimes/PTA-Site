@@ -1,6 +1,7 @@
 <script></script>
 <template>
   <div>
-    <HomeTop />
+    <Navbar />
+    <!-- <HomeTop /> -->
   </div>
 </template>
