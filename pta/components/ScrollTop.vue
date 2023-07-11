@@ -39,7 +39,7 @@
   .container__topArrow {
     height: 1.5rem;
     bottom: 5%;
-    right: 4%;
+    right: 5%;
   }
   
   .container__topArrow img{
