@@ -211,7 +211,6 @@ a {
     width: 60vw;
 }
 
-
 @media only screen and (max-width: 576px){
     section {
         padding: 1rem;
@@ -281,7 +280,8 @@ a {
     }
 }
 
-@media only screen and (min-width: 768px){
+
+@media screen and (max-width: 1366px) {
     section {
         padding: 1rem;
         height: auto;
