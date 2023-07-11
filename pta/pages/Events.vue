@@ -30,7 +30,7 @@ h2 {
   display: flex;
   margin: 3% 5%;
   width: 59%;
-  height: 500px;
+  height: 26%;
   flex-direction: column;
   justify-content: space-around;
   flex-shrink: 3;
@@ -93,10 +93,25 @@ h6 {
   }
 }
 @media screen and (max-width: 1200px) {
+  .events {
+    margin: 3% 5%;
+    width: 80%;
+    height: 24%;
+  }
 }
 @media screen and (max-width: 992px) {
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
 }
 @media screen and (max-width: 768px) {
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
 }
 @media screen and (max-width: 576px) {
   h2 {
