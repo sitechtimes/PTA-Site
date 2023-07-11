@@ -1,37 +1,50 @@
 <template>
-  <a
-    href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
-    class="event"
-  >
-    <div class="text">
-      <h3 class="name">Jessie's Birthday</h3>
-      <h3 class="date">05/06</h3>
-    </div>
-    <div class="flag"></div>
-  </a>
-  <a
-    href="https://www.fundraiserinsight.org/wp-content/uploads/2013/07/bake-sale-fundraiser.jpg"
-    class="event"
-  >
-    <div class="text">
-      <h3 class="name">Bake Sale</h3>
-      <h3 class="date">05/10</h3>
-    </div>
-    <div class="flag"></div>
-  </a>
-  <a
-    href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1553703&type=d&pREC_ID=1679764"
-    class="event"
-  >
-    <div class="text">
-      <h3 class="name">SITHS</h3>
-      <h3 class="date">05/17</h3>
-    </div>
-    <div class="flag"></div>
-  </a>
+  <!-- The values in the headings should be inputted by the user, but I inputted values to test it and to orient it properly -->
+  <div class="events">
+    <a
+      href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
+      class="event"
+    >
+      <div class="text">
+        <h3 class="name">Jessie's Birthday</h3>
+        <h3 class="date">05/06</h3>
+      </div>
+      <div class="flag"></div>
+    </a>
+    <a
+      href="https://www.fundraiserinsight.org/wp-content/uploads/2013/07/bake-sale-fundraiser.jpg"
+      class="event"
+    >
+      <div class="text">
+        <h3 class="name">Bake Sale</h3>
+        <h3 class="date">05/10</h3>
+      </div>
+      <div class="flag"></div>
+    </a>
+    <a
+      href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1553703&type=d&pREC_ID=1679764"
+      class="event"
+    >
+      <div class="text">
+        <h3 class="name">SITHS</h3>
+        <h3 class="date">05/17</h3>
+      </div>
+      <div class="flag"></div>
+    </a>
+  </div>
 </template>
 <style scoped>
 @import url(../assets/base.css);
+
+.events {
+  display: flex;
+  margin: 3% 5%;
+  width: 59%;
+  height: 26%;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-shrink: 3;
+}
 a,
 a:hover,
 a:focus,
@@ -113,6 +126,11 @@ a:active {
   }
 }
 @media screen and (max-width: 1200px) {
+  .events {
+    margin: 3% 5%;
+    width: 80%;
+    height: 24%;
+  }
   .event {
     margin: 10px;
   }
@@ -133,6 +151,11 @@ a:active {
   }
 }
 @media screen and (max-width: 992px) {
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
   .flag {
     width: 30px;
     border-radius: 5px;
@@ -151,6 +174,11 @@ a:active {
   }
 }
 @media screen and (max-width: 768px) {
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
   .flag {
     width: 25px;
     border-radius: 5px;
@@ -170,6 +198,11 @@ a:active {
   }
 }
 @media screen and (max-width: 576px) {
+  .events {
+    margin: 3% 5%;
+    width: 90%;
+    height: 18.31%;
+  }
   .flag {
     width: 20px;
     padding-top: 10px;

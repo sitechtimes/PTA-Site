@@ -2,9 +2,9 @@
   <div id="gradient">
     <Navbar />
     <h2>EVENTS</h2>
-    <div class="events">
-      <EventsComponent></EventsComponent>
-    </div>
+
+    <EventsComponent></EventsComponent>
+
     <section id="calendar">
       <h4 id="temporary">
         Google Calendar Filler to make a google Calendar, you need to make a
@@ -26,15 +26,7 @@ h2 {
   font-weight: 800;
   margin: 5%;
 }
-.events {
-  display: flex;
-  margin: 3% 5%;
-  width: 59%;
-  height: 26%;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-shrink: 3;
-}
+
 #gradient {
   width: 100vw;
   height: 180vh;
@@ -93,25 +85,10 @@ h6 {
   }
 }
 @media screen and (max-width: 1200px) {
-  .events {
-    margin: 3% 5%;
-    width: 80%;
-    height: 24%;
-  }
 }
 @media screen and (max-width: 992px) {
-  .events {
-    margin: 3% 5%;
-    width: 90%;
-    height: 18.31%;
-  }
 }
 @media screen and (max-width: 768px) {
-  .events {
-    margin: 3% 5%;
-    width: 90%;
-    height: 18.31%;
-  }
 }
 @media screen and (max-width: 576px) {
   h2 {
@@ -133,11 +110,6 @@ h6 {
       #fbefd7 44%,
       #fff 55%
     );
-  }
-  .events {
-    margin: 3% 5%;
-    width: 90%;
-    height: 18.31%;
   }
 }
 </style>
