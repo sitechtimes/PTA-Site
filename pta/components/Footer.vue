@@ -73,7 +73,7 @@ p {
 
 @media screen and (max-width: 576px) {
   #footer{
-    width: 51vw;
+    width: 55vw;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -183,17 +183,17 @@ p {
     transform: translate(-50%, 0);
   }
   h2 {
-    font-size: 3.7vw;
+    font-size: 3.5vw;
     margin-bottom: 3.5vw;
   }
   img {
     height: 4.5vw;
-    width: 5.5vw;
-    padding-right: 3vw;
-    padding-left: 3vw;
+    width: 5vw;
+    padding-right: 3.75vw;
+    padding-left: 3.75vw;
   }
   p {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 
