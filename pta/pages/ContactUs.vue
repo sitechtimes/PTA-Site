@@ -81,7 +81,8 @@ section {
     padding: 2rem;
     height: 100vh;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
 
@@ -175,9 +176,10 @@ a {
     line-height: 129.164%;
 }
 
-.container__BoardMembers-profile img{
+.container__BoardMembers-profile img {
     border: 1px yellow;
 }
+
 .container__SideNavigation {
     width: 20vw;
     padding: 2rem;
@@ -210,12 +212,13 @@ a {
 }
 
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px){
     section {
         padding: 1rem;
         margin-top: 25vw;
         height: auto;
     }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -278,7 +281,74 @@ a {
     }
 }
 
+@media only screen and (min-width: 768px){
+    section {
+        padding: 1rem;
+        height: auto;
+        margin-top: 3rem;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .container__body {
+        height: 80vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1rem;
+
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .container__BoardMembers-profile img {
+        width: 8rem;
+    }
+
+    .container__ParentVolunteer {
+        width: 80vw;
+    }
+
+    .container__BoardMembers {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 1;
+    }
+
+    #btncon {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 576px) {}
 
@@ -289,4 +359,5 @@ a {
     xl:  ≥1200px
     xxl: ≥1400px
     */
-</style>
+
+    </style>
