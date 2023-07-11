@@ -1,1 +1,5 @@
-<template></template>
+<template>
+<div>
+            <ScrollTop /> 
+</div>
+</template>
