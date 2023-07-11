@@ -29,6 +29,12 @@
 
 <style scoped>
 @import url(../assets/base.css);
+img{
+    transition: 0.3s;
+}
+img:hover{
+    opacity: 0.7;
+}
 
 #footer {
   display: flex;
@@ -40,6 +46,7 @@
   bottom: 0;
   left: 1%;
   right: 1%;
+
 }
 
 #so_med {
@@ -147,11 +154,16 @@ p {
     padding-right: 5vw;
     padding-left: 5vw;
   }
+  #text{
+    margin-bottom: 2rem;
+  }
   #so_med{
-    margin-bottom: 1vw;
+    margin-bottom: 0.5rem;
+    padding: .2rem;
   }
   p {
     font-size: 2.4vw;
+
   }
 }
 
@@ -236,13 +248,16 @@ p {
 }
 
 @media screen and (min-width: 1300px) {
+    #footer{
+bottom: 0px;
+    }
   h2 {
     font-size: 1.5vw;
-    margin-bottom: 1.15vw;
+    margin-bottom: 1vw;
   }
   img {
     height: 3vw;
-    width: 5vw;
+    width: 3rem;
     padding-right: 1.75vw;
     padding-left: 1.75vw;
   }
