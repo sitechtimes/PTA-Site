@@ -14,5 +14,27 @@
   bottom: 5%;
   right: 5%;
   scroll-behavior: smooth;
+}/* 
+@media screen and (max-width: 1200px){
+.container__topArrow {
+  height: 3rem;
+  right: 2%;
+    bottom: 5%;
 }
+}
+@media screen and (max-width: 992px){
+.container__topArrow {
+  height: 2rem;
+  right: 3%;
+  bottom: 4%;
+}
+}
+@media screen and (max-width: 576px) {
+  .container__topArrow {
+    height: 1.5rem;
+bottom: 3%;
+right: 2%;
+  }
+
+} */
 </style>
