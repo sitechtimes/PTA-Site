@@ -1,10 +1,7 @@
 <template>
   <div id="gradient">
-    <Navbar />
     <h2>EVENTS</h2>
-
     <EventsComponent></EventsComponent>
-
     <section id="calendar">
       <h4 id="temporary">
         Google Calendar Filler to make a google Calendar, you need to make a
@@ -12,7 +9,7 @@
         calendar in here.
       </h4>
     </section>
-    <ScrollTop/>
+    <ScrollTop />
   </div>
 </template>
 
@@ -24,7 +21,6 @@ h2 {
   color: var(--text-color);
   font-family: Kumbh Sans;
   font-size: 400%;
-  font-weight: 800;
   margin: 5%;
 }
 
