@@ -103,5 +103,10 @@ export default defineComponent({
     width: 90vw;
   }
 }
+@media screen and (max-width: 1024px) {
+  .container__carousel {
+    width: 85vw;
+  }
+}
 
 </style>

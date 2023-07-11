@@ -34,4 +34,13 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    #section__MiddleSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 </style>
