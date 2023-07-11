@@ -16,7 +16,7 @@
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%, 34vw);
     white-space: nowrap;
     text-align: left;
@@ -25,11 +25,11 @@
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
-    font-size: 3.2vw;
+    font-size: 3.5vw;
   }
   #siths {
     margin: 0%;
-    font-size: 8vw;
+    font-size: 9vw;
     font-weight: 800;
     line-height: 128%;
     letter-spacing: 0.449vw;
@@ -37,7 +37,7 @@
   }
   #pta {
     margin: 0%;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: 400;
     letter-spacing: 0.047vw;
     margin-bottom: 3vw;
@@ -58,7 +58,7 @@
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
-    font-size: 3.7vw;
+    font-size: 3.5vw;
   }
   #siths {
     margin: 0%;
@@ -189,7 +189,7 @@
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
-    font-size: 1.27vw;
+    font-size: 1.5vw;
   }
   #siths {
     margin: 0%;
@@ -222,7 +222,7 @@
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
-    font-size: 1.27vw;
+    font-size: 1.5vw;
   }
   #siths {
     margin: 0%;

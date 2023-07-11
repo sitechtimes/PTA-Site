@@ -45,7 +45,6 @@
 #so_med {
   display: flex;
   flex-direction: row;
-  width: 15rem;
   justify-content: space-evenly;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -74,14 +73,138 @@ p {
 
 @media screen and (max-width: 576px) {
   h2 {
-    font-size: 1.25rem;
+    font-size: 5.25vw;
+    margin-bottom: 3vw;
   }
   img {
-    height: 80%;
-    width: 80%;
+    height: 6vw;
+    width: 7vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
   }
   p {
-    font-size: 0.938rem;
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  h2 {
+    font-size: 5.25vw;
+    margin-bottom: 3vw;
+  }
+  img {
+    height: 6vw;
+    width: 7vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  p {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 576px) and (orientation: landscape){
+  h2 {
+    font-size: 2.25vw;
+    margin-bottom: 1vw;
+  }
+  img {
+    height: 4vw;
+    width: 5vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+  }
+  p {
+    font-size: 2vw;
+  }
+  #so_med{
+    margin-bottom: -.75vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 4.25vw;
+    margin-bottom: 3vw;
+  }
+  img {
+    height: 5vw;
+    width: 6vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  h2 {
+    font-size: 2.25vw;
+    margin-bottom: 1vw;
+  }
+  img {
+    height: 4vw;
+    width: 5vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  p {
+    font-size: 1.75vw;
+  }
+  #so_med{
+    margin-bottom: -.75vw;
+  }
+}
+
+@media screen and (min-width: 866px) {
+  h2 {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+  img {
+    height: 4.5vw;
+    width: 5.5vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 866px) and (orientation: landscape) {
+  h2 {
+    font-size: 2.25vw;
+    margin-bottom: 1.5vw;
+  }
+  img {
+    height: 4vw;
+    width: 5vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  p {
+    font-size: 1.7vw;
+  }
+  #so_med{
+    margin-bottom: -.75vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 2.25vw;
+    margin-bottom: 1.5vw;
+  }
+  img {
+    height: 4vw;
+    width: 5vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  p {
+    font-size: 1.75vw;
   }
 }
 </style>
