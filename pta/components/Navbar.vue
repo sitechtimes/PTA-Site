@@ -8,49 +8,59 @@
       />
     </div>
     <div id="nav">
-      <div class="group" id="home">
+      <div class="group">
         <img
           class="icon"
+          id="home"
           src="../components/icons/NavBar-Icons/house.svg"
           alt="dark brown icon of a house"
         />
         <NuxtLink to="/">Home</NuxtLink>
       </div>
-      <div class="group" id="events">
+      <div class="group">
         <img
           class="icon"
+          id="events"
           src="../components/icons/NavBar-Icons/calendar.svg"
           alt="dark brown icon of a calendar"
         />
         <NuxtLink to="/Events">Events</NuxtLink>
       </div>
-      <div class="group" id="contact">
+      <div class="group">
         <img
           class="icon"
+          id="contact"
           src="../components/icons/NavBar-Icons/envelope.svg"
           alt="dark brown icon of an envelope"
         />
         <NuxtLink to="/ContactUs">Contact</NuxtLink>
       </div>
-      <div class="group" id="donate">
+      <div class="group">
         <img
           class="icon"
+          id="donate"
           src="../components/icons/NavBar-Icons/credit_card.svg"
           alt="dark brown icon of a credit card"
         />
         <NuxtLink to="/Donate">Donate</NuxtLink>
       </div>
     </div>
+    <Menu />
   </div>
 </template>
-
+<!-- <script>
+import Menu from "./Menu.vue";
+export default {
+  components: { Menu },
+  name: "Navbar",
+  methods: {},
+};
+</script> -->
 <style scoped>
 @import url(../assets/base.css);
 
 #nav {
-  display: flex;
-  max-width: 63.5rem;
-  justify-content: flex-end;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -66,8 +76,14 @@ a {
 
 .icon {
   padding-right: 0.6rem;
+  padding-bottom: 0.5rem;
 }
-
+#contact {
+  padding-bottom: 0.1rem;
+}
+#donate {
+  padding-bottom: 0.1rem;
+}
 .group {
   display: flex;
   width: 12rem;
@@ -79,7 +95,9 @@ a:visited {
 }
 
 @media screen and (max-width: 1400px) {
-  /*no change needed */
+  .group {
+    width: 10rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -87,27 +105,14 @@ a:visited {
 }
 
 @media screen and (max-width: 992px) {
-  #nav {
-    max-width: 45rem;
-  }
-
-  a {
-    width: 7rem;
-  }
-  .group {
-    width: 10rem;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  #nav {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 576px) {
-  #nav {
-    display: none;
+  #logo {
+    width: 1rem;
   }
 }
 </style>

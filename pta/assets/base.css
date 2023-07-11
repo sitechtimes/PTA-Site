@@ -10,7 +10,8 @@
     
     /* colors */
     --text-color: #483221;
-    --bg-color: #fff
+    --primary-bg: #fff;
+    --secondary-bg: #FCE5AC;
     --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
 
   /* media queries max width
@@ -34,12 +35,41 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}@media only screen and (min-width: 1032px) {
+        .menu {
+          display: none;
+        }
+        #nav {
+          display: flex;
+        }
 }
-
+@media only screen and (max-width: 1032px) {
+    #nav {
+      display: none;
+    }
+    .menu {
+      display: initial;
+      .link-container {
+        text-align: left;
+        margin-left: 6rem;
+        padding-top: 10rem;
+      }
+      .link {
+        margin-top: 2.5rem;
+        list-style: none;
+      }
+      .menu-router {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 3rem;
+        list-style: none;
+        margin-left: 0.2rem;
+      }
+    }}
 @media screen and (max-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100vw;
+  width: 100%;
   height: 220vw;
   margin: 0;
   padding: 0%;
@@ -47,12 +77,27 @@ body {
   top: 0%;
   left: 0%;
 }
+.menu {
+    display: block; 
+}
+    .link-container {
+      text-align: center;
+      margin-left: 0rem;
+      padding-top: 10rem;
+    }
+    .link {
+      margin-top: 1.5rem;
+      list-style: none;
+    }
+    .menu-router {
+      font-size: 1.8rem;
+    }
 }
 
 @media screen and (min-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100vw;
+  width: 100%;
   height: 220vw;
   margin: 0;
   padding: 0%;
@@ -65,7 +110,7 @@ body {
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon{
       background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100vw;
+      width: 100%;
       height: 70vw;
       margin: 0;
       padding: 0%;
@@ -78,7 +123,7 @@ body {
 @media screen and (min-width: 768px) {
   #homeTopCon{
       background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100vw;
+      width: 100%;
       height: 140vw;
       margin: 0;
       padding: 0%;
@@ -91,7 +136,7 @@ body {
 @media screen and (min-width: 768px) and (orientation: landscape){
   #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-    width: 100vw;
+    width: 100%;
     height: 70vw;
     margin: 0;
     padding: 0%;
