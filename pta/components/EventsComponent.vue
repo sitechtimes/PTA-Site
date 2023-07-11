@@ -32,7 +32,7 @@
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .flag:after {
   content: " ";
@@ -45,9 +45,7 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
 }
-.flag:hover {
-  padding-top: 90px;
-}
+
 .date {
   margin-right: 10%;
   font-family: Karla;
@@ -68,17 +66,17 @@
 }
 .event {
   display: flex;
-  flex-direction: row;
   width: 100%;
   height: 20%;
   background-color: white;
   border-radius: 20px;
   background: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.5s;
+  transition: 0.2s;
+  flex-wrap: wrap;
 }
-.event:hover {
-  height: 40%;
+.event:hover h5 {
+  opacity: 100;
 }
 @media screen and (max-width: 1400px) {
 }
