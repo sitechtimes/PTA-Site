@@ -1,12 +1,15 @@
 <template>
-  <div class="parent">
-    <div class="div1">
-      <HomeTop />
+  <div>
+    <Navbar />
+    <div class="parent">
+      <div class="div1">
+        <HomeTop />
+      </div>
+      <div class="div2">
+        <MiddleSection />
+      </div>
+      <ScrollTop />
     </div>
-    <div class="div2">
-      <MiddleSection />
-    </div>
-    <ScrollTop />
   </div>
 </template>
 
@@ -30,4 +33,3 @@
   width: 100vw;
 }
 </style>
-
