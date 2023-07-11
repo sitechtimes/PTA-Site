@@ -1,5 +1,5 @@
 <template>
-<div>
-    <ScrollTop /> 
-</div>
+  <div>
+    <ScrollTop />
+  </div>
 </template>
