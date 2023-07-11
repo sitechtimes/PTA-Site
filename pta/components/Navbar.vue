@@ -30,7 +30,7 @@
           src="../components/icons/NavBar-Icons/envelope.svg"
           alt="dark brown icon of an envelope"
         />
-        <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
+        <NuxtLink to="/ContactUs">Contact</NuxtLink>
       </div>
       <div class="group" id="donate">
         <img
@@ -49,7 +49,7 @@
 
 #nav {
   display: flex;
-  width: 63.5rem;
+  max-width: 63.5rem;
   justify-content: flex-end;
   flex-shrink: 0;
 }
@@ -60,7 +60,7 @@ a {
   text-decoration: none;
 }
 
-#logo {
+.logo {
   justify-content: flex-start;
 }
 
@@ -88,13 +88,12 @@ a:visited {
 
 @media screen and (max-width: 992px) {
   #nav {
-    width: 45rem;
+    max-width: 45rem;
   }
 
   a {
     width: 7rem;
   }
-
   .group {
     width: 10rem;
   }
@@ -102,46 +101,13 @@ a:visited {
 
 @media screen and (max-width: 768px) {
   #nav {
-    width: 25rem;
-    font-size: 1.3rem;
-  }
-
-  a {
-    width: 6.5rem;
-  }
-
-  .icon {
-    max-width: 1.5rem;
-  }
-
-  .logo {
-    max-width: 9rem;
-    height: auto;
+    display: none;
   }
 }
 
 @media screen and (max-width: 576px) {
   #nav {
-    width: 27rem;
-    font-size: 0.9rem;
-  }
-
-  a {
-    width: 4rem;
-  }
-
-  .group {
-    width: 6.5rem;
-  }
-
-  .icon {
-    max-width: 1.2rem;
-    padding-right: 0.3rem;
-  }
-
-  .logo {
-    max-width: 8rem;
-    height: auto;
+    display: none;
   }
 }
 </style>
