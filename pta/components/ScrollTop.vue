@@ -1,6 +1,6 @@
 <template>
   <div class="container__topArrow">
-    <a href="#section__landingSection" class="anchor__topArrow">
+    <a href="#homeTopCon">
       <img src="/back-to-top-arrow.svg" >
     </a>
   </div>

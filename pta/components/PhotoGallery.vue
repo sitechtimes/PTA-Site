@@ -49,10 +49,7 @@ export default defineComponent({
 <style scoped>
 .container__carousel {
   width: 50vw;
-}
-
-.carousel-image {
-  border-radius: 1rem;
+  margin: 3rem;
 }
 
 .carousel__slide {
@@ -76,7 +73,7 @@ export default defineComponent({
   transform: rotateY(-20deg) scale(0.9);
 }
 
-.carousel__slide--active ~ .carousel__slide {
+.carousel__slide--active~.carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
 
@@ -101,9 +98,10 @@ export default defineComponent({
   padding: 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
   .container__carousel {
     width: 90vw;
   }
 }
+
 </style>
