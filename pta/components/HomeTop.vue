@@ -1,12 +1,14 @@
 <template>
-  <div id="homeTopCon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <div id="homeTopText">
-      <h2 id="pta">Parent Teacher Association @</h2>
-      <h1 id="siths">STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL</h1>
-      <p id="address">485 Clawson Street, Staten Island, NY 10306</p>
+  <section id="section__LandingSection">
+    <div id="homeTopCon">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <div id="homeTopText">
+        <h2 id="pta">Parent Teacher Association @</h2>
+        <h1 id="siths">STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL</h1>
+        <p id="address">485 Clawson Street, Staten Island, NY 10306</p>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 <style scoped>
 @import "../assets/base.css";

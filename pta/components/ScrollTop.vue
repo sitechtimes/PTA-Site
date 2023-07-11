@@ -1,10 +1,20 @@
 <template>
   <div class="container__topArrow">
-    <a href="#homeTopCon">
-      <img src="/back-to-top-arrow.svg" >
-    </a>
+    <!-- <a href="#section__LandingSection"> -->
+    <img src="/back-to-top-arrow.svg" @click="scroll" />
+    <!-- </a> -->
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    scroll() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .container__topArrow {
@@ -30,7 +40,7 @@
     right: 5%;
     bottom: 7%;
   }
-  .container__topArrow img{
+  .container__topArrow img {
     height: 5rem;
   }
 }
@@ -41,9 +51,9 @@
     bottom: 5%;
     right: 5%;
   }
-  
-  .container__topArrow img{
-    height: 3rem;;
+
+  .container__topArrow img {
+    height: 3rem;
   }
 }
 </style>
