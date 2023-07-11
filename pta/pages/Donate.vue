@@ -1,3 +1,5 @@
 <template>
-    <p>donate</p>
+  <div>
+    <ScrollTop />
+  </div>
 </template>
