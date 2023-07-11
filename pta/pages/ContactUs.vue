@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="container__SideNavigation" id="btncon">
-            <a href="#section__GeneralContacts">
+            <a id="gc" href="#section__GeneralContacts" class="sidenavbtn">
                 <h3>General Contacts</h3>
             </a>
-            <a href="#section__BoardMembers">
+            <a href="#section__BoardMembers" class="sidenavbtn">
                 <h3>Board Members</h3>
             </a>
-            <a href="#section__JoinUs">
+            <a id="ju" href="#section__JoinUs" class="sidenavbtn">
                 <h3>Join Us</h3>
             </a>
         </div>
@@ -210,16 +210,21 @@ a {
 
 
 @media only screen and (max-width: 576px) {
+    #gc{
+        margin-left: 0vw;
+    }
     section {
         padding: 1rem;
     }
-
+    .sidenavbtn{
+        width: 30vw;
+        
+    }
     .container__SideNavigation {
         /* display: flex;
         flex-direction: row; */
         width: 100%;
         height: fit-content;
-        padding: 0.5rem;
         top: 0;
         left: 0;
         position: fixed;
@@ -240,12 +245,12 @@ a {
         margin: 0;
     }
 
-    .container__SideNavigation a {
+    /* .container__SideNavigation a {
         border: 1px black solid;
         border-radius: 2rem;
         text-align: center;
         margin: 0.5rem;
-    }
+    } */
 
     .container__SideNavigation::before {
         visibility: hidden;
@@ -302,6 +307,7 @@ a {
         display: flex;
         justify-content: center;
         padding: 0.5rem;
+        padding-left: 0;
         margin: 0 0.5rem 0 0;
         top: 0;
         left: 0;
