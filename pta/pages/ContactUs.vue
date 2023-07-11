@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="container__SideNavigation" id="btncon">
-            <a id="gc" href="#section__GeneralContacts" class="sidenavbtn">
+            <a href="#section__GeneralContacts" class="sidenavbtn">
                 <h3>General Contacts</h3>
             </a>
-            <a href="#section__BoardMembers" class="sidenavbtn">
+            <a id="boardMembers" href="#section__BoardMembers" class="sidenavbtn">
                 <h3>Board Members</h3>
             </a>
-            <a id="ju" href="#section__JoinUs" class="sidenavbtn">
+            <a id="joinUs" href="#section__JoinUs" class="sidenavbtn">
                 <h3>Join Us</h3>
             </a>
         </div>
@@ -79,6 +79,10 @@
 
 section {
     padding: 2rem;
+    height: 100vh;
+}
+body{
+    overflow-x: hidden;
 }
 
 .container {
@@ -162,9 +166,6 @@ li {
     text-decoration: none;
 }
 
-section {
-    height: 100vh;
-}
 
 a {
     font-family: var(--font-text);
@@ -210,32 +211,17 @@ a {
 
 
 @media only screen and (max-width: 576px) {
-    #gc{
-        margin-left: 0vw;
-    }
     section {
         padding: 1rem;
+        margin-top: 25vw;
+        height: auto;
     }
-    .sidenavbtn{
-        width: 30vw;
-        
-    }
-    .container__SideNavigation {
-        /* display: flex;
-        flex-direction: row; */
-        width: 100%;
-        height: fit-content;
-        top: 0;
-        left: 0;
-        position: fixed;
-    }
-
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: auto;
     }
 
     .container__body {
@@ -244,18 +230,6 @@ a {
         padding: 0;
         margin: 0;
     }
-
-    /* .container__SideNavigation a {
-        border: 1px black solid;
-        border-radius: 2rem;
-        text-align: center;
-        margin: 0.5rem;
-    } */
-
-    .container__SideNavigation::before {
-        visibility: hidden;
-    }
-
 
     p {
         font-size: 1rem;
@@ -270,11 +244,6 @@ a {
         font-size: 2rem;
     }
 
-    h3 {
-        font-size: .8rem;
-        margin: 0.5rem;
-    }
-
     a {
         font-size: 1rem;
     }
@@ -282,6 +251,7 @@ a {
     h2 {
         font-size: 1.5rem;
         letter-spacing: 0.1rem;
+        text-align: center;
     }
 
     h4 {
@@ -304,14 +274,7 @@ a {
     }
 
     #btncon {
-        display: flex;
-        justify-content: center;
-        padding: 0.5rem;
-        padding-left: 0;
-        margin: 0 0.5rem 0 0;
-        top: 0;
-        left: 0;
-        background-color: white;
+        display: none;
     }
 }
 
