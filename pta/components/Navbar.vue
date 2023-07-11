@@ -30,7 +30,7 @@
           src="../components/icons/NavBar-Icons/envelope.svg"
           alt="dark brown icon of an envelope"
         />
-        <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
+        <NuxtLink to="/ContactUs">Contact</NuxtLink>
       </div>
       <div class="group" id="donate">
         <img
@@ -41,16 +41,23 @@
         <NuxtLink to="/Donate">Donate</NuxtLink>
       </div>
     </div>
+    <!-- <Menu /> -->
   </div>
 </template>
-
+<!-- <script>
+import Menu from "./Menu.vue";
+export default {
+  components: { Menu },
+  name: "Navbar",
+  methods: {},
+};
+</script> -->
 <style scoped>
 @import url(../assets/base.css);
 
 #nav {
   display: flex;
-  width: 63.5rem;
-  justify-content: flex-end;
+  justify-content: center;
   flex-shrink: 0;
 }
 
