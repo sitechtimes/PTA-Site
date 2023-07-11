@@ -6,7 +6,7 @@
         <HomeTop />
       </div>
       <div class="div2">
-        <MiddleSection />
+      <!--   <MiddleSection /> -->
       </div>
       <ScrollTop />
     </div>

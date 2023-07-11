@@ -38,12 +38,13 @@ h3{
     flex-direction: row;
     width: 100vw;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .information {
     width: 50vw;
     z-index: 2;
-    margin-left: 5%;
 }
 
 .gallery {

@@ -32,9 +32,9 @@ export default defineComponent({
   data() {
     return {
       images: [
-        "https://picsum.photos/seed/picsum/200/300",
-        "https://picsum.photos/200/300?grayscale",
-        "https://picsum.photos/200/300/?blur=2",
+        "https://picsum.photos/seed/picsum/600/400",
+        "https://picsum.photos/600/400?grayscale",
+        "https://picsum.photos/600/400/?blur=2",
         /* insert src's or link to images here
         format:
         'image link',
