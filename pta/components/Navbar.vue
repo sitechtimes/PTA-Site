@@ -8,29 +8,33 @@
       />
     </div>
     <div id="nav">
-      <div class="link" id="home">
+      <div class="group" id="home">
         <img
+          class="icon"
           src="../components/icons/NavBar-Icons/house.svg"
           alt="dark brown icon of a house"
         />
         <NuxtLink to="/">Home</NuxtLink>
       </div>
-      <div class="link" id="events">
+      <div class="group" id="events">
         <img
+          class="icon"
           src="../components/icons/NavBar-Icons/calendar.svg"
           alt="dark brown icon of a calendar"
         />
         <NuxtLink to="/Events">Events</NuxtLink>
       </div>
-      <div class="link" id="contact">
+      <div class="group" id="contact">
         <img
+          class="icon"
           src="../components/icons/NavBar-Icons/envelope.svg"
           alt="dark brown icon of an envelope"
         />
         <NuxtLink to="/ContactUs">Contact Us</NuxtLink>
       </div>
-      <div class="link" id="donate">
+      <div class="group" id="donate">
         <img
+          class="icon"
           src="../components/icons/NavBar-Icons/credit_card.svg"
           alt="dark brown icon of a credit card"
         />
@@ -42,135 +46,102 @@
 
 <style scoped>
 @import url(../assets/base.css);
+
 #nav {
   display: flex;
+  width: 63.5rem;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
+
 a {
   display: flex;
-  width: 10rem;
-  margin-left: 0.4rem;
-  padding-top: 2.75rem;
-  padding-bottom: 2.188rem;
-  flex-direction: row;
-  /* white-space: nowrap; */
-  flex-shrink: 0;
+  width: 10.5rem;
   text-decoration: none;
-  color: var(--text-color);
 }
 
 #logo {
   justify-content: flex-start;
 }
-.link {
-  display: flex;
-  justify-content: space-evenly;
+
+.icon {
+  padding-right: 0.6rem;
 }
+
+.group {
+  display: flex;
+  width: 12rem;
+  align-self: center;
+}
+
 a:visited {
   color: var(--text-color);
 }
 
 @media screen and (max-width: 1400px) {
-  a {
-    width: 10rem;
-    height: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-  }
-  img {
-    width: 30%;
-    height: 30%;
-    padding-top: 4rem;
-    padding-right: 0.188rem;
-  }
-  .link {
-    padding-right: 3rem;
-  }
-  #donate {
-    padding-left: 6rem;
-  }
+  /*no change needed */
 }
 
 @media screen and (max-width: 1200px) {
-  #navbar {
-    font-size: 2.5rem;
-  }
-  a {
-    width: 7.5rem;
-    height: 2rem;
-    padding-top: 2.5rem;
-  }
-  img {
-    padding-top: 3.2rem;
-  }
+  /*no change needed */
 }
 
 @media screen and (max-width: 992px) {
-  #navbar {
-    font-size: 2rem;
+  #nav {
+    width: 45rem;
   }
+
   a {
-    width: 4rem;
-    height: 2rem;
-    padding-top: 2.2rem;
+    width: 7rem;
   }
-  img {
-    padding-top: 2.6rem;
-  }
-  .link {
-    padding-right: 4.5rem;
-  }
-  #donate {
-    padding-left: 5rem;
+
+  .group {
+    width: 10rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #navbar {
-    background-size: 18%;
-    font-size: 1.5rem;
+  #nav {
+    width: 25rem;
+    font-size: 1.3rem;
   }
+
   a {
-    width: 4.6rem;
-    height: 0.5rem;
-    padding-top: 1.5rem;
+    width: 6.5rem;
   }
-  img {
-    width: 30%;
-    height: 30%;
-    padding-top: 1.7rem;
+
+  .icon {
+    max-width: 1.5rem;
   }
-  .link {
-    padding-right: 2.188rem;
-  }
-  #donate {
-    padding-left: 1.875rem;
+
+  .logo {
+    max-width: 9rem;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 576px) {
+  #nav {
+    width: 27rem;
+    font-size: 0.9rem;
+  }
+
   a {
-    width: 2rem;
-    height: 0.563rem;
-    padding-top: 0.5rem;
-    flex-direction: row;
-    white-space: nowrap;
+    width: 4rem;
   }
-  img {
-    width: 30%;
-    height: 30%;
-    padding-top: 1rem;
-    padding-right: 0.188rem;
+
+  .group {
+    width: 6.5rem;
   }
-  .link {
-    padding-top: 0.2rem;
-    padding-right: 2rem;
-    justify-content: space-evenly;
+
+  .icon {
+    max-width: 1.2rem;
+    padding-right: 0.3rem;
   }
-  #donate {
-    padding-left: 3.25rem;
-  }
-  #contact {
-    padding-left: 1rem;
+
+  .logo {
+    max-width: 8rem;
+    height: auto;
   }
 }
 </style>
