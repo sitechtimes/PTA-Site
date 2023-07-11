@@ -1,3 +1,5 @@
 <template>
-  <p>contact</p>
+<div>
+    <ScrollTop /> 
+</div>
 </template>
