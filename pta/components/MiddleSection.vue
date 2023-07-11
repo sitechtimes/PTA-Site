@@ -33,6 +33,7 @@ h3{
     margin-top: 5rem;
 }
 #section__MiddleSection {
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -56,6 +57,7 @@ h3{
         justify-content: center;
         align-items: center;
     }
+
 }
 
 @media screen and (max-width: 1024px) {
