@@ -23,11 +23,12 @@
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   height: 100vh;
-  width: 100vw;
+  width: 60%;
 }
 
 .div2 {
-  grid-area: 2 / 1 / 3 / 2;
-  width: 100vw;
+display: flex;
+flex-direction: row;
+  width: 90%;
 }
 </style>

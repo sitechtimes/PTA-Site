@@ -46,9 +46,10 @@ a {
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    margin-left: 5%;
 }
 
 .information {
@@ -70,7 +71,7 @@ a {
     }
 
     .information {
-        width: 100vw;
+        width: 100%;
         padding-left: 2rem;
     }
 
@@ -89,7 +90,7 @@ a {
     }
 
     .information {
-        width: 100vw;
+        width: 100%;
         padding-left: 3rem;
     }
 }</style>

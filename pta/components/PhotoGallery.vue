@@ -48,7 +48,7 @@ export default defineComponent({
 
 <style scoped>
 .container__carousel {
-  width: 50vw;
+  width: 45vw;
   margin: 3rem;
 }
 
