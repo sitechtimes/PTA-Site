@@ -43,7 +43,7 @@ export default {
   .container__topArrow {
     height: 2rem;
     bottom: 5rem;
-    right: 1.8rem;
+    right: 4rem;
   }
   .container__topArrow img {
     height: 5rem;
@@ -54,7 +54,7 @@ export default {
   .container__topArrow {
     height: 1.5rem;
     bottom: 2.5rem;
-    right: 1rem;
+    right: 3rem;
   }
 
   .container__topArrow img {

@@ -6,7 +6,7 @@
       <h1 id="siths">STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL</h1>
       <p id="address">485 Clawson Street, Staten Island, NY 10306</p>
     </div>
-  </section>
+  </div>
 </template>
 <style scoped>
 @import "../assets/base.css";
