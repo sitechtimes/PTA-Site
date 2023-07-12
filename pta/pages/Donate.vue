@@ -1,3 +1,4 @@
 <template>
-    <p>donate</p>
+  <div>
+  </div>
 </template>

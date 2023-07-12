@@ -1,5 +1,5 @@
 <template>
-  <div id="homeTopCon">
+  <div class="home" id="homeTopCon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div id="homeTopText">
       <h2 id="pta">Parent Teacher Association @</h2>
@@ -10,12 +10,12 @@
 </template>
 <style scoped>
 @import "../assets/base.css";
-
 @media screen and (max-width: 576px) {
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
+    top: 5%;
     left: 45%;
     transform: translate(-50%, 34vw);
     white-space: nowrap;
@@ -31,8 +31,7 @@
     margin: 0%;
     font-size: 8vw;
     font-weight: 800;
-    line-height: 128%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 3vw;
   }
   #pta {
@@ -64,8 +63,7 @@
     margin: 0%;
     font-size: 9.2vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 3.5vw;
   }
   #pta {
@@ -82,7 +80,7 @@
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: -30%;
+    top: -14%;
     left: 30%;
     white-space: nowrap;
     text-align: left;
@@ -97,8 +95,7 @@
     margin: 0%;
     font-size: 4.4vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 1vw;
   }
   #pta {
@@ -129,8 +126,7 @@
     margin: 0%;
     font-size: 9vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.449vw;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.5vw;
   }
   #pta {
@@ -148,7 +144,7 @@
     font-family: var(--font-heading);
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 13vw;
+    top: 30%;
     left: 8vw;
     text-align: left;
   }
@@ -162,8 +158,7 @@
     margin: 0%;
     font-size: 5vw;
     font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
@@ -181,7 +176,7 @@
     font-family: var(--font-heading);
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 14vw;
+    top: 28%;
     left: 7vw;
     text-align: left;
   }
@@ -196,7 +191,7 @@
     font-size: 5vw;
     font-weight: 800;
     line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
@@ -207,7 +202,6 @@
     margin-bottom: 0.4vw;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #homeTopText {
     color: var(--text-color);
@@ -215,7 +209,7 @@
     text-align: left;
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 15vw;
+    top: 26%;
     left: 7vw;
   }
   #address {
@@ -229,7 +223,7 @@
     font-size: 5vw;
     font-weight: 800;
     line-height: 129.164%;
-    letter-spacing: 4.6px;
+    letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
   #pta {
@@ -238,6 +232,11 @@
     font-weight: 400;
     letter-spacing: 0.48px;
     margin-bottom: 0.4vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #homeTopText {
+    top: 22%;
   }
 }
 </style>
