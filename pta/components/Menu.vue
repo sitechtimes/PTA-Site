@@ -70,6 +70,9 @@ export default {
 img {
   width: 3rem;
 }
+.menu-btn{
+  position: fixed;
+}
 @keyframes slide-right {
   0% {
     right: -100%;
@@ -81,4 +84,10 @@ img {
     right: 0;
   }
 }
+
+.link-container{
+  padding: 0;
+  left: 0;
+}
+
 </style>
