@@ -1,8 +1,8 @@
 <script></script>
 <template>
   <div>
+    <Navbar />
     <HomeTop />
-    <ScrollTop/>
-    <Footer />
+<Footer/>
   </div>
 </template>
