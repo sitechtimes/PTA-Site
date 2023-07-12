@@ -35,31 +35,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-}
-
-body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-.heading {
-    font-family: 'Kumbh Sans', san serif;
-    font-weight: 800;
-}
-
-/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
-h1 {
-    font-size: 6rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-@media only screen and (min-width: 1032px) {
+}@media only screen and (min-width: 1032px) {
         .menu {
           display: none;
         }
@@ -168,4 +144,13 @@ h1 {
     top: 0%;
     left: 0%;
   }
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.heading {
+    font-family: 'Kumbh Sans', san serif;
+    font-weight: 800;
 }

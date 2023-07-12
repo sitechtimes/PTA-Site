@@ -1,12 +1,12 @@
 <template>
   <div id="navbar">
-    <NuxtLink to="/" id="logoContainer">
+    <div id="logoContainer">
       <img
         class="logo"
         src="../components/icons/NavBar-Icons/pta-logo.png"
         alt=""
       />
-    </NuxtLink>
+    </div>
     <div id="nav">
       <div class="group">
         <img
