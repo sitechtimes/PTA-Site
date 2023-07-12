@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+
     <div class="parent">
       <div class="div1">
         <HomeTop />
@@ -9,7 +9,7 @@
         <MiddleSection />
       </div>
     </div>
-    <ScrollTop />
+
   </div>
 </template>
 
