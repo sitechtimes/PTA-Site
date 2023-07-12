@@ -42,10 +42,6 @@ footer {
   justify-content: center;
   align-items: center;
   align-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  left: 1%;
-  right: 1%;
 }
 
 #so_med {
@@ -80,9 +76,6 @@ p {
 @media screen and (max-width: 576px) {
   #footer {
     width: 55vw;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -138,9 +131,6 @@ p {
 @media screen and (min-width: 768px) {
   #footer {
     width: 50vw;
-    position: absolute;
-    bottom: 0;
-    left: 49.5%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -187,9 +177,6 @@ p {
 @media screen and (min-width: 866px) {
   #footer {
     width: 55vw;
-    position: absolute;
-    bottom: 0;
-    left: 49%;
     transform: translate(-50%, 0);
   }
   h2 {
