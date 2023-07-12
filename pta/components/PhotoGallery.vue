@@ -77,7 +77,7 @@ export default defineComponent({
   transform: rotateY(-20deg) scale(0.9);
 }
 
-.carousel__slide--active~.carousel__slide {
+.carousel__slide--active ~ .carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
 
