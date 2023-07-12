@@ -36,9 +36,36 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) and (orientation: portrait){
   #home, #contact, #events, #donate{
     width: 8vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 3vw;
+      padding-top: 20vw;
+    }
+    .link {
+      margin-top: 6vw;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 6vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+@media only screen and (min-width: 540px) and (orientation: portrait){
+  #home, #contact, #events, #donate{
+    width: 6vw;
   }
   #nav {
     display: none;
@@ -57,14 +84,104 @@ body {
     .menu-router {
       color: var(--text-color);
       text-decoration: none;
-      font-size: 6vw;
+      font-size: 5vw;
       list-style: none;
       margin-left: 0.2rem;
     }
   }
 }
-  
 
+@media only screen and (min-width: 540px) and (orientation: landscape) {
+  #home, #contact, #events, #donate{
+    width: 3vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 3vw;
+      padding-top: 3vw;
+    }
+    .link {
+      margin-top: 1.5vw;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 3vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #home, #contact, #events, #donate{
+    width: 5.5vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 3vw;
+      padding-top: 20vw;
+    }
+    .link {
+      margin-top: 2.5rem;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 4.5vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  #home, #contact, #events, #donate{
+    width: 3vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 3vw;
+      padding-top: 3vw;
+    }
+    .link {
+      margin-top: 1.5vw;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 3vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+}
 body {
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -73,6 +190,7 @@ body {
     font-family: 'Kumbh Sans', san serif;
     font-weight: 800;
 }
+
 
 /* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 h1 {
@@ -87,38 +205,8 @@ h1 {
   h4 {
     font-size: 1.5rem;
   }
-@media only screen and (min-width: 1032px) {
-        .menu {
-          display: none;
-        }
-        #nav {
-          display: flex;
-        }
-}
-/* @media only screen and (max-width: 1032px) {
-    #nav {
-      display: none;
-    }
-    .menu {
-      display: initial;
-      .link-container {
-        text-align: left;
-        margin-left: 6rem;
-        padding-top: 10rem;
-      }
-      .link {
-        margin-top: 2.5rem;
-        list-style: none;
-      }
-      .menu-router {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 3rem;
-        list-style: none;
-        margin-left: 0.2rem;
-      }
-    }
-} */
+
+
 @media screen and (max-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
