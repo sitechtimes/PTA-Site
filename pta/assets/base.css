@@ -47,7 +47,7 @@ body {
     display: initial;
     .link-container {
       text-align: left;
-      margin-left: 3vw;
+      margin-left: 8%;
       padding-top: 20vw;
     }
     .link {
@@ -74,7 +74,7 @@ body {
     display: initial;
     .link-container {
       text-align: left;
-      margin-left: 3vw;
+      margin-left: 8%;
       padding-top: 20vw;
     }
     .link {
@@ -92,9 +92,6 @@ body {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
-  #home, #contact, #events, #donate{
-    width: 3vw;
-  }
   #nav {
     display: none;
   }
@@ -130,7 +127,7 @@ body {
     display: initial;
     .link-container {
       text-align: left;
-      margin-left: 3vw;
+      margin-left: 8%;
       padding-top: 20vw;
     }
     .link {
@@ -148,9 +145,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
-  #home, #contact, #events, #donate{
-    width: 3vw;
-  }
   #nav {
     display: none;
   }
@@ -207,7 +201,7 @@ h1 {
   }
 
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
   width: 100%;
