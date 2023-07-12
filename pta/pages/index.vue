@@ -12,7 +12,6 @@
     <ScrollTop />
   </div>
 </template>
-
 <style scoped>
 .parent {
   display: grid;

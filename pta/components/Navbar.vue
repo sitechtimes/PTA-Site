@@ -72,7 +72,10 @@ a {
 }
 
 .logo {
-  justify-content: flex-start;
+  width: 10rem;
+  position: absolute;
+  left: 6.5%;
+  top: 19.5%;
 }
 
 .icon {
@@ -102,7 +105,16 @@ a:visited {
 }
 
 @media screen and (max-width: 1200px) {
-  /*no change needed */
+  .logo {
+    width: 7rem;
+  }
+  .icon {
+    width: 1.5rem;
+  }
+  .group {
+    font-size: 1.2rem;
+    width: 9rem;
+  }
 }
 
 @media screen and (max-width: 992px) {

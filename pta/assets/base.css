@@ -169,3 +169,13 @@ h1 {
     left: 0%;
   }
 }
+@media screen and (max-width: 768px) {
+    .menu {
+        margin-right: 2rem;
+      }
+}
+@media only screen and (max-width: 1200px) {
+    #navbar {
+        height: 4.2rem;
+    }
+}
