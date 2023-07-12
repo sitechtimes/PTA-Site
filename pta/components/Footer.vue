@@ -37,7 +37,6 @@ img:hover {
 }
 
 footer {
-  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: center;

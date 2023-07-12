@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="parent">
       <div class="div1">
         <HomeTop />
@@ -9,7 +8,6 @@
         <MiddleSection />
       </div>
     </div>
-
   </div>
 </template>
 <style scoped>
