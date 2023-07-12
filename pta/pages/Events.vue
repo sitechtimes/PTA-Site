@@ -67,13 +67,7 @@ h6 {
     margin: 5%;
     margin-top: 13%;
   }
-  .events {
-    margin: 3% 5%;
-    width: 59.7%;
-    height: 18.31%;
-  }
   #gradient {
-    width: 100vw;
     height: 140vh;
   }
   #calendar {

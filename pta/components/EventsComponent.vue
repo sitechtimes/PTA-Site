@@ -37,9 +37,10 @@
 @import url(../assets/base.css);
 
 .events {
+  margin: 3% 5%;
   display: flex;
   width: 59%;
-  height: 26%;
+  height: 24rem;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -54,7 +55,7 @@ a:active {
   border-radius: 8px;
   width: 3.125rem;
   height: 3.5rem;
-  margin: -5px 0 0 0;
+  margin: -5px 0 0 60px;
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
@@ -92,7 +93,7 @@ a:active {
 .event {
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 6rem;
   background-color: white;
   border-radius: 1.3rem;
   background: #ffffff;
@@ -104,8 +105,7 @@ a:active {
   .flag {
     width: 2.188rem;
     border-radius: 5px;
-    height: 3.5rem;
-    left: 6%;
+    height: 2rem;
   }
   .flag:after {
     border-left: 1.063rem solid transparent;
@@ -135,13 +135,11 @@ a:active {
     border-radius: 12px;
   }
   .flag {
-    width: 2.2rem;
-    height: 3.1rem;
-    left: 6%;
+    width: 2rem;
   }
   .flag:after {
-    border-left: 1.1rem solid transparent;
-    border-right: 1.1rem solid transparent;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
   }
   .name,
   .date {
@@ -157,8 +155,7 @@ a:active {
     width: 30px;
     border-radius: 5px;
     padding-top: 5px;
-    height: 40px;
-    left: 6%;
+    height: 1.5rem;
   }
   .flag:after {
     border-left: 15px solid transparent;
@@ -213,7 +210,7 @@ a:active {
     margin-left: -2%;
   }
   .event {
-    height: 25%;
+    height: 16rem;
   }
   .flag:after {
     border-left: 0.6rem solid transparent;
