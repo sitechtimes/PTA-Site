@@ -7,7 +7,6 @@
       <div class="div2">
         <MiddleSection />
       </div>
-      <ScrollTop />
     </div>
   </div>
 </template>
