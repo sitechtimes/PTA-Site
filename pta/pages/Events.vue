@@ -1,6 +1,5 @@
 <template>
   <div id="gradient">
-    <Navbar />
     <h2>EVENTS</h2>
     <EventsComponent></EventsComponent>
     <section id="calendar">
@@ -10,8 +9,6 @@
         calendar in here.
       </h4>
     </section>
-    <ScrollTop />
-    <Footer />
   </div>
 </template>
 
