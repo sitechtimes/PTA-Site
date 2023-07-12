@@ -54,11 +54,11 @@ h2 {
 #temporary {
   color: #000;
   text-align: center;
-  font-size: 22px;
+  font-size: 1.3rem;
   letter-spacing: 0.44px;
 }
 h6 {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #000;
   text-align: center;
 }

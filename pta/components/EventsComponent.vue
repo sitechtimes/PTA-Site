@@ -68,9 +68,9 @@ a:active {
   bottom: 0;
   width: 0;
   height: 0;
-  border-bottom: 13px solid white;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-bottom: 0.813rem solid white;
+  border-left: 1.563rem solid transparent;
+  border-right: 1.563rem solid transparent;
 }
 
 .date {
@@ -79,7 +79,6 @@ a:active {
   font-weight: 400;
 }
 .name {
-  display: inline;
   margin-left: 10%;
   color: var(--text-color);
   font-family: Karla;
@@ -102,17 +101,17 @@ a:active {
   transition: 0.2s;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 87.5rem) {
   .flag {
-    width: 35px;
+    width: 2.188rem;
     border-radius: 5px;
     height: 50px;
     left: 6%;
     padding-top: 0px;
   }
   .flag:after {
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
+    border-left: 1.063rem solid transparent;
+    border-right: 1.063rem solid transparent;
   }
   .name,
   .date {
@@ -124,7 +123,7 @@ a:active {
     margin: 0.6rem;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 75rem) {
   .events {
     margin: 3% 5%;
     width: 80%;
@@ -139,17 +138,13 @@ a:active {
     height: 3.1rem;
     left: 6%;
   }
-  .flag:after {
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
-  }
   .name,
   .date {
     margin: 3%;
     font-size: 30px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 62rem) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -172,7 +167,7 @@ a:active {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -196,7 +191,7 @@ a:active {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 36rem) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -223,7 +218,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 346px) {
+@media screen and (max-width: 22.25rem) {
   .flag {
     opacity: 0;
   }
