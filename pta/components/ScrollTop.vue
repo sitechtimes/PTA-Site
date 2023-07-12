@@ -30,7 +30,7 @@ export default {
 @media screen and (max-width: 1200px) {
   .container__topArrow {
     height: 3rem;
-    bottom: 1.25rem;
+    bottom: 3rem;
     right: 1.8rem;
   }
 
