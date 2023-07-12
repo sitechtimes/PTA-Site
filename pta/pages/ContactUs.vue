@@ -1,5 +1,6 @@
 <template>
-<div>
-    <ScrollTop /> 
-</div>
+  <div>
+    <Navbar />
+    <ScrollTop />
+  </div>
 </template>
