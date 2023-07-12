@@ -9,6 +9,7 @@
       <MiddleSection />
       </div>
       <ScrollTop />
+      <Footer />
     </div>
   </div>
 </template>
