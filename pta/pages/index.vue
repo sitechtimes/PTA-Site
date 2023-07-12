@@ -6,7 +6,7 @@
         <HomeTop />
       </div>
       <div class="div2">
-      <!--   <MiddleSection /> -->
+      <MiddleSection />
       </div>
       <ScrollTop />
     </div>
@@ -25,7 +25,7 @@
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 
 .div2 {
