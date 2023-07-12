@@ -22,6 +22,7 @@ h2 {
   font-size: 400%;
   margin: 5%;
   margin-top: 10%;
+  padding-left: 2rem;
 }
 
 #gradient {
@@ -88,13 +89,13 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   h2 {
-    margin-top: 25%;
+    margin-top: 16%;
   }
 }
 @media screen and (max-width: 576px) {
   h2 {
     font-size: 40px;
-    margin-top: 9rem;
+    margin-top: 6rem;
   }
   #gradient {
     width: 100vw;
@@ -116,7 +117,7 @@ h6 {
   @media screen and (max-width: 356px) {
     h2 {
       font-size: 30px;
-      margin-top: 45%;
+      margin-top: 6rem;
     }
   }
 }
