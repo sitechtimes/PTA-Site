@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-#logo {
+.logo {
   justify-content: flex-start;
 }
 
