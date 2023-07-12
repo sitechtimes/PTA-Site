@@ -81,4 +81,14 @@ img {
     right: 0;
   }
 }
+
+  /* media queries max width
+    sm:	 ≥576px
+ 	  md:  ≥768px
+    lg:	 ≥992px
+    xl:  ≥1200px
+    xxl: ≥1400px
+  */
+
+
 </style>
