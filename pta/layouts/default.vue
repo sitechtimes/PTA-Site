@@ -1,7 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <slot/>
+    <slot />
     <ScrollTop />
+    <Footer />
   </div>
 </template>

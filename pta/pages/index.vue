@@ -5,11 +5,12 @@
         <HomeTop />
       </div>
       <div class="div2">
-      <MiddleSection />
+        <MiddleSection />
       </div>
     </div>
   </div>
 </template>
+
 <style scoped>
 .parent {
   display: grid;
@@ -20,13 +21,13 @@
 }
 
 .div1 {
-  /* grid-area: 1 / 1 / 2 / 2; */
+  grid-area: 1 / 1 / 2 / 2;
   height: 100vh;
-  width: 50%;
+  width: 100vw;
 }
 
 .div2 {
   grid-area: 2 / 1 / 3 / 2;
-  width: 50%;
+  width: 100vw;
 }
 </style>
