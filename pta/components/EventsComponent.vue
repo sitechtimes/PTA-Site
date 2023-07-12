@@ -101,7 +101,7 @@ a:active {
   transition: 0.2s;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 87.5rem) {
+@media screen and (max-width: 1400px) {
   .flag {
     width: 2.188rem;
     border-radius: 5px;
@@ -123,7 +123,7 @@ a:active {
     margin: 0.6rem;
   }
 }
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 1200px) {
   .events {
     margin: 3% 5%;
     width: 80%;
@@ -144,7 +144,7 @@ a:active {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 62rem) {
+@media screen and (max-width: 992px) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -167,7 +167,7 @@ a:active {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -191,7 +191,7 @@ a:active {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 36rem) {
+@media screen and (max-width: 576px) {
   .events {
     margin: 3% 5%;
     width: 90%;
@@ -218,7 +218,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 22.25rem) {
+@media screen and (max-width: 356px) {
   .flag {
     opacity: 0;
   }
