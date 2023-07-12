@@ -1,12 +1,12 @@
 <template>
   <div id="navbar">
-    <NuxtLink to="/" id="logoContainer">
+    <div id="logoContainer">
       <img
         class="logo"
         src="../components/icons/NavBar-Icons/pta-logo.png"
         alt=""
       />
-    </NuxtLink>
+    </div>
     <div id="nav">
       <div class="group">
         <img
@@ -49,13 +49,13 @@
   </div>
 </template>
 <!-- <script>
-  import Menu from "./Menu.vue";
-  export default {
-    components: { Menu },
-    name: "Navbar",
-    methods: {},
-  };
-  </script> -->
+import Menu from "./Menu.vue";
+export default {
+  components: { Menu },
+  name: "Navbar",
+  methods: {},
+};
+</script> -->
 <style scoped>
 @import url(../assets/base.css);
 

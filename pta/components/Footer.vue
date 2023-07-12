@@ -36,7 +36,7 @@ img:hover {
   opacity: 0.7;
 }
 
-footer {
+footer {z-index: 100000;
   display: flex;
   flex-direction: column;
   justify-content: center;

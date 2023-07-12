@@ -14,7 +14,7 @@
   --secondary-bg: #FCE5AC;
   --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
 
-  /* media queries max width
+    /* media queries max width
     sm:	 ≥576px
  	md:  ≥768px
     lg:	 ≥992px
@@ -22,7 +22,7 @@
     xxl: ≥1400px
     */
 
-  font-synthesis: none;
+    font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -295,7 +295,7 @@ h4 {
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon {
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-    width: 100%;
+    width: 100vw;
     height: 70vw;
     margin: 0;
     padding: 0%;

@@ -1,7 +1,7 @@
 <template>
   <div id="gradient">
     <h2>EVENTS</h2>
-    <EventsComponent></EventsComponent>
+    <EventsComponent />
     <section id="calendar">
       <h4 id="temporary">
         Google Calendar Filler to make a google Calendar, you need to make a
@@ -9,23 +9,24 @@
         calendar in here.
       </h4>
     </section>
+    <ScrollTop />
   </div>
 </template>
 
 <style scoped>
 @import url(../assets/base.css);
+
 h2 {
   display: flex;
   justify-content: left;
   color: var(--text-color);
   font-family: Kumbh Sans;
   font-size: 400%;
-  margin: 5%;
-  margin-top: 10%;
+  margin: 10% 0 0 5%;
 }
 
 #gradient {
-  width: 100%;
+  width: 100vw;
   height: 180vh;
   padding: 0%;
   position: absolute;
@@ -41,6 +42,7 @@ h2 {
   );
   overflow-x: hidden;
 }
+
 #calendar {
   display: flex;
   width: 65%;
@@ -50,47 +52,58 @@ h2 {
   margin: 10%;
   background-color: #d9d9d9;
 }
+
 #temporary {
   color: #000;
   text-align: center;
   font-size: 1.3rem;
   letter-spacing: 0.44px;
 }
+
 h6 {
   font-size: 1.2rem;
   color: #000;
   text-align: center;
 }
+
 @media screen and (max-width: 1400px) {
   h2 {
     font-size: 300%;
     margin: 5%;
   }
+
   .events {
     margin: 3% 5%;
     width: 59.7%;
     height: 18.31%;
   }
+
   #gradient {
     width: 100vw;
     height: 140vh;
   }
+
   #calendar {
     width: 80%;
     height: 25%;
     margin: 10% auto;
   }
 }
+
 @media screen and (max-width: 1200px) {
 }
+
 @media screen and (max-width: 992px) {
 }
+
 @media screen and (max-width: 768px) {
 }
+
 @media screen and (max-width: 576px) {
   h2 {
     font-size: 30px;
   }
+
   #gradient {
     width: 100vw;
     height: 100vh;
