@@ -97,7 +97,6 @@ a {
 a:visited {
   color: var(--text-color);
 }
-
 @media screen and (max-width: 1400px) {
   .group {
     width: 10rem;
@@ -121,6 +120,9 @@ a:visited {
 }
 
 @media screen and (max-width: 768px) {
+  .logo {
+    width: 6rem;
+  }
 }
 @media screen and (max-width: 576px) {
   #logo {
