@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <footer>
     <h2>Keep in touch with us!</h2>
     <div id="so_med">
       <a
@@ -24,7 +24,7 @@
       <p>sitechpta@gmail.com</p>
       <p>485 Clawson Street, Staten Island, NY 10306</p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -40,10 +40,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: flex-end;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   margin-bottom: 15px;
 }
@@ -80,9 +76,6 @@ p {
 @media screen and (max-width: 576px) {
   #footer {
     width: 55vw;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -138,9 +131,6 @@ p {
 @media screen and (min-width: 768px) {
   #footer {
     width: 50vw;
-    position: absolute;
-    bottom: 0;
-    left: 49.5%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -183,9 +173,6 @@ p {
 @media screen and (min-width: 866px) {
   #footer {
     width: 55vw;
-    position: absolute;
-    bottom: 0;
-    left: 49%;
     transform: translate(-50%, 0);
   }
   h2 {
