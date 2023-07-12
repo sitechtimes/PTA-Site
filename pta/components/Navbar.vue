@@ -1,12 +1,12 @@
 <template>
   <div id="navbar">
-    <div id="logoContainer">
+    <NuxtLink to="/" id="logoContainer">
       <img
         class="logo"
         src="../components/icons/NavBar-Icons/pta-logo.png"
         alt=""
       />
-    </div>
+    </NuxtLink>
     <div id="nav">
       <div class="group">
         <img
@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-#logo {
+.logo {
   justify-content: flex-start;
 }
 
