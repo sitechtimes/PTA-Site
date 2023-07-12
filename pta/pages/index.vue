@@ -22,7 +22,7 @@
 }
 
 .div1 {
-  grid-area: 1 / 1 / 2 / 2;
+  /* grid-area: 1 / 1 / 2 / 2; */
   height: 100vh;
   width: 50%;
 }

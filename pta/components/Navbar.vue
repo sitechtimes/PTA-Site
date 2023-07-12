@@ -122,7 +122,6 @@ a:visited {
 
 @media screen and (max-width: 768px) {
 }
-
 @media screen and (max-width: 576px) {
   #logo {
     width: 1rem;
