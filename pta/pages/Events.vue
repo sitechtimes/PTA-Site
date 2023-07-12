@@ -21,6 +21,7 @@ h2 {
   font-family: Kumbh Sans;
   font-size: 400%;
   margin: 5%;
+  margin-top: 10%;
 }
 
 #gradient {
