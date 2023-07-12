@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="parent">
-      <div class="div1">
-        <HomeTop />
+    <NuxtLayout name="default">
+      <div class="parent">
+        <div class="div1">
+          <HomeTop />
+        </div>
+        <div class="div2">
+          <MiddleSection />
+        </div>
       </div>
-      <div class="div2">
-        <MiddleSection />
-      </div>
-    </div>
+    </NuxtLayout>
   </div>
 </template>
 
@@ -27,8 +29,8 @@
 }
 
 .div2 {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
   width: 90%;
 }
 </style>

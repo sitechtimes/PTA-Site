@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <div class="container__app">
-      <NuxtLayout />
-    </div>
-    <div>
-      <NuxtPage />
-    </div>
+  <div class="container__app">
+    <NuxtLayout> <NuxtPage /></NuxtLayout>
   </div>
 </template>
 <style scoped>
