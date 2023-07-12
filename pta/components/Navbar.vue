@@ -49,13 +49,13 @@
   </div>
 </template>
 <!-- <script>
-  import Menu from "./Menu.vue";
-  export default {
-    components: { Menu },
-    name: "Navbar",
-    methods: {},
-  };
-  </script> -->
+import Menu from "./Menu.vue";
+export default {
+  components: { Menu },
+  name: "Navbar",
+  methods: {},
+};
+</script> -->
 <style scoped>
 @import url(../assets/base.css);
 
