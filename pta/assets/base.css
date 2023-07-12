@@ -64,6 +64,29 @@ body {
   }
 }
   
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.heading {
+    font-family: 'Kumbh Sans', san serif;
+    font-weight: 800;
+}
+
+/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
+h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
 @media only screen and (min-width: 1032px) {
         .menu {
           display: none;
@@ -99,7 +122,7 @@ body {
 @media screen and (max-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100vw;
+  width: 100%;
   height: 220vw;
   margin: 0;
   padding: 0%;
@@ -127,7 +150,7 @@ body {
 @media screen and (min-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100vw;
+  width: 100%;
   height: 220vw;
   margin: 0;
   padding: 0%;
@@ -140,7 +163,7 @@ body {
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon{
       background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100vw;
+      width: 100%;
       height: 70vw;
       margin: 0;
       padding: 0%;
@@ -153,7 +176,7 @@ body {
 @media screen and (min-width: 768px) {
   #homeTopCon{
       background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100vw;
+      width: 100%;
       height: 140vw;
       margin: 0;
       padding: 0%;
@@ -166,7 +189,7 @@ body {
 @media screen and (min-width: 768px) and (orientation: landscape){
   #homeTopCon{
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-    width: 100vw;
+    width: 100%;
     height: 70vw;
     margin: 0;
     padding: 0%;
@@ -174,13 +197,4 @@ body {
     top: 0%;
     left: 0%;
   }
-}
-
-body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-.heading {
-    font-family: 'Kumbh Sans', san serif;
-    font-weight: 800;
 }
