@@ -1,5 +1,5 @@
 <template>
-  <div id="homeTopCon">
+  <div class="home" id="homeTopCon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div id="homeTopText">
       <h2 id="pta">Parent Teacher Association @</h2>
@@ -25,18 +25,18 @@
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
-    font-size: 3.5vw;
+    font-size: 3.2vw;
   }
   #siths {
     margin: 0%;
-    font-size: 9vw;
+    font-size: 8vw;
     font-weight: 800;
     letter-spacing: 0.12rem;
     margin-bottom: 3vw;
   }
   #pta {
     margin: 0%;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 400;
     letter-spacing: 0.047vw;
     margin-bottom: 3vw;
@@ -57,7 +57,7 @@
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
-    font-size: 3.5vw;
+    font-size: 3.7vw;
   }
   #siths {
     margin: 0%;
@@ -184,7 +184,7 @@
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
-    font-size: 1.5vw;
+    font-size: 1.27vw;
   }
   #siths {
     margin: 0%;
@@ -216,7 +216,7 @@
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
-    font-size: 1.5vw;
+    font-size: 1.27vw;
   }
   #siths {
     margin: 0%;
