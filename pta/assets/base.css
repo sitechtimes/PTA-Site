@@ -221,20 +221,19 @@ h1 {
 .menu {
     display: block; 
 }
-    .link-container {
-      text-align: center;
-      margin-left: 0rem;
-      padding-top: 10rem;
-    }
-    .link {
-      margin-top: 1.5rem;
-      list-style: none;
-    }
-    .menu-router {
-      font-size: 1.8rem;
-    }
+.link-container {
+    text-align: center;
+    margin-left: 0rem;
+    padding-top: 10rem;
+  }
+  .link {
+    margin-top: 1.5rem;
+    list-style: none;
+  }
+  .menu-router {
+    font-size: 1.8rem;
+  }
 }
-
 @media screen and (min-width: 576px) {
   #homeTopCon{
   background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
@@ -246,6 +245,7 @@ h1 {
   top: 0%;
   left: 0%;
 }
+
 }
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
@@ -285,4 +285,17 @@ h1 {
     top: 0%;
     left: 0%;
   }
+}
+@media only screen and (max-width: 1200px) {
+    #navbar {
+        height: 4.2rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .menu {
+        margin-right: 2rem;
+      }
+      #navbar {
+        height: 3.3rem;
+      }
 }
