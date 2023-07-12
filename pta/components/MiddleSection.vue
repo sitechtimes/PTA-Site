@@ -52,8 +52,8 @@ a {
 }
 
 .information {
-    width: 50vw;
-    z-index: 2;
+  width: 50vw;
+  z-index: 2;
 }
 
 .gallery {
