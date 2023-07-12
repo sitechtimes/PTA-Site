@@ -2,7 +2,7 @@
   <h1>Nav</h1>
 </template>
 
-<style>
+<style scoped>
 h1 {
   z-index: 100000000;
 }

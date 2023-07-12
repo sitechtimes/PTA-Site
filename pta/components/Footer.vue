@@ -47,7 +47,7 @@ footer {
 #so_med {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
