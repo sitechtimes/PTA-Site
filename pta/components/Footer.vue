@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <div id="footer">
     <h2>Keep in touch with us!</h2>
     <div id="so_med">
       <a
@@ -24,24 +24,29 @@
       <p>sitechpta@gmail.com</p>
       <p>485 Clawson Street, Staten Island, NY 10306</p>
     </div>
-  </footer>
+  </div>
 </template>
 
 <style scoped>
 @import url(../assets/base.css);
-img:hover {
-  opacity: 0.7;
+img{
+    transition: 0.3s;
 }
-img {
-  transition: 0.3s;
+img:hover{
+    opacity: 0.7;
 }
+
 #footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-bottom: 15px;
+  align-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+  right: 1%;
+
 }
 
 #so_med {
@@ -74,8 +79,11 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  #footer {
+  #footer{
     width: 55vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -109,10 +117,10 @@ p {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
+@media screen and (min-width: 576px) and (orientation: landscape){
   h2 {
     font-size: 1.8vw;
-    margin-bottom: 0.5vw;
+    margin-bottom: .5vw;
   }
   img {
     height: 3vw;
@@ -123,14 +131,17 @@ p {
   p {
     font-size: 1.75vw;
   }
-  #so_med {
+  #so_med{
     margin-bottom: -1.4vw;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #footer {
+  #footer{
     width: 50vw;
+    position: absolute;
+    bottom: 0;
+    left: 49.5%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -143,18 +154,23 @@ p {
     padding-right: 5vw;
     padding-left: 5vw;
   }
-  #so_med {
-    margin-bottom: 1vw;
+  #text{
+    margin-bottom: 2rem;
+  }
+  #so_med{
+    margin-bottom: 0.5rem;
+    padding: .2rem;
   }
   p {
     font-size: 2.4vw;
+
   }
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
   h2 {
     font-size: 1.85vw;
-    margin-bottom: 0.3vw;
+    margin-bottom: .3vw;
   }
   img {
     height: 3vw;
@@ -165,14 +181,17 @@ p {
   p {
     font-size: 1.5vw;
   }
-  #so_med {
-    margin-bottom: -0.75vw;
+  #so_med{
+    margin-bottom: -.75vw;
   }
 }
 
 @media screen and (min-width: 866px) {
-  #footer {
+  #footer{
     width: 55vw;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
     transform: translate(-50%, 0);
   }
   h2 {
@@ -193,7 +212,7 @@ p {
 @media screen and (min-width: 866px) and (orientation: landscape) {
   h2 {
     font-size: 1.8vw;
-    margin-bottom: 0.3vw;
+    margin-bottom: .3vw;
   }
   img {
     height: 3vw;
@@ -204,8 +223,8 @@ p {
   p {
     font-size: 1.4vw;
   }
-  #so_med {
-    margin-bottom: -0.75vw;
+  #so_med{
+    margin-bottom: -.75vw;
   }
 }
 
@@ -223,27 +242,30 @@ p {
   p {
     font-size: 1.2vw;
   }
-  #so_med {
-    margin-bottom: -0.1vw;
+  #so_med{
+    margin-bottom: -.1vw;
   }
 }
 
 @media screen and (min-width: 1300px) {
+    #footer{
+bottom: 0px;
+    }
   h2 {
     font-size: 1.5vw;
-    margin-bottom: 1.15vw;
+    margin-bottom: 1vw;
   }
   img {
     height: 3vw;
-    width: 5vw;
+    width: 3rem;
     padding-right: 1.75vw;
     padding-left: 1.75vw;
   }
   p {
     font-size: 1.2vw;
   }
-  #so_med {
-    margin-bottom: 0.5vw;
+  #so_med{
+    margin-bottom: .5vw;
   }
 }
 </style>

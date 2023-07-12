@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="homeTopCon">
+  <div id="homeTopCon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div id="homeTopText">
       <h2 id="pta">Parent Teacher Association @</h2>
