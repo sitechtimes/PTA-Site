@@ -1,6 +1,7 @@
 <script></script>
 <template>
   <div>
+    <Navbar />
     <div class="parent">
       <div class="div1">
         <HomeTop />
