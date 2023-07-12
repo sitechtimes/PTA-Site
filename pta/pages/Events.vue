@@ -1,7 +1,7 @@
 <template>
   <div id="gradient">
     <h2>EVENTS</h2>
-    <EventsComponent></EventsComponent>
+    <EventsComponent />
     <section id="calendar">
       <h4 id="temporary">
         Google Calendar Filler to make a google Calendar, you need to make a
@@ -32,12 +32,14 @@ h2 {
   position: absolute;
   top: 0%;
   left: 0%;
-  background: linear-gradient(180deg,
-      #ffc498 0%,
-      #ffd88c 20%,
-      #fce5ac 34%,
-      #fbefd7 44%,
-      #fff 55%);
+  background: linear-gradient(
+    180deg,
+    #ffc498 0%,
+    #ffd88c 20%,
+    #fce5ac 34%,
+    #fbefd7 44%,
+    #fff 55%
+  );
   overflow-x: hidden;
 }
 
@@ -88,11 +90,14 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+}
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
 
 @media screen and (max-width: 576px) {
   h2 {
@@ -107,11 +112,14 @@ h6 {
     position: absolute;
     top: 0%;
     left: 0%;
-    background: linear-gradient(180deg,
-        #ffc498 0%,
-        #ffd88c 20%,
-        #fce5ac 34%,
-        #fbefd7 44%,
-        #fff 55%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%
+    );
   }
-}</style>
+}
+</style>
