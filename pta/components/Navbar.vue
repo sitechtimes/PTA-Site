@@ -68,6 +68,7 @@ a {
   display: flex;
   width: 10.5rem;
   text-decoration: none;
+  color: var(--text-color);
 }
 
 .logo {
