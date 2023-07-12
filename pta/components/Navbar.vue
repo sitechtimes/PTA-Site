@@ -71,8 +71,11 @@ a {
   color: var(--text-color);
 }
 
-#logo {
-  justify-content: flex-start;
+.logo {
+  width: 10rem;
+  position: absolute;
+  left: 6.5%;
+  top: 19.5%;
 }
 
 .icon {
@@ -94,7 +97,6 @@ a {
 a:visited {
   color: var(--text-color);
 }
-
 @media screen and (max-width: 1400px) {
   .group {
     width: 10rem;
@@ -102,15 +104,26 @@ a:visited {
 }
 
 @media screen and (max-width: 1200px) {
-  /*no change needed */
+  .logo {
+    width: 7rem;
+  }
+  .icon {
+    width: 1.5rem;
+  }
+  .group {
+    font-size: 1.2rem;
+    width: 9rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
 }
 
 @media screen and (max-width: 768px) {
+  .logo {
+    width: 6rem;
+  }
 }
-
 @media screen and (max-width: 576px) {
   #logo {
     width: 1rem;

@@ -10,12 +10,12 @@
 </template>
 <style scoped>
 @import "../assets/base.css";
-
 @media screen and (max-width: 576px) {
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
+    top: 5%;
     left: 45%;
     transform: translate(-50%, 34vw);
     white-space: nowrap;
@@ -80,7 +80,7 @@
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: -30%;
+    top: -14%;
     left: 30%;
     white-space: nowrap;
     text-align: left;
@@ -144,7 +144,7 @@
     font-family: var(--font-heading);
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 13vw;
+    top: 30%;
     left: 8vw;
     text-align: left;
   }
@@ -176,7 +176,7 @@
     font-family: var(--font-heading);
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 14vw;
+    top: 28%;
     left: 7vw;
     text-align: left;
   }
@@ -202,7 +202,6 @@
     margin-bottom: 0.4vw;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #homeTopText {
     color: var(--text-color);
@@ -210,7 +209,7 @@
     text-align: left;
     position: absolute;
     transform: translate(0%, 0vw);
-    top: 15vw;
+    top: 26%;
     left: 7vw;
   }
   #address {
@@ -233,6 +232,11 @@
     font-weight: 400;
     letter-spacing: 0.48px;
     margin-bottom: 0.4vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #homeTopText {
+    top: 22%;
   }
 }
 </style>

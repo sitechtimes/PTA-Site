@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <div class="parent">
       <div class="div1">
         <HomeTop />
@@ -8,12 +7,9 @@
       <div class="div2">
         <MiddleSection />
       </div>
-      <ScrollTop />
-      <Footer />
     </div>
   </div>
 </template>
-
 <style scoped>
 .parent {
   display: grid;
@@ -24,13 +20,13 @@
 }
 
 .div1 {
-  grid-area: 1 / 1 / 2 / 2;
+  /* grid-area: 1 / 1 / 2 / 2; */
   height: 100vh;
-  width: 100vw;
+  width: 50%;
 }
 
 .div2 {
   grid-area: 2 / 1 / 3 / 2;
-  width: 100vw;
+  width: 50%;
 }
 </style>
