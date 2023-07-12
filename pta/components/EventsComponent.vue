@@ -38,12 +38,10 @@
 
 .events {
   display: flex;
-  margin: 3% 5%;
   width: 59%;
   height: 26%;
   flex-direction: column;
   justify-content: space-around;
-  flex-shrink: 3;
 }
 a,
 a:hover,
@@ -56,7 +54,7 @@ a:active {
   border-radius: 8px;
   width: 3.125rem;
   height: 3.5rem;
-  margin: -5px 50px 0 0;
+  margin: -5px 0 0 0;
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
@@ -74,7 +72,6 @@ a:active {
 }
 
 .date {
-  margin-right: 10%;
   font-family: Karla;
   font-weight: 400;
 }
@@ -86,9 +83,11 @@ a:active {
 }
 .text {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
+  height: 100%;
 }
 .event {
   display: flex;
@@ -105,9 +104,8 @@ a:active {
   .flag {
     width: 2.188rem;
     border-radius: 5px;
-    height: 50px;
+    height: 3.5rem;
     left: 6%;
-    padding-top: 0px;
   }
   .flag:after {
     border-left: 1.063rem solid transparent;
@@ -122,32 +120,37 @@ a:active {
     height: 40%;
     margin: 0.6rem;
   }
+  .events {
+    margin: 3% 5%;
+    height: 24%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .events {
     margin: 3% 5%;
-    width: 80%;
     height: 24%;
   }
   .event {
     margin: 0.6rem;
+    border-radius: 12px;
   }
   .flag {
     width: 2.2rem;
-    border-radius: 5px;
     height: 3.1rem;
     left: 6%;
   }
+  .flag:after {
+    border-left: 1.1rem solid transparent;
+    border-right: 1.1rem solid transparent;
+  }
   .name,
   .date {
-    margin: 3%;
     font-size: 30px;
   }
 }
 @media screen and (max-width: 992px) {
   .events {
     margin: 3% 5%;
-    width: 90%;
     height: 18.31%;
   }
   .flag {
@@ -161,16 +164,18 @@ a:active {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
+  .event {
+    border-radius: 10px;
+  }
   .name,
   .date {
-    margin: 4%;
     font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
   .events {
     margin: 3% 5%;
-    width: 90%;
+    width: 80%;
     height: 18.31%;
   }
   .flag {
@@ -185,20 +190,23 @@ a:active {
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
   }
+  .event {
+    border-radius: 7px;
+  }
   .name,
   .date {
-    margin: 3%;
     font-size: 25px;
   }
 }
 @media screen and (max-width: 576px) {
   .events {
-    margin: 3% 5%;
-    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    width: 85%;
     height: 18.31%;
   }
   .flag {
-    width: 1.3rem;
+    width: 1.2rem;
     padding-top: 0.6rem;
     height: 1.3rem;
     margin-top: -3px;
@@ -220,7 +228,11 @@ a:active {
 }
 @media screen and (max-width: 356px) {
   .flag {
-    opacity: 0;
+    width: 1.2rem;
+    padding-top: 0.6rem;
+    height: 1.3rem;
+    margin-top: -3px;
+    margin-left: -4%;
   }
 }
 </style>

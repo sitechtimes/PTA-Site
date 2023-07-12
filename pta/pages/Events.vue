@@ -1,6 +1,5 @@
 <template>
   <div id="gradient">
-    <Navbar />
     <h2>EVENTS</h2>
     <EventsComponent></EventsComponent>
     <section id="calendar">
@@ -10,8 +9,6 @@
         calendar in here.
       </h4>
     </section>
-    <ScrollTop />
-    <Footer />
   </div>
 </template>
 
@@ -24,6 +21,7 @@ h2 {
   font-family: Kumbh Sans;
   font-size: 400%;
   margin: 5%;
+  margin-top: 10%;
 }
 
 #gradient {
@@ -67,6 +65,7 @@ h6 {
   h2 {
     font-size: 300%;
     margin: 5%;
+    margin-top: 13%;
   }
   .events {
     margin: 3% 5%;
@@ -84,14 +83,24 @@ h6 {
   }
 }
 @media screen and (max-width: 1200px) {
+  h2 {
+    margin-top: 15%;
+  }
 }
 @media screen and (max-width: 992px) {
+  h2 {
+    margin-top: 18%;
+  }
 }
 @media screen and (max-width: 768px) {
+  h2 {
+    margin-top: 25%;
+  }
 }
 @media screen and (max-width: 576px) {
   h2 {
-    font-size: 30px;
+    font-size: 40px;
+    margin-top: 9rem;
   }
   #gradient {
     width: 100vw;
@@ -109,6 +118,12 @@ h6 {
       #fbefd7 44%,
       #fff 55%
     );
+  }
+  @media screen and (max-width: 356px) {
+    h2 {
+      font-size: 30px;
+      margin-top: 45%;
+    }
   }
 }
 </style>
