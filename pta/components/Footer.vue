@@ -29,17 +29,23 @@
 
 <style scoped>
 @import url(../assets/base.css);
-
+img:hover {
+  opacity: 0.7;
+}
+img {
+  transition: 0.3s;
+}
 #footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: flex-end;
-  position: absolute;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  left: 1%;
-  right: 1%;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 #so_med {
@@ -72,7 +78,7 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  #footer{
+  #footer {
     width: 55vw;
     position: absolute;
     bottom: 0;
@@ -110,10 +116,10 @@ p {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape){
+@media screen and (min-width: 576px) and (orientation: landscape) {
   h2 {
     font-size: 1.8vw;
-    margin-bottom: .5vw;
+    margin-bottom: 0.5vw;
   }
   img {
     height: 3vw;
@@ -124,13 +130,13 @@ p {
   p {
     font-size: 1.75vw;
   }
-  #so_med{
+  #so_med {
     margin-bottom: -1.4vw;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #footer{
+  #footer {
     width: 50vw;
     position: absolute;
     bottom: 0;
@@ -147,7 +153,7 @@ p {
     padding-right: 5vw;
     padding-left: 5vw;
   }
-  #so_med{
+  #so_med {
     margin-bottom: 1vw;
   }
   p {
@@ -158,7 +164,7 @@ p {
 @media screen and (min-width: 768px) and (orientation: landscape) {
   h2 {
     font-size: 1.85vw;
-    margin-bottom: .3vw;
+    margin-bottom: 0.3vw;
   }
   img {
     height: 3vw;
@@ -169,13 +175,13 @@ p {
   p {
     font-size: 1.5vw;
   }
-  #so_med{
-    margin-bottom: -.75vw;
+  #so_med {
+    margin-bottom: -0.75vw;
   }
 }
 
 @media screen and (min-width: 866px) {
-  #footer{
+  #footer {
     width: 55vw;
     position: absolute;
     bottom: 0;
@@ -200,7 +206,7 @@ p {
 @media screen and (min-width: 866px) and (orientation: landscape) {
   h2 {
     font-size: 1.8vw;
-    margin-bottom: .3vw;
+    margin-bottom: 0.3vw;
   }
   img {
     height: 3vw;
@@ -211,8 +217,8 @@ p {
   p {
     font-size: 1.4vw;
   }
-  #so_med{
-    margin-bottom: -.75vw;
+  #so_med {
+    margin-bottom: -0.75vw;
   }
 }
 
@@ -230,8 +236,8 @@ p {
   p {
     font-size: 1.2vw;
   }
-  #so_med{
-    margin-bottom: -.1vw;
+  #so_med {
+    margin-bottom: -0.1vw;
   }
 }
 
@@ -249,8 +255,8 @@ p {
   p {
     font-size: 1.2vw;
   }
-  #so_med{
-    margin-bottom: .5vw;
+  #so_med {
+    margin-bottom: 0.5vw;
   }
 }
 </style>
