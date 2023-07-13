@@ -222,6 +222,8 @@ h4 {
 
   .menu {
     display: initial;
+    margin-right: 6rem;
+  }
 
     .link-container {
       text-align: left;
@@ -244,7 +246,6 @@ h4 {
       margin-left: 0.2rem;
     }
   }
-}
 
 @media screen and (max-width: 576px) {
   #homeTopCon {
@@ -339,7 +340,7 @@ h4 {
 
 @media only screen and (max-width: 768px) {
   .menu {
-    margin-right: 4rem;
+    margin-right: 4.5rem;
   }
 
   #navbar {
