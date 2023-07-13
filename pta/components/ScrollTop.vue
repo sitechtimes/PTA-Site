@@ -1,7 +1,11 @@
 <template>
   <div class="container__topArrow">
     <!-- <a href="#section__LandingSection"> -->
-    <img src="/back-to-top-arrow.svg" @click="scroll" />
+    <img
+      alt="Arrow to make the page go back to the top"
+      src="/back-to-top-arrow.svg"
+      @click="scroll"
+    />
     <!-- </a> -->
   </div>
 </template>

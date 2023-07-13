@@ -2,19 +2,27 @@
   <div class="container__footer">
     <h2>Keep in touch with us!</h2>
     <div id="so_med">
-      <a href="https://www.facebook.com/SITECHPTA/" target="_blank" rel="noopener">
+      <a
+        href="https://www.facebook.com/SITECHPTA/"
+        target="_blank"
+        rel="noopener"
+      >
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
       <a href=" " target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
-      <a href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ" target="_blank" rel="noopener">
+      <a
+        href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
+        target="_blank"
+        rel="noopener"
+      >
         <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
       </a>
     </div>
     <div id="text">
-      <p>sitechpta@gmail.com</p>
-      <p>485 Clawson Street, Staten Island, NY 10306</p>
+      <h4>sitechpta@gmail.com</h4>
+      <h4>485 Clawson Street, Staten Island, NY 10306</h4>
     </div>
   </div>
 </template>
@@ -23,7 +31,7 @@
 @import url(../assets/base.css);
 
 .container__footer {
-  z-index: 1000;  
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +65,7 @@ h2 {
   letter-spacing: 0.05rem;
 }
 
-p {
+h4 {
   font-family: var(--font-text);
   color: var(--text-color);
   text-align: center;
@@ -86,7 +94,7 @@ p {
     padding-left: 5vw;
   }
 
-  p {
+  h4 {
     font-size: 3.25vw;
   }
 }
@@ -104,7 +112,7 @@ p {
     padding-left: 5vw;
   }
 
-  p {
+  h4 {
     font-size: 3vw;
   }
 }
@@ -122,7 +130,7 @@ p {
     padding-left: 1.5vw;
   }
 
-  p {
+  h4 {
     font-size: 1.75vw;
   }
 
@@ -158,7 +166,7 @@ p {
     padding: 0.2rem;
   }
 
-  p {
+  h4 {
     font-size: 2.4vw;
   }
 }
@@ -176,7 +184,7 @@ p {
     padding-left: 2vw;
   }
 
-  p {
+  h4 {
     font-size: 1.5vw;
   }
 
@@ -203,7 +211,7 @@ p {
     padding-left: 3.75vw;
   }
 
-  p {
+  h4 {
     font-size: 2.5vw;
   }
 }
@@ -221,7 +229,7 @@ p {
     padding-left: 1.75vw;
   }
 
-  p {
+  h4 {
     font-size: 1.4vw;
   }
 
@@ -243,7 +251,7 @@ p {
     padding-left: 1.75vw;
   }
 
-  p {
+  h4 {
     font-size: 1.2vw;
   }
 
@@ -269,7 +277,7 @@ p {
     padding-left: 1.75vw;
   }
 
-  p {
+  h4 {
     font-size: 1.2vw;
   }
 

@@ -1,14 +1,21 @@
 <template>
+  <head>
+    <title>Events Page</title>
+    <html lang="en"></html>
+  </head>
   <section class="container__Events">
     <div id="gradient">
-      <h2>EVENTS</h2>
+      <h1>EVENTS</h1>
+      <h2>Upcoming Events:</h2>
       <EventsComponent />
-      <div id="calendar">
-        <h4 id="temporary">
-          Google Calendar Filler to make a google Calendar, you need to make a
-          public calendar for the pta to use and then use the code from that
-          calendar in here.
-        </h4>
+      <div id="calendarParent">
+        <div id="calendar">
+          <h4 id="temporary">
+            Google Calendar Filler to make a google Calendar, you need to make a
+            public calendar for the pta to use and then use the code from that
+            calendar in here.
+          </h4>
+        </div>
       </div>
       <ScrollTop />
     </div>
@@ -22,7 +29,7 @@
   height: 180vh;
 }
 
-h2 {
+h1 {
   display: flex;
   justify-content: left;
   color: var(--text-color);
@@ -31,10 +38,13 @@ h2 {
   margin: 5%;
   margin-top: 10%;
   padding-left: 2rem;
-
-  margin: 10% 0 0 5%;
 }
-
+h2 {
+  color: var(--text-color);
+  font-family: Kumbh Sans;
+  margin: 5%;
+  padding-left: 2rem;
+}
 #gradient {
   width: 100vw;
   height: 180vh;
@@ -56,13 +66,19 @@ h2 {
 #calendar {
   display: flex;
   width: 65%;
-  height: 25%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
-  margin: 10%;
   background-color: #d9d9d9;
+  margin-top: 10%;
 }
-
+#calendarParent {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #temporary {
   color: #000;
   text-align: center;
@@ -77,7 +93,7 @@ h6 {
 }
 
 @media screen and (max-width: 1400px) {
-  h2 {
+  h1 {
     font-size: 300%;
     margin: 5%;
     margin-top: 13%;
@@ -86,35 +102,35 @@ h6 {
   #gradient {
     height: 140vh;
   }
-
-  #calendar {
-    width: 80%;
-    height: 25%;
-    margin: 10% auto;
-  }
 }
 
 @media screen and (max-width: 1200px) {
-  h2 {
+  h1 {
     margin-top: 15%;
   }
 }
 
 @media screen and (max-width: 992px) {
-  h2 {
+  h1 {
     margin-top: 18%;
+  }
+  h2 {
+    font-size: 200%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  h2 {
+  h1 {
     margin-top: 16%;
+    padding-left: 1.1rem;
+  }
+  h2 {
     padding-left: 1.1rem;
   }
 }
 
 @media screen and (max-width: 576px) {
-  h2 {
+  h1 {
     font-size: 40px;
     margin-top: 6rem;
   }
@@ -137,9 +153,18 @@ h6 {
     );
   }
   @media screen and (max-width: 356px) {
-    h2 {
+    #temporary {
+      font-size: 15px;
+    }
+    h1 {
       font-size: 30px;
       margin-top: 6rem;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    .calendarParent {
+      height: 50%;
     }
   }
 }

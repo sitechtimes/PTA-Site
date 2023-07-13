@@ -1,5 +1,6 @@
 <template>
   <!-- The values in the headings should be inputted by the user, but I inputted values to test it and to orient it properly -->
+
   <div class="events">
     <a
       href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
