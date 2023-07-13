@@ -72,11 +72,14 @@ h4 {
   color: var(--text-color);
   margin: 13% 0 0 8%;
 }
-.text {
+.subh {
   font-size: 10rem;
   color: var(--text-color);
     font-family: Karla;
     font-weight: 400;
+}
+.text {
+  
 }
 
 
