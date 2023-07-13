@@ -1,6 +1,11 @@
 <template>
   <section class="container__carousel">
-    <Carousel :items-to-show="2.5" :autoplay="2000" :wrap-around="true" :transition="500">
+    <Carousel
+      :items-to-show="2.5"
+      :autoplay="2000"
+      :wrap-around="true"
+      :transition="500"
+    >
       <Slide v-for="(image, index) in images" :key="index">
         <div class="carousel-item">
           <img :src="image" class="carousel-image" />
@@ -48,8 +53,8 @@ export default defineComponent({
 
 <style scoped>
 .container__carousel {
-  width: 45vw;
-  margin: 3rem;
+  width: 40vw;
+  margin: 2rem;
 }
 
 .carousel__slide {
@@ -65,8 +70,8 @@ export default defineComponent({
 }
 
 .carousel-image {
-    width: 30rem;
-  }
+  width: 30rem;
+}
 
 .carousel__slide--sliding {
   transition: 0.5s;
@@ -114,7 +119,8 @@ export default defineComponent({
 
 @media screen and (max-width: 1024px) {
   .container__carousel {
-    width: 85vw;
+    width: 70vw;
+    
   }
 }
 </style>
