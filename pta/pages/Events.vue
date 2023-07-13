@@ -1,6 +1,6 @@
 <template>
   <div id="gradient">
-    <h2>EVENTS</h2>
+    <h1 class="heading">EVENTS</h1>
     <EventsComponent />
     <section id="calendar">
       <h4 id="temporary">
@@ -16,17 +16,9 @@
 <style scoped>
 @import url(../assets/base.css);
 
-h2 {
+h1 {
   display: flex;
   justify-content: left;
-  color: var(--text-color);
-  font-family: Kumbh Sans;
-  font-size: 400%;
-  margin: 5%;
-  margin-top: 10%;
-  padding-left: 2rem;
-
-  margin: 10% 0 0 5%;
 }
 
 #gradient {

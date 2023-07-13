@@ -59,7 +59,15 @@ h4 {
 .heading {
   font-family: 'Kumbh Sans', san serif;
   font-weight: 800;
-  font-size: 4.3rem;
+  font-size: 4rem;
+  color: var(--text-color);
+  margin: 13% 0 0 8%;
+}
+.text {
+  font-size: 10rem;
+  color: var(--text-color);
+    font-family: Karla;
+    font-weight: 400;
 }
 
 
@@ -259,7 +267,6 @@ h4 {
     top: 0%;
     left: 0%;
   }
-
   .menu {
     display: block;
   }
@@ -274,7 +281,6 @@ h4 {
     margin-top: 1.5rem;
     list-style: none;
   }
-
   .menu-router {
     font-size: 1.8rem;
   }
@@ -332,19 +338,51 @@ h4 {
     left: 0%;
   }
 }
-
+@media only screen and (max-width: 1400px) {
+  .heading {
+    margin: 16% 0 0 8%;
+    font-size: 3.7rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  
+}
 @media only screen and (max-width: 1200px) {
   #navbar {
     height: 4.2rem;
   }
+  .heading {
+    font-size: 3rem;
+  }
 }
-
+@media only screen and (max-width: 992px) {
+  .heading {
+    margin: 18% 0 0 8%;
+    font-size: 2.7rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .menu {
     margin-right: 4.5rem;
   }
-
   #navbar {
     height: 3.3rem;
+  }
+  .heading {
+    font-size: 2.4rem;
+    margin: 20% 0 0 8%;
+  }
+}
+@media only screen and (max-width:576px) {
+  .heading {
+    font-size: 2rem;
+    margin: 30% 0 0 9%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 1.8rem;
+    margin: 34% 0 0 10%;
   }
 }
