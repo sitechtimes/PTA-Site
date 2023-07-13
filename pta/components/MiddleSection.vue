@@ -23,9 +23,9 @@
 </template>
 
 <style scoped>
-.information {
+/* .information {
   margin-left: 5%;
-}
+} */
 
 h2 {
   font-weight: bold;
@@ -54,12 +54,16 @@ a {
 }
 
 .information {
+  display: flex;
+  flex-direction: column;
   width: 50vw;
   z-index: 2;
 }
 
 .gallery {
-  padding-right: 3rem;
+  display: flex;
+  width: 50vw;
+  justify-content: center;
 }
 
 @media screen and (max-width: 576px) {
@@ -76,7 +80,7 @@ a {
     padding-left: 2rem;
   }
   .gallery {
-    width: 100vw;
+    width: 90vw;
   }
 }
 
@@ -90,8 +94,7 @@ a {
   }
 
   .information {
-    width: 100%;
-    padding-left: 3rem;
+    width: 90%;
   }
 }
 </style>
