@@ -45,11 +45,37 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-@media only screen and (max-width: 576px) and (orientation: portrait) {
-  #home,
-  #contact,
-  #events,
-  #donate {
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+h1 {
+  font-size: 4.3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+.heading {
+  font-family: 'Kumbh Sans', san serif;
+  font-weight: 800;
+  font-size: 4.3rem;
+}
+
+
+/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
+
+
+@media only screen and (max-width: 576px) and (orientation: portrait){
+  #home, #contact, #events, #donate{
     width: 8vw;
   }
   #nav {
@@ -194,33 +220,6 @@ body {
     display: flex;
   }
 }
-body {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-}
-
-.heading {
-  font-family: "Kumbh Sans", san serif;
-  font-weight: 800;
-}
-
-/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
-h1 {
-  font-size: 6rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
 @media only screen and (min-width: 1032px) {
   .menu {
     display: none;
@@ -238,6 +237,8 @@ h4 {
 
   .menu {
     display: initial;
+    margin-right: 6rem;
+  }
 
     .link-container {
       text-align: left;
@@ -260,7 +261,6 @@ h4 {
       margin-left: 0.2rem;
     }
   }
-}
 
 @media screen and (max-width: 576px) {
   #homeTopCon {
@@ -394,7 +394,7 @@ h4 {
 
 @media only screen and (max-width: 768px) {
   .menu {
-    margin-right: 4rem;
+    margin-right: 4.5rem;
   }
 
   #navbar {
