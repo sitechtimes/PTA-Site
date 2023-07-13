@@ -18,7 +18,7 @@
 <style scoped>
 @import url(../assets/base.css);
 
-.container__Events{
+.container__Events {
   height: 180vh;
 }
 
@@ -28,6 +28,10 @@ h2 {
   color: var(--text-color);
   font-family: Kumbh Sans;
   font-size: 400%;
+  margin: 5%;
+  margin-top: 10%;
+  padding-left: 2rem;
+
   margin: 10% 0 0 5%;
 }
 
@@ -38,12 +42,14 @@ h2 {
   position: absolute;
   top: 0%;
   left: 0%;
-  background: linear-gradient(180deg,
-      #ffc498 0%,
-      #ffd88c 20%,
-      #fce5ac 34%,
-      #fbefd7 44%,
-      #fff 55%);
+  background: linear-gradient(
+    180deg,
+    #ffc498 0%,
+    #ffd88c 20%,
+    #fce5ac 34%,
+    #fbefd7 44%,
+    #fff 55%
+  );
   overflow-x: hidden;
 }
 
@@ -74,16 +80,10 @@ h6 {
   h2 {
     font-size: 300%;
     margin: 5%;
-  }
-
-  .events {
-    margin: 3% 5%;
-    width: 59.7%;
-    height: 18.31%;
+    margin-top: 13%;
   }
 
   #gradient {
-    width: 100vw;
     height: 140vh;
   }
 
@@ -94,15 +94,29 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+  h2 {
+    margin-top: 15%;
+  }
+}
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+  h2 {
+    margin-top: 18%;
+  }
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  h2 {
+    margin-top: 16%;
+    padding-left: 1.1rem;
+  }
+}
 
 @media screen and (max-width: 576px) {
   h2 {
-    font-size: 30px;
+    font-size: 40px;
+    margin-top: 6rem;
   }
 
   #gradient {
@@ -113,12 +127,20 @@ h6 {
     position: absolute;
     top: 0%;
     left: 0%;
-    background: linear-gradient(180deg,
-        #ffc498 0%,
-        #ffd88c 20%,
-        #fce5ac 34%,
-        #fbefd7 44%,
-        #fff 55%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%
+    );
+  }
+  @media screen and (max-width: 356px) {
+    h2 {
+      font-size: 30px;
+      margin-top: 6rem;
+    }
   }
 }
 </style>

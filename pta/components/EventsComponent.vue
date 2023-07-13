@@ -37,13 +37,13 @@
 @import url(../assets/base.css);
 
 .events {
-  display: flex;
   margin: 3% 5%;
+  display: flex;
   width: 59%;
-  height: 26%;
+  height: 24rem;
   flex-direction: column;
   justify-content: space-around;
-  flex-shrink: 3;
+  padding-left: 2rem;
 }
 a,
 a:hover,
@@ -56,7 +56,7 @@ a:active {
   border-radius: 8px;
   width: 3.125rem;
   height: 3.5rem;
-  margin: -5px 50px 0 0;
+  margin: -5px 0 0 60px;
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
@@ -74,9 +74,8 @@ a:active {
 }
 
 .date {
-  margin-right: 10%;
   font-family: Karla;
-  font-weight: 400;
+  font-weight: 200;
 }
 .name {
   margin-left: 10%;
@@ -86,28 +85,27 @@ a:active {
 }
 .text {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
+  height: 100%;
 }
 .event {
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 6rem;
   background-color: white;
   border-radius: 1.3rem;
   background: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1400px) {
   .flag {
     width: 2.188rem;
     border-radius: 5px;
-    height: 50px;
-    left: 6%;
-    padding-top: 0px;
+    height: 2rem;
   }
   .flag:after {
     border-left: 1.063rem solid transparent;
@@ -120,107 +118,113 @@ a:active {
   }
   .event {
     height: 40%;
-    margin: 0.6rem;
+    margin: 0.6rem 0;
+    border-radius: 13px;
+  }
+  .events {
+    height: 24%;
   }
 }
 @media screen and (max-width: 1200px) {
   .events {
-    margin: 3% 5%;
-    width: 80%;
     height: 24%;
   }
   .event {
-    margin: 0.6rem;
+    margin: 0.6rem 0;
+    border-radius: 12px;
   }
   .flag {
-    width: 2.2rem;
-    border-radius: 5px;
-    height: 3.1rem;
-    left: 6%;
+    width: 2rem;
+  }
+  .flag:after {
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
   }
   .name,
   .date {
-    margin: 3%;
     font-size: 30px;
   }
 }
 @media screen and (max-width: 992px) {
   .events {
-    margin: 3% 5%;
-    width: 90%;
-    height: 18.31%;
+    height: 19.31%;
   }
   .flag {
-    width: 30px;
+    width: 1.8rem;
     border-radius: 5px;
     padding-top: 5px;
-    height: 40px;
-    left: 6%;
+    height: 2rem;
+    margin-left: 40px;
   }
   .flag:after {
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
+    border-left: 0.9rem solid transparent;
+    border-right: 0.9rem solid transparent;
+  }
+  .event {
+    border-radius: 10px;
+    height: 8rem;
   }
   .name,
   .date {
-    margin: 4%;
-    font-size: 25px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
   .events {
-    margin: 3% 5%;
-    width: 90%;
     height: 18.31%;
+    width: 70%;
+    padding-left: 1.1rem;
   }
   .flag {
+    margin-left: 1.6rem;
     width: 25px;
     border-radius: 5px;
     padding-top: 5px;
-    height: 2.5rem;
-    left: 6%;
+    height: 1.8rem;
     margin-top: -3px;
   }
   .flag:after {
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
   }
+  .event {
+    border-radius: 7px;
+  }
   .name,
   .date {
-    margin: 3%;
     font-size: 25px;
   }
 }
 @media screen and (max-width: 576px) {
   .events {
-    margin: 3% 5%;
-    width: 90%;
-    height: 18.31%;
+    height: 20.31%;
+    width: 76%;
   }
   .flag {
-    width: 1.3rem;
+    width: 1.2rem;
     padding-top: 0.6rem;
     height: 1.3rem;
     margin-top: -3px;
-    margin-left: -2%;
   }
   .event {
-    height: 25%;
+    height: 50px;
   }
   .flag:after {
     border-left: 0.6rem solid transparent;
     border-right: 0.6rem solid transparent;
   }
-  .name {
-    font-size: 1rem;
-  }
+  .name,
   .date {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 356px) {
   .flag {
-    opacity: 0;
+    width: 1.2rem;
+    padding-top: 0.6rem;
+    height: 1.3rem;
+    margin-top: -3px;
+    margin-left: 11px;
   }
 }
 </style>
