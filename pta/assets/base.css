@@ -13,6 +13,15 @@
   --primary-bg: #fff;
   --secondary-bg: #FCE5AC;
   --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  --footer-bg: linear-gradient(
+    180deg,
+    #fff 0%,
+    #fce5ac 28.65%,
+    #ffd88c 61.98%,
+    #ffd88c 81.25%,
+    #ffd88c 98.95%,
+    #ffd88c 98.96%
+  );
 
     /* media queries max width
     sm:	 ≥576px

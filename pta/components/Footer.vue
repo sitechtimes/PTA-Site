@@ -2,13 +2,21 @@
   <div class="container__footer">
     <h2>Keep in touch with us!</h2>
     <div id="so_med">
-      <a href="https://www.facebook.com/SITECHPTA/" target="_blank" rel="noopener">
+      <a
+        href="https://www.facebook.com/SITECHPTA/"
+        target="_blank"
+        rel="noopener"
+      >
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
       <a href=" " target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
-      <a href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ" target="_blank" rel="noopener">
+      <a
+        href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
+        target="_blank"
+        rel="noopener"
+      >
         <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
       </a>
     </div>
@@ -23,12 +31,14 @@
 @import url(../assets/base.css);
 
 .container__footer {
-  z-index: 1000;  
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: flex-end;
+  background: var(--footer-bg);
+  padding-top: 3rem;
 }
 
 img {
