@@ -1,22 +1,14 @@
 <template>
-  <footer>
+  <div class="container__footer">
     <h2>Keep in touch with us!</h2>
     <div id="so_med">
-      <a
-        href="https://www.facebook.com/SITECHPTA/"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://www.facebook.com/SITECHPTA/" target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
       <a href=" " target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
-      <a
-        href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ" target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
       </a>
     </div>
@@ -24,24 +16,27 @@
       <p>sitechpta@gmail.com</p>
       <p>485 Clawson Street, Staten Island, NY 10306</p>
     </div>
-  </footer>
+  </div>
 </template>
 
 <style scoped>
 @import url(../assets/base.css);
-img {
-  transition: 0.3s;
-}
-img:hover {
-  opacity: 0.7;
-}
 
-footer {z-index: 100000;
+.container__footer {
+  z-index: 1000;  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: flex-end;
+}
+
+img {
+  transition: 0.3s;
+}
+
+img:hover {
+  opacity: 0.7;
 }
 
 #so_med {
@@ -78,16 +73,19 @@ p {
     width: 55vw;
     transform: translate(-50%, 0);
   }
+
   h2 {
     font-size: 4.25vw;
     margin-bottom: 2vw;
   }
+
   img {
     height: 6vw;
     width: 7vw;
     padding-right: 5vw;
     padding-left: 5vw;
   }
+
   p {
     font-size: 3.25vw;
   }
@@ -98,12 +96,14 @@ p {
     font-size: 4vw;
     margin-bottom: 3vw;
   }
+
   img {
     height: 6vw;
     width: 7vw;
     padding-right: 5vw;
     padding-left: 5vw;
   }
+
   p {
     font-size: 3vw;
   }
@@ -114,15 +114,18 @@ p {
     font-size: 1.8vw;
     margin-bottom: 0.5vw;
   }
+
   img {
     height: 3vw;
     width: 4vw;
     padding-right: 1.5vw;
     padding-left: 1.5vw;
   }
+
   p {
     font-size: 1.75vw;
   }
+
   #so_med {
     margin-bottom: -1.4vw;
   }
@@ -133,23 +136,28 @@ p {
     width: 50vw;
     transform: translate(-50%, 0);
   }
+
   h2 {
     font-size: 3.2vw;
     margin-bottom: 3vw;
   }
+
   img {
     height: 5vw;
     width: 6vw;
     padding-right: 5vw;
     padding-left: 5vw;
   }
+
   #text {
     margin-bottom: 2rem;
   }
+
   #so_med {
     margin-bottom: 0.5rem;
     padding: 0.2rem;
   }
+
   p {
     font-size: 2.4vw;
   }
@@ -160,15 +168,18 @@ p {
     font-size: 1.85vw;
     margin-bottom: 0.3vw;
   }
+
   img {
     height: 3vw;
     width: 4vw;
     padding-right: 2vw;
     padding-left: 2vw;
   }
+
   p {
     font-size: 1.5vw;
   }
+
   #so_med {
     margin-bottom: -0.75vw;
   }
@@ -179,16 +190,19 @@ p {
     width: 55vw;
     transform: translate(-50%, 0);
   }
+
   h2 {
     font-size: 3.5vw;
     margin-bottom: 3.5vw;
   }
+
   img {
     height: 4.5vw;
     width: 5vw;
     padding-right: 3.75vw;
     padding-left: 3.75vw;
   }
+
   p {
     font-size: 2.5vw;
   }
@@ -199,15 +213,18 @@ p {
     font-size: 1.8vw;
     margin-bottom: 0.3vw;
   }
+
   img {
     height: 3vw;
     width: 5vw;
     padding-right: 1.75vw;
     padding-left: 1.75vw;
   }
+
   p {
     font-size: 1.4vw;
   }
+
   #so_med {
     margin-bottom: -0.75vw;
   }
@@ -218,15 +235,18 @@ p {
     font-size: 1.5vw;
     margin-bottom: 1vw;
   }
+
   img {
     height: 3vw;
     width: 5vw;
     padding-right: 1.75vw;
     padding-left: 1.75vw;
   }
+
   p {
     font-size: 1.2vw;
   }
+
   #so_med {
     margin-bottom: -0.1vw;
   }
@@ -236,19 +256,23 @@ p {
   #footer {
     bottom: 0px;
   }
+
   h2 {
     font-size: 1.5vw;
     margin-bottom: 1vw;
   }
+
   img {
     height: 3vw;
     width: 3rem;
     padding-right: 1.75vw;
     padding-left: 1.75vw;
   }
+
   p {
     font-size: 1.2vw;
   }
+
   #so_med {
     margin-bottom: 0.5vw;
   }
