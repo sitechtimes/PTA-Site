@@ -1,24 +1,33 @@
 <template>
-  <div id="gradient">
-    <h1 class="heading">EVENTS</h1>
-    <EventsComponent />
-    <section id="calendar">
-      <h4 id="temporary">
-        Google Calendar Filler to make a google Calendar, you need to make a
-        public calendar for the pta to use and then use the code from that
-        calendar in here.
-      </h4>
-    </section>
-    <ScrollTop />
-  </div>
+  <section class="container__Events">
+    <div id="gradient">
+      <h2>EVENTS</h2>
+      <EventsComponent />
+      <div id="calendar">
+        <h4 id="temporary">
+          Google Calendar Filler to make a google Calendar, you need to make a
+          public calendar for the pta to use and then use the code from that
+          calendar in here.
+        </h4>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
 @import url(../assets/base.css);
 
-h1 {
+.container__Events{
+  height: 180vh;
+}
+
+h2 {
   display: flex;
   justify-content: left;
+  color: var(--text-color);
+  font-family: Kumbh Sans;
+  font-size: 400%;
+  margin: 10% 0 0 5%;
 }
 
 #gradient {
@@ -28,14 +37,12 @@ h1 {
   position: absolute;
   top: 0%;
   left: 0%;
-  background: linear-gradient(
-    180deg,
-    #ffc498 0%,
-    #ffd88c 20%,
-    #fce5ac 34%,
-    #fbefd7 44%,
-    #fff 55%
-  );
+  background: linear-gradient(180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%);
   overflow-x: hidden;
 }
 
@@ -66,10 +73,16 @@ h6 {
   h2 {
     font-size: 300%;
     margin: 5%;
-    margin-top: 13%;
+  }
+
+  .events {
+    margin: 3% 5%;
+    width: 59.7%;
+    height: 18.31%;
   }
 
   #gradient {
+    width: 100vw;
     height: 140vh;
   }
 
@@ -80,29 +93,15 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  h2 {
-    margin-top: 15%;
-  }
-}
+@media screen and (max-width: 1200px) {}
 
-@media screen and (max-width: 992px) {
-  h2 {
-    margin-top: 18%;
-  }
-}
+@media screen and (max-width: 992px) {}
 
-@media screen and (max-width: 768px) {
-  h2 {
-    margin-top: 16%;
-    padding-left: 1.1rem;
-  }
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 576px) {
   h2 {
-    font-size: 40px;
-    margin-top: 6rem;
+    font-size: 30px;
   }
 
   #gradient {
@@ -113,20 +112,12 @@ h6 {
     position: absolute;
     top: 0%;
     left: 0%;
-    background: linear-gradient(
-      180deg,
-      #ffc498 0%,
-      #ffd88c 20%,
-      #fce5ac 34%,
-      #fbefd7 44%,
-      #fff 55%
-    );
-  }
-  @media screen and (max-width: 356px) {
-    h2 {
-      font-size: 30px;
-      margin-top: 6rem;
-    }
+    background: linear-gradient(180deg,
+        #ffc498 0%,
+        #ffd88c 20%,
+        #fce5ac 34%,
+        #fbefd7 44%,
+        #fff 55%);
   }
 }
 </style>
