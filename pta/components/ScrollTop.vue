@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .container__topArrow {
-  z-index: 100000000000;
+  z-index: 998;
   display: flex;
   height: 3rem;
   opacity: 0.7;
@@ -31,8 +31,8 @@ export default {
 @media screen and (max-width: 1200px) {
   .container__topArrow {
     height: 3rem;
-    bottom: 3rem;
-    right: 1.8rem;
+    bottom: 5%;
+    right: 6%;
   }
 
   .container__topArrow img {
@@ -43,8 +43,8 @@ export default {
 @media screen and (max-width: 992px) {
   .container__topArrow {
     height: 2rem;
-    bottom: 5rem;
-    right: 4rem;
+    bottom: 8%;
+    right: 5%;
   }
   .container__topArrow img {
     height: 5rem;
@@ -54,8 +54,8 @@ export default {
 @media screen and (max-width: 576px) {
   .container__topArrow {
     height: 1.5rem;
-    bottom: 2.5rem;
-    right: 3rem;
+    bottom: 9%;
+    right: 5%;
   }
 
   .container__topArrow img {
