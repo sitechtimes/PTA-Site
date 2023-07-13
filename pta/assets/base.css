@@ -232,6 +232,7 @@ h4 {
   .menu {
     display: initial;
     margin-right: 6rem;
+    margin-top: 2rem;
   }
 
     .link-container {
@@ -364,7 +365,8 @@ h4 {
 }
 @media only screen and (max-width: 768px) {
   .menu {
-    margin-right: 4.5rem;
+    margin-right: 6rem;
+      margin-top: 1.4rem;
   }
   #navbar {
     height: 3.3rem;
@@ -379,10 +381,16 @@ h4 {
     font-size: 2rem;
     margin: 30% 0 0 9%;
   }
+  .menu {
+    margin-right: 5rem;
+  }
 }
 @media only screen and (max-width: 450px) {
   .heading {
     font-size: 1.8rem;
     margin: 34% 0 0 10%;
+  }
+  .menu {
+    margin-right: 4rem;
   }
 }
