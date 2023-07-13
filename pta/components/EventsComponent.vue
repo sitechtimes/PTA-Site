@@ -173,6 +173,7 @@ a:active {
   .events {
     height: 18.31%;
     width: 70%;
+    padding-left: 1.1rem;
   }
   .flag {
     margin-left: 1.6rem;
@@ -214,7 +215,7 @@ a:active {
   }
   .name,
   .date {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 356px) {
@@ -223,7 +224,7 @@ a:active {
     padding-top: 0.6rem;
     height: 1.3rem;
     margin-top: -3px;
-    margin-left: -4%;
+    margin-left: 11px;
   }
 }
 </style>

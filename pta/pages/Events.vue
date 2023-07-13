@@ -103,6 +103,7 @@ h6 {
 @media screen and (max-width: 768px) {
   h2 {
     margin-top: 16%;
+    padding-left: 1.1rem;
   }
 }
 
