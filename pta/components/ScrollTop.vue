@@ -18,6 +18,7 @@ export default {
 
 <style scoped>
 .container__topArrow {
+  z-index: 100000000000;
   display: flex;
   height: 3rem;
   opacity: 0.7;

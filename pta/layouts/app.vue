@@ -1,10 +1,8 @@
 <template>
   <div class="container__app">
-    <NuxtLayout />
+    <NuxtLayout> <NuxtPage /></NuxtLayout>
   </div>
-  <NuxtPage />
 </template>
-
 <style scoped>
 .container__app {
   z-index: 999;
