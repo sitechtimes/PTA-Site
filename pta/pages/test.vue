@@ -1,19 +1,24 @@
 <template>
-  <div class="bodyy">
-    <div class="container">
-      <div class="container__SideNavigation" id="btncon">
-        <a href="#section__GeneralContacts" class="sidenavbtn">
-          <h3>General Contacts</h3>
-        </a>
-        <a id="boardMembers" href="#section__BoardMembers" class="sidenavbtn">
-          <h3>Board Members</h3>
-        </a>
-        <a id="joinUs" href="#section__JoinUs" class="sidenavbtn">
-          <h3>Join Us</h3>
-        </a>
-      </div>
-      <div class="container__body">
-        <section id="section__GeneralContacts">
+    <div class="whole">
+        <div id="gradient">
+        <div class="parent">
+            <div class="div1">
+                <h1>1</h1>
+                <div class="container__SideNavigation" id="btncon">
+                    <a href="#section__GeneralContacts" class="sidenavbtn">
+                        <h3>General Contacts</h3>
+                    </a>
+                    <a id="boardMembers" href="#section__BoardMembers" class="sidenavbtn">
+                        <h3>Board Members</h3>
+                    </a>
+                    <a id="joinUs" href="#section__JoinUs" class="sidenavbtn">
+                        <h3>Join Us</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="div2">
+                <h1>2</h1>
+                <section id="section__GeneralContacts">
           <div class="container__box">
             <h1>General Contacts</h1>
             <PTAInformation />
@@ -78,12 +83,52 @@
             </div>
           </div>
         </section>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <style scoped>
+h1 {
+    text-align: center;
+}
+
+#gradient {
+  width: 100vw;
+  height: 180vh;
+  padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%);
+  overflow-x: hidden;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid black;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    border: 1px solid black;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 1px solid black;
+}
+
 @import url(../assets/base.css);
 
 
