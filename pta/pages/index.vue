@@ -1,15 +1,13 @@
 <template>
   <div>
-    <NuxtLayout name="default">
-      <div class="parent">
-        <div class="div1">
-          <HomeTop />
-        </div>
-        <div class="div2">
-          <MiddleSection />
-        </div>
+    <div class="parent">
+      <div class="div1">
+        <HomeTop />
       </div>
-    </NuxtLayout>
+      <div class="div2">
+        <MiddleSection />
+      </div>
+    </div>
   </div>
 </template>
 
