@@ -1,113 +1,146 @@
 <template>
-  <div class="bodyy">
-    <div class="container">
-      <div class="container__SideNavigation" id="btncon">
-        <a href="#section__GeneralContacts" class="sidenavbtn">
-          <h3>General Contacts</h3>
-        </a>
-        <a id="boardMembers" href="#section__BoardMembers" class="sidenavbtn">
-          <h3>Board Members</h3>
-        </a>
-        <a id="joinUs" href="#section__JoinUs" class="sidenavbtn">
-          <h3>Join Us</h3>
-        </a>
-      </div>
-      <div class="container__body">
-        <section id="section__GeneralContacts">
-          <div class="container__box">
-            <h1>General Contacts</h1>
-            <PTAInformation />
-          </div>
-        </section>
-        <section id="section__BoardMembers">
-          <div class="container__box">
-            <h1>Board Members</h1>
-            <div class="container__BoardMembers">
-              <div class="container__BoardMembers-profile">
-                <img src="/profile.svg" alt="Profile Picture Filler">
-                <h4>John Doe • Position</h4>
-                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=johndoe@gmail.com.com&tf=1" target="_blank"
-                  rel="noopener">
-                  johndoe@gmail.com
-                </a>
-              </div>
-              <div class="container__BoardMembers-profile">
-                <img src="/profile.svg" alt="Profile Picture Filler">
-                <h4>John Doe • Position</h4>
-                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=johndoe@gmail.com.com&tf=1" target="_blank"
-                  rel="noopener">
-                  johndoe@gmail.com
-                </a>
-              </div>
+  <div class="container" id="gradient">
+    <div class="container__NavigationButtons" id="btncon">
+      <button class="button__navigation" @click="showSection('GeneralContacts')">
+        <h3>General Contacts</h3>
+      </button>
+      <button class="button__navigation" @click="showSection('BoardMembers')">
+        <h3>Board Members</h3>
+      </button>
+      <button class="button__navigation" @click="showSection('JoinUs')">
+        <h3>Join Us</h3>
+      </button>
+    </div>
+
+    <div class="container__body">
+      <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
+        <div class="container__box">
+          <h1>General Contacts</h1>
+          <PTAInformation />
+        </div>
+      </section>
+      <section id="section__BoardMembers" v-show="currentSection === 'BoardMembers'">
+        <div class="container__box">
+          <h1>Board Members</h1>
+          <div class="container__BoardMembers">
+            <div class="container__BoardMembers-profile">
+              <img src="/profile.svg" alt="Profile Picture Filler" />
+              <h4>John Doe • Position</h4>
+              <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                johndoe@gmail.com
+              </a>
+            </div>
+            <div class="container__BoardMembers-profile">
+              <img src="/profile.svg" alt="Profile Picture Filler" />
+              <h4>John Doe • Position</h4>
+              <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                johndoe@gmail.com
+              </a>
             </div>
           </div>
-        </section>
-        <section id="section__JoinUs">
-          <div class="container__box">
-            <h1>Join Us</h1>
-            <div class="container__ParentVolunteer">
-              <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
-              <p>
-                If you would like to volunteer at PTA events, please print out the attached volunteer form and
-                submit to
-                the PTA Room or email it to <a
-                  href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=sitechpta@gmail.com.com&tf=1" target="_blank"
-                  rel="noopener">sitechpta@gmail.com</a>.
-              </p>
-              <p>Be part of the SI TECH PTA Grant Committee</p>
-              <ul>
-                <li>
-                  The grants committee researches and applies for grants to help fund school programs and
-                  activities
-                  including classroom/school upgrades, art, technology, maker-space, and the library. We reach
-                  out
-                  to
-                  foundations and corporations.
-                </li>
-                <li>
-                  Volunteers are needed to research grant opportunities or help write the grant proposals. No
-                  prior
-                  experience is necessary, time commitment is contingent on grant deadlines.
-                </li>
-                <li>
-                  Please email <a
-                    href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=SITHSptagrantcommittee@gmail.com.com&tf=1"
-                    target="_blank" rel="noopener">SITHSptagrantcommittee@gmail.com</a> if interested.
-                </li>
-              </ul>
-            </div>
+        </div>
+      </section>
+      <section id="section__JoinUs" v-show="currentSection === 'JoinUs'">
+        <div class="container__box">
+          <h1>Join Us</h1>
+          <div class="container__ParentVolunteer">
+            <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
+            <p>
+              If you would like to volunteer at PTA events, please print out the attached volunteer form and submit to
+              the PTA Room or email it to
+              <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
+            </p>
+            <p>Be part of the SI TECH PTA Grant Committee</p>
+            <ul>
+              <li>
+                The grants committee researches and applies for grants to help fund school programs and activities
+                including classroom/school upgrades, art, technology, maker-space, and the library. We reach out to
+                foundations and corporations.
+              </li>
+              <li>
+                Volunteers are needed to research grant opportunities or help write the grant proposals. No prior
+                experience is necessary, time commitment is contingent on grant deadlines.
+              </li>
+              <li>
+                Please email
+                <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank" rel="noopener">SITHSptagrantcommittee@gmail.com</a>
+                if interested.
+              </li>
+            </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      currentSection: 'GeneralContacts' //the current section by default is the 'General Contacts' section 
+    };
+  },
+  methods: {
+    showSection(section) {
+      this.currentSection = section; //the current section by default is the 'General Contacts' section 
+    }
+  }
+};
+</script>
+
 <style scoped>
-@import url(../assets/base.css);
+@import "../assets/base.css";
 
-
-section {
-  padding: 2rem;
-  height: 100vh;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-}
-
-.container {
-  background: linear-gradient(180deg, #FFD88C 0%, rgba(217, 217, 217, 0.00) 100%);
+#gradient {
   width: 100vw;
   height: 100%;
   padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(180deg,
+      #ffc498 0%,
+      #ffd88c 20%,
+      #fce5ac 34%,
+      #fbefd7 44%,
+      #fff 55%);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container__NavigationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
   top: 0;
   left: 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.container__body {
+  flex: 1;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 1;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container__box {
@@ -115,12 +148,12 @@ body {
   height: 43.5rem;
   background-color: #FCF6E9;
   border-radius: 3.25rem;
-  box-shadow: 2rem 2rem #FFD88C;
-  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 2rem 2rem 2rem 5rem;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top: 5rem;
 }
 
 .container__BoardMembers {
@@ -142,6 +175,18 @@ body {
 
 .container__BoardMembers-profile img {
   width: 9rem;
+}
+
+.container__ParentVolunteer {
+  width: 60vw;
+}
+
+.button__navigation {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #FCF6E9;
+  border-radius: 1.25rem;
+  border: none;
 }
 
 h1 {
@@ -170,10 +215,11 @@ h2 {
 h3 {
   font-family: var(--font-heading);
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: auto;
+  margin: 0;
 }
 
 h4 {
@@ -186,6 +232,14 @@ h4 {
   text-align: center;
 }
 
+button {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #FCF6E9;
+  border-radius: 1.25rem;
+  border-color: none;
+}
+
 p,
 li {
   color: #483221;
@@ -196,8 +250,13 @@ li {
   line-height: 129.164%;
 }
 
-.container__SideNavigation a {
+.container__NavigationButtons button {
   text-decoration: none;
+  color: #483221;
+  text-align: center;
+  font-family: var(--font-heading);
+  line-height: 2rem;
+  cursor: pointer;
 }
 
 a {
@@ -205,94 +264,14 @@ a {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 129.164%;
-}
-
-.container__SideNavigation {
-  width: 20vw;
-  padding: 2rem;
-  padding-top: 8rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow-y: auto;
-}
-
-/* .container__body::before {
-  content: "";s
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  top: 0;
-  right: 80%;
-  width: 0.1rem;
-  height: 70%;
-  background-color: var(--text-color);
-}
- */
-.container__body {
-  flex: 1;
-  margin-left: 20vw;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.container__ParentVolunteer {
-  width: 60vw;
+  line-height: 2rem;
 }
 
 @media only screen and (max-width: 576px) {
-  section {
-    padding: 1rem;
-    margin-top: 25vw;
-    height: auto;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-  }
-
-  .container__body {
-    height: 80vh;
+  .container__box {
     width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  li {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  a {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    text-align: center;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .container__BoardMembers-profile img {
-    width: 8rem;
+    height: auto;
+    margin-bottom: 2rem;
   }
 
   .container__ParentVolunteer {
@@ -300,92 +279,12 @@ a {
   }
 
   .container__BoardMembers {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 1;
-  }
-
-  #btncon {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1366px) {
-  section {
-    padding: 1rem;
-    height: auto;
-    margin-top: 3rem;
-  }
-
-  .container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: auto;
   }
 
-  .container__body {
-    height: 80vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  li {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  a {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    text-align: center;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .container__BoardMembers-profile img {
-    width: 8rem;
-  }
-
-  .container__ParentVolunteer {
-    width: 80vw;
-  }
-
-  .container__BoardMembers {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 1;
-  }
-
-  #btncon {
-    display: none;
+  .container__BoardMembers-profile {
+    margin: 1rem 0;
   }
 }
-
-@media screen and (min-width: 576px) {}
-
-/* media queries max width
-    sm:	 ≥576px
- 	md:  ≥768px
-    lg:	 ≥992px
-    xl:  ≥1200px
-    xxl: ≥1400px
-    */
 </style>
