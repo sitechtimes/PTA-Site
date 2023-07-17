@@ -26,8 +26,8 @@ export default {
   right: 3vw;
   background: transparent;
   position: fixed;
-  font-size: 2vw;
   top: 10%;
+  font-size: 2.5vw;
 }
 #popupscreen {
   width: 100vw;
@@ -52,5 +52,28 @@ export default {
   border-radius: 2vw;
   font-size: 1vw;
   width: 40vw;
+}
+
+/* media queries max width
+    sm:  ≥576px
+  md:  ≥768px
+    lg:  ≥992px
+    xl:  ≥1200px
+    xxl: ≥1400px
+    */
+
+@media screen and (max-width: 992px) {
+  .popup {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .popup-close {
+    font-size: 4vw;
+  }
+  .popup {
+    width: 60vw;
+  }
 }
 </style>
