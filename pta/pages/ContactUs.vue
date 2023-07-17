@@ -158,12 +158,13 @@ export default {
   left: 0;
   padding: 0;
   background: linear-gradient(180deg, #ffd88c 0%, rgba(217, 217, 217, 0) 100%);
+  overflow-x: hidden;
 }
 
 .container__ContactUs {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -199,6 +200,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .container__BoardMembers-profile {
@@ -208,6 +210,7 @@ export default {
   justify-content: center;
   margin: 2rem;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container__BoardMembers-profile p {
