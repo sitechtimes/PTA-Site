@@ -2,27 +2,48 @@
   <div id="navbar">
     <div id="logoContainer">
       <NuxtLink to="/">
-        <img class="logo" src="../components/icons/NavBar-Icons/pta-logo.png" alt="" />
+        <img
+          class="logo"
+          src="../components/icons/NavBar-Icons/pta-logo.png"
+          alt="SITHS PTA logo"
+        />
       </NuxtLink>
     </div>
     <div id="nav">
       <div class="group">
-        <img class="icon" id="home" src="../components/icons/NavBar-Icons/house.svg" alt="dark brown icon of a house" />
+        <img
+          class="icon"
+          id="home"
+          src="../components/icons/NavBar-Icons/house.svg"
+          alt="dark brown icon of a house"
+        />
         <NuxtLink to="/">Home</NuxtLink>
       </div>
       <div class="group">
-        <img class="icon" id="events" src="../components/icons/NavBar-Icons/calendar.svg"
-          alt="dark brown icon of a calendar" />
+        <img
+          class="icon"
+          id="events"
+          src="../components/icons/NavBar-Icons/calendar.svg"
+          alt="dark brown icon of a calendar"
+        />
         <NuxtLink to="/Events">Events</NuxtLink>
       </div>
       <div class="group">
-        <img class="icon" id="contact" src="../components/icons/NavBar-Icons/envelope.svg"
-          alt="dark brown icon of an envelope" />
+        <img
+          class="icon"
+          id="contact"
+          src="../components/icons/NavBar-Icons/envelope.svg"
+          alt="dark brown icon of an envelope"
+        />
         <NuxtLink to="/ContactUs">Contact</NuxtLink>
       </div>
       <div class="group">
-        <img class="icon" id="donate" src="../components/icons/NavBar-Icons/credit_card.svg"
-          alt="dark brown icon of a credit card" />
+        <img
+          class="icon"
+          id="donate"
+          src="../components/icons/NavBar-Icons/credit_card.svg"
+          alt="dark brown icon of a credit card"
+        />
         <NuxtLink to="/Donate">Donate</NuxtLink>
       </div>
     </div>
@@ -103,7 +124,8 @@ a:visited {
   }
 }
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
 @media screen and (max-width: 768px) {
   .logo {
