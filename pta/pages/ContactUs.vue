@@ -108,7 +108,7 @@ export default {
 
 #gradient {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -118,7 +118,7 @@ export default {
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 120%;
   padding: 0;
   position: relative;
   display: flex;
@@ -135,6 +135,7 @@ export default {
   position: absolute;
   z-index: 2;
   width: 100%;
+  height: 20vh;
   top: 0;
   left: 0;
   margin-top: 6rem;
@@ -143,9 +144,8 @@ export default {
 
 .container__body {
   position: absolute;
-  margin-top: 5rem;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +187,7 @@ export default {
 
 .container__ParentVolunteer {
   width: 60vw;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 h1 {
@@ -274,14 +274,61 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
-  .container__box {
+
+  .container__body {
+    margin: 0;
     width: 100%;
-    height: auto;
+    height: 80vh;
+  }
+
+  .container__NavigationButtons {
+    margin: 5rem 0 0 0;
+    padding: 0 1rem;
+    height: fit-content;
+  }
+
+  button {
+    height: 4rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 0;
+    margin-top: 1.5rem;
+  }
+
+  a {
+    line-height: 1.25rem;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 1rem;
+  }
+
+  .container__box {
+    width: 70vw;
+    height: fit-content;
     margin-bottom: 2rem;
+    margin: 0;
   }
 
   .container__ParentVolunteer {
-    width: 92vw;
+    width: 60vw;
+    margin: 0;
   }
 
   .container__BoardMembers {
@@ -292,4 +339,5 @@ a {
   .container__BoardMembers-profile {
     margin: 1rem 0;
   }
-}</style>
+}
+</style>
