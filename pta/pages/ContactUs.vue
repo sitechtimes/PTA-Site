@@ -1,83 +1,86 @@
 <template>
   <div class="container__ContactUs">
-    <div class="container__Navigation">
-      <button class="button__navigation" :class="{ active: currentSection === 'GeneralContacts' }"
-        @click="showSection('GeneralContacts')">
-        General Contacts
-      </button>
-      <button class="button__navigation" :class="{ active: currentSection === 'BoardMembers' }"
-        @click="showSection('BoardMembers')">
-        Board Members
-      </button>
-      <button class="button__navigation" :class="{ active: currentSection === 'JoinUs' }" @click="showSection('JoinUs')">
-        Join Us
-      </button>
-    </div>
+    <div id="gradient">
+      <div class="container__Navigation">
+        <button class="button__navigation" :class="{ active: currentSection === 'GeneralContacts' }"
+          @click="showSection('GeneralContacts')">
+          General Contacts
+        </button>
+        <button class="button__navigation" :class="{ active: currentSection === 'BoardMembers' }"
+          @click="showSection('BoardMembers')">
+          Board Members
+        </button>
+        <button class="button__navigation" :class="{ active: currentSection === 'JoinUs' }"
+          @click="showSection('JoinUs')">
+          Join Us
+        </button>
+      </div>
 
-    <div class="container__Body">
-      <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
-        <div class="container__box">
-          <h1>General Contacts</h1>
-          <PTAInformation id="PTAInformation" />
-        </div>
-      </section>
+      <div class="container__Body">
+        <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
+          <div class="container__box">
+            <h1>General Contacts</h1>
+            <PTAInformation id="PTAInformation" />
+          </div>
+        </section>
 
-      <section id="section__BoardMembers" v-show="currentSection === 'BoardMembers'">
-        <div class="container__box">
-          <h1>Board Members</h1>
-          <div class="container__BoardMembers">
-            <div class="container__BoardMembers-profile">
-              <img src="/profile.svg" alt="Profile Picture Filler" />
-              <h3>John Doe • Position</h3>
-              <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
-                johndoe@gmail.com
-              </a>
-            </div>
-            <div class="container__BoardMembers-profile">
-              <img src="/profile.svg" alt="Profile Picture Filler" />
-              <h3>John Doe • Position</h3>
-              <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
-                johndoe@gmail.com
-              </a>
+        <section id="section__BoardMembers" v-show="currentSection === 'BoardMembers'">
+          <div class="container__box">
+            <h1>Board Members</h1>
+            <div class="container__BoardMembers">
+              <div class="container__BoardMembers-profile">
+                <img src="/profile.svg" alt="Profile Picture Filler" />
+                <h3>John Doe • Position</h3>
+                <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                  johndoe@gmail.com
+                </a>
+              </div>
+              <div class="container__BoardMembers-profile">
+                <img src="/profile.svg" alt="Profile Picture Filler" />
+                <h3>John Doe • Position</h3>
+                <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                  johndoe@gmail.com
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="section__JoinUs" v-show="currentSection === 'JoinUs'">
-        <div class="container__box">
-          <h1>Join Us</h1>
-          <div class="container__ParentVolunteer">
-            <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
-            <p>
-              If you would like to volunteer at PTA events, please print out
-              the attached volunteer form and submit to the PTA Room or
-              email it to
-              <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
-            </p>
-            <p>Be part of the SI TECH PTA Grant Committee</p>
-            <ul>
-              <li>
-                The grants committee researches and applies for grants to
-                help fund school programs and activities including
-                classroom/school upgrades, art, technology, maker-space, and
-                the library. We reach out to foundations and corporations.
-              </li>
-              <li>
-                Volunteers are needed to research grant opportunities or
-                help write the grant proposals. No prior experience is
-                necessary, time commitment is contingent on grant deadlines.
-              </li>
-              <li>
-                Please email
-                <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank"
-                  rel="noopener">SITHSptagrantcommittee@gmail.com</a>
-                if interested.
-              </li>
-            </ul>
+        <section id="section__JoinUs" v-show="currentSection === 'JoinUs'">
+          <div class="container__box">
+            <h1>Join Us</h1>
+            <div class="container__ParentVolunteer">
+              <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
+              <p>
+                If you would like to volunteer at PTA events, please print out
+                the attached volunteer form and submit to the PTA Room or
+                email it to
+                <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
+              </p>
+              <p>Be part of the SI TECH PTA Grant Committee</p>
+              <ul>
+                <li>
+                  The grants committee researches and applies for grants to
+                  help fund school programs and activities including
+                  classroom/school upgrades, art, technology, maker-space, and
+                  the library. We reach out to foundations and corporations.
+                </li>
+                <li>
+                  Volunteers are needed to research grant opportunities or
+                  help write the grant proposals. No prior experience is
+                  necessary, time commitment is contingent on grant deadlines.
+                </li>
+                <li>
+                  Please email
+                  <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank"
+                    rel="noopener">SITHSptagrantcommittee@gmail.com</a>
+                  if interested.
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </div>
 </template>
@@ -116,26 +119,33 @@ export default {
 } */
 
 #gradient {
-  width: 100vw;
-  height: 100vh;
-  padding: 0%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
+  padding: 0;
   background: linear-gradient(180deg, #ffd88c 0%, rgba(217, 217, 217, 0) 100%);
 }
+
 .container__ContactUs {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   height: 100vh;
   align-items: center;
+  justify-content: center;
 }
 
 .container__Navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 80vw;
+  margin-top: 8rem;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
 }
 
 .container__box {
@@ -253,6 +263,13 @@ button {
 
 button.active {
   background-color: #fcf6e9;
+}
+
+section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {}
