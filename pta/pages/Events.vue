@@ -17,7 +17,6 @@
           </h4>
         </div>
       </div>
-      <ScrollTop />
     </div>
   </section>
 </template>

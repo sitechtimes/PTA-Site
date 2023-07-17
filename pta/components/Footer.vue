@@ -37,6 +37,8 @@
   justify-content: center;
   align-items: center;
   align-content: flex-end;
+  background: var(--footer-bg);
+  padding-top: 3rem;
 }
 
 img {

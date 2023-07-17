@@ -6,7 +6,7 @@
       href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">Jessie's Birthday</h3>
         <h3 class="date">05/06</h3>
       </div>
@@ -16,7 +16,7 @@
       href="https://www.fundraiserinsight.org/wp-content/uploads/2013/07/bake-sale-fundraiser.jpg"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">Bake Sale</h3>
         <h3 class="date">05/10</h3>
       </div>
@@ -26,7 +26,7 @@
       href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1553703&type=d&pREC_ID=1679764"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">SITHS</h3>
         <h3 class="date">05/17</h3>
       </div>
@@ -44,7 +44,6 @@
   height: 24rem;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 2rem;
 }
 a,
 a:hover,
@@ -84,7 +83,7 @@ a:active {
   font-family: Karla;
   font-weight: 400;
 }
-.text {
+.subh {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -125,13 +124,18 @@ a:active {
   .events {
     height: 24%;
   }
+  .events {
+    margin: 3% 5%;
+    height: 24%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .events {
+    margin: 3% 5%;
     height: 24%;
   }
   .event {
-    margin: 0.6rem 0;
+    margin: 0.6rem;
     border-radius: 12px;
   }
   .flag {
@@ -148,14 +152,14 @@ a:active {
 }
 @media screen and (max-width: 992px) {
   .events {
-    height: 19.31%;
+    margin: 3% 5%;
+    height: 18.31%;
   }
   .flag {
     width: 1.8rem;
     border-radius: 5px;
     padding-top: 5px;
-    height: 2rem;
-    margin-left: 40px;
+    height: 1.5rem;
   }
   .flag:after {
     border-left: 0.9rem solid transparent;
@@ -165,13 +169,18 @@ a:active {
     border-radius: 10px;
     height: 8rem;
   }
+  .event {
+    border-radius: 10px;
+  }
   .name,
   .date {
-    font-size: 28px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
   .events {
+    margin: 3% 5%;
+    width: 80%;
     height: 18.31%;
     width: 70%;
     padding-left: 1.1rem;
@@ -198,8 +207,10 @@ a:active {
 }
 @media screen and (max-width: 576px) {
   .events {
-    height: 20.31%;
-    width: 76%;
+    box-sizing: border-box;
+    margin: auto;
+    width: 85%;
+    height: 18.31%;
   }
   .flag {
     width: 1.2rem;
@@ -208,7 +219,7 @@ a:active {
     margin-top: -3px;
   }
   .event {
-    height: 50px;
+    height: 16rem;
   }
   .flag:after {
     border-left: 0.6rem solid transparent;
@@ -225,7 +236,7 @@ a:active {
     padding-top: 0.6rem;
     height: 1.3rem;
     margin-top: -3px;
-    margin-left: 11px;
+    margin-left: -4%;
   }
 }
 </style>

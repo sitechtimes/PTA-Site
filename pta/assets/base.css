@@ -13,6 +13,15 @@
   --primary-bg: #fff;
   --secondary-bg: #FCE5AC;
   --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  --footer-bg: linear-gradient(
+    180deg,
+    #fff 0%,
+    #fce5ac 28.65%,
+    #ffd88c 61.98%,
+    #ffd88c 81.25%,
+    #ffd88c 98.95%,
+    #ffd88c 98.96%
+  );
 
     /* media queries max width
     sm:	 ≥576px
@@ -59,7 +68,18 @@ h4 {
 .heading {
   font-family: 'Kumbh Sans', san serif;
   font-weight: 800;
-  font-size: 4.3rem;
+  font-size: 4rem;
+  color: var(--text-color);
+  margin: 13% 0 0 8%;
+}
+.subh {
+  font-size: 10rem;
+  color: var(--text-color);
+    font-family: Karla;
+    font-weight: 400;
+}
+.text {
+  
 }
 
 
@@ -224,6 +244,7 @@ h4 {
   .menu {
     display: initial;
     margin-right: 6rem;
+    margin-top: 2rem;
   }
 
     .link-container {
@@ -259,7 +280,6 @@ h4 {
     top: 0%;
     left: 0%;
   }
-
   .menu {
     display: block;
   }
@@ -274,7 +294,6 @@ h4 {
     margin-top: 1.5rem;
     list-style: none;
   }
-
   .menu-router {
     font-size: 1.8rem;
   }
@@ -332,19 +351,58 @@ h4 {
     left: 0%;
   }
 }
-
+@media only screen and (max-width: 1400px) {
+  .heading {
+    margin: 16% 0 0 8%;
+    font-size: 3.7rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  
+}
 @media only screen and (max-width: 1200px) {
   #navbar {
     height: 4.2rem;
   }
+  .heading {
+    font-size: 3rem;
+  }
 }
-
+@media only screen and (max-width: 992px) {
+  .heading {
+    margin: 18% 0 0 8%;
+    font-size: 2.7rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .menu {
-    margin-right: 4.5rem;
+    margin-right: 6rem;
+      margin-top: 1.4rem;
   }
-
   #navbar {
     height: 3.3rem;
+  }
+  .heading {
+    font-size: 2.4rem;
+    margin: 20% 0 0 8%;
+  }
+}
+@media only screen and (max-width:576px) {
+  .heading {
+    font-size: 2rem;
+    margin: 30% 0 0 9%;
+  }
+  .menu {
+    margin-right: 5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 1.8rem;
+    margin: 34% 0 0 10%;
+  }
+  .menu {
+    margin-right: 4rem;
   }
 }
