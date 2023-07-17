@@ -258,7 +258,7 @@ li {
 @media screen and (min-width: 768px) {
   #gradient {
     width: 100%;
-    height: 140vw;
+    height: 100vw;
     margin: 0;
     padding: 0%;
     position: absolute;
