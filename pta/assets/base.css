@@ -1,20 +1,18 @@
 @import "./variables.css";
-@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 *,
 :root {
   /* fonts */
-  --font-text: 'Karla', san serif;
-  --font-heading: 'Kumbh Sans', san serif;
-  --font-nav: 'Bayon', san serif;
-
+  --font-text: "Karla", san serif;
+  --font-heading: "Kumbh Sans", san serif;
+  --font-nav: "Bayon", san serif;
 
   /* colors */
   --text-color: #483221;
   --primary-bg: #fff;
-  --secondary-bg: #FCE5AC;
-  --bg-gradient:linear-gradient(
+  --secondary-bg: #fce5ac;
+  --bg-gradient: linear-gradient(
     180deg,
     #ffc498 0%,
     #fce5ac 20%,
@@ -32,8 +30,7 @@
     #ffd88c 98.96%
   );
 
-
-    /* media queries max width
+  /* media queries max width
     sm:  ≥576px
   md:  ≥768px
     lg:  ≥992px
@@ -41,8 +38,7 @@
     xxl: ≥1400px
     */
 
-
-    font-synthesis: none;
+  font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -63,22 +59,19 @@ h1 {
   font-size: 4.3rem;
 }
 
-
 h2 {
   font-size: 3rem;
 }
-
 
 h3 {
   font-size: 2rem;
 }
 
-
 h4 {
   font-size: 1.5rem;
 }
 .heading {
-  font-family: 'Kumbh Sans', san serif;
+  font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   font-size: 4rem;
   color: var(--text-color);
@@ -87,37 +80,34 @@ h4 {
 .subh {
   font-size: 3rem;
   color: var(--text-color);
-    font-family: 'Kumbh Sans', san serif;
-    font-weight: 800;
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
 }
 .text {
   font-size: 1.8rem;
   color: var(--text-color);
-    font-family: 'Karla', sans serif;
-    font-weight: 400;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 .subtext {
-font-size: 1.6vw;
+  font-size: 1.6vw;
   color: var(--text-color);
-  font-family: 'Kumbh Sans', san serif;
-    font-weight: 400;
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 400;
 }
 .caption {
   font-size: 1.6rem;
   margin: 0.6rem 0rem 0rem 0rem;
-  font-family: 'Karla', san serif;
+  font-family: "Karla", san serif;
 }
 .smalltext {
   font-size: 1rem;
 }
 /* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 
-
-
-
-@media only screen and (max-width: 576px) and (orientation: portrait){
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
     display: none;
   }
@@ -141,7 +131,7 @@ font-size: 1.6vw;
     }
   }
 }
-@media only screen and (min-width: 540px) and (orientation: portrait){
+@media only screen and (min-width: 540px) and (orientation: portrait) {
   #nav {
     display: none;
   }
@@ -165,7 +155,6 @@ font-size: 1.6vw;
     }
   }
 }
-
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
   #nav {
@@ -192,7 +181,6 @@ font-size: 1.6vw;
   }
 }
 
-
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   #nav {
     display: none;
@@ -217,7 +205,6 @@ font-size: 1.6vw;
     }
   }
 }
-
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   #nav {
@@ -252,7 +239,6 @@ font-size: 1.6vw;
   }
 }
 
-
 @media only screen and (max-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -281,7 +267,6 @@ font-size: 1.6vw;
   }
 }
 
-
 @media screen and (min-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -293,10 +278,7 @@ font-size: 1.6vw;
     top: 0%;
     left: 0%;
   }
-
-
 }
-
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon {
@@ -311,7 +293,6 @@ font-size: 1.6vw;
   }
 }
 
-
 @media screen and (min-width: 768px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -324,7 +305,6 @@ font-size: 1.6vw;
     left: 0%;
   }
 }
-
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #homeTopCon {
@@ -347,7 +327,7 @@ font-size: 1.6vw;
     font-size: 2.7rem;
   }
   .text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -363,8 +343,8 @@ font-size: 1.6vw;
   .subtext {
     font-size: 2vw;
   }
-  .text{
-    font-size: 1.2rem;
+  .text {
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 1.2rem;
@@ -375,18 +355,15 @@ font-size: 1.6vw;
     display: none;
   }
 
-
   #nav {
     display: flex;
   }
 }
 
-
 @media only screen and (max-width: 1032px) {
   #nav {
     display: none;
   }
-
 
   .menu {
     display: initial;
@@ -394,30 +371,28 @@ font-size: 1.6vw;
     margin-top: 2rem;
   }
 
-
-    .link-container {
-      text-align: left;
-      margin-left: 3rem;
-      padding-top: 7rem;
-    }
-    .link {
-      margin-top: 2rem;
-      list-style: none;
-      margin-left: 1rem;
-      list-style: none;
-    }
-    .menu-router {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 3rem;
-      list-style: none;
-      margin-left: 0.2rem;
-    }
-    .caption {
-      font-size: 1.1rem;
-    }
+  .link-container {
+    text-align: left;
+    margin-left: 3rem;
+    padding-top: 7rem;
   }
-
+  .link {
+    margin-top: 2rem;
+    list-style: none;
+    margin-left: 1rem;
+    list-style: none;
+  }
+  .menu-router {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 3rem;
+    list-style: none;
+    margin-left: 0.2rem;
+  }
+  .caption {
+    font-size: 1.1rem;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .heading {
@@ -427,8 +402,8 @@ font-size: 1.6vw;
   .subh {
     font-size: 1.7rem;
   }
-  .text{
-    font-size: 1rem;
+  .text {
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 1rem;
@@ -437,7 +412,7 @@ font-size: 1.6vw;
 @media only screen and (max-width: 768px) {
   .menu {
     margin-right: 6rem;
-      margin-top: 1.4rem;
+    margin-top: 1.4rem;
   }
   #navbar {
     height: 3.3rem;
@@ -452,14 +427,14 @@ font-size: 1.6vw;
   .subtext {
     font-size: 2.4vw;
   }
-  .text{
-    font-size: 0.8rem;
+  .text {
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 0.9rem;
   }
 }
-@media only screen and (max-width:576px) {
+@media only screen and (max-width: 576px) {
   .heading {
     font-size: 2rem;
     margin: 30% 0 0 9%;
@@ -471,13 +446,12 @@ font-size: 1.6vw;
     font-size: 1.2rem;
     margin-top: 1rem;
   }
-  .text{
+  .text {
     font-size: 0.8rem;
   }
   .subtext {
     font-size: 4vw;
   }
- 
 }
 @media only screen and (max-width: 450px) {
   .heading {
@@ -486,14 +460,13 @@ font-size: 1.6vw;
   }
   .menu {
     margin-right: 4rem;
-  }  .text {
-    font-size: 0.7rem;
+  }
+  .text {
+    font-size: 0.8rem;
   }
   .subtext {
     font-size: 4.2vw;
   }
-
-
 }
 @media only screen and (max-width: 356px) {
   .heading {
@@ -506,8 +479,3 @@ font-size: 1.6vw;
     font-size: 4.5vw;
   }
 }
-
-
-
-
-
