@@ -62,12 +62,18 @@ export default {
     xxl: ≥1400px
     */
 
+@media screen and (max-width: 992px) {
+  .popup {
+    width: 70vw;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .popup-close {
     font-size: 4vw;
   }
   .popup {
-    width: 15rem;
+    width: 60vw;
   }
 }
 </style>

@@ -366,7 +366,7 @@ h4 {
     font-size: 2.7rem;
   }
   .text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -383,7 +383,7 @@ h4 {
     font-size: 2vw;
   }
   .text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 1.2rem;
@@ -442,7 +442,7 @@ h4 {
     font-size: 1.7rem;
   }
   .text {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 1rem;
@@ -467,7 +467,7 @@ h4 {
     font-size: 2.4vw;
   }
   .text {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 0.9rem;
