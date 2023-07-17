@@ -18,6 +18,7 @@
         </div>
 
         <div class="container__body">
+
           <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
             <div class="container__box">
               <h1>General Contacts</h1>
@@ -121,14 +122,17 @@ export default {
   height: 120%;
   padding: 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .container__NavigationButtons {
-  display: flex;
+  grid-area: 1 / 1 / 2 / 2;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -146,8 +150,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 80vh;
-  display: flex;
-  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 2;
   align-items: center;
   justify-content: flex-start;
 }
@@ -158,7 +161,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 77rem;
-  height: 43.5rem;
+  height: auto;
   background-color: #fcf6e9;
   border-radius: 3.25rem;
   display: flex;
@@ -275,10 +278,14 @@ a {
 
 @media only screen and (max-width: 576px) {
 
+  .container__ContactUs {
+    height: 120vh;
+  }
+
   .container__body {
     margin: 0;
     width: 100%;
-    height: 80vh;
+    height: fit-content;
   }
 
   .container__NavigationButtons {
