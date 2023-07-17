@@ -10,7 +10,6 @@
           calendar in here.
         </h4>
       </div>
-      <ScrollTop />
     </div>
   </section>
 </template>
