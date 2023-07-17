@@ -1,34 +1,91 @@
 <template>
-  <section class="container__Events">
+  <div>
+    <Popup
+      v-if="popupTriggers.buttonTrigger"
+      :TogglePopup="() => TogglePopup('buttonTrigger')"
+    >
+      <h5 class="text" id="title">Jessie's Birthday</h5>
+      <p class="text" id="date">05/23/2023</p>
+      <img id="img" src="" alt="" />
+      <p class="text" id="body">
+        The SITHS PTA is a group of parents and faculty/staff members who work
+        together to provide our children with resources and activities to make
+        their school experience the best ever!
+      </p>
+    </Popup>
+
     <div id="gradient">
-      <h2>EVENTS</h2>
-      <EventsComponent />
-      <div id="calendar">
-        <h4 id="temporary">
-          Google Calendar Filler to make a google Calendar, you need to make a
-          public calendar for the pta to use and then use the code from that
-          calendar in here.
-        </h4>
-      </div>
+      <h1 class="heading">EVENTS</h1>
+      <section id="top">
+        <div id="upcomingEvents">
+          <h3 class="subh">Upcoming Events</h3>
+          <ul class="subtext" id="events">
+            <li @click="() => TogglePopup('buttonTrigger')">
+              <div class="uniqEvent">
+                <h5 class="listTitle">Jessie's Birthday</h5>
+                <h5 class="listDate">05/23/2023</h5>
+              </div>
+            </li>
+            <li @click="() => TogglePopup('buttonTrigger')">
+              <div class="uniqEvent">
+                <h5 class="listTitle">Bake Sale</h5>
+                <h5 class="listDate">05/27/2023</h5>
+              </div>
+            </li>
+            <li @click="() => TogglePopup('buttonTrigger')">
+              <div class="uniqEvent">
+                <h5 class="listTitle">Very Long Named Event</h5>
+                <h5 class="listDate">05/30/2023</h5>
+              </div>
+            </li>
+            <li @click="() => TogglePopup('buttonTrigger')">
+              <div class="uniqEvent">
+                <h5 class="listTitle">
+                  Super Duper Very Extremely Long Named Event
+                </h5>
+                <h5 class="listDate">05/31/2023</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="calender">
+          <!-- Google Calendar filler  -->
+        </div>
+      </section>
+      <ScrollTop />
     </div>
-  </section>
+  </div>
 </template>
+
+<script>
+import { ref } from "vue";
+import Popup from "../components/Popup.vue";
+export default {
+  setup() {
+    const popupTriggers = ref({
+      buttonTrigger: false,
+      timedTrigger: false,
+    });
+
+    const TogglePopup = (trigger) => {
+      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
+    };
+
+    setTimeout(() => {
+      popupTriggers.value.timedTrigger = true;
+    }, 3000);
+
+    return {
+      Popup,
+      popupTriggers,
+      TogglePopup,
+    };
+  },
+};
+</script>
 
 <style scoped>
 @import url(../assets/base.css);
-
-.container__Events{
-  height: 180vh;
-}
-
-h2 {
-  display: flex;
-  justify-content: left;
-  color: var(--text-color);
-  font-family: Kumbh Sans;
-  font-size: 400%;
-  margin: 10% 0 0 5%;
-}
 
 #gradient {
   width: 100vw;
@@ -37,52 +94,77 @@ h2 {
   position: absolute;
   top: 0%;
   left: 0%;
-  background: linear-gradient(180deg,
-      #ffc498 0%,
-      #ffd88c 20%,
-      #fce5ac 34%,
-      #fbefd7 44%,
-      #fff 55%);
+  background: var(--bg-gradient);
   overflow-x: hidden;
 }
-
-#calendar {
+#events {
+  list-style-type: none;
+  padding-left: 0;
+}
+.uniqEvent {
   display: flex;
-  width: 65%;
-  height: 25%;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10%;
-  background-color: #d9d9d9;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#title {
+  margin: 0;
+  font-family: "Kumbh Sans", sans serif;
+  font-weight: bolder;
+}
+ul {
+  overflow: auto;
+  height: 27vw;
+}
+.listTitle,
+.listDate {
+  margin-right: 1vw;
+  font-weight: 400;
+}
+.listTitle {
+  width: 20vw;
+}
+.listDate {
+  text-align: end;
+}
+#head {
+  position: absolute;
+  top: 70vw;
+  right: 19vw;
+  height: 30vw;
+  padding-bottom: 10vw;
+}
+#upcomingEvents {
+  color: var(--text-color);
+  font-family: Kumbh Sans;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+li {
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  width: 35vw;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#temporary {
-  color: #000;
-  text-align: center;
-  font-size: 1.3rem;
-  letter-spacing: 0.44px;
+#top {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
 }
-
-h6 {
-  font-size: 1.2rem;
-  color: #000;
-  text-align: center;
+#calender {
+  width: 35vw;
+  background-color: white;
+  border-radius: 3vw;
+  height: 30vw;
+  /* margin-top: -2vw; */
 }
-
 @media screen and (max-width: 1400px) {
-  h2 {
-    font-size: 300%;
-    margin: 5%;
-  }
-
-  .events {
-    margin: 3% 5%;
-    width: 59.7%;
-    height: 18.31%;
-  }
-
   #gradient {
-    width: 100vw;
     height: 140vh;
   }
 
@@ -93,31 +175,106 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+}
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .listTitle {
+    width: 18vw;
+  }
+}
 
 @media screen and (max-width: 576px) {
-  h2 {
-    font-size: 30px;
+  #top {
+    flex-direction: column;
   }
-
+  #upcomingEvents {
+    margin-bottom: 10vw;
+  }
+  #events {
+    height: 50vw;
+  }
+  .uniqEvent {
+    margin: 0 1rem 0 1rem;
+  }
+  li {
+    width: 76vw;
+    border-radius: 2.5vw;
+    margin-bottom: 4vw;
+  }
+  .listTitle {
+    width: 45vw;
+  }
+  #calender {
+    width: 80%;
+    height: 60vw;
+  }
   #gradient {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 220vw;
     margin: 0;
     padding: 0%;
     position: absolute;
     top: 0%;
     left: 0%;
-    background: linear-gradient(180deg,
-        #ffc498 0%,
-        #ffd88c 20%,
-        #fce5ac 34%,
-        #fbefd7 44%,
-        #fff 55%);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .listTitle {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .uniqEvent {
+    margin: 0 0.7rem 0 0.7rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  #gradient {
+    width: 100%;
+    height: 220vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 576px) and (orientation: landscape) {
+  #gradient {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #gradient {
+    width: 100%;
+    height: 140vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  #gradient {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
   }
 }
 </style>
