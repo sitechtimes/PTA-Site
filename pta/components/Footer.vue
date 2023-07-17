@@ -72,7 +72,6 @@ h2 {
   font-size: 1.5rem;
   margin-top: 0;
 }
-
 p {
   font-family: var(--font-text);
   color: var(--text-color);
@@ -83,15 +82,10 @@ p {
   line-height: normal;
   margin: 0.313rem;
 }
-
 @media screen and (max-width: 1400px) {
-  p {
-    font-size: 3vw;
-  }
   #footer {
     bottom: 0px;
   }
-
   p {
     font-size: 1.2vw;
   }
