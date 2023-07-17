@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 *,
 :root {
   /* fonts */
@@ -8,11 +9,18 @@
   --font-heading: 'Kumbh Sans', san serif;
   --font-nav: 'Bayon', san serif;
 
+
   /* colors */
   --text-color: #483221;
   --primary-bg: #fff;
   --secondary-bg: #FCE5AC;
-  --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  --bg-gradient:linear-gradient(
+    180deg,
+    #ffc498 0%,
+    #fce5ac 25%,
+    #fbefd7 80%,
+    #fff 90%
+  );
   --footer-bg: linear-gradient(
     180deg,
     #fff 0%,
@@ -23,13 +31,15 @@
     #ffd88c 98.96%
   );
 
+
     /* media queries max width
-    sm:	 ≥576px
- 	md:  ≥768px
-    lg:	 ≥992px
+    sm:  ≥576px
+  md:  ≥768px
+    lg:  ≥992px
     xl:  ≥1200px
     xxl: ≥1400px
     */
+
 
     font-synthesis: none;
   scroll-behavior: smooth;
@@ -38,7 +48,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 html,
 body {
   margin: 0;
@@ -48,19 +57,21 @@ body {
 }
 body {
   color: var(--text-color);
-  background-color: var(--bg-color);
 }
 h1 {
   font-size: 4.3rem;
 }
 
+
 h2 {
   font-size: 3rem;
 }
 
+
 h3 {
   font-size: 2rem;
 }
+
 
 h4 {
   font-size: 1.5rem;
@@ -72,21 +83,40 @@ h4 {
   color: var(--text-color);
   margin: 13% 0 0 8%;
 }
-.text {
-  font-size: 10rem;
+.subh {
+  font-size: 3rem;
   color: var(--text-color);
-    font-family: Karla;
+    font-family: 'Kumbh Sans', san serif;
+    font-weight: 800;
+}
+.text {
+  font-size: 1.8rem;
+  color: var(--text-color);
+    font-family: 'Karla', sans serif;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.subtext {
+font-size: 2vw;
+  color: var(--text-color);
+  font-family: 'Kumbh Sans', san serif;
     font-weight: 400;
 }
-
-
+.caption {
+  font-size: 1.6rem;
+  margin: 0.6rem 0rem 0rem 0rem;
+  font-family: 'Karla', san serif;
+}
+.smalltext {
+  font-size: 1rem;
+}
 /* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 
 
+
+
 @media only screen and (max-width: 576px) and (orientation: portrait){
-  #home, #contact, #events, #donate{
-    width: 8vw;
-  }
   #nav {
     display: none;
   }
@@ -111,9 +141,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait){
-  #home, #contact, #events, #donate{
-    width: 6vw;
-  }
   #nav {
     display: none;
   }
@@ -137,6 +164,7 @@ h4 {
     }
   }
 }
+
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
   #nav {
@@ -163,10 +191,8 @@ h4 {
   }
 }
 
+
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  #home, #contact, #events, #donate{
-    width: 5.5vw;
-  }
   #nav {
     display: none;
   }
@@ -190,6 +216,7 @@ h4 {
     }
   }
 }
+
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   #nav {
@@ -223,50 +250,9 @@ h4 {
     display: flex;
   }
 }
-@media only screen and (min-width: 1032px) {
-  .menu {
-    display: none;
-  }
 
-  #nav {
-    display: flex;
-  }
-}
 
-@media only screen and (max-width: 1032px) {
-  #nav {
-    display: none;
-  }
-
-  .menu {
-    display: initial;
-    margin-right: 6rem;
-    margin-top: 2rem;
-  }
-
-    .link-container {
-      text-align: left;
-      margin-left: 3rem;
-      padding-top: 7rem;
-    }
-
-    .link {
-      margin-top: 2rem;
-      list-style: none;
-      margin-left: 1rem;
-      list-style: none;
-    }
-
-    .menu-router {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 3rem;
-      list-style: none;
-      margin-left: 0.2rem;
-    }
-  }
-
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   #homeTopCon {
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
     width: 100%;
@@ -280,13 +266,11 @@ h4 {
   .menu {
     display: block;
   }
-
   .link-container {
     text-align: center;
     margin-left: 0rem;
     padding-top: 10rem;
   }
-
   .link {
     margin-top: 1.5rem;
     list-style: none;
@@ -295,6 +279,7 @@ h4 {
     font-size: 1.8rem;
   }
 }
+
 
 @media screen and (min-width: 576px) {
   #homeTopCon {
@@ -308,7 +293,9 @@ h4 {
     left: 0%;
   }
 
+
 }
+
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon {
@@ -323,6 +310,7 @@ h4 {
   }
 }
 
+
 @media screen and (min-width: 768px) {
   #homeTopCon {
     background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
@@ -335,6 +323,7 @@ h4 {
     left: 0%;
   }
 }
+
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #homeTopCon {
@@ -353,10 +342,12 @@ h4 {
     margin: 16% 0 0 8%;
     font-size: 3.7rem;
   }
-  .text {
-    font-size: 2rem;
+  .subh {
+    font-size: 2.7rem;
   }
-  
+  .text {
+    font-size: 1.4rem;
+  }
 }
 @media only screen and (max-width: 1200px) {
   #navbar {
@@ -365,11 +356,81 @@ h4 {
   .heading {
     font-size: 3rem;
   }
+  .subh {
+    font-size: 2rem;
+  }
+  .subtext {
+    font-size: 2.2vw;
+  }
+  .text{
+    font-size: 1.2rem;
+  }
+  .caption {
+    font-size: 1.2rem;
+  }
 }
+@media only screen and (min-width: 1032px) {
+  .menu {
+    display: none;
+  }
+
+
+  #nav {
+    display: flex;
+  }
+}
+
+
+@media only screen and (max-width: 1032px) {
+  #nav {
+    display: none;
+  }
+
+
+  .menu {
+    display: initial;
+    margin-right: 6rem;
+    margin-top: 2rem;
+  }
+
+
+    .link-container {
+      text-align: left;
+      margin-left: 3rem;
+      padding-top: 7rem;
+    }
+    .link {
+      margin-top: 2rem;
+      list-style: none;
+      margin-left: 1rem;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 3rem;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+    .caption {
+      font-size: 1.1rem;
+    }
+  }
+
+
 @media only screen and (max-width: 992px) {
   .heading {
     margin: 18% 0 0 8%;
     font-size: 2.7rem;
+  }
+  .subh {
+    font-size: 1.7rem;
+  }
+  .text{
+    font-size: 1rem;
+  }
+  .caption {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -384,6 +445,18 @@ h4 {
     font-size: 2.4rem;
     margin: 20% 0 0 8%;
   }
+  .subh {
+    font-size: 1.4rem;
+  }
+  .subtext {
+    font-size: 2.4vw;
+  }
+  .text{
+    font-size: 0.8rem;
+  }
+  .caption {
+    font-size: 0.9rem;
+  }
 }
 @media only screen and (max-width:576px) {
   .heading {
@@ -393,13 +466,47 @@ h4 {
   .menu {
     margin-right: 5rem;
   }
+  .subh {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .text{
+    font-size: 0.8rem;
+  }
+  .subtext {
+    font-size: 4vw;
+  }
+ 
 }
 @media only screen and (max-width: 450px) {
   .heading {
     font-size: 1.8rem;
-    margin: 34% 0 0 10%;
+    margin: 34% 0 0 9%;
   }
   .menu {
     margin-right: 4rem;
+  }  .text {
+    font-size: 0.7rem;
+  }
+  .subtext {
+    font-size: 4.2vw;
+  }
+
+
+}
+@media only screen and (max-width: 356px) {
+  .heading {
+    margin: 45% 0 0 9%;
+  }
+  .subh {
+    margin-top: 0.8rem;
+  }
+  .subtext {
+    font-size: 4.5vw;
   }
 }
+
+
+
+
+
