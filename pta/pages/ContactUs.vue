@@ -120,12 +120,17 @@ export default {
 
 #gradient {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
   padding: 0;
   background: linear-gradient(180deg, #ffd88c 0%, rgba(217, 217, 217, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
 }
 
 .container__ContactUs {
@@ -142,10 +147,11 @@ export default {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 8rem;
-  width: 100vw;
+  margin-right: 0;
+  margin-left: 0;
+  width: 70vw;
   display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
+  align-items: center;
 }
 
 .container__box {
@@ -248,6 +254,7 @@ a {
 button {
   margin: 1rem;
   padding: 1rem;
+  width: 14vw;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -283,8 +290,16 @@ section {
 @media screen and (min-width: 768px) and (orientation: landscape) {}
 
 @media screen and (max-width: 576px) {
+  #gradient {
+    height: 170vh;
+  }
+
   #PTAInformation {
     margin-top: 0.5rem;
+  }
+
+  .container__Navigation {
+    margin-top: 5rem;
   }
 
   .container__box {
@@ -337,6 +352,15 @@ section {
     font-size: 1rem;
     border-radius: 1rem;
     margin-bottom: 0;
+  }
+
+  .container__ContactUs {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 160vh;
+    align-items: center;
+    justify-content: center;
   }
 
   .container__BoardMembers-profile {
