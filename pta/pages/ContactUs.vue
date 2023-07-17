@@ -131,7 +131,7 @@ export default {
 }
 
 .container__box {
-  width: 77rem;
+  width: 70vw;
   height: auto;
   background-color: #fcf6e9;
   border-radius: 3.25rem;
@@ -235,4 +235,6 @@ button {
 button.active {
   background-color: #fcf6e9;
 }
+
+
 </style>
