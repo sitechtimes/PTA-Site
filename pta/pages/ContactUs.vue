@@ -115,6 +115,15 @@ export default {
       #fff 55%);
 } */
 
+#gradient {
+  width: 100vw;
+  height: 100vh;
+  padding: 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(180deg, #ffd88c 0%, rgba(217, 217, 217, 0) 100%);
+}
 .container__ContactUs {
   display: flex;
   flex-direction: column;
