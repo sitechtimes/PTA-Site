@@ -5,7 +5,7 @@
       href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">Jessie's Birthday</h3>
         <h3 class="date">05/06</h3>
       </div>
@@ -15,7 +15,7 @@
       href="https://www.fundraiserinsight.org/wp-content/uploads/2013/07/bake-sale-fundraiser.jpg"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">Bake Sale</h3>
         <h3 class="date">05/10</h3>
       </div>
@@ -25,7 +25,7 @@
       href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1553703&type=d&pREC_ID=1679764"
       class="event"
     >
-      <div class="text">
+      <div class="subh">
         <h3 class="name">SITHS</h3>
         <h3 class="date">05/17</h3>
       </div>
@@ -37,13 +37,12 @@
 @import url(../assets/base.css);
 
 .events {
-  display: flex;
   margin: 3% 5%;
+  display: flex;
   width: 59%;
-  height: 26%;
+  height: 24rem;
   flex-direction: column;
   justify-content: space-around;
-  flex-shrink: 3;
 }
 a,
 a:hover,
@@ -56,7 +55,7 @@ a:active {
   border-radius: 8px;
   width: 3.125rem;
   height: 3.5rem;
-  margin: -5px 50px 0 0;
+  margin: -5px 0 0 60px;
   padding-top: 15px;
   position: relative;
   background: var(--text-color);
@@ -74,7 +73,6 @@ a:active {
 }
 
 .date {
-  margin-right: 10%;
   font-family: Karla;
   font-weight: 400;
 }
@@ -84,16 +82,18 @@ a:active {
   font-family: Karla;
   font-weight: 400;
 }
-.text {
+.subh {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
+  height: 100%;
 }
 .event {
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 6rem;
   background-color: white;
   border-radius: 1.3rem;
   background: #ffffff;
@@ -105,9 +105,7 @@ a:active {
   .flag {
     width: 2.188rem;
     border-radius: 5px;
-    height: 50px;
-    left: 6%;
-    padding-top: 0px;
+    height: 2rem;
   }
   .flag:after {
     border-left: 1.063rem solid transparent;
@@ -122,55 +120,59 @@ a:active {
     height: 40%;
     margin: 0.6rem;
   }
+  .events {
+    margin: 3% 5%;
+    height: 24%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .events {
     margin: 3% 5%;
-    width: 80%;
     height: 24%;
   }
   .event {
     margin: 0.6rem;
+    border-radius: 12px;
   }
   .flag {
-    width: 2.2rem;
-    border-radius: 5px;
-    height: 3.1rem;
-    left: 6%;
+    width: 2rem;
+  }
+  .flag:after {
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
   }
   .name,
   .date {
-    margin: 3%;
     font-size: 30px;
   }
 }
 @media screen and (max-width: 992px) {
   .events {
     margin: 3% 5%;
-    width: 90%;
     height: 18.31%;
   }
   .flag {
     width: 30px;
     border-radius: 5px;
     padding-top: 5px;
-    height: 40px;
-    left: 6%;
+    height: 1.5rem;
   }
   .flag:after {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
+  .event {
+    border-radius: 10px;
+  }
   .name,
   .date {
-    margin: 4%;
     font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
   .events {
     margin: 3% 5%;
-    width: 90%;
+    width: 80%;
     height: 18.31%;
   }
   .flag {
@@ -185,27 +187,30 @@ a:active {
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
   }
+  .event {
+    border-radius: 7px;
+  }
   .name,
   .date {
-    margin: 3%;
     font-size: 25px;
   }
 }
 @media screen and (max-width: 576px) {
   .events {
-    margin: 3% 5%;
-    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    width: 85%;
     height: 18.31%;
   }
   .flag {
-    width: 1.3rem;
+    width: 1.2rem;
     padding-top: 0.6rem;
     height: 1.3rem;
     margin-top: -3px;
     margin-left: -2%;
   }
   .event {
-    height: 25%;
+    height: 16rem;
   }
   .flag:after {
     border-left: 0.6rem solid transparent;
@@ -220,7 +225,11 @@ a:active {
 }
 @media screen and (max-width: 356px) {
   .flag {
-    opacity: 0;
+    width: 1.2rem;
+    padding-top: 0.6rem;
+    height: 1.3rem;
+    margin-top: -3px;
+    margin-left: -4%;
   }
 }
 </style>
