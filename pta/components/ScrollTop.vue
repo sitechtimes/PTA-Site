@@ -49,7 +49,7 @@ export default {
     display: none;
   }
   .container__topArrow {
-    bottom:10vw;
+    bottom:6vw;
     right: 5%;
   }
 
