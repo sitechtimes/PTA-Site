@@ -3,43 +3,66 @@
     <div id="gradient">
       <div class="container">
         <div class="container__NavigationButtons" id="btncon">
-          <button class="button__navigation" :class="{ active: currentSection === 'GeneralContacts' }"
-            @click="showSection('GeneralContacts')">
+          <button
+            class="button__navigation"
+            :class="{ active: currentSection === 'GeneralContacts' }"
+            @click="showSection('GeneralContacts')"
+          >
             <h3>General Contacts</h3>
           </button>
-          <button class="button__navigation" :class="{ active: currentSection === 'BoardMembers' }"
-            @click="showSection('BoardMembers')">
+          <button
+            class="button__navigation"
+            :class="{ active: currentSection === 'BoardMembers' }"
+            @click="showSection('BoardMembers')"
+          >
             <h3>Board Members</h3>
           </button>
-          <button class="button__navigation" :class="{ active: currentSection === 'JoinUs' }"
-            @click="showSection('JoinUs')">
+          <button
+            class="button__navigation"
+            :class="{ active: currentSection === 'JoinUs' }"
+            @click="showSection('JoinUs')"
+          >
             <h3>Join Us</h3>
           </button>
         </div>
 
         <div class="container__body">
-          <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
+          <section
+            id="section__GeneralContacts"
+            v-show="currentSection === 'GeneralContacts'"
+          >
             <div class="container__box">
               <h1>General Contacts</h1>
               <PTAInformation />
             </div>
           </section>
 
-          <section id="section__BoardMembers" v-show="currentSection === 'BoardMembers'">
+          <section
+            id="section__BoardMembers"
+            v-show="currentSection === 'BoardMembers'"
+          >
             <div class="container__box">
               <h1>Board Members</h1>
               <div class="container__BoardMembers">
                 <div class="container__BoardMembers-profile">
                   <img src="/profile.svg" alt="Profile Picture Filler" />
                   <h4>John Doe • Position</h4>
-                  <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                  <a
+                    href="mailto:johndoe@gmail.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     johndoe@gmail.com
                   </a>
                 </div>
                 <div class="container__BoardMembers-profile">
                   <img src="/profile.svg" alt="Profile Picture Filler" />
                   <h4>John Doe • Position</h4>
-                  <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
+                  <a
+                    href="mailto:johndoe@gmail.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     johndoe@gmail.com
                   </a>
                 </div>
@@ -53,25 +76,37 @@
               <div class="container__ParentVolunteer">
                 <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
                 <p>
-                  If you would like to volunteer at PTA events, please print out the attached volunteer form and submit to
-                  the PTA Room or email it to
-                  <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
+                  If you would like to volunteer at PTA events, please print out
+                  the attached volunteer form and submit to the PTA Room or
+                  email it to
+                  <a
+                    href="mailto:sitechpta@gmail.com"
+                    target="_blank"
+                    rel="noopener"
+                    >sitechpta@gmail.com</a
+                  >.
                 </p>
                 <p>Be part of the SI TECH PTA Grant Committee</p>
                 <ul>
                   <li>
-                    The grants committee researches and applies for grants to help fund school programs and activities
-                    including classroom/school upgrades, art, technology, maker-space, and the library. We reach out to
-                    foundations and corporations.
+                    The grants committee researches and applies for grants to
+                    help fund school programs and activities including
+                    classroom/school upgrades, art, technology, maker-space, and
+                    the library. We reach out to foundations and corporations.
                   </li>
                   <li>
-                    Volunteers are needed to research grant opportunities or help write the grant proposals. No prior
-                    experience is necessary, time commitment is contingent on grant deadlines.
+                    Volunteers are needed to research grant opportunities or
+                    help write the grant proposals. No prior experience is
+                    necessary, time commitment is contingent on grant deadlines.
                   </li>
                   <li>
                     Please email
-                    <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank"
-                      rel="noopener">SITHSptagrantcommittee@gmail.com</a>
+                    <a
+                      href="mailto:SITHSptagrantcommittee@gmail.com"
+                      target="_blank"
+                      rel="noopener"
+                      >SITHSptagrantcommittee@gmail.com</a
+                    >
                     if interested.
                   </li>
                 </ul>
@@ -88,14 +123,14 @@
 export default {
   data() {
     return {
-      currentSection: 'GeneralContacts' //the current section by default is the 'General Contacts' section 
+      currentSection: "GeneralContacts", //the current section by default is the 'General Contacts' section
     };
   },
   methods: {
     showSection(section) {
-      this.currentSection = section; //the current section by default is the 'General Contacts' section 
-    }
-  }
+      this.currentSection = section; //the current section by default is the 'General Contacts' section
+    },
+  },
 };
 </script>
 
@@ -113,7 +148,14 @@ export default {
   position: absolute;
   top: 0%;
   left: 0%;
-  background: linear-gradient(180deg, #ffc498 0%, #ffd88c 20%, #fce5ac 34%, #fbefd7 44%, #fff 55%);
+  background: linear-gradient(
+    180deg,
+    #ffc498 0%,
+    #ffd88c 20%,
+    #fce5ac 34%,
+    #fbefd7 44%,
+    #fff 55%
+  );
 }
 
 .container {
@@ -201,6 +243,7 @@ h1 {
   letter-spacing: 0.05rem;
   margin: 2rem 1rem;
   text-decoration: #ffd88c underline;
+  padding-top: 5rem;
 }
 
 h2 {
@@ -292,4 +335,5 @@ a {
   .container__BoardMembers-profile {
     margin: 1rem 0;
   }
-}</style>
+}
+</style>
