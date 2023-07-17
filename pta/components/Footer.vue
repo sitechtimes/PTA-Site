@@ -1,6 +1,6 @@
 <template>
   <div class="container__footer">
-    <h2>Keep in touch with us!</h2>
+    <h2>Staten Island Technical High School PTA</h2>
     <div id="so_med">
       <a
         href="https://www.facebook.com/SITECHPTA/"
@@ -31,6 +31,7 @@
 @import url(../assets/base.css);
 
 .container__footer {
+  text-align: center;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -38,7 +39,11 @@
   align-items: center;
   align-content: flex-end;
   background: var(--footer-bg);
-  padding-top: 3rem;
+  height: fit-content;
+  border-radius: 19px;
+  width: 58rem;
+  margin: auto;
+  margin-bottom: 4rem;
 }
 
 img {
@@ -62,9 +67,8 @@ h2 {
   text-align: center;
   font-family: var(--font-heading);
   font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.05rem;
+  font-weight: 500;
+  font-size: 6px;
 }
 
 p {
@@ -101,7 +105,7 @@ p {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   h2 {
     font-size: 4vw;
     margin-bottom: 3vw;
@@ -119,7 +123,7 @@ p {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
+@media screen and (max-width: 576px) and (orientation: landscape) {
   h2 {
     font-size: 1.8vw;
     margin-bottom: 0.5vw;
@@ -141,7 +145,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   #footer {
     width: 50vw;
     transform: translate(-50%, 0);
@@ -173,7 +177,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
   h2 {
     font-size: 1.85vw;
     margin-bottom: 0.3vw;
@@ -195,7 +199,7 @@ p {
   }
 }
 
-@media screen and (min-width: 866px) {
+@media screen and (max-width: 866px) {
   #footer {
     width: 55vw;
     transform: translate(-50%, 0);
@@ -218,7 +222,7 @@ p {
   }
 }
 
-@media screen and (min-width: 866px) and (orientation: landscape) {
+@media screen and (max-width: 866px) and (orientation: landscape) {
   h2 {
     font-size: 1.8vw;
     margin-bottom: 0.3vw;
@@ -240,7 +244,10 @@ p {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
+  .container__footer {
+    width: 40rem;
+  }
   h2 {
     font-size: 1.5vw;
     margin-bottom: 1vw;
@@ -262,13 +269,23 @@ p {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (max-width: 1300px) {
+  img {
+    height: 6vw;
+    width: 7vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  p {
+    font-size: 3vw;
+  }
   #footer {
     bottom: 0px;
   }
 
   h2 {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     margin-bottom: 1vw;
   }
 

@@ -1,29 +1,37 @@
 @import "./variables.css";
-@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 *,
 :root {
   /* fonts */
-  --font-text: 'Karla', san serif;
-  --font-heading: 'Kumbh Sans', san serif;
-  --font-nav: 'Bayon', san serif;
+  --font-text: "Karla", san serif;
+  --font-heading: "Kumbh Sans", san serif;
+  --font-nav: "Bayon", san serif;
 
   /* colors */
   --text-color: #483221;
   --primary-bg: #fff;
-  --secondary-bg: #FCE5AC;
-  --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  --footer-bg: linear-gradient(
+  --secondary-bg: #fce5ac;
+  --bg-gradient: linear-gradient(
     180deg,
-    #fff 0%,
-    #fce5ac 28.65%,
+    #ffc498 0%,
+    #ffd88c 28.65%,
     #ffd88c 61.98%,
-    #ffd88c 81.25%,
-    #ffd88c 98.95%,
-    #ffd88c 98.96%
+    #fce5ac 81.25%,
+    #fff 98.95%,
+    #fff 98.96%
+  );
+  --footer-bg: linear-gradient(
+    270deg,
+    #ffd18f 0%,
+    #ffeca9 16.15%,
+    #ffefd8 33.33%,
+    #ffefd8 65.63%,
+    #ffedaf 84.9%,
+    #ffd18f 100%
   );
 
-    /* media queries max width
+  /* media queries max width
     sm:	 ≥576px
  	md:  ≥768px
     lg:	 ≥992px
@@ -31,7 +39,7 @@
     xxl: ≥1400px
     */
 
-    font-synthesis: none;
+  font-synthesis: none;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -66,7 +74,7 @@ h4 {
   font-size: 1.5rem;
 }
 .heading {
-  font-family: 'Kumbh Sans', san serif;
+  font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   font-size: 4rem;
   color: var(--text-color);
@@ -75,19 +83,19 @@ h4 {
 .subh {
   font-size: 10rem;
   color: var(--text-color);
-    font-family: Karla;
-    font-weight: 400;
+  font-family: Karla;
+  font-weight: 400;
 }
 .text {
-  
 }
-
 
 /* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 
-
-@media only screen and (max-width: 576px) and (orientation: portrait){
-  #home, #contact, #events, #donate{
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #home,
+  #contact,
+  #events,
+  #donate {
     width: 8vw;
   }
   #nav {
@@ -113,8 +121,11 @@ h4 {
     }
   }
 }
-@media only screen and (min-width: 540px) and (orientation: portrait){
-  #home, #contact, #events, #donate{
+@media only screen and (min-width: 540px) and (orientation: portrait) {
+  #home,
+  #contact,
+  #events,
+  #donate {
     width: 6vw;
   }
   #nav {
@@ -167,7 +178,10 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  #home, #contact, #events, #donate{
+  #home,
+  #contact,
+  #events,
+  #donate {
     width: 5.5vw;
   }
   #nav {
@@ -247,31 +261,39 @@ h4 {
     margin-top: 2rem;
   }
 
-    .link-container {
-      text-align: left;
-      margin-left: 3rem;
-      padding-top: 7rem;
-    }
-
-    .link {
-      margin-top: 2rem;
-      list-style: none;
-      margin-left: 1rem;
-      list-style: none;
-    }
-
-    .menu-router {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 3rem;
-      list-style: none;
-      margin-left: 0.2rem;
-    }
+  .link-container {
+    text-align: left;
+    margin-left: 3rem;
+    padding-top: 7rem;
   }
+
+  .link {
+    margin-top: 2rem;
+    list-style: none;
+    margin-left: 1rem;
+    list-style: none;
+  }
+
+  .menu-router {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 3rem;
+    list-style: none;
+    margin-left: 0.2rem;
+  }
+}
 
 @media screen and (max-width: 576px) {
   #homeTopCon {
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 28.65%,
+      #ffd88c 61.98%,
+      #fce5ac 81.25%,
+      #fff 98.95%,
+      #fff 98.96%
+    );
     width: 100%;
     height: 220vw;
     margin: 0;
@@ -301,7 +323,15 @@ h4 {
 
 @media screen and (min-width: 576px) {
   #homeTopCon {
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 28.65%,
+      #ffd88c 61.98%,
+      #fce5ac 81.25%,
+      #fff 98.95%,
+      #fff 98.96%
+    );
     width: 100%;
     height: 220vw;
     margin: 0;
@@ -310,12 +340,19 @@ h4 {
     top: 0%;
     left: 0%;
   }
-
 }
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #homeTopCon {
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 28.65%,
+      #ffd88c 61.98%,
+      #fce5ac 81.25%,
+      #fff 98.95%,
+      #fff 98.96%
+    );
     width: 100vw;
     height: 70vw;
     margin: 0;
@@ -328,7 +365,15 @@ h4 {
 
 @media screen and (min-width: 768px) {
   #homeTopCon {
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 28.65%,
+      #ffd88c 61.98%,
+      #fce5ac 81.25%,
+      #fff 98.95%,
+      #fff 98.96%
+    );
     width: 100%;
     height: 140vw;
     margin: 0;
@@ -341,7 +386,15 @@ h4 {
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #homeTopCon {
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+    background: linear-gradient(
+      180deg,
+      #ffc498 0%,
+      #ffd88c 28.65%,
+      #ffd88c 61.98%,
+      #fce5ac 81.25%,
+      #fff 98.95%,
+      #fff 98.96%
+    );
     width: 100%;
     height: 70vw;
     margin: 0;
@@ -359,7 +412,6 @@ h4 {
   .text {
     font-size: 2rem;
   }
-  
 }
 @media only screen and (max-width: 1200px) {
   #navbar {
@@ -378,7 +430,7 @@ h4 {
 @media only screen and (max-width: 768px) {
   .menu {
     margin-right: 6rem;
-      margin-top: 1.4rem;
+    margin-top: 1.4rem;
   }
   #navbar {
     height: 3.3rem;
@@ -388,7 +440,7 @@ h4 {
     margin: 20% 0 0 8%;
   }
 }
-@media only screen and (max-width:576px) {
+@media only screen and (max-width: 576px) {
   .heading {
     font-size: 2rem;
     margin: 30% 0 0 9%;
