@@ -66,5 +66,8 @@ export default {
   .popup-close {
     font-size: 4vw;
   }
+  .popup {
+    width: 15rem;
+  }
 }
 </style>
