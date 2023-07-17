@@ -389,18 +389,30 @@ section {
 @media only screen and (max-width: 356px) {}
 
 @media screen and (max-height: 1200px) {
+  #gradient{
+    height: 115vh;
+  }
   .container__ContactUs {
     height: 115vh;
   }
+  button {
+  width: 25vw;
+}
 }
 
 @media screen and (max-height: 992px) {
+  #gradient{
+    height: 110vh;
+  }
   .container__ContactUs {
     height: 110vh;
   }
 }
 
 @media screen and (max-height: 768px) {
+  #gradient{
+    height: 130vh;
+  }
   .container__ContactUs {
     height: 130vh;
   }
