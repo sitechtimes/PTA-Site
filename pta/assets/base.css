@@ -108,6 +108,40 @@ h4 {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
+  #nav {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    .link-container {
+      text-align: left;
+      margin-left: 8%;
+      padding-top: 20vw;
+    }
+    .link {
+      margin-top: 2vw;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 5vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    }
+  }
+}
+@media only screen and (min-width: 280px) and (orientation: portrait) {
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
+}
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
     display: none;
@@ -126,13 +160,17 @@ h4 {
     .menu-router {
       color: var(--text-color);
       text-decoration: none;
-      font-size: 6vw;
+      font-size: 5vw;
       list-style: none;
       margin-left: 0.2rem;
     }
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait) {
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
   #nav {
     display: none;
   }
@@ -158,6 +196,10 @@ h4 {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
+  #home, #contact, #events, #donate{
+    height: 3vw;
+    width: 3vw;
+  }
   #nav {
     display: none;
   }
@@ -166,10 +208,10 @@ h4 {
     .link-container {
       text-align: left;
       margin-left: 3vw;
-      padding-top: 3vw;
+      padding-top: 2vw;
     }
     .link {
-      margin-top: 1.5vw;
+      margin-top: 2.5vw;
       list-style: none;
     }
     .menu-router {
@@ -183,6 +225,7 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
+  
   #nav {
     display: none;
   }
@@ -208,6 +251,16 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
+  .link-container{
+    margin-top: 10vw;
+  }
+  /* li{
+    margin-bottom: 3vw ;
+  } */
+  #home, #contact, #events, #donate{
+    height: 3vw;
+    width: 3vw;
+  }
   #nav {
     display: none;
   }
@@ -216,10 +269,10 @@ h4 {
     .link-container {
       text-align: left;
       margin-left: 3vw;
-      padding-top: 3vw;
+      padding-top: 0vw;
     }
     .link {
-      margin-top: 1.5vw;
+      margin-top: 1vw;
       list-style: none;
     }
     .menu-router {
@@ -238,7 +291,65 @@ h4 {
   #nav {
     display: flex;
   }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: .5vw;
+  }
+  #contact, #donate{
+    padding-top: .7vw;
+  }
 }
+@media only screen and (min-width: 1300px) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: .3vw;
+  }
+  #contact, #donate{
+    padding-top: .5vw;
+  }
+
+}
+@media only screen and (min-width: 1500px) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: 0vw;
+  }
+  #contact, #donate{
+    padding-top: 0vw;
+  }
+
+}
+@media only screen and (min-width: 1000px) and ( orientation: landscape) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+
+}
+
 
 @media only screen and (max-width: 576px) {
   #homeTopCon {
