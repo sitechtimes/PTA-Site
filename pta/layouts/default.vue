@@ -10,7 +10,7 @@
 <style>
 /* width */
 ::-webkit-scrollbar {
-  width: 25px;
+  width: 15px;
 }
 ::-webkit-scrollbar-track {
   background: linear-gradient(
