@@ -3,66 +3,43 @@
     <div id="gradient">
       <div class="container">
         <div class="container__Navigation">
-          <button
-            class="button__navigation"
-            :class="{ active: currentSection === 'GeneralContacts' }"
-            @click="showSection('GeneralContacts')"
-          >
+          <button class="button__navigation" :class="{ active: currentSection === 'GeneralContacts' }"
+            @click="showSection('GeneralContacts')">
             General Contacts
           </button>
-          <button
-            class="button__navigation"
-            :class="{ active: currentSection === 'BoardMembers' }"
-            @click="showSection('BoardMembers')"
-          >
+          <button class="button__navigation" :class="{ active: currentSection === 'BoardMembers' }"
+            @click="showSection('BoardMembers')">
             Board Members
           </button>
-          <button
-            class="button__navigation"
-            :class="{ active: currentSection === 'JoinUs' }"
-            @click="showSection('JoinUs')"
-          >
+          <button class="button__navigation" :class="{ active: currentSection === 'JoinUs' }"
+            @click="showSection('JoinUs')">
             Join Us
           </button>
         </div>
 
         <div class="container__Body">
-          <section
-            id="section__GeneralContacts"
-            v-show="currentSection === 'GeneralContacts'"
-          >
+          <section id="section__GeneralContacts" v-show="currentSection === 'GeneralContacts'">
             <div class="container__box">
               <h1>General Contacts</h1>
               <PTAInformation id="PTAInformation" />
             </div>
           </section>
 
-          <section
-            id="section__BoardMembers"
-            v-show="currentSection === 'BoardMembers'"
-          >
+          <section id="section__BoardMembers" v-show="currentSection === 'BoardMembers'">
             <div class="container__box">
               <h1>Board Members</h1>
               <div class="container__BoardMembers">
                 <div class="container__BoardMembers-profile">
                   <img src="/profile.svg" alt="Profile Picture Filler" />
                   <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
                     johndoe@gmail.com
                   </a>
                 </div>
                 <div class="container__BoardMembers-profile">
                   <img src="/profile.svg" alt="Profile Picture Filler" />
                   <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <a href="mailto:johndoe@gmail.com" target="_blank" rel="noopener">
                     johndoe@gmail.com
                   </a>
                 </div>
@@ -79,12 +56,7 @@
                   If you would like to volunteer at PTA events, please print out
                   the attached volunteer form and submit to the PTA Room or
                   email it to
-                  <a
-                    href="mailto:sitechpta@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                    >sitechpta@gmail.com</a
-                  >.
+                  <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
                 </p>
                 <p>Be part of the SI TECH PTA Grant Committee</p>
                 <ul>
@@ -101,12 +73,8 @@
                   </li>
                   <li>
                     Please email
-                    <a
-                      href="mailto:SITHSptagrantcommittee@gmail.com"
-                      target="_blank"
-                      rel="noopener"
-                      >SITHSptagrantcommittee@gmail.com</a
-                    >
+                    <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank"
+                      rel="noopener">SITHSptagrantcommittee@gmail.com</a>
                     if interested.
                   </li>
                 </ul>
@@ -250,11 +218,11 @@ export default {
 }
 
 .container__ParentVolunteer {
-  width: 65vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 
 h1 {
@@ -336,23 +304,24 @@ section {
   justify-content: center;
 }
 
+@media only screen and (min-width: 1030px) {
+  .container__ParentVolunteer{
+  margin-left: 4.5rem;}
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     top: 10vh;
   }
 }
 
-@media screen and (max-width: 992px) {
-}
+@media screen and (max-width: 992px) {}
 
-@media screen and (max-width: 768px) {
-}
+@media screen and (max-width: 768px) {}
 
-@media screen and (min-width: 768px) {
-}
+@media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
-}
+@media screen and (min-width: 768px) and (orientation: landscape) {}
 
 @media screen and (max-width: 576px) {
   .container__ContactUs {
@@ -448,17 +417,13 @@ section {
   }
 }
 
-@media screen and (min-width: 576px) {
-}
+@media screen and (min-width: 576px) {}
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
-}
+@media screen and (min-width: 576px) and (orientation: landscape) {}
 
-@media only screen and (max-width: 450px) {
-}
+@media only screen and (max-width: 450px) {}
 
-@media only screen and (max-width: 356px) {
-}
+@media only screen and (max-width: 356px) {}
 
 @media screen and (max-height: 1200px) {
   #gradient {
