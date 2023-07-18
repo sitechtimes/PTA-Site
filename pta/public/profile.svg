@@ -1,0 +1,14 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="profile">
+<circle id="Ellipse 31" cx="85" cy="85" r="85" fill="#D9D9D9"/>
+<g id="Mask group">
+<mask id="mask0_73_845" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="170" height="170">
+<circle id="Ellipse 28" cx="85" cy="85" r="85" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_73_845)">
+<ellipse id="Ellipse 29" cx="84.9999" cy="144.068" rx="65.7909" ry="48.0226" fill="#5D5D5D"/>
+</g>
+</g>
+<circle id="Ellipse 30" cx="85.4806" cy="69.1525" r="48.0226" fill="#5E5E5E"/>
+</g>
+</svg>
