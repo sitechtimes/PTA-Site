@@ -7,7 +7,6 @@
   --font-text: "Karla", san serif;
   --font-heading: "Kumbh Sans", san serif;
   --font-nav: "Bayon", san serif;
-
   /* colors */
   --text-color: #483221;
   --primary-bg: #fff;
@@ -46,6 +45,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 html,
 body {
   margin: 0;
@@ -56,6 +56,7 @@ body {
 body {
   color: var(--text-color);
 }
+
 h1 {
   font-size: 4.3rem;
 }
@@ -106,7 +107,6 @@ h4 {
 .smalltext {
   font-size: 1rem;
 }
-/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
 
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
