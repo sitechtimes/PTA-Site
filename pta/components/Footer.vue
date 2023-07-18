@@ -9,7 +9,7 @@
       >
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
-      <a href=" " target="_blank" rel="noopener">
+      <a href="https://www.instagram.com/_sammytheseagull/" target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
       <a
