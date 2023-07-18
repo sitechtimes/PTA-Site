@@ -9,7 +9,11 @@
       >
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
-      <a href="https://www.instagram.com/_sammytheseagull/" target="_blank" rel="noopener">
+      <a
+        href="https://www.instagram.com/_sammytheseagull/"
+        target="_blank"
+        rel="noopener"
+      >
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
       <a
@@ -32,18 +36,21 @@
 
 .container__footer {
   text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  align-content: flex-end;
   background: var(--footer-bg);
-  height: fit-content;
   border-radius: 19px;
   width: 58rem;
-  margin: auto;
-  margin-bottom: 4rem;
   padding: 1rem;
 }
 img {

@@ -53,9 +53,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background: var(--bg-gradient);
 }
 body {
   color: var(--text-color);
+  margin: 0 !important;
 }
 
 h1 {
