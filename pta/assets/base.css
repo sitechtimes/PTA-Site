@@ -40,6 +40,7 @@
   );
 
   /* media queries max width
+  xs:  ≥356px
     sm:  ≥576px
   md:  ≥768px
     lg:  ≥992px
@@ -336,7 +337,7 @@ h4 {
     font-size: 2.7rem;
   }
   .text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -353,7 +354,7 @@ h4 {
     font-size: 2vw;
   }
   .text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .caption {
     font-size: 1.2rem;
@@ -412,7 +413,7 @@ h4 {
     font-size: 1.7rem;
   }
   .text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .caption {
     font-size: 1rem;
@@ -437,7 +438,7 @@ h4 {
     font-size: 2.4vw;
   }
   .text {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .caption {
     font-size: 0.9rem;
@@ -456,7 +457,7 @@ h4 {
     margin-top: 1rem;
   }
   .text {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .subtext {
     font-size: 4vw;
@@ -471,7 +472,7 @@ h4 {
     margin-right: 4rem;
   }
   .text {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .subtext {
     font-size: 4.2vw;
@@ -483,6 +484,9 @@ h4 {
   }
   .subh {
     margin-top: 0.8rem;
+  }
+  .text {
+    font-size: 0.9rem;
   }
   .subtext {
     font-size: 4.5vw;
