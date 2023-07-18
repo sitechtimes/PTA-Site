@@ -88,7 +88,7 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 #wrapper {
-  height: 65vw;
+  height: 60vw;
 }
 #gradient {
   width: 100vw;
@@ -192,7 +192,7 @@ li {
 
 @media screen and (max-width: 576px) {
   #wrapper {
-    height: 160vw;
+    height: 170vw;
   }
   #top {
     flex-direction: column;
@@ -200,7 +200,7 @@ li {
   #upcomingEvents {
     margin-bottom: 10vw;
   }
-  #events {
+  #eventsCon {
     height: 50vw;
   }
   .uniqEvent {

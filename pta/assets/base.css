@@ -28,7 +28,7 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(circle, rgba(255,227,192,1) 0%, rgba(255,218,190,1) 52%, rgba(255,195,152,1) 100%);
+  --footer-bg: radial-gradient(circle, rgb(255, 225, 213) 0%, rgb(250, 218, 194) 52%, rgb(253, 197, 165) 100%);
 
   /* media queries max width
   xs:  ≥356px
@@ -103,7 +103,7 @@ h4 {
   font-weight: 400;
 }
 .caption {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 0.6rem 0rem 0rem 0rem;
   font-family: "Karla", san serif;
 }
@@ -496,7 +496,7 @@ h4 {
     font-size: 1.2rem;
   }
   .caption {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 768px) {
