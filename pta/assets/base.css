@@ -13,10 +13,10 @@
   --secondary-bg: #fce5ac;
   --bg-gradient: linear-gradient(
     180deg,
-    #ffc498 0%,
-    #fce5ac 20%,
-    #f8e4b2 30%,
-    #fbefd7 75%,
+    #ffb598 0%,    
+    #fccfb1 18%,    
+    #ffedc5 40%,    
+    #faf2e1 75%,    
     #fff 85%
   );
   /*   --footer-bg: linear-gradient(
@@ -28,7 +28,7 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(circle, rgba(255,227,192,1) 0%, rgba(255,218,190,1) 52%, rgba(255,195,152,1) 100%);
+  --footer-bg: radial-gradient(circle, rgb(255, 236, 228) 0%, rgb(250, 218, 194) 52%, rgb(255, 211, 185) 100%);
 
   /* media queries max width
   xs:  ≥356px
@@ -53,9 +53,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background: var(--bg-gradient);
 }
 body {
   color: var(--text-color);
+  margin: 0 !important;
 }
 
 h1 {
@@ -101,7 +103,7 @@ h4 {
   font-weight: 400;
 }
 .caption {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 0.6rem 0rem 0rem 0rem;
   font-family: "Karla", san serif;
 }
@@ -494,7 +496,7 @@ h4 {
     font-size: 1.2rem;
   }
   .caption {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 768px) {

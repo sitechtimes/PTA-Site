@@ -13,46 +13,47 @@
         their school experience the best ever!
       </p>
     </Popup>
-
-    <div id="gradient">
-      <h1 class="heading">EVENTS</h1>
-      <section id="top">
-        <div id="upcomingEvents">
-          <h3 class="subh">Upcoming Events</h3>
-          <ul class="subtext" id="eventsCon">
-            <li @click="() => TogglePopup('buttonTrigger')">
-              <div class="uniqEvent">
-                <h5 class="listTitle">Jessie's Birthday</h5>
-                <h5 class="listDate">05/23/2023</h5>
-              </div>
-            </li>
-            <li @click="() => TogglePopup('buttonTrigger')">
-              <div class="uniqEvent">
-                <h5 class="listTitle">Bake Sale</h5>
-                <h5 class="listDate">05/27/2023</h5>
-              </div>
-            </li>
-            <li @click="() => TogglePopup('buttonTrigger')">
-              <div class="uniqEvent">
-                <h5 class="listTitle">Very Long Named Event</h5>
-                <h5 class="listDate">05/30/2023</h5>
-              </div>
-            </li>
-            <li @click="() => TogglePopup('buttonTrigger')">
-              <div class="uniqEvent">
-                <h5 class="listTitle">
-                  Super Duper Very Extremely Long Named Event
-                </h5>
-                <h5 class="listDate">05/31/2023</h5>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div id="calender">
-          <!-- Google Calendar filler  -->
-        </div>
-      </section>
-      <ScrollTop />
+    <div id="wrapper">
+      <div id="gradient">
+        <h1 class="heading">EVENTS</h1>
+        <section id="top">
+          <div id="upcomingEvents">
+            <h3 class="subh">Upcoming Events</h3>
+            <ul class="subtext" id="eventsCon">
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Jessie's Birthday</h5>
+                  <h5 class="listDate">05/23/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Bake Sale</h5>
+                  <h5 class="listDate">05/27/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Very Long Named Event</h5>
+                  <h5 class="listDate">05/30/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">
+                    Super Duper Very Extremely Long Named Event
+                  </h5>
+                  <h5 class="listDate">05/31/2023</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="calender">
+            <!-- Google Calendar filler  -->
+          </div>
+        </section>
+        <ScrollTop />
+      </div>
     </div>
   </div>
 </template>
@@ -86,7 +87,9 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-
+#wrapper {
+  height: 60vw;
+}
 #gradient {
   width: 100vw;
   height: 180vh;
@@ -188,13 +191,16 @@ li {
 }
 
 @media screen and (max-width: 576px) {
+  #wrapper {
+    height: 170vw;
+  }
   #top {
     flex-direction: column;
   }
   #upcomingEvents {
     margin-bottom: 10vw;
   }
-  #events {
+  #eventsCon {
     height: 50vw;
   }
   .uniqEvent {
@@ -235,7 +241,7 @@ li {
 @media screen and (min-width: 576px) {
   #gradient {
     width: 100%;
-    height: 220vw;
+    height: 100vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -258,7 +264,7 @@ li {
 @media screen and (min-width: 768px) {
   #gradient {
     width: 100%;
-    height: 100vw;
+    height: 80vw;
     margin: 0;
     padding: 0%;
     position: absolute;
