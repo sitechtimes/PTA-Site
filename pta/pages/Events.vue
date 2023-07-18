@@ -19,7 +19,7 @@
       <section id="top">
         <div id="upcomingEvents">
           <h3 class="subh">Upcoming Events</h3>
-          <ul class="subtext" id="events">
+          <ul class="subtext" id="eventsCon">
             <li @click="() => TogglePopup('buttonTrigger')">
               <div class="uniqEvent">
                 <h5 class="listTitle">Jessie's Birthday</h5>
@@ -97,7 +97,7 @@ export default {
   background: var(--bg-gradient);
   overflow-x: hidden;
 }
-#events {
+#eventsCon {
   list-style-type: none;
   padding-left: 0;
 }
