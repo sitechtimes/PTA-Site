@@ -288,6 +288,54 @@ h4 {
   #nav {
     display: flex;
   }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: .5vw;
+  }
+  #contact, #donate{
+    padding-top: .7vw;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: .3vw;
+  }
+  #contact, #donate{
+    padding-top: .5vw;
+  }
+
+}
+@media only screen and (min-width: 1500px) {
+  .menu {
+    display: none;
+  }
+  #nav {
+    display: flex;
+  }
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
+  #home, #events{
+    padding-top: 0vw;
+  }
+  #contact, #donate{
+    padding-top: 0vw;
+  }
+
 }
 @media only screen and (min-width: 1000px) and ( orientation: landscape) {
   .menu {
@@ -296,6 +344,7 @@ h4 {
   #nav {
     display: flex;
   }
+
 }
 
 @media only screen and (max-width: 576px) {
