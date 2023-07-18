@@ -28,15 +28,7 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: linear-gradient(
-    270deg,
-    #ffd18f 0%,
-    #ffeca9 16.15%,
-    #ffefd8 33.33%,
-    #ffefd8 65.63%,
-    #ffedaf 84.9%,
-    #ffd18f 100%
-  );
+  --footer-bg: radial-gradient(circle, rgba(255,227,192,1) 0%, rgba(255,218,190,1) 52%, rgba(255,195,152,1) 100%);
 
   /* media queries max width
   xs:  ≥356px
