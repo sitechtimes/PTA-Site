@@ -28,7 +28,7 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(circle, rgb(255, 225, 213) 0%, rgb(250, 218, 194) 52%, rgb(253, 197, 165) 100%);
+  --footer-bg: radial-gradient(circle, rgb(255, 236, 228) 0%, rgb(250, 218, 194) 52%, rgb(255, 211, 185) 100%);
 
   /* media queries max width
   xs:  ≥356px
