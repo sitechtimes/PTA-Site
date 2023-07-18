@@ -420,14 +420,14 @@ section {
 
 @media screen and (max-height: 1200px) {
   #gradient {
-    height: 115vh;
+    height: 125vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
   .container__ContactUs {
-    height: 115vh;
+    height: 125vh;
   }
 
   button {
