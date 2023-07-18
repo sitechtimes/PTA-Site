@@ -19,14 +19,23 @@
     #fbefd7 75%,
     #fff 85%
   );
-  --footer-bg: linear-gradient(
+  /*   --footer-bg: linear-gradient(
     180deg,
-    #fff 0%,
-    #fce5ac 28.65%,
+    #ffc498 0%,
+    #ffd88c 28.65%,
     #ffd88c 61.98%,
-    #ffd88c 81.25%,
-    #ffd88c 98.95%,
-    #ffd88c 98.96%
+    #fce5ac 81.25%,
+    #fff 98.95%,
+    #fff 98.96%
+  ); */
+  --footer-bg: linear-gradient(
+    270deg,
+    #ffd18f 0%,
+    #ffeca9 16.15%,
+    #ffefd8 33.33%,
+    #ffefd8 65.63%,
+    #ffedaf 84.9%,
+    #ffd18f 100%
   );
 
   /* media queries max width

@@ -1,6 +1,6 @@
 <template>
   <div class="container__footer">
-    <h2>Keep in touch with us!</h2>
+    <h2>Staten Island Technical High School PTA</h2>
     <div id="so_med">
       <a
         href="https://www.facebook.com/SITECHPTA/"
@@ -9,7 +9,7 @@
       >
         <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
       </a>
-      <a href=" " target="_blank" rel="noopener">
+      <a href="https://www.instagram.com/_sammytheseagull/" target="_blank" rel="noopener">
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
       <a
@@ -31,6 +31,7 @@
 @import url(../assets/base.css);
 
 .container__footer {
+  text-align: center;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -38,10 +39,15 @@
   align-items: center;
   align-content: flex-end;
   background: var(--footer-bg);
-  padding-top: 3rem;
+  height: fit-content;
+  border-radius: 19px;
+  width: 58rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  padding: 1rem;
 }
-
 img {
+  padding: 0 2rem;
   transition: 0.3s;
 }
 
@@ -62,11 +68,10 @@ h2 {
   text-align: center;
   font-family: var(--font-heading);
   font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.05rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0;
 }
-
 p {
   font-family: var(--font-text);
   color: var(--text-color);
@@ -77,79 +82,37 @@ p {
   line-height: normal;
   margin: 0.313rem;
 }
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1400px) {
   #footer {
-    width: 55vw;
-    transform: translate(-50%, 0);
+    bottom: 0px;
   }
-
-  h2 {
-    font-size: 4.25vw;
-    margin-bottom: 2vw;
-  }
-
-  img {
-    height: 6vw;
-    width: 7vw;
-    padding-right: 5vw;
-    padding-left: 5vw;
-  }
-
   p {
-    font-size: 3.25vw;
+    font-size: 1.2vw;
   }
-}
-
-@media screen and (min-width: 576px) {
-  h2 {
-    font-size: 4vw;
-    margin-bottom: 3vw;
-  }
-
-  img {
-    height: 6vw;
-    width: 7vw;
-    padding-right: 5vw;
-    padding-left: 5vw;
-  }
-
-  p {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (min-width: 576px) and (orientation: landscape) {
-  h2 {
-    font-size: 1.8vw;
+  #so_med {
     margin-bottom: 0.5vw;
   }
+}
 
-  img {
-    height: 3vw;
-    width: 4vw;
-    padding-right: 1.5vw;
-    padding-left: 1.5vw;
+@media screen and (max-width: 1200px) {
+  .container__footer {
+    width: 40rem;
   }
-
   p {
-    font-size: 1.75vw;
-  }
-
-  #so_med {
-    margin-bottom: -1.4vw;
+    font-size: 1rem;
   }
 }
 
-@media screen and (min-width: 768px) {
-  #footer {
-    width: 50vw;
-    transform: translate(-50%, 0);
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 1.1rem;
   }
+}
 
+@media screen and (max-width: 768px) {
   h2 {
-    font-size: 3.2vw;
-    margin-bottom: 3vw;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   img {
@@ -159,132 +122,33 @@ p {
     padding-left: 5vw;
   }
 
-  #text {
-    margin-bottom: 2rem;
-  }
-
   #so_med {
     margin-bottom: 0.5rem;
     padding: 0.2rem;
   }
 
   p {
-    font-size: 2.4vw;
+    font-size: 1.2rem;
+  }
+  .container__footer {
+    width: 80vw;
   }
 }
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 576px) {
   h2 {
-    font-size: 1.85vw;
-    margin-bottom: 0.3vw;
-  }
-
-  img {
-    height: 3vw;
-    width: 4vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
+    font-size: 4.25vw;
   }
 
   p {
-    font-size: 1.5vw;
-  }
-
-  #so_med {
-    margin-bottom: -0.75vw;
-  }
-}
-
-@media screen and (min-width: 866px) {
-  #footer {
-    width: 55vw;
-    transform: translate(-50%, 0);
-  }
-
-  h2 {
     font-size: 3.5vw;
-    margin-bottom: 3.5vw;
   }
 
   img {
-    height: 4.5vw;
-    width: 5vw;
-    padding-right: 3.75vw;
-    padding-left: 3.75vw;
-  }
-
-  p {
-    font-size: 2.5vw;
-  }
-}
-
-@media screen and (min-width: 866px) and (orientation: landscape) {
-  h2 {
-    font-size: 1.8vw;
-    margin-bottom: 0.3vw;
-  }
-
-  img {
-    height: 3vw;
-    width: 5vw;
-    padding-right: 1.75vw;
-    padding-left: 1.75vw;
-  }
-
-  p {
-    font-size: 1.4vw;
-  }
-
-  #so_med {
-    margin-bottom: -0.75vw;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  h2 {
-    font-size: 1.5vw;
-    margin-bottom: 1vw;
-  }
-
-  img {
-    height: 3vw;
-    width: 5vw;
-    padding-right: 1.75vw;
-    padding-left: 1.75vw;
-  }
-
-  p {
-    font-size: 1.2vw;
-  }
-
-  #so_med {
-    margin-bottom: -0.1vw;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  #footer {
-    bottom: 0px;
-  }
-
-  h2 {
-    font-size: 1.5vw;
-    margin-bottom: 1vw;
-  }
-
-  img {
-    height: 3vw;
-    width: 3rem;
-    padding-right: 1.75vw;
-    padding-left: 1.75vw;
-  }
-
-  p {
-    font-size: 1.2vw;
-  }
-
-  #so_med {
-    margin-bottom: 0.5vw;
+    height: 6vw;
+    width: 7vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
   }
 }
 </style>
