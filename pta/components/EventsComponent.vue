@@ -102,7 +102,7 @@ export default {
   font-weight: bolder;
 }
 ul {
-  overflow: auto;
+  overflow: hidden;
   height: 27vw;
 }
 .listTitle,
