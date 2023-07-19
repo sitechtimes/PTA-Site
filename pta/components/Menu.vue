@@ -65,7 +65,7 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 .slide-enter-active {
-  animation: slide-right 0.8s;
+  animation: slide-right 0.3s;
 }
 img {
   width: 3rem;
