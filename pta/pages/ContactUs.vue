@@ -451,6 +451,7 @@ section {
   .container__BoardMembers-profile img {
     width: 25vw;
   }
+
 }
 
 @media screen and (min-width: 576px) {
