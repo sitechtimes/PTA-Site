@@ -1,8 +1,18 @@
 <template>
   <div class="container__topArrow">
     <!-- <a href="#section__LandingSection"> -->
-    <img id="sttlaptop" src="/back-to-top-arrow.svg" @click="scroll" alt="scroll to top button"/>
-    <img id="sttmobile" src="/back-to-top-mobile.svg" @click="scroll" alt="scroll to top button">
+    <img
+      id="sttlaptop"
+      src="/back-to-top-arrow.svg"
+      @click="scroll"
+      alt="scroll to top button"
+    />
+    <img
+      id="sttmobile"
+      src="/back-to-top-mobile.svg"
+      @click="scroll"
+      alt="scroll to top button"
+    />
     <!-- </a> -->
   </div>
 </template>
@@ -27,10 +37,11 @@ export default {
   bottom: 1.25rem;
   right: 1.8rem;
   scroll-behavior: smooth;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {
-  #sttlaptop{
+  #sttlaptop {
     display: none;
   }
   .container__topArrow {
@@ -45,11 +56,11 @@ export default {
 }
 
 @media screen and (min-width: 576px) {
-  #sttlaptop{
+  #sttlaptop {
     display: none;
   }
   .container__topArrow {
-    bottom:6vw;
+    bottom: 6vw;
     right: 5%;
   }
 
@@ -58,12 +69,12 @@ export default {
   }
 }
 @media screen and (min-width: 576px) and (orientation: landscape) {
-  #sttlaptop{
+  #sttlaptop {
     display: none;
   }
   .container__topArrow {
     height: 1.5rem;
-    bottom:10%;
+    bottom: 10%;
     right: 5%;
   }
 
@@ -72,10 +83,9 @@ export default {
   }
 }
 @media screen and (min-width: 768px) {
-  
   .container__topArrow {
     height: 3vw;
-    bottom:10vw;
+    bottom: 10vw;
     right: 5%;
   }
 
@@ -84,12 +94,12 @@ export default {
   }
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
-  #sttlaptop{
+  #sttlaptop {
     display: none;
   }
   .container__topArrow {
     height: 3vw;
-    bottom:12%;
+    bottom: 12%;
     right: 5%;
   }
 
@@ -100,14 +110,14 @@ export default {
 @media screen and (min-width: 866px) {
   .container__topArrow {
     height: 2rem;
-    bottom:9vw;
+    bottom: 9vw;
     right: 5%;
   }
   .container__topArrow img {
     height: 9vw;
   }
 }
-@media screen and (min-width: 866px) and (orientation: landscape){
+@media screen and (min-width: 866px) and (orientation: landscape) {
   .container__topArrow {
     height: 2rem;
     bottom: 7vw;
@@ -127,16 +137,16 @@ export default {
     height: 5rem;
   }
 }
-@media screen and (min-width: 992px) and (orientation: landscape){
-  #sttmobile{
+@media screen and (min-width: 992px) and (orientation: landscape) {
+  #sttmobile {
     display: none;
   }
-  #sttlaptop{
-    display:block
+  #sttlaptop {
+    display: block;
   }
   .container__topArrow {
     height: 2rem;
-    bottom:7vw;
+    bottom: 7vw;
     right: 5%;
   }
   .container__topArrow img {
@@ -145,7 +155,7 @@ export default {
 }
 
 @media screen and (min-width: 1200px) {
-  #sttmobile{
+  #sttmobile {
     display: none;
   }
   .container__topArrow {
@@ -158,5 +168,4 @@ export default {
     height: 5rem;
   }
 }
-
 </style>
