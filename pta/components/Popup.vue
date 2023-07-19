@@ -1,7 +1,7 @@
 <template>
   <div id="popupscreen">
     <div id="outside" @click="TogglePopup()"></div>
-    <div class="popup">
+    <div class="popup" ref="popup">
       <div class="popup-inner">
         <button class="popup-close" @click="TogglePopup()">✖</button>
         <slot />
@@ -14,7 +14,9 @@ import { gsap } from "gsap";
 export default {
   props: ["TogglePopup"],
   mounted() {
-    gsap.from(".popup", { scale: 0.3 });
+    let tl = gsap.timeline();
+    const { popup } = this.$refs;
+    gsap.from(popup, 1, { scale: 0.3 });
   },
 };
 </script>
