@@ -451,10 +451,10 @@ section {
   .container__BoardMembers-profile img {
     width: 25vw;
   }
-
+  .button_navigation{}
 }
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
 }
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
@@ -464,7 +464,7 @@ section {
 }
 
 @media only screen and (max-width: 356px) {
-}
+} */
 
 @media screen and (max-height: 1200px) {
   #gradient {
