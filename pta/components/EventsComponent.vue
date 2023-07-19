@@ -14,38 +14,37 @@
       </p>
     </Popup>
     <div id="upcomingEvents">
-            <h3 class="subh">Upcoming Events</h3>
-            <ul class="subtext" id="eventsCon">
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Jessie's Birthday</h5>
-                  <h5 class="listDate">05/23/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Bake Sale</h5>
-                  <h5 class="listDate">05/27/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Very Long Named Event</h5>
-                  <h5 class="listDate">05/30/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">
-                    Super Duper Very Extremely Long Named Event
-                  </h5>
-                  <h5 class="listDate">05/31/2023</h5>
-                </div>
-              </li>
-            </ul>
+      <h3 class="subh">Upcoming Events</h3>
+      <ul class="subtext" id="eventsCon">
+        <li @click="() => TogglePopup('buttonTrigger')">
+          <div class="uniqEvent">
+            <h5 class="listTitle">Jessie's Birthday</h5>
+            <h5 class="listDate">05/23/2023</h5>
           </div>
+        </li>
+        <li @click="() => TogglePopup('buttonTrigger')">
+          <div class="uniqEvent">
+            <h5 class="listTitle">Bake Sale</h5>
+            <h5 class="listDate">05/27/2023</h5>
+          </div>
+        </li>
+        <li @click="() => TogglePopup('buttonTrigger')">
+          <div class="uniqEvent">
+            <h5 class="listTitle">Very Long Named Event</h5>
+            <h5 class="listDate">05/30/2023</h5>
+          </div>
+        </li>
+        <li @click="() => TogglePopup('buttonTrigger')">
+          <div class="uniqEvent">
+            <h5 class="listTitle">
+              Super Duper Very Extremely Long Named Event
+            </h5>
+            <h5 class="listDate">05/31/2023</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-
 </template>
 <script>
 import { ref } from "vue";

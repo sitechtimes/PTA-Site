@@ -10,8 +10,12 @@
   </div>
 </template>
 <script>
+import { gsap } from "gsap";
 export default {
   props: ["TogglePopup"],
+  mounted() {
+    gsap.from(".popup", { scale: 0.3 });
+  },
 };
 </script>
 <style scoped>
@@ -52,6 +56,10 @@ export default {
   border-radius: 2vw;
   font-size: 1vw;
   width: 40vw;
+}
+
+button:hover {
+  opacity: 0.7;
 }
 
 /* media queries max width
