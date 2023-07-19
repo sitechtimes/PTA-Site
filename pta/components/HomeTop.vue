@@ -4,11 +4,16 @@
     <div id="homeTopText">
       <h2 id="pta" ref="pta">Parent Teacher Association @</h2>
       <h1 id="siths" ref="siths">
-        STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL
+        <div ref="statenIsland">STATEN ISLAND</div>
+        <div ref="technical">TECHNICAL</div>
+        <div ref="highSchool">HIGH SCHOOL</div>
       </h1>
       <p id="address" ref="address">
         485 Clawson Street, Staten Island, NY 10306
       </p>
+    </div>
+    <div class="arrowContainer">
+      <div ref="arrow" class="arrow" @scroll="handleScroll"></div>
     </div>
   </div>
 </template>
@@ -17,14 +22,21 @@ import gsap from "gsap";
 export default {
   mounted() {
     const { home } = this.$refs;
+    const { statenIsland } = this.$refs;
+    const { technical } = this.$refs;
+    const { highSchool } = this.$refs;
     const { pta } = this.$refs;
-    const { siths } = this.$refs;
+    const { arrow } = this.$refs;
     const { address } = this.$refs;
     const timeline = gsap.timeline();
     timeline
-      .from(pta, { x: -1000 })
-      .from(siths, { stagger: 5, x: -1000 })
-      .from(address, { x: -1000 });
+      .from(pta, { duration: 1, x: -1000 })
+      .from(statenIsland, 1, { x: -1000 }, "<0.5")
+      .from(technical, 1, { x: -1000 }, "<0.1")
+      .from(highSchool, 1, { x: -1000 }, "<0.1")
+      .from(address, { duration: 1, x: -1000 }, "<0.4")
+      .from(arrow, { duration: 0.3, y: 10 }, "<")
+      .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
   },
 };
 /* this.home.addEventListener("mouseenter", () => animation.play());
@@ -33,6 +45,31 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 
 <style scoped>
 @import "../assets/base.css";
+.arrow {
+  border: solid rgb(0, 0, 0);
+  opacity: 50%;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+.arrow:hover {
+  opacity: 100%;
+}
+.arrowContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 30rem;
+}
+
 @media screen and (max-width: 576px) {
   #homeTopText {
     color: var(--text-color);
