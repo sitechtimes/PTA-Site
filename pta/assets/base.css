@@ -112,6 +112,10 @@ h4 {
 }
 
 @media only screen and (max-width: 280px) and (orientation: portrait) {
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
   #nav {
     display: none;
   }
@@ -136,7 +140,10 @@ h4 {
   }
 }
 @media only screen and (min-width: 280px) and (orientation: portrait) {
-
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
@@ -163,7 +170,10 @@ h4 {
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait) {
-
+  #home, #contact, #events, #donate{
+    height: 6vw;
+    width: 6vw;
+  }
   #nav {
     display: none;
   }
@@ -189,7 +199,10 @@ h4 {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
-
+  #home, #contact, #events, #donate{
+    height: 3vw;
+    width: 3vw;
+  }
   #nav {
     display: none;
   }
@@ -197,7 +210,7 @@ h4 {
     display: initial;
     .link-container {
       text-align: left;
-      margin-left: 3vw;
+      margin-left: 7vw;
       padding-top: 2vw;
     }
     .link {
@@ -247,7 +260,10 @@ h4 {
   /* li{
     margin-bottom: 3vw ;
   } */
-
+  #home, #contact, #events, #donate{
+    height: 3vw;
+    width: 3vw;
+  }
   #nav {
     display: none;
   }
@@ -255,7 +271,7 @@ h4 {
     display: initial;
     .link-container {
       text-align: left;
-      margin-left: 3vw;
+      margin-left: 8vw;
       padding-top: 0vw;
     }
     .link {
@@ -278,7 +294,10 @@ h4 {
   #nav {
     display: flex;
   }
-
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
   #home, #events{
     padding-top: .5vw;
   }
@@ -293,7 +312,10 @@ h4 {
   #nav {
     display: flex;
   }
-
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
   #home, #events{
     padding-top: .3vw;
   }
@@ -309,7 +331,10 @@ h4 {
   #nav {
     display: flex;
   }
-
+  #home, #contact, #events, #donate{
+    height: 2vw;
+    width: 2vw;
+  }
   #home, #events{
     padding-top: 0vw;
   }
@@ -327,7 +352,6 @@ h4 {
   }
 
 }
-
 
 @media only screen and (max-width: 576px) {
   #homeTopCon {
