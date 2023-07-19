@@ -368,18 +368,16 @@ section {
   }
 }
 
-
-
 @media screen and (max-width: 768px) and (orientation: landscape) {
   button {
     font-size: 2vw;
     margin-top: 10vw;
   }
-  h1{
+  h1 {
     font-size: 3vw;
   }
-  .container__TextInformation{
-    font-size: .1vw;
+  .container__TextInformation {
+    font-size: 0.1vw;
   }
 }
 
@@ -481,8 +479,12 @@ section {
   .container__BoardMembers-profile img {
     width: 25vw;
   }
-  .container__Navigation{
+  .container__Navigation {
     width: 90vw;
+  }
+
+  .container__ParentVolunteer {
+    margin-left: 2rem;
   }
 }
 
@@ -517,21 +519,21 @@ section {
 
 @media screen and (max-height: 992px) {
   #gradient {
-    height: 110vh;
+    height: 130vh;
   }
 
   .container__ContactUs {
-    height: 110vh;
+    height: 130vh;
   }
 }
 
 @media screen and (max-height: 768px) {
   #gradient {
-    height: 140vh;
+    height: 150vh;
   }
 
   .container__ContactUs {
-    height: 140vh;
+    height: 150vh;
   }
 }
 </style>
