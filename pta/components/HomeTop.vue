@@ -1,13 +1,36 @@
 <template>
-  <div class="home" id="homeTopCon">
+  <div ref="home" class="home" id="homeTopCon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div id="homeTopText">
-      <h2 id="pta">Parent Teacher Association @</h2>
-      <h1 id="siths">STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL</h1>
-      <p id="address">485 Clawson Street, Staten Island, NY 10306</p>
+      <h2 id="pta" ref="pta">Parent Teacher Association @</h2>
+      <h1 id="siths" ref="siths">
+        STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL
+      </h1>
+      <p id="address" ref="address">
+        485 Clawson Street, Staten Island, NY 10306
+      </p>
     </div>
   </div>
 </template>
+<script>
+import gsap from "gsap";
+export default {
+  mounted() {
+    const { home } = this.$refs;
+    const { pta } = this.$refs;
+    const { siths } = this.$refs;
+    const { address } = this.$refs;
+    const timeline = gsap.timeline();
+    timeline
+      .from(pta, { x: -1000 })
+      .from(siths, { stagger: 5, x: -1000 })
+      .from(address, { x: -1000 });
+  },
+};
+/* this.home.addEventListener("mouseenter", () => animation.play());
+this.home.addEventListener("mouseleave", () => animation.reverse()); */
+</script>
+
 <style scoped>
 @import "../assets/base.css";
 @media screen and (max-width: 576px) {

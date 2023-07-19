@@ -13,10 +13,10 @@
   --secondary-bg: #fce5ac;
   --bg-gradient: linear-gradient(
     180deg,
-    #ffb598 0%,    
-    #fccfb1 18%,    
-    #ffedc5 40%,    
-    #faf2e1 75%,    
+    #ffb598 0%,
+    #fccfb1 18%,
+    #ffedc5 40%,
+    #faf2e1 75%,
     #fff 85%
   );
   /*   --footer-bg: linear-gradient(
@@ -28,7 +28,12 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(circle, rgb(255, 241, 228) 0%, rgb(250, 219, 194) 52%, rgb(255, 199, 185) 100%);
+  --footer-bg: radial-gradient(
+    circle,
+    rgb(255, 241, 228) 0%,
+    rgb(250, 219, 194) 52%,
+    rgb(255, 199, 185) 100%
+  );
 
   /* media queries max width
   xs:  ≥356px
@@ -136,7 +141,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 280px) and (orientation: portrait) {
-
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
@@ -163,7 +167,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait) {
-
   #nav {
     display: none;
   }
@@ -189,7 +192,6 @@ h4 {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
-
   #nav {
     display: none;
   }
@@ -215,7 +217,6 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  
   #nav {
     display: none;
   }
@@ -241,7 +242,7 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
-  .link-container{
+  .link-container {
     margin-top: 10vw;
   }
   /* li{
@@ -279,11 +280,13 @@ h4 {
     display: flex;
   }
 
-  #home, #events{
-    padding-top: .5vw;
+  #home,
+  #events {
+    padding-top: 0.5vw;
   }
-  #contact, #donate{
-    padding-top: .7vw;
+  #contact,
+  #donate {
+    padding-top: 0.7vw;
   }
 }
 @media only screen and (min-width: 1300px) {
@@ -294,13 +297,14 @@ h4 {
     display: flex;
   }
 
-  #home, #events{
-    padding-top: .3vw;
+  #home,
+  #events {
+    padding-top: 0.3vw;
   }
-  #contact, #donate{
-    padding-top: .5vw;
+  #contact,
+  #donate {
+    padding-top: 0.5vw;
   }
-
 }
 @media only screen and (min-width: 1500px) {
   .menu {
@@ -310,24 +314,23 @@ h4 {
     display: flex;
   }
 
-  #home, #events{
+  #home,
+  #events {
     padding-top: 0vw;
   }
-  #contact, #donate{
+  #contact,
+  #donate {
     padding-top: 0vw;
   }
-
 }
-@media only screen and (min-width: 1000px) and ( orientation: landscape) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
   .menu {
     display: none;
   }
   #nav {
     display: flex;
   }
-
 }
-
 
 @media only screen and (max-width: 576px) {
   #homeTopCon {
