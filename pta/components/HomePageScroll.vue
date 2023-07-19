@@ -17,7 +17,7 @@ export default {
     const timeline = gsap.timeline();
     timeline
       .from(arrow, { duration: 0.3, y: -10 }, "<")
-      .to(arrow, { duration: 0.8, y: -40, repeat: -1, yoyo: true });
+      .to(arrow, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
   },
   methods: {
     scrollDown() {
