@@ -78,6 +78,9 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
+.subh {
+  margin-top: 1.5rem;
+}
 #wrapper {
   height: 60vw;
 }
@@ -162,7 +165,6 @@ li {
   #gradient {
     height: 140vh;
   }
-
   #calendar {
     width: 80%;
     height: 25%;

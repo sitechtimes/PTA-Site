@@ -58,7 +58,9 @@ export default {
   font-size: 1vw;
   width: 40vw;
 }
-
+button {
+  transition: 0.3s;
+}
 button:hover {
   opacity: 0.7;
 }
