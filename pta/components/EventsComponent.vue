@@ -1,235 +1,274 @@
 <template>
-  <!-- The values in the headings should be inputted by the user, but I inputted values to test it and to orient it properly -->
-  <div class="events">
-    <a
-      href="https://www.theatlantic.com/science/archive/2017/06/cat-domination/530685/"
-      class="event"
+  <div>
+    <Popup
+      v-if="popupTriggers.buttonTrigger"
+      :TogglePopup="() => TogglePopup('buttonTrigger')"
     >
-      <div class="subh">
-        <h3 class="name">Jessie's Birthday</h3>
-        <h3 class="date">05/06</h3>
-      </div>
-      <div class="flag"></div>
-    </a>
-    <a
-      href="https://www.fundraiserinsight.org/wp-content/uploads/2013/07/bake-sale-fundraiser.jpg"
-      class="event"
-    >
-      <div class="subh">
-        <h3 class="name">Bake Sale</h3>
-        <h3 class="date">05/10</h3>
-      </div>
-      <div class="flag"></div>
-    </a>
-    <a
-      href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1553703&type=d&pREC_ID=1679764"
-      class="event"
-    >
-      <div class="subh">
-        <h3 class="name">SITHS</h3>
-        <h3 class="date">05/17</h3>
-      </div>
-      <div class="flag"></div>
-    </a>
+      <h5 class="text" id="title">Jessie's Birthday</h5>
+      <p class="text" id="date">05/23/2023</p>
+      <img id="img" src="" alt="" />
+      <p class="text" id="body">
+        The SITHS PTA is a group of parents and faculty/staff members who work
+        together to provide our children with resources and activities to make
+        their school experience the best ever!
+      </p>
+    </Popup>
+    <div id="upcomingEvents">
+            <h3 class="subh">Upcoming Events</h3>
+            <ul class="subtext" id="eventsCon">
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Jessie's Birthday</h5>
+                  <h5 class="listDate">05/23/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Bake Sale</h5>
+                  <h5 class="listDate">05/27/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">Very Long Named Event</h5>
+                  <h5 class="listDate">05/30/2023</h5>
+                </div>
+              </li>
+              <li @click="() => TogglePopup('buttonTrigger')">
+                <div class="uniqEvent">
+                  <h5 class="listTitle">
+                    Super Duper Very Extremely Long Named Event
+                  </h5>
+                  <h5 class="listDate">05/31/2023</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
   </div>
+
 </template>
+<script>
+import { ref } from "vue";
+import Popup from "../components/Popup.vue";
+export default {
+  setup() {
+    const popupTriggers = ref({
+      buttonTrigger: false,
+      timedTrigger: false,
+    });
+
+    const TogglePopup = (trigger) => {
+      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
+    };
+
+    setTimeout(() => {
+      popupTriggers.value.timedTrigger = true;
+    }, 3000);
+
+    return {
+      Popup,
+      popupTriggers,
+      TogglePopup,
+    };
+  },
+};
+</script>
 <style scoped>
 @import url(../assets/base.css);
-
-.events {
-  margin: 3% 5%;
-  display: flex;
-  width: 59%;
-  height: 24rem;
-  flex-direction: column;
-  justify-content: space-around;
+#wrapper {
+  height: 60vw;
 }
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-.flag {
-  border-radius: 8px;
-  width: 3.125rem;
-  height: 3.5rem;
-  margin: -5px 0 0 60px;
-  padding-top: 15px;
-  position: relative;
-  background: var(--text-color);
-}
-.flag:after {
-  content: " ";
+#gradient {
+  width: 100vw;
+  height: 180vh;
+  padding: 0%;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 0.813rem solid white;
-  border-left: 1.563rem solid transparent;
-  border-right: 1.563rem solid transparent;
+  top: 0%;
+  left: 0%;
+  background: var(--bg-gradient);
+  overflow-x: hidden;
 }
-
-.date {
-  font-family: Karla;
-  font-weight: 400;
+#eventsCon {
+  list-style-type: none;
+  padding-left: 0;
 }
-.name {
-  margin-left: 10%;
-  color: var(--text-color);
-  font-family: Karla;
-  font-weight: 400;
-}
-.subh {
+.uniqEvent {
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  height: 100%;
 }
-.event {
-  display: flex;
-  width: 100%;
-  height: 6rem;
+#title {
+  margin: 0;
+  font-family: "Kumbh Sans", sans serif;
+  font-weight: bolder;
+}
+ul {
+  overflow: auto;
+  height: 27vw;
+}
+.listTitle,
+.listDate {
+  margin-right: 1vw;
+  font-weight: 400;
+}
+.listTitle {
+  width: 20vw;
+}
+.listDate {
+  text-align: end;
+}
+#head {
+  position: absolute;
+  top: 70vw;
+  right: 19vw;
+  height: 30vw;
+  padding-bottom: 10vw;
+}
+#upcomingEvents {
+  color: var(--text-color);
+  font-family: Kumbh Sans;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+li {
   background-color: white;
-  border-radius: 1.3rem;
-  background: #ffffff;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  width: 35vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
-  flex-wrap: wrap;
+}
+
+#top {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+#calender {
+  width: 35vw;
+  background-color: white;
+  border-radius: 3vw;
+  height: 30vw;
+  /* margin-top: -2vw; */
 }
 @media screen and (max-width: 1400px) {
-  .flag {
-    width: 2.188rem;
-    border-radius: 5px;
-    height: 2rem;
+  #gradient {
+    height: 140vh;
   }
-  .flag:after {
-    border-left: 1.063rem solid transparent;
-    border-right: 1.063rem solid transparent;
-  }
-  .name,
-  .date {
-    margin: 3%;
-    font-size: 30px;
-  }
-  .event {
-    height: 40%;
-    margin: 0.6rem;
-  }
-  .events {
-    margin: 3% 5%;
-    height: 24%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .events {
-    margin: 3% 5%;
-    height: 24%;
-  }
-  .event {
-    margin: 0.6rem;
-    border-radius: 12px;
-  }
-  .flag {
-    width: 2rem;
-  }
-  .flag:after {
-    border-left: 1rem solid transparent;
-    border-right: 1rem solid transparent;
-  }
-  .name,
-  .date {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .events {
-    margin: 3% 5%;
-    height: 18.31%;
-  }
-  .flag {
-    width: 30px;
-    border-radius: 5px;
-    padding-top: 5px;
-    height: 1.5rem;
-  }
-  .flag:after {
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-  }
-  .event {
-    border-radius: 10px;
-  }
-  .name,
-  .date {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .events {
-    margin: 3% 5%;
+
+  #calendar {
     width: 80%;
-    height: 18.31%;
-  }
-  .flag {
-    width: 25px;
-    border-radius: 5px;
-    padding-top: 5px;
-    height: 2.5rem;
-    left: 6%;
-    margin-top: -3px;
-  }
-  .flag:after {
-    border-left: 12.5px solid transparent;
-    border-right: 12.5px solid transparent;
-  }
-  .event {
-    border-radius: 7px;
-  }
-  .name,
-  .date {
-    font-size: 25px;
+    height: 25%;
+    margin: 10% auto;
   }
 }
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  .listTitle {
+    width: 18vw;
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .events {
-    box-sizing: border-box;
-    margin: auto;
-    width: 85%;
-    height: 18.31%;
+  #wrapper {
+    height: 170vw;
   }
-  .flag {
-    width: 1.2rem;
-    padding-top: 0.6rem;
-    height: 1.3rem;
-    margin-top: -3px;
-    margin-left: -2%;
+  #top {
+    flex-direction: column;
   }
-  .event {
-    height: 16rem;
+  #upcomingEvents {
+    margin-bottom: 10vw;
   }
-  .flag:after {
-    border-left: 0.6rem solid transparent;
-    border-right: 0.6rem solid transparent;
+  #eventsCon {
+    height: 50vw;
   }
-  .name {
-    font-size: 1rem;
+  .uniqEvent {
+    margin: 0 1rem 0 1rem;
   }
-  .date {
-    font-size: 1rem;
+  li {
+    width: 76vw;
+    border-radius: 2.5vw;
+    margin-bottom: 4vw;
+  }
+  .listTitle {
+    width: 45vw;
+  }
+  #calender {
+    width: 80%;
+    height: 60vw;
+  }
+  #gradient {
+    width: 100%;
+    height: 220vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
   }
 }
-@media screen and (max-width: 356px) {
-  .flag {
-    width: 1.2rem;
-    padding-top: 0.6rem;
-    height: 1.3rem;
-    margin-top: -3px;
-    margin-left: -4%;
+@media only screen and (max-width: 450px) {
+  .listTitle {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .uniqEvent {
+    margin: 0 0.7rem 0 0.7rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  #gradient {
+    width: 100%;
+    height: 100vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 576px) and (orientation: landscape) {
+  #gradient {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #gradient {
+    width: 100%;
+    height: 80vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  #gradient {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
   }
 }
 </style>

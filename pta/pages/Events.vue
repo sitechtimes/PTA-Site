@@ -1,53 +1,10 @@
 <template>
   <div>
-    <Popup
-      v-if="popupTriggers.buttonTrigger"
-      :TogglePopup="() => TogglePopup('buttonTrigger')"
-    >
-      <h5 class="text" id="title">Jessie's Birthday</h5>
-      <p class="text" id="date">05/23/2023</p>
-      <img id="img" src="" alt="" />
-      <p class="text" id="body">
-        The SITHS PTA is a group of parents and faculty/staff members who work
-        together to provide our children with resources and activities to make
-        their school experience the best ever!
-      </p>
-    </Popup>
     <div id="wrapper">
       <div id="gradient">
         <h1 class="heading">EVENTS</h1>
         <section id="top">
-          <div id="upcomingEvents">
-            <h3 class="subh">Upcoming Events</h3>
-            <ul class="subtext" id="eventsCon">
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Jessie's Birthday</h5>
-                  <h5 class="listDate">05/23/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Bake Sale</h5>
-                  <h5 class="listDate">05/27/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">Very Long Named Event</h5>
-                  <h5 class="listDate">05/30/2023</h5>
-                </div>
-              </li>
-              <li @click="() => TogglePopup('buttonTrigger')">
-                <div class="uniqEvent">
-                  <h5 class="listTitle">
-                    Super Duper Very Extremely Long Named Event
-                  </h5>
-                  <h5 class="listDate">05/31/2023</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <EventsComponent/>
           <div id="calender">
             <!-- Google Calendar filler  -->
           </div>
@@ -57,33 +14,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from "vue";
-import Popup from "../components/Popup.vue";
-export default {
-  setup() {
-    const popupTriggers = ref({
-      buttonTrigger: false,
-      timedTrigger: false,
-    });
-
-    const TogglePopup = (trigger) => {
-      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-    };
-
-    setTimeout(() => {
-      popupTriggers.value.timedTrigger = true;
-    }, 3000);
-
-    return {
-      Popup,
-      popupTriggers,
-      TogglePopup,
-    };
-  },
-};
-</script>
 
 <style scoped>
 @import url(../assets/base.css);
