@@ -15,8 +15,7 @@ export default {
   props: ["TogglePopup"],
   mounted() {
     let tl = gsap.timeline();
-    const { popup } = this.$refs;
-    gsap.from(popup, 1, { scale: 0.3 });
+    tl.from(".popup", { scale: 0.3, duration: 0.4 });
   },
 };
 </script>
