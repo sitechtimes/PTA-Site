@@ -12,9 +12,6 @@
         485 Clawson Street, Staten Island, NY 10306
       </p>
     </div>
-    <div class="arrowContainer">
-      <div ref="arrow" class="arrow" @scroll="handleScroll"></div>
-    </div>
   </div>
 </template>
 <script>
@@ -38,6 +35,10 @@ export default {
       .from(arrow, { duration: 0.3, y: 10 }, "<")
       .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
   },
+  data() {
+    return {};
+  },
+  methods: {},
 };
 /* this.home.addEventListener("mouseenter", () => animation.play());
 this.home.addEventListener("mouseleave", () => animation.reverse()); */
@@ -47,7 +48,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @import "../assets/base.css";
 .arrow {
   border: solid rgb(0, 0, 0);
-  opacity: 50%;
   border-width: 0 4px 4px 0;
   display: inline-block;
   padding: 20px;
@@ -57,6 +57,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   z-index: 5;
   transition: 0.3s;
   border-radius: 3px;
+  opacity: 50%;
 }
 .arrow:hover {
   opacity: 100%;
@@ -67,7 +68,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 30rem;
+  bottom: 40%;
 }
 
 @media screen and (max-width: 576px) {
