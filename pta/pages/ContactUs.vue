@@ -218,7 +218,8 @@ export default {
   align-content: center;
   justify-content: center;
   padding: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 9vw;
+  padding-top: 4vw;
   margin: 2rem;
   overflow-x: hidden;
 }
@@ -309,7 +310,7 @@ a {
 }
 
 button {
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 1rem;
   width: 14vw;
   font-size: 1.5rem;
@@ -335,30 +336,59 @@ section {
   align-content: center;
   justify-content: center;
 }
+@media only screen and (min-width: 1200px) {
+  .container {
+    top: 10vh;
+  }
+  button {
+    font-size: 1.5vw;
+    margin-top: 6vw;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container {
     top: 10vh;
   }
+  button {
+    font-size: 2vw;
+    margin-top: 10vw;
+  }
 }
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (max-width: 1030px) {
   .container__ParentVolunteer {
     margin-left: 4.5rem;
   }
 }
 
 @media only screen and (max-width: 992px) {
+  button {
+    font-size: 2.5vw;
+    margin-top: 10vw;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  button {
+    font-size: 2vw;
+    margin-top: 10vw;
+  }
+  h1{
+    font-size: 3vw;
+  }
+  .container__TextInformation{
+    font-size: .1vw;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  button {
+    font-size: 3vw;
+    margin-top: 15vw;
+  }
 }
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-}
-
 @media only screen and (max-width: 576px) {
   .container__ContactUs {
     height: 180vh;
@@ -451,7 +481,9 @@ section {
   .container__BoardMembers-profile img {
     width: 25vw;
   }
-  .button_navigation{}
+  .container__Navigation{
+    width: 90vw;
+  }
 }
 
 /* @media screen and (min-width: 576px) {
