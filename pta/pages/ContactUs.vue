@@ -133,10 +133,15 @@ export default {
     },
   },
   mounted() {
-    gsap.from(".container__box", { duration: 1, opacity: 0 });
-    gsap.from(".container__Navigation", {
-      duration: 1,
+    gsap.from(".container__box", {
+      duration: 0.5,
+      y: 100,
       delay: 0.5,
+      opacity: 0,
+    });
+    gsap.from(".container__Navigation", {
+      duration: 0.5,
+      y: 100,
       opacity: 0,
     });
   },
