@@ -33,6 +33,7 @@ export default {
   position: fixed;
   top: 10%;
   font-size: 2.2vw;
+  cursor: pointer;
 }
 #popupscreen {
   width: 100vw;
