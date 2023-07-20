@@ -26,10 +26,10 @@ export default {
     const { address } = this.$refs;
     const timeline = gsap.timeline();
     timeline
-      .from(pta, { duration: 0.5, x: -1000 })
-      .from(statenIsland, 0.5, { x: -1000 }, "<0.5")
-      .from(technical, 0.5, { x: -1000 }, "<0.1")
-      .from(highSchool, 0.5, { x: -1000 }, "<0.1")
+      .from(pta, { duration: 1.5, x: -1000 })
+      .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
+      .from(technical, 1.5, { x: -1000 }, "<0.1")
+      .from(highSchool, 1.5, { x: -1000 }, "<0.1")
       .from(address, { duration: 1, x: -1000 }, "<0.4")
       .from(arrow, { duration: 0.3, y: 10 }, "<")
       .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
