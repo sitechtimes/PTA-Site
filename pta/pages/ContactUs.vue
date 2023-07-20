@@ -120,6 +120,7 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
   data() {
     return {
@@ -130,6 +131,19 @@ export default {
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
+  },
+  mounted() {
+    gsap.from(".container__box", {
+      duration: 0.5,
+      y: 100,
+      delay: 0.5,
+      opacity: 0,
+    });
+    gsap.from(".container__Navigation", {
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+    });
   },
 };
 </script>
