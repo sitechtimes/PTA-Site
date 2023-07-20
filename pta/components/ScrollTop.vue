@@ -1,19 +1,8 @@
 <template>
   <div class="container__topArrow none-topArrow">
     <!-- <a href="#section__LandingSection"> -->
-    <img
-      class
-      id="sttlaptop"
-      src="/back-to-top-arrow.svg"
-      @click="scroll"
-      alt="scroll to top button"
-    />
-    <img
-      id="sttmobile"
-      src="/back-to-top-mobile.svg"
-      @click="scroll"
-      alt="scroll to top button"
-    />
+    <img class id="sttlaptop" src="/back-to-top-arrow.svg" @click="scroll" alt="scroll to top button" />
+    <img id="sttmobile" src="/back-to-top-mobile.svg" @click="scroll" alt="scroll to top button" />
     <!-- </a> -->
   </div>
 </template>
@@ -33,10 +22,14 @@ export default {
       const topArrow = document.querySelector(".container__topArrow");
       if (window.scrollY > 300) {
         topArrow.style.display = "flex";
+        topArrow.classList.remove('pop-out')
+        topArrow.classList.add('pop-in')
         // console.log("here");
         // console.log(window.scrollY);
       } else {
         topArrow.style.display = "none";
+        topArrow.classList.add('pop-out')
+        topArrow.classList.remove('pop-in')
         // console.log("gone");
         // console.log(window.scrollY);
       }
@@ -56,6 +49,39 @@ export default {
 </script>
 
 <style scoped>
+.pop-in {
+  animation: pop-in 1s;
+}
+
+.pop-out {
+  animation: pop-out 1s;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translatey(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+@keyframes pop-out {
+  from {
+    opacity: 1;
+    transform: translatey(0);
+  }
+
+
+  to {
+    opacity: 0;
+    transform: translatey(150px);
+  }
+}
+
 .show-topArrow {
   opacity: 1;
 }
