@@ -106,6 +106,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 #title {
   margin: 0;
