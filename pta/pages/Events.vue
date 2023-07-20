@@ -6,7 +6,7 @@
         <section id="top">
           <EventsComponent />
           <div id="calender">
-            <!-- Google Calendar filler  -->
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548" style="border:solid 1px #777" width="700" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
         </section>
         <ScrollTop />
