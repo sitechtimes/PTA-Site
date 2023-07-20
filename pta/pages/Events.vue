@@ -19,7 +19,7 @@
 import { gsap } from "gsap";
 export default {
   mounted() {
-    gsap.from(".heading", { duration: 1, opacity: 0 });
+    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
   },
 };
 </script>
