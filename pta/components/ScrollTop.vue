@@ -33,12 +33,12 @@ export default {
       const topArrow = document.querySelector(".container__topArrow");
       if (window.scrollY > 300) {
         topArrow.style.display = "flex";
-        console.log("here");
-        console.log(window.scrollY);
+        // console.log("here");
+        // console.log(window.scrollY);
       } else {
         topArrow.style.display = "none";
-        console.log("gone");
-        console.log(window.scrollY);
+        // console.log("gone");
+        // console.log(window.scrollY);
       }
       // }
     },
