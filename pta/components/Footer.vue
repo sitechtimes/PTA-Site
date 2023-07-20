@@ -44,7 +44,7 @@
   margin-left: auto;
   margin-right: auto;
   align-content: center;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
