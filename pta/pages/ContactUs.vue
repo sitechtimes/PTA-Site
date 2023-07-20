@@ -456,7 +456,7 @@ section {
   }
 
   button {
-    font-size: 1rem;
+    font-size: 4vw;
     border-radius: 1rem;
     margin-bottom: 0;
   }
@@ -513,7 +513,7 @@ section {
   }
 
   button {
-    width: 25vw;
+    width: 17vw;
   }
 }
 
