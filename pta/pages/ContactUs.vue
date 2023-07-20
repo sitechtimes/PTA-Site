@@ -8,14 +8,14 @@
             :class="{ active: currentSection === 'GeneralContacts' }"
             @click="showSection('GeneralContacts')"
           >
-            General Contacts
+            Contacts
           </button>
           <button
             class="button__navigation"
             :class="{ active: currentSection === 'BoardMembers' }"
             @click="showSection('BoardMembers')"
           >
-            Board Members
+            Board
           </button>
           <button
             class="button__navigation"
@@ -312,7 +312,9 @@ a {
 button {
   /* margin: 1rem; */
   padding: 1rem;
-  width: 14vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  width: 17vw;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -456,9 +458,11 @@ section {
   }
 
   button {
-    font-size: 4vw;
+    font-size: 3.5vw;
     border-radius: 1rem;
     margin-bottom: 0;
+    margin-top: 5vw;
+    width: 20vw;
   }
 
   .container__ContactUs {
@@ -512,9 +516,9 @@ section {
     height: 125vh;
   }
 
-  button {
+  /* button {
     width: 17vw;
-  }
+  } */
 }
 
 @media screen and (max-height: 992px) {
