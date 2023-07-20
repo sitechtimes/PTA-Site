@@ -4,7 +4,7 @@
       <div id="gradient">
         <h1 class="heading">EVENTS</h1>
         <section id="top">
-          <EventsComponent/>
+          <EventsComponent />
           <div id="calender">
             <!-- Google Calendar filler  -->
           </div>
@@ -14,6 +14,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import { gsap } from "gsap";
+export default {
+  mounted() {
+    gsap.from(".heading", { duration: 1, opacity: 0 });
+  },
+};
+</script>
 
 <style scoped>
 @import url(../assets/base.css);

@@ -72,7 +72,8 @@ export default {
     };
   },
   mounted() {
-    gsap.from("li", { duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".subh", { delay: 0.1, duration: 1, opacity: 0 });
+    gsap.from("li", { delay: 0.5, duration: 0.5, y: 100, opacity: 0 });
   },
 };
 </script>
