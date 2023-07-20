@@ -115,7 +115,17 @@ a {
     width: 90vw;
   }
 }
-
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  p{
+    font-size: 2.5vw;
+  }
+  a{
+    font-size: 2vw;
+  }
+  h2{
+    font-size:3vw
+  }
+}
 @media screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;

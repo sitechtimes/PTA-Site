@@ -262,6 +262,38 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 0.4vw;
   }
 }
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  #homeTopText {
+    color: var(--text-color);
+    font-family: var(--font-heading);
+    position: absolute;
+    transform: translate(-50%, 0vw);
+    top: 28%;
+    left: 50%;
+    text-align: left;
+  }
+  #address {
+    margin: 0%;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    font-size: 3vw;
+  }
+  #siths {
+    margin: 0%;
+    font-size: 9vw;
+    font-weight: 800;
+    line-height: 129.164%;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.2vw;
+  }
+  #pta {
+    margin: 0%;
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    margin-bottom: 0.4vw;
+  }
+}
 @media screen and (min-width: 1200px) {
   #homeTopText {
     color: var(--text-color);
