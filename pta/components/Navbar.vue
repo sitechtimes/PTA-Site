@@ -137,7 +137,7 @@ a:visited {
 
 @media screen and (max-width: 768px) {
   .logo {
-    width: 6rem;
+    width: 8rem;
   }
 }
 
