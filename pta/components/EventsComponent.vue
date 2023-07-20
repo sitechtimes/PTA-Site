@@ -113,6 +113,7 @@ ul {
   overflow: auto;
   -ms-overflow-style: none;
   height: 27vw;
+  scrollbar-width: none;
 }
 .listTitle,
 .listDate {
