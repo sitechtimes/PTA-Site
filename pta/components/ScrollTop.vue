@@ -1,33 +1,60 @@
 <template>
-  <div class="container__topArrow">
+  <div class="container__topArrow none-topArrow">
     <!-- <a href="#section__LandingSection"> -->
-    <img
-      id="sttlaptop"
-      src="/back-to-top-arrow.svg"
-      @click="scroll"
-      alt="scroll to top button"
-    />
-    <img
-      id="sttmobile"
-      src="/back-to-top-mobile.svg"
-      @click="scroll"
-      alt="scroll to top button"
-    />
+    <img class id="sttlaptop" src="/back-to-top-arrow.svg" @click="scroll" alt="scroll to top button" />
+    <img id="sttmobile" src="/back-to-top-mobile.svg" @click="scroll" alt="scroll to top button" />
     <!-- </a> -->
   </div>
 </template>
 
 <script>
+
 export default {
-  methods: {
+  setup() {
+    const showArrow = ref(false)
+    const route = useRoute()
+    return {
+      showArrow,
+      route
+    }
+  },
+  methods() {
+    ScrolledEnough() {
+      const topArrow = document.querySelector(".container__topArrow")
+      if (route.path == '/') {
+        if (window.scrollY > 300) {
+          showArrow.value = true
+          topArrow.classList.add('show-topArrow')
+          topArrow.classList.remove('none-topArrow')
+        } else if (window.screenY < 300 && showArrow.value == true && useRoute().path == '/') {
+          topArrow.classList.remove('show-topArrow')
+          topArrow.classList.add('none-topArrow')
+        }
+      }
+    },
     scroll() {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    },
+    }
   },
-};
+  mounted() {
+    window.addEventListener('scroll', ScrolledEnough)
+  }
+}
+
+/* 
+  } */
 </script>
 
+
 <style scoped>
+.show-topArrow {
+  opacity: 1;
+}
+
+.none-topArrow {
+  opacity: 0;
+}
+
 .container__topArrow {
   z-index: 3;
   display: flex;
@@ -44,6 +71,7 @@ export default {
   #sttlaptop {
     display: none;
   }
+
   .container__topArrow {
     height: 1.5rem;
     bottom: 9vw;
@@ -59,6 +87,7 @@ export default {
   #sttlaptop {
     display: none;
   }
+
   .container__topArrow {
     bottom: 6vw;
     right: 5%;
@@ -68,10 +97,12 @@ export default {
     height: 10vw;
   }
 }
+
 @media screen and (min-width: 576px) and (orientation: landscape) {
   #sttlaptop {
     display: none;
   }
+
   .container__topArrow {
     height: 1.5rem;
     bottom: 10%;
@@ -82,6 +113,7 @@ export default {
     height: 7vw;
   }
 }
+
 @media screen and (min-width: 768px) {
   .container__topArrow {
     height: 3vw;
@@ -93,10 +125,12 @@ export default {
     height: 10vw;
   }
 }
+
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #sttlaptop {
     display: none;
   }
+
   .container__topArrow {
     height: 3vw;
     bottom: 12%;
@@ -107,48 +141,58 @@ export default {
     height: 5.5vw;
   }
 }
+
 @media screen and (min-width: 866px) {
   .container__topArrow {
     height: 2rem;
     bottom: 9vw;
     right: 5%;
   }
+
   .container__topArrow img {
     height: 9vw;
   }
 }
+
 @media screen and (min-width: 866px) and (orientation: landscape) {
   .container__topArrow {
     height: 2rem;
     bottom: 7vw;
     right: 5%;
   }
+
   .container__topArrow img {
     height: 4rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .container__topArrow {
     height: 2rem;
     bottom: 8%;
     right: 5%;
   }
+
   .container__topArrow img {
     height: 5rem;
   }
 }
+
 @media screen and (min-width: 992px) and (orientation: landscape) {
   #sttmobile {
     display: none;
   }
+
   #sttlaptop {
     display: block;
   }
+
   .container__topArrow {
     height: 2rem;
     bottom: 7vw;
     right: 5%;
   }
+
   .container__topArrow img {
     height: 6vw;
   }
@@ -158,6 +202,7 @@ export default {
   #sttmobile {
     display: none;
   }
+
   .container__topArrow {
     height: 3rem;
     bottom: 9%;
