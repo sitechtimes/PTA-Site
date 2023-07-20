@@ -16,25 +16,25 @@
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li1">
           <div class="uniqEvent">
             <h5 class="listTitle">Jessie's Birthday</h5>
             <h5 class="listDate">05/23/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li2">
           <div class="uniqEvent">
             <h5 class="listTitle">Bake Sale</h5>
             <h5 class="listDate">05/27/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li3">
           <div class="uniqEvent">
             <h5 class="listTitle">Very Long Named Event</h5>
             <h5 class="listDate">05/30/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li4">
           <div class="uniqEvent">
             <h5 class="listTitle">
               Super Duper Very Extremely Long Named Event
@@ -72,8 +72,11 @@ export default {
     };
   },
   mounted() {
-    gsap.from(".subh", { delay: 0.1, duration: 1, opacity: 0 });
-    gsap.from("li", { delay: 0.5, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".subh", { duration: 1, opacity: 0 });
+    gsap.from(".li1", { delay: 0.5, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li2", { delay: 1, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li3", { delay: 1.5, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li4", { delay: 2, duration: 0.5, y: 100, opacity: 0 });
   },
 };
 </script>
