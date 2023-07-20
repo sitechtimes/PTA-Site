@@ -70,6 +70,8 @@ export default {
 @import url(../assets/base.css);
 
 #nav {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-shrink: 0;
 }
@@ -89,8 +91,8 @@ a {
 }
 
 .icon {
-  padding-right: 0.6rem;
-  padding-bottom: 0.5rem;
+  height: 30px;
+  padding: 9px 10px 0 0;
 }
 
 #contact {
