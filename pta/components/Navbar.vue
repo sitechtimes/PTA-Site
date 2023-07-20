@@ -92,7 +92,8 @@ a {
 
 .icon {
   height: 30px;
-  padding: 9px 10px 0 0;
+  padding: 0 10px 0 0;
+  margin-top: 4px;
 }
 
 #contact {
@@ -116,6 +117,11 @@ a:visited {
 @media screen and (max-width: 1400px) {
   .group {
     width: 10rem;
+  }
+  .icon {
+    height: 30px;
+    padding: 0 10px 0 0;
+    margin-top: -10px;
   }
 }
 
