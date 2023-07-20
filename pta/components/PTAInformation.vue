@@ -48,7 +48,7 @@ p {
     font-family: var(--font-text);
     color: var(--text-color);
     text-align: center;
-    font-size: 1.375rem;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
