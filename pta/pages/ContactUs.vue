@@ -221,6 +221,7 @@ export default {
   padding-bottom: 3rem;
   margin: 2rem;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .container__BoardMembers {
@@ -383,7 +384,6 @@ section {
     display: flex;
     width: 75vw;
     border-radius: 1rem;
-    word-wrap: break-word;
   }
 
   h1 {
@@ -484,21 +484,71 @@ section {
 
 @media screen and (max-height: 992px) {
   #gradient {
-    height: 110vh;
+    height: 135vh;
   }
 
   .container__ContactUs {
-    height: 110vh;
+    height: 130vh;
   }
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 992px) and (orientation: landscape) {
+  #gradient {
+    height: 160vh;
+  }
+
+  .container__ContactUs {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  button {
+    width: 20vw;
+  }
+
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 23vw;
+  }
   #gradient {
     height: 140vh;
   }
 
   .container__ContactUs {
     height: 140vh;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  #gradient {
+    height: 185vh;
+  }
+
+  .container__ContactUs {
+    height: 185vh;
+  }
+}
+
+@media screen and (max-height: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 380vh;
+  }
+
+  .container__ContactUs {
+    height: 380vh;
   }
 }
 </style>
