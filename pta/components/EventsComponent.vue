@@ -16,25 +16,25 @@
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li1">
           <div class="uniqEvent">
             <h5 class="listTitle">Jessie's Birthday</h5>
             <h5 class="listDate">05/23/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li2">
           <div class="uniqEvent">
             <h5 class="listTitle">Bake Sale</h5>
             <h5 class="listDate">05/27/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li3">
           <div class="uniqEvent">
             <h5 class="listTitle">Very Long Named Event</h5>
             <h5 class="listDate">05/30/2023</h5>
           </div>
         </li>
-        <li @click="() => TogglePopup('buttonTrigger')">
+        <li @click="() => TogglePopup('buttonTrigger')" class="li4">
           <div class="uniqEvent">
             <h5 class="listTitle">
               Super Duper Very Extremely Long Named Event
@@ -49,6 +49,7 @@
 <script>
 import { ref } from "vue";
 import Popup from "../components/Popup.vue";
+import { gsap } from "gsap";
 export default {
   setup() {
     const popupTriggers = ref({
@@ -70,10 +71,20 @@ export default {
       TogglePopup,
     };
   },
+  mounted() {
+    gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
+    gsap.from(".li1", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li2", { delay: 1.1, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li3", { delay: 1.5, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from(".li4", { delay: 1.9, duration: 0.5, y: 100, opacity: 0 });
+  },
 };
 </script>
 <style scoped>
 @import url(../assets/base.css);
+.subh {
+  margin-top: 1.5rem;
+}
 #wrapper {
   height: 60vw;
 }
@@ -95,6 +106,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 #title {
   margin: 0;
@@ -104,7 +116,9 @@ export default {
 ul {
   overflow: auto;
   -ms-overflow-style: none;
+  scrollbar-width: none;
   height: 27vw;
+  scrollbar-width: none;
 }
 .listTitle,
 .listDate {
@@ -158,7 +172,6 @@ li {
   #gradient {
     height: 140vh;
   }
-
   #calendar {
     width: 80%;
     height: 25%;

@@ -1,15 +1,75 @@
 <template>
-  <div class="home" id="homeTopCon">
+  <div ref="home" class="home" id="homeTopCon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div id="homeTopText">
-      <h2 id="pta">Parent Teacher Association @</h2>
-      <h1 id="siths">STATEN ISLAND <br />TECHNICAL <br />HIGH SCHOOL</h1>
-      <p id="address">485 Clawson Street, Staten Island, NY 10306</p>
+      <h2 id="pta" ref="pta">Parent Teacher Association @</h2>
+      <h1 id="siths" ref="siths">
+        <div ref="statenIsland">STATEN ISLAND</div>
+        <div ref="technical">TECHNICAL</div>
+        <div ref="highSchool">HIGH SCHOOL</div>
+      </h1>
+      <p id="address" ref="address">
+        485 Clawson Street, Staten Island, NY 10306
+      </p>
     </div>
   </div>
 </template>
+<script>
+import gsap from "gsap";
+export default {
+  mounted() {
+    const { statenIsland } = this.$refs;
+    const { technical } = this.$refs;
+    const { highSchool } = this.$refs;
+    const { pta } = this.$refs;
+    const { arrow } = this.$refs;
+    const { address } = this.$refs;
+    const timeline = gsap.timeline();
+    timeline
+      .from(pta, { duration: 1.5, x: -1000 })
+      .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
+      .from(technical, 1.5, { x: -1000 }, "<0.1")
+      .from(highSchool, 1.5, { x: -1000 }, "<0.1")
+      .from(address, { duration: 1, x: -1000 }, "<0.4")
+      .from(arrow, { duration: 0.3, y: 10 }, "<")
+      .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
+  },
+  data() {
+    return {};
+  },
+  methods: {},
+};
+/* this.home.addEventListener("mouseenter", () => animation.play());
+this.home.addEventListener("mouseleave", () => animation.reverse()); */
+</script>
+
 <style scoped>
 @import "../assets/base.css";
+.arrow {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+  border-radius: 3px;
+  opacity: 50%;
+}
+.arrow:hover {
+  opacity: 100%;
+}
+.arrowContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 40%;
+}
+
 @media screen and (max-width: 576px) {
   #homeTopText {
     color: var(--text-color);

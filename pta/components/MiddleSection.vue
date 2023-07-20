@@ -2,26 +2,58 @@
   <section id="section__MiddleSection">
     <div class="information">
       <div class="activities">
-        <h2>ACTIVITIES</h2>
-        <p>
+        <h2 ref="activities">ACTIVITIES</h2>
+        <p ref="activitiesDesc">
           The SITHS PTA is a group of parents and faculty/staff members who work
           together to provide our children with resources and activities to make
           their school experience the best ever!
         </p>
       </div>
-      <div class="minutes">
+      <div ref="minutes" class="minutes">
         <h2>MEETING MINUTES</h2>
-        <a href="" target="_blank" rel="noopener">
+        <a href="" ref="minutesLink" target="_blank" rel="noopener">
           <h3>Link to May 2023 Meeting Minutes</h3>
         </a>
       </div>
     </div>
-    <div class="gallery">
+    <div ref="gallery" class="gallery">
       <PhotoGallery />
     </div>
   </section>
 </template>
 
+<script>
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    const { activities } = this.$refs;
+    const { activitiesDesc } = this.$refs;
+    const { minutes } = this.$refs;
+    const { minutesLink } = this.$refs;
+    const { gallery } = this.$refs;
+    const timeline = gsap.timeline();
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    scrollActivities() {
+      gsap.to({
+        ScrollTrigger: {
+          trigger: ".activities",
+          start: "center center",
+          end: "bottom top",
+        },
+      });
+    },
+  },
+};
+/* this.home.addEventListener("mouseenter", () => animation.play());
+this.home.addEventListener("mouseleave", () => animation.reverse()); */
+</script>
 <style scoped>
 /* .information {
   margin-left: 5%;

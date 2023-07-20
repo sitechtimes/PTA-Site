@@ -3,13 +3,27 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
+        <HomePageScroll />
       </div>
       <div class="div2">
         <MiddleSection />
       </div>
     </div>
   </div>
-</template>
+</template>s
+
+<script>
+export default {
+  head() {
+    return {
+      script: [
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+      ],
+      title: "Home | PTA",
+    };
+  },
+};
+</script>
 
 <style scoped>
 .parent {

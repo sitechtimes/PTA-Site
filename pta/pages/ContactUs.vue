@@ -8,14 +8,14 @@
             :class="{ active: currentSection === 'GeneralContacts' }"
             @click="showSection('GeneralContacts')"
           >
-            General Contacts
+            Contacts
           </button>
           <button
             class="button__navigation"
             :class="{ active: currentSection === 'BoardMembers' }"
             @click="showSection('BoardMembers')"
           >
-            Board Members
+            Board
           </button>
           <button
             class="button__navigation"
@@ -120,6 +120,7 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
   data() {
     return {
@@ -130,6 +131,19 @@ export default {
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
+  },
+  mounted() {
+    gsap.from(".container__box", {
+      duration: 0.5,
+      y: 100,
+      delay: 0.5,
+      opacity: 0,
+    });
+    gsap.from(".container__Navigation", {
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+    });
   },
 };
 </script>
@@ -218,9 +232,11 @@ export default {
   align-content: center;
   justify-content: center;
   padding: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 9vw;
+  padding-top: 4vw;
   margin: 2rem;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .container__BoardMembers {
@@ -309,9 +325,11 @@ a {
 }
 
 button {
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 1rem;
-  width: 14vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  width: 17vw;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -335,30 +353,57 @@ section {
   align-content: center;
   justify-content: center;
 }
+@media only screen and (min-width: 1200px) {
+  .container {
+    top: 10vh;
+  }
+  button {
+    font-size: 1.5vw;
+    margin-top: 6vw;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container {
     top: 10vh;
   }
+  button {
+    font-size: 2vw;
+    margin-top: 10vw;
+  }
 }
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (max-width: 1030px) {
   .container__ParentVolunteer {
     margin-left: 4.5rem;
   }
 }
 
 @media only screen and (max-width: 992px) {
+  button {
+    font-size: 2.5vw;
+    margin-top: 10vw;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  button {
+    font-size: 2vw;
+    margin-top: 10vw;
+  }
+  h1 {
+    font-size: 3vw;
+  }
+  .container__TextInformation {
+    font-size: 0.1vw;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  button {
+    font-size: 3vw;
+    margin-top: 15vw;
+  }
 }
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-}
-
 @media only screen and (max-width: 576px) {
   .container__ContactUs {
     height: 180vh;
@@ -383,7 +428,6 @@ section {
     display: flex;
     width: 75vw;
     border-radius: 1rem;
-    word-wrap: break-word;
   }
 
   h1 {
@@ -428,9 +472,11 @@ section {
   }
 
   button {
-    font-size: 1rem;
+    font-size: 3.5vw;
     border-radius: 1rem;
     margin-bottom: 0;
+    margin-top: 5vw;
+    width: 20vw;
   }
 
   .container__ContactUs {
@@ -451,9 +497,16 @@ section {
   .container__BoardMembers-profile img {
     width: 25vw;
   }
+  .container__Navigation {
+    width: 90vw;
+  }
+
+  .container__ParentVolunteer {
+    margin-left: 2rem;
+  }
 }
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
 }
 
 @media screen and (min-width: 576px) and (orientation: landscape) {
@@ -463,7 +516,7 @@ section {
 }
 
 @media only screen and (max-width: 356px) {
-}
+} */
 
 @media screen and (max-height: 1200px) {
   #gradient {
@@ -477,28 +530,128 @@ section {
     height: 125vh;
   }
 
-  button {
-    width: 25vw;
-  }
+  /* button {
+    width: 17vw;
+  } */
 }
 
 @media screen and (max-height: 992px) {
   #gradient {
-    height: 110vh;
+    height: 130vh;
   }
 
   .container__ContactUs {
-    height: 110vh;
+    height: 130vh;
+  }
+}
+
+@media screen and (max-height: 992px) and (orientation: landscape) {
+  #gradient {
+    height: 160vh;
+  }
+
+  .container__ContactUs {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  button {
+    width: 20vw;
+  }
+
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 23vw;
+  }
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-height: 992px) and (orientation: landscape) {
+  #gradient {
+    height: 160vh;
+  }
+
+  .container__ContactUs {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  button {
+    width: 20vw;
+  }
+
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 23vw;
+  }
+  #gradient {
+    height: 185vh;
+  }
+
+  .container__ContactUs {
+    height: 185vh;
+  }
+}
+
+@media screen and (max-height: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 380vh;
+  }
+
+  .container__ContactUs {
+    height: 380vh;
   }
 }
 
 @media screen and (max-height: 768px) {
   #gradient {
-    height: 140vh;
+    height: 185vh;
   }
 
   .container__ContactUs {
-    height: 140vh;
+    height: 185vh;
+  }
+}
+
+@media screen and (max-height: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 380vh;
+  }
+
+  .container__ContactUs {
+    height: 380vh;
   }
 }
 </style>
