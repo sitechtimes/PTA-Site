@@ -49,6 +49,7 @@
 <script>
 import { ref } from "vue";
 import Popup from "../components/Popup.vue";
+import { gsap } from "gsap";
 export default {
   setup() {
     const popupTriggers = ref({
@@ -70,10 +71,16 @@ export default {
       TogglePopup,
     };
   },
+  mounted() {
+    gsap.from("li", { duration: 0.5, y: 100, opacity: 0 });
+  },
 };
 </script>
 <style scoped>
 @import url(../assets/base.css);
+.subh {
+  margin-top: 1.5rem;
+}
 #wrapper {
   height: 60vw;
 }
@@ -95,6 +102,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 #title {
   margin: 0;
@@ -105,6 +113,7 @@ ul {
   overflow: auto;
   -ms-overflow-style: none;
   height: 27vw;
+  scrollbar-width: none;
 }
 .listTitle,
 .listDate {
@@ -158,7 +167,6 @@ li {
   #gradient {
     height: 140vh;
   }
-
   #calendar {
     width: 80%;
     height: 25%;

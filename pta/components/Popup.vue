@@ -1,7 +1,7 @@
 <template>
   <div id="popupscreen">
     <div id="outside" @click="TogglePopup()"></div>
-    <div class="popup">
+    <div class="popup" ref="popup">
       <div class="popup-inner">
         <button class="popup-close" @click="TogglePopup()">✖</button>
         <slot />
@@ -10,8 +10,13 @@
   </div>
 </template>
 <script>
+import { gsap } from "gsap";
 export default {
   props: ["TogglePopup"],
+  mounted() {
+    let tl = gsap.timeline();
+    tl.from(".popup", { scale: 0.3, duration: 0.4 });
+  },
 };
 </script>
 <style scoped>
@@ -28,6 +33,7 @@ export default {
   position: fixed;
   top: 10%;
   font-size: 2.2vw;
+  cursor: pointer;
 }
 #popupscreen {
   width: 100vw;
@@ -52,6 +58,12 @@ export default {
   border-radius: 2vw;
   font-size: 1vw;
   width: 40vw;
+}
+button {
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.7;
 }
 
 /* media queries max width
