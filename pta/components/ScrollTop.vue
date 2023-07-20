@@ -1,50 +1,59 @@
 <template>
   <div class="container__topArrow none-topArrow">
     <!-- <a href="#section__LandingSection"> -->
-    <img class id="sttlaptop" src="/back-to-top-arrow.svg" @click="scroll" alt="scroll to top button" />
-    <img id="sttmobile" src="/back-to-top-mobile.svg" @click="scroll" alt="scroll to top button" />
+    <img
+      class
+      id="sttlaptop"
+      src="/back-to-top-arrow.svg"
+      @click="scroll"
+      alt="scroll to top button"
+    />
+    <img
+      id="sttmobile"
+      src="/back-to-top-mobile.svg"
+      @click="scroll"
+      alt="scroll to top button"
+    />
     <!-- </a> -->
   </div>
 </template>
 
 <script>
-
 export default {
-  setup() {
-    const showArrow = ref(false)
-    const route = useRoute()
-    return {
-      showArrow,
-      route
-    }
-  },
-  methods() {
-    ScrolledEnough() {
-      const topArrow = document.querySelector(".container__topArrow")
-      if (route.path == '/') {
-        if (window.scrollY > 300) {
-          showArrow.value = true
-          topArrow.classList.add('show-topArrow')
-          topArrow.classList.remove('none-topArrow')
-        } else if (window.screenY < 300 && showArrow.value == true && useRoute().path == '/') {
-          topArrow.classList.remove('show-topArrow')
-          topArrow.classList.add('none-topArrow')
-        }
+  // setup() {
+  //   const showArrow = ref(false);
+  //   const route = useRoute();
+  //   return {
+  //     showArrow,
+  //     route,
+  //   };
+  // },
+  methods: {
+    ScrolledEnough: function () {
+      const topArrow = document.querySelector(".container__topArrow");
+      if (window.scrollY > 300) {
+        topArrow.style.display = "flex";
+        console.log("here");
+        console.log(window.scrollY);
+      } else {
+        topArrow.style.display = "none";
+        console.log("gone");
+        console.log(window.scrollY);
       }
+      // }
     },
     scroll() {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    },
   },
   mounted() {
-    window.addEventListener('scroll', ScrolledEnough)
-  }
-}
+    window.addEventListener("scroll", this.ScrolledEnough);
+  },
+};
 
-/* 
+/*
   } */
 </script>
-
 
 <style scoped>
 .show-topArrow {
@@ -57,7 +66,7 @@ export default {
 
 .container__topArrow {
   z-index: 3;
-  display: flex;
+  display: none;
   height: 3rem;
   opacity: 0.7;
   position: fixed;
