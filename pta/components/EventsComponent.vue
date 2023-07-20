@@ -111,6 +111,7 @@ export default {
 ul {
   overflow: auto;
   -ms-overflow-style: none;
+  scrollbar-width: none;
   height: 27vw;
 }
 .listTitle,
