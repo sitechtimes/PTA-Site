@@ -1,8 +1,8 @@
 <template>
   <section class="container__carousel">
     <Carousel
-      :items-to-show="2.5"
-      :autoplay="2000"
+      :items-to-show="2"
+      :autoplay="2500"
       :wrap-around="true"
       :transition="500"
     >
@@ -81,7 +81,9 @@ export default defineComponent({
   opacity: 0.9;
   transform: rotateY(-20deg) scale(0.9);
 }
-
+.carousel__slide--visible {
+  transform: rotateY(0);
+}
 .carousel__slide--active ~ .carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
@@ -120,7 +122,6 @@ export default defineComponent({
 @media screen and (max-width: 1024px) {
   .container__carousel {
     width: 70vw;
-    
   }
 }
 </style>
