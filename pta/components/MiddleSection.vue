@@ -38,19 +38,19 @@ export default {
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
-      duration: 2,
+      duration: 1,
       x: -600,
       opacity: 0,
     });
     gsap.from("#minutes", {
       scrollTrigger: "#minutes",
-      duration: 2,
+      duration: 1,
       x: -600,
       opacity: 0,
     });
     gsap.from("#gallery", {
       scrollTrigger: "#gallery",
-      duration: 2,
+      duration: 1,
       x: -600,
       opacity: 0,
     });
