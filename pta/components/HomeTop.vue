@@ -12,6 +12,9 @@
         485 Clawson Street, Staten Island, NY 10306
       </p>
     </div>
+    <div class="events">
+      <UpcomingEvents />
+    </div>
   </div>
 </template>
 <script>
@@ -70,6 +73,13 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   bottom: 40%;
 }
 
+.events {
+  position: relative;
+  left: 53%;
+  top: 15%;
+  transform: scale(0.7);
+}
+
 @media screen and (max-width: 576px) {
   #homeTopText {
     color: var(--text-color);
@@ -100,6 +110,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-weight: 400;
     letter-spacing: 0.047vw;
     margin-bottom: 3vw;
+  }
+  .events {
+    margin: 0;
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    transform: scale(0.85);
   }
 }
 
