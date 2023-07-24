@@ -1,7 +1,7 @@
 <template>
   <section id="section__MiddleSection">
     <div class="information">
-      <div class="activities">
+      <div id="activities">
         <h2 ref="activities">ACTIVITIES</h2>
         <p ref="activitiesDesc">
           The SITHS PTA is a group of parents and faculty/staff members who work
@@ -9,14 +9,14 @@
           their school experience the best ever!
         </p>
       </div>
-      <div ref="minutes" class="minutes">
+      <div ref="minutes" id="minutes">
         <h2>MEETING MINUTES</h2>
         <a href="" ref="minutesLink" target="_blank" rel="noopener">
           <h3>Link to May 2023 Meeting Minutes</h3>
         </a>
       </div>
     </div>
-    <div ref="gallery" class="gallery">
+    <div ref="gallery" id="gallery">
       <PhotoGallery />
     </div>
   </section>
@@ -29,12 +29,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   mounted() {
-    const { activities } = this.$refs;
-    const { activitiesDesc } = this.$refs;
-    const { minutes } = this.$refs;
-    const { minutesLink } = this.$refs;
-    const { gallery } = this.$refs;
-    const timeline = gsap.timeline();
+    // const { activities } = this.$refs;
+    // const { activitiesDesc } = this.$refs;
+    // const { minutes } = this.$refs;
+    // const { minutesLink } = this.$refs;
+    // const { gallery } = this.$refs;
+    // const timeline = gsap.timeline();
+    console.log("mount");
+    gsap.from("#activities", {
+      scrollTrigger: "#activities",
+      delay: 0.2,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+    gsap.from("#minutes", {
+      scrollTrigger: "#minutes",
+      delay: 0.2,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+    gsap.from("#gallery", {
+      scrollTrigger: "#gallery",
+      delay: 0.2,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
   },
   data() {
     return {};
@@ -71,7 +93,7 @@ a {
   font-family: "Karla", sans-serif;
 }
 
-.minutes {
+#minutes {
   margin-top: 4rem;
 }
 
@@ -92,7 +114,7 @@ a {
   z-index: 2;
 }
 
-.gallery {
+#gallery {
   display: flex;
   width: 50vw;
   justify-content: center;
@@ -111,21 +133,12 @@ a {
     width: 100%;
     padding-left: 2rem;
   }
+
   .gallery {
     width: 90vw;
   }
 }
-@media screen and (min-width: 992px) and (orientation: portrait) {
-  p{
-    font-size: 2.5vw;
-  }
-  a{
-    font-size: 2vw;
-  }
-  h2{
-    font-size:3vw
-  }
-}
+
 @media screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;
