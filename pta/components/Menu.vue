@@ -67,12 +67,13 @@ export default {
 .slide-enter-active {
   animation: slide-right 0.3s;
 }
+
 img {
-  width: 1.7rem;
+  width: 2rem;
 }
 
 .menu-router {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .menu-btn {
