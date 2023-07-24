@@ -50,12 +50,12 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  background: var(--footer-bg);
+  background: white;
   border-radius: 19px;
   width: 50rem;
   padding: 1rem;
   margin-bottom: 3rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 .subtext {
   margin-top: 0.5rem;
