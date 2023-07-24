@@ -68,8 +68,9 @@ export default {
   animation: slide-right 0.3s;
 }
 img {
-  width: 3rem;
+  width: 2.5rem;
 }
+
 .menu-btn {
   position: fixed;
 }
@@ -88,5 +89,7 @@ img {
 .link-container {
   padding: 0;
   left: 0;
+  padding-top: 2rem;
+  padding-left: 1rem;
 }
 </style>
