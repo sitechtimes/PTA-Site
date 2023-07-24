@@ -90,7 +90,6 @@ img {
     right: 0;
   }
 }
-
 .link-container {
   padding: 0;
   left: 0;
