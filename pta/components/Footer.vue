@@ -60,6 +60,7 @@
 .subtext {
   margin-top: 0.5rem;
   margin-bottom: 0.7rem;
+  font-weight: bold;
 }
 .caption {
   margin-top: 0;
