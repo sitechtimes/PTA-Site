@@ -598,7 +598,7 @@ section {
   }
 
   #gradient {
-    height: 150vh;
+    height: 160vh;
   }
 
   .container__ContactUs {
@@ -611,34 +611,34 @@ section {
     width: 23vw;
   }
   #gradient {
-    height: 185vh;
+    height: 200vh;
   }
 
   .container__ContactUs {
-    height: 185vh;
-  }
-}
-
-@media screen and (max-height: 576px) {
-  .container__Navigation {
-    margin-top: 3rem;
-  }
-  #gradient {
-    height: 380vh;
-  }
-
-  .container__ContactUs {
-    height: 380vh;
+    height: 190vh;
   }
 }
 
 @media screen and (max-height: 768px) {
   #gradient {
-    height: 185vh;
+    height: 160vh;
   }
 
   .container__ContactUs {
-    height: 185vh;
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 140vh;
   }
 }
 
@@ -647,11 +647,11 @@ section {
     margin-top: 3rem;
   }
   #gradient {
-    height: 380vh;
+    height: 180vh;
   }
 
   .container__ContactUs {
-    height: 380vh;
+    height: 170vh;
   }
 }
 </style>
