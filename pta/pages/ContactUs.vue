@@ -151,6 +151,13 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 
+#container__Navigation {
+}
+#section__BoardMembers {
+}
+#section__JoinUs {
+}
+
 /* #gradient {
   width: 100vw;
   height: 100vh;
@@ -183,7 +190,7 @@ export default {
 
 #gradient {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   position: absolute;
   top: 0;
   left: 0;
@@ -203,7 +210,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
@@ -224,7 +231,6 @@ export default {
 
 .container__box {
   width: 70vw;
-  height: auto;
   background-color: #fcf6e9;
   border-radius: 1.5rem;
   display: flex;
@@ -232,8 +238,8 @@ export default {
   align-content: center;
   justify-content: center;
   padding: 2rem;
-  padding-bottom: 9vw;
-  padding-top: 4vw;
+  padding-bottom: 2em;
+  padding-top: 2em;
   margin: 2rem;
   overflow-x: hidden;
   word-wrap: break-word;
@@ -277,18 +283,18 @@ h1 {
   color: #483221;
   text-align: center;
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.05rem;
-  margin: 2rem 1rem;
+  margin: 1rem;
 }
 
 h2 {
   color: #483221;
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 800;
   line-height: auto;
@@ -310,7 +316,7 @@ p,
 li {
   color: #483221;
   font-family: var(--font-text);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -318,7 +324,7 @@ li {
 
 a {
   font-family: var(--font-text);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-style: normal;
   font-weight: 500;
   line-height: 2rem;
@@ -362,7 +368,30 @@ section {
     margin-top: 6vw;
   }
 }
+@media only screen and (max-width: 1450px) {
+  #section__JoinUs {
+    height: 40rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.2rem;
+  }
+}
 @media only screen and (max-width: 1200px) {
+  #section__JoinUs {
+    height: 34rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1rem;
+  }
+
+  .container__box {
+    padding: 0;
+    height: 90%;
+  }
   .container {
     top: 10vh;
   }
@@ -482,7 +511,7 @@ section {
   .container__ContactUs {
     display: flex;
     flex-direction: column;
-    height: 160vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
   }
@@ -520,14 +549,14 @@ section {
 
 @media screen and (max-height: 1200px) {
   #gradient {
-    height: 125vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
   .container__ContactUs {
-    height: 125vh;
+    height: 100vh;
   }
 
   /* button {
@@ -584,11 +613,11 @@ section {
 
 @media screen and (max-height: 992px) and (orientation: landscape) {
   #gradient {
-    height: 160vh;
+    height: 120vh;
   }
 
   .container__ContactUs {
-    height: 160vh;
+    height: 90vh;
   }
 }
 
