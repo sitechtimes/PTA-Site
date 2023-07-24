@@ -13,10 +13,10 @@
   --secondary-bg: #fce5ac;
   --bg-gradient: linear-gradient(
     180deg,
-    #ffb598 0%,    
-    #fccfb1 18%,    
-    #ffedc5 40%,    
-    #faf2e1 75%,    
+    #ffb598 0%,
+    #fccfb1 18%,
+    #ffedc5 40%,
+    #faf2e1 75%,
     #fff 85%
   );
   /*   --footer-bg: linear-gradient(
@@ -28,7 +28,12 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(circle, rgb(255, 241, 228) 0%, rgb(250, 219, 194) 52%, rgb(255, 199, 185) 100%);
+  --footer-bg: radial-gradient(
+    circle,
+    rgb(255, 241, 228) 0%,
+    rgb(250, 219, 194) 52%,
+    rgb(255, 199, 185) 100%
+  );
 
   /* media queries max width
   xs:  ≥356px
@@ -80,7 +85,7 @@ h4 {
   font-weight: 800;
   font-size: 4rem;
   color: var(--text-color);
-  margin: 13% 0 0 8%;
+  margin: 10% 0 0 8%;
 }
 .subh {
   font-size: 3rem;
@@ -140,10 +145,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 280px) and (orientation: portrait) {
-  #home, #contact, #events, #donate{
-    height: 6vw;
-    width: 6vw;
-  }
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   #nav {
@@ -170,10 +171,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait) {
-  #home, #contact, #events, #donate{
-    height: 6vw;
-    width: 6vw;
-  }
   #nav {
     display: none;
   }
@@ -199,10 +196,6 @@ h4 {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
-  #home, #contact, #events, #donate{
-    height: 3vw;
-    width: 3vw;
-  }
   #nav {
     display: none;
   }
@@ -228,7 +221,6 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  
   #nav {
     display: none;
   }
@@ -254,7 +246,7 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
-  .link-container{
+  .link-container {
     margin-top: 10vw;
   }
   /* li{
@@ -287,6 +279,21 @@ h4 {
     }
   }
 }
+@media screen and (min-width: 992px) and (orientation: portrait) {
+.menu-btn{
+  margin-top: 4vw;
+}
+.menu-btn span,
+.menu-btn::before,
+.menu-btn::after {
+  display: block;
+  background-color: var(--text-color);
+  height: 4px;
+  width: 2.5rem;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+}
+}
 @media only screen and (min-width: 1000px) {
   .menu {
     display: none;
@@ -294,15 +301,14 @@ h4 {
   #nav {
     display: flex;
   }
-  #home, #contact, #events, #donate{
-    height: 2vw;
-    width: 2vw;
+
+  #home,
+  #events {
+    padding-top: 0.5vw;
   }
-  #home, #events{
-    padding-top: .5vw;
-  }
-  #contact, #donate{
-    padding-top: .7vw;
+  #contact,
+  #donate {
+    padding-top: 0.7vw;
   }
 }
 @media only screen and (min-width: 1300px) {
@@ -312,17 +318,15 @@ h4 {
   #nav {
     display: flex;
   }
-  #home, #contact, #events, #donate{
-    height: 2vw;
-    width: 2vw;
-  }
-  #home, #events{
-    padding-top: .3vw;
-  }
-  #contact, #donate{
-    padding-top: .5vw;
-  }
 
+  #home,
+  #events {
+    padding-top: 0.3vw;
+  }
+  #contact,
+  #donate {
+    padding-top: 0.5vw;
+  }
 }
 @media only screen and (min-width: 1500px) {
   .menu {
@@ -331,26 +335,23 @@ h4 {
   #nav {
     display: flex;
   }
-  #home, #contact, #events, #donate{
-    height: 2vw;
-    width: 2vw;
-  }
-  #home, #events{
-    padding-top: 0vw;
-  }
-  #contact, #donate{
-    padding-top: 0vw;
-  }
 
+  #home,
+  #events {
+    padding-top: 0vw;
+  }
+  #contact,
+  #donate {
+    padding-top: 0vw;
+  }
 }
-@media only screen and (min-width: 1000px) and ( orientation: landscape) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
   .menu {
     display: none;
   }
   #nav {
     display: flex;
   }
-
 }
 
 @media only screen and (max-width: 576px) {

@@ -3,13 +3,14 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
+        <HomePageScroll />
       </div>
       <div class="div2">
         <MiddleSection />
       </div>
     </div>
   </div>
-</template>
+</template>s
 
 <script>
 export default {
