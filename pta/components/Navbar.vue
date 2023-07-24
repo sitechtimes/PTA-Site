@@ -9,7 +9,7 @@
         />
       </NuxtLink>
     </div>
-    <div id="nav">
+    <div id="naV">
       <div class="group">
         <NuxtLink to="/">
           <img
@@ -69,11 +69,9 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 
-#nav {
-  display: flex;
+#naV {
   flex-direction: row;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 a {
@@ -105,7 +103,6 @@ a {
 }
 
 .group {
-  display: flex;
   width: 12rem;
   align-self: center;
 }
@@ -118,11 +115,6 @@ a:visited {
   .group {
     width: 10rem;
   }
-  .icon {
-    height: 30px;
-    padding: 0 10px 0 0;
-    margin-top: -10px;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -131,7 +123,7 @@ a:visited {
   }
 
   .icon {
-    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .group {
