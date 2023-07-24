@@ -68,7 +68,11 @@ export default {
   animation: slide-right 0.3s;
 }
 img {
-  width: 2.5rem;
+  width: 1.7rem;
+}
+
+.menu-router {
+  font-size: 1.7rem;
 }
 
 .menu-btn {
