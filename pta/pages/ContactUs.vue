@@ -378,6 +378,22 @@ section {
     font-size: 1.2rem;
   }
 }
+@media screen and (max-height: 1200px) {
+  #gradient {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container__ContactUs {
+    height: 100vh;
+  }
+
+  /* button {
+    width: 17vw;
+  } */
+}
 @media only screen and (max-width: 1200px) {
   #section__JoinUs {
     height: 34rem;
@@ -414,6 +430,47 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  #gradient {
+    height: 130vh;
+  }
+
+  .container__ContactUs {
+    height: 130vh;
+  }
+  button {
+    width: 20vw;
+  }
+
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+
+  button {
+    width: 20vw;
+  }
+
+  #gradient {
+    height: 160vh;
+  }
+
+  .container__ContactUs {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-height: 992px) and (orientation: landscape) {
+  #gradient {
+    height: 120vh;
+  }
+  .container__ContactUs {
+    height: 90vh;
+  }
+}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   button {
     font-size: 2vw;
@@ -431,6 +488,52 @@ section {
   button {
     font-size: 3vw;
     margin-top: 15vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  button {
+    width: 23vw;
+  }
+  #gradient {
+    height: 100vh;
+  }
+  .container__ContactUs {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  #gradient {
+    height: 160vh;
+  }
+
+  .container__ContactUs {
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 150vh;
+  }
+
+  .container__ContactUs {
+    height: 140vh;
+  }
+}
+
+@media screen and (max-height: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 180vh;
+  }
+
+  .container__ContactUs {
+    height: 170vh;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -532,155 +635,6 @@ section {
 
   .container__ParentVolunteer {
     margin-left: 2rem;
-  }
-}
-
-/* @media screen and (min-width: 576px) {
-}
-
-@media screen and (min-width: 576px) and (orientation: landscape) {
-}
-
-@media only screen and (max-width: 450px) {
-}
-
-@media only screen and (max-width: 356px) {
-} */
-
-@media screen and (max-height: 1200px) {
-  #gradient {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .container__ContactUs {
-    height: 100vh;
-  }
-
-  /* button {
-    width: 17vw;
-  } */
-}
-
-@media screen and (max-height: 992px) {
-  #gradient {
-    height: 130vh;
-  }
-
-  .container__ContactUs {
-    height: 130vh;
-  }
-}
-
-@media screen and (max-height: 992px) and (orientation: landscape) {
-  #gradient {
-    height: 160vh;
-  }
-
-  .container__ContactUs {
-    height: 160vh;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  button {
-    width: 20vw;
-  }
-
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    width: 23vw;
-  }
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-height: 992px) and (orientation: landscape) {
-  #gradient {
-    height: 120vh;
-  }
-
-  .container__ContactUs {
-    height: 90vh;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  button {
-    width: 20vw;
-  }
-
-  #gradient {
-    height: 160vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    width: 23vw;
-  }
-  #gradient {
-    height: 200vh;
-  }
-
-  .container__ContactUs {
-    height: 190vh;
-  }
-}
-
-@media screen and (max-height: 768px) {
-  #gradient {
-    height: 160vh;
-  }
-
-  .container__ContactUs {
-    height: 130vh;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .container__Navigation {
-    margin-top: 3rem;
-  }
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 140vh;
-  }
-}
-
-@media screen and (max-height: 576px) {
-  .container__Navigation {
-    margin-top: 3rem;
-  }
-  #gradient {
-    height: 180vh;
-  }
-
-  .container__ContactUs {
-    height: 170vh;
   }
 }
 </style>
