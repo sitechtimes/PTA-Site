@@ -4,5 +4,4 @@ export default defineNuxtConfig({
     '@nuxt/content'
   ], 
   devtools: { enabled: true },
-});
-//please work
+})
