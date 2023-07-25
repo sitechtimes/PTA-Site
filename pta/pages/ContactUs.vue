@@ -403,7 +403,6 @@ section {
     font-size: 1.1rem;
   }
   .container__box {
-    padding: 0;
     height: fit-content;
   }
   .container {
@@ -481,7 +480,10 @@ section {
     height: 100vh;
   }
   #section__JoinUs {
-    height: 48rem;
+    height: 46rem;
+  }
+  .container__box {
+    padding: 5px;
   }
   .container__ParentVolunteer {
     margin: 5px auto;
@@ -509,12 +511,13 @@ section {
     margin-top: 1rem;
   }
   #gradient {
-    height: 15vh;
+  }
+  .container {
+    top: 3rem;
   }
   .container__ContactUs {
-    height: 14vh;
   }
-}
+} /* 
 @media screen and (max-height: 576px) {
   .container__Navigation {
     margin-top: 3rem;
@@ -600,5 +603,5 @@ section {
     margin-top: 5vw;
     width: 20vw;
   }
-}
+} */
 </style>
