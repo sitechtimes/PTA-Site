@@ -196,7 +196,6 @@ export default {
   left: 0;
   padding: 0;
   background: var(--bg-gradient);
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

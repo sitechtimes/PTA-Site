@@ -76,7 +76,7 @@ export default {
 
 a {
   display: flex;
-  width: 10.5rem;
+  width: 9rem;
   text-decoration: none;
   color: var(--text-color);
 }
