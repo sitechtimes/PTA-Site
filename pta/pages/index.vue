@@ -10,21 +10,15 @@
       </div>
     </div>
   </div>
-</template>
+</template>s
 
 <script>
+useHead({
+  script: [
+    { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+  ],
+});
 
-export default {
-
-  head() {
-    return {
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      ],
-
-    }
-  },
-}
 
 </script>
 
