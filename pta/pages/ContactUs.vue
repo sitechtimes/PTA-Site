@@ -501,7 +501,6 @@ section {
   #gradient {
     height: 160vh;
   }
-
   .container__ContactUs {
     height: 130vh;
   }
@@ -513,12 +512,10 @@ section {
   #gradient {
     height: 15vh;
   }
-
   .container__ContactUs {
     height: 14vh;
   }
 }
-
 @media screen and (max-height: 576px) {
   .container__Navigation {
     margin-top: 3rem;
@@ -526,33 +523,29 @@ section {
   #gradient {
     height: 13vh;
   }
-
   .container__ContactUs {
     height: 13vh;
   }
 }
 @media only screen and (max-width: 576px) {
   #gradient {
-    height: 200vh;
+    height: 142vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-
   #PTAInformation {
     margin-top: 0.5rem;
   }
-
   .container {
     top: 10vh;
   }
-
   .container__box {
     width: 80vw;
     border-radius: 1rem;
   }
   #section__JoinUs {
-    height: 300vw;
+    height: 200vw;
   }
   .container__ContactUs {
     display: flex;
@@ -561,14 +554,12 @@ section {
     align-items: center;
     justify-content: center;
   }
-
   .container__BoardMembers-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
   }
-
   .container__BoardMembers-profile img {
     width: 25vw;
   }
@@ -578,19 +569,16 @@ section {
   h1 {
     font-size: 4vw;
   }
-
   h2 {
     color: #483221;
     font-family: var(--font-heading);
     font-size: 3vw;
   }
-
   h3 {
     font-size: 5vw;
     line-height: 2rem;
     margin-bottom: 0.8rem;
   }
-
   p,
   li {
     color: #483221;
@@ -599,7 +587,6 @@ section {
     font-style: normal;
     font-weight: 500;
   }
-
   a {
     font-family: var(--font-text);
     font-size: 3vw;
@@ -607,7 +594,6 @@ section {
     font-weight: 500;
     line-height: 1.5rem;
   }
-
   button {
     font-size: 3.5vw;
     border-radius: 1rem;
@@ -618,7 +604,7 @@ section {
 }
 @media only screen and (max-width: 447px) {
   .container__ContactUs {
-    height: 200vw;
+    height: 230vw;
   }
 }
 </style>
