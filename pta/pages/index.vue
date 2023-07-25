@@ -21,6 +21,7 @@ export default {
       ],
       title: "Home | PTA",
     };
+
   },
 };
 </script>
