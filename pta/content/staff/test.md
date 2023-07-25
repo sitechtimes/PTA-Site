@@ -1,5 +1,6 @@
 ---
-image:
-name:
-email:
+image: test
+name: test
+role: test
+email: test
 ---

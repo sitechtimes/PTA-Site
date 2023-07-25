@@ -23,6 +23,13 @@ collections: # A list of collections the CMS should be able to edit
           required: true,
         }
       - {
+          label: "Role",
+          name: "roles",
+          widget: "string",
+          tagname: "h4",
+          required: true,
+        }
+      - {
           label: "Email",
           name: "email",
           widget: "string",
