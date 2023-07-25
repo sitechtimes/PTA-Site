@@ -396,30 +396,23 @@ section {
 }
 @media only screen and (max-width: 1200px) {
   #section__JoinUs {
-    height: 34rem;
+    height: 40rem;
   }
   p,
   li,
   a {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-
   .container__box {
     padding: 0;
-    height: 90%;
+    height: fit-content;
   }
   .container {
-    top: 10vh;
+    top: 6vh;
   }
   button {
     font-size: 2vw;
     margin-top: 10vw;
-  }
-}
-
-@media only screen and (max-width: 1030px) {
-  .container__ParentVolunteer {
-    margin-left: 4.5rem;
   }
 }
 
@@ -431,35 +424,23 @@ section {
 }
 
 @media screen and (max-width: 992px) {
-  #gradient {
-    height: 130vh;
-  }
-
-  .container__ContactUs {
-    height: 130vh;
-  }
-  button {
-    width: 20vw;
-  }
-
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
+  .container {
+    top: 3vh;
   }
 
   button {
     width: 20vw;
   }
-
-  #gradient {
-    height: 160vh;
+  #section__JoinUs {
+    height: 43rem;
   }
-
-  .container__ContactUs {
-    height: 150vh;
+  p,
+  li,
+  a {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -495,10 +476,24 @@ section {
     width: 23vw;
   }
   #gradient {
-    height: 100vh;
+    height: 110vh;
   }
   .container__ContactUs {
     height: 100vh;
+  }
+  #section__JoinUs {
+    height: 48rem;
+  }
+  .container__ParentVolunteer {
+    margin: 5px auto;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.03rem;
+  }
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -513,14 +508,14 @@ section {
 }
 @media screen and (max-width: 576px) {
   .container__Navigation {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   #gradient {
-    height: 150vh;
+    height: 15vh;
   }
 
   .container__ContactUs {
-    height: 140vh;
+    height: 14vh;
   }
 }
 
@@ -529,20 +524,16 @@ section {
     margin-top: 3rem;
   }
   #gradient {
-    height: 180vh;
+    height: 13vh;
   }
 
   .container__ContactUs {
-    height: 170vh;
+    height: 13vh;
   }
 }
 @media only screen and (max-width: 576px) {
-  .container__ContactUs {
-    height: 180vh;
-  }
-
   #gradient {
-    height: 180vh;
+    height: 200vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -553,68 +544,20 @@ section {
   }
 
   .container {
-    top: 15vh;
+    top: 10vh;
   }
 
   .container__box {
-    display: flex;
-    width: 75vw;
+    width: 80vw;
     border-radius: 1rem;
   }
-
-  h1 {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    margin: 0.5rem;
+  #section__JoinUs {
+    height: 300vw;
   }
-
-  h2 {
-    color: #483221;
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: auto;
-    letter-spacing: 0.1rem;
-    margin-top: 1.3rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-    line-height: 2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  p,
-  li {
-    color: #483221;
-    font-family: var(--font-text);
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 130%;
-  }
-
-  a {
-    font-family: var(--font-text);
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5rem;
-  }
-
-  button {
-    font-size: 3.5vw;
-    border-radius: 1rem;
-    margin-bottom: 0;
-    margin-top: 5vw;
-    width: 20vw;
-  }
-
   .container__ContactUs {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 160vw;
     align-items: center;
     justify-content: center;
   }
@@ -632,9 +575,50 @@ section {
   .container__Navigation {
     width: 90vw;
   }
+  h1 {
+    font-size: 4vw;
+  }
 
-  .container__ParentVolunteer {
-    margin-left: 2rem;
+  h2 {
+    color: #483221;
+    font-family: var(--font-heading);
+    font-size: 3vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p,
+  li {
+    color: #483221;
+    font-family: var(--font-text);
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  a {
+    font-family: var(--font-text);
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+
+  button {
+    font-size: 3.5vw;
+    border-radius: 1rem;
+    margin-bottom: 0;
+    margin-top: 5vw;
+    width: 20vw;
+  }
+}
+@media only screen and (max-width: 447px) {
+  .container__ContactUs {
+    height: 200vw;
   }
 }
 </style>
