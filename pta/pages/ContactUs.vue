@@ -185,7 +185,6 @@ export default {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 #gradient {
@@ -202,7 +201,6 @@ export default {
   align-content: center;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .container__ContactUs {
@@ -513,7 +511,7 @@ section {
   #gradient {
   }
   .container {
-    top: 3rem;
+    top: 2rem;
   }
   .container__ContactUs {
   }
