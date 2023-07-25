@@ -602,9 +602,4 @@ section {
     width: 20vw;
   }
 }
-@media only screen and (max-width: 447px) {
-  .container__ContactUs {
-    height: 230vw;
-  }
-}
 </style>
