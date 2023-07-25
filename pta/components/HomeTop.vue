@@ -75,9 +75,69 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 
 .events {
   position: relative;
-  left: 53%;
-  top: 15%;
-  transform: scale(0.7);
+  left: 57%;
+  top: 17%;
+  width: 37vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .events {
+    margin: 0;
+    margin-top: 40vh;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .events {
+    position: relative;
+    left: 70%;
+    top: -20%;
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .events {
+    margin: 0;
+    margin-top: 35vh;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .events {
+    position: relative;
+    left: 70%;
+    top: 3%;
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events {
+    margin: 0;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .events {
+    position: relative;
+    left: 70%;
+    top: 10%;
+    width: 15vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -113,11 +173,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
   .events {
     margin: 0;
-    margin-top: 15rem;
+    margin-top: 28vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    transform: scale(0.85);
+    width: 100vw;
   }
 }
 
@@ -191,7 +251,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-family: var(--font-heading);
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 30vw);
+    transform: translate(-50%, 20vw);
     text-align: left;
   }
   #address {
@@ -286,7 +346,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-family: var(--font-heading);
     position: absolute;
     transform: translate(-50%, 0vw);
-    top: 28%;
+    top: 20%;
     left: 50%;
     text-align: left;
   }

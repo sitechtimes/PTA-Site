@@ -2,12 +2,7 @@
   <div id="upcomingEvents">
     <h3 class="subh">Upcoming Events</h3>
     <ul class="subtext" id="eventsCon">
-      <li
-        v-for="(event, index) in upcomingEvents"
-        :key="index"
-        @click="() => selectEvent(event)"
-        class="uniqEvent"
-      >
+      <li v-for="(event, index) in upcomingEvents" :key="index" id="uniqEvent">
         <div class="uniqEvent">
           <h5 class="listTitle">{{ event.title }}</h5>
           <h5 class="listDate">{{ event.date }}</h5>
@@ -49,12 +44,10 @@ export default {
 
     return {
       upcomingEvents,
-      selectedEvent,
-      selectEvent,
     };
   },
   mounted() {
-    gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
+    gsap.from(".subh", { delay: 0.5, duration: 1, x: 1000, opacity: 0 });
     gsap.from("li", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
   },
 };
@@ -64,13 +57,16 @@ export default {
 @import url(../assets/base.css);
 .subh {
   margin-top: 1.5rem;
-}
-#wrapper {
-  height: 60vw;
+  width: 32vw;
 }
 #eventsCon {
   list-style-type: none;
   padding-left: 0;
+  width: 32vw;
+}
+
+#upcomingEvents {
+  width: 32vw;
 }
 .uniqEvent {
   display: flex;
@@ -78,16 +74,11 @@ export default {
   justify-content: space-between;
   cursor: pointer;
 }
-#title {
-  margin: 0;
-  font-family: "Kumbh Sans", sans serif;
-  font-weight: bolder;
-}
 ul {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 27vw;
+  height: 20vw;
   scrollbar-width: none;
 }
 .listTitle,
@@ -96,17 +87,10 @@ ul {
   font-weight: 400;
 }
 .listTitle {
-  width: 20vw;
+  width: 10vw;
 }
 .listDate {
   text-align: end;
-}
-#head {
-  position: absolute;
-  top: 70vw;
-  right: 19vw;
-  height: 30vw;
-  padding-bottom: 10vw;
 }
 #upcomingEvents {
   color: var(--text-color);
@@ -121,56 +105,192 @@ li {
   padding: 0vw 3vw 0vw 3vw;
   margin-bottom: 2vw;
   border-radius: 1vw;
-  width: 35vw;
+  width: 25vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#top {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  align-items: center;
+@media screen and (max-width: 1200px) {
+  #upcomingEvents {
+    width: 73.5vw;
+    height: 50vw;
+  }
+  #eventsCon {
+    width: 73.5vw;
+    height: 25vw;
+  }
+  .subh {
+    font-size: 3vw;
+    width: 73.5vw;
+  }
+  .listTitle {
+    width: 30vw;
+  }
+  .listTitle,
+  .listDate {
+    font-size: 2vw;
+  }
+  li {
+    width: 33rem;
+  }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  #upcomingEvents {
+    width: 40vw;
+    height: 50vw;
+  }
+  #eventsCon {
+    width: 40vw;
+    height: 30vw;
+  }
+  .subh {
+    font-size: 3vw;
+    width: 40vw;
+  }
+  .listTitle {
+    width: 30vw;
+  }
+  .listTitle,
+  .listDate {
+    font-size: 1.5vw;
+  }
+  li {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #upcomingEvents {
+    width: 73.5vw;
+    height: 50vw;
+  }
+  #eventsCon {
+    width: 73.5vw;
+    height: 30vw;
+  }
+  .subh {
+    font-size: 3vw;
+    width: 73.5vw;
+  }
+  .listTitle {
+    width: 30vw;
+  }
+  .listTitle,
+  .listDate {
+    font-size: 2vw;
+  }
+  li {
+    width: 33rem;
+  }
+}
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  #upcomingEvents {
+    width: 40vw;
+    height: 50vw;
+  }
+  #eventsCon {
+    width: 40vw;
+    height: 30vw;
+  }
+  .subh {
+    font-size: 3vw;
+    width: 40vw;
+  }
+  .listTitle {
+    width: 30vw;
+  }
+  .listTitle,
+  .listDate {
+    font-size: 1.5vw;
+  }
+  li {
+    width: 15rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  #upcomingEvents {
+    margin-bottom: 10vw;
+    width: 75vw;
+  }
+  .subh {
+    font-size: 5vw;
+    width: 75vw;
+  }
+  #eventsCon {
+    height: 25vh;
+    width: 75vw;
+  }
+  .uniqEvent {
+    margin: 0 1rem 1rem 1rem;
+  }
+  li {
+    width: 68vw;
+    border-radius: 2.5vw;
+  }
+  .listTitle,
+  .listDate {
+    width: 30vw;
+    font-size: 3.7vw;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  #upcomingEvents {
+    width: 45vw;
+    height: 50vw;
+  }
+  #eventsCon {
+    width: 45vw;
+    height: 30vw;
+  }
+  .subh {
+    font-size: 3vw;
+    width: 45vw;
+  }
   .listTitle {
-    width: 18vw;
+    width: 30vw;
+  }
+  .listTitle,
+  .listDate {
+    font-size: 1.5vw;
+  }
+  li {
+    width: 15rem;
   }
 }
 
 @media screen and (max-width: 576px) {
-  #wrapper {
-    height: 170vw;
-  }
-  #top {
-    flex-direction: column;
-  }
   #upcomingEvents {
     margin-bottom: 10vw;
+    width: 75vw;
+  }
+  .subh {
+    font-size: 5vw;
+    width: 75vw;
   }
   #eventsCon {
-    height: 50vw;
+    height: 25vh;
+    width: 75vw;
   }
   .uniqEvent {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 1rem 1rem;
   }
   li {
-    width: 76vw;
+    width: 68vw;
     border-radius: 2.5vw;
-    margin-bottom: 4vw;
   }
-  .listTitle {
-    width: 45vw;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .listTitle {
-    width: 40vw;
+  .listTitle,
+  .listDate {
+    width: 30vw;
+    font-size: 3.7vw;
   }
 }
-@media only screen and (max-width: 356px) {
-  .uniqEvent {
-    margin: 0 0.7rem 0 0.7rem;
+
+@media screen and (max-height: 768px) {
+  #eventsCon {
+    height: 20vh;
   }
 }
 </style>
