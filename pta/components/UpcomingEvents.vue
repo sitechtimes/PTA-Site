@@ -1,8 +1,14 @@
 <template>
   <div id="upcomingEvents">
-    <h3 class="subh">Upcoming Events</h3>
+    <h3 class="subh" ref="subh">Upcoming Events</h3>
     <ul class="subtext" id="eventsCon">
-      <li v-for="(event, index) in upcomingEvents" :key="index" id="uniqEvent">
+      <li
+        v-for="(event, index) in upcomingEvents"
+        :key="index"
+        id="uniqEvent"
+        class="li"
+        ref="li"
+      >
         <div class="uniqEvent">
           <h5 class="listTitle">{{ event.title }}</h5>
           <h5 class="listDate">{{ event.date }}</h5>
@@ -47,8 +53,10 @@ export default {
     };
   },
   mounted() {
-    gsap.from(".subh", { delay: 0.5, duration: 1, x: 1000, opacity: 0 });
-    gsap.from("li", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
+    const { li } = this.$refs;
+    const { subh } = this.$refs;
+    gsap.from(li, { delay: 1.2, duration: 0.5, x: 7, opacity: 0 });
+    gsap.from(subh, { delay: 1, duration: 0.5, x: 7, opacity: 0 });
   },
 };
 </script>
@@ -127,16 +135,16 @@ li {
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   #upcomingEvents {
-    width: 40vw;
+    width: 38vw;
     height: 50vw;
   }
   #eventsCon {
-    width: 40vw;
+    width: 38vw;
     height: 30vw;
   }
   .subh {
     font-size: 3vw;
-    width: 40vw;
+    width: 38vw;
   }
   .listTitle {
     width: 30vw;
