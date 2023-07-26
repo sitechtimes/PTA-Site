@@ -11,17 +11,18 @@
       </div>
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
-
-        <a
+<div>
+  <a
           href=""
           class="linkCon"
           ref="minutesLink"
           target="_blank"
           rel="noopener"
         >
-          <img src="../components/icons/link.svg" alt="link icon" />
+          <img id="linkIcon" src="../components/icons/link.svg" alt="link icon" />
           <h3 class="text">Link to May 2023 Meeting Minutes</h3>
         </a>
+</div>
       </div>
     </div>
     <div ref="gallery" id="gallery">
