@@ -11,18 +11,23 @@
       </div>
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
-<div>
-  <a
-          href=""
-          class="linkCon"
-          ref="minutesLink"
-          target="_blank"
-          rel="noopener"
-        >
-          <img id="linkIcon" src="../components/icons/link.svg" alt="link icon" />
-          <h3 class="text">Link to May 2023 Meeting Minutes</h3>
-        </a>
-</div>
+        <div>
+          <a
+            href=""
+            class="linkCon"
+            ref="minutesLink"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3 class="text">
+              <img
+                id="linkIcon"
+                src="../components/icons/link.svg"
+                alt="link icon"
+              />Link to May 2023 Meeting Minutes
+            </h3>
+          </a>
+        </div>
       </div>
     </div>
     <div ref="gallery" id="gallery">
@@ -102,10 +107,12 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   flex-direction: row;
 }
 img {
-  height: 0%;
   margin-right: 0.5rem;
-  margin-top: 2%;
   vertical-align: middle;
+  width: 1.5vw;
+  fill: var(--text-color);
+  height: 1.5vw;
+  margin-bottom: 0.4vw;
 }
 
 #section__MiddleSection {
