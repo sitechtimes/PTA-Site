@@ -3,43 +3,25 @@
     <Popup
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
+      :event="selectedEvent"
     >
-      <h5 class="text" id="title">Jessie's Birthday</h5>
-      <p class="text" id="date">05/23/2023</p>
-      <img id="img" src="" alt="" />
-      <p class="text" id="body">
-        The SITHS PTA is a group of parents and faculty/staff members who work
-        together to provide our children with resources and activities to make
-        their school experience the best ever!
-      </p>
+      <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
+      <p class="text" id="date">{{ selectedEvent.date }}</p>
+      <img id="img" :src="selectedEvent.imageSrc" alt="" />
+      <p class="text" id="body">{{ selectedEvent.body }}</p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
-        <li @click="() => TogglePopup('buttonTrigger')" class="li1">
+        <li
+          v-for="(event, index) in upcomingEvents"
+          :key="index"
+          @click="() => selectEvent(event)"
+          class="uniqEvent"
+        >
           <div class="uniqEvent">
-            <h5 class="listTitle">Jessie's Birthday</h5>
-            <h5 class="listDate">05/23/2023</h5>
-          </div>
-        </li>
-        <li @click="() => TogglePopup('buttonTrigger')" class="li2">
-          <div class="uniqEvent">
-            <h5 class="listTitle">Bake Sale</h5>
-            <h5 class="listDate">05/27/2023</h5>
-          </div>
-        </li>
-        <li @click="() => TogglePopup('buttonTrigger')" class="li3">
-          <div class="uniqEvent">
-            <h5 class="listTitle">Very Long Named Event</h5>
-            <h5 class="listDate">05/30/2023</h5>
-          </div>
-        </li>
-        <li @click="() => TogglePopup('buttonTrigger')" class="li4">
-          <div class="uniqEvent">
-            <h5 class="listTitle">
-              Super Duper Very Extremely Long Named Event
-            </h5>
-            <h5 class="listDate">05/31/2023</h5>
+            <h5 class="listTitle">{{ event.title }}</h5>
+            <h5 class="listDate">{{ event.date }}</h5>
           </div>
         </li>
       </ul>
@@ -50,8 +32,18 @@
 import { ref } from "vue";
 import Popup from "../components/Popup.vue";
 import { gsap } from "gsap";
+
 export default {
+  components: {
+    Popup,
+  },
   setup() {
+    const selectedEvent = ref(null);
+
+    const selectEvent = (event) => {
+      selectedEvent.value = event;
+      TogglePopup("buttonTrigger"); // Open the popup
+    };
     const popupTriggers = ref({
       buttonTrigger: false,
       timedTrigger: false,
@@ -61,6 +53,29 @@ export default {
       popupTriggers.value[trigger] = !popupTriggers.value[trigger];
     };
 
+    const upcomingEvents = ref([
+      {
+        title: "Jessie's Birthday",
+        date: "05/23/2023",
+        body: "<3",
+      },
+      {
+        title: "Bake Sale",
+        date: "05/27/2023",
+        body: "<3",
+      },
+      {
+        title: "Very Long Named Event",
+        date: "05/30/2023",
+        body: "<3",
+      },
+      {
+        title: "Super Duper Very Extremely Long Named Event",
+        date: "05/31/2023",
+        body: "<3",
+      },
+    ]);
+
     setTimeout(() => {
       popupTriggers.value.timedTrigger = true;
     }, 3000);
@@ -69,14 +84,14 @@ export default {
       Popup,
       popupTriggers,
       TogglePopup,
+      upcomingEvents,
+      selectedEvent,
+      selectEvent,
     };
   },
   mounted() {
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
-    gsap.from(".li1", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
-    gsap.from(".li2", { delay: 1.1, duration: 0.5, y: 100, opacity: 0 });
-    gsap.from(".li3", { delay: 1.5, duration: 0.5, y: 100, opacity: 0 });
-    gsap.from(".li4", { delay: 1.9, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from("li", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
   },
 };
 </script>

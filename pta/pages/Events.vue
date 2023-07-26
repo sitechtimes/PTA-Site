@@ -14,7 +14,6 @@
             ></iframe>
           </div>
         </section>
-        <ScrollTop />
       </div>
     </div>
     <Footer />
