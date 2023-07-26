@@ -79,7 +79,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   top: 17%;
   width: 37vw;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
@@ -98,12 +98,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: -30%;
     width: 20vw;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   .events {
     margin: 0;
-    margin-top: 38vh;
     display: flex;
     justify-content: center;
     left: 0%;
@@ -121,22 +120,25 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 768px) {
-  .events {
+  /* .events {
     margin: 0;
     margin-top: 35vh;
     display: flex;
     justify-content: center;
     left: 0%;
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  .events {
+  /*  .events {
     position: relative;
     left: 70%;
     top: 5%;
     width: 15vw;
+  }*/
+  #homeTopText {
+    transform: translate(-50%, 1vw);
   }
 }
 
@@ -147,7 +149,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     position: absolute;
     top: 5%;
     left: 45%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
@@ -187,7 +189,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-family: var(--font-heading);
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
