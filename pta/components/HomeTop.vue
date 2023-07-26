@@ -87,7 +87,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -95,7 +95,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   .events {
     position: relative;
     left: 70%;
-    top: -20%;
+    top: -30%;
     width: 20vw;
   }
 }
@@ -103,31 +103,31 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @media screen and (max-width: 992px) {
   .events {
     margin: 0;
-    margin-top: 35vh;
+    margin-top: 38vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .events {
     position: relative;
-    left: 70%;
-    top: 3%;
-    width: 20vw;
+    left: 60%;
+    top: 0%;
+    width: 35vw;
   }
 }
 
 @media screen and (max-width: 768px) {
   .events {
     margin: 0;
-    margin-top: 25vh;
+    margin-top: 35vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -135,7 +135,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   .events {
     position: relative;
     left: 70%;
-    top: 10%;
+    top: 5%;
     width: 15vw;
   }
 }
@@ -173,11 +173,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
   .events {
     margin: 0;
-    margin-top: 28vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
