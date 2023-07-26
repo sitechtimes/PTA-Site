@@ -6,10 +6,14 @@
         <section id="top">
           <EventsComponent />
           <div id="calender">
-            <iframe id="calenderInner" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548" frameborder="0" scrolling="no"></iframe>
+            <iframe
+              id="calenderInner"
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
           </div>
         </section>
-        <ScrollTop />
       </div>
     </div>
   </div>
@@ -26,12 +30,11 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-#calenderInner{
-    border: solid 1px #777;
-    width: 35vw;
-    height: 30vw;
-
-  }
+#calenderInner {
+  border: solid 1px #777;
+  width: 35vw;
+  height: 30vw;
+}
 #wrapper {
   height: 60vw;
 }
@@ -133,20 +136,18 @@ li {
   .listTitle {
     width: 18vw;
   }
-  #calenderInner{
+  #calenderInner {
     border: solid 1px #777;
     width: 35vw;
     height: 30vw;
-
   }
 }
 
 @media screen and (max-width: 576px) {
-  #calenderInner{
+  #calenderInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
-
   }
   #wrapper {
     height: 170vw;
@@ -189,22 +190,20 @@ li {
   .listTitle {
     width: 40vw;
   }
-  #calenderInner{
+  #calenderInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
-
   }
 }
 @media only screen and (max-width: 356px) {
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;
   }
-  #calenderInner{
+  #calenderInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
-
   }
 }
 @media screen and (min-width: 576px) {
