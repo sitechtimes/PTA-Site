@@ -62,7 +62,7 @@ export default {
 #eventsCon {
   list-style-type: none;
   padding-left: 0;
-  width: 32vw;
+  /* width: 32vw; */
 }
 
 #upcomingEvents {
@@ -78,7 +78,7 @@ ul {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 20vw;
+  height: 25vw;
   scrollbar-width: none;
 }
 .listTitle,
@@ -108,29 +108,20 @@ li {
   width: 25vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   #upcomingEvents {
-    width: 73.5vw;
     height: 50vw;
   }
   #eventsCon {
-    width: 73.5vw;
     height: 25vw;
   }
   .subh {
     font-size: 3vw;
-    width: 73.5vw;
-  }
-  .listTitle {
-    width: 30vw;
   }
   .listTitle,
   .listDate {
     font-size: 2vw;
-  }
-  li {
-    width: 33rem;
   }
 }
 
@@ -155,18 +146,18 @@ li {
     font-size: 1.5vw;
   }
   li {
-    width: 15rem;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   #upcomingEvents {
-    width: 73.5vw;
+    width: 72vw;
     height: 50vw;
+    margin-top: 32%;
   }
   #eventsCon {
     width: 73.5vw;
-    height: 30vw;
+    height: 32vw;
   }
   .subh {
     font-size: 3vw;
@@ -180,7 +171,7 @@ li {
     font-size: 2vw;
   }
   li {
-    width: 33rem;
+    width: 29rem;
   }
 }
 
@@ -202,10 +193,10 @@ li {
   }
   .listTitle,
   .listDate {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
   }
   li {
-    width: 15rem;
+    width: 17rem;
   }
 }
 
@@ -219,8 +210,8 @@ li {
     width: 75vw;
   }
   #eventsCon {
-    height: 25vh;
     width: 75vw;
+    height: 20vh;
   }
   .uniqEvent {
     margin: 0 1rem 1rem 1rem;
@@ -271,7 +262,7 @@ li {
     width: 75vw;
   }
   #eventsCon {
-    height: 25vh;
+    height: 30vh;
     width: 75vw;
   }
   .uniqEvent {
@@ -285,12 +276,6 @@ li {
   .listDate {
     width: 30vw;
     font-size: 3.7vw;
-  }
-}
-
-@media screen and (max-height: 768px) {
-  #eventsCon {
-    height: 20vh;
   }
 }
 </style>
