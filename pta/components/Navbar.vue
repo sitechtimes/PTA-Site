@@ -9,7 +9,7 @@
         />
       </NuxtLink>
     </div>
-    <div id="nav">
+    <div id="naV">
       <div class="group">
         <NuxtLink to="/">
           <img
@@ -69,9 +69,9 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 
-#nav {
+#naV {
+  flex-direction: row;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 a {
@@ -89,8 +89,9 @@ a {
 }
 
 .icon {
-  padding-right: 0.6rem;
-  padding-bottom: 0.5rem;
+  height: 30px;
+  padding: 0 10px 0 0;
+  margin-top: 4px;
 }
 
 #contact {
@@ -102,7 +103,6 @@ a {
 }
 
 .group {
-  display: flex;
   width: 12rem;
   align-self: center;
 }
@@ -123,7 +123,7 @@ a:visited {
   }
 
   .icon {
-    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .group {

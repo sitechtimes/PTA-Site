@@ -117,11 +117,7 @@ h4 {
 }
 
 @media only screen and (max-width: 280px) and (orientation: portrait) {
-  #home, #contact, #events, #donate{
-    height: 6vw;
-    width: 6vw;
-  }
-  #nav {
+  #naV {
     display: none;
   }
   .menu {
@@ -147,7 +143,7 @@ h4 {
 @media only screen and (min-width: 280px) and (orientation: portrait) {
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
-  #nav {
+  #naV {
     display: none;
   }
   .menu {
@@ -171,7 +167,7 @@ h4 {
   }
 }
 @media only screen and (min-width: 540px) and (orientation: portrait) {
-  #nav {
+  #naV {
     display: none;
   }
   .menu {
@@ -196,7 +192,7 @@ h4 {
 }
 
 @media only screen and (min-width: 540px) and (orientation: landscape) {
-  #nav {
+  #naV {
     display: none;
   }
   .menu {
@@ -221,7 +217,7 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  #nav {
+  #naV {
     display: none;
   }
   .menu {
@@ -252,11 +248,8 @@ h4 {
   /* li{
     margin-bottom: 3vw ;
   } */
-  #home, #contact, #events, #donate{
-    height: 3vw;
-    width: 3vw;
-  }
-  #nav {
+
+  #naV {
     display: none;
   }
   .menu {
@@ -280,25 +273,25 @@ h4 {
   }
 }
 @media screen and (min-width: 992px) and (orientation: portrait) {
-.menu-btn{
-  margin-top: 4vw;
-}
-.menu-btn span,
-.menu-btn::before,
-.menu-btn::after {
-  display: block;
-  background-color: var(--text-color);
-  height: 4px;
-  width: 2.5rem;
-  border-radius: 2px;
-  transition: all 0.4s ease-in-out;
-}
+  .menu-btn {
+    margin-top: 4vw;
+  }
+  .menu-btn span,
+  .menu-btn::before,
+  .menu-btn::after {
+    display: block;
+    background-color: var(--text-color);
+    height: 4px;
+    width: 2.5rem;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .menu {
     display: none;
   }
-  #nav {
+  #naV {
     display: flex;
   }
 
@@ -315,41 +308,24 @@ h4 {
   .menu {
     display: none;
   }
-  #nav {
+  #naV {
     display: flex;
   }
-
-  #home,
-  #events {
-    padding-top: 0.3vw;
-  }
-  #contact,
-  #donate {
-    padding-top: 0.5vw;
-  }
 }
-@media only screen and (min-width: 1500px) {
-  .menu {
-    display: none;
-  }
-  #nav {
-    display: flex;
-  }
-
-  #home,
-  #events {
-    padding-top: 0vw;
-  }
-  #contact,
-  #donate {
-    padding-top: 0vw;
-  }
+#home,
+#events {
+  padding-top: 0vw;
 }
+#contact,
+#donate {
+  padding-top: 0vw;
+}
+
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .menu {
     display: none;
   }
-  #nav {
+  #naV {
     display: flex;
   }
 }
@@ -470,13 +446,15 @@ h4 {
     display: none;
   }
 
-  #nav {
+  #naV {
     display: flex;
   }
 }
 
 @media only screen and (max-width: 1032px) {
-  #nav {
+  /* issue here - hamburger and normal menu displayed at the same time */
+
+  #naV {
     display: none;
   }
 
