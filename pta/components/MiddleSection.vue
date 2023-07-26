@@ -84,6 +84,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 h2 {
   font-weight: bold;
   font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.5vw;
 }
 
 p,
@@ -91,7 +92,7 @@ a {
   font-weight: 500;
   width: 90%;
   font-family: "Karla", sans-serif;
-  font-size: 3vw;
+  font-size: 1.5vw;
 }
 
 #minutes {
@@ -139,7 +140,6 @@ a {
     width: 90vw;
   }
 }
-
 @media screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;
@@ -151,6 +151,14 @@ a {
 
   .information {
     width: 90%;
+  }
+  p{
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  p{
+    font-size:3vw;
   }
 }
 </style>
