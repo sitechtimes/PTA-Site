@@ -2,17 +2,25 @@
   <section id="section__MiddleSection">
     <div class="information">
       <div id="activities">
-        <h2 ref="activities">ACTIVITIES</h2>
-        <p ref="activitiesDesc">
+        <h2 ref="activities" class="subh">ACTIVITIES</h2>
+        <p ref="activitiesDesc" class="text">
           The SITHS PTA is a group of parents and faculty/staff members who work
           together to provide our children with resources and activities to make
           their school experience the best ever!
         </p>
       </div>
       <div ref="minutes" id="minutes">
-        <h2>MEETING MINUTES</h2>
-        <a href="" ref="minutesLink" target="_blank" rel="noopener">
-          <h3>Link to May 2023 Meeting Minutes</h3>
+        <h2 class="subh">MEETING MINUTES</h2>
+
+        <a
+          href=""
+          class="linkCon"
+          ref="minutesLink"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="../components/icons/link.svg" alt="link icon" />
+          <h3 class="text">Link to May 2023 Meeting Minutes</h3>
         </a>
       </div>
     </div>
@@ -80,23 +88,23 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 /* .information {
   margin-left: 5%;
 } */
-
-h2 {
-  font-weight: bold;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 2.5vw;
+@import "../assets/base.css";
+.subh {
+  margin-bottom: 1.5rem;
 }
-
-p,
-a {
-  font-weight: 500;
-  width: 90%;
-  font-family: "Karla", sans-serif;
-  font-size: 1.5vw;
-}
-
 #minutes {
   margin-top: 4rem;
+}
+.linkCon {
+  text-decoration-color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+}
+img {
+  height: 0%;
+  margin-right: 0.5rem;
+  margin-top: 2%;
+  vertical-align: middle;
 }
 
 #section__MiddleSection {
@@ -152,13 +160,13 @@ a {
   .information {
     width: 90%;
   }
-  p{
+  p {
     font-size: 2vw;
   }
 }
 @media screen and (max-width: 850px) {
-  p{
-    font-size:3vw;
+  p {
+    font-size: 3vw;
   }
 }
 </style>
