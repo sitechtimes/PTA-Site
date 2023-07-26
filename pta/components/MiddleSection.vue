@@ -89,8 +89,9 @@ h2 {
 p,
 a {
   font-weight: 500;
-  width: 80%;
+  width: 90%;
   font-family: "Karla", sans-serif;
+  font-size: 3vw;
 }
 
 #minutes {
