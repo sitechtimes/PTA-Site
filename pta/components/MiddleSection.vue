@@ -2,18 +2,32 @@
   <section id="section__MiddleSection">
     <div class="information">
       <div id="activities">
-        <h2 ref="activities">ACTIVITIES</h2>
-        <p ref="activitiesDesc">
+        <h2 ref="activities" class="subh">ACTIVITIES</h2>
+        <p ref="activitiesDesc" class="text">
           The SITHS PTA is a group of parents and faculty/staff members who work
           together to provide our children with resources and activities to make
           their school experience the best ever!
         </p>
       </div>
       <div ref="minutes" id="minutes">
-        <h2>MEETING MINUTES</h2>
-        <a href="" ref="minutesLink" target="_blank" rel="noopener">
-          <h3>Link to May 2023 Meeting Minutes</h3>
-        </a>
+        <h2 class="subh">MEETING MINUTES</h2>
+        <div>
+          <a
+            href=""
+            class="linkCon"
+            ref="minutesLink"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3 class="text">
+              <img
+                id="linkIcon"
+                src="../components/icons/link.svg"
+                alt="link icon"
+              />Link to May 2023 Meeting Minutes
+            </h3>
+          </a>
+        </div>
       </div>
     </div>
     <div ref="gallery" id="gallery">
@@ -80,21 +94,25 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 /* .information {
   margin-left: 5%;
 } */
-
-h2 {
-  font-weight: bold;
-  font-family: "Kumbh Sans", sans-serif;
+@import "../assets/base.css";
+.subh {
+  margin-bottom: 1.5rem;
 }
-
-p,
-a {
-  font-weight: 500;
-  width: 80%;
-  font-family: "Karla", sans-serif;
-}
-
 #minutes {
   margin-top: 4rem;
+}
+.linkCon {
+  text-decoration-color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+}
+img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  width: 1.5vw;
+  fill: var(--text-color);
+  height: 1.5vw;
+  margin-bottom: 0.4vw;
 }
 
 #section__MiddleSection {
@@ -138,7 +156,6 @@ a {
     width: 90vw;
   }
 }
-
 @media screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;
@@ -150,6 +167,14 @@ a {
 
   .information {
     width: 90%;
+  }
+  p {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  p {
+    font-size: 3vw;
   }
 }
 </style>
