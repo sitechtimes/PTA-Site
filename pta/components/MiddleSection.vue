@@ -94,7 +94,7 @@ a {
 }
 
 #minutes {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 #section__MiddleSection {
