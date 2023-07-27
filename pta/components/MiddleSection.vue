@@ -31,7 +31,8 @@
       </div>
     </div>
     <div ref="gallery" id="gallery">
-      <PhotoGallery />
+      <Gallery/>
+      <!-- <PhotoGallery /> -->
     </div>
   </section>
 </template>
