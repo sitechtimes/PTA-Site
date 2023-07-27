@@ -179,8 +179,17 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     width: 100%;
   }
 }
-
 @media screen and (min-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 220vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -211,8 +220,17 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 3vw;
   }
 }
-
 @media screen and (min-width: 576px) and (orientation: landscape) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100vw;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -243,8 +261,17 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 1vw;
   }
 }
-
 @media screen and (min-width: 768px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 140vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -276,6 +303,16 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);

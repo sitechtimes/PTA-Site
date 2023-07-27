@@ -6,23 +6,23 @@
     <Transition name="slide">
       <div v-if="show" class="wrapper">
         <ul class="link-container">
-          <li class="link" @click="toggle">
+          <p class="link" @click="toggle">
             <img
               id="home"
               src="../components/icons/NavBar-Icons/house.svg"
               alt="brown icon of house"
             />
             <router-link class="menu-router" to="/"> Home </router-link>
-          </li>
-          <li class="link" @click="toggle">
+          </p>
+          <p class="link" @click="toggle">
             <img
               id="events"
               src="../components//icons/NavBar-Icons/calendar.svg"
               alt="brown icon of calendar"
             />
             <router-link class="menu-router" to="/Events"> Events </router-link>
-          </li>
-          <li class="link" @click="toggle">
+          </p>
+          <p class="link" @click="toggle">
             <img
               id="contact"
               src="../components//icons/NavBar-Icons/envelope.svg"
@@ -31,15 +31,15 @@
             <router-link class="menu-router" to="/ContactUs">
               Contact
             </router-link>
-          </li>
-          <li class="link" @click="toggle">
+          </p>
+          <p class="link" @click="toggle">
             <img
               id="donate"
               src="../components//icons/NavBar-Icons/credit_card.svg"
               alt="brown icon of credit card"
             />
             <router-link class="menu-router" to="/Donate"> Donate </router-link>
-          </li>
+          </p>
         </ul>
       </div></Transition
     >
@@ -64,14 +64,37 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.slide-enter-active {
-  animation: slide-right 0.3s;
+.link-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  margin-top: 12vw;
+}
+.link {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 1rem;
+  list-style: none;
+  height: 4vw;
+}
+a.menu-router {
+  font-size: 2rem;
 }
 img {
-  width: 3rem;
+  width: 2.8rem;
+  height: 2.5rem;
+  padding-top: 0.2rem;
+  margin-right: 0.8rem;
+}
+#home,
+#events {
+  padding-top: 0.1rem;
 }
 .menu-btn {
   position: fixed;
+}
+.slide-enter-active {
+  animation: slide-right 0.3s;
 }
 @keyframes slide-right {
   0% {
@@ -88,5 +111,47 @@ img {
 .link-container {
   padding: 0;
   left: 0;
+}
+@media only screen and (max-width: 768px) {
+  .link-container {
+    margin-left: 8vw;
+    margin-top: 12vw;
+  }
+  .link {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 1rem;
+    list-style: none;
+    height: 3.3vw;
+  }
+  a.menu-router {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 2rem;
+    height: 1.8rem;
+    padding-top: 0.2rem;
+    margin-right: 0.4rem;
+  }
+  #home,
+  #events {
+    padding-top: 0.1rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .link-container {
+    margin-top: 20vw;
+  }
+  .link {
+    height: 6vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .link-container {
+    margin-top: 27vw;
+  }
+  .link {
+    height: 11vw;
+  }
 }
 </style>
