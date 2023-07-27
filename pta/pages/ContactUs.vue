@@ -285,7 +285,7 @@ h1 {
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.05rem;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 
 h2 {
@@ -377,14 +377,14 @@ section {
 }
 @media screen and (max-height: 1200px) {
   #gradient {
-    height: 100vh;
+    height: 86vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
   .container__ContactUs {
-    height: 100vh;
+    height: 66vh;
   }
 
   /* button {
