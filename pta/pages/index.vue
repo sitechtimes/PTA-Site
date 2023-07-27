@@ -9,6 +9,7 @@
         <MiddleSection />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

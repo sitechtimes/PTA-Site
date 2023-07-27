@@ -25,7 +25,6 @@ export default {
     const { technical } = this.$refs;
     const { highSchool } = this.$refs;
     const { pta } = this.$refs;
-    const { arrow } = this.$refs;
     const { address } = this.$refs;
     const timeline = gsap.timeline();
     timeline
@@ -33,9 +32,7 @@ export default {
       .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
       .from(technical, 1.5, { x: -1000 }, "<0.1")
       .from(highSchool, 1.5, { x: -1000 }, "<0.1")
-      .from(address, { duration: 1, x: -1000 }, "<0.4")
-      .from(arrow, { duration: 0.3, y: 10 }, "<")
-      .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
+      .from(address, { duration: 1, x: -1000 }, "<0.4");
   },
   data() {
     return {};
