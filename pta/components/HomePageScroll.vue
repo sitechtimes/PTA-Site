@@ -71,4 +71,14 @@ export default {
     opacity: 0;
   }
 }
+@media screen and (max-width: 822px) {
+  .container__ScrollDown img {
+    bottom: -10rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container__ScrollDown img {
+    bottom: -18vw;
+  }
+}
 </style>

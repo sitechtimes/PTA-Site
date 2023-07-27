@@ -9,8 +9,9 @@
         <MiddleSection />
       </div>
     </div>
+    <Footer />
   </div>
-</template>s
+</template>
 
 <script>
 useHead({
@@ -18,7 +19,6 @@ useHead({
     { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
   ],
 });
-
 </script>
 
 <style scoped>

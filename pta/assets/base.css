@@ -432,7 +432,7 @@ h4 {
     font-size: 2rem;
   }
   .subtext {
-    font-size: 2vw;
+    /* font-size: 2vw; */
   }
   .text {
     font-size: 1.5rem;
