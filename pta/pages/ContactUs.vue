@@ -151,6 +151,13 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 
+#container__Navigation {
+}
+#section__BoardMembers {
+}
+#section__JoinUs {
+}
+
 /* #gradient {
   width: 100vw;
   height: 100vh;
@@ -178,32 +185,29 @@ export default {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 #gradient {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   position: absolute;
   top: 0;
   left: 0;
   padding: 0;
   background: var(--bg-gradient);
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .container__ContactUs {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
@@ -224,7 +228,6 @@ export default {
 
 .container__box {
   width: 70vw;
-  height: auto;
   background-color: #fcf6e9;
   border-radius: 1.5rem;
   display: flex;
@@ -232,8 +235,8 @@ export default {
   align-content: center;
   justify-content: center;
   padding: 2rem;
-  padding-bottom: 9vw;
-  padding-top: 4vw;
+  padding-bottom: 2em;
+  padding-top: 2em;
   margin: 2rem;
   overflow-x: hidden;
   word-wrap: break-word;
@@ -277,18 +280,18 @@ h1 {
   color: #483221;
   text-align: center;
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.05rem;
-  margin: 2rem 1rem;
+  margin: 1rem;
 }
 
 h2 {
   color: #483221;
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 800;
   line-height: auto;
@@ -310,7 +313,7 @@ p,
 li {
   color: #483221;
   font-family: var(--font-text);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -318,7 +321,7 @@ li {
 
 a {
   font-family: var(--font-text);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-style: normal;
   font-weight: 500;
   line-height: 2rem;
@@ -362,19 +365,50 @@ section {
     margin-top: 6vw;
   }
 }
+@media only screen and (max-width: 1450px) {
+  #section__JoinUs {
+    height: 40rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-height: 1200px) {
+  #gradient {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container__ContactUs {
+    height: 100vh;
+  }
+
+  /* button {
+    width: 17vw;
+  } */
+}
 @media only screen and (max-width: 1200px) {
+  #section__JoinUs {
+    height: 40rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.1rem;
+  }
+  .container__box {
+    height: fit-content;
+  }
   .container {
-    top: 10vh;
+    top: 6vh;
   }
   button {
     font-size: 2vw;
     margin-top: 10vw;
-  }
-}
-
-@media only screen and (max-width: 1030px) {
-  .container__ParentVolunteer {
-    margin-left: 4.5rem;
   }
 }
 
@@ -385,6 +419,35 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .container {
+    top: 3vh;
+  }
+
+  button {
+    width: 20vw;
+  }
+  #section__JoinUs {
+    height: 43rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 992px) and (orientation: landscape) {
+  #gradient {
+    height: 120vh;
+  }
+  .container__ContactUs {
+    height: 90vh;
+  }
+}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   button {
     font-size: 2vw;
@@ -404,73 +467,133 @@ section {
     margin-top: 15vw;
   }
 }
-@media only screen and (max-width: 576px) {
-  .container__ContactUs {
-    height: 180vh;
+@media screen and (max-width: 768px) {
+  button {
+    width: 23vw;
   }
-
   #gradient {
-    height: 180vh;
+    height: 110vh;
+  }
+  .container__ContactUs {
+    height: 100vh;
+  }
+  #section__JoinUs {
+    height: 46rem;
+  }
+  .container__box {
+    padding: 5px;
+  }
+  .container__ParentVolunteer {
+    margin: 5px auto;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.03rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  #gradient {
+    height: 160vh;
+  }
+  .container__ContactUs {
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container__Navigation {
+    margin-top: 1rem;
+  }
+  #gradient {
+  }
+  .container {
+    top: 2rem;
+  }
+  .container__ContactUs {
+  }
+} /* 
+@media screen and (max-height: 576px) {
+  .container__Navigation {
+    margin-top: 3rem;
+  }
+  #gradient {
+    height: 13vh;
+  }
+  .container__ContactUs {
+    height: 13vh;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #gradient {
+    height: 142vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-
   #PTAInformation {
     margin-top: 0.5rem;
   }
-
   .container {
-    top: 15vh;
+    top: 10vh;
   }
-
   .container__box {
-    display: flex;
-    width: 75vw;
+    width: 80vw;
     border-radius: 1rem;
   }
-
-  h1 {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    margin: 0.5rem;
+  #section__JoinUs {
+    height: 200vw;
   }
-
+  .container__ContactUs {
+    display: flex;
+    flex-direction: column;
+    height: 160vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .container__BoardMembers-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+  }
+  .container__BoardMembers-profile img {
+    width: 25vw;
+  }
+  .container__Navigation {
+    width: 90vw;
+  }
+  h1 {
+    font-size: 4vw;
+  }
   h2 {
     color: #483221;
     font-family: var(--font-heading);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: auto;
-    letter-spacing: 0.1rem;
-    margin-top: 1.3rem;
+    font-size: 3vw;
   }
-
   h3 {
-    font-size: 1rem;
+    font-size: 5vw;
     line-height: 2rem;
     margin-bottom: 0.8rem;
   }
-
   p,
   li {
     color: #483221;
     font-family: var(--font-text);
-    font-size: 0.8rem;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%;
   }
-
   a {
     font-family: var(--font-text);
-    font-size: 0.8rem;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5rem;
   }
-
   button {
     font-size: 3.5vw;
     border-radius: 1rem;
@@ -478,180 +601,5 @@ section {
     margin-top: 5vw;
     width: 20vw;
   }
-
-  .container__ContactUs {
-    display: flex;
-    flex-direction: column;
-    height: 160vh;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container__BoardMembers-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem;
-  }
-
-  .container__BoardMembers-profile img {
-    width: 25vw;
-  }
-  .container__Navigation {
-    width: 90vw;
-  }
-
-  .container__ParentVolunteer {
-    margin-left: 2rem;
-  }
-}
-
-/* @media screen and (min-width: 576px) {
-}
-
-@media screen and (min-width: 576px) and (orientation: landscape) {
-}
-
-@media only screen and (max-width: 450px) {
-}
-
-@media only screen and (max-width: 356px) {
 } */
-
-@media screen and (max-height: 1200px) {
-  #gradient {
-    height: 125vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .container__ContactUs {
-    height: 125vh;
-  }
-
-  /* button {
-    width: 17vw;
-  } */
-}
-
-@media screen and (max-height: 992px) {
-  #gradient {
-    height: 130vh;
-  }
-
-  .container__ContactUs {
-    height: 130vh;
-  }
-}
-
-@media screen and (max-height: 992px) and (orientation: landscape) {
-  #gradient {
-    height: 160vh;
-  }
-
-  .container__ContactUs {
-    height: 160vh;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  button {
-    width: 20vw;
-  }
-
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    width: 23vw;
-  }
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-height: 992px) and (orientation: landscape) {
-  #gradient {
-    height: 160vh;
-  }
-
-  .container__ContactUs {
-    height: 160vh;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  button {
-    width: 20vw;
-  }
-
-  #gradient {
-    height: 150vh;
-  }
-
-  .container__ContactUs {
-    height: 150vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    width: 23vw;
-  }
-  #gradient {
-    height: 185vh;
-  }
-
-  .container__ContactUs {
-    height: 185vh;
-  }
-}
-
-@media screen and (max-height: 576px) {
-  .container__Navigation {
-    margin-top: 3rem;
-  }
-  #gradient {
-    height: 380vh;
-  }
-
-  .container__ContactUs {
-    height: 380vh;
-  }
-}
-
-@media screen and (max-height: 768px) {
-  #gradient {
-    height: 185vh;
-  }
-
-  .container__ContactUs {
-    height: 185vh;
-  }
-}
-
-@media screen and (max-height: 576px) {
-  .container__Navigation {
-    margin-top: 3rem;
-  }
-  #gradient {
-    height: 380vh;
-  }
-
-  .container__ContactUs {
-    height: 380vh;
-  }
-}
 </style>

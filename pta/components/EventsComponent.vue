@@ -91,7 +91,13 @@ export default {
   },
   mounted() {
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
-    gsap.from("li", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
+    gsap.from("li", {
+      delay: 0.7,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      stagger: 0.3,
+    });
   },
 };
 </script>

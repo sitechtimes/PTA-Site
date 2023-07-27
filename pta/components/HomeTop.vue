@@ -25,7 +25,6 @@ export default {
     const { technical } = this.$refs;
     const { highSchool } = this.$refs;
     const { pta } = this.$refs;
-    const { arrow } = this.$refs;
     const { address } = this.$refs;
     const timeline = gsap.timeline();
     timeline
@@ -33,9 +32,7 @@ export default {
       .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
       .from(technical, 1.5, { x: -1000 }, "<0.1")
       .from(highSchool, 1.5, { x: -1000 }, "<0.1")
-      .from(address, { duration: 1, x: -1000 }, "<0.4")
-      .from(arrow, { duration: 0.3, y: 10 }, "<")
-      .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
+      .from(address, { duration: 1, x: -1000 }, "<0.4");
   },
   data() {
     return {};
@@ -79,7 +76,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   top: 17%;
   width: 37vw;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
@@ -98,12 +95,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: -30%;
     width: 20vw;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   .events {
     margin: 0;
-    margin-top: 38vh;
     display: flex;
     justify-content: center;
     left: 0%;
@@ -121,22 +117,25 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 768px) {
-  .events {
+  /* .events {
     margin: 0;
     margin-top: 35vh;
     display: flex;
     justify-content: center;
     left: 0%;
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  .events {
+  /*  .events {
     position: relative;
     left: 70%;
     top: 5%;
     width: 15vw;
+  }*/
+  #homeTopText {
+    transform: translate(-50%, 1vw);
   }
 }
 
@@ -147,7 +146,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     position: absolute;
     top: 5%;
     left: 45%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
@@ -180,14 +179,23 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     width: 100%;
   }
 }
-
 @media screen and (min-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 220vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
@@ -212,8 +220,17 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 3vw;
   }
 }
-
 @media screen and (min-width: 576px) and (orientation: landscape) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100vw;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -244,8 +261,17 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 1vw;
   }
 }
-
 @media screen and (min-width: 768px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 140vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -277,6 +303,16 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 70vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);

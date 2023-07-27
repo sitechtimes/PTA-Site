@@ -38,8 +38,9 @@
 </template>
 
 <script>
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
@@ -100,7 +101,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   margin-bottom: 1.5rem;
 }
 #minutes {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .linkCon {
   text-decoration-color: var(--text-color);
@@ -150,11 +151,23 @@ img {
 
   .information {
     width: 100%;
-    padding-left: 2rem;
   }
 
   .gallery {
     width: 90vw;
+  }
+
+  .information,
+  #activites {
+    display: flex;
+    justify-content: center;
+  }
+
+  p,
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -167,15 +180,47 @@ img {
   }
 
   .information {
-    width: 90%;
+    width: 80%;
+  }
+
+  .information,
+  #activites {
+    display: flex;
+    justify-content: center;
+  }
+
+  p,
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
   }
   p {
     font-size: 2vw;
   }
 }
+@media only screen and (max-width: 992px) {
+  img {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
 @media screen and (max-width: 850px) {
   p {
     font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  img {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  img {
+    width: 4vw;
+    height: 4vw;
   }
 }
 </style>
