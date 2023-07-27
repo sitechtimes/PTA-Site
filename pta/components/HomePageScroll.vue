@@ -16,6 +16,7 @@ export default {
     const { arrow } = this.$refs;
     const timeline = gsap.timeline();
     timeline
+      .from(arrow, { opacity: 0, delay: 1, duration: 1 })
       .from(arrow, { duration: 0.3, y: -10 }, "<")
       .to(arrow, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
   },
@@ -68,6 +69,16 @@ export default {
   100% {
     -webkit-transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
+  }
+}
+@media screen and (max-width: 822px) {
+  .container__ScrollDown img {
+    bottom: -10rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container__ScrollDown img {
+    bottom: -18vw;
   }
 }
 </style>

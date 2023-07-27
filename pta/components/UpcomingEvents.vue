@@ -1,8 +1,14 @@
 <template>
   <div id="upcomingEvents">
-    <h3 class="subh">Upcoming Events</h3>
+    <h3 class="subh" ref="subh">Upcoming Events</h3>
     <ul class="subtext" id="eventsCon">
-      <li v-for="(event, index) in upcomingEvents" :key="index" id="uniqEvent">
+      <li
+        v-for="(event, index) in upcomingEvents"
+        :key="index"
+        id="uniqEvent"
+        class="li"
+        ref="li"
+      >
         <div class="uniqEvent">
           <h5 class="listTitle">{{ event.title }}</h5>
           <h5 class="listDate">{{ event.date }}</h5>
@@ -47,8 +53,16 @@ export default {
     };
   },
   mounted() {
-    gsap.from(".subh", { delay: 0.5, duration: 1, x: 1000, opacity: 0 });
-    gsap.from("li", { delay: 0.7, duration: 0.5, y: 100, opacity: 0 });
+    const { li } = this.$refs;
+    const { subh } = this.$refs;
+    gsap.from(li, {
+      delay: 1.2,
+      duration: 0.5,
+      x: 7,
+      opacity: 0,
+      stagger: 0.3,
+    });
+    gsap.from(subh, { delay: 1, duration: 0.5, x: 7, opacity: 0 });
   },
 };
 </script>
@@ -62,7 +76,7 @@ export default {
 #eventsCon {
   list-style-type: none;
   padding-left: 0;
-  width: 32vw;
+  /* width: 32vw; */
 }
 
 #upcomingEvents {
@@ -78,7 +92,7 @@ ul {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 20vw;
+  height: 25vw;
   scrollbar-width: none;
 }
 .listTitle,
@@ -108,44 +122,35 @@ li {
   width: 25vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   #upcomingEvents {
-    width: 73.5vw;
     height: 50vw;
   }
   #eventsCon {
-    width: 73.5vw;
     height: 25vw;
   }
   .subh {
     font-size: 3vw;
-    width: 73.5vw;
-  }
-  .listTitle {
-    width: 30vw;
   }
   .listTitle,
   .listDate {
     font-size: 2vw;
   }
-  li {
-    width: 33rem;
-  }
 }
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   #upcomingEvents {
-    width: 40vw;
+    width: 38vw;
     height: 50vw;
   }
   #eventsCon {
-    width: 40vw;
+    width: 38vw;
     height: 30vw;
   }
   .subh {
     font-size: 3vw;
-    width: 40vw;
+    width: 38vw;
   }
   .listTitle {
     width: 30vw;
@@ -155,18 +160,18 @@ li {
     font-size: 1.5vw;
   }
   li {
-    width: 15rem;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   #upcomingEvents {
-    width: 73.5vw;
+    width: 72vw;
     height: 50vw;
+    margin-top: 41%;
   }
   #eventsCon {
     width: 73.5vw;
-    height: 30vw;
+    height: 32vw;
   }
   .subh {
     font-size: 3vw;
@@ -180,7 +185,7 @@ li {
     font-size: 2vw;
   }
   li {
-    width: 33rem;
+    width: 29rem;
   }
 }
 
@@ -202,37 +207,37 @@ li {
   }
   .listTitle,
   .listDate {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
   }
   li {
-    width: 15rem;
+    width: 17rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   #upcomingEvents {
-    margin-bottom: 10vw;
     width: 75vw;
+    margin-top: 15rem;
   }
   .subh {
     font-size: 5vw;
     width: 75vw;
   }
   #eventsCon {
-    height: 25vh;
     width: 75vw;
+    height: 15.5rem;
   }
-  .uniqEvent {
+  /* .uniqEvent {
     margin: 0 1rem 1rem 1rem;
-  }
+  } */
   li {
-    width: 68vw;
+    width: 55vw;
     border-radius: 2.5vw;
   }
   .listTitle,
   .listDate {
     width: 30vw;
-    font-size: 3.7vw;
+    font-size: 1rem;
   }
 }
 
@@ -263,7 +268,7 @@ li {
 
 @media screen and (max-width: 576px) {
   #upcomingEvents {
-    margin-bottom: 10vw;
+    margin-top: 0;
     width: 75vw;
   }
   .subh {
@@ -271,7 +276,7 @@ li {
     width: 75vw;
   }
   #eventsCon {
-    height: 25vh;
+    height: 38vh;
     width: 75vw;
   }
   .uniqEvent {
@@ -284,13 +289,7 @@ li {
   .listTitle,
   .listDate {
     width: 30vw;
-    font-size: 3.7vw;
-  }
-}
-
-@media screen and (max-height: 768px) {
-  #eventsCon {
-    height: 20vh;
+    font-size: 3vw;
   }
 }
 </style>

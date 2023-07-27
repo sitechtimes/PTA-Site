@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: dev # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
+  repo: PTA-Site
 
 media_folder: "/pta/static/img/upload" # Folder where user uploaded files should go
 public_folder: "/img/upload"
@@ -9,7 +9,7 @@ public_folder: "/img/upload"
 collections: # A list of collections the CMS should be able to edit
   - name: 'ContactUs' # Used in routes, e.g., /admin/collections/:slug/edit
     label: 'Staff' # Used in the UI, e.g., "New Post"
-    folder: "pta/content/staff" # The path to the folder where the documents are stored   
+    folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored   
     fotmat: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: 'Events' # Used in routes, e.g., /admin/collections/:slug/edit
     label: 'New Event'  # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "pta/content/events" # The path to the folder where the documents are stored
+    folder: "pta/content-app/content/events" # The path to the folder where the documents are stored
     fotmat: "frontmatter"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have

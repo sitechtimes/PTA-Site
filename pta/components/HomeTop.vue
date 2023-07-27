@@ -25,7 +25,6 @@ export default {
     const { technical } = this.$refs;
     const { highSchool } = this.$refs;
     const { pta } = this.$refs;
-    const { arrow } = this.$refs;
     const { address } = this.$refs;
     const timeline = gsap.timeline();
     timeline
@@ -33,9 +32,7 @@ export default {
       .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
       .from(technical, 1.5, { x: -1000 }, "<0.1")
       .from(highSchool, 1.5, { x: -1000 }, "<0.1")
-      .from(address, { duration: 1, x: -1000 }, "<0.4")
-      .from(arrow, { duration: 0.3, y: 10 }, "<")
-      .to(arrow, { duration: 0.8, y: 40, repeat: -1, yoyo: true });
+      .from(address, { duration: 1, x: -1000 }, "<0.4");
   },
   data() {
     return {};
@@ -79,7 +76,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   top: 17%;
   width: 37vw;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
@@ -87,7 +84,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -95,48 +92,50 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   .events {
     position: relative;
     left: 70%;
-    top: -20%;
+    top: -30%;
     width: 20vw;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   .events {
     margin: 0;
-    margin-top: 35vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .events {
     position: relative;
-    left: 70%;
-    top: 3%;
-    width: 20vw;
+    left: 60%;
+    top: 0%;
+    width: 35vw;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .events {
+  /* .events {
     margin: 0;
-    margin-top: 25vh;
+    margin-top: 35vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
-  }
+    width: 100%;
+  } */
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  .events {
+  /*  .events {
     position: relative;
     left: 70%;
-    top: 10%;
+    top: 5%;
     width: 15vw;
+  }*/
+  #homeTopText {
+    transform: translate(-50%, 1vw);
   }
 }
 
@@ -147,7 +146,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     position: absolute;
     top: 5%;
     left: 45%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
@@ -173,11 +172,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
   .events {
     margin: 0;
-    margin-top: 28vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
     left: 0%;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -187,7 +186,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-family: var(--font-heading);
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 34vw);
+    transform: translate(-50%, 18vw);
     white-space: nowrap;
     text-align: left;
   }
