@@ -75,7 +75,7 @@ h2 {
 h3 {
   color: var(--text-color);
   font-size: 1.5vw;
-  line-height: 0;
+  line-height: 1.1px;
   font-family: var(--font-text);
   font-weight: 500;
   line-height: 130%;
@@ -130,7 +130,7 @@ p {
   h3,
   a {
     font-size: 1.1rem;
-    line-height: 1.1rem;
+    line-height: 1.3rem;
   }
 }
 @media only screen and (max-width: 768px) {
