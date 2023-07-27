@@ -56,7 +56,13 @@ export default {
     const { li } = this.$refs;
     const { subh } = this.$refs;
     gsap.from(li, { delay: 1.2, duration: 0.5, x: 7, opacity: 0 });
-    gsap.from(subh, { delay: 1, duration: 0.5, x: 7, opacity: 0 });
+    gsap.from(subh, {
+      delay: 1,
+      duration: 0.5,
+      x: 7,
+      opacity: 0,
+      stagger: 0.3,
+    });
   },
 };
 </script>
