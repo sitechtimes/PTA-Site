@@ -7,7 +7,7 @@
           <EventsComponent />
           <div id="calender">
             <iframe
-            class="cal"
+              class="cal"
               id="calenderInner"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
               frameborder="0"
@@ -26,7 +26,7 @@ import { gsap } from "gsap";
 export default {
   mounted() {
     gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
-    gsap.from(".cal", 1, { x: 1000 }, "<0.5")
+    gsap.from(".cal", 1, { x: 1000 }, "<0.5");
   },
 };
 </script>
@@ -190,14 +190,14 @@ li {
   }
 }
 @media only screen and (max-width: 450px) {
-  .listTitle {
+  /* .listTitle {
     width: 40vw;
   }
   #calenderInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
-  }
+  } */
 }
 @media only screen and (max-width: 356px) {
   .uniqEvent {
