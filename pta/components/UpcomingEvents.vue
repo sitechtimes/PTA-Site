@@ -227,12 +227,11 @@ li {
     width: 75vw;
   }
   #eventsCon {
-    width: 75vw;
-    height: 17rem;
+    height: 18rem;
   }
-  /* .uniqEvent {
+  .uniqEvent {
     margin: 0 1rem 1rem 1rem;
-  } */
+  }
   li {
     width: 55vw;
     border-radius: 2.5vw;
@@ -240,18 +239,17 @@ li {
   .listTitle,
   .listDate {
     width: 30vw;
-    font-size: 1rem;
+    font-size: 1.03rem;
   }
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
   #upcomingEvents {
     width: 45vw;
-    height: 50vw;
   }
   #eventsCon {
     width: 45vw;
-    height: 30vw;
+    height: 31vw;
   }
   .subh {
     font-size: 3vw;
