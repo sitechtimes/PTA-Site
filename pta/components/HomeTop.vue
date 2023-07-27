@@ -172,7 +172,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
   .events {
     margin: 0;
-    margin-top: 30vh;
+    margin-top: 35vw;
     display: flex;
     justify-content: center;
     left: 0%;

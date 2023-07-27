@@ -228,7 +228,7 @@ li {
   }
   #eventsCon {
     width: 75vw;
-    height: 15.5rem;
+    height: 17rem;
   }
   /* .uniqEvent {
     margin: 0 1rem 1rem 1rem;
@@ -283,7 +283,7 @@ li {
     width: 75vw;
   }
   #eventsCon {
-    height: 38vh;
+    height: 54vw;
     width: 80vw;
   }
   .uniqEvent {
