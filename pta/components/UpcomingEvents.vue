@@ -77,10 +77,14 @@ export default {
   list-style-type: none;
   padding-left: 0;
   /* width: 32vw; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #upcomingEvents {
   width: 32vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .uniqEvent {
   display: flex;
@@ -91,7 +95,6 @@ export default {
 ul {
   overflow: auto;
   -ms-overflow-style: none;
-  scrollbar-width: none;
   height: 25vw;
   scrollbar-width: none;
 }
@@ -267,6 +270,10 @@ li {
 }
 
 @media screen and (max-width: 576px) {
+  ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
   #upcomingEvents {
     margin-top: 0;
     width: 75vw;
@@ -277,7 +284,7 @@ li {
   }
   #eventsCon {
     height: 38vh;
-    width: 75vw;
+    width: 80vw;
   }
   .uniqEvent {
     margin: 0 1rem 1rem 1rem;
