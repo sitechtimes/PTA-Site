@@ -150,11 +150,23 @@ img {
 
   .information {
     width: 100%;
-    padding-left: 2rem;
   }
 
   .gallery {
     width: 90vw;
+  }
+
+  .information,
+  #activites {
+    display: flex;
+    justify-content: center;
+  }
+
+  p,
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -167,7 +179,20 @@ img {
   }
 
   .information {
-    width: 90%;
+    width: 80%;
+  }
+
+  .information,
+  #activites {
+    display: flex;
+    justify-content: center;
+  }
+
+  p,
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
   }
   p {
     font-size: 2vw;
