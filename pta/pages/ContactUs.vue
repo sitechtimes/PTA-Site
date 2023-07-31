@@ -358,6 +358,23 @@ section {
     font-size: 1.2rem;
   }
 }
+
+@media screen and (min-height: 1200px) {
+  #gradient {
+    height: 106vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container__ContactUs {
+    height: 66vh;
+  }
+
+  /* button {
+    width: 17vw;
+  } */
+}
 @media screen and (max-height: 1200px) {
   #gradient {
     height: 106vh;

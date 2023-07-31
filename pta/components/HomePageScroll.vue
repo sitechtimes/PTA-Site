@@ -78,7 +78,7 @@ export default {
 }
 @media screen and (max-width: 576px) {
   .container__ScrollDown img {
-    top: 58rem;
+    bottom: -18vw;
   }
 }
 </style>
