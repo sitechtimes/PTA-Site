@@ -229,7 +229,7 @@ export default {
 .container__box {
   width: 70vw;
   background-color: #fcf6e9;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -237,7 +237,7 @@ export default {
   padding: 2rem;
   padding-bottom: 2em;
   padding-top: 2em;
-  margin: 2rem;
+  margin: 1rem;
   overflow-x: hidden;
   word-wrap: break-word;
 }
@@ -285,7 +285,7 @@ h1 {
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.05rem;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 
 h2 {
@@ -377,14 +377,14 @@ section {
 }
 @media screen and (max-height: 1200px) {
   #gradient {
-    height: 100vh;
+    height: 106vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
   .container__ContactUs {
-    height: 100vh;
+    height: 66vh;
   }
 
   /* button {
@@ -478,10 +478,12 @@ section {
     height: 100vh;
   }
   #section__JoinUs {
-    height: 46rem;
+    height: 44rem;
   }
   .container__box {
-    padding: 5px;
+    border-radius: 0.8rem;
+    padding: 0px;
+    width: 90vw;
   }
   .container__ParentVolunteer {
     margin: 5px auto;
@@ -494,6 +496,9 @@ section {
   h2 {
     font-size: 1.2rem;
   }
+  h3 {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-height: 768px) {
@@ -505,6 +510,10 @@ section {
   }
 }
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
   .container__Navigation {
     margin-top: 1rem;
   }
@@ -513,9 +522,7 @@ section {
   .container {
     top: 2rem;
   }
-  .container__ContactUs {
-  }
-} /* 
+}
 @media screen and (max-height: 576px) {
   .container__Navigation {
     margin-top: 3rem;
@@ -529,7 +536,7 @@ section {
 }
 @media only screen and (max-width: 576px) {
   #gradient {
-    height: 142vh;
+    height: 107vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -544,9 +551,7 @@ section {
     width: 80vw;
     border-radius: 1rem;
   }
-  #section__JoinUs {
-    height: 200vw;
-  }
+
   .container__ContactUs {
     display: flex;
     flex-direction: column;
@@ -558,7 +563,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    margin: 1rem;
   }
   .container__BoardMembers-profile img {
     width: 25vw;
@@ -567,32 +572,32 @@ section {
     width: 90vw;
   }
   h1 {
-    font-size: 4vw;
+    font-size: 19px;
   }
   h2 {
     color: #483221;
     font-family: var(--font-heading);
-    font-size: 3vw;
+    font-size: 11px;
   }
   h3 {
     font-size: 5vw;
-    line-height: 2rem;
+    line-height: 1rem;
     margin-bottom: 0.8rem;
   }
   p,
   li {
     color: #483221;
     font-family: var(--font-text);
-    font-size: 3vw;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
   }
   a {
     font-family: var(--font-text);
-    font-size: 3vw;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5rem;
+    font-size: 12px;
   }
   button {
     font-size: 3.5vw;
@@ -601,5 +606,5 @@ section {
     margin-top: 5vw;
     width: 20vw;
   }
-} */
+}
 </style>
