@@ -102,6 +102,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 #minutes {
   margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 .linkCon {
   text-decoration-color: var(--text-color);
@@ -182,7 +183,9 @@ img {
   .information {
     width: 80%;
   }
-
+  #minutes {
+    margin-bottom: 0rem;
+  }
   .information,
   #activites {
     display: flex;

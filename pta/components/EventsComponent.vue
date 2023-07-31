@@ -138,7 +138,7 @@ ul {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 27vw;
+  height: 24vw;
   scrollbar-width: none;
 }
 .listTitle,
@@ -175,7 +175,6 @@ li {
   width: 35vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
 #top {
   display: flex;
   justify-content: space-evenly;
@@ -210,6 +209,9 @@ li {
   .listTitle {
     width: 18vw;
   }
+  ul {
+    height: 21vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -223,10 +225,7 @@ li {
     margin-bottom: 10vw;
   }
   #eventsCon {
-    height: 50vw;
-  }
-  .uniqEvent {
-    margin: 0 1rem 0 1rem;
+    height: 55vw;
   }
   li {
     width: 76vw;
@@ -249,15 +248,21 @@ li {
     top: 0%;
     left: 0%;
   }
+  .subh {
+    margin: 1.5rem 0 0 0;
+  }
 }
 @media only screen and (max-width: 450px) {
   .listTitle {
     width: 40vw;
   }
+  #eventsCon {
+    height: 60vw;
+  }
 }
 @media only screen and (max-width: 356px) {
-  .uniqEvent {
-    margin: 0 0.7rem 0 0.7rem;
+  #eventsCon {
+    height: 66vw;
   }
 }
 @media screen and (min-width: 576px) {
