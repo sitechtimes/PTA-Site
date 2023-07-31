@@ -1,7 +1,7 @@
 <template>
   <div class="container__PTAInformation">
     <div class="container__SocialMedias">
-      <!-- <a href=" " target="_blank" rel="noopener">
+      <a href=" " target="_blank" rel="noopener">
         <img src="/SocialMedias/facebook.svg" alt="facebook icon" />
       </a>
       <a href=" " target="_blank" rel="noopener">
@@ -9,40 +9,7 @@
       </a>
       <a href=" " target="_blank" rel="noopener">
         <img src="/SocialMedias/twitter.svg" alt="twitter icon" />
-      </a> -->
-      <div class="container__SMLayout">
-        <h2>Instagram</h2>
-        <h3>Follow S.I. Tech news and events on Instagram at:</h3>
-        <a href="https://www.instagram.com/_sammytheseagull"
-          >Sammy the Seagull</a
-        >
-        <a href="https://www.instagram.com/merlenwein">Principal Erlenwein</a>
-      </div>
-      <div class="container__SMLayout">
-        <h2>Facebook</h2>
-        <h3>
-          Facebook Follow S.I. Tech news and events on Facebook. Like our page
-          and you'll receive S.I.
-        </h3>
-        <a href="https://www.facebook.com/SITECHPTA/">SITHS PTA Facebook</a>
-      </div>
-      <div class="container__SMLayout">
-        <h2>Twitter</h2>
-        <h3>Follow S.I. Tech news and events on Twitter.</h3>
-        <a href="https://www.twitter.com/SITech_HS">SITHS PTA Twitter</a>
-      </div>
-      <div class="container__SMLayout">
-        <h2>Naviance</h2>
-        <h3>
-          Actively engage in career, college and scholarship searches, the
-          college application process and receive school communication via
-          Naviance.
-        </h3>
-        <a
-          href="https://connection.naviance.com/family-connection/auth/login/?hsid=siths"
-          >SITHS Naviance</a
-        >
-      </div>
+      </a>
     </div>
     <div class="container__TextInformation">
       <p>sitechpta@gmail.com</p>
@@ -91,16 +58,16 @@ h3 {
 .container__SocialMedias {
   display: flex;
   flex-direction: row;
-  width: fit-content;
-  margin: 30px;
+  width: 15rem;
+  justify-content: space-evenly;
   margin-bottom: 0.5rem;
 }
 
 .container__TextInformation {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
 }
 
 .container__PTAInformation {
@@ -113,57 +80,16 @@ p {
   font-family: var(--font-text);
   color: var(--text-color);
   text-align: center;
-  font-size: 1.7vw;
+  font-size: 2vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin: 0.5rem;
 }
 
-@media only screen and (max-width: 1200px) {
-  h3,
-  a {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width: 992px) {
-  h3,
-  a {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
-  }
-}
 @media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 1.3rem;
-  }
   p {
     font-size: 1rem;
-  }
-  .container__SMLayout {
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-  .container__SocialMedias {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    margin: 1vw;
-    margin-bottom: 0.5rem;
-  }
-  .container__PTAInformation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media only screen and (max-width: 356px) {
-  h3,
-  a {
-    font-size: 6vw;
   }
 }
 </style>
