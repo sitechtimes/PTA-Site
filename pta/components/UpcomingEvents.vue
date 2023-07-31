@@ -224,7 +224,7 @@ li {
 @media screen and (max-width: 768px) {
   #upcomingEvents {
     width: 75vw;
-    margin-top: 15rem;
+    margin-top: 20rem;
   }
   .subh {
     font-size: 5vw;

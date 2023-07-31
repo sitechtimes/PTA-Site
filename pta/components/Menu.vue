@@ -112,6 +112,9 @@ img {
   padding: 0;
   left: 0;
 }
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+}
 @media only screen and (max-width: 768px) {
   .link-container {
     margin-left: 8vw;
@@ -120,18 +123,18 @@ img {
   .link {
     display: inline-flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: 3rem;
     list-style: none;
     height: 3.3vw;
   }
   a.menu-router {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   img {
-    width: 2rem;
-    height: 1.8rem;
-    padding-top: 0.2rem;
-    margin-right: 0.4rem;
+    width: 4rem;
+    height: 3.6rem;
+    padding-top: 0.4rem;
+    margin-right: 1rem;
   }
   #home,
   #events {
