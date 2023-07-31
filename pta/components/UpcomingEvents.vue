@@ -135,15 +135,16 @@ li {
   font-size: 2rem ;
   width: 40vw;
 }
-#upcomingEvents{
-  margin-top: 2rem;
-}
+
 }
 @media screen and (max-width: 1200px){
   .subh {
   margin-top: 2rem;
   font-size: 1.5rem ;
   width: 40vw;
+}
+#upcomingEvents{
+  margin-top: 5rem;
 }
 }
 /*

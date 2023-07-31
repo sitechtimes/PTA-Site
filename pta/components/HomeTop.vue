@@ -182,6 +182,12 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     width: 100%;
   }
 }
+@media only screen and (max-width: 356px) {
+  #homeTopText {
+    top: 8%;
+    left: 50%;
+  }
+}
 @media screen and (min-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
