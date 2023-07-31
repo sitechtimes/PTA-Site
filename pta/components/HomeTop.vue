@@ -76,7 +76,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   top: 17%;
   width: 37vw;
 }
-/* 
+
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
@@ -95,7 +95,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: -30%;
     width: 20vw;
   }
-} */
+} 
 
 @media screen and (max-width: 992px) {
   .events {
