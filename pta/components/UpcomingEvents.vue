@@ -235,8 +235,9 @@ li {
   .listDate {
     font-size: 1.7vw;
   }
-  li {
-    width: 17rem;
+
+   li {
+    width: 30vw;
   }
 }
 
