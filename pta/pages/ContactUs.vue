@@ -5,13 +5,6 @@
         <div class="container__Navigation">
           <button
             class="button__navigation"
-            :class="{ active: currentSection === 'GeneralContacts' }"
-            @click="showSection('GeneralContacts')"
-          >
-            Contacts
-          </button>
-          <button
-            class="button__navigation"
             :class="{ active: currentSection === 'BoardMembers' }"
             @click="showSection('BoardMembers')"
           >
@@ -27,16 +20,6 @@
         </div>
 
         <div class="container__Body">
-          <section
-            id="section__GeneralContacts"
-            v-show="currentSection === 'GeneralContacts'"
-          >
-            <div class="container__box">
-              <h1>General Contacts</h1>
-              <PTAInformation id="PTAInformation" />
-            </div>
-          </section>
-
           <section
             id="section__BoardMembers"
             v-show="currentSection === 'BoardMembers'"
@@ -124,7 +107,7 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
-      currentSection: "GeneralContacts", //the current section by default is the 'General Contacts' section
+      currentSection: "BoardMembers", //the current section by default is the 'General Contacts' section
     };
   },
   methods: {
@@ -573,6 +556,7 @@ section {
   }
   h1 {
     font-size: 19px;
+    margin-top: 1.5rem;
   }
   h2 {
     color: #483221;
