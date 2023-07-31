@@ -4,7 +4,7 @@ backend:
   repo: PTA-Site
 
 media_folder: "/pta/static/img/upload" # Folder where user uploaded files should go
-public_folder: "/img/upload"
+public_folder: "/pta/static/img/upload"
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'ContactUs' # Used in routes, e.g., /admin/collections/:slug/edit
