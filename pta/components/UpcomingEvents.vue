@@ -310,12 +310,20 @@ li {
   }
   li {
     width: 68vw;
-    border-radius: 2.5vw;
+    border-radius: 2vw;
   }
   .listTitle,
   .listDate {
     width: 30vw;
     font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  #upcomingEvents {
+    width: 70vw;
+  }
+  li {
+    width: 64vw;
   }
 }
 </style>
