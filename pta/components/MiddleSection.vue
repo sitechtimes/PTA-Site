@@ -215,6 +215,9 @@ img {
   p {
     font-size: 3vw;
   }
+  #gallery{
+    width: 65vw;
+  }
 }
 @media only screen and (max-width: 576px) {
   img {

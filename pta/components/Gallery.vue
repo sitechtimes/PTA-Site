@@ -99,31 +99,53 @@
 
 @media screen and (max-width: 1400px) {
   .slide {}
-  .slider{}
+  .slider{height: 380px;}
 }
 @media screen and (max-width: 1200px) {  
   .slide {}
-  .slider{}
+  .slider{
+    max-width: 446px;
+    height: 317px;
+  }
 }
 @media screen and (max-width: 992px) {  
-  .slide {}
-  .slider{}
+  .slide {
+    height: 30vw;
+  }
+  .slider{   
+    max-width: 600px;
+    height: 309px;
+  }
 }
 @media screen and (max-width: 768px) {  
-  .slide {}
-  .slider{}
+  .slide {
+    height: 30vw;
+  }
+  .slider{    
+    max-width: 600px;
+    height: 229px;
+  }
 }
 @media screen and (max-width: 576px) {  
-  .slide {}
-  .slider{}
+  .slide {
+    height: 40vw;
+  }
+  .slider{    
+    max-width: 600px;
+    height: 249px;
+  }
 }
 @media  screen and (max-width: 450px) {  
-  .slide {}
-  .slider{}
+  .slide {    
+    height: 50vw;
+  }
+  .slider{    
+    max-width: 600px;
+    height: 201px;
+  }
 }
 @media  screen and (max-width: 356px) {  
-  .slide {}
-  .slider{}
+  .btn-prev, .btn-next{}
 }
 @media screen and (min-width: 576px) {
 }
