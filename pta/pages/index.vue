@@ -40,4 +40,9 @@ useHead({
   flex-direction: row;
   width: 90%;
 }
+@media screen and (max-width: 768px) and (orientation: landscape){
+  .parent{
+    margin-top: 5rem;
+  }
+}
 </style>
