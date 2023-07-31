@@ -141,6 +141,20 @@ li {
   width: 25vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media screen and (max-width: 1400px){
+.subh {
+  margin-top: 1.5rem;
+  font-size: 2rem ;
+  width: 40vw;
+}
+}
+@media screen and (max-width: 1200px){
+  .subh {
+  margin-top: 2rem;
+  font-size: 1.5rem ;
+  width: 40vw;
+}
+}
 /*
 @media screen and (max-width: 1200px) {
   #upcomingEvents {
@@ -186,14 +200,15 @@ li {
   #upcomingEvents {
     width: 72vw;
     height: 50vw;
-    margin-top: 41%;
+    margin-top: 45%;
   }
   #eventsCon {
     width: 73.5vw;
     height: 32vw;
   }
   .subh {
-    font-size: 3vw;
+    margin-top: 1rem;
+    font-size: 1.5rem;
     width: 73.5vw;
   }
   .listTitle {
@@ -238,7 +253,6 @@ li {
 @media screen and (max-width: 768px) {
   #upcomingEvents {
     width: 75vw;
-    margin-top: 20rem;
   }
   .subh {
     font-size: 5vw;
@@ -264,6 +278,7 @@ li {
 @media screen and (max-width: 768px) and (orientation: landscape) {
   #upcomingEvents {
     width: 45vw;
+    margin-top: 2rem;
   }
   #eventsCon {
     width: 45vw;

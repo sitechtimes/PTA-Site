@@ -117,6 +117,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 768px) {
+
   /* .events {
     margin: 0;
     margin-top: 35vh;
