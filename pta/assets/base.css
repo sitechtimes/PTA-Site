@@ -28,12 +28,13 @@
     #fff 98.95%,
     #fff 98.96%
   ); */
-  --footer-bg: radial-gradient(
+  --footer-bg: transparent;
+  /* --footer-bg: radial-gradient(
     circle,
     rgb(255, 241, 228) 0%,
     rgb(250, 219, 194) 52%,
     rgb(255, 199, 185) 100%
-  );
+  ); */
 
   /* media queries max width
   xs:  ≥356px

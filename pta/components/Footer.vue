@@ -50,7 +50,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  background: white;
+  background: var(footer-bg);
   border-radius: 19px;
   width: 50rem;
   padding: 1rem;

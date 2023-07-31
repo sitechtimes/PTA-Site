@@ -556,6 +556,7 @@ section {
   }
   h1 {
     font-size: 19px;
+    margin-top: 1.5rem;
   }
   h2 {
     color: #483221;
