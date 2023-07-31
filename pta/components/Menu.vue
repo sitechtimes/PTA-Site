@@ -145,8 +145,22 @@ img {
   .link-container {
     margin-top: 20vw;
   }
-  .link {
-    height: 6vw;
+
+    .link {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    list-style: none;
+    height: 3vw;
+  }
+  a.menu-router {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 2rem;
+    height: 1.8rem;
+    padding-top: 0.4rem;
+    margin-right: 0.5rem;
   }
 }
 @media only screen and (max-width: 356px) {
