@@ -198,9 +198,28 @@ img {
     font-size: 2vw;
   }
 }
+@media only screen and (max-width: 992px) {
+  img {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
 @media screen and (max-width: 850px) {
   p {
     font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  img {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  img {
+    width: 4vw;
+    height: 4vw;
   }
 }
 </style>
