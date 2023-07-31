@@ -189,14 +189,14 @@ li {
   }
 }
 @media only screen and (max-width: 450px) {
-  .listTitle {
+  /* .listTitle {
     width: 40vw;
   }
   #calenderInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
-  }
+  } */
 }
 @media only screen and (max-width: 356px) {
   .uniqEvent {
