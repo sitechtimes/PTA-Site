@@ -31,7 +31,7 @@
       </div>
     </div>
     <div ref="gallery" id="gallery">
-      <PhotoGallery />
+     <Gallery/>
     </div>
   </section>
 </template>
