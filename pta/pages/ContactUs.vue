@@ -523,17 +523,17 @@ section {
     top: 2rem;
   }
 }
-@media screen and (max-height: 576px) {
+/* @media screen and (max-height: 576px) {
   .container__Navigation {
     margin-top: 3rem;
   }
   #gradient {
-    height: 13vh;
+    height: 13vw;
   }
   .container__ContactUs {
-    height: 13vh;
+    height: 13vw;
   }
-}
+} */
 @media only screen and (max-width: 576px) {
   #gradient {
     height: 107vh;
