@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: cms-fix # Branch to update (optional; defaults to master)
+  branch: dev # Branch to update (optional; defaults to master)
   repo: PTA-Site
 
 media_folder: "/pta/public/upload" # Folder where user uploaded files should go
