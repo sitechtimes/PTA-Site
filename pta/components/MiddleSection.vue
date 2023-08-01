@@ -13,7 +13,7 @@
         <h2 class="subh">MEETING MINUTES</h2>
         <div>
           <a
-            href=""
+            href="link"
             class="linkCon"
             ref="minutesLink"
             target="_blank"
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div ref="gallery" id="gallery">
-     <Gallery/>
+      <Gallery />
     </div>
   </section>
 </template>
@@ -39,10 +39,22 @@
 <script>
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
+  async asyncData({ $content }) {
+    const title = await $content("page/title").fetch();
+    // const articles = await client.getEntries({
+    //   content_type: "blog",
+    //   limit: 1,
+    //   order: "-sys.createdAt",
+    // });
+    console.log(articles);
+    return {
+      title: title,
+      // blogs: articles.items,
+    };
+  },
   mounted() {
     // const { activities } = this.$refs;
     // const { activitiesDesc } = this.$refs;
@@ -184,7 +196,7 @@ img {
     width: 80%;
   }
 
-    #minutes {
+  #minutes {
     margin-bottom: 0rem;
   }
   .information,
