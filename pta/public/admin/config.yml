@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  branch: dev # Branch to update (optional; defaults to master)
+  branch: cms-fix # Branch to update (optional; defaults to master)
   repo: PTA-Site
 
-media_folder: "/pta/static/img/upload" # Folder where user uploaded files should go
-public_folder: "/img/upload"
+media_folder: "/pta/public/upload" # Folder where user uploaded files should go
+public_folder: "/pta/public/upload"
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'ContactUs' # Used in routes, e.g., /admin/collections/:slug/edit
