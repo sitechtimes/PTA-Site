@@ -60,7 +60,7 @@
   .slide {
     width: 100%;
     max-width: 800px;
-    height: 26vw;
+    height: 25.5vw;
     position: absolute;
     transition: all 0.5s;
   }
