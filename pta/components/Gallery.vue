@@ -138,6 +138,7 @@
 @media screen and (max-width: 576px) {  
   .slide {
     height: 40vw;
+    margin-top: 2rem;
   }
   .slider{    
     height: 232px;
