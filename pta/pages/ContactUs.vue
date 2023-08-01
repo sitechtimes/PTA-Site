@@ -27,26 +27,14 @@
             <div class="container__box">
               <h1>Board Members</h1>
               <div class="container__BoardMembers">
-                <div class="container__BoardMembers-profile">
-                  <img src="/profile.svg" alt="Profile Picture Filler" />
-                  <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    johndoe@gmail.com
-                  </a>
-                </div>
-                <div class="container__BoardMembers-profile">
-                  <img src="/profile.svg" alt="Profile Picture Filler" />
-                  <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    johndoe@gmail.com
+                <div
+                  v-for="people in staff"
+                  class="container__BoardMembers-profile"
+                >
+                  <img :src="people.image" :alt="people.imagealt" />
+                  <h3>{{ people.name }}</h3>
+                  <a :href="people.email" target="_blank" rel="noopener">
+                    {{ people.email }}
                   </a>
                 </div>
               </div>
@@ -107,6 +95,26 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
+      staff: [
+        {
+          image: "/profile.svg",
+          imagealt: "Filler",
+          name: "John Doe",
+          email: "johndoe@gmail.com",
+        },
+        {
+          image: "/profile.svg",
+          imagealt: "Filler",
+          name: "John Doe",
+          email: "johndoe@gmail.com",
+        },
+        {
+          image: "/profile.svg",
+          imagealt: "Filler",
+          name: "John Doe",
+          email: "johndoe@gmail.com",
+        },
+      ],
       currentSection: "BoardMembers", //the current section by default is the 'General Contacts' section
     };
   },
