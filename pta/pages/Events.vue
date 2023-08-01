@@ -177,6 +177,7 @@ li {
   #calender {
     width: 80%;
     height: 60vw;
+    margin-bottom: 2rem;
   }
   #gradient {
     width: 100%;
