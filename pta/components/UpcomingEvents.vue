@@ -141,7 +141,7 @@ li {
   .subh {
   margin-top: 2rem;
   font-size: 1.5rem ;
-  width: 40vw;
+  width: 28vw;
 }
 #upcomingEvents{
   margin-top: 5rem;
