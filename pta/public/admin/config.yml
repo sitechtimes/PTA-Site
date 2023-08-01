@@ -7,9 +7,9 @@ media_folder: "/pta/public/upload" # Folder where user uploaded files should go
 public_folder: "/pta/public/upload"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: 'ContactUs' # Used in routes, e.g., /admin/collections/:slug/edit
-    label: 'Staff' # Used in the UI, e.g., "New Post"
-    folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored   
+  - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "Staff" # Used in the UI, e.g., "New Post"
+    folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored
     fotmat: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
@@ -36,14 +36,23 @@ collections: # A list of collections the CMS should be able to edit
           tagname: "a",
           required: true,
         }
-  - name: 'Events' # Used in routes, e.g., /admin/collections/:slug/edit
-    label: 'New Event'  # Used in the UI, e.g., "New Post"
+  - name: "Events" # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "New Event" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: "pta/content-app/content/events" # The path to the folder where the documents are stored
     fotmat: "frontmatter"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string" ,required: true }
-      - { label: "Date", name: "date", widget: "datetime"}
-      - { label: "Body", name: "body", widget: "string"}
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
+    create: true # Allow users to create new documents in this collection
+    label: "Change Link" # Used in the UI, e.g., "New Post"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "pta/content-app/content/minutes" # The path to the folder where the documents are stored
+    fotmat: "frontmatter"
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "link", name: "link", widget: "a", required: true }
