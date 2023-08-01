@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  branch: dev # Branch to update (optional; defaults to master)
+  branch: cms-fix # Branch to update (optional; defaults to master)
   repo: PTA-Site
 
-media_folder: "/pta/static/img/upload" # Folder where user uploaded files should go
-public_folder: "/img/upload"
+media_folder: "/pta/public/upload" # Folder where user uploaded files should go
+public_folder: "/pta/public/upload"
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'ContactUs' # Used in routes, e.g., /admin/collections/:slug/edit
@@ -54,3 +54,21 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Intro Blurb", name: "description", widget: "text" }
+      - name: 'Minutes' # Used in routes, e.g., /admin/collections/:slug/edit
+    label: 'Minutes'  # Used in the UI, e.g., "New Post"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "pta/content-app/content/minutes" # The path to the folder where the documents are stored
+    fotmat: "frontmatter"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "link" }
+- name: 'Photo Gallery' # Used in routes, e.g., /admin/collections/:slug/edit
+    label: 'Photo Gallery'  # Used in the UI, e.g., "New Post"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "pta/content-app/content/gallery" # The path to the folder where the documents are stored
+    fotmat: "frontmatter"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - { label: "Alternative Text", name: "text", widget: "text" }
