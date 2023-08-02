@@ -102,7 +102,6 @@ export default {
     };
   },
   methods: {
-
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
@@ -418,7 +417,7 @@ section {
   }
   button {
     font-size: 2vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
   }
 }
 @media only screen and (max-width: 992px) {
