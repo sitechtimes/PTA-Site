@@ -143,19 +143,10 @@ li {
 }
 @media screen and (max-width: 1400px) {
   .subh {
-<<<<<<< Updated upstream
-  margin-top: 2rem;
-  font-size: 1.5rem ;
-width: 28vw;
-}
-#upcomingEvents{
-  margin-top: 5rem;
-=======
     margin-top: 1.5rem;
     font-size: 2rem;
     width: 40vw;
   }
->>>>>>> Stashed changes
 }
 @media screen and (max-width: 1200px) {
   .subh {
