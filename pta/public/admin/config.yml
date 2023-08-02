@@ -44,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "string" }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
