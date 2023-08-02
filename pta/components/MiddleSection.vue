@@ -11,10 +11,9 @@
       </div>
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
-        <div v-for="link in links">
-          <!-- help ahhh -->
+        <div v-for="minute in minutes">
           <a
-            href=""
+            :href="minute.link"
             class="linkCon"
             ref="minutesLink"
             target="_blank"
@@ -41,10 +40,21 @@
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-const title =
-  "https://www.theatlantic.com/ideas/archive/2023/07/christian-church-communitiy-participation-drop/674843/?utm_source=pocket-newtab";
 export default {
-  async asyncData() {},
+  data() {
+    return {
+      minutes: Array,
+    };
+  },
+  methods: {
+    async getMinutes() {
+      const query = queryContent("/minutes").find();
+      console.log(query);
+      query.then((response) => {
+        this.minutes = response;
+      });
+    },
+  },
   mounted() {
     console.log("mount");
     gsap.from("#activities", {
