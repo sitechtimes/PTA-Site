@@ -40,7 +40,6 @@ useHead({
   flex-direction: row;
   width: 90%;
 }
-<<<<<<< Updated upstream
 @media only screen and (max-width: 576px) {
   /* .div1 {
     height: 145vh;
@@ -49,11 +48,6 @@ useHead({
 @media only screen and (max-width: 356px) {
   .div1 {
     height: 0;
-=======
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .parent {
-    margin-top: 5rem;
->>>>>>> Stashed changes
   }
 }
 @media only screen and (max-width: 576px) {

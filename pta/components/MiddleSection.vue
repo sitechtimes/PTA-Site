@@ -11,7 +11,7 @@
       </div>
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
-        <div>
+        <div v-for="link in links">
           <!-- help ahhh -->
           <a
             href=""
