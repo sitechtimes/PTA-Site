@@ -102,9 +102,7 @@ export default {
     };
   },
   methods: {
-/*     imageURL(image) {
-      return require('../public' + image )
-    }, */
+
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
