@@ -184,9 +184,6 @@ h4 {
     display: initial;}
   }
 @media screen and (min-width: 992px) and (orientation: portrait) {
-  .menu-btn {
-    margin-top: 4vw;
-  }
   .menu-btn span,
   .menu-btn::before,
   .menu-btn::after {
