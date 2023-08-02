@@ -2,6 +2,7 @@
   <div class="container__ContactUs">
     <div id="gradient">
       <div class="container">
+        <!-- <h2 class="subh">CONTACTS</h2> -->
         <div class="container__Navigation">
           <button
             class="button__navigation"
@@ -212,14 +213,11 @@ export default {
 .container__box {
   width: 70vw;
   background-color: #fcf6e9;
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
   padding: 2rem;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding-top: 1rem;
   margin: 1rem;
   overflow-x: hidden;
   word-wrap: break-word;
@@ -257,6 +255,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-left: 3rem;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -442,7 +441,7 @@ section {
 
 @media screen and (max-height: 992px) and (orientation: landscape) {
   #gradient {
-    height: 120vh;
+    height: 130vh;
   }
   .container__ContactUs {
     height: 90vh;
