@@ -2,7 +2,9 @@
   
   <div>
     <!-- <p>{{ event.title }}</p> -->
-
+    <div v-for="event in eventCollection" :key="event.slug">
+      <h1>{{ event.title }}</h1>
+    </div>
     <Popup
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
@@ -41,6 +43,7 @@ export default {
     Popup,
   },
   setup() {
+    const post = ref(null);
     const selectedEvent = ref(null);
 
     const selectEvent = (event) => {
@@ -83,6 +86,13 @@ export default {
       popupTriggers.value.timedTrigger = true;
     }, 3000);
 
+    const eventCollection = ref([]);
+
+    onMounted(async () => {
+      const { $content } = await import('@nuxt/content');
+      eventCollection.value = await $content('events').fetch();
+    });
+
     return {
       Popup,
       popupTriggers,
@@ -90,18 +100,12 @@ export default {
       upcomingEvents,
       selectedEvent,
       selectEvent,
+      eventCollection
     };
     
   },
-  async asyncData ({ $content }) {
-    console.log("hi")
-    const event = await $content('events').fetch()
-    return {
-      event
-    }
-  },
+  
   mounted() {
-    
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
     gsap.from("li", {
       delay: 0.7,
