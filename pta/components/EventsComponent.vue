@@ -87,7 +87,7 @@ export default {
       Popup,
       popupTriggers,
       TogglePopup,
-      upcomingEvents,
+
       selectedEvent,
       selectEvent,
       eventCollection,
