@@ -56,7 +56,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "link", name: "link", widget: "string", required: true }
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
-    label: "Images" # Used in the UI, e.g., "New Post"
+    label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content-app/content/gallery" # The path to the folder where the documents are stored
     fotmat: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

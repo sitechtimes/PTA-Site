@@ -131,13 +131,6 @@ a:visited {
     width: 9rem;
   }
 }
-
-@media screen and (min-width: 992px) and (orientation: portrait) {
-  .logo {
-    width: 20vw;
-    margin-top: 2vw;
-  }
-}
 @media screen and (max-width: 768px) {
   .logo {
     width: 8rem;
