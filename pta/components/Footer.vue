@@ -90,7 +90,7 @@ img:hover {
   padding-bottom: 0.625rem;
 }
 .space {
-  height: 16rem;
+  height: 14rem;
 }
 @media screen and (max-width: 1400px) {
   #footer {
@@ -112,13 +112,13 @@ img:hover {
     width: 1.6rem;
   }
   .space {
-    height: 14rem;
+    height: 12rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .space {
-    height: 14rem;
+    height: 12rem;
   }
   img {
     width: 1.6rem;

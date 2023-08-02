@@ -11,9 +11,9 @@
       </div>
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
-        <div>
+        <div v-for="minute in minutes">
           <a
-            href=""
+            :href="minute.link"
             class="linkCon"
             ref="minutesLink"
             target="_blank"
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div ref="gallery" id="gallery">
-     <Gallery/>
+      <Gallery />
     </div>
   </section>
 </template>
@@ -39,17 +39,33 @@
 <script>
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
 export default {
+  data() {
+    return {
+      minutes: Array,
+    };
+  },
+  methods: {
+    scrollActivities() {
+      gsap.to({
+        ScrollTrigger: {
+          trigger: ".activities",
+          start: "center center",
+          end: "bottom top",
+        },
+      });
+    },
+    async getMinutes() {
+      const query = queryContent("/minutes").find();
+      console.log(query);
+      query.then((response) => {
+        this.minutes = response;
+      });
+    },
+  },
   mounted() {
-    // const { activities } = this.$refs;
-    // const { activitiesDesc } = this.$refs;
-    // const { minutes } = this.$refs;
-    // const { minutesLink } = this.$refs;
-    // const { gallery } = this.$refs;
-    // const timeline = gsap.timeline();
+    this.getMinutes();
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
@@ -72,20 +88,6 @@ export default {
       x: -600,
       opacity: 0,
     });
-  },
-  data() {
-    return {};
-  },
-  methods: {
-    scrollActivities() {
-      gsap.to({
-        ScrollTrigger: {
-          trigger: ".activities",
-          start: "center center",
-          end: "bottom top",
-        },
-      });
-    },
   },
 };
 /* this.home.addEventListener("mouseenter", () => animation.play());
@@ -184,7 +186,7 @@ img {
     width: 80%;
   }
 
-    #minutes {
+  #minutes {
     margin-bottom: 0rem;
   }
   .information,
