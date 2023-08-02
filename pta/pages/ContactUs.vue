@@ -2,7 +2,7 @@
   <div class="container__ContactUs">
     <div id="gradient">
       <div class="container">
-        <!-- <h2 class="subh">CONTACTS</h2> -->
+        <h2 class="heading">CONTACTS</h2>
         <div class="container__Navigation">
           <button
             class="button__navigation"
@@ -170,7 +170,10 @@ export default {
   align-items: center;
   overflow-x: hidden;
 }
-
+.heading {
+  margin-top: 5%;
+  margin-left: 0;
+}
 #gradient {
   width: 100%;
   height: fit-content;
@@ -191,7 +194,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -219,6 +222,7 @@ export default {
   padding: 2rem;
   padding-top: 1rem;
   margin: 1rem;
+  margin-top: 2.5rem;
   overflow-x: hidden;
   word-wrap: break-word;
 }
@@ -311,7 +315,7 @@ a {
 
 button {
   /* margin: 1rem; */
-  padding: 1rem;
+  padding: 0.7rem;
   padding-left: 2vw;
   padding-right: 2vw;
   width: 17vw;
@@ -344,7 +348,7 @@ section {
   }
   button {
     font-size: 1.5vw;
-    margin-top: 6vw;
+    margin-top: 4vw;
   }
 }
 @media only screen and (max-width: 1450px) {
@@ -356,8 +360,11 @@ section {
   a {
     font-size: 1.2rem;
   }
+  .heading {
+    margin-top: 7%;
+    margin-left: 0;
+  }
 }
-
 @media screen and (min-height: 1200px) {
   #gradient {
     height: 106vh;
@@ -374,7 +381,7 @@ section {
     width: 17vw;
   } */
 }
-@media screen and (max-height: 1200px) {
+@media only screen and (max-height: 1200px) {
   #gradient {
     height: 106vh;
     display: flex;
@@ -407,27 +414,23 @@ section {
   }
   button {
     font-size: 2vw;
-    margin-top: 10vw;
+    margin-top: 4vw;
   }
 }
-
 @media only screen and (max-width: 992px) {
-  button {
-    font-size: 2.5vw;
-    margin-top: 10vw;
-  }
-}
-
-@media screen and (max-width: 992px) {
   .container {
     top: 3vh;
   }
 
   button {
     width: 20vw;
+    font-size: 2.5vw;
   }
   #section__JoinUs {
     height: 43rem;
+  }
+  .heading {
+    margin-top: 12%;
   }
   p,
   li,
@@ -439,7 +442,7 @@ section {
   }
 }
 
-@media screen and (max-height: 992px) and (orientation: landscape) {
+@media only screen and (max-height: 992px) and (orientation: landscape) {
   #gradient {
     height: 130vh;
   }
@@ -463,18 +466,18 @@ section {
 @media screen and (max-width: 768px) and (orientation: portrait) {
   button {
     font-size: 3vw;
-    margin-top: 15vw;
+    margin-top: 4vw;
   }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   button {
     width: 23vw;
   }
   #gradient {
-    height: 110vh;
+    height: 90vh;
   }
   .container__ContactUs {
-    height: 100vh;
+    height: 60vh;
   }
   #section__JoinUs {
     height: 44rem;
@@ -486,6 +489,9 @@ section {
   }
   .container__ParentVolunteer {
     margin: 5px auto;
+  }
+  .heading {
+    margin-top: 16%;
   }
   p,
   li,
@@ -500,23 +506,21 @@ section {
   }
 }
 
-@media screen and (max-height: 768px) {
+@media only screen and (max-height: 768px) {
   #gradient {
-    height: 160vh;
-  }
-  .container__ContactUs {
     height: 130vh;
   }
+  .container__ContactUs {
+    height: 100vh;
+  }
 }
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   h1 {
     font-size: 1.5rem;
   }
 
   .container__Navigation {
     margin-top: 1rem;
-  }
-  #gradient {
   }
   .container {
     top: 2rem;
@@ -570,6 +574,9 @@ section {
   .container__Navigation {
     width: 90vw;
   }
+  .heading {
+    margin-top: 10%;
+  }
   h1 {
     font-size: 19px;
     margin-top: 1.5rem;
@@ -603,8 +610,21 @@ section {
     font-size: 3.5vw;
     border-radius: 1rem;
     margin-bottom: 0;
-    margin-top: 5vw;
+    margin-top: 2vw;
     width: 20vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container__ContactUs {
+    height: 170vw;
+  }
+  .heading {
+    margin-top: 15%;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .container__ContactUs {
+    height: 190vw;
   }
 }
 </style>
