@@ -1,5 +1,8 @@
 <template>
+  
   <div>
+    <!-- <p>{{ event.title }}</p> -->
+
     <Popup
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
@@ -88,8 +91,17 @@ export default {
       selectedEvent,
       selectEvent,
     };
+    
+  },
+  async asyncData ({ $content }) {
+    console.log("hi")
+    const event = await $content('events').fetch()
+    return {
+      event
+    }
   },
   mounted() {
+    
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
     gsap.from("li", {
       delay: 0.7,
