@@ -31,8 +31,9 @@
                   v-for="people in staff"
                   class="container__BoardMembers-profile"
                 >
-                  <img :src="people.image" :alt="people.imagealt" />
+                  <img :src="people.image" :alt="people.name" />
                   <h3>{{ people.name }}</h3>
+                  <h4>{{ people.roles }}</h4>
                   <a :href="people.email" target="_blank" rel="noopener">
                     {{ people.email }}
                   </a>
@@ -95,26 +96,7 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
-      staff: [
-        {
-          image: "/profile.svg",
-          imagealt: "Filler",
-          name: "John Doe",
-          email: "johndoe@gmail.com",
-        },
-        {
-          image: "/profile.svg",
-          imagealt: "Filler",
-          name: "John Doe",
-          email: "johndoe@gmail.com",
-        },
-        {
-          image: "/profile.svg",
-          imagealt: "Filler",
-          name: "John Doe",
-          email: "johndoe@gmail.com",
-        },
-      ],
+      staff: Array,
       currentSection: "BoardMembers", //the current section by default is the 'General Contacts' section
     };
   },
@@ -122,8 +104,16 @@ export default {
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
+    async getStaff() {
+      const query = queryContent("/staff").find();
+      console.log(query);
+      query.then((response) => {
+        this.staff = response;
+      });
+    },
   },
   mounted() {
+    this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
       y: 100,
@@ -290,7 +280,8 @@ h2 {
   margin: 0;
 }
 
-h3 {
+h3,
+h4 {
   color: var(--text-color);
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -298,6 +289,10 @@ h3 {
   font-weight: 700;
   line-height: 0;
   text-align: center;
+}
+
+h4 {
+  font-size: 1rem;
 }
 
 p,
