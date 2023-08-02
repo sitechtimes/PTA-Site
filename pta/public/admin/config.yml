@@ -55,4 +55,4 @@ collections: # A list of collections the CMS should be able to edit
     fotmat: "frontmatter"
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "link", name: "link", widget: "a", required: true }
+      - { label: "link", name: "link", widget: "string", required: true }
