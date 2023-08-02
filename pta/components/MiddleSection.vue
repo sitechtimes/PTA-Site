@@ -47,6 +47,15 @@ export default {
     };
   },
   methods: {
+    scrollActivities() {
+      gsap.to({
+        ScrollTrigger: {
+          trigger: ".activities",
+          start: "center center",
+          end: "bottom top",
+        },
+      });
+    },
     async getMinutes() {
       const query = queryContent("/minutes").find();
       console.log(query);
@@ -56,6 +65,7 @@ export default {
     },
   },
   mounted() {
+    this.getMinutes();
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
@@ -78,20 +88,6 @@ export default {
       x: -600,
       opacity: 0,
     });
-  },
-  data() {
-    return {};
-  },
-  methods: {
-    scrollActivities() {
-      gsap.to({
-        ScrollTrigger: {
-          trigger: ".activities",
-          start: "center center",
-          end: "bottom top",
-        },
-      });
-    },
   },
 };
 /* this.home.addEventListener("mouseenter", () => animation.play());
