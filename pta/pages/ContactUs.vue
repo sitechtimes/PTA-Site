@@ -32,7 +32,7 @@
                   v-for="people in staff"
                   class="container__BoardMembers-profile"
                 >
-                  <img :src="imageURL(people.image)" :alt="people.name" />
+                  <img :src="people.image" :alt="people.name" />
                   <h3>{{ people.name }}</h3>
                   <h4>{{ people.roles }}</h4>
                   <a :href="people.email" target="_blank" rel="noopener">
