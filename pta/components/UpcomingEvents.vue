@@ -143,26 +143,16 @@ li {
 }
 @media screen and (max-width: 1400px) {
   .subh {
-<<<<<<< HEAD
       margin-top: 2rem;
-=======
-<<<<<<< Updated upstream
-  margin-top: 2rem;
->>>>>>> parent of 756f894 (170 connecting staff cms (#176))
   font-size: 1.5rem ;
 width: 28vw;
 }
 #upcomingEvents{
   margin-top: 5rem;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 756f894 (170 connecting staff cms (#176))
     margin-top: 1.5rem;
     font-size: 2rem;
     width: 40vw;
   }
->>>>>>> Stashed changes
 }
 @media screen and (max-width: 1200px) {
   .subh {
