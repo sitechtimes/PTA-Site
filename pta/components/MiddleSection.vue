@@ -12,8 +12,9 @@
       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
         <div>
+          <!-- help ahhh -->
           <a
-            href="link"
+            href=""
             class="linkCon"
             ref="minutesLink"
             target="_blank"
@@ -40,28 +41,11 @@
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
+const title =
+  "https://www.theatlantic.com/ideas/archive/2023/07/christian-church-communitiy-participation-drop/674843/?utm_source=pocket-newtab";
 export default {
-  async asyncData({ $content }) {
-    const title = await $content("page/title").fetch();
-    // const articles = await client.getEntries({
-    //   content_type: "blog",
-    //   limit: 1,
-    //   order: "-sys.createdAt",
-    // });
-    console.log(articles);
-    return {
-      title: title,
-      // blogs: articles.items,
-    };
-  },
+  async asyncData() {},
   mounted() {
-    // const { activities } = this.$refs;
-    // const { activitiesDesc } = this.$refs;
-    // const { minutes } = this.$refs;
-    // const { minutesLink } = this.$refs;
-    // const { gallery } = this.$refs;
-    // const timeline = gsap.timeline();
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
