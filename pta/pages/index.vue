@@ -50,8 +50,8 @@ useHead({
     height: 145vh;
   }
 }
-@media only screen and (max-width: 450px){
-  .div1{
+@media only screen and (max-width: 450px) {
+  .div1 {
     height: 90vh;
   }
 }
