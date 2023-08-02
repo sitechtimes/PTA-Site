@@ -91,11 +91,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   .events {
     position: relative;
-    left: 65%;
+    left: 70%;
     top: -30%;
     width: 20vw;
   }
-}
+} 
 
 @media screen and (max-width: 992px) {
   .events {
@@ -117,6 +117,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 768px) {
+
   /* .events {
     margin: 0;
     margin-top: 35vh;
@@ -140,12 +141,13 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 576px) {
+
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
     top: 5%;
-    margin-top: 5%;
+            margin-top: 5%;
     left: 45%;
     transform: translate(-50%, 18vw);
     white-space: nowrap;
