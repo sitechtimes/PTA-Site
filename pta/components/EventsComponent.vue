@@ -121,8 +121,7 @@ export default {
 }
 #eventsCon {
   list-style-type: none;
-    overflow-x: hidden;
-
+  overflow-x: hidden;
   padding-left: 0;
 }
 .uniqEvent {
