@@ -32,7 +32,7 @@
                   v-for="people in staff"
                   class="container__BoardMembers-profile"
                 >
-                  <img :src="people.image" :alt="people.name" />
+                  <img :src="imageURL(image)" :alt="people.name" />
                   <h3>{{ people.name }}</h3>
                   <h4>{{ people.roles }}</h4>
                   <a :href="people.email" target="_blank" rel="noopener">
@@ -102,6 +102,10 @@ export default {
     };
   },
   methods: {
+    imageURL(image) {
+
+      return require('../public' + image )
+    },
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
