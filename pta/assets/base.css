@@ -13,9 +13,9 @@
   --secondary-bg: #fce5ac;
   --bg-gradient: linear-gradient(
     180deg,
-    #ffb598 0%,
-    #fccfb1 18%,
-    #ffedc5 40%,
+    #feb89a 0%,
+    #fdd8b8 18%,
+    #ffecc5 40%,
     #faf2e1 75%,
     #faf2e1 80%,
     #fff 95%
@@ -183,6 +183,7 @@ h4 {
   .menu {
     display: initial;}
   }
+
 @media screen and (min-width: 992px) and (orientation: portrait) {
   .menu-btn span,
   .menu-btn::before,
@@ -234,7 +235,18 @@ h4 {
   .menu {
     display: block;
   }
-
+}
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 185vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
 }
 
 
@@ -245,7 +257,7 @@ h4 {
     font-size: 3.7rem;
   }
   .subh {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
   .text {
     font-size: 1.8rem;
@@ -259,7 +271,7 @@ h4 {
     font-size: 3rem;
   }
   .subh {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .subtext {
     /* font-size: 2vw; */
@@ -297,6 +309,14 @@ h4 {
     font-size: 1.1rem;
   }
 }
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  #navbar {
+    height: 6.7rem;
+  }
+  .menu {
+    margin-top: 3.2rem;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .heading {
@@ -313,13 +333,15 @@ h4 {
     font-size: 0.9rem;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
   .menu {
     margin-right: 6rem;
-    margin-top: 1.4rem;
-  }
-  #navbar {
-    height: 3.3rem;
+    margin-top: 3rem;
   }
   .heading {
     font-size: 2.4rem;
@@ -336,6 +358,14 @@ h4 {
   }
   .caption {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #navbar {
+    height: 5.6rem;
+  }
+  .menu {
+    margin-top: 2.5rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -357,6 +387,11 @@ h4 {
     font-size: 4vw;
   }
 }
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (max-width: 450px) {
   .heading {
     font-size: 1.8rem;
@@ -367,6 +402,9 @@ h4 {
   }
   .text {
     font-size: 1rem;
+  }
+  .subh {
+    font-size: 1.5rem;
   }
   .subtext {
     font-size: 4.2vw;

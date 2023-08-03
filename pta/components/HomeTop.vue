@@ -80,7 +80,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
-    margin-top: 40vh;
     display: flex;
     justify-content: center;
     left: 0%;
@@ -92,7 +91,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   .events {
     position: relative;
     left: 65%;
-    top: -30%;
+    top: 12%;
     width: 20vw;
   }
 }
@@ -110,12 +109,16 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .events {
     position: relative;
-    left: 60%;
+    left: 56%;
     top: 0%;
     width: 35vw;
   }
 }
-
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  #homeTopText {
+    top: 3%;
+  }
+}
 @media screen and (max-width: 768px) {
   /* .events {
     margin: 0;
@@ -128,12 +131,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  /*  .events {
-    position: relative;
-    left: 70%;
-    top: 5%;
-    width: 15vw;
-  }*/
   #homeTopText {
     transform: translate(-50%, 1vw);
   }
@@ -144,7 +141,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: 5%;
     margin-top: 5%;
     left: 45%;
     transform: translate(-50%, 18vw);
@@ -178,6 +174,23 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     justify-content: center;
     left: 0%;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  #homeTopText {
+    color: var(--text-color);
+    font-family: var(--font-heading);
+    position: absolute;
+    margin-top: 10%;
+    left: 45%;
+    transform: translate(-50%, 18vw);
+    white-space: nowrap;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 450px) and (orientation: portrait) {
+  #homeTopText {
+    top: 6%;
   }
 }
 @media only screen and (max-width: 356px) {
@@ -244,7 +257,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: -14%;
+    top: 8%;
     left: 30%;
     white-space: nowrap;
     text-align: left;
@@ -352,8 +365,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 0.7vw;
   }
 }
-
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (orientation: portrait) {
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);

@@ -42,7 +42,7 @@ export default {
   width: 4rem;
   position: absolute;
   display: block;
-  bottom: 5vh;
+  bottom: 4vh;
   margin: auto;
   opacity: 0.8;
   display: flex;
@@ -76,7 +76,8 @@ export default {
     bottom: -10rem;
   }
 }
-@media screen and (max-width: 576px) {
+
+@media only screen and (max-width: 576px) {
   g {
     top: 58rem;
   }
@@ -84,9 +85,20 @@ export default {
     bottom: -18vw;
   }
 }
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .container__ScrollDown img {
+    bottom: -85vw;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .container__ScrollDown img {
     bottom: 10vw;
+  }
+}
+@media only screen and (max-width: 450px) and (orientation: landscape) {
+  .container__ScrollDown img {
+    bottom: -70vw;
   }
 }
 </style>

@@ -141,11 +141,10 @@ li {
   width: 25vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   .subh {
     margin-top: 2rem;
-    font-size: 1.5rem;
-    width: 28vw;
+    width: 40vw;
   }
   #upcomingEvents {
     margin-top: 5rem;
@@ -154,82 +153,59 @@ li {
     width: 40vw;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (orientation: landscape) {
   .subh {
     margin-top: 2rem;
-    font-size: 1.5rem;
     width: 40vw;
   }
   #upcomingEvents {
-    margin-top: 13vw;
-  }
-}
-/*
-@media screen and (max-width: 1200px) {
-  #upcomingEvents {
-    height: 50vw;
+    margin-top: 9vw;
+    margin-left: 4rem;
   }
   #eventsCon {
-    height: 25vw;
-  }
-  .subh {
-    font-size: 3vw;
+    height: 19vw;
   }
   .listTitle,
   .listDate {
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 1200px) and (orientation: landscape) {
-  #upcomingEvents {
-    width: 38vw;
-    height: 50vw;
-  }
-  #eventsCon {
-    width: 38vw;
-    height: 30vw;
-  }
-  .subh {
-    font-size: 3vw;
-    width: 38vw;
-  }
-  .listTitle {
-    width: 30vw;
-  }
-  .listTitle,
-  .listDate {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
+    width: 15vw;
   }
   li {
+    width: 30vw;
   }
-} */
-
-@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
   #upcomingEvents {
-    width: 72vw;
+    width: 73vw;
     height: 50vw;
-    margin-top: 45%;
+    margin-top: 50%;
+    margin-left: 0;
   }
   #eventsCon {
     width: 73.5vw;
-    height: 19vw;
+    height: 42vw;
     overflow-x: hidden;
   }
   .subh {
     margin-top: 1rem;
-    font-size: 1.5rem;
     width: 73.5vw;
+    margin-bottom: 0;
   }
   .listTitle {
     width: 30vw;
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
   }
   .listTitle,
   .listDate {
     font-size: 2vw;
   }
+  .listDate {
+    margin-top: 2.5rem;
+  }
   li {
-    width: 29rem;
+    width: 90%;
+    margin-block: 3vw;
   }
 }
 
@@ -237,46 +213,36 @@ li {
   #upcomingEvents {
     width: 40vw;
     height: 50vw;
-    margin-top: 50%;
+    margin-top: 48%;
+    margin-left: 25%;
   }
   #eventsCon {
     width: 40vw;
-    height: 30vw;
+    height: 19vw;
   }
   .subh {
-    font-size: 3vw;
     width: 40vw;
   }
   .listTitle {
     width: 30vw;
   }
-  .listTitle,
-  .listDate {
-    font-size: 1.7vw;
-  }
-
   li {
     width: 30vw;
   }
 }
-
 @media screen and (max-width: 768px) {
   #upcomingEvents {
     width: 75vw;
   }
   .subh {
-    font-size: 5vw;
     width: 75vw;
   }
   #eventsCon {
     height: 18rem;
   }
-  .uniqEvent {
-    margin: 0 1rem 1rem 1rem;
-  }
+
   li {
     width: 55vw;
-    border-radius: 2.5vw;
   }
   .listTitle,
   .listDate {
@@ -284,33 +250,74 @@ li {
     font-size: 1.03rem;
   }
 }
-
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .uniqEvent {
+    margin: 0 1rem 1rem 1rem;
+  }
+}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   #upcomingEvents {
     width: 45vw;
-    margin-top: 2rem;
+    margin-top: 50%;
+    margin-left: 44%;
   }
   #eventsCon {
     width: 45vw;
-    height: 31vw;
+    height: 20vw;
   }
   .subh {
-    font-size: 3vw;
     width: 45vw;
+    margin-bottom: 0.8rem;
   }
   .listTitle {
-    width: 30vw;
+    width: 35vw;
   }
   .listTitle,
   .listDate {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
   }
   li {
-    width: 15rem;
+    width: 30vw;
   }
 }
-
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  #upcomingEvents {
+    margin-left: 11.5%;
+    margin-top: 40%;
+    width: 100%;
+  }
+  svg {
+    margin-right: 1%;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+  .subh {
+    width: 75vw;
+  }
+  #eventsCon {
+    height: 17.5rem;
+    width: 80vw;
+  }
+  .uniqEvent {
+    margin: 0 1rem 1.5rem 1rem;
+  }
+  li {
+    width: 68vw;
+    border-radius: 2vw;
+  }
+  .listTitle,
+  .listDate {
+    width: 30vw;
+    font-size: 3vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   svg {
     margin-right: 1%;
   }
@@ -323,7 +330,6 @@ li {
     width: 75vw;
   }
   .subh {
-    font-size: 5vw;
     width: 75vw;
   }
   #eventsCon {

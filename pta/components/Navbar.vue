@@ -131,15 +131,19 @@ a:visited {
     width: 9rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) and (orientation: portrait) {
   .logo {
-    width: 8rem;
+    width: 10rem;
   }
 }
-
-@media screen and (max-width: 576px) {
-  #logo {
-    width: 1rem;
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .logo {
+    width: 9rem;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  .logo {
+    width: 7.5rem;
   }
 }
 </style>

@@ -50,9 +50,19 @@ useHead({
     height: 145vh;
   }
 }
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .div1 {
+    height: 140vh;
+  }
+}
 @media only screen and (max-width: 450px) {
   .div1 {
-    height: 90vh;
+    height: 120vh;
+  }
+}
+@media only screen and (max-width: 450px) and (orientation: landscape) {
+  .div1 {
+    height: 140vh;
   }
 }
 @media only screen and (max-width: 356px) {
