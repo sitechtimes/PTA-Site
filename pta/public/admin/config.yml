@@ -45,12 +45,13 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
       - {
-          label: "Date",
+          label: "day",
           name: "date",
           widget: "datetime",
           default: "",
           date_format: "MM.DD.YYYY",
-          time_format: "HH.mm",
+          time_format: "HH:mm",
+          format: "LLL",
           required: true,
         }
       - {
