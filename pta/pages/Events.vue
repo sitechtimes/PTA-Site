@@ -17,6 +17,9 @@
         </section>
       </div>
     </div>
+    <div id="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -36,6 +39,9 @@ export default {
   border: solid 1px #777;
   width: 35vw;
   height: 30vw;
+}
+#footer{
+  margin-top: -20vw;
 }
 #wrapper {
   height: 60vw;

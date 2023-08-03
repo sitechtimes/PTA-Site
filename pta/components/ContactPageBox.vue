@@ -4,6 +4,9 @@
     <div class="information">
       <p>{{ information }}</p>
     </div>
+    <div id="extend">
+      <p>:CCC</p>
+    </div>
   </div>
 </template>
 
@@ -24,6 +27,13 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+#extend{
+  width: 100vw;
+  height: 25vw;
+  background-color: rgb(17, 105, 76);
+  position: absolute;
+  bottom: 0vw;
+}
 h1 {
   color: #483221;
   font-family: var(--font-heading);
