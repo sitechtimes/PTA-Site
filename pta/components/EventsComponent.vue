@@ -34,7 +34,7 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Popup from "../components/Popup.vue";
 import { gsap } from "gsap";
 
