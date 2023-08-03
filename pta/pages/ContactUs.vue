@@ -92,6 +92,10 @@
         </div>
       </div>
     </div>
+    <!-- <div id="extend"><p>AHHHHHHHHH</p></div> -->
+    <div id="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -135,14 +139,26 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-
+#extend{
+  width: 100%;
+  height: 20vw;
+  /* background-color: aquamarine; */
+  position: absolute;
+  bottom: -35vw;
+  overflow-x: hidden;
+}
+img{
+  border-radius: 10vw;
+}
 #container__Navigation {
 }
 #section__BoardMembers {
 }
 #section__JoinUs {
 }
-
+#footer{
+  margin-top: 65vw
+}
 /* #gradient {
   width: 100vw;
   height: 100vh;
@@ -159,17 +175,19 @@ export default {
 } */
 
 .container {
+
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 15vh;
-  height: fit-content;
+  height: auto;
   width: 100vw;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+
 }
 .heading {
   margin-top: 5%;
@@ -212,6 +230,7 @@ export default {
 
 #container_Body {
   width: 100vw;
+  padding-bottom: 10vw;
 }
 
 .container__box {
@@ -226,6 +245,7 @@ export default {
   margin-top: 2.5rem;
   overflow-x: hidden;
   word-wrap: break-word;
+  height: auto;
 }
 
 .container__BoardMembers {
@@ -347,6 +367,7 @@ section {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
+  /* padding-bottom: 25vw; */
 }
 @media only screen and (min-width: 1200px) {
   .container {

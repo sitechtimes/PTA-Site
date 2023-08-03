@@ -9,6 +9,9 @@
         <MiddleSection />
       </div>
     </div>
+    <div id="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -21,6 +24,9 @@ useHead({
 </script>
 
 <style scoped>
+#footer{
+  margin-top: -20vw;
+}
 .parent {
   display: grid;
   grid-template-columns: 1fr;
