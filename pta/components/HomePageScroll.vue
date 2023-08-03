@@ -78,11 +78,15 @@ export default {
 }
 @media screen and (max-width: 576px) {
   g {
-      top: 58rem;
-
+    top: 58rem;
   }
   .container__ScrollDown img {
     bottom: -18vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container__ScrollDown img {
+    bottom: 10vw;
   }
 }
 </style>

@@ -2,6 +2,7 @@
   <div class="container__ContactUs">
     <div id="gradient">
       <div class="container">
+        <h2 class="heading">CONTACTS</h2>
         <div class="container__Navigation">
           <button
             class="button__navigation"
@@ -27,26 +28,15 @@
             <div class="container__box">
               <h1>Board Members</h1>
               <div class="container__BoardMembers">
-                <div class="container__BoardMembers-profile">
-                  <img src="/profile.svg" alt="Profile Picture Filler" />
-                  <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    johndoe@gmail.com
-                  </a>
-                </div>
-                <div class="container__BoardMembers-profile">
-                  <img src="/profile.svg" alt="Profile Picture Filler" />
-                  <h3>John Doe • Position</h3>
-                  <a
-                    href="mailto:johndoe@gmail.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    johndoe@gmail.com
+                <div
+                  v-for="people in staff"
+                  class="container__BoardMembers-profile"
+                >
+                  <img :src="people.image" :alt="people.name" />
+                  <h3>{{ people.name }}</h3>
+                  <h4>{{ people.roles }}</h4>
+                  <a :href="people.email" target="_blank" rel="noopener">
+                    {{ people.email }}
                   </a>
                 </div>
               </div>
@@ -107,6 +97,7 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
+      staff: Array,
       currentSection: "BoardMembers", //the current section by default is the 'General Contacts' section
     };
   },
@@ -114,8 +105,16 @@ export default {
     showSection(section) {
       this.currentSection = section; //the current section by default is the 'General Contacts' section
     },
+    async getStaff() {
+      const query = queryContent("/staff").find();
+      console.log(query);
+      query.then((response) => {
+        this.staff = response;
+      });
+    },
   },
   mounted() {
+    this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
       y: 100,
@@ -169,7 +168,10 @@ export default {
   align-items: center;
   overflow-x: hidden;
 }
-
+.heading {
+  margin-top: 5%;
+  margin-left: 0;
+}
 #gradient {
   width: 100%;
   height: fit-content;
@@ -190,7 +192,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -212,15 +214,13 @@ export default {
 .container__box {
   width: 70vw;
   background-color: #fcf6e9;
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
   padding: 2rem;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding-top: 1rem;
   margin: 1rem;
+  margin-top: 2.5rem;
   overflow-x: hidden;
   word-wrap: break-word;
 }
@@ -257,6 +257,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-left: 3rem;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -282,7 +283,8 @@ h2 {
   margin: 0;
 }
 
-h3 {
+h3,
+h4 {
   color: var(--text-color);
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -290,6 +292,10 @@ h3 {
   font-weight: 700;
   line-height: 0;
   text-align: center;
+}
+
+h4 {
+  font-size: 1rem;
 }
 
 p,
@@ -312,7 +318,7 @@ a {
 
 button {
   /* margin: 1rem; */
-  padding: 1rem;
+  padding: 0.7rem;
   padding-left: 2vw;
   padding-right: 2vw;
   width: 17vw;
@@ -345,7 +351,7 @@ section {
   }
   button {
     font-size: 1.5vw;
-    margin-top: 6vw;
+    margin-top: 4vw;
   }
 }
 @media only screen and (max-width: 1450px) {
@@ -357,8 +363,11 @@ section {
   a {
     font-size: 1.2rem;
   }
+  .heading {
+    margin-top: 7%;
+    margin-left: 0;
+  }
 }
-
 @media screen and (min-height: 1200px) {
   #gradient {
     height: 106vh;
@@ -375,7 +384,7 @@ section {
     width: 17vw;
   } */
 }
-@media screen and (max-height: 1200px) {
+@media only screen and (max-height: 1200px) {
   #gradient {
     height: 106vh;
     display: flex;
@@ -408,27 +417,23 @@ section {
   }
   button {
     font-size: 2vw;
-    margin-top: 10vw;
+    margin-top: 2vw;
   }
 }
-
 @media only screen and (max-width: 992px) {
-  button {
-    font-size: 2.5vw;
-    margin-top: 10vw;
-  }
-}
-
-@media screen and (max-width: 992px) {
   .container {
     top: 3vh;
   }
 
   button {
     width: 20vw;
+    font-size: 2.5vw;
   }
   #section__JoinUs {
     height: 43rem;
+  }
+  .heading {
+    margin-top: 12%;
   }
   p,
   li,
@@ -440,9 +445,9 @@ section {
   }
 }
 
-@media screen and (max-height: 992px) and (orientation: landscape) {
+@media only screen and (max-height: 992px) and (orientation: landscape) {
   #gradient {
-    height: 120vh;
+    height: 130vh;
   }
   .container__ContactUs {
     height: 90vh;
@@ -464,18 +469,18 @@ section {
 @media screen and (max-width: 768px) and (orientation: portrait) {
   button {
     font-size: 3vw;
-    margin-top: 15vw;
+    margin-top: 4vw;
   }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   button {
     width: 23vw;
   }
   #gradient {
-    height: 110vh;
+    height: 90vh;
   }
   .container__ContactUs {
-    height: 100vh;
+    height: 60vh;
   }
   #section__JoinUs {
     height: 44rem;
@@ -487,6 +492,9 @@ section {
   }
   .container__ParentVolunteer {
     margin: 5px auto;
+  }
+  .heading {
+    margin-top: 16%;
   }
   p,
   li,
@@ -501,23 +509,21 @@ section {
   }
 }
 
-@media screen and (max-height: 768px) {
+@media only screen and (max-height: 768px) {
   #gradient {
-    height: 160vh;
-  }
-  .container__ContactUs {
     height: 130vh;
   }
+  .container__ContactUs {
+    height: 100vh;
+  }
 }
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   h1 {
     font-size: 1.5rem;
   }
 
   .container__Navigation {
     margin-top: 1rem;
-  }
-  #gradient {
   }
   .container {
     top: 2rem;
@@ -571,6 +577,9 @@ section {
   .container__Navigation {
     width: 90vw;
   }
+  .heading {
+    margin-top: 10%;
+  }
   h1 {
     font-size: 19px;
     margin-top: 1.5rem;
@@ -604,8 +613,21 @@ section {
     font-size: 3.5vw;
     border-radius: 1rem;
     margin-bottom: 0;
-    margin-top: 5vw;
+    margin-top: 2vw;
     width: 20vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container__ContactUs {
+    height: 170vw;
+  }
+  .heading {
+    margin-top: 15%;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .container__ContactUs {
+    height: 190vw;
   }
 }
 </style>
