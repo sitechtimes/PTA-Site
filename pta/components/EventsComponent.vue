@@ -12,7 +12,7 @@
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">{{ selectedEvent.date }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
-      <p class="text" id="body">{{ selectedEvent.p }}</p>
+      <p class="text" id="body">{{ selectedEvent.description }}</p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
