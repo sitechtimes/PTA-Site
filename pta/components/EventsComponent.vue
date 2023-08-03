@@ -11,15 +11,14 @@
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">{{ selectedEvent.date }}</p>
-      <img id="img" :src="selectedEvent.imageSrc" alt="" />
-      <p class="text" id="body">{{ selectedEvent.body }}</p>
+      <img id="img" :src="selectedEvent.image" alt="" />
+      <p class="text" id="body">{{ selectedEvent.p }}</p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
         <li
           v-for="event in events"
-          :key="index"
           @click="() => selectEvent(event)"
           class="uniqEvent"
         >
@@ -51,6 +50,7 @@ export default {
       const query = queryContent("/events").find();
       console.log(query);
       query.then((response) => {
+        console.log(response);
         this.events = response;
       });
     },
@@ -97,13 +97,6 @@ export default {
   mounted() {
     this.getEvents();
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
-    gsap.from("li", {
-      delay: 0.7,
-      duration: 0.5,
-      y: 100,
-      opacity: 0,
-      stagger: 0.3,
-    });
   },
 };
 </script>
