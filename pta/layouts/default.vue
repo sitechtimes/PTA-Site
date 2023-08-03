@@ -3,7 +3,7 @@
     <Navbar />
     <slot />
     <ScrollTop />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
