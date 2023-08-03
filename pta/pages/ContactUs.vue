@@ -34,7 +34,11 @@
                   <img :src="people.image" :alt="people.name" />
                   <h3>{{ people.name }}</h3>
                   <h4>{{ people.roles }}</h4>
-                  <a :href="people.email" target="_blank" rel="noopener">
+                  <a
+                    :href="`mailto:${people.email}`"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     {{ people.email }}
                   </a>
                 </div>
@@ -135,7 +139,7 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-#extend{
+#extend {
   width: 100%;
   height: 20vw;
   /* background-color: aquamarine; */
@@ -143,7 +147,7 @@ export default {
   bottom: -35vw;
   overflow-x: hidden;
 }
-img{
+img {
   border-radius: 10vw;
 }
 #container__Navigation {
@@ -152,8 +156,8 @@ img{
 }
 #section__JoinUs {
 }
-#footer{
-  margin-top: 65vw
+#footer {
+  margin-top: 65vw;
 }
 /* #gradient {
   width: 100vw;
@@ -171,7 +175,6 @@ img{
 } */
 
 .container {
-
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -183,7 +186,6 @@ img{
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-
 }
 .heading {
   margin-top: 5%;
