@@ -37,7 +37,7 @@ collections: # A list of collections the CMS should be able to edit
           required: true,
         }
   - name: "Events" # Used in routes, e.g., /admin/collections/:slug/edit
-    label: "New Event" # Used in the UI, e.g., "New Post"
+    label: "Event" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: "pta/content/events" # The path to the folder where the documents are stored
     fotmat: "frontmatter"
