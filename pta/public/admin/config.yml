@@ -50,7 +50,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: "datetime",
           default: "",
           date_format: "MM.DD.YYYY",
-          time_format: "HH.mm",
+          time_format: "HH:mm",
+          format: "LLL",
           required: true,
         }
       - {
