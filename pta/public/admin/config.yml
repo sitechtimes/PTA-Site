@@ -47,7 +47,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Date", name: "date", widget: "date", required: true }
       - {
           label: "Description",
-          name: "description",
+          name: "body",
           widget: "string",
           tagname: "p",
           required: true,
