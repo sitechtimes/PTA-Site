@@ -21,6 +21,7 @@
           v-for="event in events"
           @click="() => selectEvent(event)"
           class="uniqEvent"
+          v-on:ready="liGsap()"
         >
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
@@ -43,6 +44,7 @@ export default {
   data() {
     return {
       events: Array,
+      create: false,
     };
   },
   methods: {
@@ -52,7 +54,18 @@ export default {
       query.then((response) => {
         console.log(response);
         this.events = response;
+        this.create = true;
       });
+    },
+    liGsap() {
+      gsap.from("li", {
+        delay: 0.7,
+        duration: 0.5,
+        y: 100,
+        opacity: 0,
+        stagger: 0.3,
+      });
+      console.log("gsap");
     },
   },
   setup() {
@@ -97,6 +110,13 @@ export default {
   mounted() {
     this.getEvents();
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
+    gsap.from("li", {
+      delay: 0.7,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      stagger: 0.3,
+    });
   },
 };
 </script>
@@ -147,7 +167,7 @@ ul {
   font-weight: 400;
 }
 .listTitle {
-  width: 20vw;
+  width: 17.5vw;
 }
 .listDate {
   text-align: end;
@@ -233,7 +253,7 @@ li {
     margin-bottom: 4vw;
   }
   .listTitle {
-    width: 45vw;
+    width: 35vw;
   }
   #calender {
     width: 80%;
@@ -254,7 +274,7 @@ li {
 }
 @media only screen and (max-width: 450px) {
   .listTitle {
-    width: 40vw;
+    width: 30vw;
   }
   #eventsCon {
     height: 60vw;
