@@ -1,9 +1,5 @@
 <template>
   <div>
-    <!-- <p>{{ event.title }}</p> -->
-    <div v-for="event in eventCollection" :key="event.slug">
-      <h1>{{ event.title }}</h1>
-    </div>
     <Popup
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
@@ -18,7 +14,7 @@
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
         <li
-          v-for="event in events"
+          v-for="(event, index) in upcomingEvents"
           :key="index"
           @click="() => selectEvent(event)"
           class="uniqEvent"
@@ -41,22 +37,7 @@ export default {
   components: {
     Popup,
   },
-  data() {
-    return {
-      events: Array,
-    };
-  },
-  methods: {
-    async getEvents() {
-      const query = queryContent("/events").find();
-      console.log(query);
-      query.then((response) => {
-        this.events = response;
-      });
-    },
-  },
   setup() {
-    const post = ref(null);
     const selectedEvent = ref(null);
 
     const selectEvent = (event) => {
@@ -72,30 +53,43 @@ export default {
       popupTriggers.value[trigger] = !popupTriggers.value[trigger];
     };
 
+    const upcomingEvents = ref([
+      {
+        title: "Jessie's Birthday",
+        date: "05/23/2023",
+        body: "<3",
+      },
+      {
+        title: "Bake Sale",
+        date: "05/27/2023",
+        body: "<3",
+      },
+      {
+        title: "Very Long Named Event",
+        date: "05/30/2023",
+        body: "<3",
+      },
+      {
+        title: "Super Duper Very Extremely Long Named Event",
+        date: "05/31/2023",
+        body: "<3",
+      },
+    ]);
+
     setTimeout(() => {
       popupTriggers.value.timedTrigger = true;
     }, 3000);
-
-    const eventCollection = ref([]);
-
-    onMounted(async () => {
-      const { $content } = await import("@nuxt/content");
-      eventCollection.value = await $content("events").fetch();
-    });
 
     return {
       Popup,
       popupTriggers,
       TogglePopup,
-
+      upcomingEvents,
       selectedEvent,
       selectEvent,
-      eventCollection,
     };
   },
-
   mounted() {
-    this.getEvents();
     gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
     gsap.from("li", {
       delay: 0.7,
