@@ -15,8 +15,8 @@
     </h3>
     <ul class="subtext" id="eventsCon">
       <li
-        v-for="(event, index) in upcomingEvents"
-        :key="index"
+        v-for="event in events"
+        :key="event"
         id="uniqEvent"
         class="li"
         ref="li"
@@ -35,36 +35,22 @@ import { ref } from "vue";
 import { gsap } from "gsap";
 
 export default {
-  components: {},
-  setup() {
-    const upcomingEvents = ref([
-      {
-        title: "Jessie's Birthday",
-        date: "05/23/2023",
-        body: "<3",
-      },
-      {
-        title: "Bake Sale",
-        date: "05/27/2023",
-        body: "<3",
-      },
-      {
-        title: "Very Long Named Event",
-        date: "05/30/2023",
-        body: "<3",
-      },
-      {
-        title: "Super Duper Very Extremely Long Named Event",
-        date: "05/31/2023",
-        body: "<3",
-      },
-    ]);
-
+  data() {
     return {
-      upcomingEvents,
+      events: Array,
     };
   },
+  methods: {
+    async getEvents() {
+      const query = queryContent("/events").find();
+      console.log(query);
+      query.then((response) => {
+        this.events = response;
+      });
+    },
+  },
   mounted() {
+    this.getEvents();
     const { li } = this.$refs;
     const { subh } = this.$refs;
     gsap.from(li, {
