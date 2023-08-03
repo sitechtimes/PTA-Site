@@ -34,7 +34,11 @@
                   <img :src="people.image" :alt="people.name" />
                   <h3>{{ people.name }}</h3>
                   <h4>{{ people.roles }}</h4>
-                  <a :href="people.email" target="_blank" rel="noopener">
+                  <a
+                    :href="`mailto:` + people.email"
+                    target="_blank"
+                    rel="external"
+                  >
                     {{ people.email }}
                   </a>
                 </div>
