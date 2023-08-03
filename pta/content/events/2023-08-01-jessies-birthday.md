@@ -1,6 +1,5 @@
 ---
 title: "jessie's birthday "
-date: 2023-08-15T16:20:09.175Z
-image: /pta/public/upload/whalen.jpg
+date: 2023-08-15
+body: almost 243?
 ---
-almost 243?
