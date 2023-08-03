@@ -8,7 +8,7 @@
       class="slide"
       :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
     >
-      <img :src="photo.image" alt="newest gallery images!" />
+      <img :src="photos.image" :alt="photo.title" />
     </div>
 
     <!-- Control buttons -->
