@@ -153,7 +153,7 @@ li {
     width: 40vw;
   }
 }
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 1200px) {
   .subh {
     margin-top: 2rem;
     width: 40vw;
@@ -174,42 +174,7 @@ li {
     width: 30vw;
   }
 }
-@media screen and (max-width: 992px) and (orientation: portrait) {
-  #upcomingEvents {
-    width: 73vw;
-    height: 50vw;
-    margin-top: 50%;
-    margin-left: 0;
-  }
-  #eventsCon {
-    width: 73.5vw;
-    height: 42vw;
-    overflow-x: hidden;
-  }
-  .subh {
-    margin-top: 1rem;
-    width: 73.5vw;
-    margin-bottom: 0;
-  }
-  .listTitle {
-    width: 30vw;
-    margin-top: 2.2rem;
-    margin-bottom: 2.2rem;
-  }
-  .listTitle,
-  .listDate {
-    font-size: 2vw;
-  }
-  .listDate {
-    margin-top: 2.5rem;
-  }
-  li {
-    width: 90%;
-    margin-block: 3vw;
-  }
-}
-
-@media screen and (max-width: 992px) and (orientation: landscape) {
+@media screen and (max-width: 992px) {
   #upcomingEvents {
     width: 40vw;
     height: 50vw;
@@ -250,12 +215,7 @@ li {
     font-size: 1.03rem;
   }
 }
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  .uniqEvent {
-    margin: 0 1rem 1rem 1rem;
-  }
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 768px) {
   #upcomingEvents {
     width: 45vw;
     margin-top: 50%;
@@ -282,7 +242,7 @@ li {
     width: 30vw;
   }
 }
-@media only screen and (max-width: 576px) and (orientation: landscape) {
+@media only screen and (max-width: 576px) {
   #upcomingEvents {
     margin-left: 11.5%;
     margin-top: 40%;
@@ -317,39 +277,7 @@ li {
     margin-bottom: 1.5rem;
   }
 }
-@media only screen and (max-width: 576px) and (orientation: portrait) {
-  svg {
-    margin-right: 1%;
-  }
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-  }
-  #upcomingEvents {
-    margin-top: 3rem;
-    width: 75vw;
-  }
-  .subh {
-    width: 75vw;
-  }
-  #eventsCon {
-    height: 54vw;
-    width: 80vw;
-  }
-  .uniqEvent {
-    margin: 0 1rem 1rem 1rem;
-  }
-  li {
-    width: 68vw;
-    border-radius: 2vw;
-  }
-  .listTitle,
-  .listDate {
-    width: 30vw;
-    font-size: 3vw;
-  }
-}
-@media only screen and (max-width: 450px) and (orientation: landscape) {
+@media only screen and (max-width: 450px) {
   .listTitle,
   .listDate {
     font-size: 3.7vw;
@@ -357,20 +285,24 @@ li {
   .listDate {
     width: 20vw;
   }
-}
-@media only screen and (max-width: 356px) and (orientation: landscape) {
   #upcomingEvents {
-    margin-left: 0;
-    width: 35vw;
-    margin-top: 55%;
+    margin-top: 45%;
   }
 }
 @media only screen and (max-width: 356px) {
   #upcomingEvents {
     width: 70vw;
+    margin-top: 48%;
+    margin-left: 0;
+  }
+  #eventsCon {
+    height: 15.35rem;
   }
   .subh {
     font-size: 6vw;
+  }
+  .uniqEvent {
+    margin: 0 1rem 1rem 1rem;
   }
   li {
     width: 64vw;

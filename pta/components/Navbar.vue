@@ -91,20 +91,17 @@ a {
 .icon {
   height: 30px;
   padding: 0 10px 0 0;
-  margin-top: 4px;
+  margin-top: 1px;
 }
-
-#contact {
-  padding-bottom: 0.1rem;
-}
-
+#contact,
 #donate {
-  padding-bottom: 0.1rem;
+  margin-top: 2px;
 }
 
 .group {
   width: 12rem;
   align-self: center;
+  margin-top: 1.5rem;
 }
 
 a:visited {
@@ -118,30 +115,33 @@ a:visited {
 }
 
 @media screen and (max-width: 1200px) {
-  .logo {
-    width: 7rem;
-  }
-
   .icon {
-    height: 1.5rem;
+    height: 1.8rem;
   }
-
   .group {
-    font-size: 1.2rem;
-    width: 9rem;
+    margin-top: 1rem;
+    /* font-size: 1.2rem;
+    width: 9rem; */
+  }
+  .icon {
+    margin-top: 3px;
+  }
+  #contact,
+  #donate {
+    margin-top: 5px;
   }
 }
-@media screen and (max-width: 992px) and (orientation: portrait) {
+@media screen and (max-width: 992px) {
   .logo {
-    width: 10rem;
+    width: 16vw;
   }
 }
-@media only screen and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) {
   .logo {
-    width: 9rem;
+    width: 8rem;
   }
 }
-@media only screen and (max-width: 576px) and (orientation: portrait) {
+@media only screen and (max-width: 576px) {
   .logo {
     width: 7.5rem;
   }

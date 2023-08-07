@@ -22,11 +22,8 @@ useHead({
 
 <style scoped>
 .parent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .div1 {
@@ -40,9 +37,19 @@ useHead({
   flex-direction: row;
   width: 90%;
 }
+@media screen and (max-width: 992px) {
+  .div1 {
+    height: 75vh;
+  }
+}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .parent {
     margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .div1 {
+    height: 40vh;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -58,11 +65,6 @@ useHead({
 @media only screen and (max-width: 450px) {
   .div1 {
     height: 120vh;
-  }
-}
-@media only screen and (max-width: 450px) and (orientation: landscape) {
-  .div1 {
-    height: 140vh;
   }
 }
 @media only screen and (max-width: 356px) {

@@ -71,34 +71,14 @@ export default {
     opacity: 0;
   }
 }
-@media screen and (max-width: 822px) {
+@media screen and (max-width: 1200px) and (orientation: landscape) {
   .container__ScrollDown img {
-    bottom: -10rem;
+    display: none;
   }
 }
-
-@media only screen and (max-width: 576px) {
-  g {
-    top: 58rem;
-  }
+@media screen and (max-width: 850px) and (orientation: portrait) {
   .container__ScrollDown img {
-    bottom: -18vw;
-  }
-}
-@media only screen and (max-width: 576px) and (orientation: landscape) {
-  .container__ScrollDown img {
-    bottom: -85vw;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .container__ScrollDown img {
-    bottom: 10vw;
-  }
-}
-@media only screen and (max-width: 450px) and (orientation: landscape) {
-  .container__ScrollDown img {
-    bottom: -70vw;
+    display: none;
   }
 }
 </style>
