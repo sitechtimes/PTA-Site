@@ -46,6 +46,16 @@ export default {
       console.log(query);
       query.then((response) => {
         this.events = response;
+        nextTick(() => {
+          gsap.from("li", {
+            delay: 0.9,
+            duration: 0.5,
+            y: 100,
+            opacity: 0,
+            stagger: 0.3,
+          });
+          console.log("gsap");
+        });
       });
     },
   },
