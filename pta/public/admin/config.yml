@@ -45,18 +45,13 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Date", name: "date", widget: "string", required: true }
+      - { label: "Time", name: "time", widget: "string", required: false }
       - {
-          label: "Time",
-          name: "time",
-          widget: "string",
-          required: false,
-      }
-            - {
           label: "Description",
           name: "description",
           widget: "string",
           required: true,
-      }
+        }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
