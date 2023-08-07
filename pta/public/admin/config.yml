@@ -44,16 +44,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "day",
-          name: "date",
-          widget: "datetime",
-          default: "",
-          date_format: "MM.DD.YYYY",
-          time_format: "HH:mm",
-          format: "LLL",
-          required: true,
-        }
+      - { label: "day", name: "date", widget: "string", required: true }
       - {
           label: "Description",
           name: "description",
