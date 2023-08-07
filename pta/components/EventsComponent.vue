@@ -11,6 +11,7 @@
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">{{ selectedEvent.date }}</p>
+      <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
     </Popup>
@@ -157,10 +158,14 @@ ul {
   font-weight: 400;
 }
 .listTitle {
-  width: 25vw;
+  width: fit-content;
+  width: 15vw;
 }
 .listDate {
-  text-align: end;
+  width: 20vw;
+  text-align: right;
+  /* flex-direction: row;
+  align-self: flex-end; */
 }
 #head {
   position: absolute;
@@ -217,7 +222,10 @@ li {
 
 @media screen and (max-width: 768px) {
   .listTitle {
-    width: 22vw;
+    width: 20vw;
+  }
+  .listDate {
+    width: 15vw;
   }
   ul {
     height: 21vw;
@@ -243,7 +251,10 @@ li {
     margin-bottom: 4vw;
   }
   .listTitle {
-    width: 45vw;
+    width: 20vw;
+  }
+  .listDate {
+    width: 20vw;
   }
   #calender {
     width: 80%;
