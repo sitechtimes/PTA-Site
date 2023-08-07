@@ -159,7 +159,7 @@ li {
     width: 40vw;
   }
   #upcomingEvents {
-    margin-top: 9vw;
+    margin-top: 8vw;
     margin-left: 4rem;
   }
   #eventsCon {
@@ -178,7 +178,7 @@ li {
   #upcomingEvents {
     width: 40vw;
     height: 50vw;
-    margin-top: 48%;
+    margin-top: 40%;
     margin-left: 25%;
   }
   #eventsCon {
@@ -244,9 +244,10 @@ li {
 }
 @media only screen and (max-width: 576px) {
   #upcomingEvents {
-    margin-left: 11.5%;
+    margin-left: 12%;
     margin-top: 40%;
-    width: 100%;
+    width: 100vw;
+    margin-right: 12%;
   }
   svg {
     margin-right: 1%;
@@ -260,7 +261,7 @@ li {
   }
   #eventsCon {
     height: 17.5rem;
-    width: 80vw;
+    width: 100.1%;
   }
   .uniqEvent {
     margin: 0 1rem 1.5rem 1rem;
@@ -287,13 +288,13 @@ li {
   }
   #upcomingEvents {
     margin-top: 45%;
+    padding-left: 0.1rem;
   }
 }
 @media only screen and (max-width: 356px) {
   #upcomingEvents {
-    width: 70vw;
+    width: 71vw;
     margin-top: 48%;
-    margin-left: 0;
   }
   #eventsCon {
     height: 15.35rem;

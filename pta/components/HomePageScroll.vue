@@ -42,7 +42,7 @@ export default {
   width: 4rem;
   position: absolute;
   display: block;
-  bottom: 4vh;
+  bottom: 1.5rem;
   margin: auto;
   opacity: 0.8;
   display: flex;
@@ -76,7 +76,17 @@ export default {
     display: none;
   }
 }
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  .container__ScrollDown img {
+    display: none;
+  }
+}
 @media screen and (max-width: 850px) and (orientation: portrait) {
+  .container__ScrollDown img {
+    display: none;
+  }
+}
+@media screen and (max-height: 1200px) and (orientation: portrait) {
   .container__ScrollDown img {
     display: none;
   }

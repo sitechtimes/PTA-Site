@@ -127,7 +127,6 @@ img {
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin-left: 5%;
 }
 
 .information {
@@ -135,12 +134,16 @@ img {
   flex-direction: column;
   width: 50vw;
   z-index: 2;
+  margin-left: 6.5vw;
+  margin-right: 5vw;
 }
 
 #gallery {
   display: flex;
   width: 50vw;
   justify-content: center;
+  margin-right: 6.5rem;
+  margin-bottom: 5vw;
 }
 
 @media screen and (max-width: 576px) {
@@ -184,8 +187,13 @@ img {
 
   .information {
     width: 80%;
+    margin-right: 6.5vw;
   }
-
+  #gallery {
+    margin-right: 0;
+    margin-top: 3vw;
+    width: 70vw;
+  }
   #minutes {
     margin-bottom: 0rem;
   }
@@ -211,7 +219,6 @@ img {
     height: 2vw;
   }
 }
-
 @media screen and (max-width: 850px) {
   p {
     font-size: 3vw;

@@ -226,7 +226,7 @@ h4 {
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 220vw;
+    height: 180vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -237,7 +237,11 @@ h4 {
     display: block;
   }
 }
-
+@media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 210vw;
+  }
+}
 
 @media only screen and (max-width: 1400px) {
   .heading {
@@ -302,7 +306,7 @@ h4 {
     height: 5.2rem;
   }
   .menu {
-    margin-top: 2.9rem;
+    margin-top: 2.6rem;
   }
   .heading {
     margin: 18% 0 0 8%;
@@ -336,7 +340,7 @@ h4 {
     margin: 20% 0 0 8%;
   }
   .subh {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .subtext {
     font-size: 2.4vw;
@@ -365,7 +369,7 @@ h4 {
     margin-right: 5rem;
   }
   .subh {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
   }
   .text {

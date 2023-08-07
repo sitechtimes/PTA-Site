@@ -28,18 +28,28 @@ useHead({
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-  height: 100vh;
+  height: 56vw;
   width: 60%;
 }
 
 .div2 {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .div1 {
+    height: 50vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .div1 {
+    height: 45vw;
+  }
 }
 @media screen and (max-width: 992px) {
   .div1 {
-    height: 75vh;
+    height: 50vw;
   }
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -47,14 +57,9 @@ useHead({
     margin-top: 5rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .div1 {
-    height: 40vh;
-  }
-}
 @media only screen and (max-width: 576px) {
   .div1 {
-    height: 145vh;
+    height: 145vw;
   }
 }
 @media only screen and (max-width: 576px) and (orientation: landscape) {
@@ -64,12 +69,12 @@ useHead({
 }
 @media only screen and (max-width: 450px) {
   .div1 {
-    height: 120vh;
+    height: 165vw;
   }
 }
 @media only screen and (max-width: 356px) {
   .div1 {
-    height: 0;
+    height: 175vw;
   }
 }
 </style>
