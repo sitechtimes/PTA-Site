@@ -1,3 +1,3 @@
 ---
-image: ./pta/public/upload/seagull.png
+image: /upload/seagull.png
 ---
