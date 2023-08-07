@@ -1,3 +1,3 @@
 ---
-image: /pta/public/upload/whalen.jpg
+image: /upload/whalen.jpg
 ---

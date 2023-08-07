@@ -9,7 +9,7 @@ public_folder: "/pta/public/upload"
 collections: # A list of collections the CMS should be able to edit
   - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Staff" # Used in the UI, e.g., "New Post"
-    folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored
+    folder: "pta/content/staff" # The path to the folder where the documents are stored
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
@@ -55,14 +55,14 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "pta/content-app/content/minutes" # The path to the folder where the documents are stored
+    folder: "pta/content/minutes" # The path to the folder where the documents are stored
     format: "frontmatter"
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "link", name: "link", widget: "string", required: true }
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
-    folder: "pta/content-app/content/gallery" # The path to the folder where the documents are stored
+    folder: "pta/content/gallery" # The path to the folder where the documents are stored
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
