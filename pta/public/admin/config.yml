@@ -64,7 +64,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content/gallery" # The path to the folder where the documents are stored
     format: "frontmatter"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
+    preview_path: "/upload/{{filename}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Image", name: "image", widget: "image", required: true }
