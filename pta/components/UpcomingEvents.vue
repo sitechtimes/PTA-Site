@@ -349,9 +349,28 @@ li {
     font-size: 3vw;
   }
 }
+@media only screen and (max-width: 450px) and (orientation: landscape) {
+  .listTitle,
+  .listDate {
+    font-size: 3.7vw;
+  }
+  .listDate {
+    width: 20vw;
+  }
+}
+@media only screen and (max-width: 356px) and (orientation: landscape) {
+  #upcomingEvents {
+    margin-left: 0;
+    width: 35vw;
+    margin-top: 55%;
+  }
+}
 @media only screen and (max-width: 356px) {
   #upcomingEvents {
     width: 70vw;
+  }
+  .subh {
+    font-size: 6vw;
   }
   li {
     width: 64vw;

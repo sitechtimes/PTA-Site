@@ -323,7 +323,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 1.3vw;
   }
 }
-
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #homeTopCon {
     background: var(--bg-gradient);
