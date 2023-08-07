@@ -1,5 +1,5 @@
 ---
 title: Kafka Banner Release
-date: August 9th 2023
+date: "August 9th "
 description: i like women
 ---
