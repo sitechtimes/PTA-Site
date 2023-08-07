@@ -10,11 +10,18 @@ collections: # A list of collections the CMS should be able to edit
   - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Staff" # Used in the UI, e.g., "New Post"
     folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored
-    fotmat: "frontmatter"
+    format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          preview_path: "/upload/{{filename}}",
+        }
       - {
           label: "Name",
           name: "name",
