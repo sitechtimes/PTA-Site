@@ -9,7 +9,7 @@ public_folder: "/upload"
 collections: # A list of collections the CMS should be able to edit
   - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Staff" # Used in the UI, e.g., "New Post"
-    folder: "pta/content/staff" # The path to the folder where the documents are stored
+    folder: "pta/content-app/content/staff" # The path to the folder where the documents are stored
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
@@ -44,18 +44,24 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "day", name: "date", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "string", required: true }
       - {
+          label: "Time",
+          name: "time",
+          widget: "string",
+          required: false,
+      }
+            - {
           label: "Description",
           name: "description",
           widget: "string",
           required: true,
-        }
+      }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "pta/content/minutes" # The path to the folder where the documents are stored
+    folder: "pta/content-app/content/minutes" # The path to the folder where the documents are stored
     format: "frontmatter"
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
@@ -64,9 +70,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
     preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}"
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
-    folder: "pta/content/gallery" # The path to the folder where the documents are stored
+    folder: "pta/content-app/content/gallery" # The path to the folder where the documents are stored
     format: "frontmatter"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Image", name: "image", widget: "image", required: true }
