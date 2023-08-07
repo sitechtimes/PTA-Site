@@ -19,7 +19,6 @@
             Join Us
           </button>
         </div>
-
         <div class="container__Body">
           <section
             id="section__BoardMembers"
