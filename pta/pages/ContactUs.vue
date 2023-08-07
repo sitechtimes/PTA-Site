@@ -78,8 +78,8 @@ export default {
     return {
       staff: Array,
       shownDiv: "staff", 
-      joinColor: '#fcf6e9',
-      staffColor: '#fde7cf'
+      joinColor: 'transparent',
+      staffColor: '#fcf6e9'
     };
   },
   methods: {
@@ -92,12 +92,12 @@ export default {
     },
     tester(){
       if(this.shownDiv === 'join'){
-        this.joinColor = '#fde7cf'
-        this.staffColor = '#fcf6e9'
+        this.joinColor = '#fcf6e9'
+        this.staffColor = 'transparent'
       }
       else{
-        this.joinColor = '#fcf6e9'
-        this.staffColor = '#fde7cf'
+        this.joinColor = 'transparent'
+        this.staffColor = '#fcf6e9'
       }
     }
   },
@@ -417,7 +417,7 @@ button {
     width: 25vw;
     font-size: 4vw;
     padding: 3vw;
-    border-radius: 5vw;
+    border-radius: 3vw;
     margin-bottom: 4vw;
     margin-right: 7vw;
     margin-left: 7vw;
