@@ -3,7 +3,7 @@ backend:
   branch: dev # Branch to update (optional; defaults to master)
   repo: PTA-Site
 
-media_folder: "/upload" # Folder where user uploaded files should go
+media_folder: "/public/upload" # Folder where user uploaded files should go
 public_folder: "/upload"
 
 collections: # A list of collections the CMS should be able to edit
