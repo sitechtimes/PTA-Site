@@ -5,23 +5,8 @@
       <h2 id="heading">CONTACTS</h2>
     </div>
     <div class="buttons">
-<<<<<<< Updated upstream
-      <button
-        @click="shownDiv = 'staff'"
-        :class="{ shown: shownDiv === 'staff' }"
-      >
-        Staff
-      </button>
-      <button
-        @click="shownDiv = 'join'"
-        :class="{ shown: shownDiv === 'join' }"
-      >
-        Join Us
-      </button>
-=======
     <button @click="shownDiv = 'staff', tester();" v-bind:style="{ backgroundColor: staffColor }" :class="{ shown: shownDiv === 'staff' }">Staff</button>
     <button @click="shownDiv = 'join', tester();" v-bind:style="{ backgroundColor: joinColor }" :class="{ shown: shownDiv === 'join' }">Join Us</button>
->>>>>>> Stashed changes
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
       <h1>Board Members</h1>
@@ -92,13 +77,9 @@ export default {
   data() {
     return {
       staff: Array,
-<<<<<<< Updated upstream
-      shownDiv: "staff",
-=======
       shownDiv: "staff", 
       joinColor: '#fcf6e9',
       staffColor: '#fde7cf'
->>>>>>> Stashed changes
     };
   },
   methods: {
@@ -151,16 +132,10 @@ h2 {
   margin-left: 5vw;
 }
 
-<<<<<<< Updated upstream
-li,
-p {
-  font-size: 1vw;
-=======
 li, p{
 font-size: 1vw;
 margin-left: 5vw;
 margin-right: 5vw;
->>>>>>> Stashed changes
 }
 p {
   margin-top: 2vw;
@@ -229,13 +204,6 @@ button {
   background-color: #fcf6e9;
   cursor: pointer;
   overflow-x: hidden;
-}
-<<<<<<< Updated upstream
-button:hover {
-=======
-button:active{
->>>>>>> Stashed changes
-  background-color: #fde7cf;
 }
 
 #heading {
