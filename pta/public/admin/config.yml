@@ -13,7 +13,13 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          preview_path: "/upload/{{filename}}",
+        }
       - {
           label: "Name",
           name: "name",
@@ -41,11 +47,17 @@ collections: # A list of collections the CMS should be able to edit
     folder: "pta/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string", required: true,        
-          pattern: [
-              '^.{5,30}$',
-              'Must have more than 5 characters and less than 30 characters',
-            ],}
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          required: true,
+          pattern:
+            [
+              "^.{5,30}$",
+              "Must have more than 5 characters and less than 30 characters",
+            ],
+        }
       - { label: "Date", name: "date", widget: "string", required: true }
       - { label: "Time", name: "time", widget: "string", required: false }
       - {
@@ -53,9 +65,10 @@ collections: # A list of collections the CMS should be able to edit
           name: "description",
           widget: "string",
           required: true,
-          pattern: [
-              '^.{10,500}$',
-              'Must have more than 10 characters and less than 500 characters',
+          pattern:
+            [
+              "^.{10,500}$",
+              "Must have more than 10 characters and less than 500 characters",
             ],
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
@@ -68,10 +81,16 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "link", name: "link", widget: "string", required: true }
 
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
-    preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}"
+    preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content-app/content/gallery" # The path to the folder where the documents are stored
     slug: "{{year}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          preview_path: "/upload/{{filename}}",
+        }

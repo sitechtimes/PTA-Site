@@ -5,8 +5,20 @@
       <h2 id="heading">CONTACTS</h2>
     </div>
     <div class="buttons">
-    <button @click="shownDiv = 'staff', tester();" v-bind:style="{ backgroundColor: staffColor }" :class="{ shown: shownDiv === 'staff' }">Staff</button>
-    <button @click="shownDiv = 'join', tester();" v-bind:style="{ backgroundColor: joinColor }" :class="{ shown: shownDiv === 'join' }">Join Us</button>
+      <button
+        @click="(shownDiv = 'staff'), tester()"
+        v-bind:style="{ backgroundColor: staffColor }"
+        :class="{ shown: shownDiv === 'staff' }"
+      >
+        Staff
+      </button>
+      <button
+        @click="(shownDiv = 'join'), tester()"
+        v-bind:style="{ backgroundColor: joinColor }"
+        :class="{ shown: shownDiv === 'join' }"
+      >
+        Join Us
+      </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
       <h1>Board Members</h1>
@@ -77,9 +89,9 @@ export default {
   data() {
     return {
       staff: Array,
-      shownDiv: "staff", 
-      joinColor: 'transparent',
-      staffColor: '#fcf6e9'
+      shownDiv: "staff",
+      joinColor: "transparent",
+      staffColor: "#fcf6e9",
     };
   },
   methods: {
@@ -90,16 +102,15 @@ export default {
         this.staff = response;
       });
     },
-    tester(){
-      if(this.shownDiv === 'join'){
-        this.joinColor = '#fcf6e9'
-        this.staffColor = 'transparent'
+    tester() {
+      if (this.shownDiv === "join") {
+        this.joinColor = "#fcf6e9";
+        this.staffColor = "transparent";
+      } else {
+        this.joinColor = "transparent";
+        this.staffColor = "#fcf6e9";
       }
-      else{
-        this.joinColor = 'transparent'
-        this.staffColor = '#fcf6e9'
-      }
-    }
+    },
   },
   mounted() {
     this.getStaff();
@@ -132,10 +143,11 @@ h2 {
   margin-left: 5vw;
 }
 
-li, p{
-font-size: 1vw;
-margin-left: 5vw;
-margin-right: 5vw;
+li,
+p {
+  font-size: 1vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 p {
   margin-top: 2vw;
@@ -168,6 +180,7 @@ a {
   width: 15vw;
 }
 .staffPfp {
+  height: 10vw;
   width: 10vw;
   overflow-x: hidden;
   border-radius: 30vw;
@@ -295,6 +308,7 @@ button {
     width: 15vw;
   }
   .staffPfp {
+    height: 10vw;
     width: 10vw;
     overflow-x: hidden;
     border-radius: 30vw;
@@ -429,7 +443,8 @@ button {
     width: 80vw;
   }
   .staffPfp {
-    width: 60%;
+    height: 50vw;
+    width: 50vw;
     margin-top: 5vw;
   }
   .staffName {
