@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- <p>{{ event.title }}</p> -->
+    <div v-for="event in eventCollection" :key="event.slug">
+      <h1>{{ event.title }}</h1>
+    </div>
     <Popup
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
@@ -7,15 +11,15 @@
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">{{ selectedEvent.date }}</p>
-      <img id="img" :src="selectedEvent.imageSrc" alt="" />
-      <p class="text" id="body">{{ selectedEvent.body }}</p>
+      <p class="text" id="time">{{ selectedEvent.time }}</p>
+      <img id="img" :src="selectedEvent.image" alt="" />
+      <p class="text" id="body">{{ selectedEvent.description }}</p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
         <li
-          v-for="(event, index) in upcomingEvents"
-          :key="index"
+          v-for="event in events"
           @click="() => selectEvent(event)"
           class="uniqEvent"
         >
@@ -29,7 +33,7 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Popup from "../components/Popup.vue";
 import { gsap } from "gsap";
 
@@ -37,7 +41,35 @@ export default {
   components: {
     Popup,
   },
+  data() {
+    return {
+      events: Array,
+      create: false,
+    };
+  },
+  methods: {
+    async getEvents() {
+      const query = queryContent("/events").find();
+      console.log(query);
+      query.then((response) => {
+        console.log(response);
+        this.events = response;
+        this.create = true;
+        nextTick(() => {
+          gsap.from("li", {
+            delay: 0.9,
+            duration: 0.5,
+            y: 100,
+            opacity: 0,
+            stagger: 0.3,
+          });
+          console.log("gsap");
+        });
+      });
+    },
+  },
   setup() {
+    const post = ref(null);
     const selectedEvent = ref(null);
 
     const selectEvent = (event) => {
@@ -53,51 +85,29 @@ export default {
       popupTriggers.value[trigger] = !popupTriggers.value[trigger];
     };
 
-    const upcomingEvents = ref([
-      {
-        title: "Jessie's Birthday",
-        date: "05/23/2023",
-        body: "<3",
-      },
-      {
-        title: "Bake Sale",
-        date: "05/27/2023",
-        body: "<3",
-      },
-      {
-        title: "Very Long Named Event",
-        date: "05/30/2023",
-        body: "<3",
-      },
-      {
-        title: "Super Duper Very Extremely Long Named Event",
-        date: "05/31/2023",
-        body: "<3",
-      },
-    ]);
-
     setTimeout(() => {
       popupTriggers.value.timedTrigger = true;
     }, 3000);
+
+    const eventCollection = ref([]);
+
+    onMounted(async () => {
+      const { $content } = await import("@nuxt/content");
+      eventCollection.value = await $content("events").fetch();
+    });
 
     return {
       Popup,
       popupTriggers,
       TogglePopup,
-      upcomingEvents,
       selectedEvent,
       selectEvent,
+      eventCollection,
     };
   },
   mounted() {
-    gsap.from(".subh", { delay: 0.5, duration: 1, y: 100, opacity: 0 });
-    gsap.from("li", {
-      delay: 0.7,
-      duration: 0.5,
-      y: 100,
-      opacity: 0,
-      stagger: 0.3,
-    });
+    this.getEvents();
+    gsap.from(".subh", { delay: 0.5, duration: 0.7, y: 100, opacity: 0 });
   },
 };
 </script>
@@ -149,10 +159,14 @@ ul {
   font-weight: 400;
 }
 .listTitle {
-  width: 20vw;
+  width: fit-content;
+  width: 15vw;
 }
 .listDate {
-  text-align: end;
+  width: 20vw;
+  text-align: right;
+  /* flex-direction: row;
+  align-self: flex-end; */
 }
 #head {
   position: absolute;
@@ -209,7 +223,10 @@ li {
 
 @media only screen and (max-width: 768px) {
   .listTitle {
-    width: 18vw;
+    width: 20vw;
+  }
+  .listDate {
+    width: 15vw;
   }
   ul {
     height: 21vw;
@@ -239,7 +256,10 @@ li {
     padding: 0vw 6vw 0vw 6vw;
   }
   .listTitle {
-    width: 45vw;
+    width: 20vw;
+  }
+  .listDate {
+    width: 20vw;
   }
   #calender {
     width: 80%;
@@ -260,7 +280,7 @@ li {
 }
 @media only screen and (max-width: 450px) {
   .listTitle {
-    width: 40vw;
+    width: 55vw;
   }
   #eventsCon {
     height: 60vw;

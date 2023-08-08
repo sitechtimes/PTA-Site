@@ -1,5 +1,5 @@
 <template>
-  <div class="space">
+  <!-- <div class="space"> -->
     <div class="container__footer">
       <h2 class="subtext">Staten Island Technical High School PTA</h2>
       <div id="so_med">
@@ -30,7 +30,7 @@
         <p class="address">485 Clawson Street, Staten Island, NY 10306</p>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -38,7 +38,8 @@
 
 .container__footer {
   text-align: center;
-  position: absolute;
+  position:relative;
+  bottom: -15vw;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -89,9 +90,9 @@ img:hover {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
-.space {
+/* .space {
   height: 14rem;
-}
+} */
 @media screen and (max-width: 1400px) {
   #footer {
     bottom: 0px;
