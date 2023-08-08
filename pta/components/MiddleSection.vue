@@ -24,7 +24,7 @@
                 id="linkIcon"
                 src="../components/icons/link.svg"
                 alt="link icon"
-              />Link to May 2023 Meeting Minutes
+              />{{minute.title}}
             </h3>
           </a>
         </div>
