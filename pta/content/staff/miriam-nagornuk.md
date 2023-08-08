@@ -1,5 +1,5 @@
 ---
-image: https://archives.bulbagarden.net/media/upload/thumb/6/61/0385Jirachi.png/250px-0385Jirachi.png
+image: /upload/d554c056a384a95402b1a12426a496df_1200x1200.avif
 name: Miriam Nagornuk
 roles: Co-Vice President
 email: miriamn@gmail.com
