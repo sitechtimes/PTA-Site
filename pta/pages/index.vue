@@ -3,7 +3,9 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
-        <HomePageScroll />
+        <div class=".downarrow">
+          <HomePageScroll />
+        </div>
       </div>
       <div class="div2">
         <MiddleSection />
@@ -16,6 +18,9 @@
 </template>
 
 <script setup>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 useHead({
   script: [
     { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },

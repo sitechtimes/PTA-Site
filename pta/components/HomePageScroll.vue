@@ -6,11 +6,14 @@
       alt="scroll to top button"
       @click="scrollDown"
     />
+    <div class="test"><p>efomkwemgl</p></div>
   </div>
 </template>
 
 <script>
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
   mounted() {
     const { arrow } = this.$refs;
@@ -19,7 +22,13 @@ export default {
       .from(arrow, { opacity: 0, delay: 1, duration: 1 })
       .from(arrow, { duration: 0.3, y: -10 }, "<")
       .to(arrow, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
+      gsap.to(arrow, {
+        scrollTrigger: '.test',
+        opacity: 0, 
+        duration: 3,
+      })
   },
+
   methods: {
     scrollDown() {
       const element = document.getElementById("section__MiddleSection");
@@ -30,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+.test{
+  margin-top: 50vw;
+  overflow-x: hidden ;
+}
 .container__ScrollDown {
   width: 100vw;
   display: flex;
