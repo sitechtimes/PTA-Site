@@ -1,5 +1,5 @@
 ---
-image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOCIQVpsi926JZxwn5T08wH-MpSpHxQZbnA&usqp=CAU
+image: https://images.gameinfo.io/pokemon/256/p143f157s1.png
 name: Ken Cen
 roles: Co-President
 email: kencen@gmail.com
