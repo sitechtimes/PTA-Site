@@ -1,5 +1,5 @@
 ---
-title: Bridging the GAP 2023-2024 Fundraiser
+title: Bridging the GAP Fundraiser
 date: October 10
 description: The PTA is sending students an important fundraising letter home
   today. The Staten Island Technical High School PTA relies on donations from
