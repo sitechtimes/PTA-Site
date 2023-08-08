@@ -443,8 +443,8 @@ button {
     width: 80vw;
   }
   .staffPfp {
-    height: 40vw;
-    width: 40vw;
+    height: 50vw;
+    width: 50vw;
     margin-top: 5vw;
   }
   .staffName {
