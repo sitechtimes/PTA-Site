@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div id="logoContainer">
-      <NuxtLink to="/">
+      <NuxtLink to="/" @click="this.page = home">
         <img
           class="logo"
           src="../components/icons/NavBar-Icons/pta-logo.png"
@@ -11,7 +11,12 @@
     </div>
     <div id="naV">
       <div class="group">
-        <NuxtLink to="/">
+        <NuxtLink
+          to="/"
+          id="homeLink"
+          ref="homeLink"
+          @click="(this.page = home), underline()"
+        >
           <img
             class="icon"
             id="home"
@@ -22,7 +27,11 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/Events">
+        <NuxtLink
+          to="/Events"
+          id="eventsLink"
+          @click="(this.page = events), underline()"
+        >
           <img
             class="icon"
             id="events"
@@ -33,7 +42,11 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/ContactUs">
+        <NuxtLink
+          to="/ContactUs"
+          id="contactLink"
+          @click="(this.page = contact), underline()"
+        >
           <img
             class="icon"
             id="contact"
@@ -44,7 +57,11 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/Donate">
+        <NuxtLink
+          to="/Donate"
+          id="donateLink"
+          @click="(this.page = donate), underline()"
+        >
           <img
             class="icon"
             id="donate"
@@ -58,14 +75,51 @@
     <Menu />
   </div>
 </template>
-<!-- <script>
-import Menu from "./Menu.vue";
+
+<script>
 export default {
-  components: { Menu },
+  data(){
+    return {
+      page: home,
+    },
+  },
   name: "Navbar",
-  methods: {},
+  methods: {
+    underline() {
+      const { homeLink } = this.$refs;
+      const { eventsLink } = this.$refs;
+      const { contactLink } = this.$refs;
+      const { donateLink } = this.$refs;
+      if (this.page === home) {
+        console.log(this.page)
+        homeLink.style.text-decoration = "underline var(--text-color) 0.2rem"
+        eventsLink.style.text-decoration = "none"
+        contactLink.style.text-decoration = "none"
+        donateLink.style.text-decoration = "none"
+      } else if( this.page === events) {
+        console.log(this.page)
+        homeLink.style.text-decoration = "none"
+        eventsLink.style.text-decoration = "underline var(--text-color) 0.2rem"
+        contactLink.style.text-decoration = "none"
+        donateLink.style.text-decoration = "none"
+      } else if( this.page === contact) {
+        console.log(this.page)
+        homeLink.style.text-decoration = "none"
+        eventsLink.style.text-decoration = "none"
+        contactLink.style.text-decoration = "underline var(--text-color) 0.2rem"
+        donateLink.style.text-decoration = "none"
+      } else if( this.page === donate) {
+        console.log(this.page)
+        homeLink.style.text-decoration = "none"
+        eventsLink.style.text-decoration = "none"
+        contactLink.style.text-decoration = "none"
+        donateLink.style.text-decoration = "underline var(--text-color) 0.2rem"
+      },
+    },
+  },
 };
-</script> -->
+</script>
+
 <style scoped>
 @import url(../assets/base.css);
 
