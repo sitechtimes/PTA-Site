@@ -1,6 +1,6 @@
 ---
-image: ../public/upload/henriques.jpg
-name: Everton Henriques
-roles: Right Hand Man
-email: ehenriques@schools.nyc.gov
+image: /upload/vic.jpg
+name: Eva Chung
+roles: Co-President
+email: evachung@gmail.com
 ---
