@@ -59,10 +59,21 @@ collections: # A list of collections the CMS should be able to edit
             ],
         }
       - {
+          label: "Month",
+          name: "month",
+          widget: "string",
+          required: true,
+        }
+       - {
           label: "Date",
           name: "date",
           widget: "string",
-          dateFormat: "MM/DD/YYYY",
+          required: true,
+        }
+       - {
+          label: "Year",
+          name: "year",
+          widget: "string",
           required: true,
         }
       - { label: "Time", name: "time", widget: "string", required: false }

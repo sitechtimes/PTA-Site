@@ -23,7 +23,9 @@
       >
         <div class="uniqEvent">
           <h5 class="listTitle">{{ event.title }}</h5>
-          <h5 class="listDate">{{ event.date }}</h5>
+          <h5 class="listDate">
+            {{ event.month }}/{{ event.date }}/{{ event.year }}
+          </h5>
         </div>
       </li>
     </ul>

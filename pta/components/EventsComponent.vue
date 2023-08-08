@@ -10,7 +10,11 @@
       :event="selectedEvent"
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
-      <p class="text" id="date">{{ selectedEvent.date }}</p>
+      <p class="text" id="date">
+        {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{
+          selectedEvent.year
+        }}
+      </p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
