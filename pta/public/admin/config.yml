@@ -58,24 +58,9 @@ collections: # A list of collections the CMS should be able to edit
               "Must have more than 5 characters and less than 30 characters",
             ],
         }
-      - {
-          label: "Month (MM)",
-          name: "month",
-          widget: "number",
-          required: true,
-        }
-       - {
-          label: "Date (DD)",
-          name: "date",
-          widget: "number",
-          required: true,
-        }
-       - {
-          label: "Year (YYYY)",
-          name: "year",
-          widget: "number",
-          required: true,
-        }
+      - { label: "Month (MM)", name: "month", widget: "number", required: true }
+      - { label: "Date (DD)", name: "date", widget: "number", required: true }
+      - { label: "Year (YYYY)", name: "year", widget: "number", required: true }
       - { label: "Time", name: "time", widget: "string", required: false }
       - {
           label: "Description",
