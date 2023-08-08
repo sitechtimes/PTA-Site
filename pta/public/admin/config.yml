@@ -61,19 +61,19 @@ collections: # A list of collections the CMS should be able to edit
       - {
           label: "Month",
           name: "month",
-          widget: "string",
+          widget: "number",
           required: true,
         }
        - {
           label: "Date",
           name: "date",
-          widget: "string",
+          widget: "number",
           required: true,
         }
        - {
           label: "Year",
           name: "year",
-          widget: "string",
+          widget: "number",
           required: true,
         }
       - { label: "Time", name: "time", widget: "string", required: false }
