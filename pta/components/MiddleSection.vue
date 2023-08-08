@@ -146,37 +146,7 @@ img {
   margin-bottom: 5vw;
 }
 
-@media screen and (max-width: 576px) {
-  #section__MiddleSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-  }
-
-  .information {
-    width: 100%;
-  }
-
-  .gallery {
-    width: 90vw;
-  }
-
-  .information,
-  #activites {
-    display: flex;
-    justify-content: center;
-  }
-
-  p,
-  h2,
-  h3 {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;
     flex-direction: column;
@@ -192,7 +162,7 @@ img {
   #gallery {
     margin-right: 0;
     margin-top: 3vw;
-    width: 70vw;
+    width: 100vw;
   }
   #minutes {
     margin-bottom: 0rem;
@@ -219,15 +189,43 @@ img {
     height: 2vw;
   }
 }
-@media screen and (max-width: 850px) {
+@media only screen and (max-width: 850px) {
   p {
     font-size: 3vw;
   }
 }
 @media only screen and (max-width: 576px) {
+  #section__MiddleSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .information {
+    width: 80%;
+  }
+  .information,
+  #activites {
+    display: flex;
+    justify-content: center;
+  }
+
+  p,
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
   img {
     width: 3vw;
     height: 3vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #gallery {
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 356px) {
