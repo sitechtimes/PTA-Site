@@ -80,60 +80,28 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
-    margin-top: 40vh;
     display: flex;
     justify-content: center;
-    left: 0%;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1200px) and (orientation: landscape) {
-  .events {
     position: relative;
     left: 65%;
-    top: -30%;
+    top: 12%;
     width: 20vw;
   }
 }
-
 @media screen and (max-width: 992px) {
   .events {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    left: 0%;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 992px) and (orientation: landscape) {
-  .events {
     position: relative;
-    left: 60%;
+    left: 56%;
     top: 0%;
     width: 35vw;
   }
 }
-
-@media screen and (max-width: 768px) {
-  /* .events {
-    margin: 0;
-    margin-top: 35vh;
-    display: flex;
-    justify-content: center;
-    left: 0%;
-    width: 100%;
-  } */
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  #homeTopText {
+    top: 3%;
+  }
 }
-
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  /*  .events {
-    position: relative;
-    left: 70%;
-    top: 5%;
-    width: 15vw;
-  }*/
   #homeTopText {
     transform: translate(-50%, 1vw);
   }
@@ -144,7 +112,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: 5%;
     margin-top: 5%;
     left: 45%;
     transform: translate(-50%, 18vw);
@@ -178,6 +145,12 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     justify-content: center;
     left: 0%;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #homeTopText {
+    top: 6%;
+    left: 47.4%;
   }
 }
 @media only screen and (max-width: 356px) {
@@ -228,7 +201,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 3vw;
   }
 }
-@media screen and (min-width: 576px) and (orientation: landscape) {
+@media screen and (min-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100vw;
@@ -244,7 +217,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     color: var(--text-color);
     font-family: var(--font-heading);
     position: absolute;
-    top: -14%;
+    top: 8%;
     left: 30%;
     white-space: nowrap;
     text-align: left;
@@ -274,48 +247,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 140vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-  #homeTopText {
-    color: var(--text-color);
-    font-family: var(--font-heading);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 20vw);
-    text-align: left;
-  }
-  #address {
-    margin: 0%;
-    font-weight: 400;
-    letter-spacing: 0.047vw;
-    font-size: 3.27vw;
-  }
-  #siths {
-    margin: 0%;
-    font-size: 9vw;
-    font-weight: 800;
-    letter-spacing: 0.12rem;
-    margin-bottom: 0.5vw;
-  }
-  #pta {
-    margin: 0%;
-    font-size: 4.1vw;
-    font-weight: 400;
-    letter-spacing: 0.047vw;
-    margin-bottom: 1.3vw;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  #homeTopCon {
-    background: var(--bg-gradient);
-    width: 100%;
-    height: 70vw;
+    height: 60vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -350,71 +282,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-weight: 400;
     letter-spacing: 0.48px;
     margin-bottom: 0.7vw;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #homeTopText {
-    color: var(--text-color);
-    font-family: var(--font-heading);
-    position: absolute;
-    transform: translate(0%, 0vw);
-    top: 28%;
-    left: 7vw;
-    text-align: left;
-  }
-  #address {
-    margin: 0%;
-    font-weight: 400;
-    letter-spacing: 0.48px;
-    font-size: 1.27vw;
-  }
-  #siths {
-    margin: 0%;
-    font-size: 5vw;
-    font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.12rem;
-    margin-bottom: 0.2vw;
-  }
-  #pta {
-    margin: 0%;
-    font-size: 2.1vw;
-    font-weight: 400;
-    letter-spacing: 0.48px;
-    margin-bottom: 0.4vw;
-  }
-}
-@media screen and (min-width: 992px) and (orientation: portrait) {
-  #homeTopText {
-    color: var(--text-color);
-    font-family: var(--font-heading);
-    position: absolute;
-    transform: translate(-50%, 0vw);
-    top: 20%;
-    left: 50%;
-    text-align: left;
-  }
-  #address {
-    margin: 0%;
-    font-weight: 400;
-    letter-spacing: 0.48px;
-    font-size: 3vw;
-  }
-  #siths {
-    margin: 0%;
-    font-size: 9vw;
-    font-weight: 800;
-    line-height: 129.164%;
-    letter-spacing: 0.12rem;
-    margin-bottom: 0.2vw;
-  }
-  #pta {
-    margin: 0%;
-    font-size: 3vw;
-    font-weight: 400;
-    letter-spacing: 0.48px;
-    margin-bottom: 0.4vw;
   }
 }
 @media screen and (min-width: 1200px) {

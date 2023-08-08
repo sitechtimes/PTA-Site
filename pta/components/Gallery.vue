@@ -69,7 +69,7 @@ body {
 .slide {
   width: 100%;
   max-width: 800px;
-  height: 25.5vw;
+  height: 25vw;
   position: absolute;
   transition: all 0.5s;
 }
@@ -97,16 +97,16 @@ body {
   transform: scale(1.1);
 }
 .btn-prev {
-  top: 40%;
+  top: 50%;
   left: 2%;
 }
 
 .btn-next {
-  top: 40%;
+  top: 50%;
   right: 2%;
 }
 
-@media screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   .btn-prev,
   .btn-next {
     top: 39%;
@@ -115,75 +115,67 @@ body {
     height: 380px;
   }
 }
-@media screen and (max-width: 1200px) {
-  .slide {
-  }
-  .slider {
-    max-width: 446px;
-    height: 317px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .slide {
-    height: 32vw;
-  }
+@media only screen and (max-width: 1200px) {
   .slider {
     max-width: 600px;
-    height: 309px;
+    height: 370px;
   }
 }
-@media screen and (max-width: 850px) {
+@media only screen and (max-width: 1024px) {
   .slide {
-    height: 27vw;
+    height: 35vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .slide {
+    height: 35vw;
   }
   .slider {
-    height: 229px;
+    max-width: 550px;
+    height: 350px;
   }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .slider {
+    height: 350px;
+    max-width: 450px;
+  }
   .slide {
-    height: 30vw;
+    height: 45vw;
   }
   .btn-prev,
   .btn-next {
     top: 39%;
   }
 }
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .slide {
-    height: 40vw;
+    height: 45vw;
     margin-top: 2rem;
   }
   .slider {
-    height: 232px;
+    height: 300px;
+    max-width: 400px;
+  }
+  .btn-prev,
+  .btn-next {
+    top: 50%;
   }
 }
-@media screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
   .slide {
-    height: 45vw;
+    height: 55vw;
   }
   .slider {
-    height: 201px;
+    height: 280px;
   }
 }
-@media screen and (max-width: 356px) {
+@media only screen and (max-width: 356px) {
   .slide {
     height: 58vw;
   }
   .slider {
-    height: 201px;
+    height: 250px;
   }
-  .btn-prev,
-  .btn-next {
-    top: 29%;
-  }
-}
-@media screen and (min-width: 576px) {
-}
-@media screen and (min-width: 576px) and (orientation: landscape) {
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 768px) and (orientation: landscape) {
 }
 </style>
