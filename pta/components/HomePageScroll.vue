@@ -71,17 +71,17 @@ export default {
     opacity: 0;
   }
 }
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media only screen and (max-width: 1200px) and (orientation: landscape) {
   .container__ScrollDown img {
     display: none;
   }
 }
-@media screen and (max-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .container__ScrollDown img {
     display: none;
   }
 }
-@media screen and (max-width: 850px) and (orientation: portrait) {
+@media only screen and (max-width: 850px) and (orientation: portrait) {
   .container__ScrollDown img {
     display: none;
   }

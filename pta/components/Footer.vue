@@ -1,35 +1,35 @@
 <template>
   <!-- <div class="space"> -->
-    <div class="container__footer">
-      <h2 class="subtext">Staten Island Technical High School PTA</h2>
-      <div id="so_med">
-        <a
-          href="https://www.facebook.com/SITECHPTA/"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
-        </a>
-        <a
-          href="https://www.instagram.com/_sammytheseagull/"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
-        </a>
-        <a
-          href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
-        </a>
-      </div>
-      <div class="caption">
-        <p class="email">sitechpta@gmail.com</p>
-        <p class="address">485 Clawson Street, Staten Island, NY 10306</p>
-      </div>
+  <div class="container__footer">
+    <h2 class="subtext">Staten Island Technical High School PTA</h2>
+    <div id="so_med">
+      <a
+        href="https://www.facebook.com/SITECHPTA/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="../assets/SoMed_Logos/facebook.svg" alt="facebook icon" />
+      </a>
+      <a
+        href="https://www.instagram.com/_sammytheseagull/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
+      </a>
+      <a
+        href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
+      </a>
     </div>
+    <div class="caption">
+      <p class="email">sitechpta@gmail.com</p>
+      <p class="address">485 Clawson Street, Staten Island, NY 10306</p>
+    </div>
+  </div>
   <!-- </div> -->
 </template>
 
@@ -38,8 +38,7 @@
 
 .container__footer {
   text-align: center;
-  position:relative;
-  bottom: -15vw;
+  position: relative;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -55,7 +54,7 @@
   border-radius: 19px;
   width: 50rem;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 .subtext {

@@ -43,7 +43,7 @@ collections: # A list of collections the CMS should be able to edit
         }
   - name: "Events" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Event" # Used in the UI, e.g., "New Post"
-    slug: "{{title}}"
+    slug: "{{year}}"
     folder: "pta/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -58,7 +58,13 @@ collections: # A list of collections the CMS should be able to edit
               "Must have more than 5 characters and less than 30 characters",
             ],
         }
-      - { label: "Date", name: "date", widget: "string", required: true }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "string",
+          dateFormat: "MM/DD/YYYY",
+          required: true,
+        }
       - { label: "Time", name: "time", widget: "string", required: false }
       - {
           label: "Description",
@@ -84,7 +90,7 @@ collections: # A list of collections the CMS should be able to edit
     preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content/gallery" # The path to the folder where the documents are stored
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {

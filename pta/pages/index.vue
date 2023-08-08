@@ -24,9 +24,6 @@ useHead({
 </script>
 
 <style scoped>
-#footer{
-  margin-top: -20vw;
-}
 .parent {
   display: flex;
   flex-direction: column;
