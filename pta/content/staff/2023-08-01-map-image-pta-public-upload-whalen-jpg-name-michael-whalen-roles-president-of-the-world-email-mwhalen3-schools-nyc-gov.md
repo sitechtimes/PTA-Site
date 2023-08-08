@@ -1,6 +1,6 @@
 ---
-image: ../public/upload/whalen.jpg
-name: Michael Whalen
-roles: President of the World
-email: mwhalen3@schools.nyc.gov
+image: /upload/wail.jpg
+name: Miriam Nagornuk
+roles: Co-Vice President
+email: miriamnagornuk@gmail.com
 ---
