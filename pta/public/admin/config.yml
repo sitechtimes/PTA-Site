@@ -41,7 +41,11 @@ collections: # A list of collections the CMS should be able to edit
     folder: "pta/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Title", name: "title", widget: "string", required: true,        
+      pattern: [
+              '^.{5,25}$',
+              'Must have more than 5 characters and less than 25 characters',
+            ],}
       - { label: "Date", name: "date", widget: "string", required: true }
       - { label: "Time", name: "time", widget: "string", required: false }
       - {
@@ -49,6 +53,10 @@ collections: # A list of collections the CMS should be able to edit
           name: "description",
           widget: "string",
           required: true,
+          pattern: [
+              '^.{10,300}$',
+              'Must have more than 10 characters and less than 300 characters',
+            ],
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
