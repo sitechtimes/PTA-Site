@@ -158,6 +158,10 @@ a {
   margin-top: 1.5rem;
 }
 
+a:hover {
+  text-decoration: underline var(--text-color) 0.2rem;
+}
+
 a:visited {
   color: var(--text-color);
 }
