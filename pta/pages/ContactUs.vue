@@ -308,6 +308,7 @@ button {
     width: 15vw;
   }
   .staffPfp {
+    height: 10vw;
     width: 10vw;
     overflow-x: hidden;
     border-radius: 30vw;
@@ -442,7 +443,8 @@ button {
     width: 80vw;
   }
   .staffPfp {
-    width: 60%;
+    height: 40vw;
+    width: 40vw;
     margin-top: 5vw;
   }
   .staffName {
