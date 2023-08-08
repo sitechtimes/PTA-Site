@@ -1,6 +1,6 @@
 ---
-image: ../public/upload/buro.jpg
-name: Joseph Buro
-roles: Left Hand Man
-email: jburo@schools.nyc.gov
+image: /upload/snor.jpg
+name: Ken Cen
+roles: Co-President
+email: kencen@gmail.com
 ---
