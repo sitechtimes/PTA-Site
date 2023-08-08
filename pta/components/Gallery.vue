@@ -3,14 +3,13 @@
   <div class="slider">
     <!-- Bind key to the loop index to get unique key for each slide -->
     <div
-      v-for="(slide, index) in slides"
+      v-for="(photo, index) in gallery"
       :key="index"
       class="slide"
       :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
     >
-      <img :src="slide" alt="" />
+      <img :src="photo.image" alt="Gallery PTA images" />
     </div>
-
     <!-- Control buttons -->
     <button class="btn btn-next" @click="nextSlide"><p>►</p></button>
     <button class="btn btn-prev" @click="prevSlide"><p>◄</p></button>
@@ -20,25 +19,30 @@
 export default {
   data() {
     return {
-      slides: [
-        "https://source.unsplash.com/random?landscape,mountain",
-        "https://source.unsplash.com/random?landscape,cars",
-        "https://source.unsplash.com/random?landscape,night",
-        "https://source.unsplash.com/random?landscape,city",
-      ],
+      gallery: Array,
       curSlide: 0,
     };
   },
   methods: {
+    async getGallery() {
+      const query = queryContent("/gallery").find();
+      console.log(query);
+      query.then((response) => {
+        this.gallery = response;
+      });
+    },
     nextSlide() {
       // Increment the current slide index, and reset if it reaches the maximum
-      this.curSlide = (this.curSlide + 1) % this.slides.length;
+      this.curSlide = (this.curSlide + 1) % this.gallery.length;
     },
     prevSlide() {
       // Decrement the current slide index, and reset if it becomes negative
       this.curSlide =
-        (this.curSlide - 1 + this.slides.length) % this.slides.length;
+        (this.curSlide - 1 + this.gallery.length) % this.gallery.length;
     },
+  },
+  mounted() {
+    this.getGallery();
   },
 };
 </script>
