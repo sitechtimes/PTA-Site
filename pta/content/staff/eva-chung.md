@@ -1,5 +1,5 @@
 ---
-image: https://upload.wikimedia.org/wikipedia/en/9/97/DittoNewJeans.jpg
+image: /upload/charavatar_ningguang.png
 name: Eva Chung
 roles: Co-President
 email: EvaChung@gmail.com
