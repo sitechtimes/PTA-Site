@@ -43,8 +43,8 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true,        
           pattern: [
-              '^.{5,25}$',
-              'Must have more than 5 characters and less than 25 characters',
+              '^.{5,30}$',
+              'Must have more than 5 characters and less than 30 characters',
             ],}
       - { label: "Date", name: "date", widget: "string", required: true }
       - { label: "Time", name: "time", widget: "string", required: false }
@@ -54,8 +54,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: "string",
           required: true,
           pattern: [
-              '^.{10,300}$',
-              'Must have more than 10 characters and less than 300 characters',
+              '^.{10,350}$',
+              'Must have more than 10 characters and less than 350 characters',
             ],
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
