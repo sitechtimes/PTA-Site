@@ -40,9 +40,6 @@ export default {
   width: 35vw;
   height: 30vw;
 }
-#footer{
-  margin-top: -20vw;
-}
 #wrapper {
   height: 60vw;
 }
@@ -241,7 +238,7 @@ li {
 @media screen and (min-width: 768px) {
   #gradient {
     width: 100%;
-    height: 80vw;
+    height: 75vw;
     margin: 0;
     padding: 0%;
     position: absolute;
