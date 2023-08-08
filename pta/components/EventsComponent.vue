@@ -46,7 +46,6 @@ export default {
   data() {
     return {
       events: Array,
-      create: false,
     };
   },
   methods: {
@@ -56,7 +55,6 @@ export default {
       query.then((response) => {
         console.log(response);
         this.events = response;
-        this.create = true;
         nextTick(() => {
           gsap.from("li", {
             delay: 0.9,

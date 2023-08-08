@@ -98,7 +98,7 @@ export default {
   },
   methods: {
     async getStaff() {
-      const query = queryContent("/staff").find();
+      const query = queryContent("/staff").sort({ roles: 1 }).find();
       console.log(query);
       query.then((response) => {
         this.staff = response;
