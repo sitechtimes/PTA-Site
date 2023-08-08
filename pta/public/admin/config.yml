@@ -54,8 +54,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: "string",
           required: true,
           pattern: [
-              '^.{10,350}$',
-              'Must have more than 10 characters and less than 350 characters',
+              '^.{10,500}$',
+              'Must have more than 10 characters and less than 500 characters',
             ],
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
