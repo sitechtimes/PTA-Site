@@ -13,9 +13,9 @@
   --secondary-bg: #fce5ac;
   --bg-gradient: linear-gradient(
     180deg,
-    #ffb598 0%,
-    #fccfb1 18%,
-    #ffedc5 40%,
+    #feb89a 0%,
+    #fdd8b8 18%,
+    #ffecc5 40%,
     #faf2e1 75%,
     #faf2e1 80%,
     #fff 95%
@@ -39,7 +39,8 @@
   ); */
 
   /* media queries max width
-  xs:  ≥356px
+  xxs:  ≥356px
+  xs: ≥450px
     sm:  ≥576px
   md:  ≥768px
     lg:  ≥992px
@@ -183,6 +184,7 @@ h4 {
   .menu {
     display: initial;}
   }
+
 @media screen and (min-width: 992px) and (orientation: portrait) {
   .menu-btn span,
   .menu-btn::before,
@@ -224,7 +226,7 @@ h4 {
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 220vw;
+    height: 180vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -234,10 +236,12 @@ h4 {
   .menu {
     display: block;
   }
-
 }
-
-
+@media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 210vw;
+  }
+}
 
 @media only screen and (max-width: 1400px) {
   .heading {
@@ -245,7 +249,7 @@ h4 {
     font-size: 3.7rem;
   }
   .subh {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
   .text {
     font-size: 1.8rem;
@@ -253,13 +257,13 @@ h4 {
 }
 @media only screen and (max-width: 1200px) {
   #navbar {
-    height: 4.2rem;
+    height: 7rem;
   }
   .heading {
     font-size: 3rem;
   }
   .subh {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .subtext {
     /* font-size: 2vw; */
@@ -291,14 +295,19 @@ h4 {
   .menu {
     display: initial;
     margin-right: 6rem;
-    margin-top: 2rem;
+    margin-top: 3.3rem;
   }
   .caption {
     font-size: 1.1rem;
   }
 }
-
 @media only screen and (max-width: 992px) {
+  #navbar {
+    height: 5.2rem;
+  }
+  .menu {
+    margin-top: 2.6rem;
+  }
   .heading {
     margin: 18% 0 0 8%;
     font-size: 2.7rem;
@@ -316,17 +325,22 @@ h4 {
 @media only screen and (max-width: 768px) {
   .menu {
     margin-right: 6rem;
-    margin-top: 1.4rem;
+    margin-top: 2.5rem;
   }
-  #navbar {
-    height: 3.3rem;
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.4rem;
   }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
   .heading {
     font-size: 2.4rem;
     margin: 20% 0 0 8%;
   }
   .subh {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .subtext {
     font-size: 2.4vw;
@@ -338,6 +352,14 @@ h4 {
     font-size: 0.9rem;
   }
 }
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #navbar {
+    height: 5.6rem;
+  }
+  .menu {
+    margin-top: 2.5rem;
+  }
+}
 @media only screen and (max-width: 576px) {
   .heading {
     font-size: 2rem;
@@ -347,7 +369,7 @@ h4 {
     margin-right: 5rem;
   }
   .subh {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
   }
   .text {
@@ -355,6 +377,11 @@ h4 {
   }
   .subtext {
     font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -367,6 +394,9 @@ h4 {
   }
   .text {
     font-size: 1rem;
+  }
+  .subh {
+    font-size: 1.5rem;
   }
   .subtext {
     font-size: 4.2vw;

@@ -10,7 +10,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Staff" # Used in the UI, e.g., "New Post"
     folder: "pta/content/staff" # The path to the folder where the documents are stored
-    slug: "{{slug}}"
+    slug: "{{name}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
@@ -43,7 +43,7 @@ collections: # A list of collections the CMS should be able to edit
         }
   - name: "Events" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Event" # Used in the UI, e.g., "New Post"
-    slug: "{{slug}}"
+    slug: "{{title}}"
     folder: "pta/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -74,7 +74,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: "{{year}}-{{month}}"
     folder: "pta/content/minutes" # The path to the folder where the documents are stored
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
