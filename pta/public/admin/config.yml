@@ -59,19 +59,19 @@ collections: # A list of collections the CMS should be able to edit
             ],
         }
       - {
-          label: "Month",
+          label: "Month (MM)",
           name: "month",
           widget: "number",
           required: true,
         }
        - {
-          label: "Date",
+          label: "Date (DD)",
           name: "date",
           widget: "number",
           required: true,
         }
        - {
-          label: "Year",
+          label: "Year (YYYY)",
           name: "year",
           widget: "number",
           required: true,
