@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div id="logoContainer">
-      <NuxtLink to="/">
+      <NuxtLink to="/" @click="(page = 'index'), underline()">
         <img
           class="logo"
           src="../components/icons/NavBar-Icons/pta-logo.png"
@@ -11,7 +11,13 @@
     </div>
     <div id="naV">
       <div class="group">
-        <NuxtLink to="/">
+        <NuxtLink
+          to="/"
+          id="homeLink"
+          ref="homeLink"
+          @click="(page = 'index'), underline()"
+          v-bind:style="({ animation: fadeIn }, { textDecoration: homeLine })"
+        >
           <img
             class="icon"
             id="home"
@@ -22,7 +28,13 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/Events">
+        <NuxtLink
+          to="/Events"
+          id="eventsLink"
+          ref="eventsLink"
+          @click="(page = 'Events'), underline()"
+          v-bind:style="({ animation: fadeIn }, { textDecoration: eventsLine })"
+        >
           <img
             class="icon"
             id="events"
@@ -33,7 +45,15 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/ContactUs">
+        <NuxtLink
+          to="/ContactUs"
+          id="contactLink"
+          ref="contactLink"
+          @click="(page = 'ContactUs'), underline()"
+          v-bind:style="
+            ({ animation: fadeIn }, { textDecoration: contactLine })
+          "
+        >
           <img
             class="icon"
             id="contact"
@@ -44,7 +64,13 @@
         >
       </div>
       <div class="group">
-        <NuxtLink to="/Donate">
+        <NuxtLink
+          to="/Donate"
+          id="donateLink"
+          ref="donateLink"
+          @click="(page = 'Donate'), underline()"
+          v-bind:style="({ animation: fade }, { textDecoration: donateLine })"
+        >
           <img
             class="icon"
             id="donate"
@@ -58,23 +84,78 @@
     <Menu />
   </div>
 </template>
-<!-- <script>
-import Menu from "./Menu.vue";
+
+<script>
+import { useRouter } from "vue-router";
 export default {
-  components: { Menu },
   name: "Navbar",
-  methods: {},
+  data() {
+    return {
+      page: String,
+      homeLine: "underline var(--text-color) 0.2rem",
+      eventsLine: "transparent",
+      contactLine: "transparent",
+      donateLine: "transparent",
+      fade: "fadeIn 5s;",
+    };
+  },
+  methods: {
+    underline() {
+      if (this.page === "index") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "underline var(--text-color) 0.2rem";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
+        this.donateLine = "transparent";
+      } else if (this.page === "Events") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "underline var(--text-color) 0.2rem";
+        this.contactLine = "transparent";
+        this.donateLine = "transparent";
+      } else if (this.page === "ContactUs") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "transparent";
+        this.contactLine = "underline var(--text-color) 0.2rem";
+        this.donateLine = "transparent";
+      } else if (this.page === "Donate") {
+        console.log(this.page);
+        this.fade = "fadeIn 10s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
+        this.donateLine = "underline var(--text-color) 0.2rem";
+      }
+    },
+    currentRoute() {
+      const router = useRouter();
+      let currentPathObject = router.currentRoute.value;
+      console.log(currentPathObject.name);
+      this.page = currentPathObject.name;
+      this.underline();
+    },
+  },
+  mounted() {
+    this.currentRoute();
+  },
 };
-</script> -->
+</script>
+
 <style scoped>
 @import url(../assets/base.css);
 
 a {
   display: flex;
   width: 7rem;
-  text-decoration: none;
   color: var(--text-color);
   transition: 0.3s;
+}
+a:hover{
+  opacity: 0.7;
 }
 /* 
 a:after{
@@ -92,7 +173,7 @@ a:hover:after {
 a.nuxt-link-exact-active {
   color: var(--text-color);
 }*/
-#naV { 
+#naV {
   flex-direction: row;
   justify-content: center;
 }
@@ -119,8 +200,57 @@ a.nuxt-link-exact-active {
   margin-top: 1.5rem;
 }
 
+a:hover {
+  text-decoration: underline var(--text-color) 0.2rem;
+}
+
 a:visited {
   color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1400px) {
