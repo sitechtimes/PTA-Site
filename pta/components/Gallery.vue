@@ -97,13 +97,15 @@ body {
   transform: scale(1.1);
 }
 .btn-prev {
-  top: 50%;
+  top: 45%;
   left: 2%;
+  margin-left: 0.2rem;
 }
 
 .btn-next {
-  top: 50%;
+  top: 45%;
   right: 2%;
+  margin-right: 0.2rem;
 }
 
 @media only screen and (max-width: 1400px) {
