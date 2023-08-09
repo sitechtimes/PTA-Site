@@ -51,7 +51,7 @@
     <div v-if="shownDiv === 'sol'" class="container__box">
       <h1 class="subh">SLT</h1>
       <div id="staff">
-        <div class="staffCon" v-for="people in staff">
+        <div class="staffCon" v-for="people in so">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="subtext staffRole">{{ people.roles }}</h4>
@@ -121,6 +121,7 @@ export default {
       joinColor: "transparent",
       staffColor: "#fcf6e9",
       solColor: "transparent",
+      so: Array,
     };
   },
   methods: {
@@ -129,6 +130,13 @@ export default {
       console.log(query);
       query.then((response) => {
         this.staff = response;
+      });
+    },
+    async getSO() {
+      const query = queryContent("/soTeam").sort({ roles: 1 }).find();
+      console.log(query);
+      query.then((response) => {
+        this.so = response;
       });
     },
     tester() {
@@ -148,6 +156,7 @@ export default {
     },
   },
   mounted() {
+    this.getSO();
     this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
