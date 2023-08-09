@@ -425,6 +425,8 @@ button:hover {
   }
   button {
     width: 26vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
   .staffRole {
     font-size: 2.8vw;
@@ -449,6 +451,8 @@ button:hover {
   }
   button {
     width: 28vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
 }
 @media only screen and (max-width: 356px) {
@@ -467,6 +471,8 @@ button:hover {
   }
   button {
     width: 27vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
   .staffRole {
     font-size: 3.7vw;
