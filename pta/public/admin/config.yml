@@ -9,7 +9,7 @@ public_folder: "/upload"
 collections: # A list of collections the CMS should be able to edit
   - name: "SoTeam" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "SO Team" # Used in the UI, e.g., "New Post"
-    folder: "pta/content/staff" # The path to the folder where the documents are stored
+    folder: "pta/content/soTeam" # The path to the folder where the documents are stored
     slug: "{{name}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -120,9 +120,10 @@ collections: # A list of collections the CMS should be able to edit
     preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content/gallery" # The path to the folder where the documents are stored
-    slug: "{{year}}"
+    slug: "{{title}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", required: true }
       - {
           label: "Image",
           name: "image",
