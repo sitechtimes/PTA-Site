@@ -11,6 +11,8 @@
 
 <script>
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 export default {
   mounted() {
     const { arrow } = this.$refs;
@@ -20,6 +22,7 @@ export default {
       .from(arrow, { duration: 0.3, y: -10 }, "<")
       .to(arrow, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
   },
+
   methods: {
     scrollDown() {
       const element = document.getElementById("section__MiddleSection");
@@ -30,6 +33,10 @@ export default {
 </script>
 
 <style scoped>
+.test{
+  margin-top: 50vw;
+  overflow-x: hidden ;
+}
 .container__ScrollDown {
   width: 100vw;
   display: flex;

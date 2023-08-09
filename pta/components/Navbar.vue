@@ -141,18 +141,32 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 
-#naV {
-  flex-direction: row;
-  justify-content: center;
-}
-
 a {
   display: flex;
   width: 7rem;
   color: var(--text-color);
-  text-decoration: none;
+  transition: 0.3s;
+}
+/* 
+a:after{
+  display: block;
+  content: '';
+  text-decoration: underline 3px var(--text-color);
+  border-bottom: solid 3px var(--text-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+a:hover:after {
+  transform: scaleX(1);
 }
 
+a.nuxt-link-exact-active {
+  color: var(--text-color);
+}*/
+#naV { 
+  flex-direction: row;
+  justify-content: center;
+}
 .logo {
   width: 10rem;
   position: absolute;
