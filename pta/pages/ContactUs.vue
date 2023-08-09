@@ -49,7 +49,7 @@
       </div>
     </div>
     <div v-if="shownDiv === 'sol'" class="container__box">
-      <h1 class="subh">SO Team</h1>
+      <h1 class="subh">SLT</h1>
       <div id="staff">
         <div class="staffCon" v-for="people in staff">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
