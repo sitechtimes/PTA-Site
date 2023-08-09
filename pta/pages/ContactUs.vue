@@ -431,14 +431,32 @@ button:hover {
   }
 }
 @media only screen and (max-width: 450px) {
+  h1{
+    font-size: 4vw;
+  }
   #gradient {
     height: 230vw;
+  }
+  h2{
+    font-size: 3.8vw;
+  }
+  p, li{
+    font-size: 3.5vw;
   }
   .staffRole {
     font-size: 3.2vw;
   }
 }
 @media only screen and (max-width: 356px) {
+  h1{
+    font-size: 4vw;
+  }
+  h2{
+    font-size: 3.8vw;
+  }
+  p, li{
+    font-size: 3.5vw;
+  }
   #gradient {
     height: 260vw;
   }
