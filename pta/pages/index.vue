@@ -3,11 +3,11 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
-        <div 
-        id="homePageScroll"
-      ref="homePageScroll"
-      :style="{ opacity: scrollOpacity }"
-          >
+        <div
+          id="homePageScroll"
+          ref="homePageScroll"
+          :style="{ opacity: scrollOpacity }"
+        >
           <HomePageScroll />
         </div>
       </div>
@@ -41,7 +41,7 @@ onMounted(() => {
 
 const handleScroll = () => {
   const scrollPosition = window.scrollY;
-  console.log("Scroll Position:", scrollPosition);
+  // console.log("Scroll Position:", scrollPosition);
 
   if (scrollPosition >= 400) {
     scrollOpacity.value = 0;
@@ -56,8 +56,8 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-#homePageScroll{
-  transition: opacity .3s ease;
+#homePageScroll {
+  transition: opacity 0.3s ease;
 }
 .parent {
   display: flex;
