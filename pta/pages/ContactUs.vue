@@ -136,7 +136,7 @@ export default {
       const query = queryContent("/so").find();
       console.log(query);
       query.then((response) => {
-        console.log(response)
+        console.log(response);
         this.so = response;
       });
     },
@@ -145,7 +145,7 @@ export default {
         this.joinColor = "#fcf6e9";
         this.staffColor = "transparent";
         this.solColor = "transparent";
-      } else if (this.shownDiv === 'staff') {
+      } else if (this.shownDiv === "staff") {
         this.joinColor = "transparent";
         this.staffColor = "#fcf6e9";
         this.solColor = "transparent";
@@ -424,37 +424,42 @@ button:hover {
     height: 220vw;
   }
   button {
-    width: 25vw;
+    width: 26vw;
   }
   .staffRole {
     font-size: 2.8vw;
   }
 }
 @media only screen and (max-width: 450px) {
-  h1{
+  h1 {
     font-size: 4vw;
   }
   #gradient {
     height: 230vw;
   }
-  h2{
+  h2 {
     font-size: 3.8vw;
   }
-  p, li{
+  p,
+  li {
     font-size: 3.5vw;
   }
   .staffRole {
     font-size: 3.2vw;
   }
+  button {
+    width: 28vw;
+  }
 }
 @media only screen and (max-width: 356px) {
-  h1{
+  h1 {
     font-size: 4vw;
   }
-  h2{
+  h2 {
     font-size: 3.8vw;
   }
-  p, li{
+  p,
+  li {
     font-size: 3.5vw;
   }
   #gradient {
