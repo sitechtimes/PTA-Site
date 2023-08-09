@@ -21,9 +21,35 @@
       >
         Join Us
       </button>
+      <button
+        class="subtext"
+        @click="(shownDiv = 'sol'), tester()"
+        v-bind:style="{ backgroundColor: solColor }"
+        :class="{ shown: shownDiv === 'sol' }"
+      >
+        SO Team
+      </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
       <h1 class="subh">Board Members</h1>
+      <div id="staff">
+        <div class="staffCon" v-for="people in staff">
+          <img class="staffPfp" :src="people.image" :alt="people.name" />
+          <h3 class="subtext">{{ people.name }}</h3>
+          <h4 class="subtext staffRole">{{ people.roles }}</h4>
+          <a
+            class="caption"
+            :href="people.email"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ people.email }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div v-if="shownDiv === 'sol'" class="container__box">
+      <h1 class="subh">SO Team</h1>
       <div id="staff">
         <div class="staffCon" v-for="people in staff">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
@@ -94,6 +120,7 @@ export default {
       shownDiv: "staff",
       joinColor: "transparent",
       staffColor: "#fcf6e9",
+      solColor: "transparent",
     };
   },
   methods: {
@@ -108,9 +135,15 @@ export default {
       if (this.shownDiv === "join") {
         this.joinColor = "#fcf6e9";
         this.staffColor = "transparent";
-      } else {
+        this.solColor = "transparent";
+      } else if (this.shownDiv === 'staff') {
         this.joinColor = "transparent";
         this.staffColor = "#fcf6e9";
+        this.solColor = "transparent";
+      } else {
+        this.joinColor = "transparent";
+        this.staffColor = "transparent";
+        this.solColor = "#fcf6e9";
       }
     },
   },
