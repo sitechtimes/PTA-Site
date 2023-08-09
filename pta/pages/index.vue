@@ -3,7 +3,13 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
+        <div 
+        id="homePageScroll"
+      ref="homePageScroll"
+      :style="{ opacity: scrollOpacity }"
+          >
           <HomePageScroll />
+        </div>
       </div>
       <div class="div2">
         <MiddleSection />
@@ -24,9 +30,35 @@ useHead({
     { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
   ],
 });
+import { onMounted, onUnmounted, ref } from "vue";
+
+const homePageScrollRef = ref(null);
+const scrollOpacity = ref(1);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+const handleScroll = () => {
+  const scrollPosition = window.scrollY;
+  console.log("Scroll Position:", scrollPosition);
+
+  if (scrollPosition >= 400) {
+    scrollOpacity.value = 0;
+  } else {
+    scrollOpacity.value = 1;
+  }
+};
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
+#homePageScroll{
+  transition: opacity .3s ease;
+}
 .parent {
   display: flex;
   flex-direction: column;
