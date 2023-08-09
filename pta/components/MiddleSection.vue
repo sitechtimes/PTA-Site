@@ -24,7 +24,7 @@
                 id="linkIcon"
                 src="../components/icons/link.svg"
                 alt="link icon"
-              />{{minute.title}}
+              />{{ minute.title }}
             </h3>
           </a>
         </div>
@@ -57,7 +57,7 @@ export default {
       });
     },
     async getMinutes() {
-      const query = queryContent("/minutes").find();
+      const query = queryContent("/minutes").sort().limit(2).find();
       console.log(query);
       query.then((response) => {
         this.minutes = response;
