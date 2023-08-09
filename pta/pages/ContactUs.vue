@@ -133,9 +133,10 @@ export default {
       });
     },
     async getSO() {
-      const query = queryContent("/soTeam").sort({ roles: 1 }).find();
+      const query = queryContent("/so").find();
       console.log(query);
       query.then((response) => {
+        console.log(response)
         this.so = response;
       });
     },
