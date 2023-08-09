@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div id="logoContainer">
-      <NuxtLink to="/" @click="this.page = home">
+      <NuxtLink to="/" @click="(page = 'index'), underline()">
         <img
           class="logo"
           src="../components/icons/NavBar-Icons/pta-logo.png"
@@ -15,7 +15,8 @@
           to="/"
           id="homeLink"
           ref="homeLink"
-          @click="(this.page = home), underline()"
+          @click="(page = 'index'), underline()"
+          v-bind:style="{ textDecoration: homeLine }"
         >
           <img
             class="icon"
@@ -30,7 +31,9 @@
         <NuxtLink
           to="/Events"
           id="eventsLink"
-          @click="(this.page = events), underline()"
+          ref="eventsLink"
+          @click="(page = 'Events'), underline()"
+          v-bind:style="{ textDecoration: eventsLine }"
         >
           <img
             class="icon"
@@ -45,7 +48,9 @@
         <NuxtLink
           to="/ContactUs"
           id="contactLink"
-          @click="(this.page = contact), underline()"
+          ref="contactLink"
+          @click="(page = 'ContactUs'), underline()"
+          v-bind:style="{ textDecoration: contactLine }"
         >
           <img
             class="icon"
@@ -60,7 +65,9 @@
         <NuxtLink
           to="/Donate"
           id="donateLink"
-          @click="(this.page = donate), underline()"
+          ref="donateLink"
+          @click="(page = 'Donate'), underline()"
+          v-bind:style="{ textDecoration: donateLine }"
         >
           <img
             class="icon"
@@ -77,45 +84,56 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 export default {
-  data(){
-    return {
-      page: home,
-    },
-  },
   name: "Navbar",
+  data() {
+    return {
+      page: String,
+      homeLine: "underline var(--text-color) 0.2rem",
+      eventsLine: "none",
+      contactLine: "none",
+      donateLine: "none",
+    };
+  },
   methods: {
     underline() {
-      const { homeLink } = this.$refs;
-      const { eventsLink } = this.$refs;
-      const { contactLink } = this.$refs;
-      const { donateLink } = this.$refs;
-      if (this.page === home) {
-        console.log(this.page)
-        homeLink.style.text-decoration = "underline var(--text-color) 0.2rem"
-        eventsLink.style.text-decoration = "none"
-        contactLink.style.text-decoration = "none"
-        donateLink.style.text-decoration = "none"
-      } else if( this.page === events) {
-        console.log(this.page)
-        homeLink.style.text-decoration = "none"
-        eventsLink.style.text-decoration = "underline var(--text-color) 0.2rem"
-        contactLink.style.text-decoration = "none"
-        donateLink.style.text-decoration = "none"
-      } else if( this.page === contact) {
-        console.log(this.page)
-        homeLink.style.text-decoration = "none"
-        eventsLink.style.text-decoration = "none"
-        contactLink.style.text-decoration = "underline var(--text-color) 0.2rem"
-        donateLink.style.text-decoration = "none"
-      } else if( this.page === donate) {
-        console.log(this.page)
-        homeLink.style.text-decoration = "none"
-        eventsLink.style.text-decoration = "none"
-        contactLink.style.text-decoration = "none"
-        donateLink.style.text-decoration = "underline var(--text-color) 0.2rem"
-      },
+      if (this.page === "index") {
+        console.log(this.page);
+        this.homeLine = "underline var(--text-color) 0.2rem";
+        this.eventsLine = "none";
+        this.contactLine = "none";
+        this.donateLine = "none";
+      } else if (this.page === "Events") {
+        console.log(this.page);
+        this.homeLine = "none";
+        this.eventsLine = "underline var(--text-color) 0.2rem";
+        this.contactLine = "none";
+        this.donateLine = "none";
+      } else if (this.page === "ContactUs") {
+        console.log(this.page);
+        this.homeLine = "none";
+        this.eventsLine = "none";
+        this.contactLine = "underline var(--text-color) 0.2rem";
+        this.donateLine = "none";
+      } else if (this.page === "Donate") {
+        console.log(this.page);
+        this.homeLine = "none";
+        this.eventsLine = "none";
+        this.contactLine = "none";
+        this.donateLine = "underline var(--text-color) 0.2rem";
+      }
     },
+    currentRoute() {
+      const router = useRouter();
+      let currentPathObject = router.currentRoute.value;
+      console.log(currentPathObject.name);
+      this.page = currentPathObject.name;
+      this.underline();
+    },
+  },
+  mounted() {
+    this.currentRoute();
   },
 };
 </script>
@@ -131,8 +149,8 @@ export default {
 a {
   display: flex;
   width: 7rem;
-  text-decoration: none;
   color: var(--text-color);
+  text-decoration: none;
 }
 
 .logo {
