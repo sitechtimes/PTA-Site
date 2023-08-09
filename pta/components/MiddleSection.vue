@@ -57,10 +57,12 @@ export default {
       });
     },
     async getMinutes() {
-      const query = queryContent("/minutes").sort().limit(2).find();
+      const query = queryContent("/minutes").find();
       console.log(query);
+
       query.then((response) => {
-        this.minutes = response;
+        console.log(response.slice(1).slice(-3), response.length);
+        this.minutes = response.slice(1).slice(-3);
       });
     },
   },
