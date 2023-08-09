@@ -16,7 +16,7 @@
           id="homeLink"
           ref="homeLink"
           @click="(page = 'index'), underline()"
-          v-bind:style="{ textDecoration: homeLine }"
+          v-bind:style="({ animation: fadeIn }, { textDecoration: homeLine })"
         >
           <img
             class="icon"
@@ -33,7 +33,7 @@
           id="eventsLink"
           ref="eventsLink"
           @click="(page = 'Events'), underline()"
-          v-bind:style="{ textDecoration: eventsLine }"
+          v-bind:style="({ animation: fadeIn }, { textDecoration: eventsLine })"
         >
           <img
             class="icon"
@@ -50,7 +50,9 @@
           id="contactLink"
           ref="contactLink"
           @click="(page = 'ContactUs'), underline()"
-          v-bind:style="{ textDecoration: contactLine }"
+          v-bind:style="
+            ({ animation: fadeIn }, { textDecoration: contactLine })
+          "
         >
           <img
             class="icon"
@@ -67,7 +69,7 @@
           id="donateLink"
           ref="donateLink"
           @click="(page = 'Donate'), underline()"
-          v-bind:style="{ textDecoration: donateLine }"
+          v-bind:style="({ animation: fade }, { textDecoration: donateLine })"
         >
           <img
             class="icon"
@@ -91,36 +93,41 @@ export default {
     return {
       page: String,
       homeLine: "underline var(--text-color) 0.2rem",
-      eventsLine: "none",
-      contactLine: "none",
-      donateLine: "none",
+      eventsLine: "transparent",
+      contactLine: "transparent",
+      donateLine: "transparent",
+      fade: "fadeIn 5s;",
     };
   },
   methods: {
     underline() {
       if (this.page === "index") {
         console.log(this.page);
+        this.fade = "fadeIn 5s;";
         this.homeLine = "underline var(--text-color) 0.2rem";
-        this.eventsLine = "none";
-        this.contactLine = "none";
-        this.donateLine = "none";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
+        this.donateLine = "transparent";
       } else if (this.page === "Events") {
         console.log(this.page);
-        this.homeLine = "none";
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
         this.eventsLine = "underline var(--text-color) 0.2rem";
-        this.contactLine = "none";
-        this.donateLine = "none";
+        this.contactLine = "transparent";
+        this.donateLine = "transparent";
       } else if (this.page === "ContactUs") {
         console.log(this.page);
-        this.homeLine = "none";
-        this.eventsLine = "none";
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "transparent";
         this.contactLine = "underline var(--text-color) 0.2rem";
-        this.donateLine = "none";
+        this.donateLine = "transparent";
       } else if (this.page === "Donate") {
         console.log(this.page);
-        this.homeLine = "none";
-        this.eventsLine = "none";
-        this.contactLine = "none";
+        this.fade = "fadeIn 10s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
         this.donateLine = "underline var(--text-color) 0.2rem";
       }
     },
@@ -163,7 +170,7 @@ a:hover:after {
 a.nuxt-link-exact-active {
   color: var(--text-color);
 }*/
-#naV { 
+#naV {
   flex-direction: row;
   justify-content: center;
 }
@@ -196,6 +203,51 @@ a:hover {
 
 a:visited {
   color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1400px) {
