@@ -3,9 +3,7 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
-        <div class=".downarrow">
           <HomePageScroll />
-        </div>
       </div>
       <div class="div2">
         <MiddleSection />
