@@ -68,6 +68,14 @@ export default {
 </script> -->
 <style scoped>
 @import url(../assets/base.css);
+
+a {
+  display: flex;
+  width: 7rem;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+/* 
 a:after{
   display: block;
   content: '';
@@ -82,19 +90,11 @@ a:hover:after {
 
 a.nuxt-link-exact-active {
   color: var(--text-color);
-}
-#naV {
+}*/
+#naV { 
   flex-direction: row;
   justify-content: center;
 }
-
-a {
-  display: flex;
-  width: 7rem;
-  text-decoration: none;
-  color: var(--text-color);
-}
-
 .logo {
   width: 10rem;
   position: absolute;
