@@ -27,7 +27,7 @@
         v-bind:style="{ backgroundColor: solColor }"
         :class="{ shown: shownDiv === 'sol' }"
       >
-        SO Team
+        SLT
       </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
