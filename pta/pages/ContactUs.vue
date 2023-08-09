@@ -2,21 +2,35 @@
   <div>
     <div id="gradient"></div>
     <div>
-      <h2 id="heading">CONTACTS</h2>
+      <h1 class="heading">CONTACTS</h1>
     </div>
     <div class="buttons">
-    <button @click="shownDiv = 'staff', tester();" v-bind:style="{ backgroundColor: staffColor }" :class="{ shown: shownDiv === 'staff' }">Staff</button>
-    <button @click="shownDiv = 'join', tester();" v-bind:style="{ backgroundColor: joinColor }" :class="{ shown: shownDiv === 'join' }">Join Us</button>
+      <button
+        class="subtext"
+        @click="(shownDiv = 'staff'), tester()"
+        v-bind:style="{ backgroundColor: staffColor }"
+        :class="{ shown: shownDiv === 'staff' }"
+      >
+        Staff
+      </button>
+      <button
+        class="subtext"
+        @click="(shownDiv = 'join'), tester()"
+        v-bind:style="{ backgroundColor: joinColor }"
+        :class="{ shown: shownDiv === 'join' }"
+      >
+        Join Us
+      </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
-      <h1>Board Members</h1>
+      <h1 class="subh">Board Members</h1>
       <div id="staff">
         <div class="staffCon" v-for="people in staff">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
-          <h3 class="staffName">{{ people.name }}</h3>
-          <h4 class="staffRole">{{ people.roles }}</h4>
+          <h3 class="subtext">{{ people.name }}</h3>
+          <h4 class="subtext staffRole">{{ people.roles }}</h4>
           <a
-            class="staffEmail"
+            class="caption"
             :href="people.email"
             target="_blank"
             rel="noopener"
@@ -28,7 +42,7 @@
     </div>
     <div>
       <div v-if="shownDiv === 'join'" class="container__box" id="join">
-        <h1>Join Us</h1>
+        <h1 class="subh">Join Us</h1>
         <div class="container__ParentVolunteer">
           <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
           <p>
@@ -77,29 +91,28 @@ export default {
   data() {
     return {
       staff: Array,
-      shownDiv: "staff", 
-      joinColor: 'transparent',
-      staffColor: '#fcf6e9'
+      shownDiv: "staff",
+      joinColor: "transparent",
+      staffColor: "#fcf6e9",
     };
   },
   methods: {
     async getStaff() {
-      const query = queryContent("/staff").find();
+      const query = queryContent("/staff").sort({ roles: 1 }).find();
       console.log(query);
       query.then((response) => {
         this.staff = response;
       });
     },
-    tester(){
-      if(this.shownDiv === 'join'){
-        this.joinColor = '#fcf6e9'
-        this.staffColor = 'transparent'
+    tester() {
+      if (this.shownDiv === "join") {
+        this.joinColor = "#fcf6e9";
+        this.staffColor = "transparent";
+      } else {
+        this.joinColor = "transparent";
+        this.staffColor = "#fcf6e9";
       }
-      else{
-        this.joinColor = 'transparent'
-        this.staffColor = '#fcf6e9'
-      }
-    }
+    },
   },
   mounted() {
     this.getStaff();
@@ -123,26 +136,9 @@ export default {
 #join {
   padding-bottom: 10vw;
 }
-h1 {
+.heading {
   text-align: center;
-  font-size: 2.5vw;
-}
-h2 {
-  font-size: 1.7vw;
-  margin-left: 5vw;
-}
-
-li, p{
-font-size: 1vw;
-margin-left: 5vw;
-margin-right: 5vw;
-}
-p {
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-}
-#footer {
-  margin-top: -10vw;
+  margin: 3% 0% 2% 0%;
 }
 .container__box {
   overflow-x: hidden;
@@ -152,9 +148,99 @@ p {
   margin-right: auto;
   margin-top: 2vw;
   padding: 3vw;
-  border-radius: 3vw;
+  padding-top: 4vw;
+  border-radius: 2vw;
   color: #483221;
   font-family: var(--font-heading);
+  margin-bottom: 10vw;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5vw;
+}
+h2 {
+  font-size: 2vw;
+  margin-left: 5vw;
+  margin-top: 2.5vw;
+}
+
+li,
+p {
+  font-size: 1.5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+p {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+h3,
+h4,
+a {
+  margin: 0;
+  overflow-x: hidden;
+}
+.subh {
+  margin-top: 0;
+}
+.staffCon {
+  margin: 3vw;
+  overflow-x: hidden;
+  width: 15vw;
+}
+.subtext {
+  font-weight: bolder;
+}
+.staffPfp {
+  height: 10vw;
+  width: 10vw;
+  overflow-x: hidden;
+  border-radius: 30vw;
+}
+#staff {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#gradient {
+  width: 100%;
+  height: 80vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.staffRole {
+  font-weight: normal;
+  font-size: 1.2vw;
+}
+#join {
+  padding-bottom: 5.5vw;
+  margin-bottom: 5vw;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5vw;
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.7vw;
 }
 h3,
 h4,
@@ -168,6 +254,7 @@ a {
   width: 15vw;
 }
 .staffPfp {
+  height: 10vw;
   width: 10vw;
   overflow-x: hidden;
   border-radius: 30vw;
@@ -205,208 +292,53 @@ button {
   cursor: pointer;
   overflow-x: hidden;
 }
-
-#heading {
-  position: relative;
-  text-align: center;
-  color: #483221;
-  font-family: var(--font-heading);
-  font-size: 3vw;
-  font-style: normal;
-  font-weight: 800;
-  line-height: auto;
-  letter-spacing: 0.1rem;
-  margin: 0;
-  margin-top: 3vw;
-  z-index: 0;
-  overflow-x: hidden;
+button:hover {
+  background-color: #fde7cf;
 }
-#gradient {
-  width: 100%;
-  height: 80vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  background: var(--bg-gradient);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  z-index: -1;
-  overflow-x: hidden;
-}
-@media (max-width: 2000px) {
-  .staffName {
-    font-size: 1.6vw;
-  }
+@media only screen and (max-width: 1200px) {
   .staffRole {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
-  .staffEmail {
-    font-size: 1.2vw;
+}
+@media only screen and (max-width: 1200px) {
+  #gradient {
+    height: 80vw;
   }
-  #join {
-    padding-bottom: 10vw;
-  }
-  h1 {
-    text-align: center;
-    font-size: 2.5vw;
-    margin-top: 0;
-  }
-  h2 {
-    font-size: 1.7vw;
-  }
-
-  li,
-  p {
-    font-size: 1vw;
-  }
-  p {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-  }
-  #footer {
-    margin-top: -10vw;
-  }
-  .container__box {
-    overflow-x: hidden;
-    background-color: #fcf6e9;
-    width: 65vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vw;
-    padding: 3vw;
-    border-radius: 2vw;
-    color: #483221;
-    font-family: var(--font-heading);
-  }
-  h3,
-  h4,
-  a {
-    margin: 0;
-    overflow-x: hidden;
-  }
-  .staffCon {
-    margin: 3vw;
-    overflow-x: hidden;
-    width: 15vw;
-  }
-  .staffPfp {
-    width: 10vw;
-    overflow-x: hidden;
-    border-radius: 30vw;
-  }
-  #staff {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    overflow-x: hidden;
-  }
-  .buttons {
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
+}
+@media only screen and (max-width: 992px) {
+  #gradient {
+    height: 85vw;
   }
   button {
-    padding: 1vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 1.5vw;
-    width: 17vw;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: auto;
-    font-family: var(--font-heading);
-    color: var(--text-color);
-    border-radius: 1rem;
-    border: none;
-    transition: background-color 0.3s ease;
-    background-color: #fcf6e9;
-    cursor: pointer;
-    overflow-x: hidden;
+    border-radius: 0.8rem;
   }
-  button:hover {
-    background-color: #fde7cf;
-  }
-
-  #heading {
-    position: relative;
-    text-align: center;
-    color: #483221;
-    font-family: var(--font-heading);
-    font-size: 3vw;
-    font-style: normal;
-    font-weight: 800;
-    line-height: auto;
-    letter-spacing: 0.1rem;
-    margin: 0;
-    margin-top: 3vw;
-    z-index: 0;
-    overflow-x: hidden;
-  }
-  #gradient {
-    width: 100%;
-    height: 80vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    background: var(--bg-gradient);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    z-index: -1;
-    overflow-x: hidden;
-  }
-}
-@media (max-width: 920px) {
   .staffCon {
     width: 40%;
   }
-  .staffName {
-    font-size: 2.5vw;
-  }
   .staffRole {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
 }
-@media (max-width: 820px) {
+@media only screen and (max-width: 820px) {
+  #gradient {
+    height: 140vw;
+  }
   h2 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-left: 5vw;
     width: 60%;
     margin-top: 5vw;
   }
-  .staffEmail {
-    font-size: 4vw;
-  }
   h1 {
     font-size: 4vw;
     margin-top: 5vw;
   }
-  #heading {
-    font-size: 7vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
   p {
-    font-size: 3vw;
+    font-size: 2vw;
   }
   li {
-    font-size: 3vw;
+    font-size: 2vw;
+    margin-top: 1vw;
   }
   p,
   li {
@@ -414,10 +346,9 @@ button {
     margin-left: 5vw;
   }
   button {
-    width: 25vw;
-    font-size: 4vw;
-    padding: 3vw;
-    border-radius: 3vw;
+    width: 20vw;
+    padding: 2vw;
+    border-radius: 2vw;
     margin-bottom: 4vw;
     margin-right: 7vw;
     margin-left: 7vw;
@@ -425,18 +356,54 @@ button {
   .staffCon {
     width: 100%;
   }
+  .staffRole {
+    font-size: 1.8vw;
+  }
   .container__box {
     width: 80vw;
   }
   .staffPfp {
-    width: 60%;
+    height: 20vw;
+    width: 20vw;
     margin-top: 5vw;
   }
-  .staffName {
-    font-size: 5vw;
+}
+@media only screen and (max-width: 768px) {
+  #gradient {
+    height: 200vw;
   }
   .staffRole {
-    font-size: 4vw;
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #gradient {
+    height: 220vw;
+  }
+  button {
+    width: 25vw;
+  }
+  .staffRole {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #gradient {
+    height: 230vw;
+  }
+  .staffRole {
+    font-size: 3.2vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  #gradient {
+    height: 260vw;
+  }
+  button {
+    width: 27vw;
+  }
+  .staffRole {
+    font-size: 3.7vw;
   }
 }
 </style>

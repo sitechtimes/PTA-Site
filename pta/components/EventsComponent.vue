@@ -10,7 +10,9 @@
       :event="selectedEvent"
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
-      <p class="text" id="date">{{ selectedEvent.date }}</p>
+      <p class="text" id="date">
+ {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{selectedEvent.year }}
+      </p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
@@ -25,7 +27,7 @@
         >
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate">{{ event.date }}</h5>
+            <h5 class="listDate"> {{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
           </div>
         </li>
       </ul>
@@ -44,7 +46,6 @@ export default {
   data() {
     return {
       events: Array,
-      create: false,
     };
   },
   methods: {
@@ -54,7 +55,6 @@ export default {
       query.then((response) => {
         console.log(response);
         this.events = response;
-        this.create = true;
         nextTick(() => {
           gsap.from("li", {
             delay: 0.9,
@@ -139,6 +139,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
+  width: 34.5vw;
 }
 #title {
   margin: 0;
@@ -203,7 +204,7 @@ li {
   height: 30vw;
   /* margin-top: -2vw; */
 }
-@media screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   #gradient {
     height: 140vh;
   }
@@ -220,7 +221,7 @@ li {
 @media screen and (max-width: 992px) {
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .listTitle {
     width: 20vw;
   }
@@ -232,7 +233,7 @@ li {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   #wrapper {
     height: 170vw;
   }
@@ -245,10 +246,14 @@ li {
   #eventsCon {
     height: 55vw;
   }
+  .uniqEvent {
+    width: 70vw;
+  }
   li {
     width: 76vw;
     border-radius: 2.5vw;
     margin-bottom: 4vw;
+    padding: 0vw 6vw 0vw 6vw;
   }
   .listTitle {
     width: 20vw;
@@ -286,7 +291,7 @@ li {
     height: 66vw;
   }
 }
-@media screen and (min-width: 576px) {
+@media only screen and (min-width: 576px) {
   #gradient {
     width: 100%;
     height: 100vw;
@@ -298,7 +303,7 @@ li {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
+@media only screen and (min-width: 576px) and (orientation: landscape) {
   #gradient {
     width: 100%;
     margin: 0;
@@ -309,7 +314,7 @@ li {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   #gradient {
     width: 100%;
     height: 80vw;
@@ -321,7 +326,7 @@ li {
   }
 }
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (orientation: landscape) {
   #gradient {
     width: 100%;
     margin: 0;

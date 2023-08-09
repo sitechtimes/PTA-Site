@@ -27,27 +27,36 @@ useHead({
 </script>
 
 <style scoped>
-#footer{
-  margin-top: -20vw;
-}
 .parent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-  height: 100vh;
+  height: 56vw;
   width: 60%;
 }
 
 .div2 {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .div1 {
+    height: 50vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .div1 {
+    height: 45vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .div1 {
+    height: 50vw;
+  }
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .parent {
@@ -56,17 +65,22 @@ useHead({
 }
 @media only screen and (max-width: 576px) {
   .div1 {
-    height: 145vh;
+    height: 145vw;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .div1 {
+    height: 140vh;
   }
 }
 @media only screen and (max-width: 450px) {
   .div1 {
-    height: 90vh;
+    height: 165vw;
   }
 }
 @media only screen and (max-width: 356px) {
   .div1 {
-    height: 0;
+    height: 175vw;
   }
 }
 </style>

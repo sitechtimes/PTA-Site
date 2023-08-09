@@ -49,7 +49,7 @@ export default {
   width: 4rem;
   position: absolute;
   display: block;
-  bottom: 5vh;
+  bottom: 1.5rem;
   margin: auto;
   opacity: 0.8;
   display: flex;
@@ -78,22 +78,24 @@ export default {
     opacity: 0;
   }
 }
-@media screen and (max-width: 822px) {
+@media only screen and (max-width: 1200px) and (orientation: landscape) {
   .container__ScrollDown img {
-    bottom: -10rem;
+    display: none;
   }
 }
-@media screen and (max-width: 576px) {
-  g {
-    top: 58rem;
-  }
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .container__ScrollDown img {
-    bottom: -18vw;
+    display: none;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 850px) and (orientation: portrait) {
   .container__ScrollDown img {
-    bottom: 10vw;
+    display: none;
+  }
+}
+@media screen and (max-height: 1200px) and (orientation: portrait) {
+  .container__ScrollDown img {
+    display: none;
   }
 }
 </style>
