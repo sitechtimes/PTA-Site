@@ -21,11 +21,37 @@
       >
         Join Us
       </button>
+      <button
+        class="subtext"
+        @click="(shownDiv = 'sol'), tester()"
+        v-bind:style="{ backgroundColor: solColor }"
+        :class="{ shown: shownDiv === 'sol' }"
+      >
+        SLT
+      </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
       <h1 class="subh">Board Members</h1>
       <div id="staff">
         <div class="staffCon" v-for="people in staff">
+          <img class="staffPfp" :src="people.image" :alt="people.name" />
+          <h3 class="subtext">{{ people.name }}</h3>
+          <h4 class="subtext staffRole">{{ people.roles }}</h4>
+          <a
+            class="caption"
+            :href="people.email"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ people.email }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div v-if="shownDiv === 'sol'" class="container__box">
+      <h1 class="subh">SLT</h1>
+      <div id="staff">
+        <div class="staffCon" v-for="people in so">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="subtext staffRole">{{ people.roles }}</h4>
@@ -94,6 +120,8 @@ export default {
       shownDiv: "staff",
       joinColor: "transparent",
       staffColor: "#fcf6e9",
+      solColor: "transparent",
+      so: Array,
     };
   },
   methods: {
@@ -104,17 +132,32 @@ export default {
         this.staff = response;
       });
     },
+    async getSO() {
+      const query = queryContent("/so").find();
+      console.log(query);
+      query.then((response) => {
+        console.log(response)
+        this.so = response;
+      });
+    },
     tester() {
       if (this.shownDiv === "join") {
         this.joinColor = "#fcf6e9";
         this.staffColor = "transparent";
-      } else {
+        this.solColor = "transparent";
+      } else if (this.shownDiv === 'staff') {
         this.joinColor = "transparent";
         this.staffColor = "#fcf6e9";
+        this.solColor = "transparent";
+      } else {
+        this.joinColor = "transparent";
+        this.staffColor = "transparent";
+        this.solColor = "#fcf6e9";
       }
     },
   },
   mounted() {
+    this.getSO();
     this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
