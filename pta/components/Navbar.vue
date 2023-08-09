@@ -154,6 +154,9 @@ a {
   color: var(--text-color);
   transition: 0.3s;
 }
+a:hover{
+  opacity: 0.7;
+}
 /* 
 a:after{
   display: block;
