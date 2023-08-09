@@ -72,6 +72,7 @@ export default {
 a {
   display: flex;
   width: 7rem;
+  text-decoration: none;
   color: var(--text-color);
   transition: 0.3s;
 }
