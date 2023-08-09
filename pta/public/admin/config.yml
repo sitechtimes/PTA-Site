@@ -74,7 +74,7 @@ collections: # A list of collections the CMS should be able to edit
             ],
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
-    create: false # Allow users to create new documents in this collection
+    create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}"
     folder: "pta/content/minutes" # The path to the folder where the documents are stored
