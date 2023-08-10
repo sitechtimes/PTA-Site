@@ -113,32 +113,31 @@ img {
   left: 0;
 }
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-
 }
 @media only screen and (max-width: 768px) {
   .link-container {
     margin-left: 8vw;
-    margin-top: 12vw;
+    margin-top: 6vw;
   }
   .link {
     display: inline-flex;
     flex-direction: row;
-    margin: 3rem;
+    margin: 1.3rem;
     list-style: none;
     height: 3.3vw;
   }
   a.menu-router {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   img {
-    width: 4rem;
-    height: 3.6rem;
-    padding-top: 0.4rem;
+    width: 2rem;
+    height: 2rem;
+    padding-top: 0.8rem;
     margin-right: 1rem;
   }
   #home,
   #events {
-    padding-top: 0.1rem;
+    padding-top: 0.7rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -146,7 +145,7 @@ img {
     margin-top: 20vw;
   }
 
-    .link {
+  .link {
     display: inline-flex;
     flex-direction: row;
     margin: 1.5rem;
