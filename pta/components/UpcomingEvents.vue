@@ -215,16 +215,16 @@ li {
 }
 @media screen and (max-width: 768px) {
   #upcomingEvents {
-    width: 45vw;
+    width: 40vw;
     margin-top: 50%;
-    margin-left: 44%;
+    margin-left: 30%;
   }
   #eventsCon {
-    width: 45vw;
+    width: 40vw;
     height: 20vw;
   }
   .subh {
-    width: 45vw;
+    width: 35vw;
     margin-bottom: 0.8rem;
   }
   .listTitle {
