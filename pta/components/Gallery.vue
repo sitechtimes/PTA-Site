@@ -52,7 +52,9 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
+p{
+  color: var( --text-color);
+}
 body {
   height: 100vh;
   display: grid;
