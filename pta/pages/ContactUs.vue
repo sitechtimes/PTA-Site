@@ -38,6 +38,7 @@
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="subtext staffRole">{{ people.roles }}</h4>
           <a
+          id="staffEmail"
             class="caption"
             :href="people.email"
             target="_blank"
@@ -303,7 +304,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -396,7 +397,7 @@ button:hover {
     margin-left: 7vw;
   }
   .staffCon {
-    width: 100%;
+    width: 40%;
   }
   .staffRole {
     font-size: 1.8vw;
@@ -417,8 +418,14 @@ button:hover {
   .staffRole {
     font-size: 2vw;
   }
+  .staffCon {
+    width:30%;
+  }
 }
 @media only screen and (max-width: 576px) {
+  .staffCon {
+    width: 100%;
+  }
   #gradient {
     height: 220vw;
   }
@@ -430,8 +437,15 @@ button:hover {
   .staffRole {
     font-size: 2.8vw;
   }
+  .staffEmail{
+    font-size: 2vw;
+  }
 }
 @media only screen and (max-width: 450px) {
+  .staffEmail{
+    font-size: 2vw;
+  }
+  
   h1 {
     font-size: 4vw;
   }
@@ -455,6 +469,9 @@ button:hover {
   }
 }
 @media only screen and (max-width: 356px) {
+  #staffEmail{
+    font-size: 3.5vw;
+  }
   h1 {
     font-size: 4vw;
   }
