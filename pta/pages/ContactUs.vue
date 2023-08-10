@@ -131,12 +131,12 @@ export default {
         this.staff = response;
       });
     },
-    async getSO() {
-      const query = queryContent("/so").find();
+    async getSLT() {
+      const query = queryContent("/slt").find();
       console.log(query);
       query.then((response) => {
         console.log(response);
-        this.so = response;
+        this.slt = response;
       });
     },
     tester() {
@@ -156,7 +156,7 @@ export default {
     },
   },
   mounted() {
-    this.getSO();
+    this.getSLT();
     this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
