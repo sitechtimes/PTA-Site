@@ -111,7 +111,7 @@ body {
 @media only screen and (max-width: 1400px) {
   .btn-prev,
   .btn-next {
-    top: 39%;
+    top: 42%;
   }
   .slider {
     height: 380px;
@@ -122,10 +122,18 @@ body {
     max-width: 600px;
     height: 370px;
   }
+    .btn-prev,
+  .btn-next {
+    top: 30%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .slide {
     height: 35vw;
+  }
+    .btn-prev,
+  .btn-next {
+    top: 45%;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -140,14 +148,14 @@ body {
 @media only screen and (max-width: 768px) {
   .slider {
     height: 350px;
-    max-width: 450px;
+    max-width: 520px;
   }
   .slide {
     height: 45vw;
   }
   .btn-prev,
   .btn-next {
-    top: 39%;
+    top: 42%;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -161,7 +169,7 @@ body {
   }
   .btn-prev,
   .btn-next {
-    top: 50%;
+    top: 45%;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -171,6 +179,10 @@ body {
   .slider {
     height: 280px;
   }
+    .btn-prev,
+  .btn-next {
+    top: 45%;
+  }
 }
 @media only screen and (max-width: 356px) {
   .slide {
@@ -179,5 +191,15 @@ body {
   .slider {
     height: 250px;
   }
-}
+    .btn-prev,
+  .btn-next {
+    top: 44%;
+  }
+  .btn{
+      width: 30px;
+  height: 30px;
+  }
+  p{
+  font-size: 0.7rem;
+  }}
 </style>
