@@ -51,7 +51,7 @@
     <div v-if="shownDiv === 'sol'" class="container__box">
       <h1 class="subh">SLT</h1>
       <div id="staff">
-        <div class="staffCon" v-for="people in so">
+        <div class="staffCon" v-for="people in slt">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <a
@@ -120,8 +120,8 @@ export default {
       joinColor: "transparent",
       staffColor: "#fcf6e9",
       solColor: "transparent",
-      so: Array,
-    };
+      slt: Array,
+    }
   },
   methods: {
     async getStaff() {
