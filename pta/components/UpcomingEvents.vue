@@ -21,12 +21,14 @@
         class="li"
         ref="li"
       >
-        <div class="uniqEvent">
-          <h5 class="listTitle">{{ event.title }}</h5>
-          <h5 class="listDate">
-            {{ event.month }}/{{ event.date }}/{{ event.year }}
-          </h5>
-        </div>
+        <NuxtLink to="/Events" id="eventsLink" ref="eventsLink">
+          <div class="uniqEvent">
+            <h5 class="listTitle">{{ event.title }}</h5>
+            <h5 class="listDate">
+              {{ event.month }}/{{ event.date }}/{{ event.year }}
+            </h5>
+          </div></NuxtLink
+        >
       </li>
     </ul>
   </div>
@@ -105,6 +107,10 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
+  color: var(--text-color);
+}
+a:link {
+  text-decoration: none;
 }
 ul {
   overflow: auto;
