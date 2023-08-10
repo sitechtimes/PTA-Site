@@ -97,13 +97,13 @@ body {
   transform: scale(1.1);
 }
 .btn-prev {
-  top: 45%;
+  top: 44%;
   left: 2%;
   margin-left: 0.2rem;
 }
 
 .btn-next {
-  top: 45%;
+  top: 44%;
   right: 2%;
   margin-right: 0.2rem;
 }
