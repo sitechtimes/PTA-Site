@@ -54,7 +54,6 @@
         <div class="staffCon" v-for="people in so">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
-          <h4 class="subtext staffRole">{{ people.roles }}</h4>
           <a
             class="caption"
             :href="people.email"
