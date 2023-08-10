@@ -471,6 +471,8 @@ button:hover {
 @media only screen and (max-width: 356px) {
   #staffEmail{
     font-size: 3.5vw;
+    height: 10vw;
+    vertical-align: text-top;
   }
   h1 {
     font-size: 4vw;
