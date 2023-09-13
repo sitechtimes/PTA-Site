@@ -169,6 +169,10 @@ body {
     height: 300px;
     max-width: 400px;
   }
+  .btn {
+  font-size: 20px;
+  padding-top: 2.5%;
+}
   .btn-prev,
   .btn-next {
     top: 45%;
@@ -186,6 +190,11 @@ body {
     top: 45%;
   }
 }
+@media only screen and (max-width: 375px){
+  .btn-next {
+    top: 43%;
+  }
+}
 @media only screen and (max-width: 356px) {
   .slide {
     height: 58vw;
@@ -193,13 +202,10 @@ body {
   .slider {
     height: 250px;
   }
-  .btn-prev,
-  .btn-next {
-    top: 35vw;
-  }
   .btn {
     width: 15vw;
     height: 15vw;
+      padding-top: 2%;
   }
   p {
     font-size: 5vw;
