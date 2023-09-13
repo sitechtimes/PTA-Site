@@ -52,8 +52,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-p{
-  color: var( --text-color);
+p {
+  color: var(--text-color);
 }
 body {
   height: 100vh;
@@ -124,7 +124,7 @@ body {
     max-width: 600px;
     height: 370px;
   }
-    .btn-prev,
+  .btn-prev,
   .btn-next {
     top: 30%;
   }
@@ -133,7 +133,7 @@ body {
   .slide {
     height: 35vw;
   }
-    .btn-prev,
+  .btn-prev,
   .btn-next {
     top: 45%;
   }
@@ -181,7 +181,7 @@ body {
   .slider {
     height: 280px;
   }
-    .btn-prev,
+  .btn-prev,
   .btn-next {
     top: 45%;
   }
@@ -193,15 +193,29 @@ body {
   .slider {
     height: 250px;
   }
-    .btn-prev,
+  .btn-prev,
   .btn-next {
-    top: 44%;
+    top: 35vw;
   }
-  .btn{
-      width: 30px;
-  height: 30px;
+  .btn {
+    width: 15vw;
+    height: 15vw;
   }
-  p{
-  font-size: 0.7rem;
-  }}
+  p {
+    font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 180px) {
+  .btn-prev,
+  .btn-next {
+    top: 40vw;
+  }
+  .btn {
+    width: 20vw;
+    height: 20vw;
+  }
+  p {
+    font-size: 6vw;
+  }
+}
 </style>
