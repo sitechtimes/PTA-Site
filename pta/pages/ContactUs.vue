@@ -181,7 +181,7 @@ export default {
 }
 .heading {
   text-align: center;
-  margin: 3% 0% 2% 0%;
+  margin: 3% 0% 0% 0%;
 }
 .container__box {
   overflow-x: hidden;
@@ -192,7 +192,7 @@ export default {
   margin-top: 2vw;
   padding: 3vw;
   padding-top: 4vw;
-  border-radius: 2vw;
+  border-radius: 1.5rem;
   color: #483221;
   font-family: var(--font-heading);
   margin-bottom: 10vw;
