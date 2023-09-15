@@ -64,7 +64,7 @@ body {
 .slider {
   width: 100%;
   max-width: 800px;
-  height: 490px;
+  height: 25vw;
   position: relative;
   overflow: hidden;
 }
@@ -111,111 +111,106 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 42%;
-  }
-  .slider {
-    height: 380px;
-  }
+  } */
 }
 @media only screen and (max-width: 1200px) {
   .slider {
     max-width: 600px;
-    height: 370px;
+    height: 35vw;
   }
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 30%;
-  }
+  } */
 }
 @media only screen and (max-width: 1024px) {
   .slide {
     height: 35vw;
   }
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 45%;
-  }
+  } */
 }
 @media only screen and (max-width: 992px) {
-  .slide {
-    height: 35vw;
-  }
   .slider {
     max-width: 550px;
-    height: 350px;
   }
 }
 @media only screen and (max-width: 768px) {
   .slider {
-    height: 350px;
+    height: 45vw;
     max-width: 520px;
   }
   .slide {
     height: 45vw;
   }
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 42%;
-  }
+  } */
 }
 @media only screen and (max-width: 576px) {
-  .slide {
-    height: 45vw;
+  /* .slide {
     margin-top: 2rem;
-  }
+  } */
   .slider {
-    height: 300px;
     max-width: 400px;
   }
-  .btn-prev,
+  .btn {
+    font-size: 14px;
+  }
+  /* .btn-prev,
   .btn-next {
     top: 45%;
-  }
+  } */
 }
 @media only screen and (max-width: 450px) {
   .slide {
     height: 55vw;
   }
   .slider {
-    height: 280px;
+    height: 55vw;
   }
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 45%;
-  }
+  } */
+}
+@media only screen and (max-width: 375px) {
+  /* .btn-next {
+    top: 43%;
+  } */
 }
 @media only screen and (max-width: 356px) {
   .slide {
     height: 58vw;
   }
   .slider {
-    height: 250px;
-  }
-  .btn-prev,
-  .btn-next {
-    top: 35vw;
+    height: 58vw;
   }
   .btn {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
   }
   p {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 180px) {
-  .btn-prev,
+  /* .btn-prev,
   .btn-next {
     top: 40vw;
-  }
-  .btn {
+  } */
+  /* .btn {
     width: 20vw;
     height: 20vw;
   }
   p {
     font-size: 6vw;
-  }
+  } */
 }
 </style>
