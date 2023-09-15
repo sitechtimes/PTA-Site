@@ -141,6 +141,10 @@ img {
   }
 }
 @media only screen and (max-width: 576px) {
+    #home,
+    #events {
+    padding-top: 0.25rem;
+  }
   .link-container {
     margin-top: 20vw;
   }
