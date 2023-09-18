@@ -1,6 +1,11 @@
 <template>
   <section class="container__carousel">
-    <Carousel :items-to-show="2.5" :wrap-around="true" :transition="500">
+    <Carousel
+      :items-to-show="2"
+      :autoplay="2500"
+      :wrap-around="true"
+      :transition="500"
+    >
       <Slide v-for="(image, index) in images" :key="index">
         <div class="carousel-item">
           <img :src="image" class="carousel-image" />
@@ -32,9 +37,9 @@ export default defineComponent({
   data() {
     return {
       images: [
-        "https://picsum.photos/seed/picsum/200/300",
-        "https://picsum.photos/200/300?grayscale",
-        "https://picsum.photos/200/300/?blur=2",
+        "https://picsum.photos/seed/picsum/600/400",
+        "https://picsum.photos/600/400?grayscale",
+        "https://picsum.photos/600/400/?blur=2",
         /* insert src's or link to images here
         format:
         'image link',
@@ -48,8 +53,8 @@ export default defineComponent({
 
 <style scoped>
 .container__carousel {
-  width: 50vw;
-  margin: 3rem;
+  width: 40vw;
+  margin: 2rem;
 }
 
 .carousel__slide {
@@ -64,6 +69,10 @@ export default defineComponent({
   transform-style: preserve-3d;
 }
 
+.carousel-image {
+  width: 30rem;
+}
+
 .carousel__slide--sliding {
   transition: 0.5s;
 }
@@ -72,8 +81,10 @@ export default defineComponent({
   opacity: 0.9;
   transform: rotateY(-20deg) scale(0.9);
 }
-
-.carousel__slide--active~.carousel__slide {
+.carousel__slide--visible {
+  transform: rotateY(0);
+}
+.carousel__slide--active ~ .carousel__slide {
   transform: rotateY(20deg) scale(0.9);
 }
 
@@ -102,11 +113,15 @@ export default defineComponent({
   .container__carousel {
     width: 90vw;
   }
-}
-@media screen and (max-width: 1024px) {
-  .container__carousel {
-    width: 85vw;
+
+  .carousel-image {
+    width: 20rem;
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .container__carousel {
+    width: 70vw;
+  }
+}
 </style>

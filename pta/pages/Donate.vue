@@ -1,7 +1,1 @@
-<template>
-  <div>
-    <Navbar />
-    <ScrollTop />
-    <Footer />
-  </div>
-</template>
+<template></template>

@@ -1,23 +1,49 @@
-
 @import "./variables.css";
-@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bayon&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *,
 :root {
-    /* fonts */
-    --font-text: 'Karla', san serif;
-    --font-heading: 'Kumbh Sans', san serif;
-    --font-nav: 'Bayon', san serif;
-    
-    /* colors */
-    --text-color: #483221;
-    --primary-bg: #fff;
-    --secondary-bg: #FCE5AC;
-    --bg-gradient: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+  /* fonts */
+  --font-text: "Karla", san serif;
+  --font-heading: "Kumbh Sans", san serif;
+  --font-nav: "Bayon", san serif;
+  /* colors */
+  --text-color: #483221;
+  --primary-bg: #fff;
+  --secondary-bg: #fce5ac;
+  --bg-gradient: linear-gradient(
+    180deg,
+    #feb89a 0%,
+    #fdd8b8 18%,
+    #ffecc5 40%,
+    #faf2e1 75%,
+    #faf2e1 80%,
+    #fff 95%
+
+  );
+  /*   --footer-bg: linear-gradient(
+    180deg,
+    #ffc498 0%,
+    #ffd88c 28.65%,
+    #ffd88c 61.98%,
+    #fce5ac 81.25%,
+    #fff 98.95%,
+    #fff 98.96%
+  ); */
+  --footer-bg: transparent;
+  /* --footer-bg: radial-gradient(
+    circle,
+    rgb(255, 241, 228) 0%,
+    rgb(250, 219, 194) 52%,
+    rgb(255, 199, 185) 100%
+  ); */
 
   /* media queries max width
-    sm:	 ≥576px
- 	md:  ≥768px
-    lg:	 ≥992px
+  xxs:  ≥356px
+  xs: ≥450px
+    sm:  ≥576px
+  md:  ≥768px
+    lg:  ≥992px
     xl:  ≥1200px
     xxl: ≥1400px
     */
@@ -29,143 +55,371 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background: var(--bg-gradient);
+}
+body {
+  color: var(--text-color);
+  margin: 0 !important;
 }
 
-body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
+h1 {
+  font-size: 4.3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 .heading {
-    font-family: 'Kumbh Sans', san serif;
-    font-weight: 800;
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  font-size: 4rem;
+  color: var(--text-color);
+  margin: 10% 0 0 8%;
+}
+.subh {
+  font-size: 2.6rem;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+}
+.text {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.subtext {
+  font-size: 1.6vw;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 400;
+}
+.caption {
+  font-size: 1.2rem;
+  margin: 0.6rem 0rem 0rem 0rem;
+  font-family: "Karla", san serif;
+}
+.smalltext {
+  font-size: 1rem;
 }
 
-/* This is the font sizes of the different headings we used in figma. If a font size isn't indicated on here it is probably because it is a one-time use */
-h1 {
-    font-size: 6rem;
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  #naV {
+    display: none;
   }
-  h2 {
-    font-size: 3rem;
+  .menu {
+    display: initial;
+      }
   }
-  h3 {
-    font-size: 2rem;
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #naV {
+    display: none;
   }
-  h4 {
-    font-size: 1.5rem;
-  }
-@media only screen and (min-width: 1032px) {
-        .menu {
-          display: none;
-        }
-        #nav {
-          display: flex;
-        }
-}
-@media only screen and (max-width: 1032px) {
-    #nav {
-      display: none;
+  .menu {
+    display: initial;
     }
-    .menu {
-      display: initial;
-      .link-container {
-        text-align: left;
-        margin-left: 6rem;
-        padding-top: 10rem;
-      }
-      .link {
-        margin-top: 2.5rem;
-        list-style: none;
-      }
-      .menu-router {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 3rem;
-        list-style: none;
-        margin-left: 0.2rem;
-      }
-    }}
-@media screen and (max-width: 576px) {
-  #homeTopCon{
-  background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100%;
-  height: 220vw;
-  margin: 0;
-  padding: 0%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
 }
-.menu {
-    display: block; 
-}
-    .link-container {
-      text-align: center;
-      margin-left: 0rem;
-      padding-top: 10rem;
-    }
-    .link {
-      margin-top: 1.5rem;
+@media only screen and (min-width: 540px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+     }
+    /* .link {
+      margin-top: 2.5rem;
       list-style: none;
     }
     .menu-router {
-      font-size: 1.8rem;
-    }
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 5vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    } */
+  }
+
+
+@media only screen and (min-width: 540px) and (orientation: landscape) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;}
 }
 
-@media screen and (min-width: 576px) {
-  #homeTopCon{
-  background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-  width: 100%;
-  height: 220vw;
-  margin: 0;
-  padding: 0%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
-}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;}
+  }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
-  #homeTopCon{
-      background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100%;
-      height: 70vw;
-      margin: 0;
-      padding: 0%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  /* li{
+    margin-bottom: 3vw ;
+  } */
+
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;}
+  }
+
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  .menu-btn span,
+  .menu-btn::before,
+  .menu-btn::after {
+    display: block;
+    background-color: var(--text-color);
+    height: 4px;
+    width: 2.5rem;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
   }
 }
 
-@media screen and (min-width: 768px) {
-  #homeTopCon{
-      background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
-      width: 100%;
-      height: 140vw;
-      margin: 0;
-      padding: 0%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape){
-  #homeTopCon{
-    background: linear-gradient(180deg, #FFC498 0%, #FFD88C 28.65%, #FFD88C 61.98%, #FCE5AC 81.25%, #FFF 98.95%, #FFF 98.96%);
+@media only screen and (max-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
     width: 100%;
-    height: 70vw;
+    height: 180vw;
     margin: 0;
     padding: 0%;
     position: absolute;
     top: 0%;
     left: 0%;
+  }
+  .menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 210vw;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .heading {
+    margin: 16% 0 0 8%;
+    font-size: 3.7rem;
+  }
+  .subh {
+    font-size: 2.3rem;
+  }
+  .text {
+    font-size: 1.8rem;
+  }
+  .subtext {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #navbar {
+    height: 7rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .subh {
+    font-size: 1.9rem;
+  }
+  .subtext {
+    font-size: 2vw;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
+  .caption {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1032px) {
+  .menu {
+    display: none;
+  }
+
+  #naV {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1032px) {
+  /* issue here - hamburger and normal menu displayed at the same time */
+
+  #naV {
+    display: none;
+  }
+
+  .menu {
+    display: initial;
+    margin-right: 6rem;
+    margin-top: 3.3rem;
+  }
+  .caption {
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (max-width: 992px) {
+  #navbar {
+    height: 5.2rem;
+  }
+  .menu {
+    margin-top: 2.6rem;
+  }
+  .heading {
+    margin: 18% 0 0 8%;
+    font-size: 2.7rem;
+  }
+  .subh {
+    font-size: 1.7rem;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .caption {
+    font-size: 0.9rem;
+  }
+  .subtext {
+    font-size: 2.2vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    margin-right: 6rem;
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+  .heading {
+    font-size: 2.4rem;
+    margin: 20% 0 0 8%;
+  }
+  .subh {
+    font-size: 1.3rem;
+  }
+  .subtext {
+    font-size: 2.4vw;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .caption {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #navbar {
+    height: 5.6rem;
+  }
+  .menu {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .heading {
+    font-size: 2rem;
+    margin: 30% 0 0 9%;
+  }
+  .menu {
+    margin-right: 5rem;
+  }
+  .subh {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .subtext {
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: landscape) {
+  .subh {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 1.8rem;
+    margin: 34% 0 0 9%;
+  }
+  .menu {
+    margin-right: 4rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .subh {
+    font-size: 1.5rem;
+  }
+  .subtext {
+    font-size: 4.2vw;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .heading {
+    margin: 45% 0 0 9%;
+  }
+  .subh {
+    margin-top: 0.8rem;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+  .subtext {
+    font-size: 5vw;
   }
 }
