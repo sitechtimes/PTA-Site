@@ -153,7 +153,7 @@ img {
     height: 3vw;
   }
   a.menu-router {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   img {
     width: 2rem;

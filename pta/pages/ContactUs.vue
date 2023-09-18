@@ -38,7 +38,7 @@
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="subtext staffRole">{{ people.roles }}</h4>
           <a
-          id="staffEmail"
+            id="staffEmail"
             class="caption"
             :href="people.email"
             target="_blank"
@@ -122,7 +122,7 @@ export default {
       staffColor: "#fcf6e9",
       solColor: "transparent",
       slt: Array,
-    }
+    };
   },
   methods: {
     async getStaff() {
@@ -413,13 +413,13 @@ button:hover {
 }
 @media only screen and (max-width: 768px) {
   #gradient {
-    height: 200vw;
+    height: 138vw;
   }
   .staffRole {
     font-size: 2vw;
   }
   .staffCon {
-    width:30%;
+    width: 30%;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -437,15 +437,15 @@ button:hover {
   .staffRole {
     font-size: 2.8vw;
   }
-  .staffEmail{
+  .staffEmail {
     font-size: 2vw;
   }
 }
 @media only screen and (max-width: 450px) {
-  .staffEmail{
+  .staffEmail {
     font-size: 2vw;
   }
-  
+
   h1 {
     font-size: 4vw;
   }
@@ -469,7 +469,7 @@ button:hover {
   }
 }
 @media only screen and (max-width: 356px) {
-  #staffEmail{
+  #staffEmail {
     font-size: 3.5vw;
     height: 10vw;
     vertical-align: text-top;
