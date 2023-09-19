@@ -124,6 +124,7 @@ export default {
       slt: Array,
     }
   },
+
   methods: {
     async getStaff() {
       const query = queryContent("/staff").sort({ roles: 1 }).find();
@@ -143,7 +144,7 @@ export default {
     tester() {
       if (this.shownDiv === "join") {
         this.joinColor = "#fcf6e9";
-        this.staffColor = "transparent";
+        this.staffColor = "transparent";margin-le
         this.solColor = "transparent";
       } else if (this.shownDiv === "staff") {
         this.joinColor = "transparent";
@@ -157,17 +158,21 @@ export default {
     },
   },
   mounted() {
+    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
+    gsap.from(".cal", 1, { x: 1000 }, "<0.5");
+
     this.getSLT();
     this.getStaff();
     gsap.from(".container__box", {
       duration: 0.5,
       y: 100,
-      delay: 0.5,
+      delay: 0.8,
       opacity: 0,
     });
     gsap.from(".buttons", {
       duration: 0.5,
       y: 100,
+      delay: 0.5,
       opacity: 0,
     });
   },
