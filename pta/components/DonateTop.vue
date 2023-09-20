@@ -1,10 +1,24 @@
 <template>
-<div>
-     <div id="gradient"></div>
-<DonateTop />
-<DonateMid />
-</div>
+    <div>
+        <h1 class="heading">DONATIONS</h1>
+                <div>
+                                    <h3 class="subh" ref="subh">Bake Sales</h3>
+                <p ref="text">Food and drink donations would be much appreciated to help launch bake sales during the year. Our students always enjoy these added treats to their daily lunch routine. </p>
+                <p ref="text2">Attached is a wish list of items that we would like to provide to our students which include :</p>
+                <ul ref="list" class="list">
+                    <li>Cookies </li>  
+                    <li>Brownies  </li>
+                    <li>Plates  </li>
+                    <li>Chips </li>
+                    <li>Beverages  </li>
+                    <li>Cup Noodles  </li> 
+                    <li>Any other baked goods</li>
+                    <li><span>(PLEASE NO NUTS)</span> </li>
+                </ul>
+                </div>
+    </div>
 </template>
+
 <script>
 import { gsap } from "gsap";
 export default {

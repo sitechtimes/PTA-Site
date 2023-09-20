@@ -1,10 +1,15 @@
 <template>
-<div>
-     <div id="gradient"></div>
-<DonateTop />
-<DonateMid />
-</div>
+    <div>
+          <div id="monetary" >
+                <h3 class="subh" id="sub" ref="subh2">Monetary Donations</h3>
+                <p ref="text3">Monetary donations are always graciously accepted throughout the school year. If you have already donated, we thank you for your generosity and support.</p>
+                <p ref="text4">To donate, please bring the completed form and donation to Ms. Barbara Malenfant’s office, Room 117</p>
+
+                </div>
+                
+    </div>
 </template>
+
 <script>
 import { gsap } from "gsap";
 export default {
