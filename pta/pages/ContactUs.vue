@@ -56,6 +56,7 @@
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <a
+            id="staffEmail"
             class="caption"
             :href="people.email"
             target="_blank"
@@ -355,6 +356,9 @@ button:hover {
   }
 }
 @media only screen and (max-width: 992px) {
+  .caption {
+    font-size: 1.7vw;
+  }
   #gradient {
     height: 85vw;
   }
@@ -427,6 +431,9 @@ button:hover {
   }
   .staffCon {
     width: 30%;
+  }
+  .caption {
+    font-size: 1.9vw;
   }
 }
 @media only screen and (max-width: 576px) {
