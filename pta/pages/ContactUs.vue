@@ -56,7 +56,6 @@
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <a
-            id="staffEmail"
             class="caption"
             :href="people.email"
             target="_blank"
@@ -290,11 +289,11 @@ h3,
 h4,
 a {
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: shrink;
 }
 .staffCon {
   margin: 3vw;
-  overflow-x: hidden;
+  overflow-x: visible;
   width: 15vw;
 }
 .staffPfp {
@@ -357,7 +356,6 @@ button:hover {
 }
 @media only screen and (max-width: 992px) {
   .caption {
-    font-size: 1.7vw;
   }
   #gradient {
     height: 85vw;
@@ -433,7 +431,6 @@ button:hover {
     width: 30%;
   }
   .caption {
-    font-size: 1.9vw;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -456,12 +453,10 @@ button:hover {
     font-size: 5.7vw;
   }
   .staffEmail {
-    font-size: 4vw;
   }
 }
 @media only screen and (max-width: 450px) {
   .staffEmail {
-    font-size: 2vw;
   }
 
   h1 {
@@ -488,9 +483,9 @@ button:hover {
 }
 @media only screen and (max-width: 356px) {
   #staffEmail {
-    font-size: 5.5vw;
+    /* font-size: 5.5vw;
     height: 10vw;
-    vertical-align: text-top;
+    vertical-align: text-top; */
   }
   h1 {
     font-size: 6vw;
