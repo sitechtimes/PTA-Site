@@ -2,14 +2,45 @@
 <div>
      <div id="gradient"></div>
 <DonateTop />
+        <div
+          id="homePageScroll"
+          ref="homePageScroll"
+          :style="{ opacity: scrollOpacity }"
+        >
+          <DonateScroll />
+        </div>
 <DonateMid />
 </div>
 </template>
 <script>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { onMounted, onUnmounted, ref } from "vue";
+
+const homePageScrollRef = ref(null);
+const scrollOpacity = ref(1);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+const handleScroll = () => {
+  const scrollPosition = window.scrollY;
+  // console.log("Scroll Position:", scrollPosition);
+
+  if (scrollPosition >= 400) {
+    scrollOpacity.value = 0;
+  } else {
+    scrollOpacity.value = 1;
+  }
+};
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 export default {
   mounted() {
-    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
+
   }
 
 };

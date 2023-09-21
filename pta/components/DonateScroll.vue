@@ -25,7 +25,7 @@ export default {
 
   methods: {
     scrollDown() {
-      const element = document.getElementById("section__MiddleSection");
+      const element = document.getElementById("monetary");
       element.scrollIntoView({ behavior: "smooth" });
     },
     

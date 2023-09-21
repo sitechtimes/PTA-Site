@@ -1,7 +1,7 @@
 <template>
 
           <div>
-                 <h1 class="heading" ref="heading">DONATIONS</h1>
+         <h1 class="heading" ref="heading">DONATIONS</h1>
               <h3 class="subh" ref="subh">Bake Sales</h3>
                 <p ref="text">Food and drink donations would be much appreciated to help launch bake sales during the year. Our students always enjoy these added treats to their daily lunch routine. </p>
                 <p ref="text2">Attached is a wish list of items that we would like to provide to our students which include :</p>
@@ -28,11 +28,11 @@ export default {
     const { text } = this.$refs;
     const { text2 } = this.$refs;
     const { list } = this.$refs;
-        gsap.from(heading, { duration: 1, y: 100, opacity: 0 })
-    gsap.from(subh, { delay: 0.5, duration: 1, y: 100, opacity: 0 });
-    gsap.from(text, { delay: 0.8, duration: 1, y: 100, opacity: 0 });
-    gsap.from(text2, { delay: 1, duration: 1, y: 100, opacity: 0 });
-    gsap.from(list, { delay: 1.2, duration: 1, y: 100, opacity: 0 });
+    gsap.from(heading, { delay: 0, duration: 1, y: 100, opacity: 0 })
+    gsap.from(subh, { delay: 0.4, duration: 1, y: 100, opacity: 0 });
+    gsap.from(text, { delay: 0.6, duration: 1, y: 100, opacity: 0 });
+    gsap.from(text2, { delay: 0.8, duration: 1, y: 100, opacity: 0 });
+    gsap.from(list, { delay: 1, duration: 1, y: 100, opacity: 0 });
 
   }
 
@@ -42,7 +42,7 @@ export default {
 @import url(../assets/base.css);
 .heading{
 margin: 2% 0 0 8%;
-z-index: 100;
+display: block;
 }
 .list{
     margin: 1% 0 0 8%;

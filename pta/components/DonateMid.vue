@@ -18,7 +18,6 @@ export default {
     const { subh2 } = this.$refs;
     const { text3 } = this.$refs;
     const { text4 } = this.$refs;
-    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
     gsap.from(list, { delay: 1.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(subh2, { delay: 1.4, duration: 1, y: 100, opacity: 0 });
     gsap.from(text3, { delay: 1.6, duration: 1, y: 100, opacity: 0 });
@@ -30,7 +29,7 @@ export default {
 <style scoped>
 @import url(../assets/base.css);
 #monetary{
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 .list{
     margin: 1% 0 0 8%;
