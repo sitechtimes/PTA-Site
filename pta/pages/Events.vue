@@ -5,10 +5,10 @@
         <h1 class="heading">EVENTS</h1>
         <section id="top">
           <EventsComponent />
-          <div id="calender">
+          <div id="calendar">
             <iframe
               class="cal"
-              id="calenderInner"
+              id="calendarInner"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
               frameborder="0"
               scrolling="no"
@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-#calenderInner {
+#calendarInner {
   border: solid 1px #777;
   width: 35vw;
   height: 30vw;
@@ -112,7 +112,7 @@ li {
   flex-direction: row;
   align-items: center;
 }
-#calender {
+#calendar {
   width: 35vw;
   /* background-color: white; */
   border-radius: 3vw;
@@ -141,7 +141,7 @@ li {
   .listTitle {
     width: 18vw;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 35vw;
     height: 30vw;
@@ -149,7 +149,7 @@ li {
 }
 
 @media screen and (max-width: 576px) {
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
@@ -177,7 +177,7 @@ li {
   .listTitle {
     width: 45vw;
   }
-  #calender {
+  #calendar {
     width: 80%;
     height: 60vw;
     margin-bottom: 2rem;
@@ -196,7 +196,7 @@ li {
   /* .listTitle {
     width: 40vw;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
@@ -206,7 +206,7 @@ li {
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
