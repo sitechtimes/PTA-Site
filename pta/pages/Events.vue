@@ -124,11 +124,11 @@ li {
     height: 140vh;
   }
 
-  #calendar {
+  /* #calendar {
     width: 80%;
     height: 25%;
     margin: 10% auto;
-  }
+  } */
 }
 
 @media screen and (max-width: 1200px) {
