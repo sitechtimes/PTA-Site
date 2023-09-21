@@ -355,8 +355,6 @@ button:hover {
   }
 }
 @media only screen and (max-width: 992px) {
-  .caption {
-  }
   #gradient {
     height: 85vw;
   }
@@ -428,9 +426,6 @@ button:hover {
   .staffRole {
     font-size: 3vw;
   }
-
-  .caption {
-  }
 }
 @media only screen and (max-width: 576px) {
   .staffCon {
@@ -485,11 +480,6 @@ button:hover {
   }
 }
 @media only screen and (max-width: 356px) {
-  #staffEmail {
-    /* font-size: 5.5vw;
-    height: 10vw;
-    vertical-align: text-top; */
-  }
   h1 {
     font-size: 6vw;
   }
@@ -508,7 +498,6 @@ button:hover {
     margin-right: 3vw;
     margin-left: 3vw;
   }
-
   .staffRole {
     font-size: 5.7vw;
   }
