@@ -49,15 +49,18 @@ margin: 2% 0 0 8%;
 
 }
 li{
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-top: 0.5rem;
 }
 
 p {
-  font-size: 1.5vw;
+  font-size: 1.7rem;
 margin: 1% 0 0 8%;
 width: 66%;
 font-family: var(  --font-text);
+}
+span{
+  font-weight: bold;
 }
 .subh {
   margin-top: 1.5rem;

@@ -37,15 +37,9 @@ export default {
     font-family: var(  --font-text);
 
 }
-li{
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-}
-span{
-    font-weight: bold;
-}
+
 p {
-  font-size: 1.5vw;
+  font-size: 1.7rem;
 margin: 1% 0 0 8%;
 width: 66%;
 font-family: var(  --font-text);
