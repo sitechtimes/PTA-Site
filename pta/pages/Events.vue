@@ -135,6 +135,48 @@ li {
 }
 
 @media screen and (max-width: 992px) {
+  #calendarInner {
+    border: solid 1px #777;
+    width: 80vw;
+    height: 70vw;
+  }
+  #wrapper {
+    height: 100vw;
+  }
+  #top {
+    flex-direction: column;
+  }
+  #upcomingEvents {
+    margin-bottom: 10vw;
+  }
+  #eventsCon {
+    height: 50vw;
+  }
+  .uniqEvent {
+    margin: 0 1rem 0 1rem;
+  }
+  li {
+    width: 76vw;
+    border-radius: 2.5vw;
+    margin-bottom: 4vw;
+  }
+  .listTitle {
+    width: 45vw;
+  }
+  #calendar {
+    width: 80%;
+    height: 60vw;
+    margin-bottom: 2rem;
+  }
+  #gradient {
+    width: 100%;
+    height: 220vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
 }
 
 @media screen and (max-width: 768px) {
