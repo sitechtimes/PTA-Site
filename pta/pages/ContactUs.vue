@@ -402,7 +402,8 @@ button:hover {
     margin-left: 7vw;
   }
   .staffCon {
-    width: 40%;
+    margin: 1vw;
+    width: 46%;
   }
   .staffRole {
     font-size: 2.8vw;
@@ -427,9 +428,7 @@ button:hover {
   .staffRole {
     font-size: 3vw;
   }
-  .staffCon {
-    width: 30%;
-  }
+
   .caption {
   }
 }
@@ -452,13 +451,17 @@ button:hover {
   .staffRole {
     font-size: 5.7vw;
   }
-  .staffEmail {
+  .caption {
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 450px) {
-  .staffEmail {
+  .caption {
+    font-size: 5vw;
   }
-
+  .subtext {
+    font-size: 6vw;
+  }
   h1 {
     font-size: 4vw;
   }
@@ -505,6 +508,7 @@ button:hover {
     margin-right: 3vw;
     margin-left: 3vw;
   }
+
   .staffRole {
     font-size: 5.7vw;
   }
