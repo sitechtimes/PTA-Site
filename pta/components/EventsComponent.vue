@@ -11,7 +11,9 @@
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">
- {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{selectedEvent.year }}
+        {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{
+          selectedEvent.year
+        }}
       </p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
@@ -27,7 +29,9 @@
         >
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate"> {{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
+            <h5 class="listDate">
+              {{ event.month }}/{{ event.date }}/{{ event.year }}
+            </h5>
           </div>
         </li>
       </ul>
@@ -219,6 +223,12 @@ li {
 }
 
 @media screen and (max-width: 992px) {
+  .uniqEvent {
+    width: 60vw;
+  }
+  ul {
+    height: 33vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -141,7 +141,7 @@ li {
     height: 70vw;
   }
   #wrapper {
-    height: 100vw;
+    height: 60vw;
   }
   #top {
     flex-direction: column;
@@ -152,16 +152,17 @@ li {
   #eventsCon {
     height: 50vw;
   }
-  .uniqEvent {
-    margin: 0 1rem 0 1rem;
+  ul {
+    height: 33vw;
   }
+
   li {
     width: 76vw;
     border-radius: 2.5vw;
     margin-bottom: 4vw;
   }
   .listTitle {
-    width: 45vw;
+    width: 80vw;
   }
   #calendar {
     width: 80%;
@@ -170,7 +171,7 @@ li {
   }
   #gradient {
     width: 100%;
-    height: 220vw;
+    height: 148vw;
     margin: 0;
     padding: 0%;
     position: absolute;
