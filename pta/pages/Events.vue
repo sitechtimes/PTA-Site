@@ -178,6 +178,9 @@ li {
     top: 0%;
     left: 0%;
   }
+  #footer {
+    margin-top: 80vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -186,8 +189,11 @@ li {
   }
   #calendarInner {
     border: solid 1px #777;
-    width: 35vw;
-    height: 30vw;
+    width: 70vw;
+    height: 60vw;
+  }
+  #calendar {
+    width: 70%;
   }
 }
 
@@ -258,7 +264,7 @@ li {
 @media screen and (min-width: 576px) {
   #gradient {
     width: 100%;
-    height: 100vw;
+    height: 125vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -281,7 +287,7 @@ li {
 @media screen and (min-width: 768px) {
   #gradient {
     width: 100%;
-    height: 75vw;
+    height: 170vw;
     margin: 0;
     padding: 0%;
     position: absolute;

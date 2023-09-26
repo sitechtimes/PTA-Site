@@ -132,6 +132,7 @@ img:hover {
   }
   .container__footer {
     width: 80vw;
+    margin-top: 44vw;
   }
 }
 
