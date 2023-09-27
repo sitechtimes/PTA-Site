@@ -32,10 +32,7 @@ export default {
 
 #monetary{
   margin-top: 15rem;
-}
-.list{
-    margin: 1% 0 0 8%;
-    font-family: var(  --font-text);
+  margin-bottom: 10rem;
 }
 
 p {
@@ -51,6 +48,66 @@ font-family: var(  --font-text);
 margin: 2% 0 0 8%;
     margin-top: 1.5rem;
 }
+@media screen and (max-width: 1400px){
 
+#monetary{
+  margin-top: 8rem;
+}
+.subh{
+  margin-top: 0.8rem;
+}
+p{
+  font-size: 1.5rem;
+}
+
+}
+
+@media screen and (max-width: 1200px) {
+  #monetary{
+  margin-top: 5rem;
+}
+p{
+  font-size: 1.4rem;
+    width: 70%;
+    margin-top: 0.8rem;
+}
+.subh{
+  width: 70%;
+}
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+  #monetary{
+  margin-top: 2.5rem;
+}
+p{
+  font-size: 1.1rem;
+    width: 80%;
+        margin-top: 0.8rem;
+}
+li{
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+}
+
+@media only screen and (max-width: 450px) {
+  .subh{
+    width: 80%;
+  }
+  #monetary{  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+}
+@media only screen and (max-width: 356px) {
+
+}
 
 </style> 

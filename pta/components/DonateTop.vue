@@ -88,8 +88,103 @@ span{
   margin-top: 1.5rem;
   width: 32vw;
 margin: 2% 0 0 8%;
-    margin-top: 1.5rem;
+}
+@media screen and (max-width: 1400px){
+  button{
+      border-radius: 0.5rem; 
+      width: 12rem;
+      font-size: 1.3rem;
+      padding: 6px 10px  6px 10px ;
+margin: 2% 0 0 8%;
+      font-weight: bold;
+}
+.subh{
+  margin-top: 0.8rem;
+}
+p{
+  font-size: 1.5rem;
+}
+li{
+  font-size: 1.5rem;
+}
 }
 
+@media screen and (max-width: 1200px) {
+    button{
+      border-radius: 0.5rem; 
+      width: 12rem;
+      font-size: 1.3rem;
+      padding: 6px 8px  6px 8px ;
+margin: 2% 0 0 8%;
+      font-weight: bold;
+}
+p{
+  font-size: 1.4rem;
+    width: 70%;
+        margin-top: 0.8rem;
+}
+li{
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+}
+}
+@media screen and (max-width: 992px) {
+      button{
+      border-radius: 0.5rem; 
+      width: 12rem;
+      font-size: 1.2rem;
+      padding: 5px 8px  5px 8px ;
+margin: 2% 0 0 8%;
+      font-weight: bold;
+}
+svg{
+  margin-right: 8px;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+      button{
+      border-radius: 0.4rem; 
+      width: 10rem;
+      font-size: 1rem;
+      padding: 5px 8px  5px 8px ;
+margin: 4% 0 0 8%;
+}
+p{
+  font-size: 1.1rem;
+    width: 80%;
+        margin-top: 0.8rem;
+}
+li{
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+}
+
+@media only screen and (max-width: 450px) {
+    .subh{
+    width: 80%;
+  }
+      button{
+      border-radius: 0.4rem; 
+      width: 10rem;
+      font-size: 1rem;
+      padding: 3px 8px  3px 8px ;
+margin: 4% 0 0 8%;
+}
+}
+@media only screen and (max-width: 356px) {
+      button{
+      border-radius: 0.4rem; 
+      width: 8rem;
+      font-size: 0.8rem;
+      padding: 2px 8px  2px 8px ;
+margin: 4% 0 0 8%;
+}
+}
 
 </style>

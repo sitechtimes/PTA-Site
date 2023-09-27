@@ -10,7 +10,9 @@
           <DonateScroll />
         </div>
 <DonateMid />
+ <Footer /> 
 </div>
+
 </template>
 <script>
 import { gsap } from "gsap";
