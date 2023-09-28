@@ -38,6 +38,7 @@ export default {
 p {
 font-size: 1.7rem;
 margin: 1% 0 0 8%;
+line-height: 1.5;
 width: 66%;
 font-family: var(  --font-text);
 }
