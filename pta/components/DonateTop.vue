@@ -98,10 +98,10 @@ p{
 @media screen and (max-width: 1200px) {
     button{
       border-radius: 0.5rem; 
-      width: 12rem;
+      width: 14rem;
       font-size: 1.3rem;
-      padding: 6px 8px  6px 8px ;
-margin: 2% 0 0 8%;
+      padding:  10px ;
+margin: 4% 0 0 8%;
       font-weight: bold;
 }
 p{
@@ -112,12 +112,17 @@ p{
 
 }
 @media screen and (max-width: 992px) {
+  p{
+  font-size: 1.3rem;
+    width: 80%;
+        margin-top: 0.8rem;
+}
       button{
       border-radius: 0.5rem; 
       width: 12rem;
       font-size: 1.2rem;
-      padding: 5px 8px  5px 8px ;
-margin: 2% 0 0 8%;
+      padding: 8px ;
+margin: 4% 0 0 8%;
       font-weight: bold;
 }
 svg{
