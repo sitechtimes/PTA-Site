@@ -91,7 +91,7 @@ margin: 2% 0 0 8%;
 }
 p{
   font-size: 1.5rem;
-}
+}  
 
 }
 
@@ -149,7 +149,6 @@ p{
 }
 
 }
-
 @media only screen and (max-width: 450px) {
     .subh{
     width: 80%;
@@ -171,5 +170,6 @@ margin: 7% 0 0 8%;
 margin: 4% 0 0 8%;
 }
 }
+
 
 </style>
