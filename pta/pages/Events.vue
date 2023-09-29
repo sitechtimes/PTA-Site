@@ -41,11 +41,11 @@ export default {
   height: 30vw;
 }
 #wrapper {
-  height: 60vw;
+  height: 50vw;
 }
 #gradient {
-  width: 100vw;
-  height: 180vh;
+  width: 100%;
+  height: 90vh;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -120,9 +120,9 @@ li {
   /* margin-top: -2vw; */
 }
 @media screen and (max-width: 1400px) {
-  #gradient {
+  /* #gradient {
     height: 140vh;
-  }
+  } */
 
   /* #calendar {
     width: 80%;
@@ -171,7 +171,7 @@ li {
   }
   #gradient {
     width: 100%;
-    height: 148vw;
+    height: 170vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -204,7 +204,7 @@ li {
     height: 70vw;
   }
   #wrapper {
-    height: 170vw;
+    height: 90vw;
   }
   #top {
     flex-direction: column;
@@ -233,7 +233,7 @@ li {
   }
   #gradient {
     width: 100%;
-    height: 220vw;
+    height: 190vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -252,6 +252,18 @@ li {
   } */
 }
 @media only screen and (max-width: 356px) {
+  #wrapper {
+    height: 110vw;
+  }
+  #gradient {
+    width: 100%;
+    height: 250vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;
   }
@@ -260,7 +272,7 @@ li {
     width: 80vw;
     height: 70vw;
   }
-}
+} /*
 @media screen and (min-width: 576px) {
   #gradient {
     width: 100%;
@@ -273,7 +285,7 @@ li {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
+ @media screen and (min-width: 576px) and (orientation: landscape) {
   #gradient {
     width: 100%;
     margin: 0;
@@ -285,15 +297,6 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  #gradient {
-    width: 100%;
-    height: 170vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
@@ -305,5 +308,5 @@ li {
     top: 0%;
     left: 0%;
   }
-}
+} */
 </style>
