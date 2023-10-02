@@ -15,6 +15,7 @@
     <div class="events">
       <UpcomingEvents />
     </div>
+    <div class="aboutUs">about us</div>
   </div>
 </template>
 <script>
@@ -69,7 +70,12 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   align-items: center;
   bottom: 40%;
 }
-
+.aboutUs {
+  width: 70vw;
+  position: flex;
+  margin-left: 7vw;
+  margin-top: 15vw;
+}
 .events {
   position: relative;
   left: 57%;
