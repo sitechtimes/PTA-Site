@@ -16,6 +16,7 @@
           </div>
         </section>
       </div>
+
     </div>
     <div id="footer">
       <Footer />
@@ -27,14 +28,16 @@
 import { gsap } from "gsap";
 export default {
   mounted() {
+     const { button } = this.$refs;
     gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
-    gsap.from(".cal", 1, { x: 1000 }, "<0.5");
+
   },
 };
 </script>
 
 <style scoped>
 @import url(../assets/base.css);
+
 #calenderInner {
   border: solid 1px #777;
   width: 35vw;

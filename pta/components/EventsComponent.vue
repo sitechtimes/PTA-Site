@@ -16,6 +16,7 @@
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
+      <p class="text" id="body">Event sign up link : <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link">Volunteer Form</a> </p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
