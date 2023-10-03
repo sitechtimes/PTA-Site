@@ -28,15 +28,14 @@ export default {
       const element = document.getElementById("section__MiddleSection");
       element.scrollIntoView({ behavior: "smooth" });
     },
-    
   },
 };
 </script>
 
 <style scoped>
-.test{
+.test {
   margin-top: 50vw;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 }
 .container__ScrollDown {
   width: 100vw;
@@ -77,6 +76,16 @@ export default {
   100% {
     -webkit-transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .container__ScrollDown img {
+    bottom: 9rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .container__ScrollDown img {
+    bottom: 13rem;
   }
 }
 @media only screen and (max-width: 1200px) and (orientation: landscape) {

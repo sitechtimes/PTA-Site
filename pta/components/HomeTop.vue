@@ -107,6 +107,11 @@ p {
   width: 37vw;
 }
 
+@media screen and (max-width: 1600px) {
+  .aboutUs {
+    margin-top: 12vw;
+  }
+}
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;

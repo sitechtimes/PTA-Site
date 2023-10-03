@@ -19,7 +19,6 @@
     #faf2e1 75%,
     #faf2e1 80%,
     #fff 95%
-
   );
   /*   --footer-bg: linear-gradient(
     180deg,
@@ -119,130 +118,7 @@ h4 {
 .smalltext {
   font-size: 1rem;
 }
-
-@media only screen and (max-width: 280px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-      }
-  }
-@media only screen and (max-width: 576px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-    }
-}
-@media only screen and (min-width: 540px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-     }
-    /* .link {
-      margin-top: 2.5rem;
-      list-style: none;
-    }
-    .menu-router {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 5vw;
-      list-style: none;
-      margin-left: 0.2rem;
-    } */
-  }
-
-
-@media only screen and (min-width: 540px) and (orientation: landscape) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;}
-}
-
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;}
-  }
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  /* li{
-    margin-bottom: 3vw ;
-  } */
-
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;}
-  }
-
-@media screen and (min-width: 992px) and (orientation: portrait) {
-  .menu-btn span,
-  .menu-btn::before,
-  .menu-btn::after {
-    display: block;
-    background-color: var(--text-color);
-    height: 4px;
-    width: 2.5rem;
-    border-radius: 2px;
-    transition: all 0.4s ease-in-out;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 1300px) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #homeTopCon {
-    background: var(--bg-gradient);
-    width: 100%;
-    height: 180vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-  .menu {
-    display: block;
-  }
-}
-@media only screen and (max-width: 450px) {
-  #homeTopCon {
-    height: 210vw;
-  }
-}
-
+/* Larger values at the top, decreases. Min width can be found lower. */
 @media only screen and (max-width: 1400px) {
   .heading {
     margin: 16% 0 0 8%;
@@ -258,6 +134,7 @@ h4 {
     font-size: 2vw;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   #navbar {
     height: 7rem;
@@ -278,15 +155,6 @@ h4 {
     font-size: 1rem;
   }
 }
-@media only screen and (min-width: 1032px) {
-  .menu {
-    display: none;
-  }
-
-  #naV {
-    display: flex;
-  }
-}
 
 @media only screen and (max-width: 1032px) {
   /* issue here - hamburger and normal menu displayed at the same time */
@@ -303,8 +171,8 @@ h4 {
   .caption {
     font-size: 1rem;
   }
-  
 }
+
 @media only screen and (max-width: 992px) {
   #navbar {
     height: 5.2rem;
@@ -341,7 +209,6 @@ h4 {
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-
   .heading {
     font-size: 2.4rem;
     margin: 20% 0 0 8%;
@@ -357,6 +224,29 @@ h4 {
   }
   .caption {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 180vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  .menu {
+    display: block;
   }
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
@@ -392,6 +282,11 @@ h4 {
   }
 }
 @media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 210vw;
+  }
+}
+@media only screen and (max-width: 450px) {
   .heading {
     font-size: 1.8rem;
     margin: 34% 0 0 9%;
@@ -421,5 +316,113 @@ h4 {
   }
   .subtext {
     font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (min-width: 540px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  /* .link {
+      margin-top: 2.5rem;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 5vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    } */
+}
+
+@media only screen and (min-width: 540px) and (orientation: landscape) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  /* li{
+    margin-bottom: 3vw ;
+  } */
+
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  .menu-btn span,
+  .menu-btn::before,
+  .menu-btn::after {
+    display: block;
+    background-color: var(--text-color);
+    height: 4px;
+    width: 2.5rem;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1032px) {
+  .menu {
+    display: none;
+  }
+
+  #naV {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
   }
 }

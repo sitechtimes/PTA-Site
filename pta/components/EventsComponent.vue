@@ -11,12 +11,21 @@
     >
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
       <p class="text" id="date">
- {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{selectedEvent.year }}
+        {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{
+          selectedEvent.year
+        }}
       </p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <p class="text" id="body">Event sign up link : <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link">Volunteer Form</a> </p>
+      <p class="text" id="body">
+        Event sign up link :
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link"
+          >Volunteer Form</a
+        >
+      </p>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
@@ -28,7 +37,9 @@
         >
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate"> {{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
+            <h5 class="listDate">
+              {{ event.month }}/{{ event.date }}/{{ event.year }}
+            </h5>
           </div>
         </li>
       </ul>
@@ -206,9 +217,6 @@ li {
   /* margin-top: -2vw; */
 }
 @media only screen and (max-width: 1400px) {
-  #gradient {
-    height: 140vh;
-  }
   #calendar {
     width: 80%;
     height: 25%;
