@@ -112,6 +112,14 @@ p {
     margin-top: 12vw;
   }
 }
+@media screen and (max-width: 1600px) {
+  .aboutUs {
+    width: 80vw;
+  }
+  p {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .events {
     margin: 0;
