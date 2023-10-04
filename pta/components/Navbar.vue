@@ -70,12 +70,12 @@
           ref="gratitudeLink"
           @click="(page = 'Gratitude'), underline()"
           v-bind:style="
-            ({ animation: fadeIn }, { textDecoration: contactLine })
+            ({ animation: fadeIn }, { textDecoration: gratitudeLine })
           "
         >
           <img
             class="icon"
-            id="contact"
+            id="gratitude"
             src="../components/icons/NavBar-Icons/heart.svg"
             alt="dark brown icon of an envelope"
           />
@@ -144,7 +144,6 @@ export default {
         this.eventsLine = "transparent";
         this.contactLine = "underline var(--text-color) 0.2rem";
         this.gratitudeLine = "transparent";
-
         this.donateLine = "transparent";
       } 
       else if (this.page === "Gratitude") {
