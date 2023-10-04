@@ -121,6 +121,14 @@ p {
   }
 }
 @media screen and (max-width: 1200px) {
+  .aboutUs {
+    margin-left: 8vw;
+    margin-top: 7vw;
+    width: 85vw;
+  }
+  p {
+    font-size: 16px;
+  }
   .events {
     margin: 0;
     display: flex;
@@ -132,6 +140,9 @@ p {
   }
 }
 @media screen and (max-width: 992px) {
+  .aboutUs {
+    margin-top: -20vw;
+  }
   .events {
     position: relative;
     left: 56%;
@@ -142,6 +153,17 @@ p {
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   #homeTopText {
     top: 3%;
+  }
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .aboutUs {
+    margin-left: 9vw;
   }
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -189,17 +211,44 @@ p {
     left: 0%;
     width: 100%;
   }
+  p {
+    font-size: 2.8vw;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .aboutUs {
+    margin-top: 8rem;
+    margin-left: 12vw;
+    width: 75vw;
+  }
 }
 @media only screen and (max-width: 450px) {
+  .aboutUs {
+    margin-top: 10rem;
+  }
   #homeTopText {
     top: 6%;
     left: 47.4%;
+  }
+  p {
+    font-size: 3.5vw;
+  }
+  h3 {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 356px) {
   #homeTopText {
     top: 8%;
     left: 50%;
+  }
+  p {
+    font-size: 4.5vw;
+  }
+  .aboutUs {
+    margin-left: 14vw;
+    margin-top: 55vw;
   }
 }
 @media screen and (min-width: 576px) {
