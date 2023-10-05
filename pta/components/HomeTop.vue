@@ -157,12 +157,14 @@ p {
 }
 @media screen and (max-width: 768px) {
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
+
   h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
   .aboutUs {
+    margin-top: -20vw;
     margin-left: 9vw;
   }
 }
@@ -244,11 +246,25 @@ p {
     left: 50%;
   }
   p {
-    font-size: 4.5vw;
+    font-size: 4.72vw;
   }
   .aboutUs {
     margin-left: 14vw;
     margin-top: 55vw;
+  }
+}
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  p {
+    font-size: 4.72vw;
+  }
+  .aboutUs {
+    margin-left: 14vw;
+    margin-top: 15rem;
+  }
+}
+@media only screen and (max-width: 220px) and (orientation: portrait) {
+  p {
+    font-size: 5.3vw;
   }
 }
 @media screen and (min-width: 576px) {

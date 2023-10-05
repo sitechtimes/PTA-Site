@@ -147,6 +147,16 @@ img {
   margin-right: 6.5rem;
   margin-bottom: 5vw;
 }
+@media only screen and (max-width: 1600px) {
+  #section__MiddleSection {
+    margin-top: -2rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  #section__MiddleSection {
+    margin-top: 5rem;
+  }
+}
 @media only screen and (max-width: 1200px) {
   #section__MiddleSection {
     margin-top: 5rem;
