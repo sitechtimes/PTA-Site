@@ -16,6 +16,7 @@
       </div>
     </div>
     <div id="footer">
+      <NewFooter />
       <Footer />
     </div>
   </div>
