@@ -19,7 +19,19 @@
           </div>
         </div>
         <div class="image"></div>
-        <div class="archive"></div>
+        <div class="archive">
+          <h3>Archive</h3>
+          <div class="years">
+            <div class="yearArchive"><h4>2023</h4></div>
+            <div class="yearArchive"><h4>2022</h4></div>
+            <div class="yearArchive"><h4>2021</h4></div>
+            <div class="yearArchive"><h4>2020</h4></div>
+            <div class="yearArchive"><h4>2019</h4></div>
+            <div class="yearArchive"><h4>2018</h4></div>
+            <div class="yearArchive"><h4>2017</h4></div>
+            <div class="yearArchive"><h4>2016</h4></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -56,29 +68,55 @@ export default {
 .topComponent {
   display: flex;
   flex-direction: row;
+  margin: 8% 0 0 8%;
 }
 .heading {
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   font-size: 6rem;
   color: #483221;
-  margin: 10% 0 0 8%;
   width: 33rem;
-  background-color: red;
 }
 .thanks {
   font-family: "Kumbh Sans", san serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #483221;
-  margin: 2% 0 0 8%;
   width: 40rem;
-  background-color: red;
 }
 .image {
+  margin: 4% 0 0 5%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: red;
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.archive {
+  margin: 4% 0 0 5%;
+  width: 300px;
+  height: 500px;
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  color: #483221;
+  text-align: center;
+  overflow-y: scroll;
+}
+.years {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.yearArchive {
+  margin: 5px;
+  width: 16rem;
+  height: 4rem;
+  background-color: #fcf6e9;
+  border-radius: 20px;
+}
+h3 {
+  font-size: 3rem;
+  margin: 1rem 0;
 }
 </style>
