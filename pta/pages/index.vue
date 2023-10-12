@@ -17,7 +17,7 @@
     </div>
     <div id="footer">
       <NewFooter />
-      <Footer />
+
     </div>
   </div>
 </template>
