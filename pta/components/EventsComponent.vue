@@ -18,7 +18,11 @@
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <button id="reg">Register</button>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
+        target="_blank"
+        ><button id="reg">Register</button></a
+      >
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
@@ -180,9 +184,13 @@ ul {
   margin-top: 1.5rem;
   color: white;
   font-family: "Karla", san serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
+}
+#reg:hover {
+  background-color: var(--darker-brown);
+  transition: 0.4s ease;
 }
 #head {
   position: absolute;
