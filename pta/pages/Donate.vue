@@ -10,7 +10,7 @@
           <DonateScroll />
         </div>
 <DonateMid />
- <Footer /> 
+      <NewFooter />
 </div>
 
 </template>

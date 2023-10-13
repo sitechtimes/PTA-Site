@@ -67,7 +67,9 @@
             </div>
         </div>
         <div class="right">
-
+            <h2 class="about">About Us</h2>
+            <h3 class="mission">The mission of Staten Island Tech’s PTA is to support our school through advocacy, volunteerism and fundraising. From our bake sales to our annual Spring Gala, we work diligently to raise money in order to financially support our school’s needs such as online and software services, facility upgrades and social events / celebrations.</h3>
+ <button ref="button">Donate Now!</button>
         </div>
     </div>
   </div>
@@ -75,6 +77,42 @@
 </template>
 
 <style scoped>
+.hand{
+    fill: white;
+}
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 30%;
+      font-size: 1.2rem;
+margin-top: 2rem;
+padding: 6px;
+      font-weight: 450;
+
+}
+button:hover{
+  cursor: pointer; 
+
+}
+.mission{
+    margin-top: 0;
+    width: 95%;
+    margin: 0;
+        margin-top: 0.5rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+
+}
+.container__footer{
+    margin-bottom: 4rem;
+}
 svg{
     fill: #483221;
             margin-top: 1rem;
@@ -87,7 +125,7 @@ svg{
 }
 .address{
         display: flex;
-            margin-top: 0.5rem;
+    margin-top: 0.5rem;
     flex-direction: row;
 }
 .mid{
@@ -137,7 +175,7 @@ img{
   grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
 margin: auto;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   margin-top: 5px;
   width: 85%;
 }

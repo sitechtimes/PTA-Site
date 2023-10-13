@@ -2,7 +2,9 @@
 <div>
         <div id="gradient" >
             <h1 class="heading" ref="heading">Wall of Gratitude</h1>
+
     </div>
+    <NewFooter />
 </div>
    
 </template>
@@ -23,7 +25,7 @@ export default {
 
 #gradient {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 0%;
   position: absolute;
   top: 0%;
