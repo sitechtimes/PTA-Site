@@ -11,6 +11,7 @@
   --text-color: #483221;
   --primary-bg: #fff;
   --secondary-bg: #fce5ac;
+  --darker-brown: #312217;
   --bg-gradient: linear-gradient(
     180deg,
     #feb89a 0%,
@@ -111,14 +112,139 @@ h4 {
   font-weight: 400;
 }
 .caption {
-  font-size: 1.2rem;
+  font-size: 1vw;
   margin: 0.6rem 0rem 0rem 0rem;
   font-family: "Karla", san serif;
 }
 .smalltext {
   font-size: 1rem;
 }
-/* Larger values at the top, decreases. Min width can be found lower. */
+
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (min-width: 540px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  /* .link {
+      margin-top: 2.5rem;
+      list-style: none;
+    }
+    .menu-router {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 5vw;
+      list-style: none;
+      margin-left: 0.2rem;
+    } */
+}
+
+@media only screen and (min-width: 540px) and (orientation: landscape) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  /* li{
+    margin-bottom: 3vw ;
+  } */
+
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  .menu-btn span,
+  .menu-btn::before,
+  .menu-btn::after {
+    display: block;
+    background-color: var(--text-color);
+    height: 4px;
+    width: 2.5rem;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 180vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  .menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 210vw;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .heading {
     margin: 16% 0 0 8%;
@@ -152,7 +278,15 @@ h4 {
     font-size: 1.5rem;
   }
   .caption {
-    font-size: 1rem;
+    font-size: 1vw;
+  }
+}
+@media only screen and (min-width: 1032px) {
+  .menu {
+    display: none;
+  }
+  #naV {
+    display: flex;
   }
 }
 
@@ -167,9 +301,6 @@ h4 {
     display: initial;
     margin-right: 6rem;
     margin-top: 3.3rem;
-  }
-  .caption {
-    font-size: 1rem;
   }
 }
 
@@ -191,7 +322,7 @@ h4 {
     font-size: 1.2rem;
   }
   .caption {
-    font-size: 0.9rem;
+    font-size: 2vw;
   }
   .subtext {
     font-size: 2.2vw;
@@ -316,113 +447,5 @@ h4 {
   }
   .subtext {
     font-size: 5vw;
-  }
-}
-@media only screen and (max-width: 280px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
-@media only screen and (min-width: 540px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-  /* .link {
-      margin-top: 2.5rem;
-      list-style: none;
-    }
-    .menu-router {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 5vw;
-      list-style: none;
-      margin-left: 0.2rem;
-    } */
-}
-
-@media only screen and (min-width: 540px) and (orientation: landscape) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  /* li{
-    margin-bottom: 3vw ;
-  } */
-
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
-
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  #naV {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
-
-@media screen and (min-width: 992px) and (orientation: portrait) {
-  .menu-btn span,
-  .menu-btn::before,
-  .menu-btn::after {
-    display: block;
-    background-color: var(--text-color);
-    height: 4px;
-    width: 2.5rem;
-    border-radius: 2px;
-    transition: all 0.4s ease-in-out;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1032px) {
-  .menu {
-    display: none;
-  }
-
-  #naV {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .menu {
-    display: none;
-  }
-  #naV {
-    display: flex;
   }
 }

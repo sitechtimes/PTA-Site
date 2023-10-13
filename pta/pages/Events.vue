@@ -5,10 +5,10 @@
         <h1 class="heading">EVENTS</h1>
         <section id="top">
           <EventsComponent />
-          <div id="calender">
+          <div id="calendar">
             <iframe
               class="cal"
-              id="calenderInner"
+              id="calendarInner"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
               frameborder="0"
               scrolling="no"
@@ -37,18 +37,17 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
-
-#calenderInner {
+#calendarInner {
   border: solid 1px #777;
   width: 35vw;
   height: 30vw;
 }
 #wrapper {
-  height: 60vw;
+  height: 50vw;
 }
 #gradient {
-  width: 100vw;
-  height: 180vh;
+  width: 100%;
+  height: 90vh;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -115,7 +114,7 @@ li {
   flex-direction: row;
   align-items: center;
 }
-#calender {
+#calendar {
   width: 35vw;
   /* background-color: white; */
   border-radius: 3vw;
@@ -123,42 +122,91 @@ li {
   /* margin-top: -2vw; */
 }
 @media screen and (max-width: 1400px) {
-  #gradient {
+  /* #gradient {
     height: 140vh;
-  }
+  } */
 
-  #calendar {
+  /* #calendar {
     width: 80%;
     height: 25%;
     margin: 10% auto;
-  }
+  } */
 }
 
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 992px) {
+  #calendarInner {
+    border: solid 1px #777;
+    width: 80vw;
+    height: 70vw;
+  }
+  #wrapper {
+    height: 60vw;
+  }
+  #top {
+    flex-direction: column;
+  }
+  #upcomingEvents {
+    margin-bottom: 10vw;
+  }
+  #eventsCon {
+    height: 50vw;
+  }
+  ul {
+    height: 33vw;
+  }
+
+  li {
+    width: 76vw;
+    border-radius: 2.5vw;
+    margin-bottom: 4vw;
+  }
+  .listTitle {
+    width: 80vw;
+  }
+  #calendar {
+    width: 80%;
+    height: 60vw;
+    margin-bottom: 2rem;
+  }
+  #gradient {
+    width: 100%;
+    height: 170vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  #footer {
+    margin-top: 80vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .listTitle {
     width: 18vw;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
-    width: 35vw;
-    height: 30vw;
+    width: 70vw;
+    height: 60vw;
+  }
+  #calendar {
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 576px) {
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
   }
   #wrapper {
-    height: 170vw;
+    height: 90vw;
   }
   #top {
     flex-direction: column;
@@ -180,14 +228,14 @@ li {
   .listTitle {
     width: 45vw;
   }
-  #calender {
+  #calendar {
     width: 80%;
     height: 60vw;
     margin-bottom: 2rem;
   }
   #gradient {
     width: 100%;
-    height: 220vw;
+    height: 190vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -199,26 +247,38 @@ li {
   /* .listTitle {
     width: 40vw;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
   } */
 }
 @media only screen and (max-width: 356px) {
+  #wrapper {
+    height: 110vw;
+  }
+  #gradient {
+    width: 100%;
+    height: 250vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;
   }
-  #calenderInner {
+  #calendarInner {
     border: solid 1px #777;
     width: 80vw;
     height: 70vw;
   }
-}
+} /*
 @media screen and (min-width: 576px) {
   #gradient {
     width: 100%;
-    height: 100vw;
+    height: 125vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -227,7 +287,7 @@ li {
   }
 }
 
-@media screen and (min-width: 576px) and (orientation: landscape) {
+ @media screen and (min-width: 576px) and (orientation: landscape) {
   #gradient {
     width: 100%;
     margin: 0;
@@ -239,15 +299,6 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  #gradient {
-    width: 100%;
-    height: 75vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
@@ -259,5 +310,5 @@ li {
     top: 0%;
     left: 0%;
   }
-}
+} */
 </style>

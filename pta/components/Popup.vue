@@ -55,7 +55,7 @@ export default {
   transform: translate(-50%, -50%);
   color: var(--text-color);
   font-family: var(--font-text);
-  border-radius: 2vw;
+  border-radius: 1.5vw;
   font-size: 1vw;
   width: 40vw;
 }

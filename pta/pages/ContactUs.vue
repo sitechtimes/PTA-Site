@@ -38,7 +38,7 @@
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="subtext staffRole">{{ people.roles }}</h4>
           <a
-          id="staffEmail"
+            id="staffEmail"
             class="caption"
             :href="people.email"
             target="_blank"
@@ -122,7 +122,7 @@ export default {
       staffColor: "#fcf6e9",
       solColor: "transparent",
       slt: Array,
-    }
+    };
   },
 
   methods: {
@@ -294,11 +294,11 @@ h3,
 h4,
 a {
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: shrink;
 }
 .staffCon {
   margin: 3vw;
-  overflow-x: hidden;
+  overflow-x: visible;
   width: 15vw;
 }
 .staffPfp {
@@ -347,6 +347,12 @@ button:hover {
   .staffRole {
     font-size: 1.5vw;
   }
+  p {
+    font-size: 2vw;
+  }
+  li {
+    font-size: 2vw;
+  }
 }
 @media only screen and (max-width: 1200px) {
   #gradient {
@@ -381,15 +387,12 @@ button:hover {
     font-size: 4vw;
     margin-top: 5vw;
   }
-  p {
-    font-size: 2vw;
-  }
   li {
-    font-size: 2vw;
     margin-top: 1vw;
   }
   p,
   li {
+    font-size: 2.4vw;
     width: 80%;
     margin-left: 5vw;
   }
@@ -402,10 +405,11 @@ button:hover {
     margin-left: 7vw;
   }
   .staffCon {
-    width: 40%;
+    margin: 1vw;
+    width: 46%;
   }
   .staffRole {
-    font-size: 1.8vw;
+    font-size: 2.8vw;
   }
   .container__box {
     width: 80vw;
@@ -417,14 +421,15 @@ button:hover {
   }
 }
 @media only screen and (max-width: 768px) {
+  li,
+  p {
+    font-size: 3vw;
+  }
   #gradient {
-    height: 200vw;
+    height: 130vw;
   }
   .staffRole {
-    font-size: 2vw;
-  }
-  .staffCon {
-    width:30%;
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -432,25 +437,31 @@ button:hover {
     width: 100%;
   }
   #gradient {
-    height: 220vw;
+    height: 155vw;
   }
   button {
     width: 26vw;
     margin-right: 3vw;
     margin-left: 3vw;
   }
-  .staffRole {
-    font-size: 2.8vw;
+  li,
+  p {
+    font-size: 3.7vw;
   }
-  .staffEmail{
-    font-size: 2vw;
+  .staffRole {
+    font-size: 5.7vw;
+  }
+  .caption {
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 450px) {
-  .staffEmail{
-    font-size: 2vw;
+  .caption {
+    font-size: 5vw;
   }
-  
+  .subtext {
+    font-size: 6vw;
+  }
   h1 {
     font-size: 4vw;
   }
@@ -462,10 +473,10 @@ button:hover {
   }
   p,
   li {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
   .staffRole {
-    font-size: 3.2vw;
+    font-size: 5.6vw;
   }
   button {
     width: 28vw;
@@ -474,20 +485,15 @@ button:hover {
   }
 }
 @media only screen and (max-width: 356px) {
-  #staffEmail{
-    font-size: 3.5vw;
-    height: 10vw;
-    vertical-align: text-top;
-  }
   h1 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   h2 {
-    font-size: 3.8vw;
+    font-size: 5vw;
   }
   p,
   li {
-    font-size: 3.5vw;
+    font-size: 5vw;
   }
   #gradient {
     height: 260vw;
@@ -498,7 +504,7 @@ button:hover {
     margin-left: 3vw;
   }
   .staffRole {
-    font-size: 3.7vw;
+    font-size: 5.7vw;
   }
 }
 </style>
