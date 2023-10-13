@@ -16,15 +16,15 @@
       <UpcomingEvents />
     </div>
     <div class="aboutUs">
-      <h3>About Us</h3>
-      <p>
+      <h3 class="subh">ABOUT US</h3>
+      <p class="text">
         The mission of Staten Island Tech’s PTA is to support our school through
         advocacy, volunteerism and fundraising. From our bake sales to our
         annual Spring Gala, we work diligently to raise money in order to
         financially support our school’s needs such as online and software
         services, facility upgrades and social events / celebrations.
       </p>
-      <p>
+      <p class="text">
         While Staten Island Tech provides a strong academic environment for our
         children, the school cannot do this alone. Participating with the PTA is
         vital to our students and school community. Please join our meeting each
@@ -81,9 +81,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 .arrow:hover {
   opacity: 100%;
 }
-p {
-  font-size: 18px;
-}
+
 .arrowContainer {
   position: absolute;
   width: 100%;
@@ -93,12 +91,11 @@ p {
   bottom: 40%;
 }
 .aboutUs {
-  color: var(--text-color);
-  font-family: var(--font-heading);
-  width: 50vw;
-  position: flex;
+  width: 83vw;
+  display: flex;
+  flex-direction: column;
   margin-left: 7vw;
-  margin-top: 17vw;
+  margin-top: 11vw;
 }
 .events {
   position: relative;
@@ -139,9 +136,18 @@ p {
     width: 20vw;
   }
 }
+@media screen and (max-width: 1024px) {
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 992px) {
   .aboutUs {
-    margin-top: -20vw;
+    margin-top: -18vw;
   }
   .events {
     position: relative;
