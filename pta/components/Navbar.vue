@@ -63,6 +63,25 @@
           Contact</NuxtLink
         >
       </div>
+            <div class="group">
+        <NuxtLink
+          to="/Gratitude"
+          id="gratitudeLink"
+          ref="gratitudeLink"
+          @click="(page = 'Gratitude'), underline()"
+          v-bind:style="
+            ({ animation: fadeIn }, { textDecoration: gratitudeLine })
+          "
+        >
+          <img
+            class="icon"
+            id="gratitude"
+            src="../components/icons/NavBar-Icons/heart.svg"
+            alt="dark brown icon of an envelope"
+          />
+          Gratitude</NuxtLink
+        >
+      </div>
       <div class="group">
         <NuxtLink
           to="/Donate"
@@ -96,6 +115,7 @@ export default {
       eventsLine: "transparent",
       contactLine: "transparent",
       donateLine: "transparent",
+      gratitudeLine: "transparent",
       fade: "fadeIn 5s;",
     };
   },
@@ -107,6 +127,7 @@ export default {
         this.homeLine = "underline var(--text-color) 0.2rem";
         this.eventsLine = "transparent";
         this.contactLine = "transparent";
+        this.gratitudeLine = "transparent";
         this.donateLine = "transparent";
       } else if (this.page === "Events") {
         console.log(this.page);
@@ -114,6 +135,7 @@ export default {
         this.homeLine = "transparent";
         this.eventsLine = "underline var(--text-color) 0.2rem";
         this.contactLine = "transparent";
+        this.gratitudeLine = "transparent";
         this.donateLine = "transparent";
       } else if (this.page === "ContactUs") {
         console.log(this.page);
@@ -121,13 +143,25 @@ export default {
         this.homeLine = "transparent";
         this.eventsLine = "transparent";
         this.contactLine = "underline var(--text-color) 0.2rem";
+        this.gratitudeLine = "transparent";
         this.donateLine = "transparent";
-      } else if (this.page === "Donate") {
+      } 
+      else if (this.page === "Gratitude") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
+        this.gratitudeLine = "underline var(--text-color) 0.2rem";
+        this.donateLine = "transparent";
+      } 
+      else if (this.page === "Donate") {
         console.log(this.page);
         this.fade = "fadeIn 10s;";
         this.homeLine = "transparent";
         this.eventsLine = "transparent";
         this.contactLine = "transparent";
+        this.gratitudeLine = "transparent";
         this.donateLine = "underline var(--text-color) 0.2rem";
       }
     },
