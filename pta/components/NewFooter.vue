@@ -87,12 +87,11 @@ button{
         font-family: "Kumbh Sans" ;
       border-radius: 0.5rem; 
       border: none;
-      width: 30%;
+      width: 33%;
       font-size: 1.2rem;
-margin-top: 2rem;
-padding: 6px;
+    margin-top: 2rem;
+    padding: 6px;
       font-weight: 450;
-
 }
 button:hover{
   cursor: pointer; 
@@ -161,7 +160,6 @@ h2{
     flex-direction: row;
     font-family: "Kumbh Sans" ;
     margin-top: 2rem;
-
 }
 img{
     width: 35%;
@@ -185,6 +183,337 @@ margin: auto;
   display: grid;
   grid-column-gap: 0px;
   margin-top: 5px;
-  width: 30%;
+  width: 35%;
+}
+
+@media screen and (max-width: 1400px) {
+    .container__footer{
+    margin-bottom: 3.4rem;
+}
+.sections{
+    width: 90%;
+
+}
+.link{
+    font-size: 1.1rem;
+}
+
+h2{
+     font-family: "Kumbh Sans" ;
+        color: #483221;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        margin-right: 0;
+        font-weight: 400;
+        margin-left: 0rem;
+}
+svg{
+    margin-top: 0.8rem;
+}
+.mission{
+    margin-top: 0;
+    width: 90%;
+    margin: 0;
+        margin-top: 0.4rem;
+        font-size: 0.9rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+
+}
+
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 32%;
+      font-size: 1rem;
+    margin-top: 1.4rem;
+    padding: 7px;
+      font-weight: 450;
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 0px;
+  margin-top: 5px;
+  width: 35%;
+}
+}
+
+@media screen and (max-width: 1200px) {
+    .container__footer{
+    margin-bottom: 3.5rem;
+}
+.sections{
+    width: 95%;
+}
+.link{
+    font-size: 1rem;
+}
+h3{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+h2{
+     font-family: "Kumbh Sans" ;
+        color: #483221;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+        margin-right: 0;
+        font-weight: 400;
+        margin-left: 0rem;
+}
+svg{
+    margin-top: 0.8rem;
+    width: 1.5rem;
+}
+.mission{
+    margin-top: 0;
+    width: 95%;
+    margin: 0;
+        margin-top: 0.4rem;
+        font-size: 0.9rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+
+}
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 32%;
+      font-size: 1rem;
+    margin-top: 1.2rem;
+    padding: 7px;
+      font-weight: 450;
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 0px;
+  margin-top: 5px;
+  width: 35%;
+}
+}
+@media screen and (max-width: 992px) {
+  .link{
+    font-size: 1rem;
+    
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 5px;
+  margin-top: 5px;
+  width: 50%;
+}
+    .container__footer{
+    margin-bottom: 3.5rem;
+}
+.sections{
+    width: 90%;
+
+}
+.link{
+    font-size: 1.1rem;
+}
+
+h2{
+     font-family: "Kumbh Sans" ;
+        color: #483221;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        margin-right: 0;
+        font-weight: 400;
+        margin-left: 0rem;
+}
+svg{
+    margin-top: 0.8rem;
+}
+.mission{
+    margin-top: 0;
+    width: 90%;
+    margin: 0;
+        margin-top: 0.4rem;
+        font-size: 0.9rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+
+}
+
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 32%;
+      font-size: 1rem;
+    margin-top: 1.4rem;
+    padding: 7px;
+      font-weight: 450;
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 0px;
+  margin-top: 5px;
+  width: 35%;
+}
+}
+
+@media screen and (max-width: 1200px) {
+    .container__footer{
+    margin-bottom: 3.5rem;
+}
+.sections{
+    width: 95%;
+}
+.link{
+    font-size: 0.8rem;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+h3{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+h2{
+     font-family: "Kumbh Sans" ;
+        color: #483221;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+        margin-right: 0;
+        font-weight: 400;
+        margin-left: 0rem;
+}
+svg{
+    margin-top: 0.8rem;
+    width: 1.5rem;
+}
+.mission{
+    margin-top: 0;
+    width: 98%;
+    margin: 0;
+        margin-top: 0.4rem;
+        font-size: 0.8rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+
+}
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 45%;
+      font-size: 0.9rem;
+    margin-top: 1.2rem;
+    padding: 6px;
+      font-weight: 450;
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 0px;
+  margin-top: 5px;
+  width: 50%;
+}
+}
+@media only screen and (max-width: 768px) {
+    
+    .container__footer{
+    margin-bottom: 3.5rem;
+}
+.sections{
+    width: 95%;
+}
+.link{
+    font-size: 0.7rem;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+h3{
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+    margin-left: 4px;
+}
+h2{
+     font-family: "Kumbh Sans" ;
+        color: #483221;
+        margin-top: 0.95rem;
+        font-size: 0.9rem;
+        margin-right: 0;
+        font-weight: 400;
+        margin-left: 0rem;
+}
+svg{
+    margin-top: 0.8rem;
+    width: 1.4rem;
+}
+.mission{
+    margin-top: 0;
+    width: 96%;
+    margin: 0;
+        margin-top: 0.3rem;
+        font-size: 0.7rem;
+}
+.about{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+
+}
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 45%;
+      font-size: 0.9rem;
+    margin-top: 1.2rem;
+    padding: 6px;
+      font-weight: 450;
+}
+.icons {
+  grid-template-columns: 1fr 1fr 1fr ;
+  overflow: hidden;
+  display: grid;
+  grid-column-gap: 0px;
+  margin-top: 4px;
+  width: 50%;
+}
+
+}
+@media only screen and (max-width: 576px) {
+
 }
 </style>
