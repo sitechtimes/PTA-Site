@@ -15,26 +15,6 @@
     <div class="events">
       <UpcomingEvents />
     </div>
-    <div class="aboutUs">
-      <h3 class="subh">ABOUT US</h3>
-      <p class="text paragraph">
-        The mission of Staten Island Tech’s PTA is to support our school through
-        advocacy, volunteerism and fundraising. From our bake sales to our
-        annual Spring Gala, we work diligently to raise money in order to
-        financially support our school’s needs such as online and software
-        services, facility upgrades and social events / celebrations.
-      </p>
-      <p class="text paragraph">
-        While Staten Island Tech provides a strong academic environment for our
-        children, the school cannot do this alone. Participating with the PTA is
-        vital to our students and school community. Please join our meeting each
-        month to learn about the ongoing activities and events that help make
-        our school a success. Also,<b>
-          please support our school with our suggested donations towards PTA
-          dues. No amount is too small or too great</b
-        >.
-      </p>
-    </div>
   </div>
 </template>
 <script>
@@ -90,42 +70,18 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   align-items: center;
   bottom: 40%;
 }
-.aboutUs {
-  width: 83vw;
-  display: flex;
-  flex-direction: column;
-  margin-left: 7vw;
-  margin-top: 15vw;
-}
 .events {
   position: relative;
   left: 57%;
   top: 17%;
   width: 37vw;
 }
-.paragraph {
-  margin-bottom: 1.5vw;
-}
-
 @media screen and (max-width: 1600px) {
-  .aboutUs {
-    margin-top: 12vw;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .aboutUs {
-    width: 80vw;
-  }
   p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .aboutUs {
-    margin-left: 8vw;
-    margin-top: 7vw;
-    width: 85vw;
-  }
   p {
     font-size: 16px;
   }
@@ -140,18 +96,8 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
 }
 @media screen and (max-width: 1024px) {
-  .aboutUs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
 }
 @media screen and (max-width: 992px) {
-  .aboutUs {
-    margin-top: -18vw;
-  }
   .events {
     position: relative;
     left: 56%;
@@ -164,19 +110,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 3%;
   }
 }
-@media screen and (max-width: 768px) {
-  p {
-    font-size: 14px;
-  }
 
-  h3 {
-    font-size: 17px;
-  }
-  .aboutUs {
-    margin-top: -20vw;
-    margin-left: 9vw;
-  }
-}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   #homeTopText {
     transform: translate(-50%, 1vw);
@@ -222,16 +156,8 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     left: 0%;
     width: 100%;
   }
-  .aboutUs {
-    margin-top: 8rem;
-    margin-left: 12vw;
-    width: 75vw;
-  }
 }
 @media only screen and (max-width: 450px) {
-  .aboutUs {
-    margin-top: 10rem;
-  }
   #homeTopText {
     top: 6%;
     left: 47.4%;
@@ -250,10 +176,6 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   }
   p {
     font-size: 4.72vw;
-  }
-  .aboutUs {
-    margin-left: 14vw;
-    margin-top: 55vw;
   }
 }
 @media only screen and (max-width: 280px) and (orientation: portrait) {
