@@ -123,7 +123,7 @@ img {
 }
 
 #section__MiddleSection {
-  margin-top: 8rem;
+  margin-top: 13rem;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -149,7 +149,7 @@ img {
 }
 @media only screen and (max-width: 1600px) {
   #section__MiddleSection {
-    margin-top: 10rem;
+    margin-top: 14rem;
   }
 }
 @media only screen and (max-width: 1400px) {
@@ -213,7 +213,7 @@ img {
     font-size: 3vw;
   }
   #section__MiddleSection {
-    margin-top: 12rem;
+    margin-top: 14rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -222,7 +222,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 16rem;
+    margin-top: 21rem;
   }
   .information {
     width: 80%;
@@ -249,16 +249,22 @@ img {
     width: 80vw;
   }
   #section__MiddleSection {
-    margin-top: 34rem;
+    margin-top: 28rem;
   }
 }
+
 @media only screen and (max-width: 356px) {
   img {
     width: 4vw;
     height: 4vw;
   }
   #section__MiddleSection {
-    margin-top: 30rem;
+    margin-top: 40rem;
+  }
+}
+@media only screen and (max-width: 248px) {
+  #section__MiddleSection {
+    margin-top: 50rem;
   }
 }
 </style>
