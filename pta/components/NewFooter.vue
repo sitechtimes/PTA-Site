@@ -577,4 +577,13 @@ button{
       font-weight: 450;
 }
 }
+@media only screen and (max-width: 375px){
+    h2{
+        margin-top: 4px;
+    }
+    svg{
+        margin-top: 2px;
+        width: 1.3rem;
+    }
+}
 </style>
