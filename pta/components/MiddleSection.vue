@@ -1,25 +1,5 @@
 <template>
   <section id="section__MiddleSection">
-    <div class="aboutUs">
-      <h3 class="subh">ABOUT US</h3>
-      <p class="text paragraph">
-        The mission of Staten Island Tech’s PTA is to support our school through
-        advocacy, volunteerism and fundraising. From our bake sales to our
-        annual Spring Gala, we work diligently to raise money in order to
-        financially support our school’s needs such as online and software
-        services, facility upgrades and social events / celebrations.
-      </p>
-      <p class="text paragraph">
-        While Staten Island Tech provides a strong academic environment for our
-        children, the school cannot do this alone. Participating with the PTA is
-        vital to our students and school community. Please join our meeting each
-        month to learn about the ongoing activities and events that help make
-        our school a success. Also,<b>
-          please support our school with our suggested donations towards PTA
-          dues. No amount is too small or too great</b
-        >.
-      </p>
-    </div>
     <div class="information">
       <div id="activities">
         <h2 ref="activities" class="subh">ACTIVITIES</h2>
@@ -143,25 +123,14 @@ img {
 }
 
 #section__MiddleSection {
-  margin-top: 13rem;
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 5rem;
 }
 
-.paragraph {
-  margin-bottom: 1.5vw;
-}
-
-.aboutUs {
-  width: 83vw;
-  display: flex;
-  flex-direction: column;
-  margin-left: 7vw;
-  margin-top: 15vw;
-}
 .information {
   display: flex;
   flex-direction: column;
@@ -178,30 +147,16 @@ img {
   margin-right: 6.5rem;
   margin-bottom: 5vw;
 }
-@media only screen and (max-width: 1600px) {
-  #section__MiddleSection {
-    margin-top: 14rem;
-  }
 
-  .aboutUs {
-    width: 80vw;
-    margin-top: 12vw;
-  }
-}
 @media only screen and (max-width: 1400px) {
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 22rem;
-  }
+  } */
 }
 @media only screen and (max-width: 1200px) {
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 20rem;
-  }
-  .aboutUs {
-    margin-left: 8vw;
-    margin-top: 7vw;
-    width: 85vw;
-  }
+  } */
 }
 @media only screen and (max-width: 1024px) {
   #section__MiddleSection {
@@ -209,14 +164,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20rem;
-  }
-  .aboutUs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+    /* margin-top: 20rem; */
   }
 
   .information {
@@ -253,25 +201,18 @@ img {
     height: 2vw;
   }
   #section__MiddleSection {
-    margin-top: 13rem;
-  }
-  .aboutUs {
-    margin-top: -18vw;
+    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 850px) {
   p {
     font-size: 3vw;
   }
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 14rem;
-  }
+  } */
 }
 @media screen and (max-width: 768px) {
-  .aboutUs {
-    margin-top: -20vw;
-    margin-left: 9vw;
-  }
 }
 @media only screen and (max-width: 576px) {
   #section__MiddleSection {
@@ -279,7 +220,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 21rem;
+    /* margin-top: 21rem; */
   }
   .information {
     width: 80%;
@@ -299,23 +240,15 @@ img {
     width: 3vw;
     height: 3vw;
   }
-  .aboutUs {
-    margin-top: 8rem;
-    margin-left: 12vw;
-    width: 75vw;
-  }
 }
 
 @media only screen and (max-width: 450px) {
   #gallery {
     width: 80vw;
   }
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 28rem;
-  }
-  .aboutUs {
-    margin-top: 10rem;
-  }
+  } */
 }
 
 @media only screen and (max-width: 356px) {
@@ -323,17 +256,13 @@ img {
     width: 4vw;
     height: 4vw;
   }
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 40rem;
-  }
-  .aboutUs {
-    margin-left: 14vw;
-    margin-top: 55vw;
-  }
+  } */
 }
 @media only screen and (max-width: 248px) {
-  #section__MiddleSection {
+  /* #section__MiddleSection {
     margin-top: 50rem;
-  }
+  } */
 }
 </style>

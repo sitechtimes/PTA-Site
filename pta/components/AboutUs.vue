@@ -1,7 +1,109 @@
 <template>
-  <section class="section_AboutUs"></section>
+  <section class="section_AboutUs">
+    <div class="aboutUs">
+      <h3 class="subh">ABOUT US</h3>
+      <p class="text paragraph">
+        The mission of Staten Island Tech’s PTA is to support our school through
+        advocacy, volunteerism and fundraising. From our bake sales to our
+        annual Spring Gala, we work diligently to raise money in order to
+        financially support our school’s needs such as online and software
+        services, facility upgrades and social events / celebrations.
+      </p>
+      <p class="text paragraph">
+        While Staten Island Tech provides a strong academic environment for our
+        children, the school cannot do this alone. Participating with the PTA is
+        vital to our students and school community. Please join our meeting each
+        month to learn about the ongoing activities and events that help make
+        our school a success. Also,<b>
+          please support our school with our suggested donations towards PTA
+          dues. No amount is too small or too great</b
+        >.
+      </p>
+    </div>
+  </section>
 </template>
 
 <script></script>
 
-<style scoped></style>
+<style scoped>
+@import "../assets/base.css";
+.paragraph {
+  margin-bottom: 1.5vw;
+}
+
+.aboutUs {
+  width: 83vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 6.5vw;
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutUs {
+    width: 75vw;
+    margin-left: 45%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .aboutUs {
+    margin-left: 8vw;
+
+    width: 85vw;
+  }
+}
+/* @media only screen and (max-width: 1600px) {
+  .aboutUs {
+    width: 80vw;
+    margin-top: 12vw;
+  }
+}
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1200px) {
+  .aboutUs {
+    margin-left: 8vw;
+    margin-top: 7vw;
+    width: 85vw;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .aboutUs {
+    margin-top: -18vw;
+  }
+}
+@media only screen and (max-width: 850px) {
+}
+@media screen and (max-width: 768px) {
+  .aboutUs {
+    margin-top: -20vw;
+    margin-left: 9vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .aboutUs {
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .aboutUs {
+    margin-left: 14vw;
+    margin-top: 55vw;
+  }
+}
+@media only screen and (max-width: 248px) {
+  #section__MiddleSection {
+    margin-top: 50rem;
+  }
+} */
+</style>

@@ -238,9 +238,8 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100vw;
-    height: 70vw;
+    height: 49vw;
     margin: 0;
-
     padding: 0%;
     position: absolute;
     top: 0%;
@@ -280,7 +279,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 60vw;
+    height: 49vw;
     margin: 0;
     padding: 0%;
     position: absolute;
