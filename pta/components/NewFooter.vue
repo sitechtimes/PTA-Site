@@ -206,6 +206,7 @@ h2{
         margin-right: 0;
         font-weight: 400;
         margin-left: 0rem;
+                width: 85%;
 }
 svg{
     margin-top: 0.8rem;
@@ -447,7 +448,9 @@ button{
 }
 }
 @media only screen and (max-width: 768px) {
-    
+    .email{
+        margin-top: 0;
+    }
     .container__footer{
     margin-bottom: 3.5rem;
 }
@@ -482,7 +485,7 @@ svg{
     width: 96%;
     margin: 0;
         margin-top: 0.3rem;
-        font-size: 0.7rem;
+        font-size: 0.725rem;
 }
 .about{
     font-weight: bold;
@@ -514,6 +517,64 @@ button{
 
 }
 @media only screen and (max-width: 576px) {
-
+.sections {
+    display: flex;
+flex-direction: column;
+  overflow: hidden;
+margin: auto;
+  grid-column-gap: 10px;
+  margin-top: 5px;
+  width: 85%;
+}
+    .container__footer{
+    margin-bottom: 2.5rem;
+}
+.pages{
+    margin-top: 1rem;
+}
+img{
+    width: 30%;
+}
+.link{
+    font-size: .8rem;
+    margin-top: 2px;
+    font-weight: 500;
+}
+h2{
+    margin-top: 4px;
+    width: 100%;
+}
+.icons{
+margin-bottom: 1rem;
+margin-top: 0.5rem;
+}
+svg{
+    margin-top: 0rem;
+    width: 1.25rem;
+}
+.address{
+        display: flex;
+    margin-top: 0.8rem;
+    flex-direction: row;
+}
+.email{
+    margin-top: .8rem;
+}
+.mission{
+    font-size: .8rem;
+}
+button{
+      fill: white;
+      color: white;
+      background:#483221 ;
+        font-family: "Kumbh Sans" ;
+      border-radius: 0.5rem; 
+      border: none;
+      width: 40%;
+      font-size: 0.9rem;
+    margin-top: 1.2rem;
+    padding: 6px;
+      font-weight: 450;
+}
 }
 </style>
