@@ -1,5 +1,5 @@
 <template>
-  <section class="section_AboutUs">
+  <section id="section_AboutUs">
     <div class="aboutUs">
       <h3 class="subh">ABOUT US</h3>
       <p class="text paragraph">
@@ -23,7 +23,35 @@
   </section>
 </template>
 
-<script></script>
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+export default {
+  data() {},
+  methods: {
+    scrollActivities() {
+      gsap.to({
+        ScrollTrigger: {
+          trigger: ".aboutUs",
+          start: "top top",
+          end: "bottom top",
+        },
+      });
+    },
+  },
+  mounted() {
+    console.log("mount");
+    gsap.from("#section_AboutUs", {
+      scrollTrigger: "#section_AboutUs",
+      delay: 0.2,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+  },
+};
+</script>
 
 <style scoped>
 @import "../assets/base.css";
