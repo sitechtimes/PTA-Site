@@ -106,7 +106,7 @@
       </div>
     </div>
     <div id="footer">
-      <Footer />
+      <NewFooter />
     </div>
   </div>
 </template>
