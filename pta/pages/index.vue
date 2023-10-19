@@ -69,7 +69,7 @@ onUnmounted(() => {
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-  height: 45vw;
+  height: 40vw;
   width: 60%;
 }
 
@@ -98,7 +98,7 @@ onUnmounted(() => {
 }
 @media only screen and (max-width: 576px) {
   .div1 {
-    height: 145vw;
+    height: 125vw;
   }
 }
 @media only screen and (max-width: 576px) and (orientation: landscape) {
@@ -108,12 +108,12 @@ onUnmounted(() => {
 }
 @media only screen and (max-width: 450px) {
   .div1 {
-    height: 165vw;
+    height: 135vw;
   }
 }
 @media only screen and (max-width: 356px) {
   .div1 {
-    height: 160vw;
+    height: 150vw;
   }
 }
 </style>

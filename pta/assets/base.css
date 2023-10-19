@@ -369,7 +369,7 @@ h4 {
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 161vw;
+    height: 142vw;
     margin: 0;
     padding: 0%;
     position: absolute;
@@ -414,7 +414,7 @@ h4 {
 }
 @media only screen and (max-width: 450px) {
   #homeTopCon {
-    height: 190vw;
+    height: 160vw;
   }
 }
 @media only screen and (max-width: 450px) {

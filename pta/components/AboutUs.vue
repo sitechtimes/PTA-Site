@@ -38,17 +38,16 @@
   margin-left: 6.5vw;
 }
 
-@media only screen and (max-width: 576px) {
-  .aboutUs {
-    width: 75vw;
-    margin-left: 45%;
-  }
-}
 @media only screen and (max-width: 1200px) {
   .aboutUs {
     margin-left: 8vw;
-
     width: 85vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .aboutUs {
+    width: 75vw;
+    margin-left: 12%;
   }
 }
 /* @media only screen and (max-width: 1600px) {
