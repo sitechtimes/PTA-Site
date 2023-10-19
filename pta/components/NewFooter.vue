@@ -553,14 +553,16 @@ h2{
 .icons{
 margin-bottom: 1rem;
 margin-top: 0.5rem;
+    width: 40%;
 }
 svg{
     margin-top: 0rem;
     width: 1.25rem;
+
 }
 .address{
         display: flex;
-    margin-top: 0.8rem;
+    margin-top: 0.6rem;
     flex-direction: row;
 }
 .email{
@@ -591,5 +593,14 @@ button{
         margin-top: 2px;
         width: 1.3rem;
     }
+    .email{
+    margin-top: .4rem;
+    }
+    .address{
+        margin-top: .4rem;
+    }
+.icons{
+    margin-top: .2rem;
+}
 }
 </style>
