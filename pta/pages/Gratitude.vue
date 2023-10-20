@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="gradient">
-      <div class="topComponent">
+      <section class="topComponent">
         <div class="leftComponent">
           <h1 class="heading" ref="heading">Wall of Gratitude</h1>
           <div class="thanks">
@@ -22,17 +22,23 @@
         <div class="archive">
           <h3>Archive</h3>
           <div class="years">
-            <div class="yearArchive"><h4>2023</h4></div>
-            <div class="yearArchive"><h4>2022</h4></div>
-            <div class="yearArchive"><h4>2021</h4></div>
-            <div class="yearArchive"><h4>2020</h4></div>
-            <div class="yearArchive"><h4>2019</h4></div>
-            <div class="yearArchive"><h4>2018</h4></div>
-            <div class="yearArchive"><h4>2017</h4></div>
-            <div class="yearArchive"><h4>2016</h4></div>
+            <div class="year"><h4>2023</h4></div>
+            <div class="year"><h4>2022</h4></div>
+            <div class="year"><h4>2021</h4></div>
+            <div class="year"><h4>2020</h4></div>
+            <div class="year"><h4>2019</h4></div>
+            <div class="year"><h4>2018</h4></div>
+            <div class="year"><h4>2017</h4></div>
+            <div class="year"><h4>2016</h4></div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="bottomComponent">
+        <h5>― •2023• ―</h5>
+        <div class="donationArray">
+          <div class="donationComponent"></div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -95,8 +101,8 @@ export default {
 }
 .archive {
   margin: 4% 0 0 5%;
-  width: 300px;
-  height: 500px;
+  width: 19rem;
+  height: 33rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   color: #483221;
@@ -108,7 +114,7 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.yearArchive {
+.year {
   margin: 5px;
   width: 16rem;
   height: 4rem;
@@ -118,5 +124,22 @@ export default {
 h3 {
   font-size: 3rem;
   margin: 1rem 0;
+}
+h4 {
+  font-size: 1.4rem;
+  margin: 7%;
+}
+.bottomComponent {
+  margin-top: 5rem;
+  color: #483221;
+  text-align: center;
+}
+h5 {
+  margin: auto;
+  font-size: 3rem;
+}
+.donationArray {
+}
+.donationComponent {
 }
 </style>
