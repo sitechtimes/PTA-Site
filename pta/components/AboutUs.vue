@@ -44,7 +44,7 @@ export default {
     console.log("mount");
     gsap.from("#section_AboutUs", {
       scrollTrigger: "#section_AboutUs",
-      delay: 0.2,
+      delay: 0.8,
       duration: 1,
       x: -600,
       opacity: 0,
