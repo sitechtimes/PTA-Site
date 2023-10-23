@@ -1,5 +1,5 @@
 <template>
-  <section id="section_AboutUs">
+  <section class="section_AboutUs">
     <div class="aboutUs">
       <h3 class="subh">ABOUT US</h3>
       <p class="text paragraph">
