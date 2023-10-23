@@ -37,6 +37,15 @@
         <h5>― •2023• ―</h5>
         <div class="donationArray">
           <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
         </div>
       </section>
     </div>
@@ -55,7 +64,7 @@ export default {
 <style scoped>
 #gradient {
   width: 100%;
-  height: 150vh;
+
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -130,6 +139,7 @@ h4 {
   margin: 7%;
 }
 .bottomComponent {
+  font-family: "Kumbh Sans", san serif;
   margin-top: 5rem;
   color: #483221;
   text-align: center;
@@ -139,7 +149,19 @@ h5 {
   font-size: 3rem;
 }
 .donationArray {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 }
 .donationComponent {
+  border-radius: 15px;
+  border: #483221 solid 3px;
+  width: 18rem;
+  height: 21rem;
+  margin: 15px 0;
 }
 </style>
