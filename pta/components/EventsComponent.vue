@@ -18,7 +18,11 @@
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <p class="text" id="body">Event sign up link : <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link">Volunteer Form</a> </p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
+        target="_blank"
+        ><button id="reg">Register</button></a
+      >
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
@@ -173,6 +177,21 @@ ul {
   /* flex-direction: row;
   align-self: flex-end; */
 }
+#reg {
+  background-color: var(--text-color);
+  border-radius: 0.8rem;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  margin-top: 1.5rem;
+  color: white;
+  font-family: "Karla", san serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#reg:hover {
+  background-color: var(--darker-brown);
+  transition: 0.4s ease;
+}
 #head {
   position: absolute;
   top: 70vw;
@@ -210,9 +229,6 @@ li {
   /* margin-top: -2vw; */
 }
 @media only screen and (max-width: 1400px) {
-  #gradient {
-    height: 140vh;
-  }
   #calendar {
     width: 80%;
     height: 25%;
@@ -221,6 +237,9 @@ li {
 }
 
 @media screen and (max-width: 1200px) {
+  #reg {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -229,6 +248,9 @@ li {
   }
   ul {
     height: 33vw;
+  }
+  #reg {
+    font-size: 0.9rem;
   }
 }
 
@@ -271,6 +293,12 @@ li {
   }
   .listDate {
     width: 20vw;
+  }
+  #reg {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.7rem;
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
   }
   #calender {
     width: 80%;

@@ -123,12 +123,12 @@ img {
 }
 
 #section__MiddleSection {
-  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .information {
@@ -148,13 +148,23 @@ img {
   margin-bottom: 5vw;
 }
 
+@media only screen and (max-width: 1400px) {
+  /* #section__MiddleSection {
+    margin-top: 22rem;
+  } */
+}
+@media only screen and (max-width: 1200px) {
+  /* #section__MiddleSection {
+    margin-top: 20rem;
+  } */
+}
 @media only screen and (max-width: 1024px) {
   #section__MiddleSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    /* margin-top: 20rem; */
   }
 
   .information {
@@ -190,11 +200,19 @@ img {
     width: 2vw;
     height: 2vw;
   }
+  #section__MiddleSection {
+    margin-top: 2rem;
+  }
 }
 @media only screen and (max-width: 850px) {
   p {
     font-size: 3vw;
   }
+  /* #section__MiddleSection {
+    margin-top: 14rem;
+  } */
+}
+@media screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 576px) {
   #section__MiddleSection {
@@ -202,9 +220,8 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    /* margin-top: 21rem; */
   }
-
   .information {
     width: 80%;
   }
@@ -213,7 +230,6 @@ img {
     display: flex;
     justify-content: center;
   }
-
   p,
   h2,
   h3 {
@@ -225,15 +241,28 @@ img {
     height: 3vw;
   }
 }
+
 @media only screen and (max-width: 450px) {
   #gallery {
     width: 80vw;
   }
+  /* #section__MiddleSection {
+    margin-top: 28rem;
+  } */
 }
+
 @media only screen and (max-width: 356px) {
   img {
     width: 4vw;
     height: 4vw;
   }
+  /* #section__MiddleSection {
+    margin-top: 40rem;
+  } */
+}
+@media only screen and (max-width: 248px) {
+  /* #section__MiddleSection {
+    margin-top: 50rem;
+  } */
 }
 </style>

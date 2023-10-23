@@ -11,6 +11,7 @@
   --text-color: #483221;
   --primary-bg: #fff;
   --secondary-bg: #fce5ac;
+  --darker-brown: #312217;
   --bg-gradient: linear-gradient(
     180deg,
     #feb89a 0%,
@@ -259,6 +260,7 @@ h4 {
     font-size: 2vw;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   #navbar {
     height: 7rem;
@@ -301,6 +303,7 @@ h4 {
     margin-top: 3.3rem;
   }
 }
+
 @media only screen and (max-width: 992px) {
   #navbar {
     height: 5.2rem;
@@ -355,6 +358,29 @@ h4 {
   }
 }
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+  #naV {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #homeTopCon {
+    background: var(--bg-gradient);
+    width: 100%;
+    height: 142vw;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  .menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   #navbar {
     height: 5.6rem;
   }
@@ -384,6 +410,11 @@ h4 {
 @media only screen and (max-width: 576px) and (orientation: landscape) {
   .subh {
     font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #homeTopCon {
+    height: 160vw;
   }
 }
 @media only screen and (max-width: 450px) {
