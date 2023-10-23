@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div id="gradient">
+    <div id="gradient"></div>
+    <div>
       <section class="topComponent">
         <div class="leftComponent">
           <h1 class="heading" ref="heading">Wall of Gratitude</h1>
@@ -35,7 +36,13 @@
       </section>
       <section class="bottomComponent">
         <h5>― •2023• ―</h5>
+        <div class="donationGradient"></div>
         <div class="donationArray">
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
+          <div class="donationComponent"></div>
           <div class="donationComponent"></div>
           <div class="donationComponent"></div>
           <div class="donationComponent"></div>
@@ -49,6 +56,8 @@
         </div>
       </section>
     </div>
+
+    <NewFooter />
   </div>
 </template>
 
@@ -68,6 +77,8 @@ export default {
   position: absolute;
   top: 0%;
   left: 0%;
+  height: 80rem;
+  z-index: -5;
   background: linear-gradient(
     180deg,
     #feb89a 0%,
@@ -82,7 +93,7 @@ export default {
 .topComponent {
   display: flex;
   flex-direction: row;
-  margin: 8% 0 0 8%;
+  margin: 0 0 0 8%;
 }
 .heading {
   font-family: "Kumbh Sans", san serif;
@@ -155,6 +166,20 @@ h5 {
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
+  margin-bottom: 8rem;
+  height: 47rem;
+}
+.donationGradient {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+
+    rgb(255, 255, 255) 100%
+  );
+  width: 92vw;
+  margin-top: 30rem;
+  height: 20rem;
 }
 .donationComponent {
   border-radius: 15px;
