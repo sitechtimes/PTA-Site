@@ -61,6 +61,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 .arrow:hover {
   opacity: 100%;
 }
+
 .arrowContainer {
   position: absolute;
   width: 100%;
@@ -69,15 +70,21 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   align-items: center;
   bottom: 40%;
 }
-
 .events {
   position: relative;
   left: 57%;
   top: 17%;
   width: 37vw;
 }
-
+@media screen and (max-width: 1600px) {
+  p {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 1200px) {
+  p {
+    font-size: 16px;
+  }
   .events {
     margin: 0;
     display: flex;
@@ -87,6 +94,8 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 12%;
     width: 20vw;
   }
+}
+@media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 992px) {
   .events {
@@ -101,6 +110,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 3%;
   }
 }
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
   #homeTopText {
     transform: translate(-50%, 1vw);
@@ -152,11 +162,34 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 6%;
     left: 47.4%;
   }
+  p {
+    font-size: 3.5vw;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 356px) {
   #homeTopText {
     top: 8%;
     left: 50%;
+  }
+  p {
+    font-size: 4.72vw;
+  }
+}
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  p {
+    font-size: 4.72vw;
+  }
+  .aboutUs {
+    margin-left: 14vw;
+    margin-top: 15rem;
+  }
+}
+@media only screen and (max-width: 220px) and (orientation: portrait) {
+  p {
+    font-size: 5.3vw;
   }
 }
 @media screen and (min-width: 576px) {
@@ -205,9 +238,8 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100vw;
-    height: 70vw;
+    height: 49vw;
     margin: 0;
-
     padding: 0%;
     position: absolute;
     top: 0%;
@@ -247,7 +279,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   #homeTopCon {
     background: var(--bg-gradient);
     width: 100%;
-    height: 60vw;
+    height: 49vw;
     margin: 0;
     padding: 0%;
     position: absolute;

@@ -11,8 +11,11 @@
           <HomePageScroll />
         </div>
       </div>
-      <div class="div2">
-        <MiddleSection />
+      <div class="div3">
+        <AboutUs />
+        <div class="div2">
+          <MiddleSection />
+        </div>
       </div>
     </div>
     <div id="footer">
@@ -67,7 +70,7 @@ onUnmounted(() => {
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-  height: 56vw;
+  height: 40vw;
   width: 60%;
 }
 
@@ -78,17 +81,15 @@ onUnmounted(() => {
 }
 @media screen and (max-width: 1400px) {
   .div1 {
-    height: 50vw;
   }
 }
 @media screen and (max-width: 1200px) {
   .div1 {
-    height: 45vw;
+    height: 35vw;
   }
 }
 @media screen and (max-width: 992px) {
   .div1 {
-    height: 50vw;
   }
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -98,7 +99,7 @@ onUnmounted(() => {
 }
 @media only screen and (max-width: 576px) {
   .div1 {
-    height: 145vw;
+    height: 125vw;
   }
 }
 @media only screen and (max-width: 576px) and (orientation: landscape) {
@@ -108,12 +109,12 @@ onUnmounted(() => {
 }
 @media only screen and (max-width: 450px) {
   .div1 {
-    height: 165vw;
+    height: 135vw;
   }
 }
 @media only screen and (max-width: 356px) {
   .div1 {
-    height: 175vw;
+    height: 150vw;
   }
 }
 </style>

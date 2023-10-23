@@ -229,9 +229,6 @@ li {
   /* margin-top: -2vw; */
 }
 @media only screen and (max-width: 1400px) {
-  #gradient {
-    height: 140vh;
-  }
   #calendar {
     width: 80%;
     height: 25%;
