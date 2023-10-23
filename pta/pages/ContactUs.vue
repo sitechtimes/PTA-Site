@@ -1,6 +1,29 @@
 <template>
   <div>
     <div id="gradient"></div>
+  <div id="popupscreen">
+    <div id="outside" @click="TogglePopup()"></div>
+    <div class="popup" ref="popup">
+      <div class="popup-inner">
+        <button class="popup-close" @click="TogglePopup()">✖</button>
+        <h2 class="messageh">Message from the Parent Coordinator</h2>
+        <h3 class="message">Welcome!
+
+As you may know, in 2003 the Chancellor created the position of Parent Coordinator in all of the public schools in New York City. One of my roles is to be your parent advocate here at Tech and to actively facilitate a strong and productive relationship between the parents and school. Additionally, welcoming parents to a warm and friendly learning environment will provide an arena to share academic concerns related to your child's education.
+Staying informed can help your family adjust to the high school experience. Many challenges take place during these four years and will no doubt impact your lives and influence behavior. The Tech family is here to assist you in any way possible. Please utilize the resources available to help you in the process.
+As you come into the building I am making a point to greet you and check to see that your concerns are being addressed to your satisfaction. Please feel free to stop by and share what's on your mind. I look forward to meeting with you!
+For the children,
+</h3>
+<h3 class="message">
+
+Barbara Malenfant</h3>
+<h3 class="c">“No Parent Left Behind”</h3>
+<h3 class="c">718-667-3222 
+</h3>
+<h3 class="c">bmalenfant@schools.nyc.gov</h3>
+      </div>
+    </div>
+  </div>
     <div>
       <h1 class="heading">CONTACTS</h1>
     </div>
@@ -114,6 +137,11 @@
 <script>
 import { gsap } from "gsap";
 export default {
+   props: ["TogglePopup"],
+  mounted() {
+    let tl = gsap.timeline();
+    tl.from(".popup", { scale: 0.3, duration: 0.4 });
+  },
   data() {
     return {
       staff: Array,
@@ -181,6 +209,70 @@ export default {
 
 <style scoped>
 @import url(../assets/base.css);
+.popup-inner{
+  margin-left: 0;
+}
+.message{
+  font-weight: lighter;
+  font-size: 1.5rem;
+  width: 95%;
+    margin: 3% 0 0 0%;
+}
+.c{
+  font-weight: lighter;
+  font-size: 1.5rem;
+  width: 90%;
+    margin: 0% 0 0 0%;
+}
+.messageh{
+      margin: 0% 0 0 0%;
+}
+#outside {
+  background: transparent;
+  height: 100vh;
+  width: 100vw;
+}
+.popup-close {
+  border: none;
+  font-weight: bold;
+  right: 1vw;
+  background: transparent;
+  position: fixed;
+  top: 0%;
+  font-size: 2vw;
+  cursor: pointer;
+}
+#popupscreen {
+  width: 100vw;
+  height: auto;
+  background-color: #0000003f;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+}
+.popup {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 3rem;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-family: var(--font-text);
+  border-radius: 1.5vw;
+  font-size: 1vw;
+  width: 55vw;
+}
+button {
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.7;
+}
+
 #join {
   padding-bottom: 10vw;
 }
