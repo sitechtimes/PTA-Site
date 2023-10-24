@@ -138,10 +138,6 @@ Barbara Malenfant</h3>
 import { gsap } from "gsap";
 export default {
    props: ["TogglePopup"],
-  mounted() {
-    let tl = gsap.timeline();
-    tl.from(".popup", { scale: 0.3, duration: 0.4 });
-  },
   data() {
     return {
       staff: Array,
@@ -152,7 +148,6 @@ export default {
       slt: Array,
     };
   },
-
   methods: {
     async getStaff() {
       const query = queryContent("/staff").sort({ roles: 1 }).find();
@@ -185,7 +180,10 @@ export default {
       }
     },
   },
+  
   mounted() {
+        let tl = gsap.timeline();
+    tl.from(".popup", { scale: 0.3, duration: 0.4 });
     gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
     gsap.from(".cal", 1, { x: 1000 }, "<0.5");
 
@@ -204,28 +202,37 @@ export default {
       opacity: 0,
     });
   },
+  
 };
 </script>
 
 <style scoped>
 @import url(../assets/base.css);
+#outside {
+  background: transparent;
+  height: 100vh;
+  width: 100vw;
+}
 .popup-inner{
   margin-left: 0;
 }
 .message{
-  font-weight: lighter;
+  font-weight: 350
+  ;
   font-size: 1.5rem;
   width: 95%;
     margin: 3% 0 0 0%;
 }
 .c{
-  font-weight: lighter;
+  font-weight: 350
+  ;
   font-size: 1.5rem;
   width: 90%;
     margin: 0% 0 0 0%;
 }
 .messageh{
       margin: 0% 0 0 0%;
+      
 }
 #outside {
   background: transparent;
@@ -235,12 +242,15 @@ export default {
 .popup-close {
   border: none;
   font-weight: bold;
-  right: 1vw;
+left: 70%;
   background: transparent;
   position: fixed;
   top: 0%;
   font-size: 2vw;
   cursor: pointer;
+}
+.popup-close:hover{
+  background: transparent;
 }
 #popupscreen {
   width: 100vw;

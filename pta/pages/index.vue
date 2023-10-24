@@ -65,13 +65,14 @@ onUnmounted(() => {
 }
 .parent {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   height: 40vw;
   width: 60%;
+
 }
 
 .div2 {
