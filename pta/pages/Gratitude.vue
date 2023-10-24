@@ -38,21 +38,34 @@
         <h5>― •2023• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
-          <div class="donationComponent"></div>
+          <div class="donationComponent">
+            <div class="gratitudeImg"><img src="" alt="some img" /></div>
+            <div>
+              <h4>name:</h4>
+              <h7>Message of Thanks</h7>
+            </div>
+          </div>
+          <div class="donationComponent">
+            <div class="gratitudeImg"><img src="" alt="some img" /></div>
+            <div>
+              <h4>name:</h4>
+              <h7>Message of Thanks</h7>
+            </div>
+          </div>
+          <div class="donationComponent">
+            <div class="gratitudeImg"><img src="" alt="some img" /></div>
+            <div>
+              <h4>name:</h4>
+              <h7>Message of Thanks</h7>
+            </div>
+          </div>
+          <div class="donationComponent">
+            <div class="gratitudeImg"><img src="" alt="some img" /></div>
+            <div>
+              <h4>name:</h4>
+              <h7>Message of Thanks</h7>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -182,10 +195,15 @@ h5 {
   height: 20rem;
 }
 .donationComponent {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gratitudeImg {
   border-radius: 15px;
   border: #483221 solid 3px;
   width: 18rem;
   height: 21rem;
-  margin: 15px 0;
 }
 </style>
