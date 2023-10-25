@@ -24,14 +24,14 @@
           <h3>Archive</h3>
           <div class="yearsContainer">
             <div class="years">
-              <div class="year"><h4>2023</h4></div>
-              <div class="year"><h4>2022</h4></div>
-              <div class="year"><h4>2021</h4></div>
-              <div class="year"><h4>2020</h4></div>
-              <div class="year"><h4>2019</h4></div>
-              <div class="year"><h4>2018</h4></div>
-              <div class="year"><h4>2017</h4></div>
-              <div class="year"><h4>2016</h4></div>
+              <div
+                class="year"
+                v-for="item in gratitudeArr"
+                @click="changeYr"
+                :key="item"
+              >
+                <h4>{{ item.year }}</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -68,6 +68,9 @@ export default {
   mounted() {
     const { heading } = this.$refs;
     gsap.from(heading, { delay: 0, duration: 1, y: 100, opacity: 0 });
+  },
+  data() {
+    return { gratitudeArr: [{ name: "Cool Paren 1", year: "2023" }] };
   },
 };
 </script>
