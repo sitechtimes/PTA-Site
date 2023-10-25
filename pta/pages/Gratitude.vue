@@ -47,6 +47,13 @@
               <h7>Message of Thanks</h7>
             </div>
           </div>
+          <div class="donationComponent">
+            <div class="gratitudeImg"></div>
+            <div>
+              <h6>Cool Parent</h6>
+              <h7>Message of Thanks</h7>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -187,8 +194,8 @@ h5 {
     rgb(255, 255, 255) 100%
   );
   width: 92vw;
-  margin-top: 30rem;
-  height: 20rem;
+  margin-top: 40rem;
+  height: 10rem;
 }
 .donationComponent {
   margin: 15px 0;
