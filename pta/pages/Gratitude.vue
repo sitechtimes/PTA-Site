@@ -22,15 +22,17 @@
         <div class="image"></div>
         <div class="archive">
           <h3>Archive</h3>
-          <div class="years">
-            <div class="year"><h4>2023</h4></div>
-            <div class="year"><h4>2022</h4></div>
-            <div class="year"><h4>2021</h4></div>
-            <div class="year"><h4>2020</h4></div>
-            <div class="year"><h4>2019</h4></div>
-            <div class="year"><h4>2018</h4></div>
-            <div class="year"><h4>2017</h4></div>
-            <div class="year"><h4>2016</h4></div>
+          <div class="yearsContainer">
+            <div class="years">
+              <div class="year"><h4>2023</h4></div>
+              <div class="year"><h4>2022</h4></div>
+              <div class="year"><h4>2021</h4></div>
+              <div class="year"><h4>2020</h4></div>
+              <div class="year"><h4>2019</h4></div>
+              <div class="year"><h4>2018</h4></div>
+              <div class="year"><h4>2017</h4></div>
+              <div class="year"><h4>2016</h4></div>
+            </div>
           </div>
         </div>
       </section>
@@ -39,30 +41,9 @@
         <div class="donationGradient"></div>
         <div class="donationArray">
           <div class="donationComponent">
-            <div class="gratitudeImg"><img src="" alt="some img" /></div>
+            <div class="gratitudeImg"></div>
             <div>
-              <h4>name:</h4>
-              <h7>Message of Thanks</h7>
-            </div>
-          </div>
-          <div class="donationComponent">
-            <div class="gratitudeImg"><img src="" alt="some img" /></div>
-            <div>
-              <h4>name:</h4>
-              <h7>Message of Thanks</h7>
-            </div>
-          </div>
-          <div class="donationComponent">
-            <div class="gratitudeImg"><img src="" alt="some img" /></div>
-            <div>
-              <h4>name:</h4>
-              <h7>Message of Thanks</h7>
-            </div>
-          </div>
-          <div class="donationComponent">
-            <div class="gratitudeImg"><img src="" alt="some img" /></div>
-            <div>
-              <h4>name:</h4>
+              <h6>Cool Parent</h6>
               <h7>Message of Thanks</h7>
             </div>
           </div>
@@ -139,12 +120,15 @@ export default {
   font-weight: 800;
   color: #483221;
   text-align: center;
-  overflow-y: scroll;
 }
 .years {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 33rem;
+}
+.yearsContainer {
+  overflow-y: scroll;
 }
 .year {
   margin: 5px;
@@ -152,6 +136,12 @@ export default {
   height: 4rem;
   background-color: #fcf6e9;
   border-radius: 20px;
+  transition: 0.5s;
+}
+.year:hover {
+  background-color: #643935;
+  color: white;
+  cursor: pointer;
 }
 h3 {
   font-size: 3rem;
@@ -161,6 +151,11 @@ h4 {
   font-size: 1.4rem;
   margin: 7%;
 }
+h6 {
+  font-size: 1.4rem;
+  margin: 7%;
+  width: max-content;
+}
 .bottomComponent {
   font-family: "Kumbh Sans", san serif;
   margin-top: 5rem;
@@ -168,6 +163,7 @@ h4 {
   text-align: center;
 }
 h5 {
+  width: max-content;
   margin: auto;
   font-size: 3rem;
 }
@@ -205,5 +201,7 @@ h5 {
   border: #483221 solid 3px;
   width: 18rem;
   height: 21rem;
+  background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg);
+  background-size: cover;
 }
 </style>
