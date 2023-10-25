@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="gradient"></div>
-  <div id="popupscreen">
+    <!-- <div id="popupscreen">
     <div id="outside" @click="TogglePopup()"></div>
     <div class="popup" ref="popup">
       <div class="popup-inner">
@@ -23,7 +23,7 @@ Barbara Malenfant</h3>
 <h3 class="c">bmalenfant@schools.nyc.gov</h3>
       </div>
     </div>
-  </div>
+  </div> -->
     <div>
       <h1 class="heading">CONTACTS</h1>
     </div>
@@ -137,7 +137,7 @@ Barbara Malenfant</h3>
 <script>
 import { gsap } from "gsap";
 export default {
-   props: ["TogglePopup"],
+  props: ["TogglePopup"],
   data() {
     return {
       staff: Array,
@@ -167,7 +167,8 @@ export default {
     tester() {
       if (this.shownDiv === "join") {
         this.joinColor = "#fcf6e9";
-        this.staffColor = "transparent";margin-le
+        this.staffColor = "transparent";
+        margin - le;
         this.solColor = "transparent";
       } else if (this.shownDiv === "staff") {
         this.joinColor = "transparent";
@@ -180,9 +181,9 @@ export default {
       }
     },
   },
-  
+
   mounted() {
-        let tl = gsap.timeline();
+    let tl = gsap.timeline();
     tl.from(".popup", { scale: 0.3, duration: 0.4 });
     gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
     gsap.from(".cal", 1, { x: 1000 }, "<0.5");
@@ -202,7 +203,6 @@ export default {
       opacity: 0,
     });
   },
-  
 };
 </script>
 
@@ -213,26 +213,23 @@ export default {
   height: 100vh;
   width: 100vw;
 }
-.popup-inner{
+.popup-inner {
   margin-left: 0;
 }
-.message{
-  font-weight: 350
-  ;
+.message {
+  font-weight: 350;
   font-size: 1.5rem;
   width: 95%;
-    margin: 3% 0 0 0%;
+  margin: 3% 0 0 0%;
 }
-.c{
-  font-weight: 350
-  ;
+.c {
+  font-weight: 350;
   font-size: 1.5rem;
   width: 90%;
-    margin: 0% 0 0 0%;
+  margin: 0% 0 0 0%;
 }
-.messageh{
-      margin: 0% 0 0 0%;
-      
+.messageh {
+  margin: 0% 0 0 0%;
 }
 #outside {
   background: transparent;
@@ -242,14 +239,14 @@ export default {
 .popup-close {
   border: none;
   font-weight: bold;
-left: 70%;
+  left: 70%;
   background: transparent;
   position: fixed;
   top: 0%;
   font-size: 2vw;
   cursor: pointer;
 }
-.popup-close:hover{
+.popup-close:hover {
   background: transparent;
 }
 #popupscreen {
