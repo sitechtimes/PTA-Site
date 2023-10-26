@@ -27,7 +27,7 @@
               <div
                 class="year"
                 v-for="item in gratitudeArr"
-                @click="changeYr"
+                @click="changeYr(item)"
                 :key="item"
               >
                 <h4>{{ item.year }}</h4>
@@ -37,14 +37,21 @@
         </div>
       </section>
       <section class="bottomComponent">
-        <h5>― •2023• ―</h5>
+        <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div class="donationComponent">
-            <div class="gratitudeImg"></div>
+          <div
+            class="donationComponent"
+            v-for="item in gratitudeArr"
+            :key="item"
+          >
+            <div
+              class="gratitudeImg"
+              :style="{ backgroundImage: item.image }"
+            ></div>
             <div>
-              <h6>Cool Parent</h6>
-              <h7>Message of Thanks</h7>
+              <h6>{{ item.name }}</h6>
+              <h7>thanks!</h7>
             </div>
           </div>
           <div class="donationComponent">
@@ -69,8 +76,66 @@ export default {
     const { heading } = this.$refs;
     gsap.from(heading, { delay: 0, duration: 1, y: 100, opacity: 0 });
   },
+
   data() {
-    return { gratitudeArr: [{ name: "Cool Paren 1", year: "2023" }] };
+    return {
+      currentYear: new Date().getFullYear(),
+      gratitudeArr: [
+        {
+          name: "Cool Paren 8",
+          year: "2023",
+          image:
+            "https://doorcountypulse.com/wp-content/uploads/2021/11/1-PP-12-3-21-Adult-Herring-Gull.jpg",
+        },
+        {
+          name: "Cool Paren 7",
+          year: "2022",
+          image:
+            "https://varmentguard.com/uploads/permanent/f8f2098da824b77447887be569c8990d",
+        },
+        {
+          name: "Cool Paren 6",
+          year: "2021",
+          image:
+            "https://t4.ftcdn.net/jpg/05/83/05/69/360_F_583056955_s7lX0lbcaQkhVKl8v0cFwxZsJmMokKIz.jpg",
+        },
+        {
+          name: "Cool Paren 5",
+          year: "2020",
+          image:
+            "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+        },
+        {
+          name: "Cool Paren 4",
+          year: "2019",
+          image: "https://clipart-library.com/img1/843122.png",
+        },
+        {
+          name: "Cool Paren 3",
+          year: "2018",
+          image:
+            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+        },
+        {
+          name: "Cool Paren 2",
+          year: "2017",
+          image:
+            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+        },
+        {
+          name: "Cool Paren 1",
+          year: "2016",
+          image:
+            "https://www.pngkey.com/png/detail/150-1505653_cute-seagull-png-cute-seagulls-clipart.png",
+        },
+      ],
+    };
+  },
+  methods: {
+    changeYr: function (e) {
+      this.currentYear = e.year;
+      console.log(this.currentYear);
+    },
   },
 };
 </script>
@@ -136,10 +201,10 @@ export default {
   flex-direction: column;
   align-items: center;
   height: 33rem;
-}
-.yearsContainer {
   overflow-y: scroll;
+  scrollbar-width: none;
 }
+
 .year {
   margin: 5px;
   width: 16rem;
