@@ -47,10 +47,12 @@
           >
             <div
               class="gratitudeImg"
-              :style="{ 'background-image': 'url(' + item.image + ')' }"
+              :style="{
+                'background-image': 'url(' + item.donations.image + ')',
+              }"
             ></div>
             <div>
-              <h6>{{ item.name }}</h6>
+              <h6>{{ item.donations.name }}</h6>
               <h7>thanks!</h7>
             </div>
           </div>
@@ -75,51 +77,67 @@ export default {
       currentYear: new Date().getFullYear(),
       gratitudeArr: [
         {
-          name: "Cool Paren 8",
           year: "2023",
-          image:
-            "https://doorcountypulse.com/wp-content/uploads/2021/11/1-PP-12-3-21-Adult-Herring-Gull.jpg",
+          donations: {
+            name: "Cool Paren 8",
+            image:
+              "https://doorcountypulse.com/wp-content/uploads/2021/11/1-PP-12-3-21-Adult-Herring-Gull.jpg",
+          },
         },
         {
-          name: "Cool Paren 7",
           year: "2022",
-          image:
-            "https://fanatics.frgimages.com/philadelphia-eagles/swoop-philadelphia-eagles-12-x-12-minimalist-mascot-poster-print_pi5135000_ff_5135432-ff27d0ef2846d226899d_full.jpg?_hv=2",
+          donations: {
+            name: "Cool Paren 7",
+            image:
+              "https://fanatics.frgimages.com/philadelphia-eagles/swoop-philadelphia-eagles-12-x-12-minimalist-mascot-poster-print_pi5135000_ff_5135432-ff27d0ef2846d226899d_full.jpg?_hv=2",
+          },
         },
         {
-          name: "Cool Paren 6",
           year: "2021",
-          image:
-            "https://t4.ftcdn.net/jpg/05/83/05/69/360_F_583056955_s7lX0lbcaQkhVKl8v0cFwxZsJmMokKIz.jpg",
+          donations: {
+            name: "Cool Paren 6",
+            image:
+              "https://t4.ftcdn.net/jpg/05/83/05/69/360_F_583056955_s7lX0lbcaQkhVKl8v0cFwxZsJmMokKIz.jpg",
+          },
         },
         {
-          name: "Cool Paren 5",
           year: "2020",
-          image:
-            "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+          donations: {
+            name: "Cool Paren 5",
+            image:
+              "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+          },
         },
         {
-          name: "Cool Paren 4",
           year: "2019",
-          image: "https://clipart-library.com/img1/843122.png",
+          donations: {
+            name: "Cool Paren 4",
+            image: "https://clipart-library.com/img1/843122.png",
+          },
         },
         {
-          name: "Cool Paren 3",
           year: "2018",
-          image:
-            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+          donations: {
+            name: "Cool Paren 3",
+            image:
+              "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+          },
         },
         {
-          name: "Cool Paren 2",
           year: "2017",
-          image:
-            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+          donations: {
+            name: "Cool Paren 2",
+            image:
+              "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+          },
         },
         {
-          name: "Cool Paren 1",
           year: "2016",
-          image:
-            "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
+          donations: {
+            name: "Cool Paren 1",
+            image:
+              "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
+          },
         },
       ],
     };
