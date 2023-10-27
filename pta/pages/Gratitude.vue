@@ -47,18 +47,11 @@
           >
             <div
               class="gratitudeImg"
-              :style="{ backgroundImage: item.image }"
+              :style="{ 'background-image': 'url(' + item.image + ')' }"
             ></div>
             <div>
               <h6>{{ item.name }}</h6>
               <h7>thanks!</h7>
-            </div>
-          </div>
-          <div class="donationComponent">
-            <div class="gratitudeImg"></div>
-            <div>
-              <h6>Cool Parent</h6>
-              <h7>Message of Thanks</h7>
             </div>
           </div>
         </div>
@@ -91,7 +84,7 @@ export default {
           name: "Cool Paren 7",
           year: "2022",
           image:
-            "https://varmentguard.com/uploads/permanent/f8f2098da824b77447887be569c8990d",
+            "https://fanatics.frgimages.com/philadelphia-eagles/swoop-philadelphia-eagles-12-x-12-minimalist-mascot-poster-print_pi5135000_ff_5135432-ff27d0ef2846d226899d_full.jpg?_hv=2",
         },
         {
           name: "Cool Paren 6",
@@ -126,7 +119,7 @@ export default {
           name: "Cool Paren 1",
           year: "2016",
           image:
-            "https://www.pngkey.com/png/detail/150-1505653_cute-seagull-png-cute-seagulls-clipart.png",
+            "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
         },
       ],
     };
@@ -276,7 +269,7 @@ h5 {
   border: #483221 solid 3px;
   width: 18rem;
   height: 21rem;
-  background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg);
+  /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
 </style>
