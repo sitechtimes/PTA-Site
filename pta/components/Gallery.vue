@@ -83,7 +83,7 @@ body {
   border-radius: 15px;
 }
 
-.btn {
+.slidebtn {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -95,24 +95,24 @@ body {
   background-color: #fff;
   font-size: 18px;
 }
-.btn:active {
+.slidebtn:active {
   transform: scale(1.1);
 }
-.btn-prev {
+.galBtn-prev {
   top: 44%;
   left: 2%;
   margin-left: 0.2rem;
 }
 
-.btn-next {
+.galBtn-next {
   top: 44%;
   right: 2%;
   margin-right: 0.2rem;
 }
 
 @media only screen and (max-width: 1400px) {
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 42%;
   } */
 }
@@ -121,8 +121,8 @@ body {
     max-width: 600px;
     height: 35vw;
   }
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 30%;
   } */
 }
@@ -130,8 +130,8 @@ body {
   .slide {
     height: 35vw;
   }
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 45%;
   } */
 }
@@ -148,8 +148,8 @@ body {
   .slide {
     height: 45vw;
   }
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 42%;
   } */
 }
@@ -160,11 +160,11 @@ body {
   .slider {
     max-width: 400px;
   }
-  .btn {
+  .galBtn {
     font-size: 14px;
   }
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 45%;
   } */
 }
@@ -175,18 +175,18 @@ body {
   .slider {
     height: 55vw;
   }
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 45%;
   } */
 }
 @media only screen and (max-width: 375px) {
-  /* .btn-next {
+  /* .galBtn-next {
     top: 43%;
   } */
 }
-@media only screen and (max-width: 375px){
-  .btn-next {
+@media only screen and (max-width: 375px) {
+  .galBtn-next {
     top: 43%;
   }
 }
@@ -197,7 +197,7 @@ body {
   .slider {
     height: 58vw;
   }
-  .btn {
+  .galBtn {
     width: 12vw;
     height: 12vw;
   }
@@ -206,11 +206,11 @@ body {
   }
 }
 @media only screen and (max-width: 180px) {
-  /* .btn-prev,
-  .btn-next {
+  /* .galBtn-prev,
+  .galBtn-next {
     top: 40vw;
   } */
-  /* .btn {
+  /* .galBtn {
     width: 20vw;
     height: 20vw;
   }
