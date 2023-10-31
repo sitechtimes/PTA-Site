@@ -48,7 +48,7 @@
             <div
               class="gratitudeImg"
               :style="{
-                'background-image': 'url(' + item.image + ')',
+                'background-image': 'url(' + currentImg + ')', //breaks code
               }"
             ></div>
             <div>
@@ -131,6 +131,15 @@ export default {
     changeYr: function (e) {
       this.currentYear = e.year;
       console.log(this.currentYear);
+    },
+    changeImg: function (e) {
+      this.currentImg = e.image;
+    },
+    filterArr: function (yr) {
+      let currentYr = this.gratitudeArr.filter((years) =>
+        this.gratitudeArr.includes(yr)
+      );
+      currentYr.forEach((years) => console.log(this.gratitudeArr.name));
     },
   },
 };
