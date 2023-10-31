@@ -125,3 +125,19 @@ collections: # A list of collections the CMS should be able to edit
           required: true,
           preview_path: "/upload/{{filename}}",
         }
+        - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
+    preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
+    label: "Polaroid Gallery (google drives)" # Used in the UI, e.g., "New Post"
+    folder: "pta/content/polaroids" # The path to the folder where the documents are stored
+    slug: "{{title}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          preview_path: "/upload/{{filename}}",
+        }
+      - { label: "link", name: "link", widget: "string", required: true }

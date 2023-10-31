@@ -15,6 +15,7 @@
             ></iframe>
           </div>
         </section>
+        <Polaroids />
       </div>
 
     </div>
