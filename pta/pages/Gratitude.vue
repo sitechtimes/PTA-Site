@@ -8,14 +8,22 @@
           <div class="thanks">
             <h2>Thank You!</h2>
             <p>
-              We would like to thank everyone who helped out Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nis
+              As you may know, in 2003 the Chancellor created the position of
+              Parent Coordinator in all of the public schools in New York City.
+              One of my roles is to be your parent advocate here at Tech and to
+              actively facilitate a strong and productive relationship between
+              the parents and school. Additionally, welcoming parents to a warm
+              and friendly learning environment will provide an arena to share
+              academic concerns related to your child's education. Staying
+              informed can help your family adjust to the high school
+              experience. Many challenges take place during these four years and
+              will no doubt impact your lives and influence behavior. The Tech
+              family is here to assist you in any way possible. Please utilize
+              the resources available to help you in the process. As you come
+              into the building I am making a point to greet you and check to
+              see that your concerns are being addressed to your satisfaction.
+              Please feel free to stop by and share what's on your mind. I look
+              forward to meeting with you!
             </p>
           </div>
         </div>
