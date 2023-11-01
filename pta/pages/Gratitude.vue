@@ -70,6 +70,7 @@ export default {
 
   data() {
     return {
+      currentImg: [], //make it display images from the current yr.
       currentYear: new Date().getFullYear(),
       gratitudeArr: [
         {
@@ -113,7 +114,6 @@ export default {
           image:
             "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
         },
-
         {
           year: "2017",
           name: "Cool Paren 2",
