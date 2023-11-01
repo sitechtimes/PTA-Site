@@ -27,7 +27,7 @@
               <div
                 class="year"
                 v-for="item in gratitudeArr"
-                @click="changeYr(item)"
+                @click="changeYr(item), changeImg(item)"
                 :key="item"
               >
                 <h4>{{ item.year }}</h4>
@@ -40,11 +40,7 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div
-            class="donationComponent"
-            v-for="item in gratitudeArr"
-            :key="item"
-          >
+          <div class="donationComponent">
             <div
               class="gratitudeImg"
               :style="{
@@ -52,7 +48,7 @@
               }"
             ></div>
             <div>
-              <h6>{{ item.name }}</h6>
+              <!-- <h6>{{ item.name }}</h6> -->
               <h7>thanks!</h7>
             </div>
           </div>
@@ -76,6 +72,12 @@ export default {
     return {
       currentYear: new Date().getFullYear(),
       gratitudeArr: [
+        {
+          year: "2023",
+          name: "Cool Paren 9",
+          image:
+            "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
+        },
         {
           year: "2023",
           name: "Cool Paren 8",
@@ -134,6 +136,7 @@ export default {
     },
     changeImg: function (e) {
       this.currentImg = e.image;
+      console.log(this.currentImg);
     },
     filterArr: function (yr) {
       let currentYr = this.gratitudeArr.filter((years) =>
