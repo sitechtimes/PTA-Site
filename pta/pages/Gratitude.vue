@@ -40,15 +40,15 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div v-for="item in currentImg" :key="item" class="donationComponent">
+          <div v-for="img in currentImg" :key="img" class="donationComponent">
             <div
               class="gratitudeImg"
               :style="{
-                'background-image': 'url(' + item + ')', //breaks code
+                'background-image': 'url(' + img + ')', //breaks code
               }"
             ></div>
             <div>
-              <!-- <h6>{{ item.name }}</h6> -->
+              <!-- <h6>{{ item.name }}</h6> how do i iterate through 2 arrays in the same component?? can i? -->
               <h7>thanks!</h7>
             </div>
           </div>
@@ -74,56 +74,59 @@ export default {
       gratitudeArr: [
         {
           year: "2023",
-          name: "Cool Paren 9",
-          image:
+          name: ["Cool Paren 9", "Cool parent 8"],
+          image: [
             "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNtKKh4nTpZabj23BthUNWo9XWAYL63D8QaYtedn84Q&s",
+          ],
         },
-        {
-          year: "2023",
-          name: "Cool Paren 8",
-          image:
-            "https://doorcountypulse.com/wp-content/uploads/2021/11/1-PP-12-3-21-Adult-Herring-Gull.jpg",
-        },
+
         {
           year: "2022",
           name: "Cool Paren 7",
-          image:
+          image: [
             "https://fanatics.frgimages.com/philadelphia-eagles/swoop-philadelphia-eagles-12-x-12-minimalist-mascot-poster-print_pi5135000_ff_5135432-ff27d0ef2846d226899d_full.jpg?_hv=2",
+          ],
         },
         {
           year: "2021",
           name: "Cool Paren 6",
-          image:
+          image: [
             "https://t4.ftcdn.net/jpg/05/83/05/69/360_F_583056955_s7lX0lbcaQkhVKl8v0cFwxZsJmMokKIz.jpg",
+          ],
         },
         {
           year: "2020",
           name: "Cool Paren 5",
-          image:
+          image: [
             "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+          ],
         },
         {
           year: "2019",
           name: "Cool Paren 4",
-          image: "https://clipart-library.com/img1/843122.png",
+          image: ["https://clipart-library.com/img1/843122.png"],
         },
         {
           year: "2018",
           name: "Cool Paren 3",
-          image:
+          image: [
             "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+          ],
         },
         {
           year: "2017",
           name: "Cool Paren 2",
-          image:
+          image: [
             "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+          ],
         },
         {
           year: "2016",
           name: "Cool Paren 1",
-          image:
+          image: [
             "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
+          ],
         },
       ],
     };
@@ -135,7 +138,8 @@ export default {
     },
     changeImg: function (e) {
       this.currentImg.length = 0;
-      this.currentImg.push(e.image);
+      this.currentImg.push(...e.image);
+      console.log(...e.image);
     },
     filterArr: function (yr) {
       let currentYr = this.gratitudeArr.filter((years) =>
