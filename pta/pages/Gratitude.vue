@@ -40,11 +40,11 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div class="donationComponent">
+          <div v-for="item in currentImg" :key="item" class="donationComponent">
             <div
               class="gratitudeImg"
               :style="{
-                'background-image': 'url(' + currentImg + ')', //breaks code
+                'background-image': 'url(' + item + ')', //breaks code
               }"
             ></div>
             <div>
@@ -55,7 +55,6 @@
         </div>
       </section>
     </div>
-
     <NewFooter />
   </div>
 </template>
@@ -135,8 +134,8 @@ export default {
       console.log(this.currentYear);
     },
     changeImg: function (e) {
-      this.currentImg = e.image;
-      console.log(this.currentImg);
+      this.currentImg.length = 0;
+      this.currentImg.push(e.image);
     },
     filterArr: function (yr) {
       let currentYr = this.gratitudeArr.filter((years) =>
