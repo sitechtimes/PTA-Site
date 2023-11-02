@@ -49,6 +49,7 @@
         <div class="donationGradient"></div>
         <div class="donationArray">
           <div v-for="img in currentImg" :key="img" class="donationComponent">
+            <!-- should figure out how to make a component  -->
             <div
               class="gratitudeImg"
               :style="{
