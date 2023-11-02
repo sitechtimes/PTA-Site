@@ -52,7 +52,7 @@
             <div
               class="gratitudeImg"
               :style="{
-                'background-image': 'url(' + img + ')', //breaks code
+                'background-image': 'url(' + img + ')',
               }"
             ></div>
             <div>
@@ -108,6 +108,7 @@ export default {
           name: "Cool Paren 5",
           image: [
             "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+            "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
           ],
         },
         {
@@ -183,7 +184,9 @@ export default {
   flex-direction: row;
   margin: 0 0 0 8%;
 }
+
 .heading {
+  margin-bottom: 1rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   font-size: 6rem;
@@ -193,12 +196,12 @@ export default {
 .thanks {
   font-family: "Kumbh Sans", san serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   color: #483221;
   width: 40rem;
 }
 .image {
-  margin: 4% 0 0 5%;
+  margin: 5.7% 0 0 5%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
