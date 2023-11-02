@@ -1,6 +1,6 @@
 <template>
   <section id="section_AboutUs">
-    <div class="aboutUs">
+    <div ref="aboutUs" id="aboutUs" class="aboutUs">
       <h3 class="subh">ABOUT US</h3>
       <p class="text paragraph">
         The mission of Staten Island Tech’s PTA is to support our school through
@@ -23,6 +23,7 @@
   </section>
 </template>
 
+
 <script>
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -34,17 +35,17 @@ export default {
       gsap.to({
         ScrollTrigger: {
           trigger: ".aboutUs",
-          start: "top top",
+          start: "center center",
           end: "bottom top",
         },
       });
     },
+    
   },
   mounted() {
-    console.log("mount");
-    gsap.from("#section_AboutUs", {
-      scrollTrigger: "#section_AboutUs",
-      delay: 0.8,
+    gsap.from(".aboutUs", {
+      scrollTrigger: ".aboutUs",
+      delay: 1.3,
       duration: 1,
       x: -600,
       opacity: 0,
