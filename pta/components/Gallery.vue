@@ -11,8 +11,8 @@
       <img :src="photo.image" alt="Gallery PTA images" />
     </div>
     <!-- Control buttons -->
-    <button class="btn btn-next" @click="nextSlide"><p>►</p></button>
-    <button class="btn btn-prev" @click="prevSlide"><p>◄</p></button>
+    <button class="btn btn-next" @click="nextSlide"><p>next</p></button>
+    <button class="btn btn-prev" @click="prevSlide"><p>prev</p></button>
   </div>
 </template>
 <script>
@@ -83,7 +83,7 @@ body {
   border-radius: 15px;
 }
 
-.slidebtn {
+.btn {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -95,26 +95,26 @@ body {
   background-color: #fff;
   font-size: 18px;
 }
-.slidebtn:active {
+.btn:active {
   transform: scale(1.1);
 }
-.galBtn-prev {
+.btn-prev {
   top: 44%;
   left: 2%;
   margin-left: 0.2rem;
 }
 
-.galBtn-next {
+.btn-next {
   top: 44%;
   right: 2%;
   margin-right: 0.2rem;
 }
 
 @media only screen and (max-width: 1400px) {
-  /* .galBtn-prev,
-  .galBtn-next {
+  .btn-prev,
+  .btn-next {
     top: 42%;
-  } */
+  }
 }
 @media only screen and (max-width: 1200px) {
   .slider {
@@ -160,7 +160,7 @@ body {
   .slider {
     max-width: 400px;
   }
-  .galBtn {
+  .btn {
     font-size: 14px;
   }
   /* .galBtn-prev,
@@ -186,7 +186,7 @@ body {
   } */
 }
 @media only screen and (max-width: 375px) {
-  .galBtn-next {
+  .btn-next {
     top: 43%;
   }
 }
@@ -197,7 +197,7 @@ body {
   .slider {
     height: 58vw;
   }
-  .galBtn {
+  .btn {
     width: 12vw;
     height: 12vw;
   }
