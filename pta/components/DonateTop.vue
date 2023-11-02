@@ -2,17 +2,17 @@
   <div>
     <h1 class="heading" ref="heading">DONATIONS</h1>
     <h3 class="subh" ref="subh">Bake Sales</h3>
-    <p ref="text">
+    <p class="text" ref="text">
       Food and drink donations would be much appreciated to help launch bake
       sales during the year. Our students always enjoy these added treats to
       their daily lunch routine.
     </p>
-    <p ref="text2">
+    <p class="text" ref="text2">
       Attached is a wish list of items that we would like to provide to our
       students which include : Cookies, Brownies, Plates, Chips, Beverages, Cup
       Noodles, and any other baked goods. <span>(PLEASE NO NUTS)</span>
     </p>
-    <p ref="text3">
+    <p class="text" ref="text3">
       You can sign up for items you wish to bring in on the spread sheet!
     </p>
     <form
@@ -85,12 +85,9 @@ svg {
   display: block;
 }
 
-p {
-  font-size: 1.7rem;
+.text {
   margin: 1% 0 0 8%;
   width: 80%;
-  font-family: var(--font-text);
-  line-height: 1.5;
 }
 span {
   font-weight: bold;
@@ -112,9 +109,6 @@ span {
   .subh {
     margin-top: 0.8rem;
   }
-  p {
-    font-size: 1.5rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -126,15 +120,13 @@ span {
     margin: 4% 0 0 8%;
     font-weight: bold;
   }
-  p {
-    font-size: 1.4rem;
+  .text {
     width: 70%;
     margin-top: 0.8rem;
   }
 }
 @media screen and (max-width: 992px) {
-  p {
-    font-size: 1.3rem;
+  .text {
     width: 80%;
     margin-top: 0.8rem;
   }
@@ -162,8 +154,7 @@ span {
     padding: 5px 8px 5px 8px;
     margin: 4% 0 0 8%;
   }
-  p {
-    font-size: 1.1rem;
+  .text {
     width: 80%;
     margin-top: 0.8rem;
   }
