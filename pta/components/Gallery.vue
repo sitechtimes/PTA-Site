@@ -11,8 +11,6 @@
       <img :src="photo.image" alt="Gallery PTA images" />
     </div>
     <!-- Control buttons -->
-    <button class="btn btn-prev" @click="prevSlide"><p>prev</p></button>
-    <button class="btn btn-next" @click="nextSlide"><p>next</p></button>
   </div>
 </template>
 <script>
@@ -74,6 +72,7 @@ body {
   height: 25vw;
   position: absolute;
   transition: all 0.5s;
+  padding-bottom: 1.5rem;
 }
 
 .slide img {
@@ -83,37 +82,7 @@ body {
   border-radius: 15px;
 }
 
-.btn {
-  position: absolute;
-  width: 5rem;
-  padding: 0.5rem;
-  padding-bottom: 0.6rem;
-  border: none;
-  border-radius: 1rem;
-  z-index: 10;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 0.8rem;
-  font-family: Karla;
-  top: 44%;
-}
-.btn:active {
-  transform: scale(1.1);
-}
-.btn-prev {
-  margin-left: 0.2rem;
-}
-
-.btn-next {
-  right: 0%;
-  margin-right: 0.2rem;
-}
-
 @media only screen and (max-width: 1400px) {
-  .btn-prev,
-  .btn-next {
-    top: 42%;
-  }
 }
 @media only screen and (max-width: 1200px) {
   .slider {
@@ -158,9 +127,6 @@ body {
   } */
   .slider {
     max-width: 400px;
-  }
-  .btn {
-    font-size: 14px;
   }
   /* .galBtn-prev,
   .galBtn-next {

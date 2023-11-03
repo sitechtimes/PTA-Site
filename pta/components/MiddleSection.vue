@@ -32,6 +32,10 @@
     </div>
     <div ref="gallery" id="gallery">
       <Gallery />
+      <div class="btncon">
+        <button class="btn btn-prev" @click="prevSlide">prev</button>
+        <button class="btn btn-next" @click="nextSlide">next</button>
+      </div>
     </div>
   </section>
 </template>
@@ -126,7 +130,6 @@ img {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
   justify-content: center;
   margin-top: 5rem;
 }
@@ -142,10 +145,42 @@ img {
 
 #gallery {
   display: flex;
+  flex-direction: column;
   width: 50vw;
   justify-content: center;
   margin-right: 6.5rem;
   margin-bottom: 5vw;
+}
+.btncon {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  position: absolute;
+  width: 6rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5rem;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-family: Karla;
+  bottom: -2%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-prev {
+  margin-left: 0.2rem;
+}
+
+.btn-next {
+  right: 0%;
+  margin-right: 0.2rem;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -239,6 +274,9 @@ img {
   img {
     width: 3vw;
     height: 3vw;
+  }
+  .btn {
+    font-size: 14px;
   }
 }
 
