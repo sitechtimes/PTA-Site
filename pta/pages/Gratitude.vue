@@ -4,10 +4,12 @@
     <div>
       <section class="topComponent">
         <div class="leftComponent">
-          <h1 class="heading" ref="heading">Wall of Gratitude</h1>
+          <h1 class="heading headingGratitude" ref="heading">
+            Wall of Gratitude
+          </h1>
           <div class="thanks">
             <h2>Thank You!</h2>
-            <p>
+            <p class="text">
               As you may know, in 2003 the Chancellor created the position of
               Parent Coordinator in all of the public schools in New York City.
               One of my roles is to be your parent advocate here at Tech and to
@@ -34,7 +36,7 @@
             <div class="years">
               <div
                 class="year"
-                v-for="item in gratitudeArr"
+                v-for="item in years"
                 @click="changeYr(item), changeImg(item)"
                 :key="item"
               >
@@ -78,33 +80,59 @@ export default {
 
   data() {
     return {
-      currentImg: [], //make it display images from the current yr.
+      years: [2023, 2022, 2021],
       currentYear: new Date().getFullYear(),
-      gratitudeArr: [
+      2023: [
         {
-          year: "2023",
-          name: ["Cool Paren 9", "Cool parent 8"],
-          image: [
+          name: "Cool Parent 9",
+          image:
             "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNtKKh4nTpZabj23BthUNWo9XWAYL63D8QaYtedn84Q&s",
-          ],
-        },
-
-        {
-          year: "2022",
-          name: "Cool Paren 7",
-          image: [
-            "https://fanatics.frgimages.com/philadelphia-eagles/swoop-philadelphia-eagles-12-x-12-minimalist-mascot-poster-print_pi5135000_ff_5135432-ff27d0ef2846d226899d_full.jpg?_hv=2",
-          ],
         },
         {
-          year: "2021",
-          name: "Cool Paren 6",
-          image: [
-            "https://t4.ftcdn.net/jpg/05/83/05/69/360_F_583056955_s7lX0lbcaQkhVKl8v0cFwxZsJmMokKIz.jpg",
-          ],
+          name: "Cool Parent 8",
+          image:
+            "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
+        },
+      ],
+      2022: [
+        {
+          name: "Cool Parent 7",
+          image:
+            "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
         },
         {
+          name: "Cool Parent 6",
+          image: "https://clipart-library.com/img1/843122.png",
+        },
+        {
+          name: "Cool Parent 5",
+          image:
+            "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
+        },
+        {
+          name: "Cool Parent 4",
+          image:
+            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+        },
+      ],
+      2021: [
+        {
+          name: "Cool Parent 3",
+          image:
+            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+        },
+        {
+          name: "Cool Parent 2",
+          image:
+            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+        },
+        {
+          name: "Cool Parent 1",
+          image:
+            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+        },
+      ],
+      /*     {
           year: "2020",
           name: "Cool Paren 5",
           image: [
@@ -137,8 +165,7 @@ export default {
           image: [
             "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
           ],
-        },
-      ],
+        }, */
     };
   },
   methods: {
@@ -161,6 +188,15 @@ export default {
 };
 </script>
 <style scoped>
+@import url(../assets/base.css);
+.text {
+  font-size: 1.3rem;
+}
+h2 {
+  margin: 0.8px;
+  margin-left: 0;
+  font-size: 2.4rem;
+}
 #gradient {
   width: 100%;
   padding: 0%;
@@ -187,12 +223,14 @@ export default {
 }
 
 .heading {
-  margin-bottom: 1rem;
+  /*   margin-bottom: 1rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   font-size: 6rem;
   color: #483221;
-  width: 33rem;
+  width: 33rem; */
+  margin: 0;
+  margin-top: 5rem;
 }
 .thanks {
   font-family: "Kumbh Sans", san serif;
@@ -256,7 +294,7 @@ h6 {
 }
 .bottomComponent {
   font-family: "Kumbh Sans", san serif;
-  margin-top: 5rem;
+  margin-top: 10rem;
   color: #483221;
   text-align: center;
 }
