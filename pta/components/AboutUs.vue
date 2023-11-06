@@ -45,14 +45,14 @@ export default {
   mounted() {
     gsap.from("#head", {
       scrollTrigger: "#head",
-      delay: 0.5,
+      delay: 0.2,
       duration: 1,
       x: -600,
       opacity: 0,
     });
     gsap.from("#paragraph", {
       scrollTrigger: "#paragraph",
-      delay: 0.7,
+      delay: 0.4,
       duration: 1,
       x: -600,
       opacity: 0,
