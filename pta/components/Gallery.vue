@@ -72,7 +72,6 @@ body {
   height: 25vw;
   position: absolute;
   transition: all 0.5s;
-  padding-bottom: 1.5rem;
 }
 
 .slide img {
@@ -85,9 +84,12 @@ body {
 @media only screen and (max-width: 1400px) {
 }
 @media only screen and (max-width: 1200px) {
+  .slide {
+    height: 30vw;
+  }
   .slider {
     max-width: 600px;
-    height: 35vw;
+    height: 30vw;
   }
   /* .galBtn-prev,
   .galBtn-next {
@@ -96,7 +98,6 @@ body {
 }
 @media only screen and (max-width: 1024px) {
   .slide {
-    height: 35vw;
   }
   /* .galBtn-prev,
   .galBtn-next {

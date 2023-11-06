@@ -148,18 +148,19 @@ img {
   flex-direction: column;
   width: 50vw;
   justify-content: center;
-  margin-right: 6.5rem;
+  margin-right: 6.5vw;
   margin-bottom: 5vw;
 }
 .btncon {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .btn {
-  position: absolute;
   width: 6rem;
-  padding: 0.8rem;
   border: none;
   border-radius: 5rem;
   z-index: 10;
@@ -175,12 +176,9 @@ img {
   transform: scale(1.1);
 }
 .btn-prev {
-  margin-left: 0.2rem;
 }
 
 .btn-next {
-  right: 0%;
-  margin-right: 0.2rem;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -189,6 +187,9 @@ img {
   } */
 }
 @media only screen and (max-width: 1200px) {
+  .btncon {
+    margin-top: 1.5rem;
+  }
   /* #section__MiddleSection {
     margin-top: 20rem;
   } */
@@ -209,7 +210,6 @@ img {
   #gallery {
     margin-right: 0;
     margin-top: 3vw;
-    width: 100vw;
   }
   #minutes {
     margin-bottom: 0rem;
@@ -238,6 +238,13 @@ img {
   #section__MiddleSection {
     margin-top: 2rem;
   }
+  #gallery {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
 }
 @media only screen and (max-width: 850px) {
   p {
@@ -248,6 +255,9 @@ img {
   } */
 }
 @media screen and (max-width: 768px) {
+  #gallery {
+    width: 60vw;
+  }
 }
 @media only screen and (max-width: 576px) {
   #section__MiddleSection {
