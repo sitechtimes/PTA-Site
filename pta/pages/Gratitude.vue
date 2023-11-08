@@ -27,6 +27,11 @@
               Please feel free to stop by and share what's on your mind. I look
               forward to meeting with you!
             </p>
+            <div class="contactInfoDiv">
+              <p class="contactInfo">Sincerely, Barbara Malenfant</p>
+              <p class="contactInfo">bmalenfant@schools.nyc.gov</p>
+              <p class="contactInfo">347-563-4563</p>
+            </div>
           </div>
         </div>
         <div class="image"></div>
@@ -37,10 +42,10 @@
               <div
                 class="year"
                 v-for="item in years"
-                @click="changeYr(item), changeImg(item)"
+                @click="changeYr(item), displayCards(item)"
                 :key="item"
               >
-                <h4>{{ item.year }}</h4>
+                <h4>{{ item }}</h4>
               </div>
             </div>
           </div>
@@ -50,12 +55,16 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div v-for="img in currentImg" :key="img" class="donationComponent">
+          <div
+            v-for="item in currentYear"
+            :key="item"
+            class="donationComponent"
+          >
             <!-- should figure out how to make a component  -->
             <div
               class="gratitudeImg"
               :style="{
-                'background-image': 'url(' + img + ')',
+                'background-image': 'url(' + item.image + ')',
               }"
             ></div>
             <div>
@@ -132,51 +141,15 @@ export default {
             "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
         },
       ],
-      /*     {
-          year: "2020",
-          name: "Cool Paren 5",
-          image: [
-            "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
-            "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
-          ],
-        },
-        {
-          year: "2019",
-          name: "Cool Paren 4",
-          image: ["https://clipart-library.com/img1/843122.png"],
-        },
-        {
-          year: "2018",
-          name: "Cool Paren 3",
-          image: [
-            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
-          ],
-        },
-        {
-          year: "2017",
-          name: "Cool Paren 2",
-          image: [
-            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
-          ],
-        },
-        {
-          year: "2016",
-          name: "Cool Paren 1",
-          image: [
-            "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
-          ],
-        }, */
     };
   },
   methods: {
     changeYr: function (e) {
-      this.currentYear = e.year;
+      this.currentYear = e;
       console.log(this.currentYear);
     },
-    changeImg: function (e) {
-      this.currentImg.length = 0;
-      this.currentImg.push(...e.image);
-      console.log(...e.image);
+    displayCards: function (e) {
+      console.log(this[2021][1].name);
     },
     filterArr: function (yr) {
       let currentYr = this.gratitudeArr.filter((years) =>
@@ -189,8 +162,9 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
+
 .text {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
 }
 h2 {
   margin: 0.8px;
@@ -236,11 +210,12 @@ h2 {
   font-family: "Kumbh Sans", san serif;
   font-weight: 400;
   font-size: 1.15rem;
+  margin-top: 1.1rem;
   color: #483221;
   width: 40rem;
 }
 .image {
-  margin: 5.7% 0 0 5%;
+  margin: 8% 0 0 5%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
@@ -291,6 +266,14 @@ h6 {
   font-size: 1.4rem;
   margin: 7%;
   width: max-content;
+}
+.contactInfo {
+  margin: 0.2rem;
+  margin-left: 0;
+  text-align: right;
+}
+.contactInfoDiv {
+  margin-top: 1.5rem;
 }
 .bottomComponent {
   font-family: "Kumbh Sans", san serif;
