@@ -55,7 +55,11 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div v-for="item in years" :key="item" class="donationComponent">
+          <div
+            v-for="item in currentArray"
+            :key="item"
+            class="donationComponent"
+          >
             <!-- should figure out how to make a component  -->
             <div
               class="gratitudeImg"
@@ -85,10 +89,10 @@ export default {
 
   data() {
     return {
-      years: [2023, 2022, 2021],
+      years: [this.year2023, this.year2022, this.year2021],
+      currentArray: this.year2023,
       currentYear: new Date().getFullYear(),
-
-      2023: [
+      year2023: [
         {
           name: "Cool Parent 9",
           image:
@@ -100,7 +104,7 @@ export default {
             "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
         },
       ],
-      2022: [
+      year2022: [
         {
           name: "Cool Parent 7",
           image:
@@ -121,7 +125,7 @@ export default {
             "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
         },
       ],
-      2021: [
+      year2021: [
         {
           name: "Cool Parent 3",
           image:
