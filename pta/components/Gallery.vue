@@ -1,16 +1,22 @@
 <template>
-  <!-- Slider container -->
-  <div class="slider">
-    <!-- Bind key to the loop index to get unique key for each slide -->
-    <div
-      v-for="(photo, index) in gallery"
-      :key="index"
-      class="slide"
-      :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
-    >
-      <img :src="photo.image" alt="Gallery PTA images" />
+  <div>
+    <!-- Slider container -->
+    <div class="slider">
+      <!-- Bind key to the loop index to get unique key for each slide -->
+      <div
+        v-for="(photo, index) in gallery"
+        :key="index"
+        class="slide"
+        :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
+      >
+        <img :src="photo.image" alt="Gallery PTA images" />
+      </div>
+      <!-- Control buttons -->
     </div>
-    <!-- Control buttons -->
+    <div class="btncon">
+      <button class="btn btn-prev" @click="prevSlide">prev</button>
+      <button class="btn btn-next" @click="nextSlide">next</button>
+    </div>
   </div>
 </template>
 <script>
@@ -80,7 +86,33 @@ body {
   object-fit: cover;
   border-radius: 15px;
 }
+.btncon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
 
+.btn {
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 5rem;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-family: Karla;
+  bottom: -2%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: background-color 0.5s;
+}
+.btn:hover {
+  background-color: var(--text-color);
+  color: #fff;
+}
 @media only screen and (max-width: 1400px) {
 }
 @media only screen and (max-width: 1200px) {
@@ -90,6 +122,9 @@ body {
   .slider {
     max-width: 600px;
     height: 30vw;
+  }
+  .btncon {
+    margin-top: 1.5rem;
   }
   /* .galBtn-prev,
   .galBtn-next {
@@ -107,6 +142,10 @@ body {
 @media only screen and (max-width: 992px) {
   .slider {
     max-width: 550px;
+    height: 40vw;
+  }
+  .slide {
+    height: 40vw;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -128,6 +167,14 @@ body {
   } */
   .slider {
     max-width: 400px;
+  }
+  .btn {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 2.2rem;
+  }
+  .btncon {
+    margin-top: 1rem;
   }
   /* .galBtn-prev,
   .galBtn-next {
@@ -162,10 +209,6 @@ body {
   }
   .slider {
     height: 58vw;
-  }
-  .btn {
-    width: 12vw;
-    height: 12vw;
   }
   p {
     font-size: 3vw;

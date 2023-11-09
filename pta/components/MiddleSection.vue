@@ -32,10 +32,6 @@
     </div>
     <div ref="gallery" id="gallery">
       <Gallery />
-      <div class="btncon">
-        <button class="btn btn-prev" @click="prevSlide">prev</button>
-        <button class="btn btn-next" @click="nextSlide">next</button>
-      </div>
     </div>
   </section>
 </template>
@@ -151,35 +147,6 @@ img {
   margin-right: 6.5vw;
   margin-bottom: 5vw;
 }
-.btncon {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.btn {
-  width: 6rem;
-  border: none;
-  border-radius: 5rem;
-  z-index: 10;
-  cursor: pointer;
-  background-color: #fff;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  font-family: Karla;
-  bottom: -2%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.btn:active {
-  transform: scale(1.1);
-}
-.btn-prev {
-}
-
-.btn-next {
-}
 
 @media only screen and (max-width: 1400px) {
   /* #section__MiddleSection {
@@ -187,9 +154,6 @@ img {
   } */
 }
 @media only screen and (max-width: 1200px) {
-  .btncon {
-    margin-top: 1.5rem;
-  }
   /* #section__MiddleSection {
     margin-top: 20rem;
   } */
@@ -242,8 +206,7 @@ img {
     margin-top: 3vw;
     display: flex;
     justify-content: center;
-    margin-left: 50%;
-    margin-right: 50%;
+    width: 60vw;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -285,8 +248,8 @@ img {
     width: 3vw;
     height: 3vw;
   }
-  .btn {
-    font-size: 14px;
+  #gallery {
+    width: 70vw;
   }
 }
 
