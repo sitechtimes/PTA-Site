@@ -55,11 +55,7 @@
         <h5>― •{{ currentYear }}• ―</h5>
         <div class="donationGradient"></div>
         <div class="donationArray">
-          <div
-            v-for="item in currentYear"
-            :key="item"
-            class="donationComponent"
-          >
+          <div v-for="item in years" :key="item" class="donationComponent">
             <!-- should figure out how to make a component  -->
             <div
               class="gratitudeImg"
@@ -68,8 +64,8 @@
               }"
             ></div>
             <div>
-              <!-- <h6>{{ item.name }}</h6> how do i iterate through 2 arrays in the same component?? can i? -->
-              <h7>thanks!</h7>
+              <h6>{{ item }}</h6>
+              <p>thanks!</p>
             </div>
           </div>
         </div>
@@ -91,6 +87,7 @@ export default {
     return {
       years: [2023, 2022, 2021],
       currentYear: new Date().getFullYear(),
+
       2023: [
         {
           name: "Cool Parent 9",
@@ -149,12 +146,9 @@ export default {
       console.log(this.currentYear);
     },
     displayCards: function (e) {
-      console.log(this[2021][1].name);
+      console.log(this[e].name);
     },
     filterArr: function (yr) {
-      let currentYr = this.gratitudeArr.filter((years) =>
-        this.gratitudeArr.includes(yr)
-      );
       currentYr.forEach((years) => console.log(this.gratitudeArr.name));
     },
   },
