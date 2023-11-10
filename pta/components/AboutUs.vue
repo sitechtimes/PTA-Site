@@ -1,27 +1,28 @@
 <template>
   <section id="section_AboutUs">
-    <div class="aboutUs">
-      <h3 class="subh">ABOUT US</h3>
-      <p class="text paragraph">
+    <div ref="aboutUs" id="aboutUs" class="aboutUs">
+      <h3 id="head" class="subh">ABOUT US</h3>
+      <p id="paragraph" class="text paragraph">
         The mission of Staten Island Tech’s PTA is to support our school through
         advocacy, volunteerism and fundraising. From our bake sales to our
         annual Spring Gala, we work diligently to raise money in order to
         financially support our school’s needs such as online and software
         services, facility upgrades and social events / celebrations.
       </p>
-      <p class="text paragraph">
+      <p id="paragraph" class="text paragraph">
         While Staten Island Tech provides a strong academic environment for our
         children, the school cannot do this alone. Participating with the PTA is
         vital to our students and school community. Please join our meeting each
         month to learn about the ongoing activities and events that help make
         our school a success. Also,<b>
-          please support our school with our suggested donations towards PTA
-          dues. No amount is too small or too great</b
+        please support our school with our suggested donations towards PTA
+        dues. No amount is too small or too great</b
         >.
       </p>
     </div>
   </section>
 </template>
+
 
 <script>
 import { gsap } from "gsap/dist/gsap";
@@ -33,23 +34,31 @@ export default {
     scrollActivities() {
       gsap.to({
         ScrollTrigger: {
-          trigger: ".aboutUs",
-          start: "top top",
+          trigger: "#aboutUs",
+          start: "center center",
           end: "bottom top",
         },
       });
     },
+    
   },
   mounted() {
-    console.log("mount");
-    gsap.from("#section_AboutUs", {
-      scrollTrigger: "#section_AboutUs",
-      delay: 0.8,
+    gsap.from("#head", {
+      scrollTrigger: "#head",
+      delay: 0.2,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+    gsap.from("#paragraph", {
+      scrollTrigger: "#paragraph",
+      delay: 0.4,
       duration: 1,
       x: -600,
       opacity: 0,
     });
   },
+
 };
 </script>
 

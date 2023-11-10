@@ -8,12 +8,12 @@
       their daily lunch routine.
     </p>
     <p class="text" ref="text2">
-      Attached is a wish list of items that we would like to provide to our
+      Here is a wish list of items that we would like to provide to our
       students which include : Cookies, Brownies, Plates, Chips, Beverages, Cup
       Noodles, and any other baked goods. <span>(PLEASE NO NUTS)</span>
     </p>
     <p class="text" ref="text3">
-      You can sign up for items you wish to bring in on the spread sheet!
+      You can sign up for items you wish to bring in on the google form!
     </p>
     <form
       action="https://docs.google.com/forms/d/e/1FAIpQLSfoRbBX2iCx20Kxcud0IcjT2UhmpjaNxDda78V3BIfN_Mw3Dg/viewform"
