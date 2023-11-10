@@ -21,11 +21,19 @@
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
         target="_blank"
-        ><button id="reg">Register</button></a
+        ><button class="btn" id="reg">Register</button></a
       >
     </Popup>
     <div id="upcomingEvents">
-      <h3 class="subh">Upcoming Events</h3>
+      <h3 class="subh">
+        Upcoming Events
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
+          target="_blank"
+          id="genReg"
+          ><button class="btn" id="reg">Register</button></a
+        >
+      </h3>
       <ul class="subtext" id="eventsCon">
         <li
           v-for="event in events"
@@ -124,6 +132,8 @@ export default {
 @import url(../assets/base.css);
 .subh {
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 #wrapper {
   height: 60vw;
@@ -177,27 +187,15 @@ ul {
   /* flex-direction: row;
   align-self: flex-end; */
 }
-#reg {
-  background-color: var(--text-color);
-  border-radius: 0.8rem;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-  margin-top: 1.5rem;
-  color: white;
-  font-family: "Karla", san serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-#reg:hover {
-  background-color: var(--darker-brown);
-  transition: 0.4s ease;
-}
 #head {
   position: absolute;
   top: 70vw;
   right: 19vw;
   height: 30vw;
   padding-bottom: 10vw;
+}
+#body {
+  margin-bottom: 1.5rem;
 }
 #upcomingEvents {
   color: var(--text-color);
@@ -298,7 +296,6 @@ li {
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.7rem;
     font-size: 0.8rem;
-    margin-top: 1.2rem;
   }
   #calender {
     width: 80%;

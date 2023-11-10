@@ -71,21 +71,21 @@ export default {
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
-      delay: 0.2,
+      delay: 0.6,
       duration: 1,
       x: -600,
       opacity: 0,
     });
     gsap.from("#minutes", {
       scrollTrigger: "#minutes",
-      delay: 0.2,
+      delay: 0.6,
       duration: 1,
       x: -600,
       opacity: 0,
     });
     gsap.from("#gallery", {
       scrollTrigger: "#gallery",
-      delay: 0.2,
+      delay: 0.6,
       duration: 1,
       x: -600,
       opacity: 0,
@@ -126,7 +126,6 @@ img {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
   justify-content: center;
   margin-top: 5rem;
 }
@@ -142,9 +141,10 @@ img {
 
 #gallery {
   display: flex;
+  flex-direction: column;
   width: 50vw;
   justify-content: center;
-  margin-right: 6.5rem;
+  margin-right: 6.5vw;
   margin-bottom: 5vw;
 }
 
@@ -174,7 +174,6 @@ img {
   #gallery {
     margin-right: 0;
     margin-top: 3vw;
-    width: 100vw;
   }
   #minutes {
     margin-bottom: 0rem;
@@ -203,6 +202,12 @@ img {
   #section__MiddleSection {
     margin-top: 2rem;
   }
+  #gallery {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+  }
 }
 @media only screen and (max-width: 850px) {
   p {
@@ -213,6 +218,9 @@ img {
   } */
 }
 @media screen and (max-width: 768px) {
+  #gallery {
+    width: 60vw;
+  }
 }
 @media only screen and (max-width: 576px) {
   #section__MiddleSection {
@@ -239,6 +247,9 @@ img {
   img {
     width: 3vw;
     height: 3vw;
+  }
+  #gallery {
+    width: 70vw;
   }
 }
 
