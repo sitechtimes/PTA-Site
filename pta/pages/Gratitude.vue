@@ -42,7 +42,7 @@
               <div
                 class="year"
                 v-for="item in years"
-                @click="changeYr(item), displayCards(item)"
+                @click="changeYr(item), filterArr(item)"
                 :key="item"
               >
                 <h4>{{ item }}</h4>
@@ -56,7 +56,7 @@
         <div class="donationGradient"></div>
         <div class="donationArray">
           <div
-            v-for="item in currentArray"
+            v-for="item in filteredWall"
             :key="item"
             class="donationComponent"
           >
@@ -68,7 +68,7 @@
               }"
             ></div>
             <div>
-              <h6>{{ item }}</h6>
+              <h6>{{ item.name }}</h6>
               <p>thanks!</p>
             </div>
           </div>
@@ -85,58 +85,65 @@ export default {
   mounted() {
     const { heading } = this.$refs;
     gsap.from(heading, { delay: 0, duration: 1, y: 100, opacity: 0 });
+    this.filterArr();
   },
 
   data() {
     return {
-      years: [this.year2023, this.year2022, this.year2021],
-      currentArray: this.year2023,
       currentYear: new Date().getFullYear(),
-      year2023: [
+      years: [2023, 2022, 2021],
+      // years: this.getYears(),
+      filteredWall: [],
+      wall: [
         {
+          year: "2023",
           name: "Cool Parent 9",
           image:
             "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
         },
         {
+          year: "2023",
           name: "Cool Parent 8",
           image:
             "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
         },
-      ],
-      year2022: [
         {
+          year: "2022",
           name: "Cool Parent 7",
           image:
             "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
         },
         {
+          year: "2022",
           name: "Cool Parent 6",
           image: "https://clipart-library.com/img1/843122.png",
         },
         {
+          year: "2022",
           name: "Cool Parent 5",
           image:
             "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
         },
         {
+          year: "2022",
           name: "Cool Parent 4",
           image:
             "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
         },
-      ],
-      year2021: [
         {
+          year: "2021",
           name: "Cool Parent 3",
           image:
             "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
         },
         {
+          year: "2021",
           name: "Cool Parent 2",
           image:
             "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
         },
         {
+          year: "2021",
           name: "Cool Parent 1",
           image:
             "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
@@ -149,12 +156,14 @@ export default {
       this.currentYear = e;
       console.log(this.currentYear);
     },
-    displayCards: function (e) {
-      console.log(this[e].name);
+    filterArr: function () {
+      this.filteredWall = this.wall.filter(
+        (item) => item.year == this.currentYear
+      );
     },
-    filterArr: function (yr) {
-      currentYr.forEach((years) => console.log(this.gratitudeArr.name));
-    },
+    // getYears: function () {
+    //   [...new Set(this.wall)];
+    // },
   },
 };
 </script>
