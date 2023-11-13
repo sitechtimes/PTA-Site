@@ -146,7 +146,7 @@ export default {
           year: "2021",
           name: "Cool Parent 1",
           image:
-            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+            "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/10342/gull-clipart-xl.png",
         },
       ],
     };
