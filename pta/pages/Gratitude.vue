@@ -41,7 +41,7 @@
             <div class="years">
               <div
                 class="year"
-                v-for="item in years"
+                v-for="item in yearsShown"
                 @click="changeYr(item), filterArr(item)"
                 :key="item"
               >
@@ -87,6 +87,7 @@ export default {
     gsap.from(heading, { delay: 0, duration: 1, y: 100, opacity: 0 });
     this.filterArr();
     this.getYears();
+    this.removewithfilter(this.years);
   },
 
   data() {
@@ -94,6 +95,7 @@ export default {
       currentYear: new Date().getFullYear(),
       // years: [2023, 2022, 2021],
       years: [],
+      yearsShown: [],
       filteredWall: [],
       wall: [
         {
@@ -161,24 +163,21 @@ export default {
       this.filteredWall = this.wall.filter(
         (item) => item.year == this.currentYear
       );
-//     },function removewithfilter(arr) {
-//     let outputArray = arr.filter(function (v, i, self) {
-
-//         // It returns the index of the first
-//         // instance of each value
-//         return i == self.indexOf(v);
-//     });
-
-//     return outputArray;
-// }
-
-console.log(removewithfilter(Arr));
+    },
     getYears: function () {
       for (let i = 0; i < this.wall.length; i++) {
         this.years.push(this.wall[i].year);
       }
-
       console.log(this.years);
+    },
+    removewithfilter: function (arr) {
+      this.yearsShown = arr.filter(function (v, i, self) {
+        // It returns the index of the first
+        // instance of each value
+        return i == self.indexOf(v);
+      });
+      console.log(this.yearsShown);
+      return this.yearsShown;
     },
   },
 };
