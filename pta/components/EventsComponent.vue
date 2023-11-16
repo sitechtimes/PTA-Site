@@ -226,6 +226,10 @@ li {
   height: 30vw;
   /* margin-top: -2vw; */
 }
+#reg {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-style: none;
+}
 @media only screen and (max-width: 1400px) {
   #calendar {
     width: 80%;
