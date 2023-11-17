@@ -20,7 +20,6 @@
     </div>
     <div id="footer">
       <NewFooter />
-
     </div>
   </div>
 </template>
@@ -65,14 +64,13 @@ onUnmounted(() => {
 }
 .parent {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   height: 40vw;
   width: 60%;
-
 }
 
 .div2 {
@@ -80,6 +78,7 @@ onUnmounted(() => {
   flex-direction: row;
   width: 100%;
 }
+
 @media screen and (max-width: 1400px) {
   .div1 {
   }

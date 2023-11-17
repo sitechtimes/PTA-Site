@@ -83,6 +83,16 @@ export default {
     bottom: 9rem;
   }
 }
+@media only screen and (max-width: 1500px) {
+  .container__ScrollDown img {
+    bottom: 2rem;
+  }
+
+  .test {
+    margin-top: 50vw;
+    overflow-x: hidden;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .container__ScrollDown img {
     bottom: 13rem;
