@@ -8,9 +8,9 @@
       their daily lunch routine.
     </p>
     <p class="text" ref="text2">
-      Here is a wish list of items that we would like to provide to our
-      students which include : Cookies, Brownies, Plates, Chips, Beverages, Cup
-      Noodles, and any other baked goods. <span>(PLEASE NO NUTS)</span>
+      Here is a wish list of items that we would like to provide to our students
+      which include : Cookies, Brownies, Plates, Chips, Beverages, Cup Noodles,
+      and any other baked goods. <span>(PLEASE NO NUTS)</span>
     </p>
     <p class="text" ref="text3">
       You can sign up for items you wish to bring in on the google form!
@@ -19,7 +19,7 @@
       action="https://docs.google.com/forms/d/e/1FAIpQLSfoRbBX2iCx20Kxcud0IcjT2UhmpjaNxDda78V3BIfN_Mw3Dg/viewform"
       target="_blank"
     >
-      <button ref="button">
+      <button ref="button" class="btn" id="donate">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1em"
@@ -58,10 +58,13 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.btn {
+#donate {
+  margin: 2% 0 0 8%;
+}
+/* .btn {
   transition: 0.3s;
 }
-button {
+#donate {
   fill: white;
   color: white;
   background: #483221;
@@ -71,20 +74,20 @@ button {
   width: 14rem;
   font-size: 1.4rem;
   padding: 10px 15px 10px 15px;
-  margin: 2% 0 0 8%;
+
   font-weight: bold;
 }
-button:hover {
+.btn:hover {
   cursor: pointer;
-}
+} */
 svg {
   margin-right: 10px;
+  fill: white;
 }
 .heading {
   margin: 2% 0 0 8%;
   display: block;
 }
-
 .text {
   margin: 1% 0 0 8%;
   width: 80%;

@@ -81,6 +81,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-size: 16px;
   }
 }
+@media screen and (max-width: 1500px) {
+  #homeTopText {
+    margin-top: 5rem;
+  }
+  .events {
+    margin-top: 5rem;
+  }
+}
 @media screen and (max-width: 1200px) {
   p {
     font-size: 16px;

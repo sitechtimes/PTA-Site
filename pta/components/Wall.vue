@@ -1,14 +1,11 @@
 <template>
   <div>
-    
     <div>
       <section class="topComponent">
         <div class="leftComponent">
-          <h1 class="heading " ref="heading">
-            Wall of Gratitude
-          </h1>
-          <div ref="subh" class="thanks">
-            <h2 class="subh">Thank You!</h2>
+          <h1 class="heading" ref="heading">Wall of Gratitude</h1>
+          <div ref="sheading" class="thanks">
+            <h2>Thank You!</h2>
             <p class="text">
               As you may know, in 2003 the Chancellor created the position of
               Parent Coordinator in all of the public schools in New York City.
@@ -35,22 +32,22 @@
           </div>
         </div>
         <div class="middlemobile">
-        <div class="image" ref="img"></div>
-        <div class="archive" ref="archive">
-          <h3>Archive</h3>
-          <div class="yearsContainer">
-            <div class="years">
-              <div
-                class="year"
-                v-for="item in yearsShown"
-                @click="changeYr(item), filterArr(item)"
-                :key="item"
-              >
-                <h4>{{ item }}</h4>
+          <div class="image" ref="img"></div>
+          <div class="archive" ref="archive">
+            <h3>Archive</h3>
+            <div class="yearsContainer">
+              <div class="years">
+                <div
+                  class="year"
+                  v-for="item in yearsShown"
+                  @click="changeYr(item), filterArr(item)"
+                  :key="item"
+                >
+                  <h4>{{ item }}</h4>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
       <section class="bottomComponent">
@@ -192,10 +189,10 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.middlemobile{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.middlemobile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .text {
   font-size: 1.35rem;
@@ -272,7 +269,7 @@ h2 {
   width: 16rem;
   height: 4rem;
   background-color: #fcf6e9;
-  border-radius: 20px;
+  border-radius: 1rem;
   transition: 0.5s;
 }
 .year:hover {
@@ -349,61 +346,131 @@ h5 {
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
-@media screen and (max-width: 1400px) {
-.text {
-  font-size: 1.2rem;
-}
-.thanks{
-    width: 40rem;
-}
-}
-@media only screen and (max-width: 1200px){
-  .heading{
-    margin-bottom: 0;
+@media screen and (max-width: 1500px) {
+  .donationGradient {
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+
+      rgb(255, 255, 255) 100%
+    );
+    width: 92vw;
+    margin-top: 35rem;
+    height: 2rem;
   }
-.subh{
-  margin-top: 0rem;
-}
+  h5 {
+    width: max-content;
+    margin: auto;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .donationComponent {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gratitudeImg {
+    border-radius: 20px;
+    border: #483221 solid 3px;
+    width: 15rem;
+    height: 18rem;
+    background-size: cover;
+  }
+  .donationArray {
+    margin-bottom: 0rem;
+  }
+  .leftComponent {
+    margin-right: 0;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .thanks {
+    font-family: "Kumbh Sans", san serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #483221;
+    width: 40rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  .archive {
+    margin: 4% 0 0 8%;
+    width: 14rem;
+    height: 20rem;
+    font-family: "Kumbh Sans", san serif;
+    font-weight: 800;
+    color: #483221;
+    text-align: center;
+  }
+  .years {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .year {
+    margin: 5px;
+    width: 12rem;
+    height: 3.5rem;
+    background-color: #fcf6e9;
+    border-radius: 2.5rem;
+    transition: 0.5s;
+  }
+  .year:hover {
+    background-color: #643935;
+    color: white;
+    cursor: pointer;
+  }
+  .heading {
+    margin: 0;
+    margin-top: 0rem;
+  }
   .text {
-  font-size: 1rem;
-  width: 95%;
-}
-.contactInfo{
-font-size: 1rem;
-}
-
-.thanks{
-width: 33rem;
-}
-.image {
-  margin: 4% 0 0 2%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-}
-@media screen and (max-width: 768px) {
-
+    font-size: 1.2rem;
+    width: 90%;
+  }
+  .contactInfo {
+    margin: 0.1rem;
+    margin-left: 0;
+    text-align: right;
+    width: 90%;
+  }
+  .contactInfoDiv {
+    margin-top: 1.2rem;
+  }
+  .image {
+    margin: 15% 0 0 0%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @media screen and (max-width: 576px) {
- .topComponent{
+  .topComponent {
     display: flex;
     flex-direction: column;
     width: 100%;
-}   
+  }
 
-.image {
-  margin: 8% 0 0 5%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+  .image {
+    margin: 8% 0 0 5%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 </style>
