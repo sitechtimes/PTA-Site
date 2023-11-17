@@ -4,11 +4,11 @@
     <div>
       <section class="topComponent">
         <div class="leftComponent">
-          <h1 class="heading headingGratitude" ref="heading">
+          <h1 class="heading " ref="heading">
             Wall of Gratitude
           </h1>
-          <div ref="sheading" class="thanks">
-            <h2>Thank You!</h2>
+          <div ref="subh" class="thanks">
+            <h2 class="subh">Thank You!</h2>
             <p class="text">
               As you may know, in 2003 the Chancellor created the position of
               Parent Coordinator in all of the public schools in New York City.
@@ -197,12 +197,11 @@ export default {
     flex-direction: row;
     width: 100%;
 }
-
 .text {
   font-size: 1.35rem;
 }
 h2 {
-  margin: 0.8px;
+  margin: 0;
   margin-left: 0;
   font-size: 2.4rem;
 }
@@ -230,16 +229,8 @@ h2 {
   flex-direction: row;
   margin: 0 0 0 8%;
 }
-
-.heading {
-  /*   margin-bottom: 1rem;
-  font-family: "Kumbh Sans", san serif;
-  font-weight: 800;
-  font-size: 6rem;
-  color: #483221;
-  width: 33rem; */
-  margin: 0;
-  margin-top: 5rem;
+.heading{
+  margin-left: 0;
 }
 .thanks {
   font-family: "Kumbh Sans", san serif;
@@ -357,6 +348,45 @@ h5 {
   height: 21rem;
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
+}
+@media screen and (max-width: 1400px) {
+.text {
+  font-size: 1.2rem;
+}
+.thanks{
+    width: 40rem;
+}
+}
+@media only screen and (max-width: 1200px){
+  .heading{
+    margin-bottom: 0;
+  }
+.subh{
+  margin-top: 0rem;
+}
+  .text {
+  font-size: 1rem;
+  width: 95%;
+}
+.contactInfo{
+font-size: 1rem;
+}
+
+.thanks{
+width: 33rem;
+}
+.image {
+  margin: 4% 0 0 2%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+@media screen and (max-width: 768px) {
+
 }
 @media screen and (max-width: 576px) {
  .topComponent{
