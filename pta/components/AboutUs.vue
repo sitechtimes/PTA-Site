@@ -1,7 +1,7 @@
 <template>
   <section id="section_AboutUs">
     <div ref="aboutUs" id="aboutUs" class="aboutUs">
-      <h3 id="head" class="subh">ABOUT US</h3>
+      <h3 id="subh" class="subh">ABOUT US</h3>
       <p id="paragraph" class="text paragraph">
         The mission of Staten Island Tech’s PTA is to support our school through
         advocacy, volunteerism and fundraising. From our bake sales to our
@@ -43,8 +43,8 @@ export default {
     
   },
   mounted() {
-    gsap.from("#head", {
-      scrollTrigger: "#head",
+    gsap.from("#subh", {
+      scrollTrigger: "#subh",
       delay: 0.2,
       duration: 1,
       x: -600,
