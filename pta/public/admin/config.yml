@@ -131,6 +131,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{title}}"
     create: true 
     fields:
+      - { label: "Year (YYYY)", name: "year", widget: "number", required: true }
       - { label: "Name", name: "name", widget: "string", required: true }
       - {
           label: "Image",

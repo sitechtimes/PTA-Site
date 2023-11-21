@@ -160,6 +160,14 @@ export default {
     };
   },
   methods: {
+    async getdonors() {
+      const query = queryContent("/donors").find();
+      console.log(query);
+      query.then((response) => {
+        console.log(response);
+        this.donors = response;
+      });
+    },
     changeYr: function (e) {
       this.currentYear = e;
       console.log(this.currentYear);
