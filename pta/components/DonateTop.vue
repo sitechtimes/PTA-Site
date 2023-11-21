@@ -81,7 +81,7 @@ export default {
 .btnCon {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 2% 0 0 8%;
 }
 .btn {
