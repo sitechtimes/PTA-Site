@@ -33,42 +33,48 @@
         </div>
         <div class="middlemobile">
           <div class="image" ref="img"></div>
-          <div class="archive" ref="archive">
-            <h3>Archive</h3>
-            <div class="yearsContainer">
-              <div class="years">
+        </div>
+      </section>
+      <section class="bottomComponent">
+        <div class="bottomCon">
+          <div class="donationGradient"></div>
+          <div class="arrayCon">
+            <h5>― •{{ currentYear }}• ―</h5>
+            <div class="donationArray">
+              <div
+                v-for="item in filteredWall"
+                :key="item"
+                class="donationComponent"
+              >
+                <!-- should figure out how to make a component  -->
                 <div
-                  class="year"
-                  v-for="item in yearsShown"
-                  @click="changeYr(item), filterArr(item)"
-                  :key="item"
-                >
-                  <h4>{{ item }}</h4>
+                  class="gratitudeImg"
+                  :style="{
+                    'background-image': 'url(' + item.image + ')',
+                  }"
+                ></div>
+                <div>
+                  <h6>{{ item.name }}</h6>
+                  <p>thanks!</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="bottomComponent">
-        <h5>― •{{ currentYear }}• ―</h5>
-        <div class="donationGradient"></div>
-        <div class="donationArray">
-          <div
-            v-for="item in filteredWall"
-            :key="item"
-            class="donationComponent"
-          >
-            <!-- should figure out how to make a component  -->
-            <div
-              class="gratitudeImg"
-              :style="{
-                'background-image': 'url(' + item.image + ')',
-              }"
-            ></div>
-            <div>
-              <h6>{{ item.name }}</h6>
-              <p>thanks!</p>
+          <div>
+            <div class="archive" ref="archive">
+              <h3>Archive</h3>
+              <div class="yearsContainer">
+                <div class="years">
+                  <div
+                    class="year"
+                    v-for="item in yearsShown"
+                    @click="changeYr(item), filterArr(item)"
+                    :key="item"
+                  >
+                    <h4>{{ item }}</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -226,7 +232,7 @@ h2 {
   flex-direction: row;
   margin: 0 0 0 8%;
 }
-.heading{
+.heading {
   margin-left: 0;
 }
 .thanks {
@@ -246,6 +252,14 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.arrayCon {
+  display: flex;
+  flex-direction: column;
+}
+.bottomCon {
+  display: flex;
+  flex-direction: row;
+}
 .archive {
   margin: 4% 0 0 5%;
   width: 19rem;
@@ -254,6 +268,9 @@ h2 {
   font-weight: 800;
   color: #483221;
   text-align: center;
+  background: white;
+  padding: 1rem 0rem 1rem 1rem;
+  border-radius: 1rem;
 }
 .years {
   display: flex;
@@ -310,7 +327,7 @@ h5 {
   font-size: 3rem;
 }
 .donationArray {
-  width: 90vw;
+  width: 80vw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
