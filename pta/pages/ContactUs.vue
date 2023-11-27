@@ -168,13 +168,12 @@ export default {
       if (this.shownDiv === "join") {
         this.joinColor = "#fcf6e9";
         this.staffColor = "transparent";
-        margin - le;
         this.solColor = "transparent";
       } else if (this.shownDiv === "staff") {
         this.joinColor = "transparent";
         this.staffColor = "#fcf6e9";
         this.solColor = "transparent";
-      } else {
+      } else (this.shownDiv === "sol") {
         this.joinColor = "transparent";
         this.staffColor = "transparent";
         this.solColor = "#fcf6e9";
