@@ -363,6 +363,11 @@ h5 {
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
+@media screen and (max-width: 1850px) {
+  .donationArray {
+    width: 75vw;
+  }
+}
 @media screen and (max-width: 1500px) {
   .donationGradient {
     position: absolute;
@@ -396,6 +401,7 @@ h5 {
     background-size: cover;
   }
   .donationArray {
+    width: 75vw;
     margin-bottom: 0rem;
   }
   .leftComponent {
@@ -471,6 +477,11 @@ h5 {
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .donationArray {
+    width: 70vw;
   }
 }
 @media screen and (max-width: 576px) {
