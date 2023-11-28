@@ -45,7 +45,7 @@ export default {
   mounted() {
     gsap.from("#subh", {
       scrollTrigger: "#subh",
-      delay: 0.2,
+      delay: 0.4,
       duration: 1,
       x: -600,
       opacity: 0,
