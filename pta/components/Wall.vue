@@ -195,13 +195,10 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.middlemobile {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
 .text {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.8rem;
 }
 h2 {
   margin: 0;
@@ -230,7 +227,8 @@ h2 {
 .topComponent {
   display: flex;
   flex-direction: row;
-  margin: 0 0 0 8%;
+  margin: 0 7% 0 7%;
+  justify-content: space-between;
 }
 .heading {
   margin-left: 0;
@@ -241,10 +239,10 @@ h2 {
   font-size: 1.15rem;
   margin-top: 1.1rem;
   color: #483221;
-  width: 40rem;
+  width: 45rem;
 }
 .image {
-  margin: 8% 0 0 5%;
+  margin: 25% 0 0 0%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
@@ -457,10 +455,12 @@ h5 {
     margin-top: 0rem;
   }
   .text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 90%;
+    line-height: 1.6rem;
   }
   .contactInfo {
+    font-size: 1rem;
     margin: 0.1rem;
     margin-left: 0;
     text-align: right;
@@ -470,18 +470,26 @@ h5 {
     margin-top: 1.2rem;
   }
   .image {
-    margin: 15% 0 0 0%;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 10% 0 0 0%;
+    width: 450px;
+    height: 450px;
   }
 }
 @media screen and (max-width: 1200px) {
   .donationArray {
     width: 70vw;
+  }
+  .image {
+    margin: 25% 0 0 0%;
+    width: 350px;
+    height: 350px;
+  }
+  .thanks {
+    width: 32rem;
+  }
+  .text {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
   }
 }
 @media screen and (max-width: 576px) {
