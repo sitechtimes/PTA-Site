@@ -27,8 +27,7 @@
             <h5 class="listDate">
               {{ event.month }}/{{ event.date }}/{{ event.year }}
             </h5>
-          </div></NuxtLink
-        >
+          </div></NuxtLink>
       </li>
     </ul>
   </div>
@@ -45,6 +44,25 @@ export default {
     };
   },
   methods: {
+    underline() {
+      if (this.page === "index") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "underline var(--text-color) 0.2rem";
+        this.eventsLine = "transparent";
+        this.contactLine = "transparent";
+        this.gratitudeLine = "transparent";
+        this.donateLine = "transparent";
+      } else if (this.page === "Events") {
+        console.log(this.page);
+        this.fade = "fadeIn 5s;";
+        this.homeLine = "transparent";
+        this.eventsLine = "underline var(--text-color) 0.2rem";
+        this.contactLine = "transparent";
+        this.gratitudeLine = "transparent";
+        this.donateLine = "transparent";
+      }
+  },
     async getEvents() {
       const query = queryContent("/events").find();
       console.log(query);
