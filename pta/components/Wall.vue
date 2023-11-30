@@ -60,19 +60,18 @@
               </div>
             </div>
           </div>
-          <div>
-            <div class="archive" ref="archive">
-              <h3>Archive</h3>
-              <div class="yearsContainer">
-                <div class="years">
-                  <div
-                    class="year"
-                    v-for="item in yearsShown"
-                    @click="changeYr(item), filterArr(item)"
-                    :key="item"
-                  >
-                    <h4>{{ item }}</h4>
-                  </div>
+          <div></div>
+          <div class="archive" ref="archive">
+            <h3>Archive</h3>
+            <div class="yearsContainer">
+              <div class="years">
+                <div
+                  class="year"
+                  v-for="item in yearsShown"
+                  @click="changeYr(item), filterArr(item)"
+                  :key="item"
+                >
+                  <h4>{{ item }}</h4>
                 </div>
               </div>
             </div>
@@ -259,7 +258,8 @@ h2 {
   flex-direction: row;
 }
 .archive {
-  margin: 4% 0 0 5%;
+  margin-left: 80%;
+  position: absolute;
   width: 19rem;
   height: 33rem;
   font-family: "Kumbh Sans", san serif;
@@ -379,6 +379,9 @@ h5 {
     margin-top: 35rem;
     height: 2rem;
   }
+  .heading {
+    margin: 8% 0% 0% 0%;
+  }
   h5 {
     width: max-content;
     margin: auto;
@@ -421,7 +424,6 @@ h5 {
     margin: 1rem 0;
   }
   .archive {
-    margin: 4% 0 0 8%;
     width: 14rem;
     height: 20rem;
     font-family: "Kumbh Sans", san serif;
@@ -450,10 +452,6 @@ h5 {
     color: white;
     cursor: pointer;
   }
-  .heading {
-    margin: 0;
-    margin-top: 0rem;
-  }
   .text {
     font-size: 1rem;
     width: 90%;
@@ -470,17 +468,20 @@ h5 {
     margin-top: 1.2rem;
   }
   .image {
-    margin: 10% 0 0 0%;
+    margin: 25% 0 0 0%;
     width: 450px;
     height: 450px;
   }
 }
 @media screen and (max-width: 1200px) {
+  .heading {
+    margin: 6% 0 0 0%;
+  }
   .donationArray {
     width: 70vw;
   }
   .image {
-    margin: 25% 0 0 0%;
+    margin: 40% 0 0 0%;
     width: 350px;
     height: 350px;
   }
@@ -492,11 +493,27 @@ h5 {
     line-height: 1.4rem;
   }
 }
+@media only screen and (max-width: 992px) {
+  .thanks {
+    width: 100%;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+  .image {
+    display: none;
+  }
+  .bottomComponent {
+    margin-top: 5rem;
+  }
+}
 @media screen and (max-width: 576px) {
   .topComponent {
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
 
   .image {
