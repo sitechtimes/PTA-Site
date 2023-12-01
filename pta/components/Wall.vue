@@ -275,7 +275,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   height: 33rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none;
 }
 
