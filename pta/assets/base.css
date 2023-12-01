@@ -299,7 +299,7 @@ h4 {
       font-size: 1rem;
     }
 }
-@media only screen and (min-width: 1032px) {
+@media only screen and (min-width: 1180px) {
   .menu {
     display: none;
   }
@@ -308,7 +308,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 1032px) {
+@media only screen and (max-width: 1180px) {
   /* issue here - hamburger and normal menu displayed at the same time */
 
   #naV {
