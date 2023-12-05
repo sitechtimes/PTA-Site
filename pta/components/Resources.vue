@@ -9,7 +9,7 @@
 Directory </h3>
                     <h4 class="description">Contact Staten Island Technical 
 High School.  </h4>
-                    <button class="button">Read More</button>
+                   <a target="_blank" href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"><button class="button">Read More</button></a> 
                 </div>
 
             </div>
@@ -18,7 +18,8 @@ High School.  </h4>
                 <div class="info">
                     <h3 class="name">Naviance </h3>
                     <h4 class="description">Parents can track achievement to post- secondary goals and success.  </h4>
-                    <button class="button">Read More</button>
+                    
+                    <a target="_blank" href="https://id.naviance.com/"><button class="button">Read More</button></a>
                 </div>
 
             </div>
@@ -29,7 +30,7 @@ High School.  </h4>
                     <h3 class="name">NYCDOE Websites </h3>
                     <h4 class="description">Keep track of student documents 
 and official city calendars   </h4>
-                    <button class="button">Read More</button>
+<a target="_blank" href="https://www.schools.nyc.gov/">  <button class="button">Read More</button></a>
                 </div>
 
             </div>
@@ -42,6 +43,9 @@ and official city calendars   </h4>
 </script>
 <style scoped>
 @import "../assets/base.css";
+a{
+    text-decoration: none;
+}
 h2{
     margin-top: 0;
 }
@@ -64,7 +68,8 @@ padding-bottom: 5rem;
   padding: 0vw 3vw 0vw 3vw;
   margin-bottom: 2vw;
   border-radius: 1vw;
-  width: 30vw;
+  width: 28.5vw;
+  height: 13.5vw;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
@@ -86,6 +91,11 @@ font-weight: 500;
 border: none;
 margin-top: 1rem;
 margin-bottom: 1.5rem;
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 img{
     width: 30%;
@@ -105,5 +115,247 @@ img{
   font-family: "Karla", sans serif;
   font-weight: 400;
   margin-bottom: 0;
+}
+@media screen and (max-width: 1400px){
+    
+.heading{
+    margin-top: 1.3rem;
+}
+.resourcegrid {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  grid-column-gap: 10%;
+  width: 85%;
+  padding-top: 3rem;
+padding-bottom: 5rem;
+  margin: auto;
+}
+.resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  width: 30vw;
+  height: 15vw;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+}
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 1.15rem; width: 60%;
+padding: 0.35rem;
+border-radius: 2rem;
+font-weight: 500;
+border: none;
+margin-top: 0.6rem;
+margin-bottom: 1.5rem;
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+img{
+    width: 30%;
+    margin: auto;
+}
+.name {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  margin-top: 1.2rem;
+}
+.description {
+    margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+}
+@media screen and (max-width: 1200px){
+    .heading{
+    margin-top: 1.3rem;
+}
+.resourcegrid {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  grid-column-gap: 5%;
+  width: 85%;
+  padding-top: 3rem;
+padding-bottom: 5rem;
+  margin: auto;
+}
+.resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  width: 32vw;
+  height: 18vw;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+}
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 1.1rem; width: 65%;
+padding: 0.3rem;
+border-radius: 2rem;
+font-weight: 400;
+border: none;
+margin-top: 0.6rem;
+margin-bottom: 1.5rem;
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+img{
+    width: 30%;
+    margin: auto;
+}
+.name {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  margin-top: 1.2rem;
+}
+.description {
+    margin-top: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+}
+@media screen and (max-width: 992px) {
+ .heading{
+    margin-top: 1.3rem;
+}
+.resourcegrid {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  grid-column-gap: 3%;
+  width: 85%;
+  padding-top: 3rem;
+padding-bottom: 5rem;
+  margin: auto;
+}
+.resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 4vw;
+  border-radius: 1vw;
+  width: 33vw;
+  height: 17vw;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+}
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 0.8rem; width: 65%;
+padding: 0.25rem;
+border-radius: 2rem;
+font-weight: 400;
+border: none;
+margin-top: 0.4rem;
+margin-bottom: 1.3rem;
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+img{
+    width: 25%;
+    margin: auto;
+}
+.name {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.description {
+    margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+}
+@media only screen and (max-width: 768px) {
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 0.7rem; width: 65%;
+padding: 0.2rem;
+border-radius: 2rem;
+font-weight: 300;
+border: none;
+margin-top: 0.5rem;
+margin-bottom: 1.3rem;
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.description {
+    margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1;
+}
+}
+@media only screen and (max-width: 576px) {
+
 }
 </style>
