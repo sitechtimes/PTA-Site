@@ -124,6 +124,33 @@ collections: # A list of collections the CMS should be able to edit
           required: true,
           preview_path: "/upload/{{filename}}",
         }
+  - name: "Resources"
+    preview_path: "/upload/{{filename}}"
+    label: "Parent Resources"
+    folder: "pta/content/resource" 
+    slug: "{{title}}"
+    create: true 
+    fields: 
+      - { label: "Name", name: "title", widget: "string", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          preview_path: "/upload/{{filename}}",
+        }
+      - {
+          label: "Description",
+          name: "Description",
+          widget: "string",
+          required: true,
+          pattern:
+            [
+              "^.{10,500}$",
+              "Must have more than 10 characters and less than 500 characters",
+            ],
+        }  
+      - { label: "Resource Link", name: "link", widjet: "string", required: true}
   - name: "Wall of Gratitude" 
     preview_path: "/upload/{{filename}}" 
     label: "Wall of gratitude" 

@@ -1,19 +1,28 @@
 <template>
     <div class="resources">
         <h2 class="heading">RESOURCES</h2>
+         <!-- <div class="resourcegrid" v-for="resource in resources">
+            <div class="resource">
+                <img :src="resource.image" alt="photo img">
+                <div class="info">
+                    <h3 class="name">{{resource.name}} </h3>
+                    <h4 class="description">{{resource.description}}  </h4>
+                   <a target="_blank" :href="resource.link" ><button class="button">Read More</button></a> 
+                </div>
+            </div>
+            </div> -->
         <div class="resourcegrid">
             <div class=" resource">
                 <img src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png" alt="">
                 <div class="info">
                     <h3 class="name">SITHS Automated Telephone 
-Directory </h3>
-                    <h4 class="description">Contact Staten Island Technical 
-High School.  </h4>
+                    Directory </h3>
+                    <h4 class="description">Contact Staten Island Technical High School.  </h4>
                    <a target="_blank" href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"><button class="button">Read More</button></a> 
                 </div>
 
             </div>
-            <div class="resource">
+            <div class="resource"> 
                 <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="">
                 <div class="info">
                     <h3 class="name">Naviance </h3>
