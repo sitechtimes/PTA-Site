@@ -328,6 +328,18 @@ img{
 }
 }
 @media only screen and (max-width: 768px) {
+    .resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 4vw;
+  border-radius: 1vw;
+  width: 33vw;
+  height: 17vw;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.178);
+  display: flex;
+  flex-direction: row;
+}
 .button{
 background-color: #C9B23A;
 color: white;
@@ -356,6 +368,57 @@ transition: 0.3s;
 }
 }
 @media only screen and (max-width: 576px) {
+    img{
+    width: 25%;
+    margin: auto;
+}
+.resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 6vw;
+  border-radius: 2vw;
+  width: 75vw;
+  height: 33vw;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.178);
+  display: flex;
+  flex-direction: row;
+}
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 0.85rem; width: 60%;
+padding: 0.2rem;
+border-radius: 2rem;
+font-weight: 550;
+border: none;
+margin-top: 0.9rem;
 
+transition: 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.description {
+    margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.resourcegrid {
+    display: grid;
+  grid-template-columns:  1fr;
+  overflow: hidden;
+  grid-column-gap: 3%;
+  width: 85%;
+  padding-top: 3rem;
+padding-bottom: 5rem;
+  margin: auto;
+}
 }
 </style>
