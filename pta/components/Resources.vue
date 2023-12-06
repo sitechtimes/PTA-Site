@@ -421,4 +421,18 @@ padding-bottom: 5rem;
   margin: auto;
 }
 }
+@media only screen and (max-width: 450px){
+.resource{
+    border: 1px #D6D6D6 solid;
+  background-color: white;
+  padding: 0vw 3vw 0vw 3vw;
+  margin-bottom: 6vw;
+  border-radius: 2vw;
+  width: 74vw;
+  height: 33vw;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.178);
+  display: flex;
+  flex-direction: row;
+}
+}
 </style>
