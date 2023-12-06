@@ -92,8 +92,7 @@ export default {
     });
   },
 };
-/* this.home.addEventListener("mouseenter", () => animation.play());
-this.home.addEventListener("mouseleave", () => animation.reverse()); */
+
 </script>
 <style scoped>
 /* .information {

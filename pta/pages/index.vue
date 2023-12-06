@@ -16,6 +16,7 @@
         <div class="div2">
           <MiddleSection />
         </div>
+                            <Resources />
       </div>
     </div>
     <div id="footer">

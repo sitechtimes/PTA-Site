@@ -33,6 +33,34 @@
         </div>
         <div class="middlemobile">
           <div class="image" ref="img"></div>
+        </div>
+      </section>
+      <section class="bottomComponent">
+        <div class="bottomCon">
+          <div class="donationGradient"></div>
+          <div class="arrayCon">
+            <h5>― •{{ currentYear }}• ―</h5>
+            <div class="donationArray">
+              <div
+                v-for="item in filteredWall"
+                :key="item"
+                class="donationComponent"
+              >
+                <!-- should figure out how to make a component  -->
+                <div
+                  class="gratitudeImg"
+                  :style="{
+                    'background-image': 'url(' + item.image + ')',
+                  }"
+                ></div>
+                <div>
+                  <h6>{{ item.name }}</h6>
+                  <p>thanks!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
           <div class="archive" ref="archive">
             <h3>Archive</h3>
             <div class="yearsContainer">
@@ -46,29 +74,6 @@
                   <h4>{{ item }}</h4>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="bottomComponent">
-        <h5>― •{{ currentYear }}• ―</h5>
-        <div class="donationGradient"></div>
-        <div class="donationArray">
-          <div
-            v-for="item in filteredWall"
-            :key="item"
-            class="donationComponent"
-          >
-            <!-- should figure out how to make a component  -->
-            <div
-              class="gratitudeImg"
-              :style="{
-                'background-image': 'url(' + item.image + ')',
-              }"
-            ></div>
-            <div>
-              <h6>{{ item.name }}</h6>
-              <p>thanks!</p>
             </div>
           </div>
         </div>
@@ -197,13 +202,10 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.middlemobile {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
 .text {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.8rem;
 }
 h2 {
   margin: 0;
@@ -232,9 +234,10 @@ h2 {
 .topComponent {
   display: flex;
   flex-direction: row;
-  margin: 0 0 0 8%;
+  margin: 0 7% 0 7%;
+  justify-content: space-between;
 }
-.heading{
+.heading {
   margin-left: 0;
 }
 .thanks {
@@ -243,10 +246,10 @@ h2 {
   font-size: 1.15rem;
   margin-top: 1.1rem;
   color: #483221;
-  width: 40rem;
+  width: 45rem;
 }
 .image {
-  margin: 8% 0 0 5%;
+  margin: 25% 0 0 0%;
   width: 500px;
   height: 500px;
   border-radius: 50%;
@@ -254,21 +257,33 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.arrayCon {
+  display: flex;
+  flex-direction: column;
+}
+.bottomCon {
+  display: flex;
+  flex-direction: row;
+}
 .archive {
-  margin: 4% 0 0 5%;
+  margin-left: 80%;
+  position: absolute;
   width: 19rem;
   height: 33rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   color: #483221;
   text-align: center;
+  background: white;
+  padding: 1rem 0rem 1rem 1rem;
+  border-radius: 1rem;
 }
 .years {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 33rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none;
 }
 
@@ -318,7 +333,7 @@ h5 {
   font-size: 3rem;
 }
 .donationArray {
-  width: 90vw;
+  width: 80vw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -354,6 +369,11 @@ h5 {
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
+@media screen and (max-width: 1850px) {
+  .donationArray {
+    width: 75vw;
+  }
+}
 @media screen and (max-width: 1500px) {
   .donationGradient {
     position: absolute;
@@ -366,6 +386,9 @@ h5 {
     width: 92vw;
     margin-top: 35rem;
     height: 2rem;
+  }
+  .heading {
+    margin: 8% 0% 0% 0%;
   }
   h5 {
     width: max-content;
@@ -387,6 +410,7 @@ h5 {
     background-size: cover;
   }
   .donationArray {
+    width: 75vw;
     margin-bottom: 0rem;
   }
   .leftComponent {
@@ -408,7 +432,6 @@ h5 {
     margin: 1rem 0;
   }
   .archive {
-    margin: 4% 0 0 8%;
     width: 14rem;
     height: 20rem;
     font-family: "Kumbh Sans", san serif;
@@ -437,15 +460,13 @@ h5 {
     color: white;
     cursor: pointer;
   }
-  .heading {
-    margin: 0;
-    margin-top: 0rem;
-  }
   .text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 90%;
+    line-height: 1.6rem;
   }
   .contactInfo {
+    font-size: 1rem;
     margin: 0.1rem;
     margin-left: 0;
     text-align: right;
@@ -455,20 +476,52 @@ h5 {
     margin-top: 1.2rem;
   }
   .image {
-    margin: 15% 0 0 0%;
+    margin: 25% 0 0 0%;
+    width: 450px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .heading {
+    margin: 6% 0 0 0%;
+  }
+  .donationArray {
+    width: 70vw;
+  }
+  .image {
+    margin: 40% 0 0 0%;
     width: 350px;
     height: 350px;
-    border-radius: 50%;
-    background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+  .thanks {
+    width: 32rem;
+  }
+  .text {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .thanks {
+    width: 100%;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+  .image {
+    display: none;
+  }
+  .bottomComponent {
+    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 576px) {
   .topComponent {
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
 
   .image {
