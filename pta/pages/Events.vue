@@ -16,6 +16,7 @@
             ></iframe>
           </div>
         </section>
+                <EventsGallery />
       </div>
 
     </div>
