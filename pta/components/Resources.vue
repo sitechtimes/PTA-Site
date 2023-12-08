@@ -11,7 +11,8 @@
                 </div>
             </div>
             </div> -->
-        <div class="resourcegrid">
+        <h2 id="heading" class="heading">RESOURCES</h2>
+        <div id="grid" class="resourcegrid">
             <div class=" resource">
                 <img src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png" alt="">
                 <div class="info">
@@ -49,6 +50,38 @@ and official city calendars   </h4>
     </div>
 </template>
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+export default {
+    methods: {
+    scrollActivities() {
+      gsap.to({
+        ScrollTrigger: {
+          trigger: "#heading",
+          start: "center center",
+          end: "bottom top",
+        },
+      });
+    },
+  },
+    mounted() {
+    gsap.from("#heading", {
+      scrollTrigger: "#heading",
+      delay: .6,
+      duration: 1,
+x: -600,
+      opacity: 0,
+    });
+    gsap.from("#grid", {
+      scrollTrigger: "#grid",
+      delay: .8,
+      duration: 1,
+x: -600,
+      opacity: 0,
+    });
+  },
+}
 </script>
 <style scoped>
 @import "../assets/base.css";
@@ -59,7 +92,7 @@ h2{
     margin-top: 0;
 }
 .heading{
-    margin-top: 2rem;
+  margin: 0% 0 0 6.5%;
 }
 .resourcegrid {
     display: grid;
