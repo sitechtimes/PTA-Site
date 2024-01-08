@@ -39,7 +39,7 @@
         <div class="bottomCon">
           <div class="donationGradient"></div>
           <div class="arrayCon">
-            <h5>― •{{ currentYear }}• ―</h5>
+            <h2>― •{{ currentYear }}• ―</h2>
             <div class="donationArray">
               <div
                 v-for="item in filteredWall"
@@ -60,18 +60,24 @@
               </div>
             </div>
           </div>
-          <div></div>
-          <div class="archive" ref="archive">
-            <h3>Archive</h3>
-            <div class="yearsContainer">
-              <div class="years">
-                <div
-                  class="year"
-                  v-for="item in yearsShown"
-                  @click="changeYr(item), filterArr(item)"
-                  :key="item"
-                >
-                  <h4>{{ item }}</h4>
+
+          <div class="showArchive" ref="showArchive" @click="show = !show">
+            <div v-if="show"><button>&#62;</button></div>
+            <div v-else>
+              <button>&#60;</button>
+              <div class="archive" ref="archive">
+                <h3>Archive</h3>
+                <div class="yearsContainer">
+                  <div class="years">
+                    <div
+                      class="year"
+                      v-for="item in yearsShown"
+                      @click="changeYr(item), filterArr(item)"
+                      :key="item"
+                    >
+                      <h4>{{ item }}</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -90,11 +96,11 @@ export default {
     const { heading } = this.$refs;
     const { sheading } = this.$refs;
     const { img } = this.$refs;
-    const { archive } = this.$refs;
+    const { showArchive } = this.$refs;
     gsap.from(heading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(sheading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(img, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(archive, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+    gsap.from(showArchive, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     this.filterArr();
     this.getYears();
     this.removewithfilter(this.years);
@@ -102,6 +108,7 @@ export default {
 
   data() {
     return {
+      show: false,
       currentYear: new Date().getFullYear(),
       // years: [2023, 2022, 2021],
       years: [],
@@ -257,9 +264,11 @@ h2 {
   display: flex;
   flex-direction: row;
 }
-.archive {
-  margin-left: 80%;
+.showArchive {
+  left: 0%;
   position: absolute;
+}
+.archive {
   width: 19rem;
   height: 33rem;
   font-family: "Kumbh Sans", san serif;
@@ -319,13 +328,8 @@ h6 {
   color: #483221;
   text-align: center;
 }
-h5 {
-  width: max-content;
-  margin: auto;
-  font-size: 3rem;
-}
 .donationArray {
-  width: 80vw;
+  width: 100vw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -362,9 +366,6 @@ h5 {
   background-size: cover;
 }
 @media screen and (max-width: 1850px) {
-  .donationArray {
-    width: 75vw;
-  }
 }
 @media screen and (max-width: 1500px) {
   .donationGradient {
@@ -382,12 +383,6 @@ h5 {
   .heading {
     margin: 8% 0% 0% 0%;
   }
-  h5 {
-    width: max-content;
-    margin: auto;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
   .donationComponent {
     margin: 15px 0;
     display: flex;
@@ -400,10 +395,6 @@ h5 {
     width: 15rem;
     height: 18rem;
     background-size: cover;
-  }
-  .donationArray {
-    width: 75vw;
-    margin-bottom: 0rem;
   }
   .leftComponent {
     margin-right: 0;
