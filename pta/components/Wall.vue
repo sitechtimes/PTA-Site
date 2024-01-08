@@ -62,9 +62,9 @@
           </div>
 
           <div class="showArchive" ref="showArchive" @click="show = !show">
-            <div v-if="show"><button>&#62;</button></div>
+            <div v-if="show"><button class="btn">&#62;</button></div>
             <div v-else>
-              <button>&#60;</button>
+              <button class="btn">&#60;</button>
               <div class="archive" ref="archive">
                 <h3>Archive</h3>
                 <div class="yearsContainer">
@@ -301,6 +301,13 @@ h2 {
   color: white;
   cursor: pointer;
 }
+.btn {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  position: absolute;
+  left: 0%;
+  margin-left: 81.5%;
+  transition: all 1s ease-in;
+}
 h3 {
   font-size: 3rem;
   margin: 1rem 0;
@@ -421,6 +428,9 @@ h6 {
     font-weight: 800;
     color: #483221;
     text-align: center;
+  }
+  .btn {
+    margin-left: 75%;
   }
   .years {
     display: flex;
