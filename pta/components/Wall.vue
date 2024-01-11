@@ -337,7 +337,7 @@ h6 {
   text-align: center;
 }
 .donationArray {
-  width: 100vw;
+  width: 95vw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
