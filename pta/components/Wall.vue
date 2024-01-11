@@ -263,6 +263,7 @@ h2 {
 .bottomCon {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .showArchive {
   left: 0%;
@@ -343,17 +344,13 @@ h6 {
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
+  margin-top: 4rem;
   margin-bottom: 8rem;
   height: 47rem;
 }
 .donationGradient {
   position: absolute;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
 
-    rgb(255, 255, 255) 100%
-  );
   width: 92vw;
   margin-top: 40rem;
   height: 10rem;
@@ -377,12 +374,6 @@ h6 {
 @media screen and (max-width: 1500px) {
   .donationGradient {
     position: absolute;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-
-      rgb(255, 255, 255) 100%
-    );
     width: 92vw;
     margin-top: 35rem;
     height: 2rem;
@@ -525,6 +516,12 @@ h6 {
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gratitudeImg {
+    width: 10rem;
+    height: 13rem;
   }
 }
 </style>
