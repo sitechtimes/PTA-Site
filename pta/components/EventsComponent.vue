@@ -31,7 +31,7 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
           target="_blank"
           id="genReg"
-          ><button class="btn" id="reg">Register</button></a
+          ><button class="btn" id="reg">Volunteer Register</button></a
         >
       </h3>
       <ul class="subtext" id="eventsCon">
