@@ -30,10 +30,11 @@
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
           target="_blank"
-          id="genReg"
+          id="Reg"
           ><button class="btn" id="reg">Volunteer Register</button></a
         >
       </h3>
+
       <ul class="subtext" id="eventsCon">
         <li
           v-for="event in events"
@@ -296,10 +297,16 @@ li {
   .listDate {
     width: 20vw;
   }
+.subh{
+  display: flex;
+  flex-direction: column;
+}
   #reg {
+margin-top: .8rem;
+
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.7rem;
-    font-size: 0.8rem;
+    font-size: .9rem;
   }
   #calender {
     width: 80%;
