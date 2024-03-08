@@ -1,6 +1,6 @@
 <template>
     <div class="resources">
-        <h2  id="subh" class="subh">RESOURCES</h2>
+        <h2 id="heading" class="heading">RESOURCES</h2>
         <div id="grid" class="resourcegrid">
             <div class=" resource">
                 <img src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png" alt="">
