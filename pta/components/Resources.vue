@@ -17,7 +17,7 @@ High School.  </h4>
                 <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="">
                 <div class="info">
                     <h3 class="name">Naviance </h3>
-                    <h4 class="description">Parents can track achievement to post- secondary goals and success.  </h4>
+                    <h4 class="description">Parents can track secondary goals and success.  </h4>
                     
                     <a target="_blank" href="https://id.naviance.com/"><button class="button">Read More</button></a>
                 </div>
