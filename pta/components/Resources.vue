@@ -410,6 +410,9 @@ transition: 0.3s;
 }
 }
 @media only screen and (max-width: 576px) {
+  .heading{
+        margin-left: 8vw;
+  }
   .name {
   font-size: 0.95rem;
   color: var(--text-color);
