@@ -102,13 +102,13 @@ collections: # A list of collections the CMS should be able to edit
         }
       - {
           label: "Event Sign Up Link",
-          name: "link",
+          name: "signup",
           widjet: "string",
           required: true,
         }
       - {
           label: "Event Donate Link",
-          name: "link",
+          name: "donate",
           widjet: "string",
           required: true,
         }
