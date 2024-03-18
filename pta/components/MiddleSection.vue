@@ -28,6 +28,25 @@
             </h3>
           </a>
         </div>
+        <div ref="minutes" id="minutes">
+        <h2 class="subh">MEETING RECORDINGS</h2>
+        <div v-for="recording in recordings">
+          <a
+            :href="recording.link"
+            class="linkCon"
+            ref="recordingLink"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3 class="text">
+              <img
+                id="linkIcon"
+                src="../components/icons/link.svg"
+                alt="link icon"
+              />{{recording.title }}
+            </h3>
+          </a>
+        </div>
       </div>
     </div>
     <div ref="gallery" id="gallery">
