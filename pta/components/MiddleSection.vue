@@ -47,6 +47,7 @@
             </h3>
           </a>
         </div>
+                </div>
       </div>
     </div>
     <div ref="gallery" id="gallery">
