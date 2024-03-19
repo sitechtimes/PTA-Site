@@ -322,7 +322,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -384,7 +384,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
