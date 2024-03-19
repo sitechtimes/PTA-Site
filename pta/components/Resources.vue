@@ -36,9 +36,9 @@ and official city calendars   </h4>
             </div>
 
              <div class="resource">
-                <img src="https://nycaieroundtable.org/wp-content/uploads/2022/02/nyc-doe-logo.jpg" alt="">
+                <img src="./icons/NavBar-Icons/pta-logo.png" alt="">
                 <div class="info">
-                    <h3 class="name">PTA By-laws</h3>
+                    <h3 class="name">SITHS PTA By-laws</h3>
                     <h4 class="description">Read more about the PTA</h4>
 <a target="_blank" href="https://docs.google.com/document/d/1gNyKPMDOUxeW2AadJFuOXtla3jd_bzjw/edit?usp=sharing&ouid=109431569121511580485&rtpof=true&sd=true">  <button class="button">Read More</button></a>
                 </div>

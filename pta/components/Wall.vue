@@ -427,7 +427,7 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20rem;
+    height: auto;
     overflow-y: scroll;
     scrollbar-width: none;
   }
@@ -436,7 +436,7 @@ h6 {
     width: 12rem;
     height: 3.5rem;
     background-color: #fcf6e9;
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     transition: 0.5s;
   }
   .year:hover {
@@ -516,6 +516,24 @@ h6 {
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/052/438/797/large/paul-seagull-compositing-9.jpg?1659794101);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .archive {
+    width: 10rem;
+    height: 18rem;
+  }
+  .year {
+    width: 8rem;
+    border-radius: 1rem;
+    height: 2.5rem;
+  }
+  .btn {
+    padding: 0.4rem 1.2rem 0.4rem 1.2rem;
   }
 }
 @media screen and (max-width: 500px) {

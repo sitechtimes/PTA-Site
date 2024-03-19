@@ -100,7 +100,18 @@ collections: # A list of collections the CMS should be able to edit
               "Must have more than 10 characters and less than 500 characters",
             ],
         }
-      - { label: "Event Sign Up Link", name: "link", widjet: "string", required: true}
+      - {
+          label: "Event Sign Up Link",
+          name: "signup",
+          widjet: "string",
+          required: true,
+        }
+      - {
+          label: "Event Donate Link",
+          name: "donate",
+          widjet: "string",
+          required: true,
+        }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
@@ -109,7 +120,6 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "link", name: "link", widget: "string", required: true }
-
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
     preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
@@ -125,3 +135,11 @@ collections: # A list of collections the CMS should be able to edit
           required: true,
           preview_path: "/upload/{{filename}}",
         }
+  - name: "Recordings" # Used in routes, e.g., /admin/collections/:slug/edit
+    create: true # Allow users to create new documents in this collection
+    label: "Meeting Recordings Links" # Used in the UI, e.g., "New Post"
+    slug: "{{year}}-{{month}}"
+    folder: "pta/content/recordings" # The path to the folder where the documents are stored
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "link", name: "link", widget: "string", required: true }
