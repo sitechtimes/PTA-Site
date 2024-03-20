@@ -28,7 +28,7 @@
             </h3>
           </a>
         </div>
-        <div ref="minutes" id="minutes">
+        <div ref="recordings" id="recordings">
         <h2 class="subh">MEETING RECORDINGS</h2>
         <div v-for="recording in recordings">
           <a
@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       minutes: Array,
+      recordings: Array,
     };
   },
   methods: {
