@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       minutes: Array,
+      recordings: Array'
     };
   },
   methods: {
