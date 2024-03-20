@@ -384,7 +384,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
