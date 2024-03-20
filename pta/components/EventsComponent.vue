@@ -18,10 +18,10 @@
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <a href="{{ selectedEvent.signup }}" target="_blank"
+      <a :href="selectedEvent.signup" target="_blank"
         ><button class="btn" id="reg">Register</button></a
       >
-      <a href="{{ selectedEvent.donate }}" target="_blank"
+      <a :href="selectedEvent.donate" target="_blank"
         ><button class="btn bt2" id="reg">Donate</button></a
       >
     </Popup>

@@ -10,5 +10,6 @@ description: The PTA is sending students an important fundraising letter home
   families.  We would appreciate all (1300+) families to continue to donate to
   reach to our goal of $125,750.00 for this school year!  Your donation impacts
   every child at Staten Island Technical High School.
-link: "https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link"
+signup: "https://docs.google.com/forms/d/e/1FAIpQLSf4mcXR8keN80UlkQJ4fM7_ir_QphIHjw-T9iCmVVSGEFgFFw/viewform?usp=sf_link"
+donate: "https://media.istockphoto.com/id/1264688909/vector/please-donate-vector-sign.jpg?s=612x612&w=0&k=20&c=F3eMz3_c-JDeOZ4LLoX4jzCBEolnB_SZCoygJAMMMgQ="
 ---
