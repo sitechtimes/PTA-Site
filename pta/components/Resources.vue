@@ -1,6 +1,5 @@
 <template>
     <div class="resources">
-        <h2 class="heading">RESOURCES</h2>
          <!-- <div class="resourcegrid" v-for="resource in resources">
             <div class="resource">
                 <img :src="resource.image" alt="photo img">
