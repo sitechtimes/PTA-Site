@@ -27,7 +27,7 @@
                 <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="">
                 <div class="info">
                     <h3 class="name">Naviance </h3>
-                    <h4 class="description">Parents can track achievement to post- secondary goals and success.  </h4>
+                    <h4 class="description">Parents can track secondary goals and success.  </h4>
                     
                     <a target="_blank" href="https://id.naviance.com/"><button class="button">Read More</button></a>
                 </div>
@@ -41,6 +41,16 @@
                     <h4 class="description">Keep track of student documents 
 and official city calendars   </h4>
 <a target="_blank" href="https://www.schools.nyc.gov/">  <button class="button">Read More</button></a>
+                </div>
+
+            </div>
+
+             <div class="resource">
+                <img src="./icons/NavBar-Icons/pta-logo.png" alt="">
+                <div class="info">
+                    <h3 class="name">SITHS PTA By-laws</h3>
+                    <h4 class="description">Read more about the PTA</h4>
+<a target="_blank" href="https://docs.google.com/document/d/1gNyKPMDOUxeW2AadJFuOXtla3jd_bzjw/edit?usp=sharing&ouid=109431569121511580485&rtpof=true&sd=true">  <button class="button">Read More</button></a>
                 </div>
 
             </div>
@@ -410,6 +420,17 @@ transition: 0.3s;
 }
 }
 @media only screen and (max-width: 576px) {
+  .heading{
+        margin-left: 8vw;
+  }
+  .name {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-family: "Kumbh Sans", san serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
     img{
     width: 25%;
     margin: auto;
@@ -435,8 +456,7 @@ padding: 0.2rem;
 border-radius: 2rem;
 font-weight: 550;
 border: none;
-margin-top: 0.9rem;
-
+margin-top: 0.8rem;
 transition: 0.3s;
 }
 .button:hover{
@@ -444,8 +464,9 @@ transition: 0.3s;
     opacity: 0.6;
 }
 .description {
-    margin-top: 0.2rem;
-  font-size: 0.75rem;
+  width: 95%;
+    margin-top: 0.3rem;
+  font-size: 0.85rem;
   color: var(--text-color);
   font-family: "Karla", sans serif;
   font-weight: 400;
@@ -463,7 +484,7 @@ padding-bottom: 5rem;
   margin: auto;
 }
 }
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 420px){
 .resource{
     border: 1px #D6D6D6 solid;
   background-color: white;
@@ -475,6 +496,34 @@ padding-bottom: 5rem;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.178);
   display: flex;
   flex-direction: row;
+}
+.button{
+background-color: #C9B23A;
+color: white;
+font-family: "Kumbh Sans", san serif;
+font-size: 0.80rem; width: 60%;
+padding: 0.2rem;
+border-radius: 2rem;
+font-weight: 550;
+border: none;
+margin-top: 0.5rem;
+transition: 0.3s;
+}
+.resourcegrid {
+  margin-top: 0;
+  padding-top: 2rem;
+padding-bottom: 2.5rem;
+  margin: auto;
+}
+.description {
+  width: 90%;
+    margin-top: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--text-color);
+  font-family: "Karla", sans serif;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1;
 }
 }
 </style>

@@ -87,6 +87,11 @@ export default {
     margin-left: 12%;
   }
 }
+@media only screen and (max-width: 450px){
+  #subh{
+    margin-top: 3rem;
+  }
+}
 /* @media only screen and (max-width: 1600px) {
   .aboutUs {
     width: 80vw;

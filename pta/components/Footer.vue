@@ -17,13 +17,7 @@
       >
         <img src="../assets/SoMed_Logos/instagram.svg" alt="instagram icon" />
       </a>
-      <a
-        href="https://twitter.com/sitechpta?s=21&t=dZH_wZg5Nkoix7CNanukPQ"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="../assets/SoMed_Logos/twitter.svg" alt="twitter icon" />
-      </a>
+     
     </div>
     <div class="caption">
       <p class="email">sitechpta@gmail.com</p>

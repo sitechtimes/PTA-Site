@@ -322,7 +322,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -384,7 +384,7 @@ a {
 }
 #staff {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -524,15 +524,15 @@ button:hover {
     font-size: 3.7vw;
   }
   .staffRole {
-    font-size: 5.7vw;
+    font-size: 5vw;
   }
   .caption {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 @media only screen and (max-width: 450px) {
   .caption {
-    font-size: 5vw;
+    font-size: 2.5vw;
   }
   .subtext {
     font-size: 6vw;
