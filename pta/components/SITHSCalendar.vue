@@ -1,9 +1,9 @@
 <template>
-    <h1 class="heading2">SITHS EVENTS</h1>
+    <h1 class="heading">SITHS EVENTS</h1>
     <div class="section">
         <iframe 
             id="calendar" 
-            class="cal2"
+            class="cal"
             src="https://calendar.google.com/calendar/embed?height=700&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=YmM3MzI4NWRjNGQ2YTQzNjFiZmFmNzZjYjkzMjlkYzMyY2Y2ZDUyODA4M2QxZTdiMmVlNTVjMDNhMzI0ODIxN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" 
             style="border:solid 1px #777" 
             frameborder="0" 
