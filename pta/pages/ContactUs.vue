@@ -376,12 +376,6 @@ a {
   overflow-x: visible;
   width: 15vw;
 }
-.staffPfp {
-  height: 10vw;
-  width: 10vw;
-  overflow-x: hidden;
-  border-radius: 30vw;
-}
 #staff {
   display: flex;
   justify-content: start;
@@ -531,11 +525,14 @@ button:hover {
   }
 }
 @media only screen and (max-width: 450px) {
-  .caption {
-    font-size: 2.5vw;
+  /* email address */
+  .caption { 
+    font-size: 2.7vw;
+    margin-top: 0;
   }
+/* name */
   .subtext {
-    font-size: 6vw;
+    font-size: 3vw;
   }
   h1 {
     font-size: 4vw;
@@ -551,13 +548,29 @@ button:hover {
     font-size: 4vw;
   }
   .staffRole {
-    font-size: 5.6vw;
+    font-size: 3vw;
+  }
+  .staffPfp{
+    height: 12vw;
+    width: 12vw;
   }
   button {
     width: 28vw;
     margin-right: 3vw;
     margin-left: 3vw;
   }
+  .staffCon {
+  margin: 2vw;
+  padding: 2vw;
+  width: 8rem;
+}
+#staff {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
 }
 @media only screen and (max-width: 356px) {
   h1 {
@@ -581,5 +594,10 @@ button:hover {
   .staffRole {
     font-size: 5.7vw;
   }
+  .staffCon {
+  margin: 0;
+  padding: 2vw;
+  width: 8rem;
+}
 }
 </style>
