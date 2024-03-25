@@ -1,9 +1,9 @@
 <template>
-    <h1 class="heading">SITHS EVENTS</h1>
+    <h1 class="heading2">SITHS EVENTS</h1>
     <div class="section">
         <iframe 
             id="calendar" 
-            class="cal"
+            class="cal2"
             src="https://calendar.google.com/calendar/embed?height=700&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=YmM3MzI4NWRjNGQ2YTQzNjFiZmFmNzZjYjkzMjlkYzMyY2Y2ZDUyODA4M2QxZTdiMmVlNTVjMDNhMzI0ODIxN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" 
             style="border:solid 1px #777" 
             frameborder="0" 
@@ -13,14 +13,6 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-export default{
-    mounted() {
-    //  const { button } = this.$refs;
-    // gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
-    // gsap.from(".cal", { duration: 1, y: 100, delay: 0.8, opacity: 0 });
-  },
-}
 </script>
 
 <style lang="css" scoped>
@@ -31,7 +23,7 @@ export default{
     display: flex;
     margin: auto;
     margin-top: 3rem;
-    width: 80vw; 
+    width: 83vw; 
     height: 70vh;
 }
 
@@ -69,6 +61,7 @@ export default{
     width: 80%;
     height: 60vw;
     margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 }
 
