@@ -55,7 +55,7 @@
                 ></div>
                 <div>
                   <h6>{{ item.name }}</h6>
-                  <p>thanks!</p>
+                  <p>Thank You!</p>
                 </div>
               </div>
             </div>
@@ -274,7 +274,7 @@ h2 {
   justify-content: center;
 }
 .showArchive {
-  left: 0%;
+  left: 5%;
   position: absolute;
 }
 .archive {
@@ -287,6 +287,7 @@ h2 {
   background: white;
   padding: 1rem 0rem 1rem 1rem;
   border-radius: 1rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.096);
 }
 .years {
   display: flex;
@@ -299,7 +300,7 @@ h2 {
 
 .year {
   margin: 5px;
-  width: 16rem;
+  width: 15rem;
   height: 4rem;
   background-color: #fcf6e9;
   border-radius: 1rem;
@@ -318,7 +319,7 @@ h2 {
   transition: all 1s ease-in;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
 }
 h4 {
@@ -327,8 +328,12 @@ h4 {
 }
 h6 {
   font-size: 1.4rem;
-  margin: 7%;
+  margin: 8%;
+margin-bottom: 0;
   width: max-content;
+}
+p{
+  margin: 0;
 }
 .contactInfo {
   margin: 0.2rem;
@@ -370,10 +375,10 @@ h6 {
   align-items: center;
 }
 .gratitudeImg {
-  border-radius: 15px;
+  border-radius: 50rem;
   border: #483221 solid 3px;
-  width: 18rem;
-  height: 21rem;
+  width: 16rem;
+  height: 16rem;
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
@@ -396,10 +401,10 @@ h6 {
     align-items: center;
   }
   .gratitudeImg {
-    border-radius: 20px;
+    border-radius: 20rem;
     border: #483221 solid 3px;
-    width: 15rem;
-    height: 18rem;
+    width: 14rem;
+    height: 14rem;
     background-size: cover;
   }
   .leftComponent {
@@ -545,9 +550,12 @@ h6 {
   }
 }
 @media screen and (max-width: 500px) {
+  h2{
+    font-size: 1.5rem;
+  }
   .gratitudeImg {
     width: 10rem;
-    height: 13rem;
+    height: 10rem;
   }
 }
 </style>
