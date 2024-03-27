@@ -36,7 +36,7 @@
         <div class="staffCon" v-for="people in staff">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
-          <h4 class="subtext staffRole">{{ people.roles }}</h4>
+          <h4 class="staffRole">{{ people.roles }}</h4>
           <a
             id="staffEmail"
             class="caption"
@@ -498,8 +498,25 @@ button:hover {
     height: 130vw;
   }
   .staffRole {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
+  .subtext{
+    font-size: 2.8vw;
+    margin-top: 0.5rem;
+  }
+.subh{
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.staffPfp{
+  height: 15vw;
+  width: 15vw;
+  margin-top: 1.75rem;
+}
+.caption{
+  font-size: 2.2vw;
+}
 }
 @media only screen and (max-width: 576px) {
   .staffCon {
@@ -545,8 +562,9 @@ button:hover {
   }
   p,
   li {
-    font-size: 4vw;
+    font-size: 2vw;
   }
+  
   .staffRole {
     font-size: 3vw;
   }
@@ -560,9 +578,11 @@ button:hover {
     margin-left: 3vw;
   }
   .staffCon {
-  margin: 2vw;
-  padding: 2vw;
+  margin: 3vw;
   width: 8rem;
+}
+.subh{
+  font-size: 1.5rem;
 }
 #staff {
   display: flex;
@@ -592,12 +612,15 @@ button:hover {
     margin-left: 3vw;
   }
   .staffRole {
-    font-size: 5.7vw;
+    font-size: 3.5vw;
+  }
+  .subtext{
+    font-size: 4.5vw;
   }
   .staffCon {
-  margin: 0;
-  padding: 2vw;
+  margin: 3vw;
   width: 8rem;
 }
+
 }
 </style>
