@@ -6,7 +6,7 @@
     </div>
     <div class="buttons">
       <button
-        class="subtext"
+        class="contacts-type"
         @click="(shownDiv = 'staff'), tester()"
         v-bind:style="{ backgroundColor: staffColor }"
         :class="{ shown: shownDiv === 'staff' }"
@@ -14,7 +14,7 @@
         Staff
       </button>
       <button
-        class="subtext"
+        class="contacts-type"
         @click="(shownDiv = 'join'), tester()"
         v-bind:style="{ backgroundColor: joinColor }"
         :class="{ shown: shownDiv === 'join' }"
@@ -22,7 +22,7 @@
         Join Us
       </button>
       <button
-        class="subtext"
+        class="contacts-type"
         @click="(shownDiv = 'sol'), tester()"
         v-bind:style="{ backgroundColor: solColor }"
         :class="{ shown: shownDiv === 'sol' }"
@@ -303,6 +303,9 @@ a {
   margin: 0;
   overflow-x: hidden;
 }
+.contacts-type{
+  font-size: 2.7vw;
+}
 .subh {
   margin-top: 0;
 }
@@ -443,6 +446,10 @@ button:hover {
   }
 }
 @media only screen and (max-width: 820px) {
+  .contacts-type{
+    font-size: 1.6rem;
+  }
+
   #gradient {
     height: 140vw;
   }
@@ -542,6 +549,10 @@ button:hover {
   }
 }
 @media only screen and (max-width: 450px) {
+  .contacts-type{
+    font-size: 1rem;
+  }
+
   /* email address */
   .caption { 
     font-size: 2.7vw;
@@ -562,7 +573,7 @@ button:hover {
   }
   p,
   li {
-    font-size: 2vw;
+    font-size: 3.5vw;
   }
   
   .staffRole {
@@ -579,7 +590,8 @@ button:hover {
   }
   .staffCon {
   margin: 3vw;
-  width: 8rem;
+  padding: 0.8vw;
+  width: 7.5rem;
 }
 .subh{
   font-size: 1.5rem;
