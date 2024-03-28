@@ -86,6 +86,15 @@ export default {
         this.minutes = response.slice(1).slice(-3);
       });
     },
+    async getRecordings() {
+      const query = queryContent("/recordings").find();
+      console.log(query);
+
+      query.then((response) => {
+        console.log(response.slice(1).slice(-3), response.length);
+        this.minutes = response.slice(1).slice(-3);
+      });
+    },
   },
   mounted() {
     this.getMinutes();
@@ -97,6 +106,7 @@ export default {
       x: -600,
       opacity: 0,
     });
+    
     gsap.from("#minutes", {
       scrollTrigger: "#minutes",
       delay: 0.6,
@@ -121,13 +131,15 @@ export default {
 } */
 @import "../assets/base.css";
 .subh {
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
+  margin-top: 0.5rem;
 }
 #minutes {
-  margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-top: 1rem;
 }
-
+.text{
+  margin-bottom: 0rem;
+}
 .linkCon {
   text-decoration-color: var(--text-color);
   display: flex;
