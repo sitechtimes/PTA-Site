@@ -28,7 +28,7 @@
             </h3>
           </a>
         </div>
-        <div ref="recordings" id="recordings">
+                      <div ref="recordings" id="recordings">
         <h2 class="subh">MEETING RECORDINGS</h2>
         <div v-for="recording in recordings">
           <a
@@ -47,7 +47,8 @@
             </h3>
           </a>
         </div>
-                </div>
+        </div>
+
       </div>
     </div>
     <div ref="gallery" id="gallery">
@@ -92,7 +93,11 @@ export default {
 
       query.then((response) => {
         console.log(response.slice(1).slice(-3), response.length);
+<<<<<<< Updated upstream
         this.minutes = response.slice(1).slice(-3);
+=======
+        this.recordings = response.slice(1).slice(-3);
+>>>>>>> Stashed changes
       });
     },
   },
@@ -109,6 +114,22 @@ export default {
     
     gsap.from("#minutes", {
       scrollTrigger: "#minutes",
+      delay: 0.6,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+        this.getRecordings();
+    console.log("mount");
+    gsap.from("#activities", {
+      scrollTrigger: "#activities",
+      delay: 0.6,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+    gsap.from("#recordings", {
+      scrollTrigger: "#recordings",
       delay: 0.6,
       duration: 1,
       x: -600,
@@ -135,10 +156,15 @@ export default {
   margin-top: 0.5rem;
 }
 #minutes {
+<<<<<<< Updated upstream
   margin-top: 1rem;
 }
 .text{
   margin-bottom: 0rem;
+=======
+  margin-top: 0rem;
+  margin-bottom: 10rem;
+>>>>>>> Stashed changes
 }
 .linkCon {
   text-decoration-color: var(--text-color);
