@@ -430,6 +430,23 @@ button:hover {
   #gradient {
     height: 80vw;
   }
+  .contacts-type{
+    font-size: 2.8vw;
+  }
+  .container__box{
+    width: 80vw;
+  }
+  #staff {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  .staffCon{
+    width: 15vw;
+    margin: 5vw;
+  }
+}
 }
 @media only screen and (max-width: 992px) {
   #gradient {
