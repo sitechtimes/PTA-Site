@@ -93,11 +93,7 @@ export default {
 
       query.then((response) => {
         console.log(response.slice(1).slice(-3), response.length);
-<<<<<<< Updated upstream
-        this.minutes = response.slice(1).slice(-3);
-=======
         this.recordings = response.slice(1).slice(-3);
->>>>>>> Stashed changes
       });
     },
   },
@@ -108,8 +104,8 @@ export default {
       scrollTrigger: "#activities",
       delay: 0.6,
       duration: 1,
-      x: -600,
-      opacity: 0,
+      x: 0,
+      opacity: 100,
     });
     
     gsap.from("#minutes", {
@@ -119,7 +115,7 @@ export default {
       x: -600,
       opacity: 0,
     });
-        this.getRecordings();
+    this.getRecordings();
     console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
@@ -156,15 +152,8 @@ export default {
   margin-top: 0.5rem;
 }
 #minutes {
-<<<<<<< Updated upstream
-  margin-top: 1rem;
-}
-.text{
-  margin-bottom: 0rem;
-=======
   margin-top: 0rem;
   margin-bottom: 10rem;
->>>>>>> Stashed changes
 }
 .linkCon {
   text-decoration-color: var(--text-color);
