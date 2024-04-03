@@ -415,7 +415,7 @@ button {
 button:hover {
   background-color: #fde7cf;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px){
   .staffRole {
     font-size: 1.5vw;
   }
@@ -426,6 +426,7 @@ button:hover {
     font-size: 2vw;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   #gradient {
     height: 80vw;
@@ -442,11 +443,21 @@ button:hover {
   text-align: center;
   flex-wrap: wrap;
   overflow-x: hidden;
+}
   .staffCon{
     width: 15vw;
     margin: 5vw;
   }
-}
+
+.staffRole {
+    font-size: 1.5vw;
+  }
+  p {
+    font-size: 2vw;
+  }
+  li {
+    font-size: 2vw;
+  }
 }
 @media only screen and (max-width: 992px) {
   #gradient {
@@ -516,16 +527,16 @@ button:hover {
 @media only screen and (max-width: 768px) {
   li,
   p {
-    font-size: 3vw;
+    font-size: 2.3vw;
   }
   #gradient {
     height: 130vw;
   }
   .staffRole {
-    font-size: 2.5vw;
+    font-size: 2.3vw;
   }
   .subtext{
-    font-size: 2.8vw;
+    font-size: 2.5vw;
     margin-top: 0.5rem;
   }
 .subh{
@@ -534,12 +545,16 @@ button:hover {
   margin-top: 1rem;
 }
 .staffPfp{
-  height: 15vw;
-  width: 15vw;
+  height: 10vw;
+  width: 10vw;
   margin-top: 1.75rem;
 }
+.staffCon{
+  width: 20vw;
+  margin: 2.75vw;
+}
 .caption{
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
 }
 @media only screen and (max-width: 576px) {
@@ -572,7 +587,7 @@ button:hover {
 
   /* email address */
   .caption { 
-    font-size: 2.7vw;
+    font-size: 2.3vw;
     margin-top: 0;
   }
 /* name */
@@ -580,17 +595,17 @@ button:hover {
     font-size: 3vw;
   }
   h1 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   #gradient {
     height: 230vw;
   }
   h2 {
-    font-size: 3.8vw;
+    font-size: 3.3vw;
   }
   p,
   li {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   
   .staffRole {
@@ -606,8 +621,8 @@ button:hover {
     margin-left: 3vw;
   }
   .staffCon {
-  margin: 3vw;
-  padding: 0.8vw;
+  margin: 4vw;
+  padding: 0;
   width: 7.5rem;
 }
 .subh{
