@@ -15,8 +15,9 @@
               scrolling="no"
             ></iframe>
           </div>
+
         </section>
-                <EventsGallery />
+          <SITHSCalendar/>
       </div>
 
     </div>
