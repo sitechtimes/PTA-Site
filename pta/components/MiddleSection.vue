@@ -270,6 +270,9 @@ img {
   }
 }
 @media only screen and (max-width: 576px) {
+  #minutes{
+    padding-bottom: 1rem;
+  }
   #section__MiddleSection {
     display: flex;
     flex-direction: column;
@@ -299,7 +302,13 @@ img {
     width: 70vw;
   }
 }
-
+.text{
+  margin-top: 0;
+}
+.subh{
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
 @media only screen and (max-width: 450px) {
   #gallery {
     width: 80vw;
