@@ -282,14 +282,14 @@ h1 {
   font-size: 2.5vw;
 }
 h2 {
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-left: 5vw;
   margin-top: 2.5vw;
 }
 
 li,
 p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -304,22 +304,24 @@ a {
   overflow-x: hidden;
 }
 .contacts-type{
-  font-size: 2.7vw;
+  font-size: 1.8vw;
+  padding: 0.5rem 0.7rem;
 }
 .subh {
   margin-top: 0;
 }
 .staffCon {
-  margin: 3vw;
+  margin: 1.2vw;
   overflow-x: hidden;
   width: 15vw;
 }
 .subtext {
   font-weight: bolder;
+  font-size: 1.35vw;
 }
 .staffPfp {
-  height: 10vw;
-  width: 10vw;
+  height: 6vw;
+  width: 6vw;
   overflow-x: hidden;
   border-radius: 30vw;
 }
@@ -468,6 +470,7 @@ button:hover {
   }
   .staffCon {
     width: 40%;
+    margin: 2rem 1rem;
   }
   .staffRole {
     font-size: 1.6vw;
@@ -513,14 +516,14 @@ button:hover {
     width: 46%;
   }
   .staffRole {
-    font-size: 2.8vw;
+    font-size: 2vw;
   }
   .container__box {
     width: 80vw;
   }
   .staffPfp {
-    height: 20vw;
-    width: 20vw;
+    height: 10vw;
+    width: 10vw;
     margin-top: 5vw;
   }
 }
@@ -559,7 +562,7 @@ button:hover {
 }
 @media only screen and (max-width: 576px) {
   .staffCon {
-    width: 100%;
+    width: 20vw;
   }
   #gradient {
     height: 155vw;
@@ -571,13 +574,19 @@ button:hover {
   }
   li,
   p {
-    font-size: 3.7vw;
+    font-size: 2.6vw;
   }
   .staffRole {
-    font-size: 5vw;
+    font-size: 2.5vw;
   }
   .caption {
-    font-size: 2.5vw;
+    font-size: 2vw;
+  }
+  .subh{
+    font-size: 5vw;
+  }
+  .contacts-type{
+    font-size: 4vw;
   }
 }
 @media only screen and (max-width: 450px) {
