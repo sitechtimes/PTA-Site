@@ -21,7 +21,7 @@
         class="li"
         ref="li"
       >
-        <NuxtLink to="/Events" id="eventsLink" ref="eventsLink">
+        <NuxtLink to="/Events" @click="(page='Events'), underline()" id="eventsLink" ref="eventsLink">
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
             <h5 class="listDate">
