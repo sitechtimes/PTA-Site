@@ -271,7 +271,7 @@ button:hover {
   margin-right: auto;
   margin-top: 2vw;
   padding: 3vw;
-  padding-top: 4vw;
+  padding-top: 2.5vw;
   border-radius: 1.5rem;
   color: #483221;
   font-family: var(--font-heading);
@@ -282,9 +282,9 @@ h1 {
   font-size: 2.5vw;
 }
 h2 {
-  font-size: 1.5vw;
   margin-left: 5vw;
-  margin-top: 2.5vw;
+  margin-top: 1vw;
+  font-size: 2vw;
 }
 
 li,
@@ -294,8 +294,8 @@ p {
   margin-right: 5vw;
 }
 p {
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 0.7vw;
+  margin-bottom: 0.7vw;
 }
 h3,
 h4,
@@ -309,9 +309,10 @@ a {
 }
 .subh {
   margin-top: 0;
+  margin-bottom: 0;
 }
 .staffCon {
-  margin: 1.2vw;
+  margin: 0vw, 1.2vw;
   overflow-x: hidden;
   width: 15vw;
 }
@@ -368,7 +369,7 @@ h1 {
   margin-top: 0;
 }
 h2 {
-  font-size: 1.7vw;
+  font-size: 1.3vw;
 }
 h3,
 h4,
