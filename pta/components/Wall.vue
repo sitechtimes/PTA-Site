@@ -274,9 +274,9 @@ h2 {
   height: 33rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
-  color: #483221;
+  color: #fff;
   text-align: center;
-  background: white;
+  background: var(--text-color);
   padding: 1rem 0rem 1rem 1rem;
   border-radius: 1rem;
 }
@@ -293,13 +293,12 @@ h2 {
   margin: 5px;
   width: 16rem;
   height: 4rem;
-  background-color: #fcf6e9;
   border-radius: 1rem;
   transition: 0.5s;
 }
 .year:hover {
-  background-color: #643935;
-  color: white;
+  background-color: #fff;
+  color: var(--text-color);
   cursor: pointer;
 }
 .btn {
