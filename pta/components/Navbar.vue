@@ -99,7 +99,12 @@
           Donate</NuxtLink
         >
       </div>
-
+<div class="group">
+  <div class="translate">
+      <li><a class="tb" href="#" @click.prevent="changeLanguage('en')">EN</a></li>
+      <li><a class="tb" href="#" @click.prevent="changeLanguage('ch')">CH</a></li>
+</div>
+</div>
     </div>
     <Menu />
   </div>
@@ -184,11 +189,20 @@ export default {
 @import url(../assets/base.css);
 .translate{
   display: flex;
+flex-direction: row;
+}
+li{
+list-style-type: none;
+margin: 0%;
+padding: 0;
+}
+.translate{
+  display: flex;
   flex-direction: row;
 }
 a {
   display: flex;
-  width: 7rem;
+  width: 6rem;
   color: var(--text-color);
   transition: 0.3s;
 }
@@ -237,7 +251,7 @@ a.nuxt-link-exact-active {
 }
 
 .group {
-  width: 12rem;
+  width: 10rem;
   align-self: center;
   margin-top: 1.5rem;
 }
