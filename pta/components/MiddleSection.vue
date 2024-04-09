@@ -28,7 +28,7 @@
             </h3>
           </a>
         </div>
-        <div ref="recordings" id="recordings">
+                      <div ref="recordings" id="recordings">
         <h2 class="subh">MEETING RECORDINGS</h2>
         <div v-for="recording in recordings">
           <a
@@ -47,7 +47,8 @@
             </h3>
           </a>
         </div>
-                </div>
+        </div>
+
       </div>
     </div>
     <div ref="gallery" id="gallery">
@@ -86,6 +87,15 @@ export default {
         this.minutes = response.slice(1).slice(-3);
       });
     },
+    async getRecordings() {
+      const query = queryContent("/recordings").find();
+      console.log(query);
+
+      query.then((response) => {
+        console.log(response.slice(1).slice(-3), response.length);
+        this.recordings = response.slice(1).slice(-3);
+      });
+    },
   },
   mounted() {
     this.getMinutes();
@@ -94,11 +104,28 @@ export default {
       scrollTrigger: "#activities",
       delay: 0.6,
       duration: 1,
+      x: 0,
+      opacity: 100,
+    });
+    
+    gsap.from("#minutes", {
+      scrollTrigger: "#minutes",
+      delay: 0.6,
+      duration: 1,
       x: -600,
       opacity: 0,
     });
-    gsap.from("#minutes", {
-      scrollTrigger: "#minutes",
+    this.getRecordings();
+    console.log("mount");
+    gsap.from("#activities", {
+      scrollTrigger: "#activities",
+      delay: 0.6,
+      duration: 1,
+      x: -600,
+      opacity: 0,
+    });
+    gsap.from("#recordings", {
+      scrollTrigger: "#recordings",
       delay: 0.6,
       duration: 1,
       x: -600,
@@ -121,13 +148,13 @@ export default {
 } */
 @import "../assets/base.css";
 .subh {
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
+  margin-top: 0.5rem;
 }
 #minutes {
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-bottom: 10rem;
 }
-
 .linkCon {
   text-decoration-color: var(--text-color);
   display: flex;
@@ -243,6 +270,9 @@ img {
   }
 }
 @media only screen and (max-width: 576px) {
+  #minutes{
+    padding-bottom: 1rem;
+  }
   #section__MiddleSection {
     display: flex;
     flex-direction: column;
@@ -272,7 +302,13 @@ img {
     width: 70vw;
   }
 }
-
+.text{
+  margin-top: 0;
+}
+.subh{
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
 @media only screen and (max-width: 450px) {
   #gallery {
     width: 80vw;

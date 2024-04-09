@@ -14,12 +14,11 @@
   --darker-brown: #312217;
   --bg-gradient: linear-gradient(
     180deg,
-    #feb89a 0%,
-    #fdd8b8 18%,
-    #ffecc5 40%,
-    #faf2e1 75%,
-    #faf2e1 80%,
-    #fff 95%
+    #FFB393 0%,
+    #FFDCBC 20%,
+    #FFF1D7 40%,
+    #FFEDDC 80%,
+    #fff 100%
   );
   /*   --footer-bg: linear-gradient(
     180deg,
