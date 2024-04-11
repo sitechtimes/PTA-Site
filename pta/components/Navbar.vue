@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <div id="logoContainer">
-      <NuxtLink to="/" @click="(page = 'index'), underline()">
+      <NuxtLink to="/" @click="(page = 'index')">
         <img
           class="logo"
           src="../components/icons/NavBar-Icons/pta-logo.png"
@@ -15,8 +15,8 @@
           to="/"
           id="homeLink"
           ref="homeLink"
-          @click="(page = 'index'), underline()"
-          v-bind:style="({ animation: fadeIn }, { textDecoration: homeLine })"
+          @click="(page = 'index')"
+          v-bind:style="({ animation: fadeIn })" 
         >
           <img
             class="icon"
@@ -27,13 +27,14 @@
           Home</NuxtLink
         >
       </div>
-      <div class="group">
+    
+       <div class="group">
         <NuxtLink
           to="/Events"
           id="eventsLink"
           ref="eventsLink"
-          @click="(page = 'Events'), underline()"
-          v-bind:style="({ animation: fadeIn }, { textDecoration: eventsLine })"
+          @click="(page = 'Events')"
+          v-bind:style="({ animation: fadeIn })"
         >
           <img
             class="icon"
@@ -41,17 +42,19 @@
             src="../components/icons/NavBar-Icons/calendar.svg"
             alt="dark brown icon of a calendar"
           />
-          Events</NuxtLink
-        >
-      </div>
+          Events</NuxtLink > 
+        </div>
+        
+
+     
       <div class="group">
         <NuxtLink
           to="/ContactUs"
           id="contactLink"
           ref="contactLink"
-          @click="(page = 'ContactUs'), underline()"
+          @click="(page = 'ContactUs')"
           v-bind:style="
-            ({ animation: fadeIn }, { textDecoration: contactLine })
+            ({ animation: fadeIn })
           "
         >
           <img
@@ -68,9 +71,9 @@
           to="/Gratitude"
           id="gratitudeLink"
           ref="gratitudeLink"
-          @click="(page = 'Gratitude'), underline()"
+          @click="(page = 'Gratitude')"
           v-bind:style="
-            ({ animation: fadeIn }, { textDecoration: gratitudeLine })
+            ({ animation: fadeIn })
           "
         >
           <img
@@ -87,8 +90,8 @@
           to="/Donate"
           id="donateLink"
           ref="donateLink"
-          @click="(page = 'Donate'), underline()"
-          v-bind:style="({ animation: fade }, { textDecoration: donateLine })"
+          @click="(page = 'Donate')"
+          v-bind:style="({ animation: fade })"
         >
           <img
             class="icon"
@@ -111,16 +114,16 @@ export default {
   data() {
     return {
       page: String,
-      homeLine: "underline var(--text-color) 0.2rem",
-      eventsLine: "transparent",
+      // homeLine: "underline var(--text-color) 0.2rem",
+    /*   eventsLine: "transparent",
       contactLine: "transparent",
-      donateLine: "transparent",
-      gratitudeLine: "transparent",
+      donateLine: "transparent", */
+      // gratitudeLine: "transparent",
       fade: "fadeIn 5s;",
     };
   },
   methods: {
-    underline() {
+    /* underline() {
       if (this.page === "index") {
         console.log(this.page);
         this.fade = "fadeIn 5s;";
@@ -163,14 +166,14 @@ export default {
         this.contactLine = "transparent";
         this.gratitudeLine = "transparent";
         this.donateLine = "underline var(--text-color) 0.2rem";
-      }
-    },
+      } */
+    /* }, */
     currentRoute() {
       const router = useRouter();
       let currentPathObject = router.currentRoute.value;
       console.log(currentPathObject.name);
       this.page = currentPathObject.name;
-      this.underline();
+      // this.underline();
     },
   },
   mounted() {
@@ -234,9 +237,8 @@ a.nuxt-link-exact-active {
   margin-top: 1.5rem;
 }
 
-a:hover {
-  text-decoration: underline var(--text-color) 0.2rem;
-}
+/* a:hover {
+/*   /* text-decoration: underline var(--text-color) 0.2rem; */
 
 a:visited {
   color: var(--text-color);
