@@ -428,6 +428,9 @@ button:hover {
   li {
     font-size: 2vw;
   }
+  h2{
+    font-size: 2vw;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -451,7 +454,12 @@ button:hover {
     width: 15vw;
     margin: 5vw;
   }
-
+  .subtext{
+    font-size: 1.7vw
+  }
+  .caption{
+    font-size: 1.3vw;
+  }
 .staffRole {
     font-size: 1.5vw;
   }
@@ -476,10 +484,16 @@ button:hover {
   .staffRole {
     font-size: 1.6vw;
   }
+  h2{
+    font-size: 2vw;
+  }
 }
 @media only screen and (max-width: 820px) {
   .contacts-type{
     font-size: 1.6rem;
+  }
+  .subtext{
+    font-size: 2.3vw;
   }
 
   #gradient {
@@ -537,10 +551,11 @@ button:hover {
     height: 130vw;
   }
   .staffRole {
-    font-size: 2.3vw;
+    font-size: 1.9vw;
+    margin-top: 0.3vh;
   }
   .subtext{
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     margin-top: 0.5rem;
   }
 .subh{
@@ -558,7 +573,7 @@ button:hover {
   margin: 2.75vw;
 }
 .caption{
-  font-size: 2vw;
+  font-size: 1.75vw;
 }
 }
 @media only screen and (max-width: 576px) {
