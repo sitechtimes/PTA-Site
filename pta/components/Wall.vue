@@ -60,13 +60,13 @@
               </div>
             </div>
           </div>
-<div class="archive" ref="archive"></div>
-          <div><div class="showArchive" ref="showArchive" @click="show = !show">
+
+          <div class="showArchive" ref="showArchive" @click="show = !show">
             <div v-if="show"><button class="btn">&#62;</button></div>
             <div v-else>
               <button class="btn">&#60;</button>
+              <div class="archive" ref="archive">
                 <h3>Archive</h3>
-              </div>
                 <div class="yearsContainer">
                   <div class="years">
                     <div
