@@ -61,26 +61,58 @@
             </div>
           </div>
 
-          <div class="showArchive" ref="showArchive" @click="show = !show">
-            <div v-if="show"><button class="btn">&#62;</button></div>
-            <div v-else>
-              <button class="btn">&#60;</button>
-              <div class="archive" ref="archive">
-                <h3>Archive</h3>
-                <div class="yearsContainer">
-                  <div class="years">
-                    <div
-                      class="year"
-                      v-for="item in yearsShown"
-                      @click="changeYr(item), filterArr(item)"
-                      :key="item"
-                    >
-                      <h4>{{ item }}</h4>
-                    </div>
-                  </div>
+          <div class="archiveCon" ref="archiveCon">
+            <div class="archivehead">
+              <h3 class="archive">Archive</h3>
+
+              <button
+                class="showBtn"
+                @click="
+                  up = !up;
+                  show = !show;
+                "
+              >
+                <svg
+                  v-if="up"
+                  class="downArrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#ffffff"
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+                <div v-else>
+                  <svg
+                    class="downArrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      fill="#ffffff"
+                      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div class="hline"></div>
+            <div v-if="show" class="yearsContainer">
+              <div class="years">
+                <div
+                  class="year"
+                  v-for="item in yearsShown"
+                  @click="changeYr(item), filterArr(item)"
+                  :key="item"
+                >
+                  <h4>{{ item }}</h4>
                 </div>
               </div>
             </div>
+            <div v-else></div>
           </div>
         </div>
       </section>
@@ -96,11 +128,11 @@ export default {
     const { heading } = this.$refs;
     const { sheading } = this.$refs;
     const { img } = this.$refs;
-    const { showArchive } = this.$refs;
+    const { archiveCon } = this.$refs;
     gsap.from(heading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(sheading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(img, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(showArchive, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+    gsap.from(archiveCon, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     this.filterArr();
     this.getYears();
     this.removewithfilter(this.years);
@@ -108,7 +140,8 @@ export default {
 
   data() {
     return {
-      show: false,
+      up: false,
+      show: true,
       currentYear: new Date().getFullYear(),
       // years: [2023, 2022, 2021],
       years: [],
@@ -265,20 +298,43 @@ h2 {
   flex-direction: row;
   justify-content: center;
 }
-.showArchive {
+.archiveCon {
   left: 0%;
   position: absolute;
 }
-.archive {
-  width: 19rem;
-  height: 33rem;
+.archivehead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hline {
+  height: 0.05rem;
+  width: 15vw;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.archiveCon {
+  width: 17rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   color: #fff;
   text-align: center;
   background: var(--text-color);
-  padding: 1rem 0rem 1rem 1rem;
+  padding: 0.2rem 1.2rem 1.2rem 1.2rem;
   border-radius: 1rem;
+}
+.downArrow {
+  width: 2vw;
+  height: 2vw;
+}
+
+.yearsContainer {
+  display: block;
+}
+.showBtn:active .yearsContainer {
+  display: block;
 }
 .years {
   display: flex;
@@ -301,16 +357,21 @@ h2 {
   color: var(--text-color);
   cursor: pointer;
 }
-.btn {
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  position: absolute;
-  left: 0%;
-  margin-left: 81.5%;
+.showBtn {
   transition: all 1s ease-in;
+  background: none;
+  border: none;
+}
+.showBtn:hover {
+  cursor: pointer;
 }
 h3 {
   font-size: 3rem;
   margin: 1rem 0;
+}
+.archive {
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
 }
 h4 {
   font-size: 1.4rem;
@@ -411,7 +472,7 @@ h6 {
     font-size: 2rem;
     margin: 1rem 0;
   }
-  .archive {
+  .archiveCon {
     width: 14rem;
     height: 20rem;
     font-family: "Kumbh Sans", san serif;
@@ -422,6 +483,7 @@ h6 {
   .btn {
     margin-left: 75%;
   }
+
   .years {
     display: flex;
     flex-direction: column;
@@ -522,7 +584,7 @@ h6 {
   h4 {
     font-size: 1rem;
   }
-  .archive {
+  .archiveCon {
     width: 10rem;
     height: 18rem;
   }
