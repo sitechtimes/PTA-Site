@@ -332,6 +332,16 @@ h2 {
 
 .yearsContainer {
   display: block;
+  overflow-y: scroll;
+  scrollbar-color: var(--text-color) white;
+  scrollbar-width: thin;
+}
+.yearsContainer::-webkit-scrollbar-track {
+  border-radius: 100px;
+}
+
+.yearsContainer::-webkit-scrollbar-thumb {
+  border-radius: 100px;
 }
 .showBtn:active .yearsContainer {
   display: block;
@@ -343,11 +353,11 @@ h2 {
   height: 33rem;
   overflow-y: auto;
   scrollbar-width: none;
+  margin-top: 1rem;
 }
 
 .year {
-  margin: 5px;
-  width: 16rem;
+  width: 15rem;
   height: 4rem;
   border-radius: 1rem;
   transition: 0.5s;
@@ -356,6 +366,7 @@ h2 {
   background-color: #fff;
   color: var(--text-color);
   cursor: pointer;
+  padding-left: 1rem;
 }
 .showBtn {
   transition: all 1s ease-in;
@@ -374,8 +385,10 @@ h3 {
   margin-bottom: 0.6rem;
 }
 h4 {
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 600;
   margin: 7%;
+  text-align: left;
 }
 h6 {
   font-size: 1.4rem;
