@@ -244,25 +244,6 @@ h2 {
   margin-left: 0;
   font-size: 2.4rem;
 }
-#gradient {
-  width: 100%;
-  padding: 0%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  height: 80rem;
-  z-index: -5;
-  background: linear-gradient(
-    180deg,
-    #feb89a 0%,
-    #fdd8b8 18%,
-    #ffecc5 40%,
-    #faf2e1 75%,
-    #faf2e1 80%,
-    #fff 95%
-  );
-  overflow-x: hidden;
-}
 .topComponent {
   display: flex;
   flex-direction: row;
@@ -305,7 +286,8 @@ h2 {
 .archivehead {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .hline {
   height: 0.05rem;
@@ -328,38 +310,47 @@ h2 {
 .downArrow {
   width: 2vw;
   height: 2vw;
+  padding-top: 0.6rem;
 }
 
 .yearsContainer {
   display: block;
   overflow-y: scroll;
-  scrollbar-color: var(--text-color) white;
-  scrollbar-width: thin;
-}
-.yearsContainer::-webkit-scrollbar-track {
-  border-radius: 100px;
+  margin-top: 1rem;
 }
 
+.yearsContainer::-webkit-scrollbar {
+  width: 15px;
+}
+
+.yearsContainer::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 8px;
+}
 .yearsContainer::-webkit-scrollbar-thumb {
   border-radius: 100px;
+  background: #483221;
+  width: 5px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
+
 .showBtn:active .yearsContainer {
   display: block;
 }
 .years {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 33rem;
-  overflow-y: auto;
-  scrollbar-width: none;
-  margin-top: 1rem;
 }
 
 .year {
-  width: 15rem;
-  height: 4rem;
-  border-radius: 1rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
   transition: 0.5s;
 }
 .year:hover {
@@ -387,7 +378,7 @@ h3 {
 h4 {
   font-size: 2rem;
   font-weight: 600;
-  margin: 7%;
+  margin: 0;
   text-align: left;
 }
 h6 {
