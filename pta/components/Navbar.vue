@@ -55,6 +55,7 @@
           @click="(page = 'ContactUs')"
           v-bind:style="
             ({ animation: fadeIn })
+        
           "
         >
           <img
@@ -122,6 +123,7 @@ export default {
       fade: "fadeIn 5s;",
     };
   },
+  
   methods: {
     /* underline() {
       if (this.page === "index") {
