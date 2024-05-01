@@ -1,5 +1,5 @@
 ---
-title: NHS induction ceremony, 5/21/2024
+title: NHS induction ceremony
 month: 5
 date: 21
 year: 2024
