@@ -100,6 +100,7 @@
               </button>
             </div>
             <div class="hline"></div>
+
             <div v-if="show" class="yearsContainer">
               <div class="years">
                 <div
@@ -283,6 +284,7 @@ h2 {
   left: 0%;
   position: absolute;
 }
+
 .archivehead {
   display: flex;
   flex-direction: row;
@@ -298,7 +300,7 @@ h2 {
 }
 
 .archiveCon {
-  width: 17rem;
+  width: 15rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
   color: #fff;
@@ -310,7 +312,8 @@ h2 {
 .downArrow {
   width: 2vw;
   height: 2vw;
-  padding-top: 0.6rem;
+  margin-top: 0.6rem;
+  /* padding-top: 0.6rem; */
 }
 
 .yearsContainer {
@@ -360,15 +363,15 @@ h2 {
   padding-left: 1rem;
 }
 .showBtn {
-  transition: all 1s ease-in;
   background: none;
   border: none;
+  padding: 0;
 }
 .showBtn:hover {
   cursor: pointer;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
 }
 .archive {
@@ -376,7 +379,7 @@ h3 {
   margin-bottom: 0.6rem;
 }
 h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
   text-align: left;
