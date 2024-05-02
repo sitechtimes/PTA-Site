@@ -72,7 +72,8 @@
         <div class="right">
             <h2 class="about">About Us</h2>
             <h3 class="mission">The mission of Staten Island Tech’s PTA is to support our school through advocacy, volunteerism and fundraising. From our bake sales to our annual Spring Gala, we work diligently to raise money in order to financially support our school’s needs such as online and software services, facility upgrades and social events / celebrations.</h3>
- <button ref="button">Donate Now!</button>
+ <a href="https://pta-dev.netlify.app/Donate"> <button ref="button"> Donate Now!  </button></a>
+
         </div>
     </div>
   </div>
