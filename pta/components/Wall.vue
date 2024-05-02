@@ -293,7 +293,7 @@ h2 {
 }
 .hline {
   height: 0.05rem;
-  width: 15vw;
+  width: 15rem;
   background: white;
   margin-left: auto;
   margin-right: auto;
@@ -309,9 +309,12 @@ h2 {
   padding: 0.2rem 1.2rem 1.2rem 1.2rem;
   border-radius: 1rem;
 }
+.archive {
+  padding-bottom: 0.5rem;
+}
 .downArrow {
-  width: 2vw;
-  height: 2vw;
+  width: 2rem;
+  height: 2rem;
   margin-top: 0.6rem;
   /* padding-top: 0.6rem; */
 }
@@ -344,7 +347,7 @@ h2 {
 .years {
   display: flex;
   flex-direction: column;
-  height: 33rem;
+  height: 20vw;
 }
 
 .year {
@@ -436,8 +439,7 @@ h6 {
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
-@media screen and (max-width: 1850px) {
-}
+
 @media screen and (max-width: 1500px) {
   .donationGradient {
     position: absolute;
@@ -480,37 +482,24 @@ h6 {
     margin: 1rem 0;
   }
   .archiveCon {
-    width: 14rem;
-    height: 20rem;
-    font-family: "Kumbh Sans", san serif;
-    font-weight: 800;
-    color: #483221;
-    text-align: center;
+    width: 12rem;
   }
-  .btn {
-    margin-left: 75%;
+  .hline {
+    width: 12rem;
   }
-
-  .years {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow-y: scroll;
-    scrollbar-width: none;
+  .downArrow {
+    width: 1.8rem;
+    height: 1.8rem;
   }
   .year {
-    margin: 5px;
-    width: 12rem;
-    height: 3.5rem;
-    background-color: #fcf6e9;
-    border-radius: 1.5rem;
-    transition: 0.5s;
+    margin-top: 0.4rem;
+    margin-block: 0.4rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    width: 85%;
   }
-  .year:hover {
-    background-color: #643935;
-    color: white;
-    cursor: pointer;
+  h4 {
+    font-size: 1.6rem;
   }
   .text {
     font-size: 1rem;
@@ -552,6 +541,9 @@ h6 {
     font-size: 0.95rem;
     line-height: 1.4rem;
   }
+  .years {
+    height: 25vw;
+  }
 }
 @media only screen and (max-width: 992px) {
   .thanks {
@@ -568,6 +560,29 @@ h6 {
   }
   .bottomComponent {
     margin-top: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .archiveCon {
+    margin-top: 5rem;
+    width: 11rem;
+    height: auto;
+  }
+  .hline {
+    width: 10.5rem;
+  }
+  .downArrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .archive {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  .years {
+    height: 30vw;
   }
 }
 @media screen and (max-width: 576px) {
@@ -588,20 +603,28 @@ h6 {
   h3 {
     font-size: 1.5rem;
   }
-  h4 {
-    font-size: 1rem;
+  .yearsContainer::-webkit-scrollbar-thumb {
+    width: 2px;
+    border: 2px solid transparent;
   }
+
   .archiveCon {
+    margin-top: 5rem;
     width: 10rem;
-    height: 18rem;
+    height: auto;
   }
-  .year {
-    width: 8rem;
-    border-radius: 1rem;
-    height: 2.5rem;
+  .hline {
+    width: 8.5rem;
   }
-  .btn {
-    padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+  .downArrow {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  .years {
+    height: 10rem;
   }
 }
 @media screen and (max-width: 500px) {
