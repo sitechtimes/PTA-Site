@@ -55,7 +55,7 @@
                 ></div>
                 <div>
                   <h6>{{ item.name }}</h6>
-                  <p>thanks!</p>
+                  <p class="note">thanks!</p>
                 </div>
               </div>
             </div>
@@ -271,9 +271,27 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.note {
+  margin-top: 0.2rem;
+}
 .arrayCon {
   display: flex;
   flex-direction: column;
+}
+.donationArray::-webkit-scrollbar {
+  width: 15px;
+}
+
+.donationArray::-webkit-scrollbar-track {
+  background: #483221;
+  border-radius: 8px;
+}
+.donationArray::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: white;
+  width: 5px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
 .bottomCon {
   display: flex;
@@ -308,9 +326,6 @@ h2 {
   background: var(--text-color);
   padding: 0.2rem 1.2rem 1.2rem 1.2rem;
   border-radius: 1rem;
-}
-.archive {
-  padding-bottom: 0.5rem;
 }
 .downArrow {
   width: 2rem;
@@ -389,7 +404,8 @@ h4 {
 }
 h6 {
   font-size: 1.4rem;
-  margin: 7%;
+  margin-top: 0.8rem;
+  margin-bottom: 0rem;
   width: max-content;
 }
 .contactInfo {
@@ -563,8 +579,11 @@ h6 {
   }
 }
 @media only screen and (max-width: 768px) {
-  .archiveCon {
+  .donationArray {
     margin-top: 5rem;
+  }
+  .archiveCon {
+    margin-top: 2rem;
     width: 11rem;
     height: auto;
   }
@@ -609,9 +628,14 @@ h6 {
   }
 
   .archiveCon {
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: 10rem;
     height: auto;
+    padding: 0.2rem 1rem 1rem 1rem;
+  }
+  .archive {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
   }
   .hline {
     width: 8.5rem;
