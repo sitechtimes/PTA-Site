@@ -55,32 +55,65 @@
                 ></div>
                 <div>
                   <h6>{{ item.name }}</h6>
-                  <p>thanks!</p>
+                  <p class="note">thanks!</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="showArchive" ref="showArchive" @click="show = !show">
-            <div v-if="show"><button class="btn">&#62;</button></div>
-            <div v-else>
-              <button class="btn">&#60;</button>
-              <div class="archive" ref="archive">
-                <h3>Archive</h3>
-                <div class="yearsContainer">
-                  <div class="years">
-                    <div
-                      class="year"
-                      v-for="item in yearsShown"
-                      @click="changeYr(item), filterArr(item)"
-                      :key="item"
-                    >
-                      <h4>{{ item }}</h4>
-                    </div>
-                  </div>
+          <div class="archiveCon" ref="archiveCon">
+            <div class="archivehead">
+              <h3 class="archive">Archive</h3>
+
+              <button
+                class="showBtn"
+                @click="
+                  up = !up;
+                  show = !show;
+                "
+              >
+                <svg
+                  v-if="up"
+                  class="downArrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#ffffff"
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  />
+                </svg>
+                <div v-else>
+                  <svg
+                    class="downArrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      fill="#ffffff"
+                      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div class="hline"></div>
+
+            <div v-if="show" class="yearsContainer">
+              <div class="years">
+                <div
+                  class="year"
+                  v-for="item in yearsShown"
+                  @click="changeYr(item), filterArr(item)"
+                  :key="item"
+                >
+                  <h4>{{ item }}</h4>
                 </div>
               </div>
             </div>
+            <div v-else></div>
           </div>
         </div>
       </section>
@@ -96,11 +129,11 @@ export default {
     const { heading } = this.$refs;
     const { sheading } = this.$refs;
     const { img } = this.$refs;
-    const { showArchive } = this.$refs;
+    const { archiveCon } = this.$refs;
     gsap.from(heading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(sheading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     gsap.from(img, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(showArchive, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+    gsap.from(archiveCon, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
     this.filterArr();
     this.getYears();
     this.removewithfilter(this.years);
@@ -108,7 +141,8 @@ export default {
 
   data() {
     return {
-      show: false,
+      up: false,
+      show: true,
       currentYear: new Date().getFullYear(),
       // years: [2023, 2022, 2021],
       years: [],
@@ -211,25 +245,6 @@ h2 {
   margin-left: 0;
   font-size: 2.4rem;
 }
-#gradient {
-  width: 100%;
-  padding: 0%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  height: 80rem;
-  z-index: -5;
-  background: linear-gradient(
-    180deg,
-    #feb89a 0%,
-    #fdd8b8 18%,
-    #ffecc5 40%,
-    #faf2e1 75%,
-    #faf2e1 80%,
-    #fff 95%
-  );
-  overflow-x: hidden;
-}
 .topComponent {
   display: flex;
   flex-direction: row;
@@ -256,70 +271,141 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.note {
+  margin-top: 0.2rem;
+}
 .arrayCon {
   display: flex;
   flex-direction: column;
+}
+.donationArray::-webkit-scrollbar {
+  width: 15px;
+}
+
+.donationArray::-webkit-scrollbar-track {
+  background: #483221;
+  border-radius: 8px;
+}
+.donationArray::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: white;
+  width: 5px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
 .bottomCon {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.showArchive {
+.archiveCon {
   left: 0%;
   position: absolute;
 }
-.archive {
-  width: 19rem;
-  height: 33rem;
+
+.archivehead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.hline {
+  height: 0.05rem;
+  width: 15rem;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.archiveCon {
+  width: 15rem;
   font-family: "Kumbh Sans", san serif;
   font-weight: 800;
-  color: #483221;
+  color: #fff;
   text-align: center;
-  background: white;
-  padding: 1rem 0rem 1rem 1rem;
+  background: var(--text-color);
+  padding: 0.2rem 1.2rem 1.2rem 1.2rem;
   border-radius: 1rem;
+}
+.downArrow {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.6rem;
+  /* padding-top: 0.6rem; */
+}
+
+.yearsContainer {
+  display: block;
+  overflow-y: scroll;
+  margin-top: 1rem;
+}
+
+.yearsContainer::-webkit-scrollbar {
+  width: 15px;
+}
+
+.yearsContainer::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 8px;
+}
+.yearsContainer::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #483221;
+  width: 5px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.showBtn:active .yearsContainer {
+  display: block;
 }
 .years {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 33rem;
-  overflow-y: auto;
-  scrollbar-width: none;
+  height: 20vw;
 }
 
 .year {
-  margin: 5px;
-  width: 16rem;
-  height: 4rem;
-  background-color: #fcf6e9;
-  border-radius: 1rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
   transition: 0.5s;
 }
 .year:hover {
-  background-color: #643935;
-  color: white;
+  background-color: #fff;
+  color: var(--text-color);
+  cursor: pointer;
+  padding-left: 1rem;
+}
+.showBtn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.showBtn:hover {
   cursor: pointer;
 }
-.btn {
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  position: absolute;
-  left: 0%;
-  margin-left: 81.5%;
-  transition: all 1s ease-in;
-}
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
 }
+.archive {
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+}
 h4 {
-  font-size: 1.4rem;
-  margin: 7%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
 }
 h6 {
   font-size: 1.4rem;
-  margin: 7%;
+  margin-top: 0.8rem;
+  margin-bottom: 0rem;
   width: max-content;
 }
 .contactInfo {
@@ -369,8 +455,7 @@ h6 {
   /* background-image: url(https://www.ptopmiami.org/wp-content/uploads/2020/11/child-hugging-father.jpg); */
   background-size: cover;
 }
-@media screen and (max-width: 1850px) {
-}
+
 @media screen and (max-width: 1500px) {
   .donationGradient {
     position: absolute;
@@ -412,37 +497,25 @@ h6 {
     font-size: 2rem;
     margin: 1rem 0;
   }
-  .archive {
-    width: 14rem;
-    height: 20rem;
-    font-family: "Kumbh Sans", san serif;
-    font-weight: 800;
-    color: #483221;
-    text-align: center;
+  .archiveCon {
+    width: 12rem;
   }
-  .btn {
-    margin-left: 75%;
+  .hline {
+    width: 12rem;
   }
-  .years {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow-y: scroll;
-    scrollbar-width: none;
+  .downArrow {
+    width: 1.8rem;
+    height: 1.8rem;
   }
   .year {
-    margin: 5px;
-    width: 12rem;
-    height: 3.5rem;
-    background-color: #fcf6e9;
-    border-radius: 1.5rem;
-    transition: 0.5s;
+    margin-top: 0.4rem;
+    margin-block: 0.4rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    width: 85%;
   }
-  .year:hover {
-    background-color: #643935;
-    color: white;
-    cursor: pointer;
+  h4 {
+    font-size: 1.6rem;
   }
   .text {
     font-size: 1rem;
@@ -484,6 +557,9 @@ h6 {
     font-size: 0.95rem;
     line-height: 1.4rem;
   }
+  .years {
+    height: 25vw;
+  }
 }
 @media only screen and (max-width: 992px) {
   .thanks {
@@ -500,6 +576,32 @@ h6 {
   }
   .bottomComponent {
     margin-top: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .donationArray {
+    margin-top: 5rem;
+  }
+  .archiveCon {
+    margin-top: 2rem;
+    width: 11rem;
+    height: auto;
+  }
+  .hline {
+    width: 10.5rem;
+  }
+  .downArrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .archive {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  .years {
+    height: 30vw;
   }
 }
 @media screen and (max-width: 576px) {
@@ -520,20 +622,33 @@ h6 {
   h3 {
     font-size: 1.5rem;
   }
-  h4 {
-    font-size: 1rem;
+  .yearsContainer::-webkit-scrollbar-thumb {
+    width: 2px;
+    border: 2px solid transparent;
+  }
+
+  .archiveCon {
+    margin-top: 3rem;
+    width: 10rem;
+    height: auto;
+    padding: 0.2rem 1rem 1rem 1rem;
   }
   .archive {
-    width: 10rem;
-    height: 18rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
   }
-  .year {
-    width: 8rem;
-    border-radius: 1rem;
-    height: 2.5rem;
+  .hline {
+    width: 8.5rem;
   }
-  .btn {
-    padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+  .downArrow {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  .years {
+    height: 10rem;
   }
 }
 @media screen and (max-width: 500px) {
