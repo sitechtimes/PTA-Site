@@ -27,6 +27,8 @@ export default {
     scrollDown() {
       const element = document.getElementById("section__MiddleSection");
       element.scrollIntoView({ behavior: "smooth" });
+      const element2 = document.getElementById("grid.resourcegrid");
+      element2.scrollIntoView({ behavior: "smooth" });
     },
   },
 };
