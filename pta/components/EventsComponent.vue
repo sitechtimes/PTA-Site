@@ -18,12 +18,17 @@
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <a :href="selectedEvent.signup" target="_blank"
-        ><button class="btn" id="reg">Register</button></a
-      >
-      <a :href="selectedEvent.donate" target="_blank"
-        ><button class="btn bt2" id="reg">Donate</button></a
-      >
+      <div class="btnCon">
+        <a :href="selectedEvent.volunteer" target="_blank"
+          ><button class="btn" id="reg">Volunteer</button></a
+        >
+        <a :href="selectedEvent.signup" target="_blank"
+          ><button class="btn" id="reg">Register</button></a
+        >
+        <a :href="selectedEvent.donate" target="_blank"
+          ><button class="btn" id="reg">Donate</button></a
+        >
+      </div>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">
@@ -134,6 +139,9 @@ export default {
 @import url(../assets/base.css);
 .bt2 {
   margin-left: 1rem;
+}
+.btnCon {
+  display: flex;
 }
 .subh {
   margin-top: 1.5rem;
