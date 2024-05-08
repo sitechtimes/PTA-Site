@@ -23,7 +23,7 @@
           ><button class="btn" id="reg">Volunteer</button></a
         >
         <a :href="selectedEvent.signup" target="_blank"
-          ><button class="btn" id="reg">Register</button></a
+          ><button class="btn btn2" id="reg">Register</button></a
         >
         <a :href="selectedEvent.donate" target="_blank"
           ><button class="btn" id="reg">Donate</button></a
@@ -31,15 +31,7 @@
       </div>
     </Popup>
     <div id="upcomingEvents">
-      <h3 class="subh">
-        Upcoming Events
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScXOVK8JG0_yYyQbHb9UlIhb_bpmioMG5EIIteBb4miB-d1xg/viewform"
-          target="_blank"
-          id="Reg"
-          ><button class="btn" id="reg">Volunteer Register</button></a
-        >
-      </h3>
+      <h3 class="subh">Upcoming Events</h3>
 
       <ul class="subtext" id="eventsCon">
         <li
@@ -137,8 +129,13 @@ export default {
 </script>
 <style scoped>
 @import url(../assets/base.css);
-.bt2 {
+.btn2 {
   margin-left: 1rem;
+  margin-right: 1rem;
+}
+.btn {
+  width: 8rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
 }
 .btnCon {
   display: flex;
@@ -267,6 +264,9 @@ li {
   #reg {
     font-size: 0.9rem;
   }
+  .btn {
+    width: 6.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -278,6 +278,13 @@ li {
   }
   ul {
     height: 21vw;
+  }
+  .btn {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  .btnCon {
+    flex-direction: column;
   }
 }
 
@@ -313,6 +320,12 @@ li {
     display: flex;
     flex-direction: column;
   }
+  .btn2 {
+    margin: 0;
+  }
+  .btnCon {
+    flex-direction: column;
+  }
   #reg {
     margin-top: 0.8rem;
 
@@ -323,15 +336,6 @@ li {
   #calender {
     width: 80%;
     height: 60vw;
-  }
-  #gradient {
-    width: 100%;
-    height: 220vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
   }
   .subh {
     margin: 1.5rem 0 0 0;
@@ -348,51 +352,6 @@ li {
 @media only screen and (max-width: 356px) {
   #eventsCon {
     height: 66vw;
-  }
-}
-@media only screen and (min-width: 576px) {
-  #gradient {
-    width: 100%;
-    height: 100vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-}
-
-@media only screen and (min-width: 576px) and (orientation: landscape) {
-  #gradient {
-    width: 100%;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #gradient {
-    width: 100%;
-    height: 80vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  #gradient {
-    width: 100%;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
   }
 }
 </style>
