@@ -10,9 +10,9 @@ Directory </h3>
                     <h4 class="description">Contact Staten Island Technical 
 High School.  </h4>
                    <a target="_blank" href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"><button class="button">Read More</button></a> 
-                </div>
+                  </div>
 
-            </div>
+                </div>
             <div class="resource">
                 <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="">
                 <div class="info">
@@ -52,22 +52,25 @@ and official city calendars   </h4>
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+ gsap.registerPlugin(ScrollTrigger);
 export default {
     methods: {
       scrollActivities() {
       gsap.to({
         ScrollTrigger: {
           trigger: ".header",
-          start: "bottom top",
-          end: '+=500',
+          start: "center center",
+          end: 'bottom top',
+        immediateRender: 'false',
+      
+
         },
       });
     },
   },
     mounted() {
     gsap.from("#resourceheading", {
-      scrollTrigger: "#resourceheading",
+      scrollTrigger: "#resourcesheading",
       delay: .6,
       duration: 1,
 x: -600,
@@ -77,11 +80,12 @@ x: -600,
       scrollTrigger: "#grid",
       delay: .8,
       duration: 1,
+      
 x: -600,
       opacity: 0,
     });
   },
-}
+} 
 </script>
 <style scoped>
 @import "../assets/base.css";
