@@ -148,16 +148,6 @@ export default {
 #wrapper {
   height: 60vw;
 }
-#gradient {
-  width: 100vw;
-  height: 180vh;
-  padding: 0%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  background: var(--bg-gradient);
-  overflow-x: hidden;
-}
 #eventsCon {
   list-style-type: none;
   overflow-x: hidden;
@@ -229,23 +219,11 @@ li {
   flex-direction: row;
   align-items: center;
 }
-#calender {
-  width: 35vw;
-  background-color: white;
-  border-radius: 3vw;
-  height: 30vw;
-  /* margin-top: -2vw; */
-}
 #reg {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-style: none;
 }
 @media only screen and (max-width: 1400px) {
-  #calendar {
-    width: 80%;
-    height: 25%;
-    margin: 10% auto;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -332,10 +310,6 @@ li {
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.7rem;
     font-size: 0.9rem;
-  }
-  #calender {
-    width: 80%;
-    height: 60vw;
   }
   .subh {
     margin: 1.5rem 0 0 0;
