@@ -27,7 +27,8 @@
             <h5 class="listDate">
               {{ event.month }}/{{ event.date }}/{{ event.year }}
             </h5>
-          </div></NuxtLink>
+          </div></NuxtLink
+        >
       </li>
     </ul>
   </div>
@@ -62,7 +63,7 @@ export default {
         this.gratitudeLine = "transparent";
         this.donateLine = "transparent";
       }
-  },
+    },
     async getEvents() {
       const query = queryContent("/events").find();
       console.log(query);

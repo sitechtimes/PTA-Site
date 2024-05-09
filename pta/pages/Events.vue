@@ -48,7 +48,7 @@ export default {
 }
 #gradient {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -169,17 +169,9 @@ li {
   }
   #calendar {
     width: 80%;
-    height: 60vw;
+    height: auto;
     margin-bottom: 2rem;
-  }
-  #gradient {
-    width: 100%;
-    height: 170vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    margin-top: 5rem;
   }
   #footer {
     margin-top: 80vw;
@@ -204,7 +196,9 @@ li {
   #calendarInner {
     border: solid 1px #777;
     width: 80vw;
-    height: 70vw;
+  }
+  #calendar {
+    margin-top: 0rem;
   }
   #wrapper {
     height: 90vw;
@@ -234,15 +228,6 @@ li {
     height: 60vw;
     margin-bottom: 2rem;
   }
-  #gradient {
-    width: 100%;
-    height: 190vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
 }
 @media only screen and (max-width: 450px) {
   /* .listTitle {
@@ -257,15 +242,6 @@ li {
 @media only screen and (max-width: 356px) {
   #wrapper {
     height: 110vw;
-  }
-  #gradient {
-    width: 100%;
-    height: 250vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
   }
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;
