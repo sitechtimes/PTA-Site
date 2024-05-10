@@ -101,16 +101,22 @@ collections: # A list of collections the CMS should be able to edit
             ],
         }
       - {
+          label: "Event Volunteer Link",
+          name: "volunteer",
+          widjet: "string",
+          required: false,
+        }
+      - {
           label: "Event Sign Up Link",
           name: "signup",
           widjet: "string",
-          required: true,
+          required: false,
         }
       - {
           label: "Event Donate Link",
           name: "donate",
           widjet: "string",
-          required: true,
+          required: false,
         }
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
