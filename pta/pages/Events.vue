@@ -7,7 +7,7 @@
           <EventsComponent />
           <div id="calendar">
             <iframe
-            ref="calendar"
+              ref="calendar"
               class="cal"
               id="calendarInner"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
@@ -15,11 +15,9 @@
               scrolling="no"
             ></iframe>
           </div>
-
         </section>
-          <SITHSCalendar/>
+        <SITHSCalendar />
       </div>
-
     </div>
     <div id="footer">
       <NewFooter />
@@ -31,7 +29,7 @@
 import { gsap } from "gsap";
 export default {
   mounted() {
-     const { button } = this.$refs;
+    const { button } = this.$refs;
     gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
     gsap.from(".cal", { duration: 1, y: 100, delay: 0.8, opacity: 0 });
   },
@@ -50,7 +48,7 @@ export default {
 }
 #gradient {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 0%;
   position: absolute;
   top: 0%;
@@ -171,17 +169,9 @@ li {
   }
   #calendar {
     width: 80%;
-    height: 60vw;
+    height: auto;
     margin-bottom: 2rem;
-  }
-  #gradient {
-    width: 100%;
-    height: 170vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    margin-top: 5rem;
   }
   #footer {
     margin-top: 80vw;
@@ -206,7 +196,9 @@ li {
   #calendarInner {
     border: solid 1px #777;
     width: 80vw;
-    height: 70vw;
+  }
+  #calendar {
+    margin-top: 0rem;
   }
   #wrapper {
     height: 90vw;
@@ -236,15 +228,6 @@ li {
     height: 60vw;
     margin-bottom: 2rem;
   }
-  #gradient {
-    width: 100%;
-    height: 190vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
 }
 @media only screen and (max-width: 450px) {
   /* .listTitle {
@@ -259,15 +242,6 @@ li {
 @media only screen and (max-width: 356px) {
   #wrapper {
     height: 110vw;
-  }
-  #gradient {
-    width: 100%;
-    height: 250vw;
-    margin: 0;
-    padding: 0%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
   }
   .uniqEvent {
     margin: 0 0.7rem 0 0.7rem;

@@ -30,6 +30,7 @@ export default {
   font-weight: bold;
   right: 4vw;
   background: transparent;
+  color: var(--text-color);
   position: fixed;
   top: 10%;
   font-size: 2.2vw;
@@ -65,14 +66,6 @@ button {
 button:hover {
   opacity: 0.7;
 }
-
-/* media queries max width
-    sm:  ≥576px
-  md:  ≥768px
-    lg:  ≥992px
-    xl:  ≥1200px
-    xxl: ≥1400px
-    */
 @media only screen and (max-width: 1200px) {
   .popup-close {
     top: 12%;
@@ -91,11 +84,13 @@ button:hover {
 @media only screen and (max-width: 768px) {
   .popup-close {
     font-size: 4.5vw;
+    top: 9%;
   }
 }
 @media only screen and (max-width: 576px) {
   .popup-close {
-    font-size: 4vw;
+    font-size: 7vw;
+    top: 5%;
   }
   .popup {
     width: 60vw;
@@ -104,8 +99,8 @@ button:hover {
 }
 @media only screen and (max-width: 356px) {
   .popup-close {
-    font-size: 5vw;
-    top: 12%;
+    font-size: 8vw;
+    top: 6%;
   }
 }
 </style>

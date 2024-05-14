@@ -9,7 +9,7 @@
           their school experience the best ever!
         </p>
       </div>
-      <div ref="minutes" id="minutes">
+<!--       <div ref="minutes" id="minutes">
         <h2 class="subh">MEETING MINUTES</h2>
         <div v-for="minute in minutes">
           <a
@@ -46,10 +46,10 @@
               />{{recording.title }}
             </h3>
           </a>
-        </div>
+        </div> 
         </div>
 
-      </div>
+      </div>-->
     </div>
     <div ref="gallery" id="gallery">
       <Gallery />
