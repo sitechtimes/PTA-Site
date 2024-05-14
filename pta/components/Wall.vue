@@ -55,7 +55,7 @@
                 ></div>
                 <div>
                   <h6>{{ item.name }}</h6>
-                  <p class="note">thanks!</p>
+                  <p class="note">Thank you!</p>
                 </div>
               </div>
             </div>
@@ -609,7 +609,9 @@ h6 {
     display: flex;
     flex-direction: column;
   }
-
+h2 {
+  font-size: 1.5rem;
+}
   .image {
     margin: 8% 0 0 5%;
     width: 200px;
