@@ -16,7 +16,7 @@
             ></iframe>
           </div>
         </section>
-        <SITHSCalendar />
+        <!-- <SITHSCalendar /> -->
       </div>
     </div>
     <div id="footer">
@@ -48,7 +48,6 @@ export default {
 }
 #gradient {
   width: 100%;
-  height: 100vh;
   padding: 0%;
   position: absolute;
   top: 0%;

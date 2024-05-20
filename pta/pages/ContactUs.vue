@@ -7,20 +7,21 @@
     <div class="buttons">
       <button
         class="contacts-type"
-        @click="(shownDiv = 'staff'), tester()"
-        v-bind:style="{ backgroundColor: staffColor }"
-        :class="{ shown: shownDiv === 'staff' }"
-      >
-        Staff
-      </button>
-      <button
-        class="contacts-type"
         @click="(shownDiv = 'join'), tester()"
         v-bind:style="{ backgroundColor: joinColor }"
         :class="{ shown: shownDiv === 'join' }"
       >
         Join Us
       </button>
+      <button
+        class="contacts-type"
+        @click="(shownDiv = 'staff'), tester()"
+        v-bind:style="{ backgroundColor: staffColor }"
+        :class="{ shown: shownDiv === 'staff' }"
+      >
+        Staff
+      </button>
+
       <button
         class="contacts-type"
         @click="(shownDiv = 'sol'), tester()"
@@ -31,7 +32,7 @@
       </button>
     </div>
     <div v-if="shownDiv === 'staff'" class="container__box">
-      <h1 class="subh">Board Members</h1>
+      <!-- <h1 class="subh">Board Members</h1> -->
       <div id="staff">
         <div class="staffCon" v-for="people in staff">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
@@ -50,7 +51,7 @@
       </div>
     </div>
     <div v-if="shownDiv === 'sol'" class="container__box">
-      <h1 class="subh">School Leadership Team</h1>
+      <!-- <h1 class="subh">School Leadership Team</h1> -->
       <div id="staff">
         <div class="staffCon" v-for="people in slt">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
@@ -68,7 +69,7 @@
     </div>
     <div>
       <div v-if="shownDiv === 'join'" class="container__box" id="join">
-        <h1 class="subh">Join Us</h1>
+        <!-- <h1 class="subh">Join Us</h1> -->
         <div class="container__ParentVolunteer">
           <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
           <p>
@@ -118,9 +119,9 @@ export default {
   data() {
     return {
       staff: Array,
-      shownDiv: "staff",
-      joinColor: "transparent",
-      staffColor: "#fcf6e9",
+      shownDiv: "join",
+      staffColor: "transparent",
+      joinColor: "white",
       solColor: "transparent",
       slt: Array,
     };
@@ -143,17 +144,17 @@ export default {
     },
     tester() {
       if (this.shownDiv === "join") {
-        this.joinColor = "#fcf6e9";
+        this.joinColor = "white";
         this.staffColor = "transparent";
         this.solColor = "transparent";
       } else if (this.shownDiv === "staff") {
         this.joinColor = "transparent";
-        this.staffColor = "#fcf6e9";
+        this.staffColor = "white";
         this.solColor = "transparent";
       } else {
         this.joinColor = "transparent";
         this.staffColor = "transparent";
-        this.solColor = "#fcf6e9";
+        this.solColor = "white";
       }
     },
   },
@@ -265,7 +266,7 @@ button:hover {
 }
 .container__box {
   overflow-x: hidden;
-  background-color: #fcf6e9;
+  background-color: white;
   width: 65vw;
   margin-left: auto;
   margin-right: auto;
@@ -276,6 +277,9 @@ button:hover {
   color: #483221;
   font-family: var(--font-heading);
   margin-bottom: 10vw;
+}
+.container__ParentVolunteer {
+  margin-top: 1.5rem;
 }
 h1 {
   text-align: center;
@@ -303,7 +307,7 @@ a {
   margin: 0;
   overflow-x: hidden;
 }
-.contacts-type{
+.contacts-type {
   font-size: 1.8vw;
   padding: 0.5rem 0.7rem;
 }
@@ -321,10 +325,10 @@ a {
   font-size: 1.35vw;
 }
 .staffPfp {
-  height: 6vw;
-  width: 6vw;
+  height: 10vw;
+  width: 10vw;
   overflow-x: hidden;
-  border-radius: 30vw;
+  border-radius: 50%;
 }
 #staff {
   display: flex;
@@ -418,56 +422,48 @@ button {
 button:hover {
   background-color: #fde7cf;
 }
-@media only screen and (max-width: 1200px){
-  .staffRole {
-    font-size: 1.5vw;
-  }
+@media only screen and (max-width: 1200px) {
   p {
     font-size: 2vw;
   }
   li {
     font-size: 2vw;
   }
-  h2{
+  h2 {
     font-size: 2vw;
   }
-}
-
-@media only screen and (max-width: 1200px) {
   #gradient {
     height: 80vw;
   }
-  .contacts-type{
+  .contacts-type {
     font-size: 2.8vw;
   }
-  .container__box{
+  .container__box {
     width: 80vw;
   }
   #staff {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-}
-  .staffCon{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+  .staffCon {
     width: 15vw;
-    margin: 5vw;
+    margin: 4vw;
   }
-  .subtext{
-    font-size: 1.7vw
+  .staffPfp {
+    height: 14vw;
+    width: 14vw;
   }
-  .caption{
+  .subtext {
+    font-size: 1.7vw;
+  }
+  .caption {
     font-size: 1.3vw;
   }
-.staffRole {
+  .staffRole {
     font-size: 1.5vw;
-  }
-  p {
-    font-size: 2vw;
-  }
-  li {
-    font-size: 2vw;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -478,21 +474,21 @@ button:hover {
     border-radius: 0.8rem;
   }
   .staffCon {
-    width: 40%;
+    width: 28%;
     margin: 2rem 1rem;
   }
   .staffRole {
     font-size: 1.6vw;
   }
-  h2{
+  h2 {
     font-size: 2vw;
   }
 }
 @media only screen and (max-width: 820px) {
-  .contacts-type{
+  .contacts-type {
     font-size: 1.6rem;
   }
-  .subtext{
+  .subtext {
     font-size: 2.3vw;
   }
 
@@ -528,7 +524,7 @@ button:hover {
   }
   .staffCon {
     margin: 1vw;
-    width: 46%;
+    width: 30%;
   }
   .staffRole {
     font-size: 2vw;
@@ -537,8 +533,8 @@ button:hover {
     width: 80vw;
   }
   .staffPfp {
-    height: 10vw;
-    width: 10vw;
+    height: 14vw;
+    width: 14vw;
     margin-top: 5vw;
   }
 }
@@ -554,27 +550,27 @@ button:hover {
     font-size: 1.9vw;
     margin-top: 0.3vh;
   }
-  .subtext{
+  .subtext {
     font-size: 2.3vw;
     margin-top: 0.5rem;
   }
-.subh{
-  font-size: 2rem;
-  margin-bottom: 0;
-  margin-top: 1rem;
-}
-.staffPfp{
-  height: 10vw;
-  width: 10vw;
-  margin-top: 1.75rem;
-}
-.staffCon{
-  width: 20vw;
-  margin: 2.75vw;
-}
-.caption{
-  font-size: 1.75vw;
-}
+  .subh {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+  .staffPfp {
+    height: 10vw;
+    width: 10vw;
+    margin-top: 1.75rem;
+  }
+  .staffCon {
+    width: 20vw;
+    margin: 2.75vw;
+  }
+  .caption {
+    font-size: 1.75vw;
+  }
 }
 @media only screen and (max-width: 576px) {
   .staffCon {
@@ -598,24 +594,24 @@ button:hover {
   .caption {
     font-size: 2vw;
   }
-  .subh{
+  .subh {
     font-size: 5vw;
   }
-  .contacts-type{
+  .contacts-type {
     font-size: 4vw;
   }
 }
 @media only screen and (max-width: 450px) {
-  .contacts-type{
+  .contacts-type {
     font-size: 1rem;
   }
 
   /* email address */
-  .caption { 
+  .caption {
     font-size: 2.3vw;
     margin-top: 0;
   }
-/* name */
+  /* name */
   .subtext {
     font-size: 3vw;
   }
@@ -632,13 +628,14 @@ button:hover {
   li {
     font-size: 3vw;
   }
-  
+
   .staffRole {
     font-size: 3vw;
   }
-  .staffPfp{
-    height: 12vw;
-    width: 12vw;
+  .staffPfp {
+    height: 20vw;
+    width: 20vw;
+    margin-top: 0.5rem;
   }
   button {
     width: 28vw;
@@ -646,20 +643,20 @@ button:hover {
     margin-left: 3vw;
   }
   .staffCon {
-  margin: 4vw;
-  padding: 0;
-  width: 7.5rem;
-}
-.subh{
-  font-size: 1.5rem;
-}
-#staff {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-}
+    margin: 4vw;
+    padding: 0;
+    width: 7.5rem;
+  }
+  .subh {
+    font-size: 1.5rem;
+  }
+  #staff {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
 }
 @media only screen and (max-width: 356px) {
   h1 {
@@ -683,13 +680,12 @@ button:hover {
   .staffRole {
     font-size: 3.5vw;
   }
-  .subtext{
+  .subtext {
     font-size: 4.5vw;
   }
   .staffCon {
-  margin: 3vw;
-  width: 8rem;
-}
-
+    margin: 3vw;
+    width: 8rem;
+  }
 }
 </style>
