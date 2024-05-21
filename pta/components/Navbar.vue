@@ -60,10 +60,10 @@
             src="../components/icons/NavBar-Icons/envelope.svg"
             alt="dark brown icon of an envelope"
           />
-          Contact</NuxtLink
+          Join Us</NuxtLink
         >
       </div>
-            <div class="group">
+      <!-- <div class="group">
         <NuxtLink
           to="/Gratitude"
           id="gratitudeLink"
@@ -81,7 +81,7 @@
           />
           Gratitude</NuxtLink
         >
-      </div>
+      </div> -->
       <div class="group">
         <NuxtLink
           to="/Donate"
@@ -145,8 +145,7 @@ export default {
         this.contactLine = "underline var(--text-color) 0.2rem";
         this.gratitudeLine = "transparent";
         this.donateLine = "transparent";
-      } 
-      else if (this.page === "Gratitude") {
+      } else if (this.page === "Gratitude") {
         console.log(this.page);
         this.fade = "fadeIn 5s;";
         this.homeLine = "transparent";
@@ -154,8 +153,7 @@ export default {
         this.contactLine = "transparent";
         this.gratitudeLine = "underline var(--text-color) 0.2rem";
         this.donateLine = "transparent";
-      } 
-      else if (this.page === "Donate") {
+      } else if (this.page === "Donate") {
         console.log(this.page);
         this.fade = "fadeIn 10s;";
         this.homeLine = "transparent";
@@ -188,7 +186,7 @@ a {
   color: var(--text-color);
   transition: 0.3s;
 }
-a:hover{
+a:hover {
   opacity: 0.7;
 }
 /* 

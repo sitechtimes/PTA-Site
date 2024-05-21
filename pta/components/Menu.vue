@@ -29,10 +29,10 @@
               alt="brown icon of envelope"
             />
             <router-link class="menu-router" to="/ContactUs">
-              Contact
+              Join Us
             </router-link>
           </p>
-            <p class="link" @click="toggle">
+          <!-- <p class="link" @click="toggle">
             <img
               id="gratitude"
               src="../components//icons/NavBar-Icons/heart.svg"
@@ -41,7 +41,7 @@
             <router-link class="menu-router" to="/Gratitude">
               Gratitude
             </router-link>
-          </p>
+          </p> -->
           <p class="link" @click="toggle">
             <img
               id="donate"
@@ -151,8 +151,8 @@ img {
   }
 }
 @media only screen and (max-width: 576px) {
-    #home,
-    #events {
+  #home,
+  #events {
     padding-top: 0.25rem;
   }
   .link-container {
