@@ -1,6 +1,6 @@
 ---
 image: https://zultimate.com/wp-content/uploads/2019/12/default-profile.png
-name: Anne Wong
+name: Yelena Mike
 roles: Co-Vice President
-email: annew@gmail.com
+email: yelena.mike@yahoo.com
 ---
