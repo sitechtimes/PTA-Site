@@ -1,6 +1,6 @@
 ---
 image: https://zultimate.com/wp-content/uploads/2019/12/default-profile.png
-name: David Chan
+name: Miriam Nagornuk
 roles: Co-Vice President
-email: davidc@gmail.com
+email: mimikngk@gmail.com
 ---
