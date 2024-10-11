@@ -1,6 +1,6 @@
 ---
 image: https://zultimate.com/wp-content/uploads/2019/12/default-profile.png
-name: Kenneth Bo
-roles: Co-Vice President
-email: kennethb@gmail.com
+name: Sylvia Pace-Diaz
+roles: Parliamentarian
+email: spacediaz@gmail.com
 ---
