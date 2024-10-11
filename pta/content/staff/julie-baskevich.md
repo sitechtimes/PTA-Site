@@ -1,6 +1,6 @@
 ---
 image: /upload/default_pfp.svg.png
 name: Julie Baskevich
-roles: Financial Secretary
+roles: Treasurer
 email: JulieBaskevich@gmail.com
 ---
