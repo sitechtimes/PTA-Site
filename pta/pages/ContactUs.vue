@@ -106,9 +106,6 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <NewFooter />
-    </div>
   </div>
 </template>
 
@@ -129,16 +126,13 @@ export default {
   methods: {
     async getStaff() {
       const query = queryContent("/staff").sort({ roles: 1 }).find();
-      console.log(query);
       query.then((response) => {
         this.staff = response;
       });
     },
     async getSLT() {
       const query = queryContent("/slt").find();
-      console.log(query);
       query.then((response) => {
-        console.log(response);
         this.slt = response;
       });
     },

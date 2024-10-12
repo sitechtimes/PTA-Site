@@ -30,7 +30,6 @@ export default {
   methods: {
     async getGallery() {
       const query = queryContent("/gallery").find();
-      console.log(query);
       query.then((response) => {
         this.gallery = response;
       });
@@ -126,18 +125,6 @@ body {
   .btncon {
     margin-top: 1.5rem;
   }
-  /* .galBtn-prev,
-  .galBtn-next {
-    top: 30%;
-  } */
-}
-@media only screen and (max-width: 1024px) {
-  .slide {
-  }
-  /* .galBtn-prev,
-  .galBtn-next {
-    top: 45%;
-  } */
 }
 @media only screen and (max-width: 992px) {
   .slider {

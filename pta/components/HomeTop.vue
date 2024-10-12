@@ -13,7 +13,7 @@
       </p>
     </div>
     <div class="events">
-      <UpcomingEvents />
+      <EventsComponent />
     </div>
   </div>
 </template>

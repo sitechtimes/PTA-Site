@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <p>{{ event.title }}</p> -->
     <div v-for="event in eventCollection" :key="event.slug">
       <h1>{{ event.title }}</h1>
     </div>
@@ -19,23 +18,22 @@
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
       <div class="btnCon">
-        <a :href="selectedEvent.volunteer" target="_blank"
-          ><button class="btn" id="reg">Volunteer</button></a
-        >
-        <a :href="selectedEvent.signup" target="_blank"
-          ><button class="btn btn2" id="reg">Register</button></a
-        >
-        <a :href="selectedEvent.donate" target="_blank"
-          ><button class="btn" id="reg">Donate</button></a
-        >
+        <a :href="selectedEvent.volunteer" target="_blank">
+          <button class="btn" id="reg">Volunteer</button>
+        </a>
+        <a :href="selectedEvent.signup" target="_blank">
+          <button class="btn btn2" id="reg">Register</button>
+        </a>
+        <a :href="selectedEvent.donate" target="_blank">
+          <button class="btn" id="reg">Donate</button>
+        </a>
       </div>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
-
       <ul class="subtext" id="eventsCon">
         <li
-          v-for="event in events"
+          v-for="event in sortedEvents"
           @click="() => selectEvent(event)"
           class="uniqEvent"
         >
@@ -50,83 +48,70 @@
     </div>
   </div>
 </template>
-<script>
-import { ref, onMounted } from "vue";
+
+<script setup>
+import { ref, nextTick, onMounted } from "vue";
 import Popup from "../components/Popup.vue";
 import { gsap } from "gsap";
 
-export default {
-  components: {
-    Popup,
-  },
-  data() {
-    return {
-      events: Array,
-    };
-  },
-  methods: {
-    async getEvents() {
-      const query = queryContent("/events").find();
-      console.log(query);
-      query.then((response) => {
-        console.log(response);
-        this.events = response;
-        nextTick(() => {
-          gsap.from("li", {
-            delay: 0.9,
-            duration: 0.5,
-            y: 100,
-            opacity: 0,
-            stagger: 0.3,
-          });
-          console.log("gsap");
-        });
-      });
-    },
-  },
-  setup() {
-    const post = ref(null);
-    const selectedEvent = ref(null);
+const events = ref([]);
+const selectedEvent = ref(null);
+const popupTriggers = ref({
+  buttonTrigger: false,
+  timedTrigger: false,
+});
+const eventCollection = ref([]);
 
-    const selectEvent = (event) => {
-      selectedEvent.value = event;
-      TogglePopup("buttonTrigger"); // Open the popup
-    };
-    const popupTriggers = ref({
-      buttonTrigger: false,
-      timedTrigger: false,
+const sortedEvents = computed(() => {
+  return events.value.sort((a, b) => {
+    //yyyy-mm-dd
+    const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, '0')}`);
+    const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, '0')}`);
+    return dateA - dateB;
+  });
+});
+
+const getEvents = async () => {
+  const response = await queryContent("/events").find();
+  events.value = response;
+
+  nextTick(() => {
+    gsap.from("li", {
+      delay: 0.9,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      stagger: 0.3,
     });
-
-    const TogglePopup = (trigger) => {
-      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-    };
-
-    setTimeout(() => {
-      popupTriggers.value.timedTrigger = true;
-    }, 3000);
-
-    const eventCollection = ref([]);
-
-    onMounted(async () => {
-      const { $content } = await import("@nuxt/content");
-      eventCollection.value = await $content("events").fetch();
-    });
-
-    return {
-      Popup,
-      popupTriggers,
-      TogglePopup,
-      selectedEvent,
-      selectEvent,
-      eventCollection,
-    };
-  },
-  mounted() {
-    this.getEvents();
-    gsap.from(".subh", { delay: 0.5, duration: 0.7, y: 100, opacity: 0 });
-  },
+  });
 };
+
+
+const selectEvent = (event) => {
+  selectedEvent.value = event;
+  TogglePopup("buttonTrigger");
+};
+
+const TogglePopup = (trigger) => {
+  popupTriggers.value[trigger] = !popupTriggers.value[trigger];
+};
+
+onMounted(() => {
+  getEvents();
+  gsap.from(".subh", { delay: 0.5, duration: 0.7, y: 100, opacity: 0 });
+
+  setTimeout(() => {
+    popupTriggers.value.timedTrigger = true;
+  }, 3000);
+
+  import("@nuxt/content").then(({ $content }) => {
+    $content("events").fetch().then((data) => {
+      eventCollection.value = data;
+    });
+  });
+});
 </script>
+
 <style scoped>
 @import url(../assets/base.css);
 .btn2 {
@@ -184,8 +169,6 @@ ul {
 .listDate {
   width: 20vw;
   text-align: right;
-  /* flex-direction: row;
-  align-self: flex-end; */
 }
 #head {
   position: absolute;
@@ -200,6 +183,7 @@ ul {
 #upcomingEvents {
   color: var(--text-color);
   font-family: Kumbh Sans;
+  width: fit-content;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -264,8 +248,17 @@ li {
   .btnCon {
     flex-direction: column;
   }
-}
+  #reg {
+    margin-top: 0.8rem;
 
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .subh {
+    margin: 1.5rem 0 0 0;
+  }
+}
 @media only screen and (max-width: 576px) {
   #wrapper {
     height: 170vw;
@@ -315,17 +308,13 @@ li {
     margin: 1.5rem 0 0 0;
   }
 }
-@media only screen and (max-width: 450px) {
-  .listTitle {
-    width: 55vw;
+@media only screen and (max-width: 400px) {
+  #reg {
+    width: 80vw;
+    font-size: 0.8rem;
   }
-  #eventsCon {
-    height: 60vw;
-  }
-}
-@media only screen and (max-width: 356px) {
-  #eventsCon {
-    height: 66vw;
+  .btnCon {
+    flex-direction: column;
   }
 }
 </style>

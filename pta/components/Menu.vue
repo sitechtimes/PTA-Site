@@ -32,16 +32,6 @@
               Join Us
             </router-link>
           </p>
-          <!-- <p class="link" @click="toggle">
-            <img
-              id="gratitude"
-              src="../components//icons/NavBar-Icons/heart.svg"
-              alt="brown icon of hand and heart"
-            />
-            <router-link class="menu-router" to="/Gratitude">
-              Gratitude
-            </router-link>
-          </p> -->
           <p class="link" @click="toggle">
             <img
               id="donate"

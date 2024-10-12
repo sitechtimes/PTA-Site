@@ -80,26 +80,20 @@ export default {
     },
     async getMinutes() {
       const query = queryContent("/minutes").find();
-      console.log(query);
 
       query.then((response) => {
-        console.log(response.slice(1).slice(-3), response.length);
         this.minutes = response.slice(1).slice(-3);
       });
     },
     async getRecordings() {
       const query = queryContent("/recordings").find();
-      console.log(query);
-
       query.then((response) => {
-        console.log(response.slice(1).slice(-3), response.length);
         this.recordings = response.slice(1).slice(-3);
       });
     },
   },
   mounted() {
     this.getMinutes();
-    console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
       delay: 0.6,
@@ -116,7 +110,6 @@ export default {
       opacity: 0,
     });
     this.getRecordings();
-    console.log("mount");
     gsap.from("#activities", {
       scrollTrigger: "#activities",
       delay: 0.6,

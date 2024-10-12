@@ -16,11 +16,8 @@
         <div class="div2">
           <MiddleSection />
         </div>
-                            <Resources />
+      <Resources />
       </div>
-    </div>
-    <div id="footer">
-      <NewFooter />
     </div>
   </div>
 </template>
@@ -45,8 +42,6 @@ onMounted(() => {
 
 const handleScroll = () => {
   const scrollPosition = window.scrollY;
-  // console.log("Scroll Position:", scrollPosition);
-
   if (scrollPosition >= 400) {
     scrollOpacity.value = 0;
   } else {
@@ -80,17 +75,9 @@ onUnmounted(() => {
   width: 100%;
 }
 
-@media screen and (max-width: 1400px) {
-  .div1 {
-  }
-}
 @media screen and (max-width: 1200px) {
   .div1 {
     height: 35vw;
-  }
-}
-@media screen and (max-width: 992px) {
-  .div1 {
   }
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {

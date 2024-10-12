@@ -9,14 +9,6 @@
 
 <script>
 export default {
-  // setup() {
-  //   const showArrow = ref(false);
-  //   const route = useRoute();
-  //   return {
-  //     showArrow,
-  //     route,
-  //   };
-  // },
   methods: {
     ScrolledEnough: function () {
       const topArrow = document.querySelector(".container__topArrow");
@@ -24,16 +16,11 @@ export default {
         topArrow.style.display = "flex";
         topArrow.classList.remove('pop-out')
         topArrow.classList.add('pop-in')
-        // console.log("here");
-        // console.log(window.scrollY);
       } else {
         topArrow.style.display = "none";
         topArrow.classList.add('pop-out')
         topArrow.classList.remove('pop-in')
-        // console.log("gone");
-        // console.log(window.scrollY);
       }
-      // }
     },
     scroll() {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -43,9 +30,6 @@ export default {
     window.addEventListener("scroll", this.ScrolledEnough);
   },
 };
-
-/*
-  } */
 </script>
 
 <style scoped>

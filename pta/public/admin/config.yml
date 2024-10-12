@@ -13,140 +13,73 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{name}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          required: true,
-          preview_path: "/upload/{{filename}}",
-        }
-      - {
-          label: "Name",
-          name: "name",
-          widget: "string",
-          tagname: "h4",
-          required: true,
-        }
-      - {
-          label: "Email",
-          name: "email",
-          widget: "string",
-          tagname: "a",
-          required: true,
-        }
+      - {label: "Image", name: "image", widget: "image", required: true, preview_path: "/upload/{{filename}}"}
+      - {label: "Name", name: "name", widget: "string", tagname: "h4", required: true}
+      - {label: "Email", name: "email", widget: "string", tagname: "a", required: true}
+
   - name: "ContactUs" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Board Members" # Used in the UI, e.g., "New Post"
     folder: "pta/content/staff" # The path to the folder where the documents are stored
     slug: "{{name}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          required: true,
-          preview_path: "/upload/{{filename}}",
-        }
-      - {
-          label: "Name",
-          name: "name",
-          widget: "string",
-          tagname: "h4",
-          required: true,
-        }
-      - {
-          label: "Role",
-          name: "roles",
-          widget: "string",
-          tagname: "h4",
-          required: true,
-        }
-      - {
-          label: "Email",
-          name: "email",
-          widget: "string",
-          tagname: "a",
-          required: true,
-        }
+      - {label: "Image", name: "image", widget: "image", required: true, preview_path: "/upload/{{filename}}"}
+      - {label: "Name", name: "name", widget: "string", tagname: "h4", required: true}
+      - {label: "Role", name: "roles", widget: "string", tagname: "h4", required: true}
+      - {label: "Email", name: "email", widget: "string", tagname: "a", required: true}
+      - {label: "Phone Number", name: "phone", widget: "string", tagname: "a", required: false}
+
+  - name: "Announcements" # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "Announcements"
+    folder: "pta/content/announcements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
+
   - name: "Events" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Event" # Used in the UI, e.g., "New Post"
-    slug: "{{year}}"
     folder: "pta/content/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{date}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-          required: true,
-          pattern:
-            [
-              "^.{5,30}$",
-              "Must have more than 5 characters and less than 30 characters",
-            ],
-        }
-      - { label: "Month (MM)", name: "month", widget: "string", required: true }
-      - { label: "Date (DD)", name: "date", widget: "string", required: true }
-      - { label: "Year (YYYY)", name: "year", widget: "number", required: true }
-      - { label: "Time", name: "time", widget: "string", required: false }
+      - {label: "Title", name: "title", widget: "string", required: true, pattern: ["^.{5,30}$", "Must have more than 5 characters and less than 30 characters"]}
+      - {label: "Month (MM)", name: "month", widget: "string", required: true}
+      - {label: "Date (DD)", name: "date", widget: "string", required: true}
+      - {label: "Year (YYYY)", name: "year", widget: "number", required: true}
+      - {label: "Time", name: "time", widget: "string", required: false}
       # sortableFields: ['year', 'month', 'date']
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: true,
-          pattern:
-            [
-              "^.{10,500}$",
-              "Must have more than 10 characters and less than 500 characters",
-            ],
-        }
-      - {
-          label: "Event Volunteer Link",
-          name: "volunteer",
-          widjet: "string",
-          required: false,
-        }
-      - {
-          label: "Event Sign Up Link",
-          name: "signup",
-          widjet: "string",
-          required: false,
-        }
-      - {
-          label: "Event Donate Link",
-          name: "donate",
-          widjet: "string",
-          required: false,
-        }
+      - {label: "Description", name: "description", widget: "string", required: true, pattern: ["^.{10,500}$", "Must have more than 10 characters and less than 500 characters"]}
+      - {label: "Event Volunteer Link", name: "volunteer", widget: "string", required: false}
+      - {label: "Event Sign Up Link", name: "signup", widget: "string", required: false}
+      - {label: "Event Donate Link", name: "donate", widget: "string", required: false}
+
   - name: "Minutes" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
-    label: "Meeting Minutes Links" # Used in the UI, e.g., "New Post"
+    label: "Meeting Minutes" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}"
     folder: "pta/content/minutes" # The path to the folder where the documents are stored
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "link", name: "link", widget: "string", required: true }
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "File", name: "file", widget: "file", required: true}
+
   - name: "Recordings" # Used in routes, e.g., /admin/collections/:slug/edit
     create: true # Allow users to create new documents in this collection
     label: "Meeting Recordings Links" # Used in the UI, e.g., "New Post"
     slug: "{{year}}-{{month}}"
     folder: "pta/content/recordings" # The path to the folder where the documents are stored
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "link", name: "link", widget: "string", required: true }
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "link", name: "link", widget: "string", required: true}
+
   - name: "Gallery" # Used in routes, e.g., /admin/collections/:slug/edit
     preview_path: "/upload/{{filename}}" #idk why this doesn't work </3, supposed to upload the images as "/upload {{filename}}" i put it in the thing
     label: "Gallery Images" # Used in the UI, e.g., "New Post"
     folder: "pta/content/gallery" # The path to the folder where the documents are stored
-    slug: "{{title}}"
+    slug: "{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          required: true,
-          preview_path: "/upload/{{filename}}",
-        }
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Image", name: "image", widget: "image", required: true, preview_path: "/upload/{{filename}}"}
