@@ -4,26 +4,23 @@
     <div v-for="event in eventCollection" :key="event.slug">
       <h1>{{ event.title }}</h1>
     </div>
-    <Popup
-      v-if="popupTriggers.buttonTrigger"
-      :TogglePopup="() => TogglePopup('buttonTrigger')"
-      :event="selectedEvent"
-    >
+    <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => togglePopup('buttonTrigger')" :event="selectedEvent">
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
-      <p class="text" id="date">
-        {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{
-          selectedEvent.year
-        }}
-      </p>
+      <p class="text" id="date">{{ selectedEvent.month }}/{{ selectedEvent.date }}/{{ selectedEvent.year }}</p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
-      <a :href="selectedEvent.signup" target="_blank"
-        ><button class="btn" id="reg">Register</button></a
-      >
-      <a :href="selectedEvent.donate" target="_blank"
-        ><button class="btn bt2" id="reg">Donate</button></a
-      >
+      <div class="btnCon">
+        <a :href="selectedEvent.volunteer" target="_blank">
+          <button class="btn" id="reg">Volunteer</button>
+        </a>
+        <a :href="selectedEvent.signup" target="_blank">
+          <button class="btn btn2" id="reg">Register</button>
+        </a>
+        <a :href="selectedEvent.donate" target="_blank">
+          <button class="btn" id="reg">Donate</button>
+        </a>
+      </div>
     </Popup>
     <div id="upcomingEvents">
       <h3 class="subh">
@@ -37,98 +34,87 @@
       </h3>
 
       <ul class="subtext" id="eventsCon">
-        <li
-          v-for="event in events"
-          @click="() => selectEvent(event)"
-          class="uniqEvent"
-        >
+        <li v-for="event in sortedEvents" @click="() => selectEvent(event)" class="uniqEvent">
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate">
-              {{ event.month }}/{{ event.date }}/{{ event.year }}
-            </h5>
+            <h5 class="listDate">{{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
           </div>
         </li>
       </ul>
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { ref, onMounted } from "vue";
 import Popup from "../components/Popup.vue";
 import { gsap } from "gsap";
 
-export default {
-  components: {
-    Popup,
-  },
-  data() {
-    return {
-      events: Array,
-    };
-  },
-  methods: {
-    async getEvents() {
-      const query = queryContent("/events").find();
-      console.log(query);
-      query.then((response) => {
-        console.log(response);
-        this.events = response;
-        nextTick(() => {
-          gsap.from("li", {
-            delay: 0.9,
-            duration: 0.5,
-            y: 100,
-            opacity: 0,
-            stagger: 0.3,
-          });
-          console.log("gsap");
-        });
-      });
-    },
-  },
-  setup() {
-    const post = ref(null);
-    const selectedEvent = ref(null);
+const events = ref([]);
+const selectedEvent = ref(null);
+const popupTriggers = ref({
+  buttonTrigger: false,
+  timedTrigger: false,
+});
+const eventCollection = ref([]);
 
-    const selectEvent = (event) => {
-      selectedEvent.value = event;
-      TogglePopup("buttonTrigger"); // Open the popup
-    };
-    const popupTriggers = ref({
-      buttonTrigger: false,
-      timedTrigger: false,
+const sortedEvents = computed(() => {
+  const today = new Date();
+
+  return (
+    events.value
+      //each event is rewritten to be yyyy-mm-dd
+      .filter((event) => {
+        const eventDate = new Date(`${event.year}-${event.month}-${String(event.date).padStart(2, "0")}`);
+        return eventDate >= today;
+      })
+      .sort((a, b) => {
+        const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, "0")}`);
+        const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, "0")}`);
+        return dateA - dateB;
+      })
+  );
+});
+
+const getEvents = async () => {
+  const response = await queryContent("/events").find();
+  events.value = response;
+
+  nextTick(() => {
+    gsap.from("li", {
+      delay: 0.9,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      stagger: 0.3,
     });
-
-    const TogglePopup = (trigger) => {
-      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-    };
-
-    setTimeout(() => {
-      popupTriggers.value.timedTrigger = true;
-    }, 3000);
-
-    const eventCollection = ref([]);
-
-    onMounted(async () => {
-      const { $content } = await import("@nuxt/content");
-      eventCollection.value = await $content("events").fetch();
-    });
-
-    return {
-      Popup,
-      popupTriggers,
-      TogglePopup,
-      selectedEvent,
-      selectEvent,
-      eventCollection,
-    };
-  },
-  mounted() {
-    this.getEvents();
-    gsap.from(".subh", { delay: 0.5, duration: 0.7, y: 100, opacity: 0 });
-  },
+  });
 };
+
+const selectEvent = (event) => {
+  selectedEvent.value = event;
+  togglePopup("buttonTrigger");
+};
+
+const togglePopup = (trigger) => {
+  popupTriggers.value[trigger] = !popupTriggers.value[trigger];
+};
+
+onMounted(() => {
+  getEvents();
+  gsap.from(".subh", { delay: 0.5, duration: 0.7, y: 100, opacity: 0 });
+
+  setTimeout(() => {
+    popupTriggers.value.timedTrigger = true;
+  }, 3000);
+
+  // import("@nuxt/content").then(({ $content }) => {
+  //   $content("events")
+  //     .fetch()
+  //     .then((data) => {
+  //       eventCollection.value = data;
+  //     });
+  // });
+});
 </script>
 <style scoped>
 @import url(../assets/base.css);
