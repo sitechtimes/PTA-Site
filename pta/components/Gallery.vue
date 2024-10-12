@@ -5,7 +5,7 @@
       <!-- Bind key to the loop index to get unique key for each slide -->
       <div
         v-for="(photo, index) in gallery"
-        :key="index"
+        :key="photo.image"
         class="slide"
         :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
       >
@@ -19,36 +19,32 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      gallery: Array,
-      curSlide: 0,
-    };
-  },
-  methods: {
-    async getGallery() {
-      const query = queryContent("/gallery").find();
-      console.log(query);
-      query.then((response) => {
-        this.gallery = response;
-      });
-    },
-    nextSlide() {
-      // Increment the current slide index, and reset if it reaches the maximum
-      this.curSlide = (this.curSlide + 1) % this.gallery.length;
-    },
-    prevSlide() {
-      // Decrement the current slide index, and reset if it becomes negative
-      this.curSlide =
-        (this.curSlide - 1 + this.gallery.length) % this.gallery.length;
-    },
-  },
-  mounted() {
-    this.getGallery();
-  },
+<script setup>
+import { ref, onMounted } from "vue";
+
+const gallery = ref([]);
+const curSlide = ref(0);
+
+// Function to fetch gallery data
+const getGallery = async () => {
+  const query = await queryContent("/gallery").find();
+  gallery.value = query;
 };
+
+// Function to go to the next slide
+const nextSlide = () => {
+  curSlide.value = (curSlide.value + 1) % gallery.value.length;
+};
+
+// Function to go to the previous slide
+const prevSlide = () => {
+  curSlide.value = (curSlide.value - 1 + gallery.value.length) % gallery.value.length;
+};
+
+// Fetch gallery data when component is mounted
+onMounted(() => {
+  getGallery();
+});
 </script>
 <style scoped>
 * {
