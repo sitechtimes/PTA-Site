@@ -63,12 +63,19 @@ const popupTriggers = ref({
 const eventCollection = ref([]);
 
 const sortedEvents = computed(() => {
-  return events.value.sort((a, b) => {
-    //yyyy-mm-dd
-    const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, '0')}`);
-    const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, '0')}`);
-    return dateA - dateB;
-  });
+  const today = new Date();
+  
+  return events.value
+  //each event is rewritten to be yyyy-mm-dd
+    .filter((event) => {
+      const eventDate = new Date(`${event.year}-${event.month}-${String(event.date).padStart(2, '0')}`);
+      return eventDate >= today;
+    })
+    .sort((a, b) => { 
+      const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, '0')}`);
+      const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, '0')}`);
+      return dateA - dateB;
+    });
 });
 
 const getEvents = async () => {

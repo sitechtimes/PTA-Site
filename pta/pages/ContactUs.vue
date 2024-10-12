@@ -47,6 +47,7 @@
           >
             {{ people.email }}
           </a>
+          <h4 class="staffPhone">{{ people.phone }}</h4>
         </div>
       </div>
     </div>
@@ -353,7 +354,7 @@ a {
   z-index: -1;
   overflow-x: hidden;
 }
-.staffRole {
+.staffRole, .staffPhone {
   font-weight: normal;
   font-size: 1.2vw;
 }
