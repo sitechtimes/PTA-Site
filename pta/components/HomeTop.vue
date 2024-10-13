@@ -4,41 +4,35 @@
     <div id="homeTopText">
       <h2 id="pta" ref="pta">Parent Teacher Association @</h2>
       <h1 id="siths" ref="siths">
-        <div ref="statenIsland">STATEN ISLAND</div>
-        <div ref="technical">TECHNICAL</div>
-        <div ref="highSchool">HIGH SCHOOL</div>
+        <span ref="statenIsland">STATEN ISLAND</span>
+        <span ref="technical">TECHNICAL</span>
+        <span ref="highSchool">HIGH SCHOOL</span>
       </h1>
-      <p id="address" ref="address">
-        485 Clawson Street, Staten Island, NY 10306
-      </p>
+      <p id="address" ref="address">485 Clawson Street, Staten Island, NY 10306</p>
     </div>
     <div class="events">
       <EventsComponent />
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import gsap from "gsap";
-export default {
-  mounted() {
-    const { statenIsland } = this.$refs;
-    const { technical } = this.$refs;
-    const { highSchool } = this.$refs;
-    const { pta } = this.$refs;
-    const { address } = this.$refs;
-    const timeline = gsap.timeline();
-    timeline
-      .from(pta, { duration: 1.5, x: -1000 })
-      .from(statenIsland, 1.5, { x: -1000 }, "<0.5")
-      .from(technical, 1.5, { x: -1000 }, "<0.1")
-      .from(highSchool, 1.5, { x: -1000 }, "<0.1")
-      .from(address, { duration: 1, x: -1000 }, "<0.4");
-  },
-  data() {
-    return {};
-  },
-  methods: {},
-};
+const statenIsland = ref();
+const technical = ref();
+const highSchool = ref();
+const pta = ref();
+const address = ref();
+const timeline = gsap.timeline();
+
+onMounted(() => {
+  timeline
+    .from(pta.value, { duration: 1.5, x: -1000 })
+    .from(statenIsland.value, { duration: 1.5, x: -1000 }, "<0.5")
+    .from(technical.value, { duration: 1.5, x: -1000 }, "<0.1")
+    .from(highSchool.value, { duration: 1.5, x: -1000 }, "<0.1")
+    .from(address.value, { duration: 1, x: -1000 }, "<0.4");
+});
+
 /* this.home.addEventListener("mouseenter", () => animation.play());
 this.home.addEventListener("mouseleave", () => animation.reverse()); */
 </script>
@@ -76,6 +70,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   top: 17%;
   width: 37vw;
 }
+#siths {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 1600px) {
   p {
     font-size: 16px;

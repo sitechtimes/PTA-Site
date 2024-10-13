@@ -2,84 +2,73 @@
   <div class="container__footer">
     <div class="sections">
       <div class="left">
-
         <img class="logo" src="../components/icons/NavBar-Icons/pta-logo.png" alt="" />
         <div class="pages">
-          <NuxtLink class="link" to="/" @click="(page = 'index'), underline()" v-bind:style="{ animation: fadeIn }">
-            Home</NuxtLink>
+          <NuxtLink class="link" to="/"> Home</NuxtLink>
           |
-          <NuxtLink class="link" to="/Events" @click="(page = 'index'), underline()"
-            v-bind:style="{ animation: fadeIn }">
-            Events </NuxtLink>
+          <NuxtLink class="link" to="/Events"> Events </NuxtLink>
           |
-          <NuxtLink class="link" to="/ContactUs" @click="(page = 'index'), underline()"
-            v-bind:style="{ animation: fadeIn }">
-            Contact Us </NuxtLink>
+          <NuxtLink class="link" to="/ContactUs"> Contact Us </NuxtLink>
           |
-          <NuxtLink class="link" to="/Donate" @click="(page = 'index'), underline()"
-            v-bind:style="{ animation: fadeIn }">
-            Donate </NuxtLink>
-
+          <NuxtLink class="link" to="/Donate"> Donate </NuxtLink>
         </div>
         <h3>SITHS PTA @2023</h3>
       </div>
       <div class="mid">
         <div class="info">
           <div class="email">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em"
-              viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+              <!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
-                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+              />
             </svg>
             <h2>sitechpta@gmail.com</h2>
           </div>
           <div class="address">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em"
-              viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
+              <!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
-                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+              />
             </svg>
             <h2>485 Clawson Street, Staten Island, NY 10306</h2>
           </div>
         </div>
         <div class="icons">
-          <a href="https://www.instagram.com/_sammytheseagull/" target="_blank" rel="noopener"> <svg
-              xmlns="http://www.w3.org/2000/svg" height="2em"
-              viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <a href="https://www.instagram.com/_sammytheseagull/" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+              <!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
-                d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
-            </svg></a>
-          <a href="https://www.facebook.com/SITECHPTA/" target="_blank" rel="noopener"><svg
-              xmlns="http://www.w3.org/2000/svg" height="2em"
-              viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+              /></svg
+          ></a>
+          <a href="https://www.facebook.com/SITECHPTA/" target="_blank" rel="noopener"
+            ><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+              <!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
-                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
-            </svg></a>
+                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+              /></svg
+          ></a>
         </div>
       </div>
       <div class="right">
         <h2 class="about">About Us</h2>
-        <h3 class="mission">The mission of Staten Island Tech’s PTA is to support our school through advocacy,
-          volunteerism and fundraising. From our bake sales to our annual Spring Gala, we work diligently to raise money
-          in order to financially support our school’s needs such as online and software services, facility upgrades and
-          social events / celebrations.</h3>
-        <a href="https://pta-dev.netlify.app/Donate"> <button ref="button"> Donate Now! </button></a>
+        <h3 class="mission">
+          The mission of Staten Island Tech’s PTA is to support our school through advocacy, volunteerism and
+          fundraising. From our bake sales to our annual Spring Gala, we work diligently to raise money in order to
+          financially support our school’s needs such as online and software services, facility upgrades and social
+          events / celebrations.
+        </h3>
 
+        <!-- you should not put a button in an a, but the styling here depends on it -->
+        <a href="https://pta-dev.netlify.app/Donate"> <button ref="button">Donate Now!</button></a>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const fadeIn = ref(false); 
-    return { fadeIn };
-  },
-};
-</script>
+<script setup></script>
 
 <style scoped>
 .hand {
@@ -102,7 +91,6 @@ button {
 
 button:hover {
   cursor: pointer;
-
 }
 
 .mission {
@@ -116,7 +104,6 @@ button:hover {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0;
-
 }
 
 .container__footer {
@@ -215,7 +202,6 @@ img {
 
   .sections {
     width: 90%;
-
   }
 
   .link {
@@ -249,7 +235,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0;
-
   }
 
   button {
@@ -321,7 +306,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0;
-
   }
 
   button {
@@ -351,7 +335,6 @@ img {
 @media screen and (max-width: 992px) {
   .link {
     font-size: 1rem;
-
   }
 
   .icons {
@@ -369,7 +352,6 @@ img {
 
   .sections {
     width: 90%;
-
   }
 
   .link {
@@ -402,7 +384,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0;
-
   }
 
   button {
@@ -476,7 +457,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0;
-
   }
 
   button {
@@ -555,7 +535,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     margin: 0;
-
   }
 
   button {
@@ -580,7 +559,6 @@ img {
     margin-top: 4px;
     width: 50%;
   }
-
 }
 
 @media only screen and (max-width: 576px) {
@@ -607,7 +585,7 @@ img {
   }
 
   .link {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-top: 2px;
     font-weight: 500;
   }
@@ -626,7 +604,6 @@ img {
   svg {
     margin-top: 0rem;
     width: 1.25rem;
-
   }
 
   .address {
@@ -636,11 +613,11 @@ img {
   }
 
   .email {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
   }
 
   .mission {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   button {
@@ -669,15 +646,15 @@ img {
   }
 
   .email {
-    margin-top: .4rem;
+    margin-top: 0.4rem;
   }
 
   .address {
-    margin-top: .4rem;
+    margin-top: 0.4rem;
   }
 
   .icons {
-    margin-top: .2rem;
+    margin-top: 0.2rem;
   }
 }
 </style>

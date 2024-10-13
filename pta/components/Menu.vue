@@ -7,37 +7,19 @@
       <div v-if="show" class="wrapper">
         <ul class="link-container">
           <p class="link" @click="toggle">
-            <img
-              id="home"
-              src="../components/icons/NavBar-Icons/house.svg"
-              alt="brown icon of house"
-            />
+            <img id="home" src="../components/icons/NavBar-Icons/house.svg" alt="brown icon of house" />
             <router-link class="menu-router" to="/"> Home </router-link>
           </p>
           <p class="link" @click="toggle">
-            <img
-              id="events"
-              src="../components//icons/NavBar-Icons/calendar.svg"
-              alt="brown icon of calendar"
-            />
+            <img id="events" src="../components//icons/NavBar-Icons/calendar.svg" alt="brown icon of calendar" />
             <router-link class="menu-router" to="/Events"> Events </router-link>
           </p>
           <p class="link" @click="toggle">
-            <img
-              id="contact"
-              src="../components//icons/NavBar-Icons/envelope.svg"
-              alt="brown icon of envelope"
-            />
-            <router-link class="menu-router" to="/ContactUs">
-              Join Us
-            </router-link>
+            <img id="contact" src="../components//icons/NavBar-Icons/envelope.svg" alt="brown icon of envelope" />
+            <router-link class="menu-router" to="/ContactUs"> Join Us </router-link>
           </p>
           <p class="link" @click="toggle">
-            <img
-              id="donate"
-              src="../components//icons/NavBar-Icons/credit_card.svg"
-              alt="brown icon of credit card"
-            />
+            <img id="donate" src="../components//icons/NavBar-Icons/credit_card.svg" alt="brown icon of credit card" />
             <router-link class="menu-router" to="/Donate"> Donate </router-link>
           </p>
         </ul>
@@ -45,23 +27,17 @@
     >
   </div>
 </template>
-<script>
-export default {
-  name: "Menu",
-  data() {
-    return {
-      checked: false,
-      show: false,
-    };
-  },
-  methods: {
-    toggle() {
-      this.show = !this.show;
-      this.checked = !this.checked;
-    },
-  },
-};
+
+<script setup>
+const checked = ref(false);
+const show = ref(false);
+
+function toggle() {
+  show.value = !show.value;
+  checked.value = !checked.value;
+}
 </script>
+
 <style scoped>
 @import url(../assets/base.css);
 .link-container {

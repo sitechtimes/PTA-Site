@@ -3,52 +3,31 @@
     <h2 id="heading" class="heading">RESOURCES</h2>
     <div id="grid" class="resourcegrid">
       <div class="resource">
-        <img
-          src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png"
-          alt=""
-        />
+        <img src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png" alt="" />
         <div class="info">
           <h3 class="name">SITHS Automated Telephone Directory</h3>
-          <h4 class="description">
-            Contact Staten Island Technical High School.
-          </h4>
-          <a
-            target="_blank"
-            href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"
+          <h4 class="description">Contact Staten Island Technical High School.</h4>
+          <a target="_blank" href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"
             ><button class="button">Read More</button></a
           >
         </div>
       </div>
       <div class="resource">
-        <img
-          src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png"
-          alt=""
-        />
+        <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="" />
         <div class="info">
           <h3 class="name">Naviance</h3>
-          <h4 class="description">
-            Parents can track secondary goals and success.
-          </h4>
+          <h4 class="description">Parents can track secondary goals and success.</h4>
 
-          <a target="_blank" href="https://id.naviance.com/"
-            ><button class="button">Read More</button></a
-          >
+          <a target="_blank" href="https://id.naviance.com/"><button class="button">Read More</button></a>
         </div>
       </div>
 
       <div class="resource">
-        <img
-          src="https://nycaieroundtable.org/wp-content/uploads/2022/02/nyc-doe-logo.jpg"
-          alt=""
-        />
+        <img src="https://nycaieroundtable.org/wp-content/uploads/2022/02/nyc-doe-logo.jpg" alt="" />
         <div class="info">
           <h3 class="name">NYCDOE Websites</h3>
-          <h4 class="description">
-            Keep track of student documents and official city calendars
-          </h4>
-          <a target="_blank" href="https://www.schools.nyc.gov/">
-            <button class="button">Read More</button></a
-          >
+          <h4 class="description">Keep track of student documents and official city calendars</h4>
+          <a target="_blank" href="https://www.schools.nyc.gov/"> <button class="button">Read More</button></a>
         </div>
       </div>
 
@@ -68,39 +47,35 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-export default {
-  methods: {
-    scrollActivities() {
-      gsap.to({
-        ScrollTrigger: {
-          trigger: "#heading",
-          start: "center center",
-          end: "bottom top",
-        },
-      });
+function scrollActivities() {
+  gsap.to({
+    ScrollTrigger: {
+      trigger: "#heading",
+      start: "center center",
+      end: "bottom top",
     },
-  },
-  mounted() {
-    gsap.from("#heading", {
-      scrollTrigger: "#heading",
-      delay: 0.6,
-      duration: 1,
-      x: -600,
-      opacity: 0,
-    });
-    gsap.from("#grid", {
-      scrollTrigger: "#grid",
-      delay: 0.8,
-      duration: 1,
-      x: -600,
-      opacity: 0,
-    });
-  },
-};
+  });
+}
+onMounted(() => {
+  gsap.from("#heading", {
+    scrollTrigger: "#heading",
+    delay: 0.6,
+    duration: 1,
+    x: -600,
+    opacity: 0,
+  });
+  gsap.from("#grid", {
+    scrollTrigger: "#grid",
+    delay: 0.8,
+    duration: 1,
+    x: -600,
+    opacity: 0,
+  });
+});
 </script>
 <style scoped>
 @import "../assets/base.css";

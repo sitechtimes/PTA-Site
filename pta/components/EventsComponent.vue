@@ -3,17 +3,9 @@
     <div v-for="event in eventCollection" :key="event.slug">
       <h1>{{ event.title }}</h1>
     </div>
-    <Popup
-      v-if="popupTriggers.buttonTrigger"
-      :TogglePopup="() => TogglePopup('buttonTrigger')"
-      :event="selectedEvent"
-    >
+    <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')" :event="selectedEvent">
       <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
-      <p class="text" id="date">
-        {{ selectedEvent.month }}/{{ selectedEvent.date }}/{{
-          selectedEvent.year
-        }}
-      </p>
+      <p class="text" id="date">{{ selectedEvent.month }}/{{ selectedEvent.date }}/{{ selectedEvent.year }}</p>
       <p class="text" id="time">{{ selectedEvent.time }}</p>
       <img id="img" :src="selectedEvent.image" alt="" />
       <p class="text" id="body">{{ selectedEvent.description }}</p>
@@ -32,16 +24,10 @@
     <div id="upcomingEvents">
       <h3 class="subh">Upcoming Events</h3>
       <ul class="subtext" id="eventsCon">
-        <li
-          v-for="event in sortedEvents"
-          @click="() => selectEvent(event)"
-          class="uniqEvent"
-        >
+        <li v-for="event in sortedEvents" @click="() => selectEvent(event)" class="uniqEvent">
           <div class="uniqEvent">
             <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate">
-              {{ event.month }}/{{ event.date }}/{{ event.year }}
-            </h5>
+            <h5 class="listDate">{{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
           </div>
         </li>
       </ul>
@@ -64,18 +50,20 @@ const eventCollection = ref([]);
 
 const sortedEvents = computed(() => {
   const today = new Date();
-  
-  return events.value
-  //each event is rewritten to be yyyy-mm-dd
-    .filter((event) => {
-      const eventDate = new Date(`${event.year}-${event.month}-${String(event.date).padStart(2, '0')}`);
-      return eventDate >= today;
-    })
-    .sort((a, b) => { 
-      const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, '0')}`);
-      const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, '0')}`);
-      return dateA - dateB;
-    });
+
+  return (
+    events.value
+      //each event is rewritten to be yyyy-mm-dd
+      .filter((event) => {
+        const eventDate = new Date(`${event.year}-${event.month}-${String(event.date).padStart(2, "0")}`);
+        return eventDate >= today;
+      })
+      .sort((a, b) => {
+        const dateA = new Date(`${a.year}-${a.month}-${String(a.date).padStart(2, "0")}`);
+        const dateB = new Date(`${b.year}-${b.month}-${String(b.date).padStart(2, "0")}`);
+        return dateA - dateB;
+      })
+  );
 });
 
 const getEvents = async () => {
@@ -92,7 +80,6 @@ const getEvents = async () => {
     });
   });
 };
-
 
 const selectEvent = (event) => {
   selectedEvent.value = event;
@@ -111,11 +98,11 @@ onMounted(() => {
     popupTriggers.value.timedTrigger = true;
   }, 3000);
 
-  import("@nuxt/content").then(({ $content }) => {
-    $content("events").fetch().then((data) => {
-      eventCollection.value = data;
-    });
-  });
+  // import("@nuxt/content").then(({ $content }) => {
+  //   $content("events").fetch().then((data) => {
+  //     eventCollection.value = data;
+  //   });
+  // });
 });
 </script>
 

@@ -19,36 +19,35 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      gallery: Array,
-      curSlide: 0,
-    };
-  },
-  methods: {
-    async getGallery() {
-      const query = queryContent("/gallery").find();
-      query.then((response) => {
-        this.gallery = response;
-      });
-    },
-    nextSlide() {
-      // Increment the current slide index, and reset if it reaches the maximum
-      this.curSlide = (this.curSlide + 1) % this.gallery.length;
-    },
-    prevSlide() {
-      // Decrement the current slide index, and reset if it becomes negative
-      this.curSlide =
-        (this.curSlide - 1 + this.gallery.length) % this.gallery.length;
-    },
-  },
-  mounted() {
-    this.getGallery();
-  },
-};
+
+<script setup>
+import { ref, onMounted } from "vue";
+
+// Define reactive variables
+const gallery = ref([]);
+const curSlide = ref(0);
+
+function getGallery() {
+  const query = queryContent("/gallery").find();
+  query.then((response) => {
+    gallery.value = response;
+  });
+}
+
+function nextSlide() {
+  curSlide.value = (curSlide.value + 1) % gallery.value.length;
+}
+
+function prevSlide() {
+  curSlide.value = (curSlide.value - 1 + gallery.value.length) % gallery.value.length;
+}
+
+// Fetch gallery data when component is mounted
+onMounted(() => {
+  getGallery();
+});
 </script>
+
 <style scoped>
 * {
   margin: 0;

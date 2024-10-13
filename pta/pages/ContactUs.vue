@@ -8,7 +8,7 @@
       <button
         class="contacts-type"
         @click="(shownDiv = 'join'), tester()"
-        v-bind:style="{ backgroundColor: joinColor }"
+        :style="{ backgroundColor: joinColor }"
         :class="{ shown: shownDiv === 'join' }"
       >
         Join Us
@@ -16,7 +16,7 @@
       <button
         class="contacts-type"
         @click="(shownDiv = 'staff'), tester()"
-        v-bind:style="{ backgroundColor: staffColor }"
+        :style="{ backgroundColor: staffColor }"
         :class="{ shown: shownDiv === 'staff' }"
       >
         Staff
@@ -25,7 +25,7 @@
       <button
         class="contacts-type"
         @click="(shownDiv = 'sol'), tester()"
-        v-bind:style="{ backgroundColor: solColor }"
+        :style="{ backgroundColor: solColor }"
         :class="{ shown: shownDiv === 'sol' }"
       >
         SLT
@@ -38,13 +38,7 @@
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
           <h4 class="staffRole">{{ people.roles }}</h4>
-          <a
-            id="staffEmail"
-            class="caption"
-            :href="people.email"
-            target="_blank"
-            rel="noopener"
-          >
+          <a id="staffEmail" class="caption" :href="people.email" target="_blank" rel="noopener">
             {{ people.email }}
           </a>
           <h4 class="staffPhone">{{ people.phone }}</h4>
@@ -57,12 +51,7 @@
         <div class="staffCon" v-for="people in slt">
           <img class="staffPfp" :src="people.image" :alt="people.name" />
           <h3 class="subtext">{{ people.name }}</h3>
-          <a
-            class="caption"
-            :href="people.email"
-            target="_blank"
-            rel="noopener"
-          >
+          <a class="caption" :href="people.email" target="_blank" rel="noopener">
             {{ people.email }}
           </a>
         </div>
@@ -74,31 +63,24 @@
         <div class="container__ParentVolunteer">
           <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
           <p>
-            If you would like to volunteer at PTA events, please print out the
-            attached volunteer form and submit to the PTA Room or email it to
-            <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener"
-              >sitechpta@gmail.com</a
-            >.
+            If you would like to volunteer at PTA events, please print out the attached volunteer form and submit to the
+            PTA Room or email it to
+            <a href="mailto:sitechpta@gmail.com" target="_blank" rel="noopener">sitechpta@gmail.com</a>.
           </p>
           <p>Be part of the SI TECH PTA Grant Committee</p>
           <ul>
             <li>
-              The grants committee researches and applies for grants to help
-              fund school programs and activities including classroom/school
-              upgrades, art, technology, maker-space, and the library. We reach
-              out to foundations and corporations.
+              The grants committee researches and applies for grants to help fund school programs and activities
+              including classroom/school upgrades, art, technology, maker-space, and the library. We reach out to
+              foundations and corporations.
             </li>
             <li>
-              Volunteers are needed to research grant opportunities or help
-              write the grant proposals. No prior experience is necessary, time
-              commitment is contingent on grant deadlines.
+              Volunteers are needed to research grant opportunities or help write the grant proposals. No prior
+              experience is necessary, time commitment is contingent on grant deadlines.
             </li>
             <li>
               Please email
-              <a
-                href="mailto:SITHSptagrantcommittee@gmail.com"
-                target="_blank"
-                rel="noopener"
+              <a href="mailto:SITHSptagrantcommittee@gmail.com" target="_blank" rel="noopener"
                 >SITHSptagrantcommittee@gmail.com</a
               >
               if interested.
@@ -110,72 +92,55 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { gsap } from "gsap";
-export default {
-  props: ["TogglePopup"],
-  data() {
-    return {
-      staff: Array,
-      shownDiv: "join",
-      staffColor: "transparent",
-      joinColor: "white",
-      solColor: "transparent",
-      slt: Array,
-    };
-  },
-  methods: {
-    async getStaff() {
-      const query = queryContent("/staff").sort({ roles: 1 }).find();
-      query.then((response) => {
-        this.staff = response;
-      });
-    },
-    async getSLT() {
-      const query = queryContent("/slt").find();
-      query.then((response) => {
-        this.slt = response;
-      });
-    },
-    tester() {
-      if (this.shownDiv === "join") {
-        this.joinColor = "white";
-        this.staffColor = "transparent";
-        this.solColor = "transparent";
-      } else if (this.shownDiv === "staff") {
-        this.joinColor = "transparent";
-        this.staffColor = "white";
-        this.solColor = "transparent";
-      } else {
-        this.joinColor = "transparent";
-        this.staffColor = "transparent";
-        this.solColor = "white";
-      }
-    },
-  },
+defineProps(["TogglePopup"]);
+const staff = ref([]);
+const shownDiv = ref("join");
+const staffColor = ref("transparent");
+const joinColor = ref("white");
+const solColor = ref("transparent");
+const slt = ref([]);
 
-  mounted() {
-    let tl = gsap.timeline();
-    tl.from(".popup", { scale: 0.3, duration: 0.4 });
-    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
-    gsap.from(".cal", 1, { x: 1000 }, "<0.5");
+async function getStaff() {
+  const query = await queryContent("/staff").sort({ roles: 1 }).find();
+  staff.value = query;
+}
+async function getSLT() {
+  const query = await queryContent("/slt").find();
+  slt.value = query;
+}
+function tester() {
+  const map = {
+    join: joinColor,
+    staff: staffColor,
+    sol: solColor,
+  };
+  Object.values(map).forEach((val) => (val.value = "transparent"));
+  map[shownDiv.value].value = "white";
+}
 
-    this.getSLT();
-    this.getStaff();
-    gsap.from(".container__box", {
-      duration: 0.5,
-      y: 100,
-      delay: 0.8,
-      opacity: 0,
-    });
-    gsap.from(".buttons", {
-      duration: 0.5,
-      y: 100,
-      delay: 0.5,
-      opacity: 0,
-    });
-  },
-};
+onMounted(() => {
+  let tl = gsap.timeline();
+  tl.from(".popup", { scale: 0.3, duration: 0.4 });
+  gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
+  gsap.from(".cal", 1, { x: 1000 }, "<0.5");
+
+  getSLT();
+  getStaff();
+  gsap.from(".container__box", {
+    duration: 0.5,
+    y: 100,
+    delay: 0.8,
+    opacity: 0,
+  });
+  gsap.from(".buttons", {
+    duration: 0.5,
+    y: 100,
+    delay: 0.5,
+    opacity: 0,
+  });
+});
 </script>
 
 <style scoped>
@@ -354,7 +319,8 @@ a {
   z-index: -1;
   overflow-x: hidden;
 }
-.staffRole, .staffPhone {
+.staffRole,
+.staffPhone {
   font-weight: normal;
   font-size: 1.2vw;
 }

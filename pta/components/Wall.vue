@@ -7,22 +7,16 @@
           <div ref="sheading" class="thanks">
             <h2>Thank You!</h2>
             <p class="text">
-              As you may know, in 2003 the Chancellor created the position of
-              Parent Coordinator in all of the public schools in New York City.
-              One of my roles is to be your parent advocate here at Tech and to
-              actively facilitate a strong and productive relationship between
-              the parents and school. Additionally, welcoming parents to a warm
-              and friendly learning environment will provide an arena to share
-              academic concerns related to your child's education. Staying
-              informed can help your family adjust to the high school
-              experience. Many challenges take place during these four years and
-              will no doubt impact your lives and influence behavior. The Tech
-              family is here to assist you in any way possible. Please utilize
-              the resources available to help you in the process. As you come
-              into the building I am making a point to greet you and check to
-              see that your concerns are being addressed to your satisfaction.
-              Please feel free to stop by and share what's on your mind. I look
-              forward to meeting with you!
+              As you may know, in 2003 the Chancellor created the position of Parent Coordinator in all of the public
+              schools in New York City. One of my roles is to be your parent advocate here at Tech and to actively
+              facilitate a strong and productive relationship between the parents and school. Additionally, welcoming
+              parents to a warm and friendly learning environment will provide an arena to share academic concerns
+              related to your child's education. Staying informed can help your family adjust to the high school
+              experience. Many challenges take place during these four years and will no doubt impact your lives and
+              influence behavior. The Tech family is here to assist you in any way possible. Please utilize the
+              resources available to help you in the process. As you come into the building I am making a point to greet
+              you and check to see that your concerns are being addressed to your satisfaction. Please feel free to stop
+              by and share what's on your mind. I look forward to meeting with you!
             </p>
             <div class="contactInfoDiv">
               <p class="contactInfo">Sincerely, Barbara Malenfant</p>
@@ -41,11 +35,7 @@
           <div class="arrayCon">
             <h2>― •{{ currentYear }}• ―</h2>
             <div class="donationArray">
-              <div
-                v-for="item in filteredWall"
-                :key="item"
-                class="donationComponent"
-              >
+              <div v-for="item in filteredWall" :key="item" class="donationComponent">
                 <!-- should figure out how to make a component  -->
                 <div
                   class="gratitudeImg"
@@ -72,25 +62,16 @@
                   show = !show;
                 "
               >
-                <svg
-                  v-if="up"
-                  class="downArrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <svg v-if="up" class="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                   <path
                     fill="#ffffff"
                     d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                   />
                 </svg>
                 <div v-else>
-                  <svg
-                    class="downArrow"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <svg class="downArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                     <path
                       fill="#ffffff"
                       d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
@@ -103,12 +84,7 @@
 
             <div v-if="show" class="yearsContainer">
               <div class="years">
-                <div
-                  class="year"
-                  v-for="item in yearsShown"
-                  @click="changeYr(item), filterArr(item)"
-                  :key="item"
-                >
+                <div class="year" v-for="item in yearsShown" @click="changeYr(item), filterArr(item)" :key="item">
                   <h4>{{ item }}</h4>
                 </div>
               </div>
@@ -118,121 +94,108 @@
         </div>
       </section>
     </div>
-    <NewFooter />
+    <Footer />
   </div>
 </template>
 
-<script>
+<script setup>
 import { gsap } from "gsap";
-export default {
-  mounted() {
-    const { heading } = this.$refs;
-    const { sheading } = this.$refs;
-    const { img } = this.$refs;
-    const { archiveCon } = this.$refs;
-    gsap.from(heading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(sheading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(img, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(archiveCon, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
-    this.filterArr();
-    this.getYears();
-    this.removewithfilter(this.years);
-  },
 
-  data() {
-    return {
-      up: false,
-      show: true,
-      currentYear: new Date().getFullYear(),
-      // years: [2023, 2022, 2021],
-      years: [],
-      yearsShown: [],
-      filteredWall: [],
-      wall: [
-        {
-          year: "2023",
-          name: "Cool Parent 9",
-          image:
-            "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
-        },
-        {
-          year: "2023",
-          name: "Cool Parent 8",
-          image:
-            "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
-        },
-        {
-          year: "2022",
-          name: "Cool Parent 7",
-          image:
-            "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
-        },
-        {
-          year: "2022",
-          name: "Cool Parent 6",
-          image: "https://clipart-library.com/img1/843122.png",
-        },
-        {
-          year: "2022",
-          name: "Cool Parent 5",
-          image:
-            "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
-        },
-        {
-          year: "2022",
-          name: "Cool Parent 4",
-          image:
-            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
-        },
-        {
-          year: "2021",
-          name: "Cool Parent 3",
-          image:
-            "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
-        },
-        {
-          year: "2021",
-          name: "Cool Parent 2",
-          image:
-            "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
-        },
-        {
-          year: "2021",
-          name: "Cool Parent 1",
-          image:
-            "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/10342/gull-clipart-xl.png",
-        },
-      ],
-    };
+const heading = ref();
+const sheading = ref();
+const img = ref();
+const archiveCon = ref();
+
+onMounted(() => {
+  gsap.from(heading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+  gsap.from(sheading, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+  gsap.from(img, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+  gsap.from(archiveCon, { delay: 0.2, duration: 1, y: 100, opacity: 0 });
+  filterArr();
+  getYears();
+  removewithfilter(years.value);
+});
+
+const up = ref(false);
+const show = ref(true);
+const currentYear = ref(new Date().getFullYear());
+
+const years = ref([]);
+const yearsShown = ref([]);
+const filteredWall = ref([]);
+const wall = ref([
+  {
+    year: "2023",
+    name: "Cool Parent 9",
+    image: "https://m.media-amazon.com/images/I/61yknJ33qhL._AC_UF1000,1000_QL80_.jpg",
   },
-  methods: {
-    changeYr: function (e) {
-      this.currentYear = e;
-      console.log(this.currentYear);
-    },
-    filterArr: function () {
-      this.filteredWall = this.wall.filter(
-        (item) => item.year == this.currentYear
-      );
-    },
-    getYears: function () {
-      for (let i = 0; i < this.wall.length; i++) {
-        this.years.push(this.wall[i].year);
-      }
-      console.log(this.years);
-    },
-    removewithfilter: function (arr) {
-      this.yearsShown = arr.filter(function (v, i, self) {
-        // It returns the index of the first
-        // instance of each value
-        return i == self.indexOf(v);
-      });
-      console.log(this.yearsShown);
-      return this.yearsShown;
-    },
+  {
+    year: "2023",
+    name: "Cool Parent 8",
+    image: "https://cdn.drawception.com/images/panels/2016/2-22/DPPYntPAjm-2.png",
   },
-};
+  {
+    year: "2022",
+    name: "Cool Parent 7",
+    image: "https://c8.alamy.com/comp/2NH1J1C/marine-seagull-icon-cartoon-vector-sea-bird-cute-animal-2NH1J1C.jpg",
+  },
+  {
+    year: "2022",
+    name: "Cool Parent 6",
+    image: "https://clipart-library.com/img1/843122.png",
+  },
+  {
+    year: "2022",
+    name: "Cool Parent 5",
+    image:
+      "https://img.freepik.com/premium-photo/seagull-sneakers-panama-watercolor-illustration-summer-clipart-with-cartoon-character_647110-29.jpg?w=826",
+  },
+  {
+    year: "2022",
+    name: "Cool Parent 4",
+    image: "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+  },
+  {
+    year: "2021",
+    name: "Cool Parent 3",
+    image: "https://hdclipartall.com/images/cartoon-seagull-clipart-seagulls-clipart-1606_1476.jpg",
+  },
+  {
+    year: "2021",
+    name: "Cool Parent 2",
+    image: "https://www.pngitem.com/pimgs/m/6-65873_seagull-illustration-png-seagull-clipart-transparent-png.png",
+  },
+  {
+    year: "2021",
+    name: "Cool Parent 1",
+    image: "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/10342/gull-clipart-xl.png",
+  },
+]);
+
+function changeYr(e) {
+  currentYear.value = e;
+  console.log(currentYear.value);
+}
+function filterArr() {
+  filteredWall.value = wall.value.filter((item) => item.year == currentYear.value);
+}
+function getYears() {
+  for (let i = 0; i < wall.value.length; i++) {
+    years.value.push(wall.value[i].year);
+  }
+  console.log(years.value);
+}
+function removewithfilter(arr) {
+  yearsShown.value = arr.filter(function (v, i, self) {
+    // It returns the index of the first
+    // instance of each value
+    return i == self.indexOf(v);
+  });
+  console.log(yearsShown.value);
+  return yearsShown.value;
+}
 </script>
+
 <style scoped>
 @import url(../assets/base.css);
 .text {
@@ -609,9 +572,9 @@ h6 {
     display: flex;
     flex-direction: column;
   }
-h2 {
-  font-size: 1.5rem;
-}
+  h2 {
+    font-size: 1.5rem;
+  }
   .image {
     margin: 8% 0 0 5%;
     width: 200px;

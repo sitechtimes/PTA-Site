@@ -2,46 +2,11 @@
   <div>
     <div id="gradient"></div>
     <DonateTop />
-    <div
-      id="homePageScroll"
-      ref="homePageScroll"
-      :style="{ opacity: scrollOpacity }"
-    >
-      <DonateScroll />
-    </div>
     <DonateMid />
-    <NewFooter />
   </div>
 </template>
 
-<script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-export default {
-  data() {
-    return {
-      scrollOpacity: 1,
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition >= 400) {
-        this.scrollOpacity = 0;
-      } else {
-        this.scrollOpacity = 1;
-      }
-    }
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-};
-</script>
+<script setup></script>
 
 <style scoped>
 @import url(../assets/base.css);

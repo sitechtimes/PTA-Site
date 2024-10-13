@@ -1,23 +1,13 @@
 <template>
   <div id="navbar">
     <div id="logoContainer">
-      <NuxtLink to="/" @click="(page = 'index'), underline()">
-        <img
-          class="logo"
-          src="../components/icons/NavBar-Icons/pta-logo.png"
-          alt="PTA Logo"
-        />
+      <NuxtLink to="/" @click="page = 'index'">
+        <img class="logo" src="../components/icons/NavBar-Icons/pta-logo.png" alt="PTA Logo" />
       </NuxtLink>
     </div>
     <div id="naV">
       <div class="group">
-        <NuxtLink
-          to="/"
-          id="homeLink"
-          ref="homeLink"
-          @click="(page = 'index'), underline()"
-          v-bind:style="{ animation: fade, textDecoration: homeLine }"
-        >
+        <NuxtLink to="/" id="homeLink" ref="homeLink" @click="page = 'index'" :style="{ textDecoration: homeLine }">
           <img
             class="icon"
             id="home"
@@ -32,8 +22,8 @@
           to="/Events"
           id="eventsLink"
           ref="eventsLink"
-          @click="(page = 'Events'), underline()"
-          v-bind:style="{ animation: fade, textDecoration: eventsLine }"
+          @click="page = 'Events'"
+          :style="{ textDecoration: eventsLine }"
         >
           <img
             class="icon"
@@ -49,8 +39,8 @@
           to="/ContactUs"
           id="contactLink"
           ref="contactLink"
-          @click="(page = 'ContactUs'), underline()"
-          v-bind:style="{ animation: fade, textDecoration: contactLine }"
+          @click="page = 'ContactUs'"
+          :style="{ textDecoration: contactLine }"
         >
           <img
             class="icon"
@@ -66,14 +56,14 @@
           to="/Donate"
           id="donateLink"
           ref="donateLink"
-          @click="(page = 'Donate'), underline()"
-          v-bind:style="{ animation: fade, textDecoration: donateLine }"
+          @click="page = 'Donate'"
+          :style="{ textDecoration: donateLine }"
         >
           <img
             class="icon"
             id="donate"
             src="../components/icons/NavBar-Icons/credit_card.svg"
-            alt="dark brown icon of a credit card"
+            alt="icon of a credit card"
           />
           Donate
         </NuxtLink>
@@ -83,71 +73,32 @@
   </div>
 </template>
 
-<script>
-import { useRouter } from "vue-router";
-export default {
-  name: "Navbar",
-  data() {
-    return {
-      page: "",
-      homeLine: "underline var(--text-color) 0.2rem",
-      eventsLine: "transparent",
-      contactLine: "transparent",
-      donateLine: "transparent",
-      gratitudeLine: "transparent",
-      fade: "fadeIn 5s", 
-    };
-  },
-  methods: {
-    underline() {
-      if (this.page === "index") {
-        this.fade = "fadeIn 5s"; 
-        this.homeLine = "underline var(--text-color) 0.2rem";
-        this.eventsLine = "transparent";
-        this.contactLine = "transparent";
-        this.gratitudeLine = "transparent";
-        this.donateLine = "transparent";
-      } else if (this.page === "Events") {
-        this.fade = "fadeIn 5s";
-        this.homeLine = "transparent";
-        this.eventsLine = "underline var(--text-color) 0.2rem";
-        this.contactLine = "transparent";
-        this.gratitudeLine = "transparent";
-        this.donateLine = "transparent";
-      } else if (this.page === "ContactUs") {
-        this.fade = "fadeIn 5s";
-        this.homeLine = "transparent";
-        this.eventsLine = "transparent";
-        this.contactLine = "underline var(--text-color) 0.2rem";
-        this.gratitudeLine = "transparent";
-        this.donateLine = "transparent";
-      } else if (this.page === "Gratitude") {
-        this.fade = "fadeIn 5s"; 
-        this.homeLine = "transparent";
-        this.eventsLine = "transparent";
-        this.contactLine = "transparent";
-        this.gratitudeLine = "underline var(--text-color) 0.2rem";
-        this.donateLine = "transparent";
-      } else if (this.page === "Donate") {
-        this.fade = "fadeIn 10s"; 
-        this.homeLine = "transparent";
-        this.eventsLine = "transparent";
-        this.contactLine = "transparent";
-        this.gratitudeLine = "transparent";
-        this.donateLine = "underline var(--text-color) 0.2rem";
-      }
-    },
-    currentRoute() {
-      const router = useRouter();
-      let currentPathObject = router.currentRoute.value;
-      this.page = currentPathObject.name || "index";
-      this.underline();
-    },
-  },
-  mounted() {
-    this.currentRoute();
-  },
-};
+<script setup>
+const homeLine = ref("underline var(--text-color) 0.2rem");
+const eventsLine = ref("transparent");
+const contactLine = ref("transparent");
+const donateLine = ref("transparent");
+
+const route = useRoute();
+
+function underline(a = undefined) {
+  if (a === undefined) a = route.name;
+  const map = {
+    index: homeLine,
+    Events: eventsLine,
+    ContactUs: contactLine,
+    Donate: donateLine,
+  };
+  Object.values(map).forEach((val) => (val.value = "transparent"));
+  map[a ?? "index"].value = "underline var(--text-color) 0.2rem";
+}
+
+const router = useRouter();
+router.afterEach((to) => {
+  underline(to.name);
+});
+
+onMounted(underline);
 </script>
 
 <style scoped>
@@ -192,51 +143,6 @@ a:hover {
 
 a:visited {
   color: var(--text-color);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 1400px) {

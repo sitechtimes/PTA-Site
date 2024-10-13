@@ -7,29 +7,26 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    ScrolledEnough: function () {
-      const topArrow = document.querySelector(".container__topArrow");
-      if (window.scrollY > 300) {
-        topArrow.style.display = "flex";
-        topArrow.classList.remove('pop-out')
-        topArrow.classList.add('pop-in')
-      } else {
-        topArrow.style.display = "none";
-        topArrow.classList.add('pop-out')
-        topArrow.classList.remove('pop-in')
-      }
-    },
-    scroll() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    },
-  },
-  mounted() {
-    window.addEventListener("scroll", this.ScrolledEnough);
-  },
-};
+<script setup>
+function ScrolledEnough() {
+  const topArrow = document.querySelector(".container__topArrow");
+  if (window.scrollY > 300) {
+    topArrow.style.display = "flex";
+    topArrow.classList.remove("pop-out");
+    topArrow.classList.add("pop-in");
+  } else {
+    topArrow.style.display = "none";
+    topArrow.classList.add("pop-out");
+    topArrow.classList.remove("pop-in");
+  }
+}
+function scroll() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", ScrolledEnough);
+});
 </script>
 
 <style scoped>
@@ -58,7 +55,6 @@ export default {
     opacity: 1;
     transform: translatey(0);
   }
-
 
   to {
     opacity: 0;

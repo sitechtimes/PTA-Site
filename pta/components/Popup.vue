@@ -9,15 +9,13 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { gsap } from "gsap";
-export default {
-  props: ["TogglePopup"],
-  mounted() {
-    let tl = gsap.timeline();
-    tl.from(".popup", { scale: 0.3, duration: 0.4 });
-  },
-};
+defineProps(["TogglePopup"]);
+onMounted(() => {
+  let tl = gsap.timeline();
+  tl.from(".popup", { scale: 0.3, duration: 0.4 });
+});
 </script>
 <style scoped>
 #outside {

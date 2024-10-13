@@ -3,11 +3,7 @@
     <div class="parent">
       <div class="div1">
         <HomeTop />
-        <div
-          id="homePageScroll"
-          ref="homePageScroll"
-          :style="{ opacity: scrollOpacity }"
-        >
+        <div id="homePageScroll" ref="homePageScroll" :style="{ opacity: scrollOpacity }">
           <HomePageScroll />
         </div>
       </div>
@@ -16,7 +12,7 @@
         <div class="div2">
           <MiddleSection />
         </div>
-      <Resources />
+        <Resources />
       </div>
     </div>
   </div>
@@ -27,9 +23,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 useHead({
-  script: [
-    { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-  ],
+  script: [{ src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }],
 });
 import { onMounted, onUnmounted, ref } from "vue";
 
@@ -73,6 +67,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {

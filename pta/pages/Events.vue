@@ -7,7 +7,6 @@
           <EventsComponent />
           <div id="calendar">
             <iframe
-              ref="calendar"
               class="cal"
               id="calendarInner"
               src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffeacd&ctz=America%2FNew_York&src=Y184NWZkZjlkNWVkYzQzMTVjYTEzNmYyZGJhZjA0ZWQyODU5MGZiMmZlNmU2ZGQ2ZjA5MWYwY2JlYjJlYTY2MTc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548"
@@ -19,21 +18,16 @@
         <!-- <SITHSCalendar /> -->
       </div>
     </div>
-    <div id="footer">
-      <NewFooter />
-    </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { gsap } from "gsap";
-export default {
-  mounted() {
-    const { button } = this.$refs;
-    gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
-    gsap.from(".cal", { duration: 1, y: 100, delay: 0.8, opacity: 0 });
-  },
-};
+
+onMounted(() => {
+  gsap.from(".heading", { duration: 1, y: 100, opacity: 0 });
+  gsap.from(".cal", { duration: 1, y: 100, delay: 0.8, opacity: 0 });
+});
 </script>
 
 <style scoped>
@@ -171,9 +165,6 @@ li {
     height: auto;
     margin-bottom: 2rem;
     margin-top: 5rem;
-  }
-  #footer {
-    margin-top: 80vw;
   }
 }
 

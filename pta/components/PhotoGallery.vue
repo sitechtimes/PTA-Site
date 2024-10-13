@@ -1,11 +1,6 @@
 <template>
   <section class="container__carousel">
-    <Carousel
-      :items-to-show="2"
-      :autoplay="2500"
-      :wrap-around="true"
-      :transition="500"
-    >
+    <Carousel :items-to-show="2" :autoplay="2500" :wrap-around="true" :transition="500">
       <Slide v-for="(image, index) in images" :key="index">
         <div class="carousel-item">
           <img :src="image" class="carousel-image" />
@@ -20,35 +15,16 @@
   </section>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
 
-export default defineComponent({
-  name: "PhotoGallery",
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
-  },
-  data() {
-    return {
-      images: [
-        "https://picsum.photos/seed/picsum/600/400",
-        "https://picsum.photos/600/400?grayscale",
-        "https://picsum.photos/600/400/?blur=2",
-        /* insert src's or link to images here
-        format:
-        'image link',
-        'image link',
-        'image link' */
-      ],
-    };
-  },
-});
+const images = ref([
+  "https://picsum.photos/seed/picsum/600/400",
+  "https://picsum.photos/600/400?grayscale",
+  "https://picsum.photos/600/400/?blur=2",
+]);
 </script>
 
 <style scoped>

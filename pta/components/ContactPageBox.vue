@@ -1,8 +1,8 @@
 <template>
   <div class="container__ContactPageBox">
-    <h1>{{ header }}</h1>
+    <h1>{{ props.header }}</h1>
     <div class="information">
-      <p>{{ information }}</p>
+      <p>{{ props.information }}</p>
     </div>
     <div id="extend">
       <p>:CCC</p>
@@ -10,24 +10,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    header: {
-      type: String,
-      required: true,
-    },
-    information: {
-      type: String,
-      required: true,
-    },
-  },
-};
+<script setup>
+const props = defineProps({
+  header: String,
+  information: String,
+});
 </script>
 
 <style scoped>
 @import "../assets/base.css";
-#extend{
+#extend {
   width: 100vw;
   height: 25vw;
   background-color: rgb(17, 105, 76);

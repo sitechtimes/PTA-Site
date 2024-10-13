@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script></script>
+<script setup></script>
 
 <style lang="css" scoped>
 @import url(../assets/base.css);

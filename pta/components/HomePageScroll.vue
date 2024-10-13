@@ -1,35 +1,26 @@
 <template>
   <div class="container__ScrollDown">
-    <img
-      ref="arrow"
-      src="/ScrollDown.svg"
-      alt="scroll to top button"
-      @click="scrollDown"
-    />
+    <img ref="arrow" src="/ScrollDown.svg" alt="scroll to top button" @click="scrollDown" />
   </div>
 </template>
 
-<script>
+<script setup>
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+const arrow = ref();
+const timeline = gsap.timeline();
 
-export default {
-  mounted() {
-    const { arrow } = this.$refs;
-    const timeline = gsap.timeline();
-    timeline
-      .from(arrow, { opacity: 0, delay: 1, duration: 1 })
-      .from(arrow, { duration: 0.3, y: -10 }, "<")
-      .to(arrow, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
-  },
+onMounted(() => {
+  timeline
+    .from(arrow.value, { opacity: 0, delay: 1, duration: 1 })
+    .from(arrow.value, { duration: 0.3, y: -10 }, "<")
+    .to(arrow.value, { duration: 0.8, y: -30, repeat: -1, yoyo: true });
+});
 
-  methods: {
-    scrollDown() {
-      const element = document.getElementById("section__MiddleSection");
-      element.scrollIntoView({ behavior: "smooth" });
-    },
-  },
-};
+function scrollDown() {
+  const element = document.getElementById("section__MiddleSection");
+  element.scrollIntoView({ behavior: "smooth" });
+}
 </script>
 
 <style scoped>

@@ -2,32 +2,27 @@
   <div id="monetary">
     <h3 class="subh" id="sub" ref="subh2">Monetary Donations</h3>
     <p class="text" ref="text3">
-      Monetary donations are always graciously accepted throughout the school
-      year. If you have already donated, we thank you for your generosity and
-      support.
+      Monetary donations are always graciously accepted throughout the school year. If you have already donated, we
+      thank you for your generosity and support.
     </p>
     <p class="text" ref="text4">
-      To donate, please bring the completed form and donation to Ms. Barbara
-      Malenfant’s office, Room 117
+      To donate, please bring the completed form and donation to Ms. Barbara Malenfant’s office, Room 117
     </p>
   </div>
 </template>
 
-<script>
+<script setup>
 import { gsap } from "gsap";
-export default {
-  mounted() {
-    const { list } = this.$refs;
-    const { subh2 } = this.$refs;
-    const { text3 } = this.$refs;
-    const { text4 } = this.$refs;
-
-    gsap.from(list, { delay: 1.2, duration: 1, y: 100, opacity: 0 });
-    gsap.from(subh2, { delay: 1.4, duration: 1, y: 100, opacity: 0 });
-    gsap.from(text3, { delay: 1.6, duration: 1, y: 100, opacity: 0 });
-    gsap.from(text4, { delay: 1.8, duration: 1, y: 100, opacity: 0 });
-  },
-};
+// const list = ref();
+const subh2 = ref();
+const text3 = ref();
+const text4 = ref();
+onMounted(() => {
+  // gsap.from(list.value, { delay: 1.2, duration: 1, y: 100, opacity: 0 });
+  gsap.from(subh2.value, { delay: 1.4, duration: 1, y: 100, opacity: 0 });
+  gsap.from(text3.value, { delay: 1.6, duration: 1, y: 100, opacity: 0 });
+  gsap.from(text4.value, { delay: 1.8, duration: 1, y: 100, opacity: 0 });
+});
 </script>
 <style scoped>
 @import url(../assets/base.css);
@@ -83,7 +78,7 @@ export default {
     margin-top: 2.5rem;
   }
   .text {
-    width: 80%;
+    width: 100%;
     margin-top: 0.8rem;
   }
   li {
