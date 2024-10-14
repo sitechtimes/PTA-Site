@@ -8,12 +8,12 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const arrow = ref();
-const timeline = gsap.timeline();
 
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  timeline
+  const tl = gsap.timeline();
+  tl
     .from(arrow.value, { opacity: 0, delay: 1, duration: 1 })
     .from(arrow.value, { duration: 0.3, y: -10 }, "<")
     .to(arrow.value, { duration: 0.8, y: -30, repeat: -1, yoyo: true });

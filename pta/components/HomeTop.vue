@@ -21,10 +21,11 @@ import gsap from "gsap";
 const schoolName = ref();
 const pta = ref();
 const address = ref();
-const timeline = gsap.timeline();
+
 
 onMounted(() => {
-  timeline
+  const tl = gsap.timeline();
+  tl
     .from(pta.value, { duration: 1.5, x: -1000 })
     .from(schoolName.value, { duration: 1.5, x: -1000 }, "<0.5") // animate entire school name
     .from(address.value, { duration: 1, x: -1000 }, "<0.4");
