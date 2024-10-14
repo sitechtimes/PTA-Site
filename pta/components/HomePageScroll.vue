@@ -10,6 +10,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const arrow = ref();
 const timeline = gsap.timeline();
 
+gsap.registerPlugin(ScrollTrigger);
+
 onMounted(() => {
   timeline
     .from(arrow.value, { opacity: 0, delay: 1, duration: 1 })
