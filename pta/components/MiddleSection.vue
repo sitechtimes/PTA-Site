@@ -1,96 +1,80 @@
 <template>
-  <div>
-    <section id="section__MiddleSection">
-      <div class="information">
-        <div id="activities">
-          <h2 ref="activities" class="subh">ACTIVITIES</h2>
-          <p ref="activitiesDesc" class="text">
-            The SITHS PTA is a group of parents and faculty/staff members who work together to provide our children with
-            resources and activities to make their school experience the best ever!
-          </p>
-        </div>
-      </div>
-      <div ref="gallery" id="gallery">
-        <Gallery />
+  <div class="flex flex-col px-10 gap-y-10 lg:px-20">
+    <!-- about us section -->
+    <section id="aboutUs lg:mt-6">
+      <div class="text-left">
+        <h2 class="subh ">ABOUT US</h2>
+        <p class="text paragraph">
+          The mission of Staten Island Tech’s PTA is to support our school through advocacy, volunteerism and fundraising.
+          From our bake sales to our annual Spring Gala, we work diligently to raise money in order to financially support
+          our school’s needs such as online and software services, facility upgrades and social events / celebrations.
+        </p>
+        <p class="text paragraph">
+          While Staten Island Tech provides a strong academic environment for our children, the school cannot do this
+          alone. Participating with the PTA is vital to our students and school community. Please join our meeting each
+          month to learn about the ongoing activities and events that help make our school a success. Also,
+          <b>
+            please support our school with our suggested donations towards PTA dues. No amount is too small or too
+            great
+          </b>.
+        </p>
       </div>
     </section>
+
+    <!-- activities section -->
+    <section id="activities" class="flex flex-col justify-between items-start gap-10 xl:mt-6 lg:flex-row">
+  <div class="information">
+    <h2 class="subh mb-4">ACTIVITIES</h2>
+    <p class="text">
+      The SITHS PTA is a group of parents and faculty/staff members who work together to provide our children with
+      resources and activities to make their school experience the best ever!
+    </p>
+  </div>
+  <div id="gallery" class="w-full">
+    <Gallery />
+  </div>
+</section>
+
   </div>
 </template>
 
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { onMounted } from "vue";
+
 gsap.registerPlugin(ScrollTrigger);
 
-const minutes = ref([]);
-const recordings = ref([]);
-
-function scrollActivities() {
-  gsap.to({
-    ScrollTrigger: {
-      trigger: ".activities",
-      start: "center center",
-      end: "bottom top",
+onMounted(() => {
+  gsap.from("#aboutUs", {
+    x: 100,
+    opacity: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#aboutUs",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      once: true,
     },
   });
-}
 
-async function getMinutes() {
-  const query = await queryContent("/minutes").find();
-  minutes.value = query.slice(1).slice(-3);
-}
-
-async function getRecordings() {
-  const query = await queryContent("/recordings").find();
-  recordings.value = query.slice(1).slice(-3);
-}
-
-// #minutes and #recordings don't exist...
-
-// onMounted(async () => {
-//   await getMinutes();
-//   gsap.from("#activities", {
-//     scrollTrigger: "#activities",
-//     delay: 0.6,
-//     duration: 1,
-//     x: 0,
-//     opacity: 100,
-//   });
-
-//   gsap.from("#minutes", {
-//     scrollTrigger: "#minutes",
-//     delay: 0.6,
-//     duration: 1,
-//     x: -600,
-//     opacity: 0,
-//   });
-
-//   await getRecordings();
-//   gsap.from("#activities", {
-//     scrollTrigger: "#activities",
-//     delay: 0.6,
-//     duration: 1,
-//     x: -600,
-//     opacity: 0,
-//   });
-//   gsap.from("#recordings", {
-//     scrollTrigger: "#recordings",
-//     delay: 0.6,
-//     duration: 1,
-//     x: -600,
-//     opacity: 0,
-//   });
-//   gsap.from("#gallery", {
-//     scrollTrigger: "#gallery",
-//     delay: 0.6,
-//     duration: 1,
-//     x: -600,
-//     opacity: 0,
-//   });
-// });
+  gsap.from("#activities", {
+    x: 100,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#activities",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+      once: true,
+    },
+  });
+});
 </script>
 
-<style scoped>
+<!-- <style scoped>
 /* .information {
   margin-left: 5%;
 } */
@@ -289,4 +273,4 @@ img {
     margin-top: 50rem;
   } */
 }
-</style>
+</style> -->

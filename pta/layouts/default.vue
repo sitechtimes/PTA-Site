@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Navbar />
+  <div class="flex flex-col">
+    <Navbar class=""/>
     <slot />
     <ScrollTop />
     <Footer />

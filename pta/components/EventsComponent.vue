@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div v-for="event in eventCollection" :key="event.slug">
       <h1>{{ event.title }}</h1>
@@ -21,18 +21,54 @@
         </a>
       </div>
     </Popup>
-    <div id="upcomingEvents">
-      <h3 class="subh">Upcoming Events</h3>
+    <div id="upcomingEvents" class="">
+      <h3 class="subh mb-6">UPCOMING EVENTS</h3>
       <ul class="subtext" id="eventsCon">
-        <li v-for="event in sortedEvents" @click="() => selectEvent(event)" class="uniqEvent">
-          <div class="uniqEvent">
-            <h5 class="listTitle">{{ event.title }}</h5>
-            <h5 class="listDate">{{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
+        <li v-for="event in sortedEvents" @click="() => selectEvent(event)" class="uniqEvent p-4 flex flex-row items-center justify-center">
+          <div class="uniqEvent p-4 py-6 flex flex-row justify-center items-center">
+            <h5 class="">{{ event.title }}</h5>
+            <h5 class="">{{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
           </div>
         </li>
       </ul>
     </div>
   </div>
+</template> -->
+
+<template>
+
+  <div v-for="event in eventCollection" :key="event.slug" class="flex flex-col justify-center items-start">
+    <h1>{{ event.title }}</h1>
+  </div>
+  <Popup v-if="popupTriggers.buttonTrigger" :TogglePopup="() => TogglePopup('buttonTrigger')" :event="selectedEvent">
+    <h5 class="text" id="title">{{ selectedEvent.title }}</h5>
+    <p class="text" id="date">{{ selectedEvent.month }}/{{ selectedEvent.date }}/{{ selectedEvent.year }}</p>
+    <p class="text" id="time">{{ selectedEvent.time }}</p>
+    <img id="img" :src="selectedEvent.image" alt="" />
+    <p class="text" id="body">{{ selectedEvent.description }}</p>
+    <div class="btnCon gap-x-2">
+      <a :href="selectedEvent.volunteer" target="_blank" class="btn">
+        Volunteer
+      </a>
+      <a :href="selectedEvent.donate" target="_blank" class="btn">
+        Donate
+      </a>
+    </div>
+  </Popup>
+
+  <div class="flex flex-col mb-6 px-10 w-full">
+    <h3 class="subh">UPCOMING EVENTS</h3>
+    <ul class="subtext mt-6 w-full" id="eventsCon">
+      <li v-for="event in sortedEvents" @click="() => selectEvent(event)"
+        class="p-4 flex flex-row items-center justify-between w-full rounded-xl">
+        <div class="p-4 flex flex-row justify-between items-center w-full lg:p-8">
+          <h5 class="text-lg lg:text-3xl">{{ event.title }}</h5>
+          <h5 class="text-lg lg:text-3xl">{{ event.month }}/{{ event.date }}/{{ event.year }}</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 </template>
 
 <script setup>
@@ -108,30 +144,40 @@ onMounted(() => {
 
 <style scoped>
 @import url(../assets/base.css);
+
 .btn2 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
 .btn {
   width: 8rem;
   padding: 0.7rem 1rem 0.7rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 .btnCon {
   display: flex;
 }
+
 .subh {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
+
 #wrapper {
   height: 60vw;
 }
+
 #eventsCon {
   list-style-type: none;
   overflow-x: hidden;
   padding-left: 0;
 }
+
 .uniqEvent {
   display: flex;
   flex-direction: row;
@@ -139,11 +185,13 @@ onMounted(() => {
   cursor: pointer;
   width: 34.5vw;
 }
+
 #title {
   margin: 0;
   font-family: "Kumbh Sans", sans serif;
   font-weight: bolder;
 }
+
 ul {
   overflow: auto;
   -ms-overflow-style: none;
@@ -151,19 +199,23 @@ ul {
   height: 24vw;
   scrollbar-width: none;
 }
+
 .listTitle,
 .listDate {
   margin-right: 1vw;
   font-weight: 400;
 }
+
 .listTitle {
   width: fit-content;
   width: 15vw;
 }
+
 .listDate {
   width: 20vw;
   text-align: right;
 }
+
 #head {
   position: absolute;
   top: 70vw;
@@ -171,18 +223,23 @@ ul {
   height: 30vw;
   padding-bottom: 10vw;
 }
+
 #body {
   margin-bottom: 1.5rem;
 }
+
 #upcomingEvents {
   color: var(--text-color);
   font-family: Kumbh Sans;
   width: fit-content;
 }
+
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+  /* make scrollbar transparent */
 }
+
 li {
   background-color: white;
   padding: 0vw 3vw 0vw 3vw;
@@ -191,18 +248,20 @@ li {
   width: 35vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 #top {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 }
+
 #reg {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-style: none;
 }
-@media only screen and (max-width: 1400px) {
-}
+
+@media only screen and (max-width: 1400px) {}
 
 @media screen and (max-width: 1200px) {
   #reg {
@@ -214,12 +273,15 @@ li {
   .uniqEvent {
     width: 60vw;
   }
+
   ul {
     height: 33vw;
   }
+
   #reg {
     font-size: 0.9rem;
   }
+
   .btn {
     width: 6.5rem;
   }
@@ -229,19 +291,24 @@ li {
   .listTitle {
     width: 20vw;
   }
+
   .listDate {
     width: 15vw;
   }
+
   ul {
     height: 21vw;
   }
+
   .btn {
     margin: 0;
     margin-bottom: 0.5rem;
   }
+
   .btnCon {
     flex-direction: column;
   }
+
   #reg {
     margin-top: 0.8rem;
 
@@ -249,48 +316,61 @@ li {
     border-radius: 0.7rem;
     font-size: 0.9rem;
   }
+
   .subh {
     margin: 1.5rem 0 0 0;
   }
 }
+
 @media only screen and (max-width: 576px) {
   #wrapper {
     height: 170vw;
   }
+
   #top {
     flex-direction: column;
   }
+
   #upcomingEvents {
     margin-bottom: 10vw;
   }
+
   #eventsCon {
     height: 55vw;
   }
+
   .uniqEvent {
     width: 70vw;
   }
+
   li {
     width: 76vw;
     border-radius: 2.5vw;
     margin-bottom: 4vw;
     padding: 0vw 6vw 0vw 6vw;
   }
+
   .listTitle {
     width: 20vw;
   }
+
   .listDate {
     width: 20vw;
   }
+
   .subh {
     display: flex;
     flex-direction: column;
   }
+
   .btn2 {
     margin: 0;
   }
+
   .btnCon {
     flex-direction: column;
   }
+
   #reg {
     margin-top: 0.8rem;
 
@@ -298,15 +378,18 @@ li {
     border-radius: 0.7rem;
     font-size: 0.9rem;
   }
+
   .subh {
     margin: 1.5rem 0 0 0;
   }
 }
+
 @media only screen and (max-width: 400px) {
   #reg {
     width: 80vw;
     font-size: 0.8rem;
   }
+
   .btnCon {
     flex-direction: column;
   }

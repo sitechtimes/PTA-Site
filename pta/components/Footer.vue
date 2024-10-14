@@ -1,5 +1,5 @@
 <template>
-  <div class="container__footer">
+  <div class="container__footer m-0 p-0">
     <div class="sections">
       <div class="left">
         <img class="logo" src="../components/icons/NavBar-Icons/pta-logo.png" alt="" />
@@ -104,10 +104,6 @@ button:hover {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0;
-}
-
-.container__footer {
-  margin-bottom: 4rem;
 }
 
 svg {

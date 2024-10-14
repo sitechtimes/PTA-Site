@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="flex flex-col justify-center items-center">
     <!-- Slider container -->
     <div class="slider">
       <!-- Bind key to the loop index to get unique key for each slide -->
       <div
+      v-if="gallery.length"
         v-for="(photo, index) in gallery"
         :key="index"
         class="slide"
         :style="{ transform: `translateX(${100 * (index - curSlide)}%)` }"
       >
-        <img :src="photo.image" alt="Gallery PTA images" />
+        <img :src="photo.image" alt="Gallery PTA images" class="w-full" />
       </div>
       <!-- Control buttons -->
     </div>

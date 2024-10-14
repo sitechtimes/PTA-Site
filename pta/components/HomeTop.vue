@@ -1,25 +1,24 @@
 <template>
-  <div ref="home" class="home" id="homeTopCon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <div id="homeTopText">
-      <h2 id="pta" ref="pta">Parent Teacher Association @</h2>
-      <h1 id="siths" ref="siths">
-        <span ref="statenIsland">STATEN ISLAND</span>
-        <span ref="technical">TECHNICAL</span>
-        <span ref="highSchool">HIGH SCHOOL</span>
+  <div class="flex flex-col lg:flex-row w-screen lg:justify-between lg:px-20 lg:items-center ">
+    <div class="ml-10 flex flex-col justify-center items-left w-screen h-fit py-10 lg:w-[45vw] lg:h-screen lg:gap-y-6">
+      <h2 id="pta" ref="pta" class="text-3xl lg:text-3xl w-fit">Parent Teacher Association @</h2>
+      <h1 ref="schoolName" class="text-5xl font-bold mr-20 leading-snug sm:text-5xl md:text-6xl lg:w-fit lg:text-8xl lg:leading-normal">
+        STATEN ISLAND <br> TECHNICAL <br> HIGH SCHOOL
       </h1>
-      <p id="address" ref="address">485 Clawson Street, Staten Island, NY 10306</p>
+      <p id="address" ref="address" class="text-3xl lg:text-3xl mt-4">
+        485 Clawson Street, Staten Island, NY 10306
+      </p>
     </div>
-    <div class="events">
+    <div class="flex w-full lg:w-1/2">
       <EventsComponent />
     </div>
   </div>
 </template>
+
+
 <script setup>
 import gsap from "gsap";
-const statenIsland = ref();
-const technical = ref();
-const highSchool = ref();
+const schoolName = ref();
 const pta = ref();
 const address = ref();
 const timeline = gsap.timeline();
@@ -27,9 +26,7 @@ const timeline = gsap.timeline();
 onMounted(() => {
   timeline
     .from(pta.value, { duration: 1.5, x: -1000 })
-    .from(statenIsland.value, { duration: 1.5, x: -1000 }, "<0.5")
-    .from(technical.value, { duration: 1.5, x: -1000 }, "<0.1")
-    .from(highSchool.value, { duration: 1.5, x: -1000 }, "<0.1")
+    .from(schoolName.value, { duration: 1.5, x: -1000 }, "<0.5") // animate entire school name
     .from(address.value, { duration: 1, x: -1000 }, "<0.4");
 });
 
@@ -39,6 +36,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
 
 <style scoped>
 @import "../assets/base.css";
+
+#home {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .arrow {
   border: solid rgb(0, 0, 0);
   border-width: 0 4px 4px 0;
@@ -52,6 +57,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   border-radius: 3px;
   opacity: 50%;
 }
+
 .arrow:hover {
   opacity: 100%;
 }
@@ -64,12 +70,11 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
   align-items: center;
   bottom: 40%;
 }
+
 .events {
-  position: relative;
-  left: 57%;
-  top: 17%;
   width: 37vw;
 }
+
 #siths {
   display: flex;
   flex-direction: column;
@@ -80,38 +85,40 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 1500px) {
   #homeTopText {
     margin-top: 5rem;
   }
+
   .events {
     margin-top: 5rem;
   }
 }
+
 @media screen and (max-width: 1200px) {
   p {
     font-size: 16px;
   }
+
   .events {
     margin: 0;
     display: flex;
     justify-content: center;
     position: relative;
-    left: 65%;
-    top: 12%;
     width: 20vw;
   }
 }
-@media screen and (max-width: 1024px) {
-}
+
+@media screen and (max-width: 1024px) {}
+
 @media screen and (max-width: 992px) {
   .events {
     position: relative;
-    left: 56%;
-    top: 0%;
     width: 35vw;
   }
 }
+
 @media only screen and (max-width: 992px) and (orientation: portrait) {
   #homeTopText {
     top: 3%;
@@ -135,12 +142,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     white-space: nowrap;
     text-align: left;
   }
+
   #address {
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
     font-size: 3.2vw;
   }
+
   #siths {
     margin: 0%;
     font-size: 8vw;
@@ -148,6 +157,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.12rem;
     margin-bottom: 3vw;
   }
+
   #pta {
     margin: 0%;
     font-size: 4vw;
@@ -155,6 +165,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.047vw;
     margin-bottom: 3vw;
   }
+
   .events {
     margin: 0;
     margin-top: 35vw;
@@ -164,41 +175,50 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 450px) {
   #homeTopText {
     top: 6%;
     left: 47.4%;
   }
+
   p {
     font-size: 3.5vw;
   }
+
   h3 {
     font-size: 20px;
   }
 }
+
 @media only screen and (max-width: 356px) {
   #homeTopText {
     top: 8%;
     left: 50%;
   }
+
   p {
     font-size: 4.72vw;
   }
 }
+
 @media only screen and (max-width: 280px) and (orientation: portrait) {
   p {
     font-size: 4.72vw;
   }
+
   .aboutUs {
     margin-left: 14vw;
     margin-top: 15rem;
   }
 }
+
 @media only screen and (max-width: 220px) and (orientation: portrait) {
   p {
     font-size: 5.3vw;
   }
 }
+
 @media screen and (min-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -211,6 +231,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 0%;
     left: 0%;
   }
+
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -220,12 +241,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     white-space: nowrap;
     text-align: left;
   }
+
   #address {
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
     font-size: 3.7vw;
   }
+
   #siths {
     margin: 0%;
     font-size: 9.2vw;
@@ -233,6 +256,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.12rem;
     margin-bottom: 3.5vw;
   }
+
   #pta {
     margin: 0%;
     font-size: 4.4vw;
@@ -241,6 +265,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 3vw;
   }
 }
+
 @media screen and (min-width: 576px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -252,6 +277,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 0%;
     left: 0%;
   }
+
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -261,12 +287,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     white-space: nowrap;
     text-align: left;
   }
+
   #address {
     margin: 0%;
     font-weight: 500;
     letter-spacing: 0.047vw;
     font-size: 1.97vw;
   }
+
   #siths {
     margin: 0%;
     font-size: 4.4vw;
@@ -274,6 +302,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.12rem;
     margin-bottom: 1vw;
   }
+
   #pta {
     margin: 0%;
     font-size: 2.2vw;
@@ -282,6 +311,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 1vw;
   }
 }
+
 @media screen and (min-width: 768px) {
   #homeTopCon {
     background: var(--bg-gradient);
@@ -293,6 +323,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 0%;
     left: 0%;
   }
+
   #homeTopText {
     color: var(--text-color);
     font-family: var(--font-heading);
@@ -302,12 +333,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     left: 8vw;
     text-align: left;
   }
+
   #address {
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
     font-size: 1.7vw;
   }
+
   #siths {
     margin: 0%;
     font-size: 5vw;
@@ -315,6 +348,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
+
   #pta {
     margin: 0%;
     font-size: 2vw;
@@ -323,6 +357,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 0.7vw;
   }
 }
+
 @media screen and (min-width: 1200px) {
   #homeTopText {
     color: var(--text-color);
@@ -333,12 +368,14 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     top: 26%;
     left: 7vw;
   }
+
   #address {
     margin: 0%;
     font-weight: 400;
     letter-spacing: 0.48px;
     font-size: 1.27vw;
   }
+
   #siths {
     margin: 0%;
     font-size: 5vw;
@@ -347,6 +384,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     letter-spacing: 0.12rem;
     margin-bottom: 0.2vw;
   }
+
   #pta {
     margin: 0%;
     font-size: 2.1vw;
@@ -355,6 +393,7 @@ this.home.addEventListener("mouseleave", () => animation.reverse()); */
     margin-bottom: 0.4vw;
   }
 }
+
 @media screen and (min-width: 1400px) {
   #homeTopText {
     top: 22%;

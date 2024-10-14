@@ -1,23 +1,8 @@
 <template>
-  <div>
-    <div class="parent">
-      <div class="div1">
-        <HomeTop />
-        <div id="homePageScroll" ref="homePageScroll" :style="{ opacity: scrollOpacity }">
-          <HomePageScroll />
-        </div>
-      </div>
-      <div class="div3">
-        <AboutUs />
-        <div class="div2">
-          <MiddleSection />
-        </div>
-        <Resources />
-      </div>
-    </div>
-  </div>
+  <HomeTop />
+  <MiddleSection />
+  <Resources/>
 </template>
-
 <script setup>
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

@@ -40,6 +40,7 @@ function toggle() {
 
 <style scoped>
 @import url(../assets/base.css);
+
 .link-container {
   display: flex;
   flex-direction: column;

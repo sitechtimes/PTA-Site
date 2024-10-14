@@ -31,37 +31,37 @@
         SLT
       </button>
     </div>
-    <div v-if="shownDiv === 'staff'" class="container__box">
-      <!-- <h1 class="subh">Board Members</h1> -->
-      <div id="staff">
-        <div class="staffCon" v-for="people in staff">
-          <img class="staffPfp" :src="people.image" :alt="people.name" />
-          <h3 class="subtext">{{ people.name }}</h3>
-          <h4 class="staffRole">{{ people.roles }}</h4>
-          <a id="staffEmail" class="caption" :href="people.email" target="_blank" rel="noopener">
-            {{ people.email }}
-          </a>
-          <h4 class="staffPhone">{{ people.phone }}</h4>
-        </div>
+    <div v-if="shownDiv === 'staff'" class="container__box flex flex-col items-center lg:flex-row">
+    <div id="staff" class="flex flex-wrap justify-center gap-10">
+      <div class="staffCon text-center flex flex-col justify-between items-center w-full" v-for="people in staff" :key="people.email">
+        <img class="staffPfp" :src="people.image" :alt="people.name" />
+        <p class="text-lg leading font-semibold">{{ people.name }}</p>
+        <p class="text-lg">{{ people.roles }}</p>
+        <a id="staffEmail" class="text-lg" :href="`mailto:${people.email}`" target="_blank" rel="noopener">
+          {{ people.email }}
+        </a>
+        <p class="staffPhone">{{ people.phone }}</p>
       </div>
     </div>
-    <div v-if="shownDiv === 'sol'" class="container__box">
-      <!-- <h1 class="subh">School Leadership Team</h1> -->
-      <div id="staff">
-        <div class="staffCon" v-for="people in slt">
-          <img class="staffPfp" :src="people.image" :alt="people.name" />
-          <h3 class="subtext">{{ people.name }}</h3>
-          <a class="caption" :href="people.email" target="_blank" rel="noopener">
-            {{ people.email }}
-          </a>
-        </div>
+  </div>
+
+    <div v-if="shownDiv === 'sol'" class="container__box flex flex-col items-center lg:flex-row">
+    <div id="staff" class="flex flex-wrap justify-center gap-10">
+      <div class="staffCon text-center flex flex-col justify-between items-center w-full" v-for="people in slt" :key="people.email">
+        <img class="staffPfp" :src="people.image" :alt="people.name" />
+        <p class="text-lg leading font-semibold">{{ people.name }}</p>
+        <a id="staffEmail" class="text-lg" :href="`mailto:${people.email}`" target="_blank" rel="noopener">
+          {{ people.email }}
+        </a>
+        <p class="staffPhone">{{ people.phone }}</p>
       </div>
     </div>
+  </div>
     <div>
       <div v-if="shownDiv === 'join'" class="container__box" id="join">
         <!-- <h1 class="subh">Join Us</h1> -->
         <div class="container__ParentVolunteer">
-          <h2>PARENT VOLUNTEER OPPORTUNITIES</h2>
+          <h2 class="font-semibold">PARENT VOLUNTEER OPPORTUNITIES</h2>
           <p>
             If you would like to volunteer at PTA events, please print out the attached volunteer form and submit to the
             PTA Room or email it to

@@ -1,18 +1,20 @@
 <template>
-  <div class="resources">
-    <h2 id="heading" class="heading">RESOURCES</h2>
-    <div id="grid" class="resourcegrid">
-      <div class="resource">
+  <div class="flex flex-col px-10 mt-10 mb-20 xl:mt-12">
+    <h2 id="heading" class="subh">RESOURCES</h2>
+    <div id="grid" class="grid grid-rows-2 grid-flow-row gap-4 mt-2 xl:gap-8 lg:grid-flow-col">
+      <div
+        class="min-h-fit h-50 bg-white rounded-xl shadow border-[1px] border-primary border-opacity-45 p-2 flex flex-row xl:p-8">
         <img src="https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png" alt="" />
         <div class="info">
           <h3 class="name">SITHS Automated Telephone Directory</h3>
           <h4 class="description">Contact Staten Island Technical High School.</h4>
-          <a target="_blank" href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"
-            ><button class="button">Read More</button></a
-          >
+          <a target="_blank"
+            href="https://www.siths.org/apps/pages/index.jsp?uREC_ID=1555040&type=d&pREC_ID=1680913"><button
+              class="button">Read More</button></a>
         </div>
       </div>
-      <div class="resource">
+      <div
+        class="min-h-fit h-50 bg-white rounded-xl shadow border-[1px] border-primary border-opacity-45 p-2 flex flex-row xl:p-8">
         <img src="https://www.stcroixprep.org/wp-content/uploads/2019/12/Naviance-Logo-300x300.png" alt="" />
         <div class="info">
           <h3 class="name">Naviance</h3>
@@ -22,8 +24,9 @@
         </div>
       </div>
 
-      <div class="resource">
-        <img src="https://nycaieroundtable.org/wp-content/uploads/2022/02/nyc-doe-logo.jpg" alt="" />
+      <div
+        class="min-h-fit h-50 bg-white rounded-xl shadow border-[1px] border-primary border-opacity-45 p-2 flex flex-row xl:p-8">
+        <img src="/upload/NycDoeLogo.png" alt="" />
         <div class="info">
           <h3 class="name">NYCDOE Websites</h3>
           <h4 class="description">Keep track of student documents and official city calendars</h4>
@@ -31,63 +34,63 @@
         </div>
       </div>
 
-      <div class="resource">
+      <div
+        class="min-h-fit h-50 bg-white rounded-xl shadow border-[1px] border-primary border-opacity-45 p-2 flex flex-row xl:p-8">
         <img src="./icons/NavBar-Icons/pta-logo.png" alt="" />
         <div class="info">
           <h3 class="name">SITHS PTA By-laws</h3>
           <h4 class="description">Read more about the PTA</h4>
-          <a
-            target="_blank"
-            href="https://docs.google.com/document/d/1gNyKPMDOUxeW2AadJFuOXtla3jd_bzjw/edit?usp=sharing&ouid=109431569121511580485&rtpof=true&sd=true"
-          >
-            <button class="button">Read More</button></a
-          >
+          <a target="_blank"
+            href="https://docs.google.com/document/d/1gNyKPMDOUxeW2AadJFuOXtla3jd_bzjw/edit?usp=sharing&ouid=109431569121511580485&rtpof=true&sd=true">
+            <button class="button">Read More</button></a>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-function scrollActivities() {
-  gsap.to({
-    ScrollTrigger: {
-      trigger: "#heading",
-      start: "center center",
-      end: "bottom top",
-    },
-  });
-}
+
 onMounted(() => {
-  gsap.from("#heading", {
-    scrollTrigger: "#heading",
-    delay: 0.6,
-    duration: 1,
+  gsap.from(".subh", {
+    scrollTrigger: {
+      trigger: ".subh",
+      start: "top 80%", 
+    },
     x: -600,
     opacity: 0,
+    duration: 1,
   });
-  gsap.from("#grid", {
-    scrollTrigger: "#grid",
-    delay: 0.8,
-    duration: 1,
-    x: -600,
+
+  gsap.from("#grid > div", {
+    scrollTrigger: {
+      trigger: "#grid",
+      start: "top 80%", 
+    },
     opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
   });
 });
 </script>
+
+
+
 <style scoped>
 @import "../assets/base.css";
+
 a {
   text-decoration: none;
 }
+
 h2 {
   margin-top: 0;
 }
-.heading {
-  margin: 0% 0 0 6.5%;
-}
+
 .resourcegrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -96,8 +99,8 @@ h2 {
   width: 85%;
   padding-top: 3rem;
   padding-bottom: 5rem;
-  margin: auto;
 }
+
 .resource {
   border: 1px #d6d6d6 solid;
   background-color: white;
@@ -110,12 +113,14 @@ h2 {
   display: flex;
   flex-direction: row;
 }
+
 .info {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin-left: 5%;
 }
+
 .button {
   background-color: #c9b23a;
   color: white;
@@ -130,14 +135,17 @@ h2 {
   margin-bottom: 1.5rem;
   transition: 0.3s;
 }
+
 .button:hover {
   cursor: pointer;
   opacity: 0.6;
 }
+
 img {
   width: 30%;
   margin: auto;
 }
+
 .name {
   font-size: 1.7rem;
   color: var(--text-color);
@@ -145,6 +153,7 @@ img {
   font-weight: 800;
   margin-bottom: 0;
 }
+
 .description {
   margin-top: 0.7rem;
   font-size: 1.5rem;
@@ -153,10 +162,12 @@ img {
   font-weight: 400;
   margin-bottom: 0;
 }
+
 @media screen and (max-width: 1500px) {
   .heading {
     margin-top: 1.3rem;
   }
+
   .resourcegrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -167,6 +178,7 @@ img {
     padding-bottom: 5rem;
     margin: auto;
   }
+
   .resource {
     border: 1px #d6d6d6 solid;
     background-color: white;
@@ -179,12 +191,14 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .info {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin-left: 5%;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -199,14 +213,17 @@ img {
     margin-bottom: 1.5rem;
     transition: 0.3s;
   }
+
   .button:hover {
     cursor: pointer;
     opacity: 0.6;
   }
+
   img {
     width: 30%;
     margin: auto;
   }
+
   .name {
     font-size: 1.5rem;
     color: var(--text-color);
@@ -215,6 +232,7 @@ img {
     margin-bottom: 0;
     margin-top: 1.5rem;
   }
+
   .description {
     margin-top: 0.4rem;
     font-size: 1.2rem;
@@ -229,6 +247,7 @@ img {
   .heading {
     margin-top: 1.3rem;
   }
+
   .resourcegrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -239,6 +258,7 @@ img {
     padding-bottom: 5rem;
     margin: auto;
   }
+
   .resource {
     border: 1px #d6d6d6 solid;
     background-color: white;
@@ -251,12 +271,14 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .info {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin-left: 5%;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -271,14 +293,17 @@ img {
     margin-bottom: 1.5rem;
     transition: 0.3s;
   }
+
   .button:hover {
     cursor: pointer;
     opacity: 0.6;
   }
+
   img {
     width: 30%;
     margin: auto;
   }
+
   .name {
     font-size: 1.25rem;
     color: var(--text-color);
@@ -287,6 +312,7 @@ img {
     margin-bottom: 0;
     margin-top: 1.2rem;
   }
+
   .description {
     margin-top: 0.3rem;
     font-size: 1.1rem;
@@ -296,10 +322,12 @@ img {
     margin-bottom: 0;
   }
 }
+
 @media screen and (max-width: 992px) {
   .heading {
     margin-top: 1.3rem;
   }
+
   .resourcegrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,6 +338,7 @@ img {
     padding-bottom: 5rem;
     margin: auto;
   }
+
   .resource {
     border: 1px #d6d6d6 solid;
     background-color: white;
@@ -322,12 +351,14 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .info {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin-left: 5%;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -342,14 +373,17 @@ img {
     margin-bottom: 1.3rem;
     transition: 0.3s;
   }
+
   .button:hover {
     cursor: pointer;
     opacity: 0.6;
   }
+
   img {
     width: 25%;
     margin: auto;
   }
+
   .name {
     font-size: 0.9rem;
     color: var(--text-color);
@@ -358,6 +392,7 @@ img {
     margin-bottom: 0;
     margin-top: 1rem;
   }
+
   .description {
     margin-top: 0.2rem;
     font-size: 0.8rem;
@@ -367,6 +402,7 @@ img {
     margin-bottom: 0;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .resource {
     border: 1px #d6d6d6 solid;
@@ -380,6 +416,7 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -394,10 +431,12 @@ img {
     margin-bottom: 1.3rem;
     transition: 0.3s;
   }
+
   .button:hover {
     cursor: pointer;
     opacity: 0.6;
   }
+
   .description {
     margin-top: 0.2rem;
     font-size: 0.75rem;
@@ -408,10 +447,12 @@ img {
     line-height: 1;
   }
 }
+
 @media only screen and (max-width: 576px) {
   .heading {
     margin-left: 8vw;
   }
+
   .name {
     font-size: 0.95rem;
     color: var(--text-color);
@@ -420,10 +461,12 @@ img {
     margin-bottom: 0;
     margin-top: 1rem;
   }
+
   img {
     width: 25%;
     margin: auto;
   }
+
   .resource {
     border: 1px #d6d6d6 solid;
     background-color: white;
@@ -436,6 +479,7 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -449,10 +493,12 @@ img {
     margin-top: 0.8rem;
     transition: 0.3s;
   }
+
   .button:hover {
     cursor: pointer;
     opacity: 0.6;
   }
+
   .description {
     width: 95%;
     margin-top: 0.3rem;
@@ -463,6 +509,7 @@ img {
     margin-bottom: 0;
     line-height: 1;
   }
+
   .resourcegrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -474,6 +521,7 @@ img {
     margin: auto;
   }
 }
+
 @media only screen and (max-width: 420px) {
   .resource {
     border: 1px #d6d6d6 solid;
@@ -487,6 +535,7 @@ img {
     display: flex;
     flex-direction: row;
   }
+
   .button {
     background-color: #c9b23a;
     color: white;
@@ -500,12 +549,14 @@ img {
     margin-top: 0.5rem;
     transition: 0.3s;
   }
+
   .resourcegrid {
     margin-top: 0;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
     margin: auto;
   }
+
   .description {
     width: 90%;
     margin-top: 0.3rem;
