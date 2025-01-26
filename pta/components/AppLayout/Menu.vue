@@ -44,6 +44,11 @@
 
 <script setup>
 const show = ref(false)
+const route = useRoute();
+
+watch(() => route.fullPath, () => {
+    show.value = false;
+});
 </script>
 
 
