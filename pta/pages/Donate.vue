@@ -1,5 +1,5 @@
 <template>
-  <Donations/>
+  <Donations class="lg:mx-12"/>
 </template>
 
 <script setup>
