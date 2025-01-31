@@ -3,7 +3,7 @@
     <h2 class="font-bold text-2xl text-left my-6">UPCOMING EVENTS</h2>
     <div v-for="event in sortedEvents" :key="event.id" @click="selectEvent(event)">
       <div
-        class="p-2 my-2 flex flex-row justify-between items-center h-16 w-full lg:p-8 bg-white rounded-lg font-semibold space-x-5 cursor-pointer shadow-md">
+        class="p-2 my-2 flex flex-row justify-between items-center w-full p-4 lg:p-8 bg-white rounded-lg font-semibold space-x-5 cursor-pointer shadow-md">
         <h3 class="text-lg md:text-xl">{{ event.title }}</h3>
         <h3 class="text-lg md:text-xl">{{ event.month }}/{{ event.date }}/{{ event.year }}</h3>
       </div>
