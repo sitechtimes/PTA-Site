@@ -4,7 +4,7 @@
     <div class="grid lg:grid-cols-2 grid-rows-2 gap-5">
       <div v-for="resource in resources" :key="resource.title"
         class="bg-white rounded-xl w-full h-full mb-2 flex flex-row border border-[#4c4038a6]">
-        <img :src="resource.img" class="p-4 w-1/2 row-span-3 self-center md:w-1/3 xl:w-1/4">
+        <img :src="resource.img" class="p-4 w-1/3 row-span-3 self-center sm:w-1/4 md:w-1/3 xl:w-1/4">
         <div class="flex flex-col p-4 place-content-center">
           <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">{{ resource.title }}</h3>
           <p class="text-base md:text-lg lg:text-2xl">{{ resource.description }}</p>

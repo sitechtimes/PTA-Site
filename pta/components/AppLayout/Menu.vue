@@ -18,7 +18,7 @@
 
     <Transition name="slide">
       <div v-if="show"
-        class="justify-self-auto bg-gradient-to-b from-[#ffb393] via-[#fff1d7] to-[#fff] w-screen h-dvh absolute z-0">
+        class="justify-self-auto bg-gradient-to-b from-[#ffb393] via-[#fff1d7] to-[#fff] w-dvw h-dvh absolute z-0">
         <div class="mt-36 ml-16 space-y-8">
           <NuxtLink to="/" class="w-11 hover:opacity-50 flex flex-row self-center text-lg font-bold">
             <img class="icon" id="home" src="/public/navbarIcons/house.svg">
