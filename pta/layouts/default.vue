@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <AppLayoutNavBar />
+    <AppLayoutNavBar/>
     <slot />
     <ScrollTop />
     <AppLayoutFooter />

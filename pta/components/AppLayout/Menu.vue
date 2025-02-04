@@ -1,5 +1,5 @@
 <template>
-  <div class="menu fixed top-0 left-0 right-0 z-100">
+  <div class="menu fixed top-0 right-0 ">
     <div class="check fixed lg:top-10 lg:left-85 lg:right-5 top-10 lg-left-60 right-10 z-10">
       <label for="active" class="menu-btn flex flex-col gap-y-1 w-10 pt-2 cursor-pointer relative">
         <input id="active" v-model="show" type="checkbox"
@@ -15,10 +15,10 @@
         </Transition>
       </label>
     </div>
-
+    
     <Transition name="slide">
       <div v-if="show"
-        class="justify-self-auto bg-gradient-to-b from-[#ffb393] via-[#fff1d7] to-[#fff] w-screen h-dvh absolute z-0">
+        class="justify-self-auto bg-gradient-to-b from-[#ffb393] via-[#fff1d7] to-[#fff] w-dvw h-dvh absolute">
         <div class="mt-36 ml-16 space-y-8">
           <NuxtLink to="/" class="w-11 hover:opacity-50 flex flex-row self-center text-lg font-bold">
             <img class="icon" id="home" src="/public/navbarIcons/house.svg">
@@ -40,6 +40,7 @@
       </div>
     </Transition>
   </div>
+
 </template>
 
 <script setup>
