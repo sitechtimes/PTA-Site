@@ -1,5 +1,4 @@
 <template>
-  <div class="relative">
   <div class="menu fixed top-0 right-0 ">
     <div class="check fixed lg:top-10 lg:left-85 lg:right-5 top-10 lg-left-60 right-10 z-10">
       <label for="active" class="menu-btn flex flex-col gap-y-1 w-10 pt-2 cursor-pointer relative">
@@ -41,7 +40,7 @@
       </div>
     </Transition>
   </div>
-</div>
+
 </template>
 
 <script setup>
